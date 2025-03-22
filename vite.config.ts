@@ -8,6 +8,7 @@ import fs from "fs";
 import path from "path";
 import dotenv from "dotenv";
 import tailwindcss from "@tailwindcss/vite";
+import dts from "vite-plugin-dts";
 
 dotenv.config(); // Load environment variables from .env
 
@@ -32,17 +33,39 @@ export default defineConfig({
          cert: fs.readFileSync(path.resolve(__dirname, "./ssl/cert.pem")),
       },
    },
+   // Build the library for use in other projects
+   build: {
+      lib: {
+         entry: path.resolve(__dirname, "src/main.ts"),
+         name: "SharedVueLibrary",
+         formats: ["es"],
+         // fileName: (format) => `index.${format}.js`,
+      },
+      rollupOptions: {
+         external: ["vue", "primevue"], // Exclude dependencies from the bundle
+         output: {
+            globals: {
+               vue: "Vue",
+               primevue: "PrimeVue",
+            },
+         },
+      },
+   },
    plugins: [
       vue(),
       // Auto import things like: computed, ref, watch, etc
       // https://github.com/antfu/unplugin-auto-import
       AutoImport({
          imports: ["vue", "vue-router"],
-         dts: "src/generated_types/auto-imports.d.ts",
          dirs: ["src/composables", "src/stores"],
          vueTemplate: true,
       }),
       tailwindcss(),
+      dts(),
+      // dts({
+      //    outDir: "./dist", // Output directory for .d.ts files
+      //    include: ["src/**/*"], // Include all source files
+      // }),
    ],
    css: {
       preprocessorOptions: {
@@ -66,22 +89,5 @@ export default defineConfig({
       exclude: [...configDefaults.exclude, "**/*.spec.ts"], // exclude vitest config stuff (node_modules etc), e2e folder and spec files
       include: ["**/*.test.ts"], // Only look for files with .test.js or .test.ts extensions
       root: fileURLToPath(new URL("./", import.meta.url)),
-   },
-   // Build the library for use in other projects
-   build: {
-      lib: {
-         entry: "./src/components/index.ts",
-         name: "VueSharedLibrary",
-         fileName: (format) => `vue-shared-library.${format}.js`,
-      },
-      rollupOptions: {
-         external: ["vue", "primevue"],
-         output: {
-            globals: {
-               vue: "Vue",
-               primevue: "PrimeVue",
-            },
-         },
-      },
    },
 });
