@@ -1,23 +1,33 @@
 <template>
-   <button>{{ userStore.isSignedIn }}</button>
-   <!-- <Button
+   <Button
       :icon="themeIcon"
       id="themeToggle"
-      @click="userStore.toggleTheme()"
+      @click="toggleTheme()"
       variant="outlined"
       aria-label="Toggle theme"
-   /> -->
+   />
 </template>
 
 <script setup lang="ts">
-// import Button from "primevue/button";
-import { useUserStore } from "@/stores/userStore";
+import Button from "primevue/button";
 
-const userStore = useUserStore();
+const lsTheme = localStorage.getItem("theme") || "light";
+const theme = ref(lsTheme);
+document.documentElement.classList.toggle("dark", lsTheme === "dark");
 
 // computed
 // -----------------------------------------
-const themeIcon = computed(() => (userStore.theme === "light" ? "pi pi-sun" : "pi pi-moon"));
+// const themeIcon = ref("pi pi-sun");
+const themeIcon = computed(() => (theme.value === "light" ? "pi pi-sun" : "pi pi-moon"));
+
+// methods
+// -----------------------------------------
+function toggleTheme() {
+   const newTheme = theme.value === "light" ? "dark" : "light";
+   localStorage.setItem("theme", newTheme); // Save theme preference to local storage
+   theme.value = newTheme;
+   document.documentElement.classList.toggle("dark", newTheme === "dark");
+}
 </script>
 
 <style scoped></style>

@@ -41,12 +41,16 @@ export default defineConfig({
          formats: ["es"],
       },
       rollupOptions: {
-         input: "src/index.ts", // Explicit entry point
-         external: ["vue", "primevue"], // Exclude dependencies from the bundle
+         input: "src/index.ts", // Entry point
+         // When we mark these as an external dependency,
+         // we tell Rollup not to include them in the final output bundle because the consumer is expected to provide it externally
+         external: ["vue", "primevue", "pinia"],
          output: {
+            // References these as global variables provided by the consuming application
             globals: {
                vue: "Vue",
                primevue: "PrimeVue",
+               pinia: "Pinia",
             },
          },
       },

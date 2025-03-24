@@ -5,25 +5,28 @@ import App from "./App.vue";
 import { createApp } from "vue";
 import { createPinia } from "pinia";
 import router from "./router";
-import SuperTokens from "supertokens-web-js";
-import Session from "supertokens-web-js/recipe/session";
-import Passwordless from "supertokens-web-js/recipe/passwordless";
-import ThirdParty from "supertokens-web-js/recipe/thirdparty";
 import PrimeVue from "primevue/config";
 import Lara from "@primeuix/themes/lara";
 import { definePreset } from "@primeuix/themes";
+import { initializeSuperTokens } from "./index";
 
-SuperTokens.init({
+const app = createApp(App);
+const pinia = createPinia();
+app.use(pinia);
+app.use(router);
+
+// Supertokens configuration setup
+// -----------------------------------------
+initializeSuperTokens({
    appInfo: {
       appName: "Auth App",
       apiDomain: import.meta.env.VITE_API_DOMAIN as string,
       apiBasePath: "/auth",
    },
-   recipeList: [Session.init(), Passwordless.init({}), ThirdParty.init()],
 });
 
-const app = createApp(App);
-
+// PrimeVue theme
+// -----------------------------------------
 const MyPreset = definePreset(Lara, {
    semantic: {
       primary: {
@@ -101,10 +104,5 @@ app.use(PrimeVue, {
       },
    },
 });
-
-const pinia = createPinia();
-app.use(pinia);
-
-app.use(router);
 
 app.mount("#app");

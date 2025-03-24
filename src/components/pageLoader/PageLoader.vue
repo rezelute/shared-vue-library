@@ -1,12 +1,12 @@
 <template>
-   <div class="container">
-      <LoadingState v-if="isLoading" class="loader" />
+   <div class="flex items-center justify-center min-h-screen">
+      <ProgressSpinner v-if="isLoading" aria-label="Loading" />
       <slot v-else />
    </div>
 </template>
 
 <script setup lang="ts">
-import LoadingState from "@/components/loadingState/LoadingState.vue";
+import ProgressSpinner from "primevue/progressspinner";
 
 const props = withDefaults(
    defineProps<{
@@ -18,21 +18,4 @@ const props = withDefaults(
 );
 </script>
 
-<style scoped>
-/* .container {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 100%;
-   height: 100vh;
-   border: 1px solid red;
-}
-
-.loader {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   z-index: 101;
-   transform: translate(-50%, -50%);
-} */
-</style>
+<style scoped></style>

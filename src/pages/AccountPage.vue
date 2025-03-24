@@ -37,29 +37,27 @@
             </div>
          </section>
 
-         <Toaster :title="toastInfo.title" :isOpen="toastInfo.open">
-            <template #description>
-               <p>{{ toastInfo.description }}</p>
-            </template>
-         </Toaster>
+         <Toast />
       </div>
    </PageLoader>
 </template>
 
 <script setup lang="ts">
-import Toaster from "@/components/toaster/Toaster.vue";
+import Toast from "primevue/toast";
+import { useToast } from "primevue/usetoast";
+import addToast from "@/utils/toast";
 import PageLoader from "@/components/pageLoader/PageLoader.vue";
 import Session from "supertokens-web-js/recipe/session";
+import toastContent from "@/content/generic/toastContent";
 
-const isPageLoading = ref(true);
 const route = useRoute();
+const toast = useToast();
+
+// data
+// -----------------------------------------
+const isPageLoading = ref(true);
 const deleteToken = route.query.del_token as string | undefined;
 const isDeleteEmailSent = ref(false);
-const toastInfo = ref({
-   open: false,
-   title: "",
-   description: "",
-});
 const userNewEmail = ref("");
 
 // lifecycle
@@ -94,11 +92,13 @@ async function sendDeleteEmail() {
    } catch (error) {
       isDeleteEmailSent.value = false;
 
-      toastInfo.value = {
-         open: true,
-         title: "Error",
-         description: "Something went wrong, please try again later. We have been notified of the issue.",
-      };
+      addToast({
+         toast,
+         severity: "danger",
+         summary: toastContent.error.somethingWentWrong.summary,
+         detail: toastContent.error.somethingWentWrong.detail,
+         logInfo: { error },
+      });
 
       if (error instanceof Error) {
          console.error(`Error sending deletion email: ${error.message}`);
@@ -128,11 +128,13 @@ async function deleteAccount() {
       await Session.signOut();
       window.location.href = "/goodbye";
    } catch (error) {
-      toastInfo.value = {
-         open: true,
-         title: "Error",
-         description: "Something went wrong, please try again later. We have been notified of the issue.",
-      };
+      addToast({
+         toast,
+         severity: "danger",
+         summary: toastContent.error.somethingWentWrong.summary,
+         detail: toastContent.error.somethingWentWrong.detail,
+         logInfo: { error },
+      });
 
       console.error("Failed to delete account: ", error);
    }
@@ -156,9 +158,20 @@ async function sendChangeEmail() {
          throw new Error(result.message || "Failed to update email");
       }
 
-      console.log("✅ Email change request sent:", result.message);
+      addToast({
+         toast,
+         severity: "info",
+         summary: "Verification email sent",
+         detail: "We have sent you an email to verify your new email address. Please check your inbox.",
+      });
    } catch (error) {
-      console.error("Error updating email:", error);
+      addToast({
+         toast,
+         severity: "danger",
+         summary: toastContent.error.somethingWentWrong.summary,
+         detail: toastContent.error.somethingWentWrong.detail,
+         logInfo: { summary: "Error updating email", error },
+      });
    }
 }
 </script>

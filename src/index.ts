@@ -1,16 +1,26 @@
-// import ThemeToggle from "./components/themeToggle/ThemeToggle.vue";
-// import { useCounterStore } from "./stores/counter";
-
-// export { ThemeToggle, useCounterStore };
-
-// export { default as ThemeToggle } from "./src/components/themeToggle/ThemeToggle.vue";
-// export { useCounterStore } from "./src/stores/counter";
-
+// supertokens
+import SuperTokens from "supertokens-web-js";
+import Passwordless from "supertokens-web-js/recipe/passwordless";
+import ThirdParty from "supertokens-web-js/recipe/thirdparty";
+import Session from "supertokens-web-js/recipe/session";
+import { type AppInfoUserInput } from "supertokens-web-js/lib/build/types";
+// shared library components/stores/composables
 import ThemeToggle from "./components/themeToggle/ThemeToggle.vue";
 import Toaster from "./components/toaster/Toaster.vue";
-// import { useCounterStore } from "./stores/counter";
+import { useUserStore } from "./stores/userStore";
 
-export { ThemeToggle, Toaster };
+const initializeSuperTokens = (config: { appInfo: AppInfoUserInput }) => {
+   SuperTokens.init({
+      appInfo: {
+         appName: config.appInfo.appName,
+         apiDomain: config.appInfo.apiDomain,
+         apiBasePath: config.appInfo.apiBasePath || "/auth",
+      },
+      recipeList: [Session.init(), Passwordless.init({}), ThirdParty.init()],
+   });
+};
+
+export { ThemeToggle, Toaster, useUserStore, initializeSuperTokens };
 
 export default {
    install: (app: any) => {
