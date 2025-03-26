@@ -3,13 +3,23 @@ import Session from "supertokens-web-js/recipe/session";
 
 const useUserStore = defineStore("userStore", () => {
    const isSignedIn = ref(false);
+   const isFetchingSession = ref(false);
 
    // Function to check session status
    async function updateAuth() {
-      isSignedIn.value = await Session.doesSessionExist();
+      try {
+         isFetchingSession.value = true;
+         isSignedIn.value = await Session.doesSessionExist();
+      } catch (error) {
+         isSignedIn.value = false;
+         console.error("Error checking session status", error);
+      } finally {
+         isFetchingSession.value = false;
+      }
    }
 
    return {
+      isFetchingSession,
       isSignedIn,
       updateAuth,
    };

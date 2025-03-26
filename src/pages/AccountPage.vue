@@ -1,112 +1,53 @@
 <template>
    <PageLoader :isLoading="isPageLoading">
-      <div v-if="!deleteToken">
-         <h1>Account</h1>
-         <p>This is your account page.</p>
-
-         <!-- Change email -->
-         <section>
-            <h2>Change your email</h2>
-            <p>
-               You will receive an email to your old email to verify your new email address. Please click on
-               the email link to update your email.
-            </p>
-            <form @submit.prevent="sendChangeEmail">
-               <label for="email">New email</label>
-               <input v-model="userNewEmail" type="email" id="email" name="email" required />
-               <button type="submit">Change email</button>
-            </form>
-         </section>
-
-         <!-- Delete account -->
-         <section>
-            <h2>Delete your account</h2>
-            <div v-if="!isDeleteEmailSent">
-               <p>
-                  You will receive an email to verify your account deletion. Please click on the email link to
-                  delete your account.
-               </p>
-
-               <button type="submit" @click="sendDeleteEmail">Send deletion email</button>
-            </div>
-            <div v-else>
-               <p>
-                  We have sent you an email to verify your account deletion. Please check your inbox and click
-                  on the verification link.
-               </p>
-            </div>
-         </section>
-
-         <Toast />
+      <div class="container flex items-center justify-center w-full mt-10">
+         <div v-if="!deleteToken" class="max-w-xl spacing-sections">
+            <h1 class="h1 text-color">Account</h1>
+            <ChangeEmail />
+            <DeleteAccount />
+         </div>
+         <div v-else>
+            <Card>
+               <template #content>
+                  <div class="spacing-elements p-12">
+                     <p class="text-2xl">Deleting your account...</p>
+                     <Spinner />
+                  </div>
+               </template>
+            </Card>
+         </div>
       </div>
    </PageLoader>
 </template>
 
 <script setup lang="ts">
-import Toast from "primevue/toast";
-import { useToast } from "primevue/usetoast";
-import addToast from "@/utils/toast";
+import Spinner from "primevue/progressspinner";
+import Card from "primevue/card";
+import ChangeEmail from "@/components/account/changeEmail/ChangeEmail.vue";
+import DeleteAccount from "@/components/account/deleteAccount/DeleteAccount.vue";
 import PageLoader from "@/components/pageLoader/PageLoader.vue";
 import Session from "supertokens-web-js/recipe/session";
-import toastContent from "@/content/generic/toastContent";
+import useToast from "@/utils/toast";
 
+const { addToast, toastContent } = useToast();
 const route = useRoute();
-const toast = useToast();
 
 // data
 // -----------------------------------------
-const isPageLoading = ref(true);
+const isPageLoading = ref(false);
 const deleteToken = route.query.del_token as string | undefined;
-const isDeleteEmailSent = ref(false);
-const userNewEmail = ref("");
 
 // lifecycle
 // -----------------------------------------
 onMounted(() => {
    // check if the user has a deletion token in the URL using vue router
    if (deleteToken) {
-      deleteAccount();
+      // deleteAccount();
    }
 });
 
 // methods
 // -----------------------------------------
-// send a request to the server to send a deletion email
-async function sendDeleteEmail() {
-   try {
-      const response = await fetch(`${import.meta.env.VITE_API_DOMAIN}/auth/request-delete`, {
-         method: "POST",
-         credentials: "include",
-      });
-
-      const result = await response.json();
-      if (!response.ok) {
-         throw new Error(result.error || "Failed to send deletion email.");
-      }
-
-      if (!response.ok) {
-         throw new Error(result.error || "Failed to send deletion email.");
-      }
-
-      isDeleteEmailSent.value = true;
-   } catch (error) {
-      isDeleteEmailSent.value = false;
-
-      addToast({
-         toast,
-         severity: "danger",
-         summary: toastContent.error.somethingWentWrong.summary,
-         detail: toastContent.error.somethingWentWrong.detail,
-         logInfo: { error },
-      });
-
-      if (error instanceof Error) {
-         console.error(`Error sending deletion email: ${error.message}`);
-      } else {
-         console.error("Error sending deletion email: Unknown error occurred");
-      }
-   }
-}
 
 // send a request to the server to delete the account
 async function deleteAccount() {
@@ -129,49 +70,13 @@ async function deleteAccount() {
       window.location.href = "/goodbye";
    } catch (error) {
       addToast({
-         toast,
          severity: "danger",
          summary: toastContent.error.somethingWentWrong.summary,
          detail: toastContent.error.somethingWentWrong.detail,
-         logInfo: { error },
+         error,
       });
 
       console.error("Failed to delete account: ", error);
-   }
-}
-
-// change the user's email
-async function sendChangeEmail() {
-   try {
-      const response = await fetch(`${import.meta.env.VITE_API_DOMAIN}/auth/change-email`, {
-         method: "POST",
-         headers: {
-            "Content-Type": "application/json",
-         },
-         credentials: "include",
-         body: JSON.stringify({ email: userNewEmail.value }),
-      });
-
-      const result = await response.json();
-
-      if (!response.ok) {
-         throw new Error(result.message || "Failed to update email");
-      }
-
-      addToast({
-         toast,
-         severity: "info",
-         summary: "Verification email sent",
-         detail: "We have sent you an email to verify your new email address. Please check your inbox.",
-      });
-   } catch (error) {
-      addToast({
-         toast,
-         severity: "danger",
-         summary: toastContent.error.somethingWentWrong.summary,
-         detail: toastContent.error.somethingWentWrong.detail,
-         logInfo: { summary: "Error updating email", error },
-      });
    }
 }
 </script>

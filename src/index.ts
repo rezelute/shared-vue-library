@@ -6,7 +6,6 @@ import Session from "supertokens-web-js/recipe/session";
 import { type AppInfoUserInput } from "supertokens-web-js/lib/build/types";
 // shared library components/stores/composables
 import ThemeToggle from "./components/themeToggle/ThemeToggle.vue";
-import Toaster from "./components/toaster/Toaster.vue";
 import { useUserStore } from "./stores/userStore";
 
 const initializeSuperTokens = (config: { appInfo: AppInfoUserInput }) => {
@@ -20,11 +19,10 @@ const initializeSuperTokens = (config: { appInfo: AppInfoUserInput }) => {
    });
 };
 
-export { ThemeToggle, Toaster, useUserStore, initializeSuperTokens };
+export { ThemeToggle, useUserStore, initializeSuperTokens };
 
-export default {
-   install: (app: any) => {
-      app.component("ThemeToggle", ThemeToggle);
-      app.component("Toaster", Toaster);
-   },
-};
+// export default {
+//    install: (app: any) => {
+//       app.component("ThemeToggle", ThemeToggle);
+//    },
+// };

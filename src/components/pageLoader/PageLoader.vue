@@ -1,7 +1,9 @@
 <template>
-   <div class="flex items-center justify-center min-h-screen">
-      <ProgressSpinner v-if="isLoading" aria-label="Loading" />
-      <slot v-else />
+   <div v-if="isLoading" class="flex flex-grow items-center justify-center w-full">
+      <ProgressSpinner aria-label="Loading" />
+   </div>
+   <div v-else class="w-full">
+      <slot />
    </div>
 </template>
 

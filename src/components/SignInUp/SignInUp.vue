@@ -3,25 +3,27 @@
       <SignInUpForm
          v-if="!showMagicInputCode"
          :pageAuthType="pageAuthType"
-         @inputCodeEmailed="showMagicInputCode = true"
+         @sendCodeSuccess="(value) => (showMagicInputCode = value)"
       />
-      <VerifyCode v-else :pageAuthType="pageAuthType" />
-
-      <Toast />
+      <VerifyCode
+         v-else
+         :pageAuthType="pageAuthType"
+         @verificationCodeSuccess="(value) => (showMagicInputCode = value)"
+         @resendCodeSuccess="(value) => (showMagicInputCode = value)"
+      />
    </PageLoader>
 </template>
 
 <script setup lang="ts">
+import SignInUpForm from "@/components/SignInUp/signInUpForm/SignInUpForm.vue";
+import VerifyCode from "@/components/SignInUp/verifyCode/VerifyCode.vue";
 import { getLoginAttemptInfo } from "supertokens-web-js/recipe/passwordless";
 import { useRouter } from "vue-router";
 import { signInAndUp } from "supertokens-web-js/recipe/thirdparty";
-import Toast from "primevue/toast";
-import { useToast } from "primevue/usetoast";
-import addToast from "@/utils/toast";
-import toastContent from "@/content/generic/toastContent";
+import useToast from "@/utils/toast";
 import PageLoader from "@/components/pageLoader/PageLoader.vue";
 
-const toast = useToast();
+const { addToast, toastContent } = useToast();
 const route = useRoute();
 const router = useRouter();
 
@@ -33,7 +35,7 @@ const showMagicInputCode = ref(false); // if a magic link has been sent, show th
 // lifecycle
 // -----------------------------------------
 onMounted(async () => {
-   showMagicInputCode.value = await hasInitialMagicLinkBeenSent();
+   showMagicInputCode.value = !!(await hasInitialMagicLinkBeenSent());
 
    // if the url contains query param ?thirdPartyId=google, we handle the google callback
    if (router.currentRoute.value.query.thirdPartyId === "google") {
@@ -45,8 +47,7 @@ onMounted(async () => {
 // -----------------------------------------
 const pageAuthType = computed(() => {
    if (route.name === "signup") return "Sign up";
-   if (route.name === "signin") return "Sign in";
-   return ""; // Default value if neither matches
+   else return "Sign in";
 });
 
 // methods
@@ -60,6 +61,12 @@ async function hasInitialMagicLinkBeenSent() {
       if (codeAlreadySent) console.info("Code already sent: ", codeAlreadySent);
       return codeAlreadySent !== undefined;
    } catch (error) {
+      addToast({
+         severity: "danger",
+         summary: toastContent.error.somethingWentWrong.summary,
+         detail: toastContent.error.somethingWentWrong.detail,
+         error,
+      });
    } finally {
       isLoading.value = false;
    }
@@ -71,6 +78,7 @@ async function handleGoogleCallback() {
    const googleFailDetail = "Please try again later or try another form of login.";
 
    try {
+      isLoading.value = true;
       const response = await signInAndUp();
 
       if (response.status === "OK") {
@@ -107,7 +115,7 @@ async function handleGoogleCallback() {
          });
          window.location.assign("/signin"); // redirect back to login page
       }
-   } catch (err: any) {
+   } catch (error) {
       // if (err.isSuperTokensGeneralError === true) {} else {}
 
       addToast({
@@ -115,8 +123,10 @@ async function handleGoogleCallback() {
          severity: "danger",
          summary: toastContent.error.somethingWentWrong.summary,
          detail: toastContent.error.somethingWentWrong.detail,
-         logInfo: { summary: "Google auth callback", error: err.message },
+         logInfo: { summary: "Google auth callback", error },
       });
+   } finally {
+      isLoading.value = false;
    }
 }
 </script>

@@ -1,5 +1,7 @@
 <template>
-   <SignInUp />
+   <div class="flex flex-grow items-center justify-center w-full">
+      <SignInUp />
+   </div>
 </template>
 
 <script setup lang="ts">

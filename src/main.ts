@@ -9,21 +9,7 @@ import PrimeVue from "primevue/config";
 import Lara from "@primeuix/themes/lara";
 import { definePreset } from "@primeuix/themes";
 import { initializeSuperTokens } from "./index";
-
-const app = createApp(App);
-const pinia = createPinia();
-app.use(pinia);
-app.use(router);
-
-// Supertokens configuration setup
-// -----------------------------------------
-initializeSuperTokens({
-   appInfo: {
-      appName: "Auth App",
-      apiDomain: import.meta.env.VITE_API_DOMAIN as string,
-      apiBasePath: "/auth",
-   },
-});
+import ToastService from "primevue/toastservice";
 
 // PrimeVue theme
 // -----------------------------------------
@@ -96,13 +82,46 @@ const MyPreset = definePreset(Lara, {
    },
 });
 
-app.use(PrimeVue, {
-   theme: {
-      preset: MyPreset,
-      options: {
-         darkModeSelector: ".dark",
-      },
-   },
-});
+// const app = createApp({
+//    render: () => h(MainCheckServer, { onServerReady: initializeApp }),
+// });
+// app.use(PrimeVue, {
+//    theme: {
+//       preset: MyPreset,
+//       options: {
+//          darkModeSelector: ".dark",
+//       },
+//    },
+// });
+// app.mount("#app");
 
-app.mount("#app");
+initializeApp();
+function initializeApp() {
+   // Step 2️⃣: Replace MainCheckServer with the full app
+   const app = createApp(App);
+   const pinia = createPinia();
+   app.use(pinia);
+   app.use(router);
+
+   // SuperTokens setup
+   initializeSuperTokens({
+      appInfo: {
+         appName: "Auth App",
+         apiDomain: import.meta.env.VITE_API_DOMAIN as string,
+         apiBasePath: "/auth",
+      },
+   });
+
+   // PrimeVue plugins
+   app.use(ToastService);
+   app.use(PrimeVue, {
+      theme: {
+         preset: MyPreset,
+         options: {
+            darkModeSelector: ".dark",
+         },
+      },
+   });
+
+   app.mount("#app");
+}

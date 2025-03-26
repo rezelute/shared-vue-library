@@ -1,37 +1,33 @@
 <template>
-   <div>
-      <Card class="max-w-xl p-12 w-full mx-auto">
-         <template #title>
-            <h1 class="h1">Input validation code</h1>
-         </template>
-         <template #content>
-            <section>
-               <div class="flex-form">
-                  <p>
-                     To finish the signup process, enter the code that was emailed to you. Note that the code
-                     is only valid for 10 minutes.
-                  </p>
-                  <InputOtp
-                     :length="6"
-                     class="w-50"
-                     v-model="userMagicCode"
-                     type="text"
-                     placeholder="Input email code"
-                     required
-                  />
-                  <p v-if="isCodeInvalid" class="validation">{{ invalidCodeText }}</p>
-                  <Button class="w-fit" type="submit" @click="onCodeSubmit">Submit code</Button>
-               </div>
-               <div class="mt-section-inner flex-form">
-                  <p>If you didnt receive an email, please check your Junk folder or resend another code.</p>
-                  <Button class="w-fit" type="button" @click="onResendCode">Resend code</Button>
-               </div>
-            </section>
-         </template>
-      </Card>
-
-      <Toast />
-   </div>
+   <Card class="max-w-xl p-12 w-full mx-auto">
+      <template #title>
+         <h1 class="h1">Input validation code</h1>
+      </template>
+      <template #content>
+         <section class="spacing-elements">
+            <div class="flex-form">
+               <p>
+                  To finish the signup process, enter the code that was emailed to you. Note that the code is
+                  only valid for 10 minutes.
+               </p>
+               <InputOtp
+                  :length="6"
+                  class="w-50"
+                  v-model="userMagicCode"
+                  type="text"
+                  placeholder="Input email code"
+                  required
+               />
+               <p v-if="isCodeInvalid" class="validation">{{ invalidCodeText }}</p>
+               <Button class="w-fit" type="submit" @click="onCodeSubmit">Submit code</Button>
+            </div>
+            <div class="mt-section-inner flex-form">
+               <p>If you didnt receive an email, please check your Junk folder or resend another code.</p>
+               <Button class="w-fit" type="button" @click="onResendCode">Resend code</Button>
+            </div>
+         </section>
+      </template>
+   </Card>
 </template>
 
 <script setup lang="ts">
@@ -39,12 +35,11 @@ import Card from "primevue/card";
 import InputOtp from "primevue/inputotp";
 import Button from "primevue/button";
 import { resendCode, clearLoginAttemptInfo, consumeCode } from "supertokens-web-js/recipe/passwordless";
-import Toast from "primevue/toast";
-import { useToast } from "primevue/usetoast";
-import addToast from "@/utils/toast";
-import toastContent from "@/content/generic/toastContent";
+import useToast from "@/utils/toast";
 
-const toast = useToast();
+const emits = defineEmits(["verificationCodeSuccess", "resendCodeSuccess"]);
+
+const { addToast, toastContent } = useToast();
 
 defineProps<{
    pageAuthType: "Sign in" | "Sign up";
@@ -89,8 +84,6 @@ async function onCodeSubmit() {
 
          // redirect to home page with vue router
          window.location.href = "/home";
-         // userStore.updateAuth();
-         // router.push({ name: "home" });
       }
       // Failure: expired/invalid code, etc.
       else {
@@ -107,14 +100,12 @@ async function onCodeSubmit() {
             await clearLoginAttemptInfo();
 
             addToast({
-               toast,
                severity: "danger",
                summary: otpErrorSummary,
                detail: otpErrorDetail,
-               logInfo: { error: response },
+               error: response,
             });
-
-            showMagicInputCode.value = false;
+            emits("verificationCodeSuccess", false);
          }
       }
    } catch (error: any) {
@@ -122,14 +113,12 @@ async function onCodeSubmit() {
       // if (err.isSuperTokensGeneralError === true) {} else {}
 
       addToast({
-         toast,
          severity: "danger",
          summary: toastContent.error.somethingWentWrong.summary,
          detail: toastContent.error.somethingWentWrong.detail,
-         logInfo: { error },
+         error: error,
       });
-
-      showMagicInputCode.value = false;
+      emits("verificationCodeSuccess", false);
    }
 }
 
@@ -150,39 +139,34 @@ async function onResendCode() {
          // enter email / phone UI again.
          await clearLoginAttemptInfo();
 
-         showMagicInputCode.value = false;
-
          addToast({
-            toast,
             severity: "danger",
             summary: resendOtpFailedSummary,
             detail: resendOtpFailedDetail,
-            logInfo: { summary: "Resend code failed", error: response },
+            error: response,
          });
+         emits("resendCodeSuccess", false);
       }
       // Magic link resent successfully, show toast to confirm
       else {
-         showMagicInputCode.value = true;
-
          addToast({
-            toast,
             severity: "success",
             summary: "Code re-sent",
             detail: "Please check your email for the new code.",
          });
+         emits("resendCodeSuccess", true);
       }
    } catch (error: any) {
       // this may be a custom error message sent from the API by you.
       // if (err.isSuperTokensGeneralError === true) {} else {}
-      showMagicInputCode.value = false;
 
       addToast({
-         toast,
          severity: "danger",
          summary: toastContent.error.somethingWentWrong.summary,
          detail: toastContent.error.somethingWentWrong.detail,
-         logInfo: { error },
+         error,
       });
+      emits("resendCodeSuccess", false);
    }
 }
 </script>

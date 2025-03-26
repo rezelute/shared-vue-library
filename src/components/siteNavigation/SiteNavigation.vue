@@ -29,6 +29,7 @@
                         icon="pi pi-sign-out"
                         aria-label="Sign out"
                         variant="outlined"
+                        :loading="signOutloading"
                      />
                   </div>
 
@@ -59,18 +60,21 @@ import ThemeToggle from "@/components/themeToggle/ThemeToggle.vue";
 import Menubar from "primevue/menubar";
 import Session from "supertokens-web-js/recipe/session";
 import { useUserStore } from "@/stores/userStore";
+import useToast from "@/utils/toast";
 
 interface MenuItem {
    label: string;
    icon: string;
    to: string;
 }
+
+const { addToast, toastContent } = useToast();
 const props = defineProps<{ items: MenuItem[] }>();
 
 // data
 // -----------------------------------------
 const userStore = useUserStore();
-const router = useRouter();
+const signOutloading = ref(false);
 const menu = ref<InstanceType<typeof Menu> | null>(null);
 
 const signInUpItems = ref([
@@ -112,10 +116,22 @@ const toggleMenu = (event: Event) => {
 };
 
 async function onSignout() {
-   await Session.signOut();
-   userStore.updateAuth();
+   try {
+      signOutloading.value = true;
+      await Session.signOut();
+      userStore.updateAuth();
 
-   // redirect to signin page
-   router.push({ name: "signin" });
+      // redirect to signin page
+      window.location.assign("signin");
+   } catch (error) {
+      addToast({
+         severity: "error",
+         summary: toastContent.error.somethingWentWrong.summary,
+         detail: toastContent.error.somethingWentWrong.detail,
+         error,
+      });
+   } finally {
+      signOutloading.value = false;
+   }
 }
 </script>

@@ -17,9 +17,17 @@
    .mt-section {
       @apply mt-8;
    }
-   .mt-section-inner {
-      @apply mt-10;
+
+   .spacing-sections {
+      @apply flex flex-col gap-12;
    }
+
+   .spacing-elements {
+      @apply flex flex-col gap-4;
+   }
+   /* .mt-section-inner {
+      @apply mt-10;
+   } */
 
    /* === TEXT === */
    .h1 {
@@ -38,36 +46,4 @@
 
 @theme {
    --color-*: initial;
-
-   /* === BASE COLORS === */
-   /* --color-black: #121a13;
-   --color-white: #ffffff;
-   --color-light: #f5f3e5;
-   --color-gray: #333;
-   --color-gray-dark: #121a13; */
-
-   /* === BRAND COLORS === */
-   /* --color-brand: #22c55e;
-   --color-brand-dark: #15803d;
-   --color-brand-darker: #1a1a23;
-   --color-brand-secondary: #f4b400; */
-
-   /* === SEMANTIC COLORS === */
-   /* --color-dark-mode-bg: var(--color-brand-darker);
-   --color-light-mode-bg: var(--color-light); */
-
-   /* === STATUS COLORS === */
-   /* --color-error: #f44f4f; */
-
-   /* === SPACING === */
-   /* --spacing-1: 0.25rem;
-   --spacing-2: 0.5rem;
-   --spacing-3: 0.75rem;
-   --spacing-4: 1rem;
-   --spacing-5: 1.25rem;
-   --spacing-6: 1.5rem;
-   --spacing-7: 1.75rem;
-   --spacing-8: 2rem;
-   --spacing-9: 2.25rem;
-   --spacing-10: 2.5rem; */
 }

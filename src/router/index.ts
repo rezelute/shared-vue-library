@@ -6,7 +6,9 @@ import SignupPage from "@/pages/AuthPage.vue";
 import SigninPage from "@/pages/AuthPage.vue";
 import GoodbyePage from "@/pages/GoodbyePage.vue";
 import NotFoundPage from "@/pages/NotFoundPage.vue";
-import Session from "supertokens-web-js/recipe/session";
+import ErrorPage from "@/pages/ErrorPage.vue";
+import { useUserStore } from "@/stores/userStore";
+// import Session from "supertokens-web-js/recipe/session";
 
 const authRoutes = [
    {
@@ -52,6 +54,11 @@ const router = createRouter({
       },
       ...authRoutes,
       {
+         path: "/error",
+         name: "error",
+         component: ErrorPage,
+      },
+      {
          path: "/:pathMatch(.*)*",
          name: "not-found",
          component: NotFoundPage,
@@ -59,20 +66,29 @@ const router = createRouter({
    ],
 });
 
+// let isFirstVisit = true; // Global flag outside of beforeEach
+
 // 🔐 Global Guard: Handle authentication logic
 router.beforeEach(async (to, from, next) => {
-   const isLoggedIn = await Session.doesSessionExist();
+   const userStore = useUserStore();
+
+   await userStore.updateAuth();
+   // // Only run updateAuth() if it's NOT the first visit
+   // // On first visit, App.vue will call updateAuth() alongside a Server Health Check (and do loading once for both)
+   // if (!isFirstVisit) {
+   // } else {
+   //    isFirstVisit = false; // Set flag to false after the first navigation
+   // }
 
    // Redirect unauthenticated users trying to access protected pages
-   if (to.meta.requiresAuth && !isLoggedIn) {
+   if (to.meta.requiresAuth && !userStore.isSignedIn) {
       next("/signin");
    }
    // Redirect logged-in users trying to access signup or signin
-   else if (to.meta.guestOnly && isLoggedIn) {
+   else if (to.meta.guestOnly && userStore.isSignedIn) {
       next("/home");
    } else {
       next();
    }
 });
-
 export default router;
