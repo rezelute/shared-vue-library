@@ -12,7 +12,10 @@
 
          <!-- This is a one off server health check that happens when the app loads to ensure the Server is running -->
          <!-- Otherwise the app would load and clicking any buttons would all trigger server errors -->
-         <main class="flex flex-grow" :class="{ 'items-center justify-center': !serverConnectionReady }">
+         <main
+            class="flex flex-col flex-grow"
+            :class="{ 'items-center justify-center': !serverConnectionReady }"
+         >
             <div v-if="isLoading" class="loader text-primary"></div>
             <AppErrorInfo v-else-if="!serverConnectionReady" error="Server is down" class="max-w-xl mx-auto">
                The server is unreachable. We have been notified about this. Please try accessing the site

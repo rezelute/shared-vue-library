@@ -1,5 +1,5 @@
 <template>
-   <div class="flex flex-grow items-center justify-center w-full">
+   <div class="flex flex-grow items-center justify-center w-full border border-surface-200">
       <SignInUp />
    </div>
 </template>

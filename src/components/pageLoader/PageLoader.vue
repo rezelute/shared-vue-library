@@ -2,7 +2,7 @@
    <div v-if="isLoading" class="flex flex-grow items-center justify-center w-full">
       <ProgressSpinner aria-label="Loading" />
    </div>
-   <div v-else class="w-full">
+   <div v-else class="border">
       <slot />
    </div>
 </template>
