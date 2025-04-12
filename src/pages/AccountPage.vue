@@ -4,7 +4,7 @@
          <div v-if="!deleteToken" class="max-w-xl">
             <h1 class="h1 text-color">Your account</h1>
 
-            <div class="spacing-sections">
+            <div class="spacing-page-sections">
                <YourAccount />
                <ChangeEmail />
                <DeleteAccount />
