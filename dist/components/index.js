@@ -1,6 +1,6 @@
-import { q as be, m as A, t as fe, E as he, B as X, R as Y, s as R, k as ee, n as te, v as pe, w as j, x as Ie, y as k, z as T, A as E, C as G, D as U, j as S, F as q, G as z, H as ge, u as ve, S as ye, l as ke, _ as Le } from "../PageLoader.vue_vue_type_script_setup_true_lang-C31nk_to.js";
+import { q as be, m as A, t as fe, E as he, B as X, R as Y, s as R, k as ee, n as te, v as pe, w as j, x as Ie, y as k, z, A as E, C as G, D as U, j as S, F as q, G as D, H as ge, u as ve, S as ye, l as ke, _ as Le } from "../PageLoader.vue_vue_type_script_setup_true_lang-C31nk_to.js";
 import { o as zt } from "../PageLoader.vue_vue_type_script_setup_true_lang-C31nk_to.js";
-import { renderSlot as x, createBlock as I, createCommentVNode as p, openBlock as u, Teleport as xe, defineComponent as _, ref as D, computed as N, unref as g, mergeProps as d, resolveDirective as ne, createElementBlock as c, createElementVNode as h, withDirectives as ie, resolveDynamicComponent as O, normalizeClass as C, toDisplayString as H, resolveComponent as K, withCtx as L, createVNode as y, Transition as Pe, Fragment as P, renderList as B, createTextVNode as V, normalizeStyle as Ce, normalizeProps as we, guardReactiveProps as Se, onMounted as Oe } from "vue";
+import { renderSlot as x, createBlock as I, createCommentVNode as p, openBlock as u, Teleport as xe, defineComponent as _, ref as V, computed as N, unref as g, mergeProps as d, resolveDirective as ne, createElementBlock as c, createElementVNode as h, withDirectives as ie, resolveDynamicComponent as O, normalizeClass as C, toDisplayString as H, resolveComponent as K, withCtx as L, createVNode as y, Transition as Pe, Fragment as P, renderList as B, createTextVNode as $, normalizeStyle as Ce, normalizeProps as we, guardReactiveProps as Se, onMounted as Oe } from "vue";
 function Me() {
   let t = [];
   const e = (a, b, s = 999) => {
@@ -58,7 +58,7 @@ re.render = Ke;
 const Kt = /* @__PURE__ */ _({
   __name: "ThemeToggle",
   setup(t) {
-    const e = localStorage.getItem("theme") || "light", n = D(e);
+    const e = localStorage.getItem("theme") || "light", n = V(e);
     document.documentElement.classList.toggle("dark", e === "dark");
     const r = N(() => n.value === "light" ? "pi pi-sun" : "pi pi-moon");
     function o() {
@@ -74,13 +74,13 @@ const Kt = /* @__PURE__ */ _({
     }, null, 8, ["icon"]));
   }
 });
-function $(t) {
+function F(t) {
   "@babel/helpers - typeof";
-  return $ = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function(e) {
+  return F = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function(e) {
     return typeof e;
   } : function(e) {
     return e && typeof Symbol == "function" && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e;
-  }, $(t);
+  }, F(t);
 }
 function Ae(t, e) {
   if (!(t instanceof e)) throw new TypeError("Cannot call a class as a function");
@@ -96,14 +96,14 @@ function $e(t, e, n) {
 }
 function Fe(t) {
   var e = Te(t, "string");
-  return $(e) == "symbol" ? e : e + "";
+  return F(e) == "symbol" ? e : e + "";
 }
 function Te(t, e) {
-  if ($(t) != "object" || !t) return t;
+  if (F(t) != "object" || !t) return t;
   var n = t[Symbol.toPrimitive];
   if (n !== void 0) {
     var r = n.call(t, e);
-    if ($(r) != "object") return r;
+    if (F(r) != "object") return r;
     throw new TypeError("@@toPrimitive must return a primitive value.");
   }
   return String(t);
@@ -523,7 +523,7 @@ var oe = {
       this.changeFocusedOptionIndex(0), e.preventDefault();
     },
     onEndKey: function(e) {
-      this.changeFocusedOptionIndex(T(this.container, 'li[data-pc-section="item"][data-p-disabled="false"]').length - 1), e.preventDefault();
+      this.changeFocusedOptionIndex(z(this.container, 'li[data-pc-section="item"][data-p-disabled="false"]').length - 1), e.preventDefault();
     },
     onEnterKey: function(e) {
       var n = E(this.list, 'li[id="'.concat("".concat(this.focusedOptionIndex), '"]')), r = n && E(n, 'a[data-pc-section="itemlink"]');
@@ -533,19 +533,19 @@ var oe = {
       this.onEnterKey(e);
     },
     findNextOptionIndex: function(e) {
-      var n = T(this.container, 'li[data-pc-section="item"][data-p-disabled="false"]'), r = W(n).findIndex(function(o) {
+      var n = z(this.container, 'li[data-pc-section="item"][data-p-disabled="false"]'), r = W(n).findIndex(function(o) {
         return o.id === e;
       });
       return r > -1 ? r + 1 : 0;
     },
     findPrevOptionIndex: function(e) {
-      var n = T(this.container, 'li[data-pc-section="item"][data-p-disabled="false"]'), r = W(n).findIndex(function(o) {
+      var n = z(this.container, 'li[data-pc-section="item"][data-p-disabled="false"]'), r = W(n).findIndex(function(o) {
         return o.id === e;
       });
       return r > -1 ? r - 1 : 0;
     },
     changeFocusedOptionIndex: function(e) {
-      var n = T(this.container, 'li[data-pc-section="item"][data-p-disabled="false"]'), r = e >= n.length ? n.length - 1 : e < 0 ? 0 : e;
+      var n = z(this.container, 'li[data-pc-section="item"][data-p-disabled="false"]'), r = e >= n.length ? n.length - 1 : e < 0 ? 0 : e;
       r > -1 && (this.focusedOptionIndex = n[r].getAttribute("id"));
     },
     toggle: function(e) {
@@ -697,7 +697,7 @@ function tt(t, e, n, r, o, i) {
             }, t.ptm("submenuLabel")), [x(t.$slots, t.$slots.submenulabel ? "submenulabel" : "submenuheader", {
               item: s
             }, function() {
-              return [V(H(i.label(s)), 1)];
+              return [$(H(i.label(s)), 1)];
             })], 16, et)) : p("", !0), (u(!0), c(P, null, B(s.items, function(m, f) {
               return u(), c(P, {
                 key: m.label + l + "_" + f
@@ -1544,7 +1544,7 @@ var de = {
     },
     onItemChange: function(e, n) {
       var r = e.processedItem, o = e.isFocus;
-      if (!z(r)) {
+      if (!D(r)) {
         var i = r.index, a = r.key, b = r.level, s = r.parentKey, l = r.items, m = S(l), f = this.activeItemPath.filter(function(v) {
           return v.parentKey !== s && v.parentKey !== a;
         });
@@ -1556,7 +1556,7 @@ var de = {
       }
     },
     onItemClick: function(e) {
-      var n = e.originalEvent, r = e.processedItem, o = this.isProccessedItemGroup(r), i = z(r.parent), a = this.isSelected(r);
+      var n = e.originalEvent, r = e.processedItem, o = this.isProccessedItemGroup(r), i = D(r.parent), a = this.isSelected(r);
       if (a) {
         var b = r.index, s = r.key, l = r.level, m = r.parentKey;
         this.activeItemPath = this.activeItemPath.filter(function(v) {
@@ -1588,7 +1588,7 @@ var de = {
       (e.code === "Enter" || e.code === "NumpadEnter" || e.code === "Space") && this.menuButtonClick(e);
     },
     onArrowDownKey: function(e) {
-      var n = this.visibleItems[this.focusedItemInfo.index], r = n ? z(n.parent) : null;
+      var n = this.visibleItems[this.focusedItemInfo.index], r = n ? D(n.parent) : null;
       if (r) {
         var o = this.isProccessedItemGroup(n);
         o && (this.onItemChange({
@@ -1605,7 +1605,7 @@ var de = {
       e.preventDefault();
     },
     onArrowUpKey: function(e) {
-      var n = this, r = this.visibleItems[this.focusedItemInfo.index], o = z(r.parent);
+      var n = this, r = this.visibleItems[this.focusedItemInfo.index], o = D(r.parent);
       if (o) {
         var i = this.isProccessedItemGroup(r);
         if (i) {
@@ -1858,13 +1858,13 @@ var de = {
     BarsIcon: ae
   }
 };
-function F(t) {
+function T(t) {
   "@babel/helpers - typeof";
-  return F = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function(e) {
+  return T = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function(e) {
     return typeof e;
   } : function(e) {
     return e && typeof Symbol == "function" && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e;
-  }, F(t);
+  }, T(t);
 }
 function J(t, e) {
   var n = Object.keys(t);
@@ -1892,14 +1892,14 @@ function pt(t, e, n) {
 }
 function It(t) {
   var e = gt(t, "string");
-  return F(e) == "symbol" ? e : e + "";
+  return T(e) == "symbol" ? e : e + "";
 }
 function gt(t, e) {
-  if (F(t) != "object" || !t) return t;
+  if (T(t) != "object" || !t) return t;
   var n = t[Symbol.toPrimitive];
   if (n !== void 0) {
     var r = n.call(t, e);
-    if (F(r) != "object") return r;
+    if (T(r) != "object") return r;
     throw new TypeError("@@toPrimitive must return a primitive value.");
   }
   return (e === "string" ? String : Number)(t);
@@ -1977,7 +1977,7 @@ const kt = { class: "bg-surface-0 dark:bg-surface-900" }, Lt = { class: "contain
     userSignedIn: { type: Boolean, default: !1 }
   },
   setup(t) {
-    const e = t, n = ve(), r = D(!1), o = D(null), i = D([
+    const e = t, n = ve(), r = V(!1), o = V(null), i = V([
       { label: "Sign in", icon: "pi pi-sign-in", to: "/signin" },
       { label: "Sign up", icon: "pi pi-user-plus", to: "/signup" }
     ]), a = N(() => e.userSignedIn ? e.items : [...e.items || [], ...i.value]), b = N(() => [
@@ -2006,6 +2006,7 @@ const kt = { class: "bg-surface-0 dark:bg-surface-900" }, Lt = { class: "contain
       const v = K("RouterLink");
       return u(), c("header", kt, [
         h("div", Lt, [
+          f[0] || (f[0] = $(" HELLO ")),
           y(g(de), { model: [] }, {
             start: L(() => [
               y(g(A), {
@@ -2098,18 +2099,18 @@ const kt = { class: "bg-surface-0 dark:bg-surface-900" }, Lt = { class: "contain
     }), (n, r) => (u(), I(g(ke), { class: "p-10" }, {
       title: L(() => r[0] || (r[0] = [
         h("h2", { class: "text-4xl font-semibold text-gray-800 text-center" }, [
-          V(" Oops "),
+          $(" Oops "),
           h("i", { class: "text-4xl not-italic" }, "🥲")
         ], -1)
       ])),
       content: L(() => r[1] || (r[1] = [
         h("p", { class: "mt-10 text-xl" }, [
-          V(" Something went wrong! We have been notified about this. In the meantime, please try visiting the "),
+          $(" Something went wrong! We have been notified about this. In the meantime, please try visiting the "),
           h("a", {
             href: "/",
             class: "underline"
           }, "homepage"),
-          V(" or try again later. ")
+          $(" or try again later. ")
         ], -1)
       ])),
       _: 1
