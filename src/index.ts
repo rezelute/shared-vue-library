@@ -5,12 +5,15 @@ import ThirdParty from "supertokens-web-js/recipe/thirdparty";
 import Session from "supertokens-web-js/recipe/session";
 import { type AppInfoUserInput } from "supertokens-web-js/lib/build/types";
 
-// shared library STORES
+// shared STORES
 import { useUserStore } from "./stores/userStore";
 
 // shared routes
 import { sharedRoutes } from "./router/sharedRoutes";
 import { setupAuthGuard } from "./router/routeGuards";
+
+// shared utils
+import { setupPrimeVue } from "./primeVueSetup";
 
 const initializeSuperTokens = (config: { appInfo: AppInfoUserInput }) => {
    SuperTokens.init({
@@ -32,7 +35,7 @@ const baseRouting = {
    setupAuthGuard,
 };
 
-export { stores, baseRouting, initializeSuperTokens };
+export { stores, baseRouting, initializeSuperTokens, setupPrimeVue };
 
 // export default {
 //    install: (app: any) => {

@@ -1,159 +1,159 @@
-import { r as Gt, a as Kt, b as Qt, c as Y, d as zt, e as Jt, f as $e, g as Yt, h as Ue, i as Le, _ as $t, s as Xt, j as Be, B as Ut, k as Zt, l as ue, m as pe, n as en, o as Lt, S as Ne, p as tn, u as Nt } from "./PageLoader.vue_vue_type_script_setup_true_lang-C31nk_to.js";
-import { defineComponent as D, createElementBlock as N, openBlock as R, createElementVNode as b, createStaticVNode as nn, toDisplayString as ee, mergeProps as Fe, inject as ae, ref as j, createBlock as M, unref as S, withCtx as $, createVNode as L, withModifiers as je, isRef as He, resolveComponent as rn, Fragment as on, renderList as sn, renderSlot as Ft, normalizeClass as jt, computed as X, createCommentVNode as Ee, createTextVNode as he, reactive as an, h as un, getCurrentInstance as ln, watchEffect as cn, onMounted as Ie } from "vue";
-var xe = {}, se = {}, me = {}, ke = {}, Se = {}, Ge;
-function dn() {
-  return Ge || (Ge = 1, function(e) {
-    function t(i) {
-      for (var c in i) e.hasOwnProperty(c) || (e[c] = i[c]);
+import { r as ie, a as de, b as ce, c as J, d as se, e as le, f as Ho, g as ue, h as jo, i as Mo, _ as Vr, s as fe, j as or, B as Z, k as ge, l as fo, m as bo, n as pe, o as Gr, S as qo, p as me, u as Yr, q as he, t as Qr, P as wo, v as Ao, w as be } from "./PageLoader.vue_vue_type_script_setup_true_lang-CpVC9aun.js";
+import { defineComponent as z, createElementBlock as N, openBlock as P, createElementVNode as C, createStaticVNode as ve, toDisplayString as eo, mergeProps as Vo, inject as uo, ref as D, createBlock as M, unref as B, withCtx as O, createVNode as L, withModifiers as Go, isRef as Yo, resolveComponent as ke, Fragment as ye, renderList as we, renderSlot as Xr, normalizeClass as Kr, computed as oo, createCommentVNode as zo, createTextVNode as vo, reactive as Jr, h as Ce, getCurrentInstance as xe, watchEffect as $e, onMounted as Io, watch as Co } from "vue";
+var Oo = {}, so = {}, xo = {}, Eo = {}, Lo = {}, rr;
+function Re() {
+  return rr || (rr = 1, function(o) {
+    function r(n) {
+      for (var s in n) o.hasOwnProperty(s) || (o[s] = n[s]);
     }
-    e.__esModule = !0, t(Gt());
-  }(Se)), Se;
+    o.__esModule = !0, r(ie());
+  }(Lo)), Lo;
 }
-var Ke;
-function fn() {
-  return Ke || (Ke = 1, function(e) {
-    Object.defineProperty(e, "__esModule", { value: !0 }), e.CookieHandlerReference = void 0;
-    var t = dn();
-    Object.defineProperty(e, "CookieHandlerReference", {
+var er;
+function Be() {
+  return er || (er = 1, function(o) {
+    Object.defineProperty(o, "__esModule", { value: !0 }), o.CookieHandlerReference = void 0;
+    var r = Re();
+    Object.defineProperty(o, "CookieHandlerReference", {
       enumerable: !0,
       get: function() {
-        return t.CookieHandlerReference;
+        return r.CookieHandlerReference;
       }
     });
-  }(ke)), ke;
+  }(Eo)), Eo;
 }
-var ce = {}, Qe;
-function pn() {
-  if (Qe) return ce;
-  Qe = 1, Object.defineProperty(ce, "__esModule", { value: !0 }), ce.PostSuperTokensInitCallbacks = void 0;
-  var e = (
+var po = {}, tr;
+function Ie() {
+  if (tr) return po;
+  tr = 1, Object.defineProperty(po, "__esModule", { value: !0 }), po.PostSuperTokensInitCallbacks = void 0;
+  var o = (
     /** @class */
     function() {
-      function t() {
+      function r() {
       }
-      return t.addPostInitCallback = function(i) {
-        t.postInitCallbacks.push(i);
-      }, t.runPostInitCallbacks = function() {
-        for (var i = 0, c = t.postInitCallbacks; i < c.length; i++) {
-          var h = c[i];
-          h();
+      return r.addPostInitCallback = function(n) {
+        r.postInitCallbacks.push(n);
+      }, r.runPostInitCallbacks = function() {
+        for (var n = 0, s = r.postInitCallbacks; n < s.length; n++) {
+          var p = s[n];
+          p();
         }
-      }, t.postInitCallbacks = [], t;
+      }, r.postInitCallbacks = [], r;
     }()
   );
-  return ce.PostSuperTokensInitCallbacks = e, ce;
+  return po.PostSuperTokensInitCallbacks = o, po;
 }
-var V = {}, te = {}, de = {}, J = {}, ze;
-function hn() {
-  if (ze) return J;
-  ze = 1;
-  var e = J && J.__awaiter || function(c, h, d, g) {
-    function f(u) {
-      return u instanceof d ? u : new d(function(a) {
-        a(u);
+var q = {}, to = {}, mo = {}, K = {}, nr;
+function _e() {
+  if (nr) return K;
+  nr = 1;
+  var o = K && K.__awaiter || function(s, p, u, b) {
+    function f(c) {
+      return c instanceof u ? c : new u(function(d) {
+        d(c);
       });
     }
-    return new (d || (d = Promise))(function(u, a) {
-      function r(s) {
+    return new (u || (u = Promise))(function(c, d) {
+      function t(i) {
         try {
-          o(g.next(s));
+          a(b.next(i));
         } catch (l) {
-          a(l);
+          d(l);
         }
       }
-      function n(s) {
+      function e(i) {
         try {
-          o(g.throw(s));
+          a(b.throw(i));
         } catch (l) {
-          a(l);
+          d(l);
         }
       }
-      function o(s) {
-        s.done ? u(s.value) : f(s.value).then(r, n);
+      function a(i) {
+        i.done ? c(i.value) : f(i.value).then(t, e);
       }
-      o((g = g.apply(c, h || [])).next());
+      a((b = b.apply(s, p || [])).next());
     });
-  }, t = J && J.__generator || function(c, h) {
-    var d = {
+  }, r = K && K.__generator || function(s, p) {
+    var u = {
       label: 0,
       sent: function() {
-        if (u[0] & 1) throw u[1];
-        return u[1];
+        if (c[0] & 1) throw c[1];
+        return c[1];
       },
       trys: [],
       ops: []
-    }, g, f, u, a;
-    return a = { next: r(0), throw: r(1), return: r(2) }, typeof Symbol == "function" && (a[Symbol.iterator] = function() {
+    }, b, f, c, d;
+    return d = { next: t(0), throw: t(1), return: t(2) }, typeof Symbol == "function" && (d[Symbol.iterator] = function() {
       return this;
-    }), a;
-    function r(o) {
-      return function(s) {
-        return n([o, s]);
+    }), d;
+    function t(a) {
+      return function(i) {
+        return e([a, i]);
       };
     }
-    function n(o) {
-      if (g) throw new TypeError("Generator is already executing.");
-      for (; d; )
+    function e(a) {
+      if (b) throw new TypeError("Generator is already executing.");
+      for (; u; )
         try {
-          if (g = 1, f && (u = o[0] & 2 ? f.return : o[0] ? f.throw || ((u = f.return) && u.call(f), 0) : f.next) && !(u = u.call(f, o[1])).done)
-            return u;
-          switch (f = 0, u && (o = [o[0] & 2, u.value]), o[0]) {
+          if (b = 1, f && (c = a[0] & 2 ? f.return : a[0] ? f.throw || ((c = f.return) && c.call(f), 0) : f.next) && !(c = c.call(f, a[1])).done)
+            return c;
+          switch (f = 0, c && (a = [a[0] & 2, c.value]), a[0]) {
             case 0:
             case 1:
-              u = o;
+              c = a;
               break;
             case 4:
-              return d.label++, { value: o[1], done: !1 };
+              return u.label++, { value: a[1], done: !1 };
             case 5:
-              d.label++, f = o[1], o = [0];
+              u.label++, f = a[1], a = [0];
               continue;
             case 7:
-              o = d.ops.pop(), d.trys.pop();
+              a = u.ops.pop(), u.trys.pop();
               continue;
             default:
-              if (u = d.trys, !(u = u.length > 0 && u[u.length - 1]) && (o[0] === 6 || o[0] === 2)) {
-                d = 0;
+              if (c = u.trys, !(c = c.length > 0 && c[c.length - 1]) && (a[0] === 6 || a[0] === 2)) {
+                u = 0;
                 continue;
               }
-              if (o[0] === 3 && (!u || o[1] > u[0] && o[1] < u[3])) {
-                d.label = o[1];
+              if (a[0] === 3 && (!c || a[1] > c[0] && a[1] < c[3])) {
+                u.label = a[1];
                 break;
               }
-              if (o[0] === 6 && d.label < u[1]) {
-                d.label = u[1], u = o;
+              if (a[0] === 6 && u.label < c[1]) {
+                u.label = c[1], c = a;
                 break;
               }
-              if (u && d.label < u[2]) {
-                d.label = u[2], d.ops.push(o);
+              if (c && u.label < c[2]) {
+                u.label = c[2], u.ops.push(a);
                 break;
               }
-              u[2] && d.ops.pop(), d.trys.pop();
+              c[2] && u.ops.pop(), u.trys.pop();
               continue;
           }
-          o = h.call(c, d);
-        } catch (s) {
-          o = [6, s], f = 0;
+          a = p.call(s, u);
+        } catch (i) {
+          a = [6, i], f = 0;
         } finally {
-          g = u = 0;
+          b = c = 0;
         }
-      if (o[0] & 5) throw o[1];
-      return { value: o[0] ? o[1] : void 0, done: !0 };
+      if (a[0] & 5) throw a[1];
+      return { value: a[0] ? a[1] : void 0, done: !0 };
     }
   };
-  Object.defineProperty(J, "__esModule", { value: !0 }), J.normaliseRecipeModuleConfig = void 0;
-  function i(c) {
-    var h = this, d = c.preAPIHook;
-    d === void 0 && (d = function(f) {
-      return e(h, void 0, void 0, function() {
-        return t(this, function(u) {
+  Object.defineProperty(K, "__esModule", { value: !0 }), K.normaliseRecipeModuleConfig = void 0;
+  function n(s) {
+    var p = this, u = s.preAPIHook;
+    u === void 0 && (u = function(f) {
+      return o(p, void 0, void 0, function() {
+        return r(this, function(c) {
           return [2, f];
         });
       });
     });
-    var g = c.postAPIHook;
-    return g === void 0 && (g = function() {
-      return e(h, void 0, void 0, function() {
-        return t(this, function(f) {
+    var b = s.postAPIHook;
+    return b === void 0 && (b = function() {
+      return o(p, void 0, void 0, function() {
+        return r(this, function(f) {
           return [
             2
             /*return*/
@@ -161,317 +161,317 @@ function hn() {
         });
       });
     }), {
-      recipeId: c.recipeId,
-      appInfo: c.appInfo,
-      clientType: c.clientType,
-      preAPIHook: d,
-      postAPIHook: g
+      recipeId: s.recipeId,
+      appInfo: s.appInfo,
+      clientType: s.clientType,
+      preAPIHook: u,
+      postAPIHook: b
     };
   }
-  return J.normaliseRecipeModuleConfig = i, J;
+  return K.normaliseRecipeModuleConfig = n, K;
 }
-var Je;
-function De() {
-  if (Je) return de;
-  Je = 1, Object.defineProperty(de, "__esModule", { value: !0 }), de.normaliseAuthRecipe = void 0;
-  var e = hn();
-  function t(i) {
-    return (0, e.normaliseRecipeModuleConfig)(i);
+var ar;
+function Qo() {
+  if (ar) return mo;
+  ar = 1, Object.defineProperty(mo, "__esModule", { value: !0 }), mo.normaliseAuthRecipe = void 0;
+  var o = _e();
+  function r(n) {
+    return (0, o.normaliseRecipeModuleConfig)(n);
   }
-  return de.normaliseAuthRecipe = t, de;
+  return mo.normaliseAuthRecipe = r, mo;
 }
-var Ye;
-function vn() {
-  if (Ye) return te;
-  Ye = 1;
-  var e = te && te.__assign || function() {
-    return e = Object.assign || function(c) {
-      for (var h, d = 1, g = arguments.length; d < g; d++) {
-        h = arguments[d];
-        for (var f in h) Object.prototype.hasOwnProperty.call(h, f) && (c[f] = h[f]);
+var ir;
+function Se() {
+  if (ir) return to;
+  ir = 1;
+  var o = to && to.__assign || function() {
+    return o = Object.assign || function(s) {
+      for (var p, u = 1, b = arguments.length; u < b; u++) {
+        p = arguments[u];
+        for (var f in p) Object.prototype.hasOwnProperty.call(p, f) && (s[f] = p[f]);
       }
-      return c;
-    }, e.apply(this, arguments);
+      return s;
+    }, o.apply(this, arguments);
   };
-  Object.defineProperty(te, "__esModule", { value: !0 }), te.normaliseUserInput = void 0;
-  var t = De();
-  function i(c) {
-    var h = e(
+  Object.defineProperty(to, "__esModule", { value: !0 }), to.normaliseUserInput = void 0;
+  var r = Qo();
+  function n(s) {
+    var p = o(
       {
-        functions: function(d) {
-          return d;
+        functions: function(u) {
+          return u;
         }
       },
-      c.override
+      s.override
     );
-    return e(e({}, (0, t.normaliseAuthRecipe)(c)), { override: h });
+    return o(o({}, (0, r.normaliseAuthRecipe)(s)), { override: p });
   }
-  return te.normaliseUserInput = i, te;
+  return to.normaliseUserInput = n, to;
 }
-var B = {}, G = {}, ne = {}, Xe;
-function mn() {
-  return Xe || (Xe = 1, Object.defineProperty(ne, "__esModule", { value: !0 }), ne.supported_fdi = ne.package_version = void 0, ne.package_version = "0.14.0", ne.supported_fdi = ["3.1", "4.0"]), ne;
+var V = {}, G = {}, no = {}, dr;
+function Pe() {
+  return dr || (dr = 1, Object.defineProperty(no, "__esModule", { value: !0 }), no.supported_fdi = no.package_version = void 0, no.package_version = "0.14.0", no.supported_fdi = ["3.1", "4.0"]), no;
 }
-var ge = {}, Ce = {}, Ze;
-function gn() {
-  return Ze || (Ze = 1, function(e) {
-    function t(c) {
-      for (var h in c) e.hasOwnProperty(h) || (e[h] = c[h]);
+var $o = {}, No = {}, cr;
+function Te() {
+  return cr || (cr = 1, function(o) {
+    function r(s) {
+      for (var p in s) o.hasOwnProperty(p) || (o[p] = s[p]);
     }
-    e.__esModule = !0;
-    let i = Kt();
-    i.default !== void 0 ? t(i) : t({
-      default: i,
-      ...i
+    o.__esModule = !0;
+    let n = de();
+    n.default !== void 0 ? r(n) : r({
+      default: n,
+      ...n
     });
-  }(Ce)), Ce;
+  }(No)), No;
 }
-var et;
-function Ht() {
-  if (et) return ge;
-  et = 1, Object.defineProperty(ge, "__esModule", { value: !0 });
-  var e = gn();
-  return ge.default = e.STGeneralError, ge;
+var sr;
+function Zr() {
+  if (sr) return $o;
+  sr = 1, Object.defineProperty($o, "__esModule", { value: !0 });
+  var o = Te();
+  return $o.default = o.STGeneralError, $o;
 }
-var tt;
-function We() {
-  if (tt) return G;
-  tt = 1;
-  var e = G && G.__assign || function() {
-    return e = Object.assign || function(f) {
-      for (var u, a = 1, r = arguments.length; a < r; a++) {
-        u = arguments[a];
-        for (var n in u) Object.prototype.hasOwnProperty.call(u, n) && (f[n] = u[n]);
+var lr;
+function Xo() {
+  if (lr) return G;
+  lr = 1;
+  var o = G && G.__assign || function() {
+    return o = Object.assign || function(f) {
+      for (var c, d = 1, t = arguments.length; d < t; d++) {
+        c = arguments[d];
+        for (var e in c) Object.prototype.hasOwnProperty.call(c, e) && (f[e] = c[e]);
       }
       return f;
-    }, e.apply(this, arguments);
-  }, t = G && G.__awaiter || function(f, u, a, r) {
-    function n(o) {
-      return o instanceof a ? o : new a(function(s) {
-        s(o);
+    }, o.apply(this, arguments);
+  }, r = G && G.__awaiter || function(f, c, d, t) {
+    function e(a) {
+      return a instanceof d ? a : new d(function(i) {
+        i(a);
       });
     }
-    return new (a || (a = Promise))(function(o, s) {
-      function l(v) {
+    return new (d || (d = Promise))(function(a, i) {
+      function l(m) {
         try {
-          m(r.next(v));
-        } catch (I) {
-          s(I);
+          h(t.next(m));
+        } catch (k) {
+          i(k);
         }
       }
-      function p(v) {
+      function g(m) {
         try {
-          m(r.throw(v));
-        } catch (I) {
-          s(I);
+          h(t.throw(m));
+        } catch (k) {
+          i(k);
         }
       }
-      function m(v) {
-        v.done ? o(v.value) : n(v.value).then(l, p);
+      function h(m) {
+        m.done ? a(m.value) : e(m.value).then(l, g);
       }
-      m((r = r.apply(f, u || [])).next());
+      h((t = t.apply(f, c || [])).next());
     });
-  }, i = G && G.__generator || function(f, u) {
-    var a = {
+  }, n = G && G.__generator || function(f, c) {
+    var d = {
       label: 0,
       sent: function() {
-        if (o[0] & 1) throw o[1];
-        return o[1];
+        if (a[0] & 1) throw a[1];
+        return a[1];
       },
       trys: [],
       ops: []
-    }, r, n, o, s;
-    return s = { next: l(0), throw: l(1), return: l(2) }, typeof Symbol == "function" && (s[Symbol.iterator] = function() {
+    }, t, e, a, i;
+    return i = { next: l(0), throw: l(1), return: l(2) }, typeof Symbol == "function" && (i[Symbol.iterator] = function() {
       return this;
-    }), s;
-    function l(m) {
-      return function(v) {
-        return p([m, v]);
+    }), i;
+    function l(h) {
+      return function(m) {
+        return g([h, m]);
       };
     }
-    function p(m) {
-      if (r) throw new TypeError("Generator is already executing.");
-      for (; a; )
+    function g(h) {
+      if (t) throw new TypeError("Generator is already executing.");
+      for (; d; )
         try {
-          if (r = 1, n && (o = m[0] & 2 ? n.return : m[0] ? n.throw || ((o = n.return) && o.call(n), 0) : n.next) && !(o = o.call(n, m[1])).done)
-            return o;
-          switch (n = 0, o && (m = [m[0] & 2, o.value]), m[0]) {
+          if (t = 1, e && (a = h[0] & 2 ? e.return : h[0] ? e.throw || ((a = e.return) && a.call(e), 0) : e.next) && !(a = a.call(e, h[1])).done)
+            return a;
+          switch (e = 0, a && (h = [h[0] & 2, a.value]), h[0]) {
             case 0:
             case 1:
-              o = m;
+              a = h;
               break;
             case 4:
-              return a.label++, { value: m[1], done: !1 };
+              return d.label++, { value: h[1], done: !1 };
             case 5:
-              a.label++, n = m[1], m = [0];
+              d.label++, e = h[1], h = [0];
               continue;
             case 7:
-              m = a.ops.pop(), a.trys.pop();
+              h = d.ops.pop(), d.trys.pop();
               continue;
             default:
-              if (o = a.trys, !(o = o.length > 0 && o[o.length - 1]) && (m[0] === 6 || m[0] === 2)) {
-                a = 0;
+              if (a = d.trys, !(a = a.length > 0 && a[a.length - 1]) && (h[0] === 6 || h[0] === 2)) {
+                d = 0;
                 continue;
               }
-              if (m[0] === 3 && (!o || m[1] > o[0] && m[1] < o[3])) {
-                a.label = m[1];
+              if (h[0] === 3 && (!a || h[1] > a[0] && h[1] < a[3])) {
+                d.label = h[1];
                 break;
               }
-              if (m[0] === 6 && a.label < o[1]) {
-                a.label = o[1], o = m;
+              if (h[0] === 6 && d.label < a[1]) {
+                d.label = a[1], a = h;
                 break;
               }
-              if (o && a.label < o[2]) {
-                a.label = o[2], a.ops.push(m);
+              if (a && d.label < a[2]) {
+                d.label = a[2], d.ops.push(h);
                 break;
               }
-              o[2] && a.ops.pop(), a.trys.pop();
+              a[2] && d.ops.pop(), d.trys.pop();
               continue;
           }
-          m = u.call(f, a);
-        } catch (v) {
-          m = [6, v], n = 0;
+          h = c.call(f, d);
+        } catch (m) {
+          h = [6, m], e = 0;
         } finally {
-          r = o = 0;
+          t = a = 0;
         }
-      if (m[0] & 5) throw m[1];
-      return { value: m[0] ? m[1] : void 0, done: !0 };
+      if (h[0] & 5) throw h[1];
+      return { value: h[0] ? h[1] : void 0, done: !0 };
     }
   };
   Object.defineProperty(G, "__esModule", { value: !0 });
-  var c = Qt(), h = mn(), d = Ht(), g = (
+  var s = ce(), p = Pe(), u = Zr(), b = (
     /** @class */
     function() {
-      function f(a, r) {
-        var n = this;
-        this.recipeId = a, this.appInfo = r, this.get = function(o, s, l, p, m, v) {
-          return t(n, void 0, void 0, function() {
-            var I, P;
-            return i(this, function(x) {
-              switch (x.label) {
+      function f(d, t) {
+        var e = this;
+        this.recipeId = d, this.appInfo = t, this.get = function(a, i, l, g, h, m) {
+          return r(e, void 0, void 0, function() {
+            var k, x;
+            return n(this, function($) {
+              switch ($.label) {
                 case 0:
                   return [
                     4,
                     this.fetch(
-                      this.getFullUrl(o, s, p),
-                      e({ method: "GET" }, l),
-                      m,
-                      v
+                      this.getFullUrl(a, i, g),
+                      o({ method: "GET" }, l),
+                      h,
+                      m
                     )
                   ];
                 case 1:
-                  return I = x.sent(), [4, this.getResponseJsonOrThrowGeneralError(I)];
+                  return k = $.sent(), [4, this.getResponseJsonOrThrowGeneralError(k)];
                 case 2:
-                  return P = x.sent(), [
+                  return x = $.sent(), [
                     2,
                     {
-                      jsonBody: P,
-                      fetchResponse: I
+                      jsonBody: x,
+                      fetchResponse: k
                     }
                   ];
               }
             });
           });
-        }, this.post = function(o, s, l, p, m) {
-          return t(n, void 0, void 0, function() {
-            var v, I;
-            return i(this, function(P) {
-              switch (P.label) {
+        }, this.post = function(a, i, l, g, h) {
+          return r(e, void 0, void 0, function() {
+            var m, k;
+            return n(this, function(x) {
+              switch (x.label) {
                 case 0:
                   if (l.body === void 0)
                     throw new Error("Post request must have a body");
                   return [
                     4,
                     this.fetch(
-                      this.getFullUrl(o, s),
-                      e({ method: "POST" }, l),
-                      p,
-                      m
+                      this.getFullUrl(a, i),
+                      o({ method: "POST" }, l),
+                      g,
+                      h
                     )
                   ];
                 case 1:
-                  return v = P.sent(), [4, this.getResponseJsonOrThrowGeneralError(v)];
+                  return m = x.sent(), [4, this.getResponseJsonOrThrowGeneralError(m)];
                 case 2:
-                  return I = P.sent(), [
+                  return k = x.sent(), [
                     2,
                     {
-                      jsonBody: I,
-                      fetchResponse: v
+                      jsonBody: k,
+                      fetchResponse: m
                     }
                   ];
               }
             });
           });
-        }, this.delete = function(o, s, l, p, m) {
-          return t(n, void 0, void 0, function() {
-            var v, I;
-            return i(this, function(P) {
-              switch (P.label) {
+        }, this.delete = function(a, i, l, g, h) {
+          return r(e, void 0, void 0, function() {
+            var m, k;
+            return n(this, function(x) {
+              switch (x.label) {
                 case 0:
                   return [
                     4,
                     this.fetch(
-                      this.getFullUrl(o, s),
-                      e({ method: "DELETE" }, l),
-                      p,
-                      m
+                      this.getFullUrl(a, i),
+                      o({ method: "DELETE" }, l),
+                      g,
+                      h
                     )
                   ];
                 case 1:
-                  return v = P.sent(), [4, this.getResponseJsonOrThrowGeneralError(v)];
+                  return m = x.sent(), [4, this.getResponseJsonOrThrowGeneralError(m)];
                 case 2:
-                  return I = P.sent(), [
+                  return k = x.sent(), [
                     2,
                     {
-                      jsonBody: I,
-                      fetchResponse: v
+                      jsonBody: k,
+                      fetchResponse: m
                     }
                   ];
               }
             });
           });
-        }, this.put = function(o, s, l, p, m) {
-          return t(n, void 0, void 0, function() {
-            var v, I;
-            return i(this, function(P) {
-              switch (P.label) {
+        }, this.put = function(a, i, l, g, h) {
+          return r(e, void 0, void 0, function() {
+            var m, k;
+            return n(this, function(x) {
+              switch (x.label) {
                 case 0:
                   return [
                     4,
                     this.fetch(
-                      this.getFullUrl(o, s),
-                      e({ method: "PUT" }, l),
-                      p,
-                      m
+                      this.getFullUrl(a, i),
+                      o({ method: "PUT" }, l),
+                      g,
+                      h
                     )
                   ];
                 case 1:
-                  return v = P.sent(), [4, this.getResponseJsonOrThrowGeneralError(v)];
+                  return m = x.sent(), [4, this.getResponseJsonOrThrowGeneralError(m)];
                 case 2:
-                  return I = P.sent(), [
+                  return k = x.sent(), [
                     2,
                     {
-                      jsonBody: I,
-                      fetchResponse: v
+                      jsonBody: k,
+                      fetchResponse: m
                     }
                   ];
               }
             });
           });
-        }, this.fetch = function(o, s, l, p) {
-          return t(n, void 0, void 0, function() {
-            var m, v, I, P, x, y;
-            return i(this, function(w) {
+        }, this.fetch = function(a, i, l, g) {
+          return r(e, void 0, void 0, function() {
+            var h, m, k, x, $, v;
+            return n(this, function(w) {
               switch (w.label) {
                 case 0:
-                  return s === void 0 ? m = {} : m = s.headers, [
+                  return i === void 0 ? h = {} : h = i.headers, [
                     4,
                     this.callPreAPIHook({
                       preAPIHook: l,
-                      url: o,
-                      requestInit: e(e({}, s), {
-                        headers: e(e({}, m), {
-                          "fdi-version": h.supported_fdi.join(","),
+                      url: a,
+                      requestInit: o(o({}, i), {
+                        headers: o(o({}, h), {
+                          "fdi-version": p.supported_fdi.join(","),
                           "Content-Type": "application/json",
                           rid: this.recipeId
                         })
@@ -479,109 +479,109 @@ function We() {
                     })
                   ];
                 case 1:
-                  return v = w.sent(), I = v.requestInit, P = v.url, [4, fetch(P, I)];
+                  return m = w.sent(), k = m.requestInit, x = m.url, [4, fetch(x, k)];
                 case 2:
-                  if (x = w.sent(), x.status >= 300)
-                    throw x;
-                  return p === void 0 ? [3, 4] : (y = x.clone(), [
+                  if ($ = w.sent(), $.status >= 300)
+                    throw $;
+                  return g === void 0 ? [3, 4] : (v = $.clone(), [
                     4,
-                    p({
-                      requestInit: I,
-                      url: o,
-                      fetchResponse: y
+                    g({
+                      requestInit: k,
+                      url: a,
+                      fetchResponse: v
                     })
                   ]);
                 case 3:
                   w.sent(), w.label = 4;
                 case 4:
-                  return [2, x];
+                  return [2, $];
               }
             });
           });
-        }, this.callPreAPIHook = function(o) {
-          return t(n, void 0, void 0, function() {
-            var s;
-            return i(this, function(l) {
+        }, this.callPreAPIHook = function(a) {
+          return r(e, void 0, void 0, function() {
+            var i;
+            return n(this, function(l) {
               switch (l.label) {
                 case 0:
-                  return o.preAPIHook === void 0 ? [
+                  return a.preAPIHook === void 0 ? [
                     2,
                     {
-                      url: o.url,
-                      requestInit: o.requestInit
+                      url: a.url,
+                      requestInit: a.requestInit
                     }
                   ] : [
                     4,
-                    o.preAPIHook({
-                      url: o.url,
-                      requestInit: o.requestInit
+                    a.preAPIHook({
+                      url: a.url,
+                      requestInit: a.requestInit
                     })
                   ];
                 case 1:
-                  return s = l.sent(), [2, s];
+                  return i = l.sent(), [2, i];
               }
             });
           });
-        }, this.getFullUrl = function(o, s, l) {
-          var p = n.appInfo.apiBasePath.getAsStringDangerous();
-          o !== void 0 && o !== "public" && (p = "".concat(p, "/").concat(o));
-          var m = new c.default(s), v = "".concat(n.appInfo.apiDomain.getAsStringDangerous()).concat(p).concat(m.getAsStringDangerous());
-          return l === void 0 ? v : v + "?" + new URLSearchParams(l);
-        }, this.getResponseJsonOrThrowGeneralError = function(o) {
-          return t(n, void 0, void 0, function() {
-            var s, l;
-            return i(this, function(p) {
-              switch (p.label) {
+        }, this.getFullUrl = function(a, i, l) {
+          var g = e.appInfo.apiBasePath.getAsStringDangerous();
+          a !== void 0 && a !== "public" && (g = "".concat(g, "/").concat(a));
+          var h = new s.default(i), m = "".concat(e.appInfo.apiDomain.getAsStringDangerous()).concat(g).concat(h.getAsStringDangerous());
+          return l === void 0 ? m : m + "?" + new URLSearchParams(l);
+        }, this.getResponseJsonOrThrowGeneralError = function(a) {
+          return r(e, void 0, void 0, function() {
+            var i, l;
+            return n(this, function(g) {
+              switch (g.label) {
                 case 0:
-                  return [4, o.clone().json()];
+                  return [4, a.clone().json()];
                 case 1:
-                  if (s = p.sent(), s.status === "GENERAL_ERROR")
-                    throw l = s.message === void 0 ? "No Error Message Provided" : s.message, new d.default(l);
-                  return [2, s];
+                  if (i = g.sent(), i.status === "GENERAL_ERROR")
+                    throw l = i.message === void 0 ? "No Error Message Provided" : i.message, new u.default(l);
+                  return [2, i];
               }
             });
           });
         };
       }
-      var u;
-      return u = f, f.preparePreAPIHook = function(a) {
-        var r = a.recipePreAPIHook, n = a.action, o = a.options, s = a.userContext;
+      var c;
+      return c = f, f.preparePreAPIHook = function(d) {
+        var t = d.recipePreAPIHook, e = d.action, a = d.options, i = d.userContext;
         return function(l) {
-          return t(void 0, void 0, void 0, function() {
-            var p;
-            return i(u, function(m) {
-              switch (m.label) {
+          return r(void 0, void 0, void 0, function() {
+            var g;
+            return n(c, function(h) {
+              switch (h.label) {
                 case 0:
                   return [
                     4,
-                    r(
-                      e(e({}, l), { action: n, userContext: s })
+                    t(
+                      o(o({}, l), { action: e, userContext: i })
                     )
                   ];
                 case 1:
-                  return p = m.sent(), o === void 0 || o.preAPIHook === void 0 ? [2, p] : [
+                  return g = h.sent(), a === void 0 || a.preAPIHook === void 0 ? [2, g] : [
                     2,
-                    o.preAPIHook({
-                      url: p.url,
-                      requestInit: p.requestInit,
-                      userContext: s
+                    a.preAPIHook({
+                      url: g.url,
+                      requestInit: g.requestInit,
+                      userContext: i
                     })
                   ];
               }
             });
           });
         };
-      }, f.preparePostAPIHook = function(a) {
-        var r = a.recipePostAPIHook, n = a.action, o = a.userContext;
-        return function(s) {
-          return t(void 0, void 0, void 0, function() {
-            return i(u, function(l) {
+      }, f.preparePostAPIHook = function(d) {
+        var t = d.recipePostAPIHook, e = d.action, a = d.userContext;
+        return function(i) {
+          return r(void 0, void 0, void 0, function() {
+            return n(c, function(l) {
               switch (l.label) {
                 case 0:
                   return [
                     4,
-                    r(
-                      e(e({}, s), { userContext: o, action: n })
+                    t(
+                      o(o({}, i), { userContext: a, action: e })
                     )
                   ];
                 case 1:
@@ -596,151 +596,151 @@ function We() {
       }, f;
     }()
   );
-  return G.default = g, G;
+  return G.default = b, G;
 }
-var nt;
-function yn() {
-  if (nt) return B;
-  nt = 1;
-  var e = B && B.__awaiter || function(d, g, f, u) {
-    function a(r) {
-      return r instanceof f ? r : new f(function(n) {
-        n(r);
+var ur;
+function Ae() {
+  if (ur) return V;
+  ur = 1;
+  var o = V && V.__awaiter || function(u, b, f, c) {
+    function d(t) {
+      return t instanceof f ? t : new f(function(e) {
+        e(t);
       });
     }
-    return new (f || (f = Promise))(function(r, n) {
-      function o(p) {
+    return new (f || (f = Promise))(function(t, e) {
+      function a(g) {
         try {
-          l(u.next(p));
-        } catch (m) {
-          n(m);
+          l(c.next(g));
+        } catch (h) {
+          e(h);
         }
       }
-      function s(p) {
+      function i(g) {
         try {
-          l(u.throw(p));
-        } catch (m) {
-          n(m);
+          l(c.throw(g));
+        } catch (h) {
+          e(h);
         }
       }
-      function l(p) {
-        p.done ? r(p.value) : a(p.value).then(o, s);
+      function l(g) {
+        g.done ? t(g.value) : d(g.value).then(a, i);
       }
-      l((u = u.apply(d, g || [])).next());
+      l((c = c.apply(u, b || [])).next());
     });
-  }, t = B && B.__generator || function(d, g) {
+  }, r = V && V.__generator || function(u, b) {
     var f = {
       label: 0,
       sent: function() {
-        if (r[0] & 1) throw r[1];
-        return r[1];
+        if (t[0] & 1) throw t[1];
+        return t[1];
       },
       trys: [],
       ops: []
-    }, u, a, r, n;
-    return n = { next: o(0), throw: o(1), return: o(2) }, typeof Symbol == "function" && (n[Symbol.iterator] = function() {
+    }, c, d, t, e;
+    return e = { next: a(0), throw: a(1), return: a(2) }, typeof Symbol == "function" && (e[Symbol.iterator] = function() {
       return this;
-    }), n;
-    function o(l) {
-      return function(p) {
-        return s([l, p]);
+    }), e;
+    function a(l) {
+      return function(g) {
+        return i([l, g]);
       };
     }
-    function s(l) {
-      if (u) throw new TypeError("Generator is already executing.");
+    function i(l) {
+      if (c) throw new TypeError("Generator is already executing.");
       for (; f; )
         try {
-          if (u = 1, a && (r = l[0] & 2 ? a.return : l[0] ? a.throw || ((r = a.return) && r.call(a), 0) : a.next) && !(r = r.call(a, l[1])).done)
-            return r;
-          switch (a = 0, r && (l = [l[0] & 2, r.value]), l[0]) {
+          if (c = 1, d && (t = l[0] & 2 ? d.return : l[0] ? d.throw || ((t = d.return) && t.call(d), 0) : d.next) && !(t = t.call(d, l[1])).done)
+            return t;
+          switch (d = 0, t && (l = [l[0] & 2, t.value]), l[0]) {
             case 0:
             case 1:
-              r = l;
+              t = l;
               break;
             case 4:
               return f.label++, { value: l[1], done: !1 };
             case 5:
-              f.label++, a = l[1], l = [0];
+              f.label++, d = l[1], l = [0];
               continue;
             case 7:
               l = f.ops.pop(), f.trys.pop();
               continue;
             default:
-              if (r = f.trys, !(r = r.length > 0 && r[r.length - 1]) && (l[0] === 6 || l[0] === 2)) {
+              if (t = f.trys, !(t = t.length > 0 && t[t.length - 1]) && (l[0] === 6 || l[0] === 2)) {
                 f = 0;
                 continue;
               }
-              if (l[0] === 3 && (!r || l[1] > r[0] && l[1] < r[3])) {
+              if (l[0] === 3 && (!t || l[1] > t[0] && l[1] < t[3])) {
                 f.label = l[1];
                 break;
               }
-              if (l[0] === 6 && f.label < r[1]) {
-                f.label = r[1], r = l;
+              if (l[0] === 6 && f.label < t[1]) {
+                f.label = t[1], t = l;
                 break;
               }
-              if (r && f.label < r[2]) {
-                f.label = r[2], f.ops.push(l);
+              if (t && f.label < t[2]) {
+                f.label = t[2], f.ops.push(l);
                 break;
               }
-              r[2] && f.ops.pop(), f.trys.pop();
+              t[2] && f.ops.pop(), f.trys.pop();
               continue;
           }
-          l = g.call(d, f);
-        } catch (p) {
-          l = [6, p], a = 0;
+          l = b.call(u, f);
+        } catch (g) {
+          l = [6, g], d = 0;
         } finally {
-          u = r = 0;
+          c = t = 0;
         }
       if (l[0] & 5) throw l[1];
       return { value: l[0] ? l[1] : void 0, done: !0 };
     }
   };
-  Object.defineProperty(B, "__esModule", { value: !0 }), B.getRecipeImplementation = void 0;
-  var i = We(), c = Y();
-  function h(d) {
-    var g = new i.default(d.recipeId, d.appInfo);
+  Object.defineProperty(V, "__esModule", { value: !0 }), V.getRecipeImplementation = void 0;
+  var n = Xo(), s = J();
+  function p(u) {
+    var b = new n.default(u.recipeId, u.appInfo);
     return {
       getTenantId: function() {
-        var f = (0, c.getQueryParams)("tenantId");
+        var f = (0, s.getQueryParams)("tenantId");
         if ((f == null ? void 0 : f.trim()) !== "")
           return f;
       },
       getLoginMethods: function(f) {
-        var u = f.tenantId, a = f.options, r = f.userContext;
-        return e(this, void 0, void 0, function() {
-          var n, o, s, l, p;
-          return t(this, function(m) {
-            switch (m.label) {
+        var c = f.tenantId, d = f.options, t = f.userContext;
+        return o(this, void 0, void 0, function() {
+          var e, a, i, l, g;
+          return r(this, function(h) {
+            switch (h.label) {
               case 0:
-                return n = {}, d.clientType !== void 0 && (n.clientType = d.clientType), [
+                return e = {}, u.clientType !== void 0 && (e.clientType = u.clientType), [
                   4,
-                  g.get(
-                    u,
+                  b.get(
+                    c,
                     "/loginmethods",
                     {},
-                    n,
-                    i.default.preparePreAPIHook({
-                      recipePreAPIHook: d.preAPIHook,
+                    e,
+                    n.default.preparePreAPIHook({
+                      recipePreAPIHook: u.preAPIHook,
                       action: "GET_LOGIN_METHODS",
-                      options: a,
-                      userContext: r
+                      options: d,
+                      userContext: t
                     }),
-                    i.default.preparePostAPIHook({
-                      recipePostAPIHook: d.postAPIHook,
+                    n.default.preparePostAPIHook({
+                      recipePostAPIHook: u.postAPIHook,
                       action: "GET_LOGIN_METHODS",
-                      userContext: r
+                      userContext: t
                     })
                   )
                 ];
               case 1:
-                return o = m.sent(), s = o.jsonBody, l = o.fetchResponse, s.firstFactors === void 0 ? (p = [], s.emailPassword.enabled && p.push("emailpassword"), s.thirdParty.enabled && p.push("thirdparty"), s.passwordless.enabled && (p.push("otp-email"), p.push("otp-phone"), p.push("link-email"), p.push("link-phone"))) : p = s.firstFactors, [
+                return a = h.sent(), i = a.jsonBody, l = a.fetchResponse, i.firstFactors === void 0 ? (g = [], i.emailPassword.enabled && g.push("emailpassword"), i.thirdParty.enabled && g.push("thirdparty"), i.passwordless.enabled && (g.push("otp-email"), g.push("otp-phone"), g.push("link-email"), g.push("link-phone"))) : g = i.firstFactors, [
                   2,
                   {
                     status: "OK",
                     thirdParty: {
-                      providers: s.thirdParty.providers
+                      providers: i.thirdParty.providers
                     },
-                    firstFactors: p,
+                    firstFactors: g,
                     fetchResponse: l
                   }
                 ];
@@ -750,383 +750,383 @@ function yn() {
       }
     };
   }
-  return B.default = h, B.getRecipeImplementation = h, B;
+  return V.default = p, V.getRecipeImplementation = p, V;
 }
-var K = {}, rt;
-function qe() {
-  if (rt) return K;
-  rt = 1;
-  var e = K && K.__extends || /* @__PURE__ */ function() {
-    var g = function(f, u) {
-      return g = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(a, r) {
-        a.__proto__ = r;
-      } || function(a, r) {
-        for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (a[n] = r[n]);
-      }, g(f, u);
+var Y = {}, fr;
+function Ko() {
+  if (fr) return Y;
+  fr = 1;
+  var o = Y && Y.__extends || /* @__PURE__ */ function() {
+    var b = function(f, c) {
+      return b = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d, t) {
+        d.__proto__ = t;
+      } || function(d, t) {
+        for (var e in t) Object.prototype.hasOwnProperty.call(t, e) && (d[e] = t[e]);
+      }, b(f, c);
     };
-    return function(f, u) {
-      if (typeof u != "function" && u !== null)
-        throw new TypeError("Class extends value " + String(u) + " is not a constructor or null");
-      g(f, u);
-      function a() {
+    return function(f, c) {
+      if (typeof c != "function" && c !== null)
+        throw new TypeError("Class extends value " + String(c) + " is not a constructor or null");
+      b(f, c);
+      function d() {
         this.constructor = f;
       }
-      f.prototype = u === null ? Object.create(u) : (a.prototype = u.prototype, new a());
+      f.prototype = c === null ? Object.create(c) : (d.prototype = c.prototype, new d());
     };
-  }(), t = K && K.__awaiter || function(g, f, u, a) {
-    function r(n) {
-      return n instanceof u ? n : new u(function(o) {
-        o(n);
+  }(), r = Y && Y.__awaiter || function(b, f, c, d) {
+    function t(e) {
+      return e instanceof c ? e : new c(function(a) {
+        a(e);
       });
     }
-    return new (u || (u = Promise))(function(n, o) {
-      function s(m) {
+    return new (c || (c = Promise))(function(e, a) {
+      function i(h) {
         try {
-          p(a.next(m));
-        } catch (v) {
-          o(v);
+          g(d.next(h));
+        } catch (m) {
+          a(m);
         }
       }
-      function l(m) {
+      function l(h) {
         try {
-          p(a.throw(m));
-        } catch (v) {
-          o(v);
+          g(d.throw(h));
+        } catch (m) {
+          a(m);
         }
       }
-      function p(m) {
-        m.done ? n(m.value) : r(m.value).then(s, l);
+      function g(h) {
+        h.done ? e(h.value) : t(h.value).then(i, l);
       }
-      p((a = a.apply(g, f || [])).next());
+      g((d = d.apply(b, f || [])).next());
     });
-  }, i = K && K.__generator || function(g, f) {
-    var u = {
+  }, n = Y && Y.__generator || function(b, f) {
+    var c = {
       label: 0,
       sent: function() {
-        if (n[0] & 1) throw n[1];
-        return n[1];
+        if (e[0] & 1) throw e[1];
+        return e[1];
       },
       trys: [],
       ops: []
-    }, a, r, n, o;
-    return o = { next: s(0), throw: s(1), return: s(2) }, typeof Symbol == "function" && (o[Symbol.iterator] = function() {
+    }, d, t, e, a;
+    return a = { next: i(0), throw: i(1), return: i(2) }, typeof Symbol == "function" && (a[Symbol.iterator] = function() {
       return this;
-    }), o;
-    function s(p) {
-      return function(m) {
-        return l([p, m]);
+    }), a;
+    function i(g) {
+      return function(h) {
+        return l([g, h]);
       };
     }
-    function l(p) {
-      if (a) throw new TypeError("Generator is already executing.");
-      for (; u; )
+    function l(g) {
+      if (d) throw new TypeError("Generator is already executing.");
+      for (; c; )
         try {
-          if (a = 1, r && (n = p[0] & 2 ? r.return : p[0] ? r.throw || ((n = r.return) && n.call(r), 0) : r.next) && !(n = n.call(r, p[1])).done)
-            return n;
-          switch (r = 0, n && (p = [p[0] & 2, n.value]), p[0]) {
+          if (d = 1, t && (e = g[0] & 2 ? t.return : g[0] ? t.throw || ((e = t.return) && e.call(t), 0) : t.next) && !(e = e.call(t, g[1])).done)
+            return e;
+          switch (t = 0, e && (g = [g[0] & 2, e.value]), g[0]) {
             case 0:
             case 1:
-              n = p;
+              e = g;
               break;
             case 4:
-              return u.label++, { value: p[1], done: !1 };
+              return c.label++, { value: g[1], done: !1 };
             case 5:
-              u.label++, r = p[1], p = [0];
+              c.label++, t = g[1], g = [0];
               continue;
             case 7:
-              p = u.ops.pop(), u.trys.pop();
+              g = c.ops.pop(), c.trys.pop();
               continue;
             default:
-              if (n = u.trys, !(n = n.length > 0 && n[n.length - 1]) && (p[0] === 6 || p[0] === 2)) {
-                u = 0;
+              if (e = c.trys, !(e = e.length > 0 && e[e.length - 1]) && (g[0] === 6 || g[0] === 2)) {
+                c = 0;
                 continue;
               }
-              if (p[0] === 3 && (!n || p[1] > n[0] && p[1] < n[3])) {
-                u.label = p[1];
+              if (g[0] === 3 && (!e || g[1] > e[0] && g[1] < e[3])) {
+                c.label = g[1];
                 break;
               }
-              if (p[0] === 6 && u.label < n[1]) {
-                u.label = n[1], n = p;
+              if (g[0] === 6 && c.label < e[1]) {
+                c.label = e[1], e = g;
                 break;
               }
-              if (n && u.label < n[2]) {
-                u.label = n[2], u.ops.push(p);
+              if (e && c.label < e[2]) {
+                c.label = e[2], c.ops.push(g);
                 break;
               }
-              n[2] && u.ops.pop(), u.trys.pop();
+              e[2] && c.ops.pop(), c.trys.pop();
               continue;
           }
-          p = f.call(g, u);
-        } catch (m) {
-          p = [6, m], r = 0;
+          g = f.call(b, c);
+        } catch (h) {
+          g = [6, h], t = 0;
         } finally {
-          a = n = 0;
+          d = e = 0;
         }
-      if (p[0] & 5) throw p[1];
-      return { value: p[0] ? p[1] : void 0, done: !0 };
+      if (g[0] & 5) throw g[1];
+      return { value: g[0] ? g[1] : void 0, done: !0 };
     }
   };
-  Object.defineProperty(K, "__esModule", { value: !0 });
-  var c = zt(), h = Jt(), d = (
+  Object.defineProperty(Y, "__esModule", { value: !0 });
+  var s = se(), p = le(), u = (
     /** @class */
-    function(g) {
-      e(f, g);
-      function f(u) {
-        var a = g.call(this, u) || this;
-        return a.signOut = function(r) {
-          return t(a, void 0, void 0, function() {
-            return i(this, function(n) {
-              switch (n.label) {
+    function(b) {
+      o(f, b);
+      function f(c) {
+        var d = b.call(this, c) || this;
+        return d.signOut = function(t) {
+          return r(d, void 0, void 0, function() {
+            return n(this, function(e) {
+              switch (e.label) {
                 case 0:
                   return [
                     4,
-                    h.default.getInstanceOrThrow().signOut({
-                      userContext: r.userContext
+                    p.default.getInstanceOrThrow().signOut({
+                      userContext: t.userContext
                     })
                   ];
                 case 1:
-                  return [2, n.sent()];
+                  return [2, e.sent()];
               }
             });
           });
-        }, a;
+        }, d;
       }
       return f;
-    }(c.default)
+    }(s.default)
   );
-  return K.default = d, K;
+  return Y.default = u, Y;
 }
-var ot;
-function _e() {
-  if (ot) return V;
-  ot = 1;
-  var e = V && V.__extends || /* @__PURE__ */ function() {
-    var u = function(a, r) {
-      return u = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(n, o) {
-        n.__proto__ = o;
-      } || function(n, o) {
-        for (var s in o) Object.prototype.hasOwnProperty.call(o, s) && (n[s] = o[s]);
-      }, u(a, r);
+var gr;
+function _o() {
+  if (gr) return q;
+  gr = 1;
+  var o = q && q.__extends || /* @__PURE__ */ function() {
+    var c = function(d, t) {
+      return c = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(e, a) {
+        e.__proto__ = a;
+      } || function(e, a) {
+        for (var i in a) Object.prototype.hasOwnProperty.call(a, i) && (e[i] = a[i]);
+      }, c(d, t);
     };
-    return function(a, r) {
-      if (typeof r != "function" && r !== null)
-        throw new TypeError("Class extends value " + String(r) + " is not a constructor or null");
-      u(a, r);
-      function n() {
-        this.constructor = a;
+    return function(d, t) {
+      if (typeof t != "function" && t !== null)
+        throw new TypeError("Class extends value " + String(t) + " is not a constructor or null");
+      c(d, t);
+      function e() {
+        this.constructor = d;
       }
-      a.prototype = r === null ? Object.create(r) : (n.prototype = r.prototype, new n());
+      d.prototype = t === null ? Object.create(t) : (e.prototype = t.prototype, new e());
     };
-  }(), t = V && V.__assign || function() {
-    return t = Object.assign || function(u) {
-      for (var a, r = 1, n = arguments.length; r < n; r++) {
-        a = arguments[r];
-        for (var o in a) Object.prototype.hasOwnProperty.call(a, o) && (u[o] = a[o]);
+  }(), r = q && q.__assign || function() {
+    return r = Object.assign || function(c) {
+      for (var d, t = 1, e = arguments.length; t < e; t++) {
+        d = arguments[t];
+        for (var a in d) Object.prototype.hasOwnProperty.call(d, a) && (c[a] = d[a]);
       }
-      return u;
-    }, t.apply(this, arguments);
+      return c;
+    }, r.apply(this, arguments);
   };
-  Object.defineProperty(V, "__esModule", { value: !0 }), V.Recipe = void 0;
-  var i = vn(), c = $e(), h = yn(), d = Y(), g = qe(), f = (
+  Object.defineProperty(q, "__esModule", { value: !0 }), q.Recipe = void 0;
+  var n = Se(), s = Ho(), p = Ae(), u = J(), b = Ko(), f = (
     /** @class */
-    function(u) {
-      e(a, u);
-      function a(r) {
-        var n = u.call(this, (0, i.normaliseUserInput)(r)) || this, o = new c.default(
-          (0, h.default)({
-            recipeId: n.config.recipeId,
-            appInfo: n.config.appInfo,
-            clientType: n.config.clientType,
-            preAPIHook: n.config.preAPIHook,
-            postAPIHook: n.config.postAPIHook
+    function(c) {
+      o(d, c);
+      function d(t) {
+        var e = c.call(this, (0, n.normaliseUserInput)(t)) || this, a = new s.default(
+          (0, p.default)({
+            recipeId: e.config.recipeId,
+            appInfo: e.config.appInfo,
+            clientType: e.config.clientType,
+            preAPIHook: e.config.preAPIHook,
+            postAPIHook: e.config.postAPIHook
           })
         );
-        return n.recipeImplementation = o.override(n.config.override.functions).build(), n;
+        return e.recipeImplementation = a.override(e.config.override.functions).build(), e;
       }
-      return a.init = function(r) {
-        return function(n, o) {
-          return a.instance = new a(
-            t(t({}, r), { recipeId: a.RECIPE_ID, appInfo: n, clientType: o })
-          ), a.instance;
+      return d.init = function(t) {
+        return function(e, a) {
+          return d.instance = new d(
+            r(r({}, t), { recipeId: d.RECIPE_ID, appInfo: e, clientType: a })
+          ), d.instance;
         };
-      }, a.getInstanceOrThrow = function() {
-        if (a.instance === void 0) {
-          var r = "No instance of Multitenancy found. Ensure that 'SuperTokens.init' method has been called.";
-          throw r = (0, d.checkForSSRErrorAndAppendIfNeeded)(r), Error(r);
+      }, d.getInstanceOrThrow = function() {
+        if (d.instance === void 0) {
+          var t = "No instance of Multitenancy found. Ensure that 'SuperTokens.init' method has been called.";
+          throw t = (0, u.checkForSSRErrorAndAppendIfNeeded)(t), Error(t);
         }
-        return a.instance;
-      }, a.reset = function() {
-        (0, d.isTest)() && (a.instance = void 0);
-      }, a.RECIPE_ID = "multitenancy", a;
-    }(g.default)
+        return d.instance;
+      }, d.reset = function() {
+        (0, u.isTest)() && (d.instance = void 0);
+      }, d.RECIPE_ID = "multitenancy", d;
+    }(b.default)
   );
-  return V.Recipe = f, V.default = f, V;
+  return q.Recipe = f, q.default = f, q;
 }
-var Ae = {}, Te = {}, it;
-function In() {
-  return it || (it = 1, function(e) {
-    function t(i) {
-      for (var c in i) e.hasOwnProperty(c) || (e[c] = i[c]);
+var Wo = {}, Fo = {}, pr;
+function Oe() {
+  return pr || (pr = 1, function(o) {
+    function r(n) {
+      for (var s in n) o.hasOwnProperty(s) || (o[s] = n[s]);
     }
-    e.__esModule = !0, t(Yt());
-  }(Te)), Te;
+    o.__esModule = !0, r(ue());
+  }(Fo)), Fo;
 }
-var st;
-function _n() {
-  return st || (st = 1, function(e) {
-    Object.defineProperty(e, "__esModule", { value: !0 }), e.DateProviderReference = void 0;
-    var t = In();
-    Object.defineProperty(e, "DateProviderReference", {
+var mr;
+function Ee() {
+  return mr || (mr = 1, function(o) {
+    Object.defineProperty(o, "__esModule", { value: !0 }), o.DateProviderReference = void 0;
+    var r = Oe();
+    Object.defineProperty(o, "DateProviderReference", {
       enumerable: !0,
       get: function() {
-        return t.DateProviderReference;
+        return r.DateProviderReference;
       }
     });
-  }(Ae)), Ae;
+  }(Wo)), Wo;
 }
-var at;
-function wn() {
-  if (at) return me;
-  at = 1, Object.defineProperty(me, "__esModule", { value: !0 });
-  var e = Y(), t = fn(), i = Ue(), c = pn(), h = _e(), d = _n(), g = (
+var hr;
+function Le() {
+  if (hr) return xo;
+  hr = 1, Object.defineProperty(xo, "__esModule", { value: !0 });
+  var o = J(), r = Be(), n = jo(), s = Ie(), p = _o(), u = Ee(), b = (
     /** @class */
     function() {
-      function f(u) {
-        var a = this;
-        if (this.recipeList = [], this.appInfo = (0, e.normaliseInputAppInfoOrThrowError)(u.appInfo), u.recipeList === void 0 || u.recipeList.length === 0)
+      function f(c) {
+        var d = this;
+        if (this.recipeList = [], this.appInfo = (0, o.normaliseInputAppInfoOrThrowError)(c.appInfo), c.recipeList === void 0 || c.recipeList.length === 0)
           throw new Error(
             "Please provide at least one recipe to the supertokens.init function call. See https://supertokens.io/docs/emailpassword/quick-setup/frontend"
           );
-        var r = !1;
-        u.enableDebugLogs !== void 0 && (r = u.enableDebugLogs);
-        var n = !1;
-        this.recipeList = u.recipeList.map(function(o) {
-          var s = o(a.appInfo, u.clientType, r);
-          return s.config.recipeId === h.Recipe.RECIPE_ID && (n = !0), s;
-        }), n || this.recipeList.push(h.Recipe.init()(this.appInfo, u.clientType, r));
+        var t = !1;
+        c.enableDebugLogs !== void 0 && (t = c.enableDebugLogs);
+        var e = !1;
+        this.recipeList = c.recipeList.map(function(a) {
+          var i = a(d.appInfo, c.clientType, t);
+          return i.config.recipeId === p.Recipe.RECIPE_ID && (e = !0), i;
+        }), e || this.recipeList.push(p.Recipe.init()(this.appInfo, c.clientType, t));
       }
-      return f.init = function(u) {
-        if (t.CookieHandlerReference.init(u.cookieHandler), i.WindowHandlerReference.init(u.windowHandler), d.DateProviderReference.init(u.dateProvider), f.instance !== void 0) {
+      return f.init = function(c) {
+        if (r.CookieHandlerReference.init(c.cookieHandler), n.WindowHandlerReference.init(c.windowHandler), u.DateProviderReference.init(c.dateProvider), f.instance !== void 0) {
           console.warn("SuperTokens was already initialized");
           return;
         }
-        f.instance = new f(u), c.PostSuperTokensInitCallbacks.runPostInitCallbacks();
+        f.instance = new f(c), s.PostSuperTokensInitCallbacks.runPostInitCallbacks();
       }, f.getInstanceOrThrow = function() {
         if (f.instance === void 0) {
-          var u = "SuperTokens must be initialized before calling this method.";
-          throw u = (0, e.checkForSSRErrorAndAppendIfNeeded)(u), new Error(u);
+          var c = "SuperTokens must be initialized before calling this method.";
+          throw c = (0, o.checkForSSRErrorAndAppendIfNeeded)(c), new Error(c);
         }
         return f.instance;
       }, f.reset = function() {
-        if (!(0, e.isTest)()) {
+        if (!(0, o.isTest)()) {
           console.warn("Calling reset() is only supported during testing");
           return;
         }
-        h.Recipe.reset(), f.instance = void 0;
+        p.Recipe.reset(), f.instance = void 0;
       }, f;
     }()
   );
-  return me.default = g, me;
+  return xo.default = b, xo;
 }
-var ut;
-function bn() {
-  if (ut) return se;
-  ut = 1, Object.defineProperty(se, "__esModule", { value: !0 }), se.init = void 0;
-  var e = wn(), t = (
+var br;
+function Ne() {
+  if (br) return so;
+  br = 1, Object.defineProperty(so, "__esModule", { value: !0 }), so.init = void 0;
+  var o = Le(), r = (
     /** @class */
     function() {
-      function i() {
+      function n() {
       }
-      return i.init = function(c) {
-        e.default.init(c);
-      }, i;
+      return n.init = function(s) {
+        o.default.init(s);
+      }, n;
     }()
   );
-  return se.default = t, se.init = t.init, se;
+  return so.default = r, so.init = r.init, so;
 }
-var lt;
-function Pn() {
-  return lt || (lt = 1, function(e) {
-    function t(i) {
-      for (var c in i) e.hasOwnProperty(c) || (e[c] = i[c]);
+var vr;
+function We() {
+  return vr || (vr = 1, function(o) {
+    function r(n) {
+      for (var s in n) o.hasOwnProperty(s) || (o[s] = n[s]);
     }
-    e.__esModule = !0, t(bn());
-  }(xe)), xe;
+    o.__esModule = !0, r(Ne());
+  }(Oo)), Oo;
 }
-var xn = Pn();
-const kn = /* @__PURE__ */ Le(xn);
-var Re = {}, C = {}, Q = {}, re = {}, ct;
-function Sn() {
-  if (ct) return re;
-  ct = 1;
-  var e = re && re.__assign || function() {
-    return e = Object.assign || function(c) {
-      for (var h, d = 1, g = arguments.length; d < g; d++) {
-        h = arguments[d];
-        for (var f in h) Object.prototype.hasOwnProperty.call(h, f) && (c[f] = h[f]);
+var Fe = We();
+const De = /* @__PURE__ */ Mo(Fe);
+var Do = {}, I = {}, Q = {}, ao = {}, kr;
+function Ue() {
+  if (kr) return ao;
+  kr = 1;
+  var o = ao && ao.__assign || function() {
+    return o = Object.assign || function(s) {
+      for (var p, u = 1, b = arguments.length; u < b; u++) {
+        p = arguments[u];
+        for (var f in p) Object.prototype.hasOwnProperty.call(p, f) && (s[f] = p[f]);
       }
-      return c;
-    }, e.apply(this, arguments);
+      return s;
+    }, o.apply(this, arguments);
   };
-  Object.defineProperty(re, "__esModule", { value: !0 }), re.normaliseUserInput = void 0;
-  var t = De();
-  function i(c) {
-    var h = e(
+  Object.defineProperty(ao, "__esModule", { value: !0 }), ao.normaliseUserInput = void 0;
+  var r = Qo();
+  function n(s) {
+    var p = o(
       {
-        functions: function(d) {
-          return d;
+        functions: function(u) {
+          return u;
         }
       },
-      c.override
+      s.override
     );
-    return e(e({}, (0, t.normaliseAuthRecipe)(c)), { override: h });
+    return o(o({}, (0, r.normaliseAuthRecipe)(s)), { override: p });
   }
-  return re.normaliseUserInput = i, re;
+  return ao.normaliseUserInput = n, ao;
 }
-var W = {}, fe = {}, dt;
-function Cn() {
-  return dt || (dt = 1, Object.defineProperty(fe, "__esModule", { value: !0 }), fe.PASSWORDLESS_LOGIN_ATTEMPT_INFO_STORAGE_KEY = void 0, fe.PASSWORDLESS_LOGIN_ATTEMPT_INFO_STORAGE_KEY = "supertokens-passwordless-loginAttemptInfo"), fe;
+var H = {}, ho = {}, yr;
+function ze() {
+  return yr || (yr = 1, Object.defineProperty(ho, "__esModule", { value: !0 }), ho.PASSWORDLESS_LOGIN_ATTEMPT_INFO_STORAGE_KEY = void 0, ho.PASSWORDLESS_LOGIN_ATTEMPT_INFO_STORAGE_KEY = "supertokens-passwordless-loginAttemptInfo"), ho;
 }
-var ft;
-function An() {
-  if (ft) return W;
-  ft = 1;
-  var e = W && W.__assign || function() {
-    return e = Object.assign || function(a) {
-      for (var r, n = 1, o = arguments.length; n < o; n++) {
-        r = arguments[n];
-        for (var s in r) Object.prototype.hasOwnProperty.call(r, s) && (a[s] = r[s]);
+var wr;
+function He() {
+  if (wr) return H;
+  wr = 1;
+  var o = H && H.__assign || function() {
+    return o = Object.assign || function(d) {
+      for (var t, e = 1, a = arguments.length; e < a; e++) {
+        t = arguments[e];
+        for (var i in t) Object.prototype.hasOwnProperty.call(t, i) && (d[i] = t[i]);
       }
-      return a;
-    }, e.apply(this, arguments);
-  }, t = W && W.__awaiter || function(a, r, n, o) {
-    function s(l) {
-      return l instanceof n ? l : new n(function(p) {
-        p(l);
+      return d;
+    }, o.apply(this, arguments);
+  }, r = H && H.__awaiter || function(d, t, e, a) {
+    function i(l) {
+      return l instanceof e ? l : new e(function(g) {
+        g(l);
       });
     }
-    return new (n || (n = Promise))(function(l, p) {
-      function m(P) {
+    return new (e || (e = Promise))(function(l, g) {
+      function h(x) {
         try {
-          I(o.next(P));
-        } catch (x) {
-          p(x);
+          k(a.next(x));
+        } catch ($) {
+          g($);
         }
       }
-      function v(P) {
+      function m(x) {
         try {
-          I(o.throw(P));
-        } catch (x) {
-          p(x);
+          k(a.throw(x));
+        } catch ($) {
+          g($);
         }
       }
-      function I(P) {
-        P.done ? l(P.value) : s(P.value).then(m, v);
+      function k(x) {
+        x.done ? l(x.value) : i(x.value).then(h, m);
       }
-      I((o = o.apply(a, r || [])).next());
+      k((a = a.apply(d, t || [])).next());
     });
-  }, i = W && W.__generator || function(a, r) {
-    var n = {
+  }, n = H && H.__generator || function(d, t) {
+    var e = {
       label: 0,
       sent: function() {
         if (l[0] & 1) throw l[1];
@@ -1134,200 +1134,200 @@ function An() {
       },
       trys: [],
       ops: []
-    }, o, s, l, p;
-    return p = { next: m(0), throw: m(1), return: m(2) }, typeof Symbol == "function" && (p[Symbol.iterator] = function() {
+    }, a, i, l, g;
+    return g = { next: h(0), throw: h(1), return: h(2) }, typeof Symbol == "function" && (g[Symbol.iterator] = function() {
       return this;
-    }), p;
-    function m(I) {
-      return function(P) {
-        return v([I, P]);
+    }), g;
+    function h(k) {
+      return function(x) {
+        return m([k, x]);
       };
     }
-    function v(I) {
-      if (o) throw new TypeError("Generator is already executing.");
-      for (; n; )
+    function m(k) {
+      if (a) throw new TypeError("Generator is already executing.");
+      for (; e; )
         try {
-          if (o = 1, s && (l = I[0] & 2 ? s.return : I[0] ? s.throw || ((l = s.return) && l.call(s), 0) : s.next) && !(l = l.call(s, I[1])).done)
+          if (a = 1, i && (l = k[0] & 2 ? i.return : k[0] ? i.throw || ((l = i.return) && l.call(i), 0) : i.next) && !(l = l.call(i, k[1])).done)
             return l;
-          switch (s = 0, l && (I = [I[0] & 2, l.value]), I[0]) {
+          switch (i = 0, l && (k = [k[0] & 2, l.value]), k[0]) {
             case 0:
             case 1:
-              l = I;
+              l = k;
               break;
             case 4:
-              return n.label++, { value: I[1], done: !1 };
+              return e.label++, { value: k[1], done: !1 };
             case 5:
-              n.label++, s = I[1], I = [0];
+              e.label++, i = k[1], k = [0];
               continue;
             case 7:
-              I = n.ops.pop(), n.trys.pop();
+              k = e.ops.pop(), e.trys.pop();
               continue;
             default:
-              if (l = n.trys, !(l = l.length > 0 && l[l.length - 1]) && (I[0] === 6 || I[0] === 2)) {
-                n = 0;
+              if (l = e.trys, !(l = l.length > 0 && l[l.length - 1]) && (k[0] === 6 || k[0] === 2)) {
+                e = 0;
                 continue;
               }
-              if (I[0] === 3 && (!l || I[1] > l[0] && I[1] < l[3])) {
-                n.label = I[1];
+              if (k[0] === 3 && (!l || k[1] > l[0] && k[1] < l[3])) {
+                e.label = k[1];
                 break;
               }
-              if (I[0] === 6 && n.label < l[1]) {
-                n.label = l[1], l = I;
+              if (k[0] === 6 && e.label < l[1]) {
+                e.label = l[1], l = k;
                 break;
               }
-              if (l && n.label < l[2]) {
-                n.label = l[2], n.ops.push(I);
+              if (l && e.label < l[2]) {
+                e.label = l[2], e.ops.push(k);
                 break;
               }
-              l[2] && n.ops.pop(), n.trys.pop();
+              l[2] && e.ops.pop(), e.trys.pop();
               continue;
           }
-          I = r.call(a, n);
-        } catch (P) {
-          I = [6, P], s = 0;
+          k = t.call(d, e);
+        } catch (x) {
+          k = [6, x], i = 0;
         } finally {
-          o = l = 0;
+          a = l = 0;
         }
-      if (I[0] & 5) throw I[1];
-      return { value: I[0] ? I[1] : void 0, done: !0 };
+      if (k[0] & 5) throw k[1];
+      return { value: k[0] ? k[1] : void 0, done: !0 };
     }
   };
-  Object.defineProperty(W, "__esModule", { value: !0 }), W.getRecipeImplementation = void 0;
-  var c = Ue(), h = We(), d = Y(), g = _e(), f = Cn();
-  function u(a) {
-    var r = new h.default(a.recipeId, a.appInfo);
+  Object.defineProperty(H, "__esModule", { value: !0 }), H.getRecipeImplementation = void 0;
+  var s = jo(), p = Xo(), u = J(), b = _o(), f = ze();
+  function c(d) {
+    var t = new p.default(d.recipeId, d.appInfo);
     return {
-      createCode: function(n) {
-        return t(this, void 0, void 0, function() {
-          var o, s, l, p, m, v;
-          return i(this, function(I) {
-            switch (I.label) {
+      createCode: function(e) {
+        return r(this, void 0, void 0, function() {
+          var a, i, l, g, h, m;
+          return n(this, function(k) {
+            switch (k.label) {
               case 0:
-                return "email" in n && (o = {
-                  email: n.email,
-                  shouldTryLinkingWithSessionUser: n.shouldTryLinkingWithSessionUser
-                }), "phoneNumber" in n && (o = {
-                  phoneNumber: n.phoneNumber,
-                  shouldTryLinkingWithSessionUser: n.shouldTryLinkingWithSessionUser
-                }), v = (m = r).post, [
+                return "email" in e && (a = {
+                  email: e.email,
+                  shouldTryLinkingWithSessionUser: e.shouldTryLinkingWithSessionUser
+                }), "phoneNumber" in e && (a = {
+                  phoneNumber: e.phoneNumber,
+                  shouldTryLinkingWithSessionUser: e.shouldTryLinkingWithSessionUser
+                }), m = (h = t).post, [
                   4,
-                  g.default.getInstanceOrThrow().recipeImplementation.getTenantId({
-                    userContext: n.userContext
+                  b.default.getInstanceOrThrow().recipeImplementation.getTenantId({
+                    userContext: e.userContext
                   })
                 ];
               case 1:
                 return [
                   4,
-                  v.apply(m, [
-                    I.sent(),
+                  m.apply(h, [
+                    k.sent(),
                     "/signinup/code",
-                    { body: JSON.stringify(o) },
-                    h.default.preparePreAPIHook({
-                      recipePreAPIHook: a.preAPIHook,
+                    { body: JSON.stringify(a) },
+                    p.default.preparePreAPIHook({
+                      recipePreAPIHook: d.preAPIHook,
                       action: "PASSWORDLESS_CREATE_CODE",
-                      userContext: n.userContext,
-                      options: n.options
+                      userContext: e.userContext,
+                      options: e.options
                     }),
-                    h.default.preparePostAPIHook({
-                      recipePostAPIHook: a.postAPIHook,
+                    p.default.preparePostAPIHook({
+                      recipePostAPIHook: d.postAPIHook,
                       action: "PASSWORDLESS_CREATE_CODE",
-                      userContext: n.userContext
+                      userContext: e.userContext
                     })
                   ])
                 ];
               case 2:
-                return s = I.sent(), l = s.jsonBody, p = s.fetchResponse, [2, e(e({}, l), { fetchResponse: p })];
+                return i = k.sent(), l = i.jsonBody, g = i.fetchResponse, [2, o(o({}, l), { fetchResponse: g })];
             }
           });
         });
       },
-      resendCode: function(n) {
-        return t(this, void 0, void 0, function() {
-          var o, s, l, p;
-          return i(this, function(m) {
-            switch (m.label) {
+      resendCode: function(e) {
+        return r(this, void 0, void 0, function() {
+          var a, i, l, g;
+          return n(this, function(h) {
+            switch (h.label) {
               case 0:
-                return o = {
-                  deviceId: n.deviceId,
-                  preAuthSessionId: n.preAuthSessionId,
-                  shouldTryLinkingWithSessionUser: n.shouldTryLinkingWithSessionUser
+                return a = {
+                  deviceId: e.deviceId,
+                  preAuthSessionId: e.preAuthSessionId,
+                  shouldTryLinkingWithSessionUser: e.shouldTryLinkingWithSessionUser
                 }, [
                   4,
-                  r.post(
-                    n.tenantId,
+                  t.post(
+                    e.tenantId,
                     "/signinup/code/resend",
-                    { body: JSON.stringify(o) },
-                    h.default.preparePreAPIHook({
-                      recipePreAPIHook: a.preAPIHook,
+                    { body: JSON.stringify(a) },
+                    p.default.preparePreAPIHook({
+                      recipePreAPIHook: d.preAPIHook,
                       action: "PASSWORDLESS_RESEND_CODE",
-                      userContext: n.userContext,
-                      options: n.options
+                      userContext: e.userContext,
+                      options: e.options
                     }),
-                    h.default.preparePostAPIHook({
-                      recipePostAPIHook: a.postAPIHook,
+                    p.default.preparePostAPIHook({
+                      recipePostAPIHook: d.postAPIHook,
                       action: "PASSWORDLESS_RESEND_CODE",
-                      userContext: n.userContext
+                      userContext: e.userContext
                     })
                   )
                 ];
               case 1:
-                return s = m.sent(), l = s.jsonBody, p = s.fetchResponse, [
+                return i = h.sent(), l = i.jsonBody, g = i.fetchResponse, [
                   2,
                   {
                     status: l.status,
-                    fetchResponse: p
+                    fetchResponse: g
                   }
                 ];
             }
           });
         });
       },
-      consumeCode: function(n) {
-        return t(this, void 0, void 0, function() {
-          var o, s, l, p;
-          return i(this, function(m) {
-            switch (m.label) {
+      consumeCode: function(e) {
+        return r(this, void 0, void 0, function() {
+          var a, i, l, g;
+          return n(this, function(h) {
+            switch (h.label) {
               case 0:
-                return "userInputCode" in n ? o = {
-                  userInputCode: n.userInputCode,
-                  deviceId: n.deviceId,
-                  preAuthSessionId: n.preAuthSessionId,
-                  shouldTryLinkingWithSessionUser: n.shouldTryLinkingWithSessionUser
-                } : o = {
-                  linkCode: n.linkCode,
-                  preAuthSessionId: n.preAuthSessionId,
-                  shouldTryLinkingWithSessionUser: n.shouldTryLinkingWithSessionUser
+                return "userInputCode" in e ? a = {
+                  userInputCode: e.userInputCode,
+                  deviceId: e.deviceId,
+                  preAuthSessionId: e.preAuthSessionId,
+                  shouldTryLinkingWithSessionUser: e.shouldTryLinkingWithSessionUser
+                } : a = {
+                  linkCode: e.linkCode,
+                  preAuthSessionId: e.preAuthSessionId,
+                  shouldTryLinkingWithSessionUser: e.shouldTryLinkingWithSessionUser
                 }, [
                   4,
-                  r.post(
-                    n.tenantId,
+                  t.post(
+                    e.tenantId,
                     "/signinup/code/consume",
-                    { body: JSON.stringify(o) },
-                    h.default.preparePreAPIHook({
-                      recipePreAPIHook: a.preAPIHook,
+                    { body: JSON.stringify(a) },
+                    p.default.preparePreAPIHook({
+                      recipePreAPIHook: d.preAPIHook,
                       action: "PASSWORDLESS_CONSUME_CODE",
-                      userContext: n.userContext,
-                      options: n.options
+                      userContext: e.userContext,
+                      options: e.options
                     }),
-                    h.default.preparePostAPIHook({
-                      recipePostAPIHook: a.postAPIHook,
+                    p.default.preparePostAPIHook({
+                      recipePostAPIHook: d.postAPIHook,
                       action: "PASSWORDLESS_CONSUME_CODE",
-                      userContext: n.userContext
+                      userContext: e.userContext
                     })
                   )
                 ];
               case 1:
-                return s = m.sent(), l = s.jsonBody, p = s.fetchResponse, l.status !== "OK" ? [
+                return i = h.sent(), l = i.jsonBody, g = i.fetchResponse, l.status !== "OK" ? [
                   2,
-                  e(e({}, l), { fetchResponse: p })
+                  o(o({}, l), { fetchResponse: g })
                 ] : [
                   2,
-                  e(
-                    e(
+                  o(
+                    o(
                       { status: "OK" },
-                      (0, d.normaliseUserResponse)("passwordless", l)
+                      (0, u.normaliseUserResponse)("passwordless", l)
                     ),
-                    { fetchResponse: p }
+                    { fetchResponse: g }
                   )
                 ];
             }
@@ -1335,54 +1335,54 @@ function An() {
         });
       },
       getTenantIdFromURL: function() {
-        return (0, d.getQueryParams)("tenantId");
+        return (0, u.getQueryParams)("tenantId");
       },
       getLinkCodeFromURL: function() {
-        return (0, d.getHashFromLocation)();
+        return (0, u.getHashFromLocation)();
       },
       getPreAuthSessionIdFromURL: function() {
-        var n = (0, d.getQueryParams)("preAuthSessionId");
-        return n === void 0 ? "" : n;
+        var e = (0, u.getQueryParams)("preAuthSessionId");
+        return e === void 0 ? "" : e;
       },
-      doesEmailExist: function(n) {
-        return t(this, void 0, void 0, function() {
-          var o, s, l, p, m;
-          return i(this, function(v) {
-            switch (v.label) {
+      doesEmailExist: function(e) {
+        return r(this, void 0, void 0, function() {
+          var a, i, l, g, h;
+          return n(this, function(m) {
+            switch (m.label) {
               case 0:
-                return m = (p = r).get, [
+                return h = (g = t).get, [
                   4,
-                  g.default.getInstanceOrThrow().recipeImplementation.getTenantId({
-                    userContext: n.userContext
+                  b.default.getInstanceOrThrow().recipeImplementation.getTenantId({
+                    userContext: e.userContext
                   })
                 ];
               case 1:
                 return [
                   4,
-                  m.apply(p, [
-                    v.sent(),
+                  h.apply(g, [
+                    m.sent(),
                     "/passwordless/email/exists",
                     {},
-                    { email: n.email },
-                    h.default.preparePreAPIHook({
-                      recipePreAPIHook: a.preAPIHook,
+                    { email: e.email },
+                    p.default.preparePreAPIHook({
+                      recipePreAPIHook: d.preAPIHook,
                       action: "EMAIL_EXISTS",
-                      userContext: n.userContext,
-                      options: n.options
+                      userContext: e.userContext,
+                      options: e.options
                     }),
-                    h.default.preparePostAPIHook({
-                      recipePostAPIHook: a.postAPIHook,
+                    p.default.preparePostAPIHook({
+                      recipePostAPIHook: d.postAPIHook,
                       action: "EMAIL_EXISTS",
-                      userContext: n.userContext
+                      userContext: e.userContext
                     })
                   ])
                 ];
               case 2:
-                return o = v.sent(), s = o.jsonBody, l = o.fetchResponse, [
+                return a = m.sent(), i = a.jsonBody, l = a.fetchResponse, [
                   2,
                   {
-                    status: s.status,
-                    doesExist: s.exists,
+                    status: i.status,
+                    doesExist: i.exists,
                     fetchResponse: l
                   }
                 ];
@@ -1390,45 +1390,45 @@ function An() {
           });
         });
       },
-      doesPhoneNumberExist: function(n) {
-        return t(this, void 0, void 0, function() {
-          var o, s, l, p, m;
-          return i(this, function(v) {
-            switch (v.label) {
+      doesPhoneNumberExist: function(e) {
+        return r(this, void 0, void 0, function() {
+          var a, i, l, g, h;
+          return n(this, function(m) {
+            switch (m.label) {
               case 0:
-                return m = (p = r).get, [
+                return h = (g = t).get, [
                   4,
-                  g.default.getInstanceOrThrow().recipeImplementation.getTenantId({
-                    userContext: n.userContext
+                  b.default.getInstanceOrThrow().recipeImplementation.getTenantId({
+                    userContext: e.userContext
                   })
                 ];
               case 1:
                 return [
                   4,
-                  m.apply(p, [
-                    v.sent(),
+                  h.apply(g, [
+                    m.sent(),
                     "/passwordless/phonenumber/exists",
                     {},
-                    { phoneNumber: n.phoneNumber },
-                    h.default.preparePreAPIHook({
-                      recipePreAPIHook: a.preAPIHook,
+                    { phoneNumber: e.phoneNumber },
+                    p.default.preparePreAPIHook({
+                      recipePreAPIHook: d.preAPIHook,
                       action: "PHONE_NUMBER_EXISTS",
-                      userContext: n.userContext,
-                      options: n.options
+                      userContext: e.userContext,
+                      options: e.options
                     }),
-                    h.default.preparePostAPIHook({
-                      recipePostAPIHook: a.postAPIHook,
+                    p.default.preparePostAPIHook({
+                      recipePostAPIHook: d.postAPIHook,
                       action: "PHONE_NUMBER_EXISTS",
-                      userContext: n.userContext
+                      userContext: e.userContext
                     })
                   ])
                 ];
               case 2:
-                return o = v.sent(), s = o.jsonBody, l = o.fetchResponse, [
+                return a = m.sent(), i = a.jsonBody, l = a.fetchResponse, [
                   2,
                   {
-                    status: s.status,
-                    doesExist: s.exists,
+                    status: i.status,
+                    doesExist: i.exists,
                     fetchResponse: l
                   }
                 ];
@@ -1437,22 +1437,22 @@ function An() {
         });
       },
       getLoginAttemptInfo: function() {
-        return t(this, void 0, void 0, function() {
-          var n;
-          return i(this, function(o) {
-            switch (o.label) {
+        return r(this, void 0, void 0, function() {
+          var e;
+          return n(this, function(a) {
+            switch (a.label) {
               case 0:
                 return [
                   4,
-                  c.WindowHandlerReference.getReferenceOrThrow().windowHandler.localStorage.getItem(
+                  s.WindowHandlerReference.getReferenceOrThrow().windowHandler.localStorage.getItem(
                     f.PASSWORDLESS_LOGIN_ATTEMPT_INFO_STORAGE_KEY
                   )
                 ];
               case 1:
-                if (n = o.sent(), n === null)
+                if (e = a.sent(), e === null)
                   return [2, void 0];
                 try {
-                  return [2, JSON.parse(n)];
+                  return [2, JSON.parse(e)];
                 } catch {
                   return [2, void 0];
                 }
@@ -1464,28 +1464,28 @@ function An() {
           });
         });
       },
-      setLoginAttemptInfo: function(n) {
-        return t(this, void 0, void 0, function() {
-          return i(this, function(o) {
-            switch (o.label) {
+      setLoginAttemptInfo: function(e) {
+        return r(this, void 0, void 0, function() {
+          return n(this, function(a) {
+            switch (a.label) {
               case 0:
                 return [
                   4,
-                  c.WindowHandlerReference.getReferenceOrThrow().windowHandler.localStorage.setItem(
+                  s.WindowHandlerReference.getReferenceOrThrow().windowHandler.localStorage.setItem(
                     f.PASSWORDLESS_LOGIN_ATTEMPT_INFO_STORAGE_KEY,
                     JSON.stringify(
-                      e(
+                      o(
                         {
                           // This can make future changes/migrations a lot cleaner
                           version: 1
                         },
-                        n.attemptInfo
+                        e.attemptInfo
                       )
                     )
                   )
                 ];
               case 1:
-                return o.sent(), [
+                return a.sent(), [
                   2
                   /*return*/
                 ];
@@ -1494,9 +1494,9 @@ function An() {
         });
       },
       clearLoginAttemptInfo: function() {
-        return t(this, void 0, void 0, function() {
-          return i(this, function(n) {
-            return c.WindowHandlerReference.getReferenceOrThrow().windowHandler.localStorage.removeItem(
+        return r(this, void 0, void 0, function() {
+          return n(this, function(e) {
+            return s.WindowHandlerReference.getReferenceOrThrow().windowHandler.localStorage.removeItem(
               f.PASSWORDLESS_LOGIN_ATTEMPT_INFO_STORAGE_KEY
             ), [
               2
@@ -1507,373 +1507,373 @@ function An() {
       }
     };
   }
-  return W.default = u, W.getRecipeImplementation = u, W;
+  return H.default = c, H.getRecipeImplementation = c, H;
 }
-var pt;
-function Tn() {
-  if (pt) return Q;
-  pt = 1;
-  var e = Q && Q.__extends || /* @__PURE__ */ function() {
-    var u = function(a, r) {
-      return u = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(n, o) {
-        n.__proto__ = o;
-      } || function(n, o) {
-        for (var s in o) Object.prototype.hasOwnProperty.call(o, s) && (n[s] = o[s]);
-      }, u(a, r);
+var Cr;
+function je() {
+  if (Cr) return Q;
+  Cr = 1;
+  var o = Q && Q.__extends || /* @__PURE__ */ function() {
+    var c = function(d, t) {
+      return c = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(e, a) {
+        e.__proto__ = a;
+      } || function(e, a) {
+        for (var i in a) Object.prototype.hasOwnProperty.call(a, i) && (e[i] = a[i]);
+      }, c(d, t);
     };
-    return function(a, r) {
-      if (typeof r != "function" && r !== null)
-        throw new TypeError("Class extends value " + String(r) + " is not a constructor or null");
-      u(a, r);
-      function n() {
-        this.constructor = a;
+    return function(d, t) {
+      if (typeof t != "function" && t !== null)
+        throw new TypeError("Class extends value " + String(t) + " is not a constructor or null");
+      c(d, t);
+      function e() {
+        this.constructor = d;
       }
-      a.prototype = r === null ? Object.create(r) : (n.prototype = r.prototype, new n());
+      d.prototype = t === null ? Object.create(t) : (e.prototype = t.prototype, new e());
     };
-  }(), t = Q && Q.__assign || function() {
-    return t = Object.assign || function(u) {
-      for (var a, r = 1, n = arguments.length; r < n; r++) {
-        a = arguments[r];
-        for (var o in a) Object.prototype.hasOwnProperty.call(a, o) && (u[o] = a[o]);
+  }(), r = Q && Q.__assign || function() {
+    return r = Object.assign || function(c) {
+      for (var d, t = 1, e = arguments.length; t < e; t++) {
+        d = arguments[t];
+        for (var a in d) Object.prototype.hasOwnProperty.call(d, a) && (c[a] = d[a]);
       }
-      return u;
-    }, t.apply(this, arguments);
+      return c;
+    }, r.apply(this, arguments);
   };
   Object.defineProperty(Q, "__esModule", { value: !0 }), Q.Recipe = void 0;
-  var i = $e(), c = Y(), h = qe(), d = Sn(), g = An(), f = (
+  var n = Ho(), s = J(), p = Ko(), u = Ue(), b = He(), f = (
     /** @class */
-    function(u) {
-      e(a, u);
-      function a(r) {
-        var n = u.call(this, (0, d.normaliseUserInput)(r)) || this, o = new i.default(
-          (0, g.default)({
-            recipeId: n.config.recipeId,
-            appInfo: n.config.appInfo,
-            clientType: n.config.clientType,
-            preAPIHook: n.config.preAPIHook,
-            postAPIHook: n.config.postAPIHook
+    function(c) {
+      o(d, c);
+      function d(t) {
+        var e = c.call(this, (0, u.normaliseUserInput)(t)) || this, a = new n.default(
+          (0, b.default)({
+            recipeId: e.config.recipeId,
+            appInfo: e.config.appInfo,
+            clientType: e.config.clientType,
+            preAPIHook: e.config.preAPIHook,
+            postAPIHook: e.config.postAPIHook
           })
         );
-        return n.recipeImplementation = o.override(n.config.override.functions).build(), n;
+        return e.recipeImplementation = a.override(e.config.override.functions).build(), e;
       }
-      return a.init = function(r) {
-        return function(n, o) {
-          return a.instance = new a(
-            t(t({}, r), { recipeId: a.RECIPE_ID, appInfo: n, clientType: o })
-          ), a.instance;
+      return d.init = function(t) {
+        return function(e, a) {
+          return d.instance = new d(
+            r(r({}, t), { recipeId: d.RECIPE_ID, appInfo: e, clientType: a })
+          ), d.instance;
         };
-      }, a.getInstanceOrThrow = function() {
-        if (a.instance === void 0) {
-          var r = "No instance of Passwordless found. Ensure that the 'Passwordless.init' method is called within the 'SuperTokens.init' recipeList.";
-          throw r = (0, c.checkForSSRErrorAndAppendIfNeeded)(r), Error(r);
+      }, d.getInstanceOrThrow = function() {
+        if (d.instance === void 0) {
+          var t = "No instance of Passwordless found. Ensure that the 'Passwordless.init' method is called within the 'SuperTokens.init' recipeList.";
+          throw t = (0, s.checkForSSRErrorAndAppendIfNeeded)(t), Error(t);
         }
-        return a.instance;
-      }, a.reset = function() {
-        (0, c.isTest)() && (a.instance = void 0);
-      }, a.RECIPE_ID = "passwordless", a;
-    }(h.default)
+        return d.instance;
+      }, d.reset = function() {
+        (0, s.isTest)() && (d.instance = void 0);
+      }, d.RECIPE_ID = "passwordless", d;
+    }(p.default)
   );
   return Q.Recipe = f, Q.default = f, Q;
 }
-var ht;
-function Rn() {
-  if (ht) return C;
-  ht = 1;
-  var e = C && C.__assign || function() {
-    return e = Object.assign || function(x) {
-      for (var y, w = 1, T = arguments.length; w < T; w++) {
-        y = arguments[w];
-        for (var A in y) Object.prototype.hasOwnProperty.call(y, A) && (x[A] = y[A]);
+var xr;
+function Me() {
+  if (xr) return I;
+  xr = 1;
+  var o = I && I.__assign || function() {
+    return o = Object.assign || function($) {
+      for (var v, w = 1, S = arguments.length; w < S; w++) {
+        v = arguments[w];
+        for (var _ in v) Object.prototype.hasOwnProperty.call(v, _) && ($[_] = v[_]);
       }
-      return x;
-    }, e.apply(this, arguments);
-  }, t = C && C.__awaiter || function(x, y, w, T) {
-    function A(_) {
-      return _ instanceof w ? _ : new w(function(U) {
-        U(_);
+      return $;
+    }, o.apply(this, arguments);
+  }, r = I && I.__awaiter || function($, v, w, S) {
+    function _(y) {
+      return y instanceof w ? y : new w(function(E) {
+        E(y);
       });
     }
-    return new (w || (w = Promise))(function(_, U) {
-      function O(H) {
+    return new (w || (w = Promise))(function(y, E) {
+      function T(U) {
         try {
-          k(T.next(H));
-        } catch (ie) {
-          U(ie);
+          R(S.next(U));
+        } catch (co) {
+          E(co);
         }
       }
-      function F(H) {
+      function W(U) {
         try {
-          k(T.throw(H));
-        } catch (ie) {
-          U(ie);
+          R(S.throw(U));
+        } catch (co) {
+          E(co);
         }
       }
-      function k(H) {
-        H.done ? _(H.value) : A(H.value).then(O, F);
+      function R(U) {
+        U.done ? y(U.value) : _(U.value).then(T, W);
       }
-      k((T = T.apply(x, y || [])).next());
+      R((S = S.apply($, v || [])).next());
     });
-  }, i = C && C.__generator || function(x, y) {
+  }, n = I && I.__generator || function($, v) {
     var w = {
       label: 0,
       sent: function() {
-        if (_[0] & 1) throw _[1];
-        return _[1];
+        if (y[0] & 1) throw y[1];
+        return y[1];
       },
       trys: [],
       ops: []
-    }, T, A, _, U;
-    return U = { next: O(0), throw: O(1), return: O(2) }, typeof Symbol == "function" && (U[Symbol.iterator] = function() {
+    }, S, _, y, E;
+    return E = { next: T(0), throw: T(1), return: T(2) }, typeof Symbol == "function" && (E[Symbol.iterator] = function() {
       return this;
-    }), U;
-    function O(k) {
-      return function(H) {
-        return F([k, H]);
+    }), E;
+    function T(R) {
+      return function(U) {
+        return W([R, U]);
       };
     }
-    function F(k) {
-      if (T) throw new TypeError("Generator is already executing.");
+    function W(R) {
+      if (S) throw new TypeError("Generator is already executing.");
       for (; w; )
         try {
-          if (T = 1, A && (_ = k[0] & 2 ? A.return : k[0] ? A.throw || ((_ = A.return) && _.call(A), 0) : A.next) && !(_ = _.call(A, k[1])).done)
-            return _;
-          switch (A = 0, _ && (k = [k[0] & 2, _.value]), k[0]) {
+          if (S = 1, _ && (y = R[0] & 2 ? _.return : R[0] ? _.throw || ((y = _.return) && y.call(_), 0) : _.next) && !(y = y.call(_, R[1])).done)
+            return y;
+          switch (_ = 0, y && (R = [R[0] & 2, y.value]), R[0]) {
             case 0:
             case 1:
-              _ = k;
+              y = R;
               break;
             case 4:
-              return w.label++, { value: k[1], done: !1 };
+              return w.label++, { value: R[1], done: !1 };
             case 5:
-              w.label++, A = k[1], k = [0];
+              w.label++, _ = R[1], R = [0];
               continue;
             case 7:
-              k = w.ops.pop(), w.trys.pop();
+              R = w.ops.pop(), w.trys.pop();
               continue;
             default:
-              if (_ = w.trys, !(_ = _.length > 0 && _[_.length - 1]) && (k[0] === 6 || k[0] === 2)) {
+              if (y = w.trys, !(y = y.length > 0 && y[y.length - 1]) && (R[0] === 6 || R[0] === 2)) {
                 w = 0;
                 continue;
               }
-              if (k[0] === 3 && (!_ || k[1] > _[0] && k[1] < _[3])) {
-                w.label = k[1];
+              if (R[0] === 3 && (!y || R[1] > y[0] && R[1] < y[3])) {
+                w.label = R[1];
                 break;
               }
-              if (k[0] === 6 && w.label < _[1]) {
-                w.label = _[1], _ = k;
+              if (R[0] === 6 && w.label < y[1]) {
+                w.label = y[1], y = R;
                 break;
               }
-              if (_ && w.label < _[2]) {
-                w.label = _[2], w.ops.push(k);
+              if (y && w.label < y[2]) {
+                w.label = y[2], w.ops.push(R);
                 break;
               }
-              _[2] && w.ops.pop(), w.trys.pop();
+              y[2] && w.ops.pop(), w.trys.pop();
               continue;
           }
-          k = y.call(x, w);
-        } catch (H) {
-          k = [6, H], A = 0;
+          R = v.call($, w);
+        } catch (U) {
+          R = [6, U], _ = 0;
         } finally {
-          T = _ = 0;
+          S = y = 0;
         }
-      if (k[0] & 5) throw k[1];
-      return { value: k[0] ? k[1] : void 0, done: !0 };
+      if (R[0] & 5) throw R[1];
+      return { value: R[0] ? R[1] : void 0, done: !0 };
     }
   };
-  Object.defineProperty(C, "__esModule", { value: !0 }), C.clearLoginAttemptInfo = C.setLoginAttemptInfo = C.getLoginAttemptInfo = C.getTenantIdFromURL = C.getPreAuthSessionIdFromURL = C.getLinkCodeFromURL = C.signOut = C.doesPhoneNumberExist = C.doesEmailExist = C.consumeCode = C.resendCode = C.createCode = C.init = void 0;
-  var c = Y(), h = _e(), d = Tn(), g = (
+  Object.defineProperty(I, "__esModule", { value: !0 }), I.clearLoginAttemptInfo = I.setLoginAttemptInfo = I.getLoginAttemptInfo = I.getTenantIdFromURL = I.getPreAuthSessionIdFromURL = I.getLinkCodeFromURL = I.signOut = I.doesPhoneNumberExist = I.doesEmailExist = I.consumeCode = I.resendCode = I.createCode = I.init = void 0;
+  var s = J(), p = _o(), u = je(), b = (
     /** @class */
     function() {
-      function x() {
+      function $() {
       }
-      return x.init = function(y) {
-        return d.default.init(y);
-      }, x.createCode = function(y) {
-        var w, T;
-        return t(this, void 0, void 0, function() {
-          var A, _, U, O, F;
-          return i(this, function(k) {
-            switch (k.label) {
+      return $.init = function(v) {
+        return u.default.init(v);
+      }, $.createCode = function(v) {
+        var w, S;
+        return r(this, void 0, void 0, function() {
+          var _, y, E, T, W;
+          return n(this, function(R) {
+            switch (R.label) {
               case 0:
-                return A = d.default.getInstanceOrThrow(), _ = A.recipeImplementation, U = (0, c.getNormalisedUserContext)(y.userContext), [
+                return _ = u.default.getInstanceOrThrow(), y = _.recipeImplementation, E = (0, s.getNormalisedUserContext)(v.userContext), [
                   4,
-                  h.default.getInstanceOrThrow().recipeImplementation.getTenantId({
-                    userContext: y.userContext
+                  p.default.getInstanceOrThrow().recipeImplementation.getTenantId({
+                    userContext: v.userContext
                   })
                 ];
               case 1:
-                return O = k.sent(), [
+                return T = R.sent(), [
                   4,
-                  _.createCode(
-                    e(e({}, y), {
-                      shouldTryLinkingWithSessionUser: (w = y.shouldTryLinkingWithSessionUser) !== null && w !== void 0 ? w : !1,
-                      userContext: U
+                  y.createCode(
+                    o(o({}, v), {
+                      shouldTryLinkingWithSessionUser: (w = v.shouldTryLinkingWithSessionUser) !== null && w !== void 0 ? w : !1,
+                      userContext: E
                     })
                   )
                 ];
               case 2:
-                return F = k.sent(), F.status !== "OK" ? [3, 4] : [
+                return W = R.sent(), W.status !== "OK" ? [3, 4] : [
                   4,
-                  _.setLoginAttemptInfo({
+                  y.setLoginAttemptInfo({
                     attemptInfo: {
-                      tenantId: O,
-                      deviceId: F.deviceId,
-                      preAuthSessionId: F.preAuthSessionId,
-                      shouldTryLinkingWithSessionUser: (T = y.shouldTryLinkingWithSessionUser) !== null && T !== void 0 ? T : !1,
-                      flowType: F.flowType
+                      tenantId: T,
+                      deviceId: W.deviceId,
+                      preAuthSessionId: W.preAuthSessionId,
+                      shouldTryLinkingWithSessionUser: (S = v.shouldTryLinkingWithSessionUser) !== null && S !== void 0 ? S : !1,
+                      flowType: W.flowType
                     },
-                    userContext: U
+                    userContext: E
                   })
                 ];
               case 3:
-                k.sent(), k.label = 4;
+                R.sent(), R.label = 4;
               case 4:
-                return [2, F];
+                return [2, W];
             }
           });
         });
-      }, x.resendCode = function(y) {
-        return t(this, void 0, void 0, function() {
-          var w, T, A, _;
-          return i(this, function(U) {
-            switch (U.label) {
+      }, $.resendCode = function(v) {
+        return r(this, void 0, void 0, function() {
+          var w, S, _, y;
+          return n(this, function(E) {
+            switch (E.label) {
               case 0:
-                return w = d.default.getInstanceOrThrow(), T = w.recipeImplementation, A = (0, c.getNormalisedUserContext)(
-                  y == null ? void 0 : y.userContext
+                return w = u.default.getInstanceOrThrow(), S = w.recipeImplementation, _ = (0, s.getNormalisedUserContext)(
+                  v == null ? void 0 : v.userContext
                 ), [
                   4,
-                  T.getLoginAttemptInfo({
-                    userContext: A
+                  S.getLoginAttemptInfo({
+                    userContext: _
                   })
                 ];
               case 1:
-                return _ = U.sent(), [
+                return y = E.sent(), [
                   2,
-                  T.resendCode(
-                    e(e({}, y), {
-                      tenantId: _ == null ? void 0 : _.tenantId,
-                      userContext: A,
-                      deviceId: _ === void 0 ? "" : _.deviceId,
-                      preAuthSessionId: _ === void 0 ? "" : _.preAuthSessionId,
-                      shouldTryLinkingWithSessionUser: _ == null ? void 0 : _.shouldTryLinkingWithSessionUser
+                  S.resendCode(
+                    o(o({}, v), {
+                      tenantId: y == null ? void 0 : y.tenantId,
+                      userContext: _,
+                      deviceId: y === void 0 ? "" : y.deviceId,
+                      preAuthSessionId: y === void 0 ? "" : y.preAuthSessionId,
+                      shouldTryLinkingWithSessionUser: y == null ? void 0 : y.shouldTryLinkingWithSessionUser
                     })
                   )
                 ];
             }
           });
         });
-      }, x.consumeCode = function(y) {
+      }, $.consumeCode = function(v) {
         var w;
-        return t(this, void 0, void 0, function() {
-          var T, A, _, U, O, F, F, k, H, ie;
-          return i(this, function(Pe) {
-            switch (Pe.label) {
+        return r(this, void 0, void 0, function() {
+          var S, _, y, E, T, W, W, R, U, co;
+          return n(this, function(To) {
+            switch (To.label) {
               case 0:
-                return T = d.default.getInstanceOrThrow(), A = T.recipeImplementation, _ = (0, c.getNormalisedUserContext)(
-                  y == null ? void 0 : y.userContext
-                ), y !== void 0 && "userInputCode" in y ? [
+                return S = u.default.getInstanceOrThrow(), _ = S.recipeImplementation, y = (0, s.getNormalisedUserContext)(
+                  v == null ? void 0 : v.userContext
+                ), v !== void 0 && "userInputCode" in v ? [
                   4,
-                  A.getLoginAttemptInfo({
-                    userContext: _
+                  _.getLoginAttemptInfo({
+                    userContext: y
                   })
                 ] : [3, 2];
               case 1:
-                return O = Pe.sent(), F = (w = O == null ? void 0 : O.shouldTryLinkingWithSessionUser) !== null && w !== void 0 ? w : !1, U = {
-                  userInputCode: y.userInputCode,
-                  deviceId: O === void 0 ? "" : O.deviceId,
-                  preAuthSessionId: O === void 0 ? "" : O.preAuthSessionId,
-                  shouldTryLinkingWithSessionUser: F,
-                  tenantId: O == null ? void 0 : O.tenantId
+                return T = To.sent(), W = (w = T == null ? void 0 : T.shouldTryLinkingWithSessionUser) !== null && w !== void 0 ? w : !1, E = {
+                  userInputCode: v.userInputCode,
+                  deviceId: T === void 0 ? "" : T.deviceId,
+                  preAuthSessionId: T === void 0 ? "" : T.preAuthSessionId,
+                  shouldTryLinkingWithSessionUser: W,
+                  tenantId: T == null ? void 0 : T.tenantId
                 }, [3, 3];
               case 2:
-                F = !1, k = A.getLinkCodeFromURL({
-                  userContext: _
-                }), H = A.getTenantIdFromURL({
-                  userContext: _
-                }), ie = A.getPreAuthSessionIdFromURL({
-                  userContext: _
-                }), U = {
-                  tenantId: H,
-                  linkCode: k,
-                  preAuthSessionId: ie,
-                  shouldTryLinkingWithSessionUser: F
-                }, Pe.label = 3;
+                W = !1, R = _.getLinkCodeFromURL({
+                  userContext: y
+                }), U = _.getTenantIdFromURL({
+                  userContext: y
+                }), co = _.getPreAuthSessionIdFromURL({
+                  userContext: y
+                }), E = {
+                  tenantId: U,
+                  linkCode: R,
+                  preAuthSessionId: co,
+                  shouldTryLinkingWithSessionUser: W
+                }, To.label = 3;
               case 3:
                 return [
                   2,
-                  A.consumeCode(
-                    e(
+                  _.consumeCode(
+                    o(
                       {
-                        userContext: _,
-                        options: y == null ? void 0 : y.options
+                        userContext: y,
+                        options: v == null ? void 0 : v.options
                       },
-                      U
+                      E
                     )
                   )
                 ];
             }
           });
         });
-      }, x.getLinkCodeFromURL = function(y) {
-        return d.default.getInstanceOrThrow().recipeImplementation.getLinkCodeFromURL(
-          e(e({}, y), {
-            userContext: (0, c.getNormalisedUserContext)(
-              y == null ? void 0 : y.userContext
+      }, $.getLinkCodeFromURL = function(v) {
+        return u.default.getInstanceOrThrow().recipeImplementation.getLinkCodeFromURL(
+          o(o({}, v), {
+            userContext: (0, s.getNormalisedUserContext)(
+              v == null ? void 0 : v.userContext
             )
           })
         );
-      }, x.getPreAuthSessionIdFromURL = function(y) {
-        return d.default.getInstanceOrThrow().recipeImplementation.getPreAuthSessionIdFromURL(
-          e(e({}, y), {
-            userContext: (0, c.getNormalisedUserContext)(
-              y == null ? void 0 : y.userContext
+      }, $.getPreAuthSessionIdFromURL = function(v) {
+        return u.default.getInstanceOrThrow().recipeImplementation.getPreAuthSessionIdFromURL(
+          o(o({}, v), {
+            userContext: (0, s.getNormalisedUserContext)(
+              v == null ? void 0 : v.userContext
             )
           })
         );
-      }, x.getTenantIdFromURL = function(y) {
-        return d.default.getInstanceOrThrow().recipeImplementation.getTenantIdFromURL(
-          e(e({}, y), {
-            userContext: (0, c.getNormalisedUserContext)(
-              y == null ? void 0 : y.userContext
+      }, $.getTenantIdFromURL = function(v) {
+        return u.default.getInstanceOrThrow().recipeImplementation.getTenantIdFromURL(
+          o(o({}, v), {
+            userContext: (0, s.getNormalisedUserContext)(
+              v == null ? void 0 : v.userContext
             )
           })
         );
-      }, x.doesEmailExist = function(y) {
-        return d.default.getInstanceOrThrow().recipeImplementation.doesEmailExist(
-          e(e({}, y), { userContext: (0, c.getNormalisedUserContext)(y.userContext) })
+      }, $.doesEmailExist = function(v) {
+        return u.default.getInstanceOrThrow().recipeImplementation.doesEmailExist(
+          o(o({}, v), { userContext: (0, s.getNormalisedUserContext)(v.userContext) })
         );
-      }, x.doesPhoneNumberExist = function(y) {
-        return d.default.getInstanceOrThrow().recipeImplementation.doesPhoneNumberExist(
-          e(e({}, y), { userContext: (0, c.getNormalisedUserContext)(y.userContext) })
+      }, $.doesPhoneNumberExist = function(v) {
+        return u.default.getInstanceOrThrow().recipeImplementation.doesPhoneNumberExist(
+          o(o({}, v), { userContext: (0, s.getNormalisedUserContext)(v.userContext) })
         );
-      }, x.getLoginAttemptInfo = function(y) {
-        return d.default.getInstanceOrThrow().recipeImplementation.getLoginAttemptInfo(
-          e(e({}, y), {
-            userContext: (0, c.getNormalisedUserContext)(
-              y == null ? void 0 : y.userContext
+      }, $.getLoginAttemptInfo = function(v) {
+        return u.default.getInstanceOrThrow().recipeImplementation.getLoginAttemptInfo(
+          o(o({}, v), {
+            userContext: (0, s.getNormalisedUserContext)(
+              v == null ? void 0 : v.userContext
             )
           })
         );
-      }, x.setLoginAttemptInfo = function(y) {
-        return t(this, void 0, void 0, function() {
-          var w, T, A;
-          return i(this, function(_) {
-            switch (_.label) {
+      }, $.setLoginAttemptInfo = function(v) {
+        return r(this, void 0, void 0, function() {
+          var w, S, _;
+          return n(this, function(y) {
+            switch (y.label) {
               case 0:
-                return w = (0, c.getNormalisedUserContext)(y.userContext), T = d.default.getInstanceOrThrow(), [
+                return w = (0, s.getNormalisedUserContext)(v.userContext), S = u.default.getInstanceOrThrow(), [
                   4,
-                  h.default.getInstanceOrThrow().recipeImplementation.getTenantId({ userContext: w })
+                  p.default.getInstanceOrThrow().recipeImplementation.getTenantId({ userContext: w })
                 ];
               case 1:
-                return A = _.sent(), [
+                return _ = y.sent(), [
                   2,
-                  T.recipeImplementation.setLoginAttemptInfo({
-                    attemptInfo: e(
+                  S.recipeImplementation.setLoginAttemptInfo({
+                    attemptInfo: o(
                       {
-                        tenantId: A,
-                        shouldTryLinkingWithSessionUser: y.attemptInfo.shouldTryLinkingWithSessionUser
+                        tenantId: _,
+                        shouldTryLinkingWithSessionUser: v.attemptInfo.shouldTryLinkingWithSessionUser
                       },
-                      y.attemptInfo
+                      v.attemptInfo
                     ),
                     userContext: w
                   })
@@ -1881,226 +1881,226 @@ function Rn() {
             }
           });
         });
-      }, x.clearLoginAttemptInfo = function(y) {
-        return d.default.getInstanceOrThrow().recipeImplementation.clearLoginAttemptInfo(
-          e(e({}, y), {
-            userContext: (0, c.getNormalisedUserContext)(
-              y == null ? void 0 : y.userContext
+      }, $.clearLoginAttemptInfo = function(v) {
+        return u.default.getInstanceOrThrow().recipeImplementation.clearLoginAttemptInfo(
+          o(o({}, v), {
+            userContext: (0, s.getNormalisedUserContext)(
+              v == null ? void 0 : v.userContext
             )
           })
         );
-      }, x.signOut = function(y) {
-        return d.default.getInstanceOrThrow().signOut({
-          userContext: (0, c.getNormalisedUserContext)(
-            y == null ? void 0 : y.userContext
+      }, $.signOut = function(v) {
+        return u.default.getInstanceOrThrow().signOut({
+          userContext: (0, s.getNormalisedUserContext)(
+            v == null ? void 0 : v.userContext
           )
         });
-      }, x;
+      }, $;
     }()
   );
-  C.default = g;
-  var f = g.init;
-  C.init = f;
-  var u = g.createCode;
-  C.createCode = u;
-  var a = g.resendCode;
-  C.resendCode = a;
-  var r = g.consumeCode;
-  C.consumeCode = r;
-  var n = g.doesEmailExist;
-  C.doesEmailExist = n;
-  var o = g.doesPhoneNumberExist;
-  C.doesPhoneNumberExist = o;
-  var s = g.signOut;
-  C.signOut = s;
-  var l = g.getLinkCodeFromURL;
-  C.getLinkCodeFromURL = l;
-  var p = g.getPreAuthSessionIdFromURL;
-  C.getPreAuthSessionIdFromURL = p;
-  var m = g.getTenantIdFromURL;
-  C.getTenantIdFromURL = m;
-  var v = g.getLoginAttemptInfo;
-  C.getLoginAttemptInfo = v;
-  var I = g.setLoginAttemptInfo;
-  C.setLoginAttemptInfo = I;
-  var P = g.clearLoginAttemptInfo;
-  return C.clearLoginAttemptInfo = P, C;
+  I.default = b;
+  var f = b.init;
+  I.init = f;
+  var c = b.createCode;
+  I.createCode = c;
+  var d = b.resendCode;
+  I.resendCode = d;
+  var t = b.consumeCode;
+  I.consumeCode = t;
+  var e = b.doesEmailExist;
+  I.doesEmailExist = e;
+  var a = b.doesPhoneNumberExist;
+  I.doesPhoneNumberExist = a;
+  var i = b.signOut;
+  I.signOut = i;
+  var l = b.getLinkCodeFromURL;
+  I.getLinkCodeFromURL = l;
+  var g = b.getPreAuthSessionIdFromURL;
+  I.getPreAuthSessionIdFromURL = g;
+  var h = b.getTenantIdFromURL;
+  I.getTenantIdFromURL = h;
+  var m = b.getLoginAttemptInfo;
+  I.getLoginAttemptInfo = m;
+  var k = b.setLoginAttemptInfo;
+  I.setLoginAttemptInfo = k;
+  var x = b.clearLoginAttemptInfo;
+  return I.clearLoginAttemptInfo = x, I;
 }
-var vt;
-function On() {
-  return vt || (vt = 1, function(e) {
-    function t(i) {
-      for (var c in i) e.hasOwnProperty(c) || (e[c] = i[c]);
+var $r;
+function qe() {
+  return $r || ($r = 1, function(o) {
+    function r(n) {
+      for (var s in n) o.hasOwnProperty(s) || (o[s] = n[s]);
     }
-    e.__esModule = !0, t(Rn());
-  }(Re)), Re;
+    o.__esModule = !0, r(Me());
+  }(Do)), Do;
 }
-var Z = On();
-const En = /* @__PURE__ */ Le(Z);
-var Oe = {}, E = {}, z = {}, oe = {}, mt;
-function $n() {
-  if (mt) return oe;
-  mt = 1;
-  var e = oe && oe.__assign || function() {
-    return e = Object.assign || function(c) {
-      for (var h, d = 1, g = arguments.length; d < g; d++) {
-        h = arguments[d];
-        for (var f in h) Object.prototype.hasOwnProperty.call(h, f) && (c[f] = h[f]);
+var ro = qe();
+const Ve = /* @__PURE__ */ Mo(ro);
+var Uo = {}, A = {}, X = {}, io = {}, Rr;
+function Ge() {
+  if (Rr) return io;
+  Rr = 1;
+  var o = io && io.__assign || function() {
+    return o = Object.assign || function(s) {
+      for (var p, u = 1, b = arguments.length; u < b; u++) {
+        p = arguments[u];
+        for (var f in p) Object.prototype.hasOwnProperty.call(p, f) && (s[f] = p[f]);
       }
-      return c;
-    }, e.apply(this, arguments);
+      return s;
+    }, o.apply(this, arguments);
   };
-  Object.defineProperty(oe, "__esModule", { value: !0 }), oe.normaliseUserInput = void 0;
-  var t = De();
-  function i(c) {
-    var h = e(
+  Object.defineProperty(io, "__esModule", { value: !0 }), io.normaliseUserInput = void 0;
+  var r = Qo();
+  function n(s) {
+    var p = o(
       {
-        functions: function(d) {
-          return d;
+        functions: function(u) {
+          return u;
         }
       },
-      c.override
+      s.override
     );
-    return e(e({}, (0, t.normaliseAuthRecipe)(c)), { override: h });
+    return o(o({}, (0, r.normaliseAuthRecipe)(s)), { override: p });
   }
-  return oe.normaliseUserInput = i, oe;
+  return io.normaliseUserInput = n, io;
 }
-var q = {}, gt;
-function Un() {
-  if (gt) return q;
-  gt = 1;
-  var e = q && q.__assign || function() {
-    return e = Object.assign || function(u) {
-      for (var a, r = 1, n = arguments.length; r < n; r++) {
-        a = arguments[r];
-        for (var o in a) Object.prototype.hasOwnProperty.call(a, o) && (u[o] = a[o]);
+var j = {}, Br;
+function Ye() {
+  if (Br) return j;
+  Br = 1;
+  var o = j && j.__assign || function() {
+    return o = Object.assign || function(c) {
+      for (var d, t = 1, e = arguments.length; t < e; t++) {
+        d = arguments[t];
+        for (var a in d) Object.prototype.hasOwnProperty.call(d, a) && (c[a] = d[a]);
       }
-      return u;
-    }, e.apply(this, arguments);
-  }, t = q && q.__awaiter || function(u, a, r, n) {
-    function o(s) {
-      return s instanceof r ? s : new r(function(l) {
-        l(s);
+      return c;
+    }, o.apply(this, arguments);
+  }, r = j && j.__awaiter || function(c, d, t, e) {
+    function a(i) {
+      return i instanceof t ? i : new t(function(l) {
+        l(i);
       });
     }
-    return new (r || (r = Promise))(function(s, l) {
-      function p(I) {
+    return new (t || (t = Promise))(function(i, l) {
+      function g(k) {
         try {
-          v(n.next(I));
-        } catch (P) {
-          l(P);
+          m(e.next(k));
+        } catch (x) {
+          l(x);
         }
       }
-      function m(I) {
+      function h(k) {
         try {
-          v(n.throw(I));
-        } catch (P) {
-          l(P);
+          m(e.throw(k));
+        } catch (x) {
+          l(x);
         }
       }
-      function v(I) {
-        I.done ? s(I.value) : o(I.value).then(p, m);
+      function m(k) {
+        k.done ? i(k.value) : a(k.value).then(g, h);
       }
-      v((n = n.apply(u, a || [])).next());
+      m((e = e.apply(c, d || [])).next());
     });
-  }, i = q && q.__generator || function(u, a) {
-    var r = {
+  }, n = j && j.__generator || function(c, d) {
+    var t = {
       label: 0,
       sent: function() {
-        if (s[0] & 1) throw s[1];
-        return s[1];
+        if (i[0] & 1) throw i[1];
+        return i[1];
       },
       trys: [],
       ops: []
-    }, n, o, s, l;
-    return l = { next: p(0), throw: p(1), return: p(2) }, typeof Symbol == "function" && (l[Symbol.iterator] = function() {
+    }, e, a, i, l;
+    return l = { next: g(0), throw: g(1), return: g(2) }, typeof Symbol == "function" && (l[Symbol.iterator] = function() {
       return this;
     }), l;
-    function p(v) {
-      return function(I) {
-        return m([v, I]);
+    function g(m) {
+      return function(k) {
+        return h([m, k]);
       };
     }
-    function m(v) {
-      if (n) throw new TypeError("Generator is already executing.");
-      for (; r; )
+    function h(m) {
+      if (e) throw new TypeError("Generator is already executing.");
+      for (; t; )
         try {
-          if (n = 1, o && (s = v[0] & 2 ? o.return : v[0] ? o.throw || ((s = o.return) && s.call(o), 0) : o.next) && !(s = s.call(o, v[1])).done)
-            return s;
-          switch (o = 0, s && (v = [v[0] & 2, s.value]), v[0]) {
+          if (e = 1, a && (i = m[0] & 2 ? a.return : m[0] ? a.throw || ((i = a.return) && i.call(a), 0) : a.next) && !(i = i.call(a, m[1])).done)
+            return i;
+          switch (a = 0, i && (m = [m[0] & 2, i.value]), m[0]) {
             case 0:
             case 1:
-              s = v;
+              i = m;
               break;
             case 4:
-              return r.label++, { value: v[1], done: !1 };
+              return t.label++, { value: m[1], done: !1 };
             case 5:
-              r.label++, o = v[1], v = [0];
+              t.label++, a = m[1], m = [0];
               continue;
             case 7:
-              v = r.ops.pop(), r.trys.pop();
+              m = t.ops.pop(), t.trys.pop();
               continue;
             default:
-              if (s = r.trys, !(s = s.length > 0 && s[s.length - 1]) && (v[0] === 6 || v[0] === 2)) {
-                r = 0;
+              if (i = t.trys, !(i = i.length > 0 && i[i.length - 1]) && (m[0] === 6 || m[0] === 2)) {
+                t = 0;
                 continue;
               }
-              if (v[0] === 3 && (!s || v[1] > s[0] && v[1] < s[3])) {
-                r.label = v[1];
+              if (m[0] === 3 && (!i || m[1] > i[0] && m[1] < i[3])) {
+                t.label = m[1];
                 break;
               }
-              if (v[0] === 6 && r.label < s[1]) {
-                r.label = s[1], s = v;
+              if (m[0] === 6 && t.label < i[1]) {
+                t.label = i[1], i = m;
                 break;
               }
-              if (s && r.label < s[2]) {
-                r.label = s[2], r.ops.push(v);
+              if (i && t.label < i[2]) {
+                t.label = i[2], t.ops.push(m);
                 break;
               }
-              s[2] && r.ops.pop(), r.trys.pop();
+              i[2] && t.ops.pop(), t.trys.pop();
               continue;
           }
-          v = a.call(u, r);
-        } catch (I) {
-          v = [6, I], o = 0;
+          m = d.call(c, t);
+        } catch (k) {
+          m = [6, k], a = 0;
         } finally {
-          n = s = 0;
+          e = i = 0;
         }
-      if (v[0] & 5) throw v[1];
-      return { value: v[0] ? v[1] : void 0, done: !0 };
+      if (m[0] & 5) throw m[1];
+      return { value: m[0] ? m[1] : void 0, done: !0 };
     }
   };
-  Object.defineProperty(q, "__esModule", { value: !0 }), q.getRecipeImplementation = void 0;
-  var c = We(), h = Y(), d = Ht(), g = Ue();
-  function f(u) {
-    var a = new c.default(u.recipeId, u.appInfo);
+  Object.defineProperty(j, "__esModule", { value: !0 }), j.getRecipeImplementation = void 0;
+  var s = Xo(), p = J(), u = Zr(), b = jo();
+  function f(c) {
+    var d = new s.default(c.recipeId, c.appInfo);
     return {
       getStateAndOtherInfoFromStorage: function() {
-        var r = g.WindowHandlerReference.getReferenceOrThrow().windowHandler.sessionStorage.getItemSync(
+        var t = b.WindowHandlerReference.getReferenceOrThrow().windowHandler.sessionStorage.getItemSync(
           "supertokens-oauth-state-2"
         );
-        if (r !== null)
+        if (t !== null)
           try {
-            return JSON.parse(r);
+            return JSON.parse(t);
           } catch {
             return;
           }
       },
-      setStateAndOtherInfoToStorage: function(r) {
-        return t(this, void 0, void 0, function() {
-          var n;
-          return i(this, function(o) {
-            switch (o.label) {
+      setStateAndOtherInfoToStorage: function(t) {
+        return r(this, void 0, void 0, function() {
+          var e;
+          return n(this, function(a) {
+            switch (a.label) {
               case 0:
-                return n = JSON.stringify(e({}, r.state)), [
+                return e = JSON.stringify(o({}, t.state)), [
                   4,
-                  g.WindowHandlerReference.getReferenceOrThrow().windowHandler.sessionStorage.setItem(
+                  b.WindowHandlerReference.getReferenceOrThrow().windowHandler.sessionStorage.setItem(
                     "supertokens-oauth-state-2",
-                    n
+                    e
                   )
                 ];
               case 1:
-                return o.sent(), [
+                return a.sent(), [
                   2
                   /*return*/
                 ];
@@ -2108,85 +2108,85 @@ function Un() {
           });
         });
       },
-      getAuthorisationURLWithQueryParamsAndSetState: function(r) {
-        return t(this, void 0, void 0, function() {
-          var n, o, s, l, p;
-          return i(this, function(m) {
-            switch (m.label) {
+      getAuthorisationURLWithQueryParamsAndSetState: function(t) {
+        return r(this, void 0, void 0, function() {
+          var e, a, i, l, g;
+          return n(this, function(h) {
+            switch (h.label) {
               case 0:
                 return [
                   4,
                   this.getAuthorisationURLFromBackend({
-                    thirdPartyId: r.thirdPartyId,
-                    tenantId: r.tenantId,
-                    redirectURIOnProviderDashboard: r.redirectURIOnProviderDashboard || r.frontendRedirectURI,
-                    userContext: r.userContext,
-                    options: r.options
+                    thirdPartyId: t.thirdPartyId,
+                    tenantId: t.tenantId,
+                    redirectURIOnProviderDashboard: t.redirectURIOnProviderDashboard || t.frontendRedirectURI,
+                    userContext: t.userContext,
+                    options: t.options
                   })
                 ];
               case 1:
-                return n = m.sent(), o = r.redirectURIOnProviderDashboard !== void 0 && r.frontendRedirectURI !== r.redirectURIOnProviderDashboard ? r.frontendRedirectURI : void 0, s = this.generateStateToSendToOAuthProvider({
-                  frontendRedirectURI: o,
-                  userContext: r.userContext
+                return e = h.sent(), a = t.redirectURIOnProviderDashboard !== void 0 && t.frontendRedirectURI !== t.redirectURIOnProviderDashboard ? t.frontendRedirectURI : void 0, i = this.generateStateToSendToOAuthProvider({
+                  frontendRedirectURI: a,
+                  userContext: t.userContext
                 }), l = Date.now() + 1e3 * 60 * 10, [
                   4,
                   this.setStateAndOtherInfoToStorage({
                     state: {
-                      stateForAuthProvider: s,
-                      thirdPartyId: r.thirdPartyId,
-                      tenantId: r.tenantId,
+                      stateForAuthProvider: i,
+                      thirdPartyId: t.thirdPartyId,
+                      tenantId: t.tenantId,
                       expiresAt: l,
-                      redirectURIOnProviderDashboard: r.redirectURIOnProviderDashboard || r.frontendRedirectURI,
-                      shouldTryLinkingWithSessionUser: r.shouldTryLinkingWithSessionUser,
-                      pkceCodeVerifier: n.pkceCodeVerifier
+                      redirectURIOnProviderDashboard: t.redirectURIOnProviderDashboard || t.frontendRedirectURI,
+                      shouldTryLinkingWithSessionUser: t.shouldTryLinkingWithSessionUser,
+                      pkceCodeVerifier: e.pkceCodeVerifier
                     },
-                    userContext: r.userContext
+                    userContext: t.userContext
                   })
                 ];
               case 2:
-                return m.sent(), p = (0, h.appendQueryParamsToURL)(n.urlWithQueryParams, {
-                  state: s
-                }), [2, p];
+                return h.sent(), g = (0, p.appendQueryParamsToURL)(e.urlWithQueryParams, {
+                  state: i
+                }), [2, g];
             }
           });
         });
       },
-      getAuthorisationURLFromBackend: function(r) {
-        return t(this, void 0, void 0, function() {
-          var n, o, s, l;
-          return i(this, function(p) {
-            switch (p.label) {
+      getAuthorisationURLFromBackend: function(t) {
+        return r(this, void 0, void 0, function() {
+          var e, a, i, l;
+          return n(this, function(g) {
+            switch (g.label) {
               case 0:
-                return n = {
-                  thirdPartyId: r.thirdPartyId,
-                  redirectURIOnProviderDashboard: r.redirectURIOnProviderDashboard
-                }, u.clientType !== void 0 && (n.clientType = u.clientType), [
+                return e = {
+                  thirdPartyId: t.thirdPartyId,
+                  redirectURIOnProviderDashboard: t.redirectURIOnProviderDashboard
+                }, c.clientType !== void 0 && (e.clientType = c.clientType), [
                   4,
-                  a.get(
-                    r.tenantId,
+                  d.get(
+                    t.tenantId,
                     "/authorisationurl",
                     {},
-                    n,
-                    c.default.preparePreAPIHook({
-                      recipePreAPIHook: u.preAPIHook,
+                    e,
+                    s.default.preparePreAPIHook({
+                      recipePreAPIHook: c.preAPIHook,
                       action: "GET_AUTHORISATION_URL",
-                      options: r.options,
-                      userContext: r.userContext
+                      options: t.options,
+                      userContext: t.userContext
                     }),
-                    c.default.preparePostAPIHook({
-                      recipePostAPIHook: u.postAPIHook,
+                    s.default.preparePostAPIHook({
+                      recipePostAPIHook: c.postAPIHook,
                       action: "GET_AUTHORISATION_URL",
-                      userContext: r.userContext
+                      userContext: t.userContext
                     })
                   )
                 ];
               case 1:
-                return o = p.sent(), s = o.jsonBody, l = o.fetchResponse, [
+                return a = g.sent(), i = a.jsonBody, l = a.fetchResponse, [
                   2,
                   {
                     status: "OK",
-                    urlWithQueryParams: s.urlWithQueryParams,
-                    pkceCodeVerifier: s.pkceCodeVerifier,
+                    urlWithQueryParams: i.urlWithQueryParams,
+                    pkceCodeVerifier: i.pkceCodeVerifier,
                     fetchResponse: l
                   }
                 ];
@@ -2194,324 +2194,324 @@ function Un() {
           });
         });
       },
-      signInAndUp: function(r) {
-        return t(this, void 0, void 0, function() {
-          var n, o, s, l, p, m, v, I, P;
-          return i(this, function(x) {
-            switch (x.label) {
+      signInAndUp: function(t) {
+        return r(this, void 0, void 0, function() {
+          var e, a, i, l, g, h, m, k, x;
+          return n(this, function($) {
+            switch ($.label) {
               case 0:
-                return n = this.getStateAndOtherInfoFromStorage({
-                  userContext: r.userContext
-                }), o = this.getAuthStateFromURL({
-                  userContext: r.userContext
+                return e = this.getStateAndOtherInfoFromStorage({
+                  userContext: t.userContext
+                }), a = this.getAuthStateFromURL({
+                  userContext: t.userContext
                 }), [
                   4,
                   this.verifyAndGetStateOrThrowError({
-                    stateFromAuthProvider: o,
-                    stateObjectFromStorage: n,
-                    userContext: r.userContext
+                    stateFromAuthProvider: a,
+                    stateObjectFromStorage: e,
+                    userContext: t.userContext
                   })
                 ];
               case 1:
-                if (s = x.sent(), l = this.getAuthErrorFromURL({
-                  userContext: r.userContext
+                if (i = $.sent(), l = this.getAuthErrorFromURL({
+                  userContext: t.userContext
                 }), l !== void 0)
                   throw new Error("Auth provider responded with error: ".concat(l));
-                return p = (0, h.getAllQueryParams)(), m = Object.fromEntries(p), [
+                return g = (0, p.getAllQueryParams)(), h = Object.fromEntries(g), [
                   4,
-                  a.post(
-                    s.tenantId,
+                  d.post(
+                    i.tenantId,
                     "/signinup",
                     {
                       body: JSON.stringify({
-                        thirdPartyId: s.thirdPartyId,
-                        clientType: u.clientType,
+                        thirdPartyId: i.thirdPartyId,
+                        clientType: c.clientType,
                         redirectURIInfo: {
-                          redirectURIOnProviderDashboard: s.redirectURIOnProviderDashboard,
-                          redirectURIQueryParams: m,
-                          pkceCodeVerifier: s.pkceCodeVerifier
+                          redirectURIOnProviderDashboard: i.redirectURIOnProviderDashboard,
+                          redirectURIQueryParams: h,
+                          pkceCodeVerifier: i.pkceCodeVerifier
                         },
-                        shouldTryLinkingWithSessionUser: s.shouldTryLinkingWithSessionUser
+                        shouldTryLinkingWithSessionUser: i.shouldTryLinkingWithSessionUser
                       })
                     },
-                    c.default.preparePreAPIHook({
-                      recipePreAPIHook: u.preAPIHook,
+                    s.default.preparePreAPIHook({
+                      recipePreAPIHook: c.preAPIHook,
                       action: "THIRD_PARTY_SIGN_IN_UP",
-                      options: r.options,
-                      userContext: r.userContext
+                      options: t.options,
+                      userContext: t.userContext
                     }),
-                    c.default.preparePostAPIHook({
-                      recipePostAPIHook: u.postAPIHook,
+                    s.default.preparePostAPIHook({
+                      recipePostAPIHook: c.postAPIHook,
                       action: "THIRD_PARTY_SIGN_IN_UP",
-                      userContext: r.userContext
+                      userContext: t.userContext
                     })
                   )
                 ];
               case 2:
-                if (v = x.sent(), I = v.jsonBody, P = v.fetchResponse, I.status === "FIELD_ERROR")
-                  throw new d.default(I.error);
-                return I.status !== "OK" ? [
+                if (m = $.sent(), k = m.jsonBody, x = m.fetchResponse, k.status === "FIELD_ERROR")
+                  throw new u.default(k.error);
+                return k.status !== "OK" ? [
                   2,
-                  e(e({}, I), { fetchResponse: P })
+                  o(o({}, k), { fetchResponse: x })
                 ] : [
                   2,
-                  e(
-                    e(
+                  o(
+                    o(
                       { status: "OK" },
-                      (0, h.normaliseUserResponse)("thirdparty", I)
+                      (0, p.normaliseUserResponse)("thirdparty", k)
                     ),
-                    { fetchResponse: P }
+                    { fetchResponse: x }
                   )
                 ];
             }
           });
         });
       },
-      generateStateToSendToOAuthProvider: function(r) {
-        var n = {
-          state: "".concat(1e20).replace(/[018]/g, function(o) {
-            return (parseInt(o) ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> parseInt(o) / 4).toString(16);
+      generateStateToSendToOAuthProvider: function(t) {
+        var e = {
+          state: "".concat(1e20).replace(/[018]/g, function(a) {
+            return (parseInt(a) ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> parseInt(a) / 4).toString(16);
           })
         };
-        return r !== void 0 && r.frontendRedirectURI !== void 0 && (n.frontendRedirectURI = r.frontendRedirectURI), btoa(JSON.stringify(n));
+        return t !== void 0 && t.frontendRedirectURI !== void 0 && (e.frontendRedirectURI = t.frontendRedirectURI), btoa(JSON.stringify(e));
       },
-      verifyAndGetStateOrThrowError: function(r) {
-        return t(this, void 0, void 0, function() {
-          return i(this, function(n) {
-            if (r.stateObjectFromStorage === void 0 || r.stateObjectFromStorage.stateForAuthProvider === void 0)
+      verifyAndGetStateOrThrowError: function(t) {
+        return r(this, void 0, void 0, function() {
+          return n(this, function(e) {
+            if (t.stateObjectFromStorage === void 0 || t.stateObjectFromStorage.stateForAuthProvider === void 0)
               throw new Error("No valid auth state present in session storage");
-            if (r.stateFromAuthProvider === void 0)
+            if (t.stateFromAuthProvider === void 0)
               throw new Error("No state recieved from auth provider");
-            if (r.stateObjectFromStorage.expiresAt < Date.now())
+            if (t.stateObjectFromStorage.expiresAt < Date.now())
               throw new Error("Auth state verification failed. The auth provider took too long to respond");
-            if (r.stateFromAuthProvider !== r.stateObjectFromStorage.stateForAuthProvider)
+            if (t.stateFromAuthProvider !== t.stateObjectFromStorage.stateForAuthProvider)
               throw new Error(
                 "Auth state verification failed. The auth provider responded with an invalid state"
               );
-            return [2, r.stateObjectFromStorage];
+            return [2, t.stateObjectFromStorage];
           });
         });
       },
       getAuthErrorFromURL: function() {
-        return (0, h.getQueryParams)("error");
+        return (0, p.getQueryParams)("error");
       },
       getAuthStateFromURL: function() {
-        var r = (0, h.getQueryParams)("state");
-        return r === void 0 ? "" : r;
+        var t = (0, p.getQueryParams)("state");
+        return t === void 0 ? "" : t;
       }
     };
   }
-  return q.default = f, q.getRecipeImplementation = f, q;
+  return j.default = f, j.getRecipeImplementation = f, j;
 }
-var yt;
-function Ln() {
-  if (yt) return z;
-  yt = 1;
-  var e = z && z.__extends || /* @__PURE__ */ function() {
-    var u = function(a, r) {
-      return u = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(n, o) {
-        n.__proto__ = o;
-      } || function(n, o) {
-        for (var s in o) Object.prototype.hasOwnProperty.call(o, s) && (n[s] = o[s]);
-      }, u(a, r);
+var Ir;
+function Qe() {
+  if (Ir) return X;
+  Ir = 1;
+  var o = X && X.__extends || /* @__PURE__ */ function() {
+    var c = function(d, t) {
+      return c = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(e, a) {
+        e.__proto__ = a;
+      } || function(e, a) {
+        for (var i in a) Object.prototype.hasOwnProperty.call(a, i) && (e[i] = a[i]);
+      }, c(d, t);
     };
-    return function(a, r) {
-      if (typeof r != "function" && r !== null)
-        throw new TypeError("Class extends value " + String(r) + " is not a constructor or null");
-      u(a, r);
-      function n() {
-        this.constructor = a;
+    return function(d, t) {
+      if (typeof t != "function" && t !== null)
+        throw new TypeError("Class extends value " + String(t) + " is not a constructor or null");
+      c(d, t);
+      function e() {
+        this.constructor = d;
       }
-      a.prototype = r === null ? Object.create(r) : (n.prototype = r.prototype, new n());
+      d.prototype = t === null ? Object.create(t) : (e.prototype = t.prototype, new e());
     };
-  }(), t = z && z.__assign || function() {
-    return t = Object.assign || function(u) {
-      for (var a, r = 1, n = arguments.length; r < n; r++) {
-        a = arguments[r];
-        for (var o in a) Object.prototype.hasOwnProperty.call(a, o) && (u[o] = a[o]);
+  }(), r = X && X.__assign || function() {
+    return r = Object.assign || function(c) {
+      for (var d, t = 1, e = arguments.length; t < e; t++) {
+        d = arguments[t];
+        for (var a in d) Object.prototype.hasOwnProperty.call(d, a) && (c[a] = d[a]);
       }
-      return u;
-    }, t.apply(this, arguments);
+      return c;
+    }, r.apply(this, arguments);
   };
-  Object.defineProperty(z, "__esModule", { value: !0 }), z.Recipe = void 0;
-  var i = $n(), c = $e(), h = Un(), d = Y(), g = qe(), f = (
+  Object.defineProperty(X, "__esModule", { value: !0 }), X.Recipe = void 0;
+  var n = Ge(), s = Ho(), p = Ye(), u = J(), b = Ko(), f = (
     /** @class */
-    function(u) {
-      e(a, u);
-      function a(r) {
-        var n = u.call(this, (0, i.normaliseUserInput)(r)) || this, o = new c.default(
-          (0, h.default)({
-            recipeId: n.config.recipeId,
-            appInfo: n.config.appInfo,
-            clientType: n.config.clientType,
-            preAPIHook: n.config.preAPIHook,
-            postAPIHook: n.config.postAPIHook
+    function(c) {
+      o(d, c);
+      function d(t) {
+        var e = c.call(this, (0, n.normaliseUserInput)(t)) || this, a = new s.default(
+          (0, p.default)({
+            recipeId: e.config.recipeId,
+            appInfo: e.config.appInfo,
+            clientType: e.config.clientType,
+            preAPIHook: e.config.preAPIHook,
+            postAPIHook: e.config.postAPIHook
           })
         );
-        return n.recipeImplementation = o.override(n.config.override.functions).build(), n;
+        return e.recipeImplementation = a.override(e.config.override.functions).build(), e;
       }
-      return a.init = function(r) {
-        return function(n, o) {
-          return a.instance = new a(
-            t(t({}, r), { recipeId: a.RECIPE_ID, appInfo: n, clientType: o })
-          ), a.instance;
+      return d.init = function(t) {
+        return function(e, a) {
+          return d.instance = new d(
+            r(r({}, t), { recipeId: d.RECIPE_ID, appInfo: e, clientType: a })
+          ), d.instance;
         };
-      }, a.getInstanceOrThrow = function() {
-        if (a.instance === void 0) {
-          var r = "No instance of ThirdParty found. Ensure that the 'ThirdParty.init' method is called within the 'SuperTokens.init' recipeList.";
-          throw r = (0, d.checkForSSRErrorAndAppendIfNeeded)(r), Error(r);
+      }, d.getInstanceOrThrow = function() {
+        if (d.instance === void 0) {
+          var t = "No instance of ThirdParty found. Ensure that the 'ThirdParty.init' method is called within the 'SuperTokens.init' recipeList.";
+          throw t = (0, u.checkForSSRErrorAndAppendIfNeeded)(t), Error(t);
         }
-        return a.instance;
-      }, a.reset = function() {
-        (0, d.isTest)() && (a.instance = void 0);
-      }, a.RECIPE_ID = "thirdparty", a;
-    }(g.default)
+        return d.instance;
+      }, d.reset = function() {
+        (0, u.isTest)() && (d.instance = void 0);
+      }, d.RECIPE_ID = "thirdparty", d;
+    }(b.default)
   );
-  return z.Recipe = f, z.default = f, z;
+  return X.Recipe = f, X.default = f, X;
 }
-var It;
-function Nn() {
-  if (It) return E;
-  It = 1;
-  var e = E && E.__assign || function() {
-    return e = Object.assign || function(o) {
-      for (var s, l = 1, p = arguments.length; l < p; l++) {
-        s = arguments[l];
-        for (var m in s) Object.prototype.hasOwnProperty.call(s, m) && (o[m] = s[m]);
+var _r;
+function Xe() {
+  if (_r) return A;
+  _r = 1;
+  var o = A && A.__assign || function() {
+    return o = Object.assign || function(a) {
+      for (var i, l = 1, g = arguments.length; l < g; l++) {
+        i = arguments[l];
+        for (var h in i) Object.prototype.hasOwnProperty.call(i, h) && (a[h] = i[h]);
       }
-      return o;
-    }, e.apply(this, arguments);
-  }, t = E && E.__awaiter || function(o, s, l, p) {
-    function m(v) {
-      return v instanceof l ? v : new l(function(I) {
-        I(v);
+      return a;
+    }, o.apply(this, arguments);
+  }, r = A && A.__awaiter || function(a, i, l, g) {
+    function h(m) {
+      return m instanceof l ? m : new l(function(k) {
+        k(m);
       });
     }
-    return new (l || (l = Promise))(function(v, I) {
-      function P(w) {
-        try {
-          y(p.next(w));
-        } catch (T) {
-          I(T);
-        }
-      }
+    return new (l || (l = Promise))(function(m, k) {
       function x(w) {
         try {
-          y(p.throw(w));
-        } catch (T) {
-          I(T);
+          v(g.next(w));
+        } catch (S) {
+          k(S);
         }
       }
-      function y(w) {
-        w.done ? v(w.value) : m(w.value).then(P, x);
+      function $(w) {
+        try {
+          v(g.throw(w));
+        } catch (S) {
+          k(S);
+        }
       }
-      y((p = p.apply(o, s || [])).next());
+      function v(w) {
+        w.done ? m(w.value) : h(w.value).then(x, $);
+      }
+      v((g = g.apply(a, i || [])).next());
     });
-  }, i = E && E.__generator || function(o, s) {
+  }, n = A && A.__generator || function(a, i) {
     var l = {
       label: 0,
       sent: function() {
-        if (v[0] & 1) throw v[1];
-        return v[1];
+        if (m[0] & 1) throw m[1];
+        return m[1];
       },
       trys: [],
       ops: []
-    }, p, m, v, I;
-    return I = { next: P(0), throw: P(1), return: P(2) }, typeof Symbol == "function" && (I[Symbol.iterator] = function() {
+    }, g, h, m, k;
+    return k = { next: x(0), throw: x(1), return: x(2) }, typeof Symbol == "function" && (k[Symbol.iterator] = function() {
       return this;
-    }), I;
-    function P(y) {
+    }), k;
+    function x(v) {
       return function(w) {
-        return x([y, w]);
+        return $([v, w]);
       };
     }
-    function x(y) {
-      if (p) throw new TypeError("Generator is already executing.");
+    function $(v) {
+      if (g) throw new TypeError("Generator is already executing.");
       for (; l; )
         try {
-          if (p = 1, m && (v = y[0] & 2 ? m.return : y[0] ? m.throw || ((v = m.return) && v.call(m), 0) : m.next) && !(v = v.call(m, y[1])).done)
-            return v;
-          switch (m = 0, v && (y = [y[0] & 2, v.value]), y[0]) {
+          if (g = 1, h && (m = v[0] & 2 ? h.return : v[0] ? h.throw || ((m = h.return) && m.call(h), 0) : h.next) && !(m = m.call(h, v[1])).done)
+            return m;
+          switch (h = 0, m && (v = [v[0] & 2, m.value]), v[0]) {
             case 0:
             case 1:
-              v = y;
+              m = v;
               break;
             case 4:
-              return l.label++, { value: y[1], done: !1 };
+              return l.label++, { value: v[1], done: !1 };
             case 5:
-              l.label++, m = y[1], y = [0];
+              l.label++, h = v[1], v = [0];
               continue;
             case 7:
-              y = l.ops.pop(), l.trys.pop();
+              v = l.ops.pop(), l.trys.pop();
               continue;
             default:
-              if (v = l.trys, !(v = v.length > 0 && v[v.length - 1]) && (y[0] === 6 || y[0] === 2)) {
+              if (m = l.trys, !(m = m.length > 0 && m[m.length - 1]) && (v[0] === 6 || v[0] === 2)) {
                 l = 0;
                 continue;
               }
-              if (y[0] === 3 && (!v || y[1] > v[0] && y[1] < v[3])) {
-                l.label = y[1];
+              if (v[0] === 3 && (!m || v[1] > m[0] && v[1] < m[3])) {
+                l.label = v[1];
                 break;
               }
-              if (y[0] === 6 && l.label < v[1]) {
-                l.label = v[1], v = y;
+              if (v[0] === 6 && l.label < m[1]) {
+                l.label = m[1], m = v;
                 break;
               }
-              if (v && l.label < v[2]) {
-                l.label = v[2], l.ops.push(y);
+              if (m && l.label < m[2]) {
+                l.label = m[2], l.ops.push(v);
                 break;
               }
-              v[2] && l.ops.pop(), l.trys.pop();
+              m[2] && l.ops.pop(), l.trys.pop();
               continue;
           }
-          y = s.call(o, l);
+          v = i.call(a, l);
         } catch (w) {
-          y = [6, w], m = 0;
+          v = [6, w], h = 0;
         } finally {
-          p = v = 0;
+          g = m = 0;
         }
-      if (y[0] & 5) throw y[1];
-      return { value: y[0] ? y[1] : void 0, done: !0 };
+      if (v[0] & 5) throw v[1];
+      return { value: v[0] ? v[1] : void 0, done: !0 };
     }
   };
-  Object.defineProperty(E, "__esModule", { value: !0 }), E.signOut = E.signInAndUp = E.getAuthorisationURLWithQueryParamsAndSetState = E.getStateAndOtherInfoFromStorage = E.init = void 0;
-  var c = Y(), h = _e(), d = Ln(), g = (
+  Object.defineProperty(A, "__esModule", { value: !0 }), A.signOut = A.signInAndUp = A.getAuthorisationURLWithQueryParamsAndSetState = A.getStateAndOtherInfoFromStorage = A.init = void 0;
+  var s = J(), p = _o(), u = Qe(), b = (
     /** @class */
     function() {
-      function o() {
+      function a() {
       }
-      return o.init = function(s) {
-        return d.default.init(s);
-      }, o.signOut = function(s) {
-        return d.default.getInstanceOrThrow().signOut({
-          userContext: (0, c.getNormalisedUserContext)(
-            s == null ? void 0 : s.userContext
+      return a.init = function(i) {
+        return u.default.init(i);
+      }, a.signOut = function(i) {
+        return u.default.getInstanceOrThrow().signOut({
+          userContext: (0, s.getNormalisedUserContext)(
+            i == null ? void 0 : i.userContext
           )
         });
-      }, o.getStateAndOtherInfoFromStorage = function(s) {
-        return d.default.getInstanceOrThrow().recipeImplementation.getStateAndOtherInfoFromStorage(
-          e(e({}, s), {
-            userContext: (0, c.getNormalisedUserContext)(
-              s == null ? void 0 : s.userContext
+      }, a.getStateAndOtherInfoFromStorage = function(i) {
+        return u.default.getInstanceOrThrow().recipeImplementation.getStateAndOtherInfoFromStorage(
+          o(o({}, i), {
+            userContext: (0, s.getNormalisedUserContext)(
+              i == null ? void 0 : i.userContext
             )
           })
         );
-      }, o.getAuthorisationURLWithQueryParamsAndSetState = function(s) {
-        return t(this, void 0, void 0, function() {
-          var l, p, m;
-          return i(this, function(v) {
-            switch (v.label) {
+      }, a.getAuthorisationURLWithQueryParamsAndSetState = function(i) {
+        return r(this, void 0, void 0, function() {
+          var l, g, h;
+          return n(this, function(m) {
+            switch (m.label) {
               case 0:
-                return l = (0, c.getNormalisedUserContext)(s.userContext), p = d.default.getInstanceOrThrow(), [
+                return l = (0, s.getNormalisedUserContext)(i.userContext), g = u.default.getInstanceOrThrow(), [
                   4,
-                  h.default.getInstanceOrThrow().recipeImplementation.getTenantId({ userContext: l })
+                  p.default.getInstanceOrThrow().recipeImplementation.getTenantId({ userContext: l })
                 ];
               case 1:
-                return m = v.sent(), [
+                return h = m.sent(), [
                   2,
-                  p.recipeImplementation.getAuthorisationURLWithQueryParamsAndSetState(
-                    e(e({ tenantId: m }, s), {
-                      shouldTryLinkingWithSessionUser: s == null ? void 0 : s.shouldTryLinkingWithSessionUser,
+                  g.recipeImplementation.getAuthorisationURLWithQueryParamsAndSetState(
+                    o(o({ tenantId: h }, i), {
+                      shouldTryLinkingWithSessionUser: i == null ? void 0 : i.shouldTryLinkingWithSessionUser,
                       userContext: l
                     })
                   )
@@ -2519,84 +2519,84 @@ function Nn() {
             }
           });
         });
-      }, o.signInAndUp = function(s) {
-        return d.default.getInstanceOrThrow().recipeImplementation.signInAndUp(
-          e(e({}, s), {
-            userContext: (0, c.getNormalisedUserContext)(
-              s == null ? void 0 : s.userContext
+      }, a.signInAndUp = function(i) {
+        return u.default.getInstanceOrThrow().recipeImplementation.signInAndUp(
+          o(o({}, i), {
+            userContext: (0, s.getNormalisedUserContext)(
+              i == null ? void 0 : i.userContext
             )
           })
         );
-      }, o;
+      }, a;
     }()
   );
-  E.default = g;
-  var f = g.init;
-  E.init = f;
-  var u = g.getAuthorisationURLWithQueryParamsAndSetState;
-  E.getAuthorisationURLWithQueryParamsAndSetState = u;
-  var a = g.getStateAndOtherInfoFromStorage;
-  E.getStateAndOtherInfoFromStorage = a;
-  var r = g.signInAndUp;
-  E.signInAndUp = r;
-  var n = g.signOut;
-  return E.signOut = n, E;
+  A.default = b;
+  var f = b.init;
+  A.init = f;
+  var c = b.getAuthorisationURLWithQueryParamsAndSetState;
+  A.getAuthorisationURLWithQueryParamsAndSetState = c;
+  var d = b.getStateAndOtherInfoFromStorage;
+  A.getStateAndOtherInfoFromStorage = d;
+  var t = b.signInAndUp;
+  A.signInAndUp = t;
+  var e = b.signOut;
+  return A.signOut = e, A;
 }
-var _t;
-function Fn() {
-  return _t || (_t = 1, function(e) {
-    function t(i) {
-      for (var c in i) e.hasOwnProperty(c) || (e[c] = i[c]);
+var Sr;
+function Ke() {
+  return Sr || (Sr = 1, function(o) {
+    function r(n) {
+      for (var s in n) o.hasOwnProperty(s) || (o[s] = n[s]);
     }
-    e.__esModule = !0, t(Nn());
-  }(Oe)), Oe;
+    o.__esModule = !0, r(Xe());
+  }(Uo)), Uo;
 }
-var Me = Fn();
-const jn = /* @__PURE__ */ Le(Me), Hn = { class: "gsi-material-button-content-wrapper" }, Dn = { class: "gsi-material-button-icon" }, Wn = {
+var Jo = Ke();
+const Je = /* @__PURE__ */ Mo(Jo), Ze = { class: "gsi-material-button-content-wrapper" }, ot = { class: "gsi-material-button-icon" }, rt = {
   version: "1.1",
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 48 48",
   "xmlns:xlink": "http://www.w3.org/1999/xlink",
   style: { display: "block" }
-}, qn = { class: "gsi-material-button-contents" }, Mn = { style: { display: "none" } }, Vn = /* @__PURE__ */ D({
+}, et = { class: "gsi-material-button-contents" }, tt = { style: { display: "none" } }, nt = /* @__PURE__ */ z({
   __name: "GoogleAuthIcon",
   props: {
     authType: { default: "Sign in" }
   },
-  setup(e) {
-    async function t() {
+  setup(o) {
+    async function r() {
       try {
-        const i = await Me.getAuthorisationURLWithQueryParamsAndSetState({
+        const n = await Jo.getAuthorisationURLWithQueryParamsAndSetState({
           thirdPartyId: "google",
           // This is where Google should redirect the user back after login or error.
           // This URL goes on the Google's dashboard as well: https://support.google.com/cloud/answer/6158849?hl=en
           frontendRedirectURI: "https://localhost:5173/signup?thirdPartyId=google"
         });
-        window.location.assign(i);
-      } catch (i) {
-        console.error("Google sign in: ", i.message);
+        window.location.assign(n);
+      } catch (n) {
+        console.error("Google sign in: ", n.message);
       }
     }
-    return (i, c) => (R(), N("button", {
+    return (n, s) => (P(), N("button", {
       class: "gsi-material-button",
-      onClick: t
+      onClick: r
     }, [
-      c[1] || (c[1] = b("div", { class: "gsi-material-button-state" }, null, -1)),
-      b("div", Hn, [
-        b("div", Dn, [
-          (R(), N("svg", Wn, c[0] || (c[0] = [
-            nn('<path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" data-v-521170bf></path><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" data-v-521170bf></path><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" data-v-521170bf></path><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" data-v-521170bf></path><path fill="none" d="M0 0h48v48H0z" data-v-521170bf></path>', 5)
+      s[1] || (s[1] = C("div", { class: "gsi-material-button-state" }, null, -1)),
+      C("div", Ze, [
+        C("div", ot, [
+          (P(), N("svg", rt, s[0] || (s[0] = [
+            ve('<path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" data-v-521170bf></path><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" data-v-521170bf></path><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" data-v-521170bf></path><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" data-v-521170bf></path><path fill="none" d="M0 0h48v48H0z" data-v-521170bf></path>', 5)
           ])))
         ]),
-        b("span", qn, ee(i.authType) + " with Google", 1),
-        b("span", Mn, ee(i.authType) + " with Google", 1)
+        C("span", et, eo(n.authType) + " with Google", 1),
+        C("span", tt, eo(n.authType) + " with Google", 1)
       ])
     ]));
   }
-}), Bn = /* @__PURE__ */ $t(Vn, [["__scopeId", "data-v-521170bf"]]);
-var Gn = {
+}), at = /* @__PURE__ */ Vr(nt, [["__scopeId", "data-v-521170bf"]]);
+var it = {
   name: "BaseEditableHolder",
-  extends: Xt,
+  extends: fe,
   emits: ["update:modelValue", "value-change"],
   props: {
     modelValue: {
@@ -2641,83 +2641,83 @@ var Gn = {
     };
   },
   watch: {
-    modelValue: function(t) {
-      this.d_value = t;
+    modelValue: function(r) {
+      this.d_value = r;
     },
-    defaultValue: function(t) {
-      this.d_value = t;
+    defaultValue: function(r) {
+      this.d_value = r;
     },
     $formName: {
       immediate: !0,
-      handler: function(t) {
-        var i, c;
-        this.formField = ((i = this.$pcForm) === null || i === void 0 || (c = i.register) === null || c === void 0 ? void 0 : c.call(i, t, this.$formControl)) || {};
+      handler: function(r) {
+        var n, s;
+        this.formField = ((n = this.$pcForm) === null || n === void 0 || (s = n.register) === null || s === void 0 ? void 0 : s.call(n, r, this.$formControl)) || {};
       }
     },
     $formControl: {
       immediate: !0,
-      handler: function(t) {
-        var i, c;
-        this.formField = ((i = this.$pcForm) === null || i === void 0 || (c = i.register) === null || c === void 0 ? void 0 : c.call(i, this.$formName, t)) || {};
+      handler: function(r) {
+        var n, s;
+        this.formField = ((n = this.$pcForm) === null || n === void 0 || (s = n.register) === null || s === void 0 ? void 0 : s.call(n, this.$formName, r)) || {};
       }
     },
     $formDefaultValue: {
       immediate: !0,
-      handler: function(t) {
-        this.d_value !== t && (this.d_value = t);
+      handler: function(r) {
+        this.d_value !== r && (this.d_value = r);
       }
     },
     $formValue: {
       immediate: !1,
-      handler: function(t) {
-        var i;
-        (i = this.$pcForm) !== null && i !== void 0 && i.getFieldState(this.$formName) && t !== this.d_value && (this.d_value = t);
+      handler: function(r) {
+        var n;
+        (n = this.$pcForm) !== null && n !== void 0 && n.getFieldState(this.$formName) && r !== this.d_value && (this.d_value = r);
       }
     }
   },
   formField: {},
   methods: {
-    writeValue: function(t, i) {
-      var c, h;
-      this.controlled && (this.d_value = t, this.$emit("update:modelValue", t)), this.$emit("value-change", t), (c = (h = this.formField).onChange) === null || c === void 0 || c.call(h, {
-        originalEvent: i,
-        value: t
+    writeValue: function(r, n) {
+      var s, p;
+      this.controlled && (this.d_value = r, this.$emit("update:modelValue", r)), this.$emit("value-change", r), (s = (p = this.formField).onChange) === null || s === void 0 || s.call(p, {
+        originalEvent: n,
+        value: r
       });
     },
     // @todo move to @primeuix/utils
     findNonEmpty: function() {
-      for (var t = arguments.length, i = new Array(t), c = 0; c < t; c++)
-        i[c] = arguments[c];
-      return i.find(Be);
+      for (var r = arguments.length, n = new Array(r), s = 0; s < r; s++)
+        n[s] = arguments[s];
+      return n.find(or);
     }
   },
   computed: {
     $filled: function() {
-      return Be(this.d_value);
+      return or(this.d_value);
     },
     $invalid: function() {
-      var t, i;
-      return !this.$formNovalidate && this.findNonEmpty(this.invalid, (t = this.$pcFormField) === null || t === void 0 || (t = t.$field) === null || t === void 0 ? void 0 : t.invalid, (i = this.$pcForm) === null || i === void 0 || (i = i.getFieldState(this.$formName)) === null || i === void 0 ? void 0 : i.invalid);
+      var r, n;
+      return !this.$formNovalidate && this.findNonEmpty(this.invalid, (r = this.$pcFormField) === null || r === void 0 || (r = r.$field) === null || r === void 0 ? void 0 : r.invalid, (n = this.$pcForm) === null || n === void 0 || (n = n.getFieldState(this.$formName)) === null || n === void 0 ? void 0 : n.invalid);
     },
     $formName: function() {
-      var t;
-      return this.$formNovalidate ? void 0 : this.name || ((t = this.$formControl) === null || t === void 0 ? void 0 : t.name);
+      var r;
+      return this.$formNovalidate ? void 0 : this.name || ((r = this.$formControl) === null || r === void 0 ? void 0 : r.name);
     },
     $formControl: function() {
-      var t;
-      return this.formControl || ((t = this.$pcFormField) === null || t === void 0 ? void 0 : t.formControl);
+      var r;
+      return this.formControl || ((r = this.$pcFormField) === null || r === void 0 ? void 0 : r.formControl);
     },
     $formNovalidate: function() {
-      var t;
-      return (t = this.$formControl) === null || t === void 0 ? void 0 : t.novalidate;
+      var r;
+      return (r = this.$formControl) === null || r === void 0 ? void 0 : r.novalidate;
     },
     $formDefaultValue: function() {
-      var t, i;
-      return this.findNonEmpty(this.d_value, (t = this.$pcFormField) === null || t === void 0 ? void 0 : t.initialValue, (i = this.$pcForm) === null || i === void 0 || (i = i.initialValues) === null || i === void 0 ? void 0 : i[this.$formName]);
+      var r, n;
+      return this.findNonEmpty(this.d_value, (r = this.$pcFormField) === null || r === void 0 ? void 0 : r.initialValue, (n = this.$pcForm) === null || n === void 0 || (n = n.initialValues) === null || n === void 0 ? void 0 : n[this.$formName]);
     },
     $formValue: function() {
-      var t, i;
-      return this.findNonEmpty((t = this.$pcFormField) === null || t === void 0 || (t = t.$field) === null || t === void 0 ? void 0 : t.value, (i = this.$pcForm) === null || i === void 0 || (i = i.getFieldState(this.$formName)) === null || i === void 0 ? void 0 : i.value);
+      var r, n;
+      return this.findNonEmpty((r = this.$pcFormField) === null || r === void 0 || (r = r.$field) === null || r === void 0 ? void 0 : r.value, (n = this.$pcForm) === null || n === void 0 || (n = n.getFieldState(this.$formName)) === null || n === void 0 ? void 0 : n.value);
     },
     controlled: function() {
       return this.$inProps.hasOwnProperty("modelValue") || !this.$inProps.hasOwnProperty("modelValue") && !this.$inProps.hasOwnProperty("defaultValue");
@@ -2727,9 +2727,9 @@ var Gn = {
       return this.$filled;
     }
   }
-}, Dt = {
+}, oe = {
   name: "BaseInput",
-  extends: Gn,
+  extends: it,
   props: {
     size: {
       type: String,
@@ -2754,111 +2754,111 @@ var Gn = {
   },
   computed: {
     $variant: function() {
-      var t;
-      return (t = this.variant) !== null && t !== void 0 ? t : this.$primevue.config.inputStyle || this.$primevue.config.inputVariant;
+      var r;
+      return (r = this.variant) !== null && r !== void 0 ? r : this.$primevue.config.inputStyle || this.$primevue.config.inputVariant;
     },
     $fluid: function() {
-      var t;
-      return (t = this.fluid) !== null && t !== void 0 ? t : !!this.$pcFluid;
+      var r;
+      return (r = this.fluid) !== null && r !== void 0 ? r : !!this.$pcFluid;
     },
     // @deprecated use $fluid instead
     hasFluid: function() {
       return this.$fluid;
     }
   }
-}, Kn = ({ dt: e }) => `
+}, dt = ({ dt: o }) => `
 .p-inputtext {
     font-family: inherit;
     font-feature-settings: inherit;
     font-size: 1rem;
-    color: ${e("inputtext.color")};
-    background: ${e("inputtext.background")};
-    padding-block: ${e("inputtext.padding.y")};
-    padding-inline: ${e("inputtext.padding.x")};
-    border: 1px solid ${e("inputtext.border.color")};
-    transition: background ${e("inputtext.transition.duration")}, color ${e("inputtext.transition.duration")}, border-color ${e("inputtext.transition.duration")}, outline-color ${e("inputtext.transition.duration")}, box-shadow ${e("inputtext.transition.duration")};
+    color: ${o("inputtext.color")};
+    background: ${o("inputtext.background")};
+    padding-block: ${o("inputtext.padding.y")};
+    padding-inline: ${o("inputtext.padding.x")};
+    border: 1px solid ${o("inputtext.border.color")};
+    transition: background ${o("inputtext.transition.duration")}, color ${o("inputtext.transition.duration")}, border-color ${o("inputtext.transition.duration")}, outline-color ${o("inputtext.transition.duration")}, box-shadow ${o("inputtext.transition.duration")};
     appearance: none;
-    border-radius: ${e("inputtext.border.radius")};
+    border-radius: ${o("inputtext.border.radius")};
     outline-color: transparent;
-    box-shadow: ${e("inputtext.shadow")};
+    box-shadow: ${o("inputtext.shadow")};
 }
 
 .p-inputtext:enabled:hover {
-    border-color: ${e("inputtext.hover.border.color")};
+    border-color: ${o("inputtext.hover.border.color")};
 }
 
 .p-inputtext:enabled:focus {
-    border-color: ${e("inputtext.focus.border.color")};
-    box-shadow: ${e("inputtext.focus.ring.shadow")};
-    outline: ${e("inputtext.focus.ring.width")} ${e("inputtext.focus.ring.style")} ${e("inputtext.focus.ring.color")};
-    outline-offset: ${e("inputtext.focus.ring.offset")};
+    border-color: ${o("inputtext.focus.border.color")};
+    box-shadow: ${o("inputtext.focus.ring.shadow")};
+    outline: ${o("inputtext.focus.ring.width")} ${o("inputtext.focus.ring.style")} ${o("inputtext.focus.ring.color")};
+    outline-offset: ${o("inputtext.focus.ring.offset")};
 }
 
 .p-inputtext.p-invalid {
-    border-color: ${e("inputtext.invalid.border.color")};
+    border-color: ${o("inputtext.invalid.border.color")};
 }
 
 .p-inputtext.p-variant-filled {
-    background: ${e("inputtext.filled.background")};
+    background: ${o("inputtext.filled.background")};
 }
 
 .p-inputtext.p-variant-filled:enabled:hover {
-    background: ${e("inputtext.filled.hover.background")};
+    background: ${o("inputtext.filled.hover.background")};
 }
 
 .p-inputtext.p-variant-filled:enabled:focus {
-    background: ${e("inputtext.filled.focus.background")};
+    background: ${o("inputtext.filled.focus.background")};
 }
 
 .p-inputtext:disabled {
     opacity: 1;
-    background: ${e("inputtext.disabled.background")};
-    color: ${e("inputtext.disabled.color")};
+    background: ${o("inputtext.disabled.background")};
+    color: ${o("inputtext.disabled.color")};
 }
 
 .p-inputtext::placeholder {
-    color: ${e("inputtext.placeholder.color")};
+    color: ${o("inputtext.placeholder.color")};
 }
 
 .p-inputtext.p-invalid::placeholder {
-    color: ${e("inputtext.invalid.placeholder.color")};
+    color: ${o("inputtext.invalid.placeholder.color")};
 }
 
 .p-inputtext-sm {
-    font-size: ${e("inputtext.sm.font.size")};
-    padding-block: ${e("inputtext.sm.padding.y")};
-    padding-inline: ${e("inputtext.sm.padding.x")};
+    font-size: ${o("inputtext.sm.font.size")};
+    padding-block: ${o("inputtext.sm.padding.y")};
+    padding-inline: ${o("inputtext.sm.padding.x")};
 }
 
 .p-inputtext-lg {
-    font-size: ${e("inputtext.lg.font.size")};
-    padding-block: ${e("inputtext.lg.padding.y")};
-    padding-inline: ${e("inputtext.lg.padding.x")};
+    font-size: ${o("inputtext.lg.font.size")};
+    padding-block: ${o("inputtext.lg.padding.y")};
+    padding-inline: ${o("inputtext.lg.padding.x")};
 }
 
 .p-inputtext-fluid {
     width: 100%;
 }
-`, Qn = {
-  root: function(t) {
-    var i = t.instance, c = t.props;
+`, ct = {
+  root: function(r) {
+    var n = r.instance, s = r.props;
     return ["p-inputtext p-component", {
-      "p-filled": i.$filled,
-      "p-inputtext-sm p-inputfield-sm": c.size === "small",
-      "p-inputtext-lg p-inputfield-lg": c.size === "large",
-      "p-invalid": i.$invalid,
-      "p-variant-filled": i.$variant === "filled",
-      "p-inputtext-fluid": i.$fluid
+      "p-filled": n.$filled,
+      "p-inputtext-sm p-inputfield-sm": s.size === "small",
+      "p-inputtext-lg p-inputfield-lg": s.size === "large",
+      "p-invalid": n.$invalid,
+      "p-variant-filled": n.$variant === "filled",
+      "p-inputtext-fluid": n.$fluid
     }];
   }
-}, zn = Ut.extend({
+}, st = Z.extend({
   name: "inputtext",
-  style: Kn,
-  classes: Qn
-}), Jn = {
+  style: dt,
+  classes: ct
+}), lt = {
   name: "BaseInputText",
-  extends: Dt,
-  style: zn,
+  extends: oe,
+  style: st,
   provide: function() {
     return {
       $pcInputText: this,
@@ -2866,43 +2866,43 @@ var Gn = {
     };
   }
 };
-function ve(e) {
+function ko(o) {
   "@babel/helpers - typeof";
-  return ve = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function(t) {
-    return typeof t;
-  } : function(t) {
-    return t && typeof Symbol == "function" && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : typeof t;
-  }, ve(e);
+  return ko = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function(r) {
+    return typeof r;
+  } : function(r) {
+    return r && typeof Symbol == "function" && r.constructor === Symbol && r !== Symbol.prototype ? "symbol" : typeof r;
+  }, ko(o);
 }
-function Yn(e, t, i) {
-  return (t = Xn(t)) in e ? Object.defineProperty(e, t, { value: i, enumerable: !0, configurable: !0, writable: !0 }) : e[t] = i, e;
+function ut(o, r, n) {
+  return (r = ft(r)) in o ? Object.defineProperty(o, r, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : o[r] = n, o;
 }
-function Xn(e) {
-  var t = Zn(e, "string");
-  return ve(t) == "symbol" ? t : t + "";
+function ft(o) {
+  var r = gt(o, "string");
+  return ko(r) == "symbol" ? r : r + "";
 }
-function Zn(e, t) {
-  if (ve(e) != "object" || !e) return e;
-  var i = e[Symbol.toPrimitive];
-  if (i !== void 0) {
-    var c = i.call(e, t);
-    if (ve(c) != "object") return c;
+function gt(o, r) {
+  if (ko(o) != "object" || !o) return o;
+  var n = o[Symbol.toPrimitive];
+  if (n !== void 0) {
+    var s = n.call(o, r);
+    if (ko(s) != "object") return s;
     throw new TypeError("@@toPrimitive must return a primitive value.");
   }
-  return (t === "string" ? String : Number)(e);
+  return (r === "string" ? String : Number)(o);
 }
-var we = {
+var So = {
   name: "InputText",
-  extends: Jn,
+  extends: lt,
   inheritAttrs: !1,
   methods: {
-    onInput: function(t) {
-      this.writeValue(t.target.value, t);
+    onInput: function(r) {
+      this.writeValue(r.target.value, r);
     }
   },
   computed: {
     attrs: function() {
-      return Fe(this.ptmi("root", {
+      return Vo(this.ptmi("root", {
         context: {
           filled: this.$filled,
           disabled: this.disabled
@@ -2910,128 +2910,128 @@ var we = {
       }), this.formField);
     },
     dataP: function() {
-      return Zt(Yn({
+      return ge(ut({
         invalid: this.$invalid,
         fluid: this.$fluid,
         filled: this.$variant === "filled"
       }, this.size, this.size));
     }
   }
-}, er = ["value", "name", "disabled", "aria-invalid", "data-p"];
-function tr(e, t, i, c, h, d) {
-  return R(), N("input", Fe({
+}, pt = ["value", "name", "disabled", "aria-invalid", "data-p"];
+function mt(o, r, n, s, p, u) {
+  return P(), N("input", Vo({
     type: "text",
-    class: e.cx("root"),
-    value: e.d_value,
-    name: e.name,
-    disabled: e.disabled,
-    "aria-invalid": e.$invalid || void 0,
-    "data-p": d.dataP,
-    onInput: t[0] || (t[0] = function() {
-      return d.onInput && d.onInput.apply(d, arguments);
+    class: o.cx("root"),
+    value: o.d_value,
+    name: o.name,
+    disabled: o.disabled,
+    "aria-invalid": o.$invalid || void 0,
+    "data-p": u.dataP,
+    onInput: r[0] || (r[0] = function() {
+      return u.onInput && u.onInput.apply(u, arguments);
     })
-  }, d.attrs), null, 16, er);
+  }, u.attrs), null, 16, pt);
 }
-we.render = tr;
-var nr = Symbol();
-function rr() {
-  var e = ae(nr);
-  if (!e)
+So.render = mt;
+var ht = Symbol();
+function bt() {
+  var o = uo(ht);
+  if (!o)
     throw new Error("No PrimeVue Toast provided!");
-  return e;
+  return o;
 }
-const or = {
+const vt = {
   error: {
     somethingWentWrong: {
       summary: "Something went wrong",
       detail: "Sorry but something isnt working as expected! Please try again later. We have been notified of the issue."
     }
   }
-}, ir = {
+}, kt = {
   DEFAULT_LIFE: 4e3
 };
-function le() {
-  const e = rr();
-  function t({
-    severity: i,
-    summary: c,
-    detail: h,
-    life: d = ir.DEFAULT_LIFE,
-    error: g
+function go() {
+  const o = bt();
+  function r({
+    severity: n,
+    summary: s,
+    detail: p,
+    life: u = kt.DEFAULT_LIFE,
+    error: b
   }) {
-    e.add({
-      severity: i,
-      summary: c,
-      detail: h,
-      life: d
-    }), i === "danger" && g && console.error(g);
+    o.add({
+      severity: n,
+      summary: s,
+      detail: p,
+      life: u
+    }), n === "danger" && b && console.error(b);
   }
-  return { addToast: t, toastContent: or };
+  return { addToast: r, toastContent: vt };
 }
-const sr = { class: "h1" }, ar = /* @__PURE__ */ D({
+const yt = { class: "h1" }, wt = /* @__PURE__ */ z({
   __name: "SignInUpForm",
   props: {
     pageAuthType: {}
   },
   emits: ["sendCodeSuccess"],
-  setup(e, { emit: t }) {
-    const i = t, { addToast: c, toastContent: h } = le(), d = j(!1), g = j("mytestemail1235667@gmail.com");
+  setup(o, { emit: r }) {
+    const n = r, { addToast: s, toastContent: p } = go(), u = D(!1), b = D("mytestemail1235667@gmail.com");
     async function f() {
       try {
-        d.value = !0;
-        const u = await Z.createCode({
-          email: g.value,
+        u.value = !0;
+        const c = await ro.createCode({
+          email: b.value,
           shouldTryLinkingWithSessionUser: !1,
           // If true, SuperTokens will attempt to link the passwordless code to an existing session user
           userContext: {}
           // Optionally include user context
         });
-        console.log("Create code response: ", u), u.status === "SIGN_IN_UP_NOT_ALLOWED" ? c({
+        console.log("Create code response: ", c), c.status === "SIGN_IN_UP_NOT_ALLOWED" ? s({
           severity: "error",
-          summary: h.error.somethingWentWrong.summary,
-          detail: h.error.somethingWentWrong.detail,
-          error: u
-        }) : i("sendCodeSuccess", !0);
-      } catch (u) {
-        i("sendCodeSuccess", !1), c({
+          summary: p.error.somethingWentWrong.summary,
+          detail: p.error.somethingWentWrong.detail,
+          error: c
+        }) : n("sendCodeSuccess", !0);
+      } catch (c) {
+        n("sendCodeSuccess", !1), s({
           severity: "error",
-          summary: h.error.somethingWentWrong.summary,
-          detail: h.error.somethingWentWrong.detail,
-          error: u
+          summary: p.error.somethingWentWrong.summary,
+          detail: p.error.somethingWentWrong.detail,
+          error: c
         });
       } finally {
-        d.value = !1;
+        u.value = !1;
       }
     }
-    return (u, a) => (R(), M(S(ue), { class: "max-w-xl p-12 w-full" }, {
-      title: $(() => [
-        b("h1", sr, ee(u.pageAuthType), 1)
+    return (c, d) => (P(), M(B(fo), { class: "max-w-xl p-12 w-full" }, {
+      title: O(() => [
+        C("h1", yt, eo(c.pageAuthType), 1)
       ]),
-      content: $(() => [
-        b("section", null, [
-          L(Bn, { authType: u.pageAuthType }, null, 8, ["authType"]),
-          a[3] || (a[3] = b("div", { class: "flex items-center my-10" }, [
-            b("hr", { class: "flex-1 border-gray-300" }),
-            b("span", { class: "px-4 text-gray-500 uppercase" }, "Or"),
-            b("hr", { class: "flex-1 border-gray-300" })
+      content: O(() => [
+        C("section", null, [
+          L(at, { authType: c.pageAuthType }, null, 8, ["authType"]),
+          d[3] || (d[3] = C("div", { class: "flex items-center my-10" }, [
+            C("hr", { class: "flex-1 border-gray-300" }),
+            C("span", { class: "px-4 text-gray-500 uppercase" }, "Or"),
+            C("hr", { class: "flex-1 border-gray-300" })
           ], -1)),
-          b("form", {
-            onSubmit: a[1] || (a[1] = je(() => {
+          C("form", {
+            onSubmit: d[1] || (d[1] = Go(() => {
             }, ["prevent"])),
             class: "spacing-form"
           }, [
-            a[2] || (a[2] = b("p", null, " This website offers a Passwordless Sign-In option. Instead of remembering a password, you'll receive a one-time code via email each time you sign in. ", -1)),
-            L(S(we), {
-              modelValue: S(g),
-              "onUpdate:modelValue": a[0] || (a[0] = (r) => He(g) ? g.value = r : null),
+            d[2] || (d[2] = C("p", null, " This website offers a Passwordless Sign-In option. Instead of remembering a password, you'll receive a one-time code via email each time you sign in. ", -1)),
+            L(B(So), {
+              modelValue: B(b),
+              "onUpdate:modelValue": d[0] || (d[0] = (t) => Yo(b) ? b.value = t : null),
               placeholder: "Email",
               required: ""
             }, null, 8, ["modelValue"]),
-            L(S(pe), {
-              label: u.pageAuthType,
+            L(B(bo), {
+              label: c.pageAuthType,
               submit: "submit",
               onClick: f,
-              loading: S(d)
+              loading: B(u)
             }, null, 8, ["label", "loading"])
           ], 32)
         ])
@@ -3040,37 +3040,37 @@ const sr = { class: "h1" }, ar = /* @__PURE__ */ D({
     }));
   }
 });
-var ur = ({ dt: e }) => `
+var Ct = ({ dt: o }) => `
 .p-inputotp {
     display: flex;
     align-items: center;
-    gap: ${e("inputotp.gap")};
+    gap: ${o("inputotp.gap")};
 }
 
 .p-inputotp-input {
     text-align: center;
-    width: ${e("inputotp.input.width")};
+    width: ${o("inputotp.input.width")};
 }
 
 .p-inputotp-input.p-inputtext-sm {
     text-align: center;
-    width: ${e("inputotp.input.sm.width")};
+    width: ${o("inputotp.input.sm.width")};
 }
 
 .p-inputotp-input.p-inputtext-lg {
     text-align: center;
-    width: ${e("inputotp.input.lg.width")};
+    width: ${o("inputotp.input.lg.width")};
 }
-`, lr = {
+`, xt = {
   root: "p-inputotp p-component",
   pcInputText: "p-inputotp-input"
-}, cr = Ut.extend({
+}, $t = Z.extend({
   name: "inputotp",
-  style: ur,
-  classes: lr
-}), dr = {
+  style: Ct,
+  classes: xt
+}), Rt = {
   name: "BaseInputOtp",
-  extends: Dt,
+  extends: oe,
   props: {
     readonly: {
       type: Boolean,
@@ -3093,16 +3093,16 @@ var ur = ({ dt: e }) => `
       default: !1
     }
   },
-  style: cr,
+  style: $t,
   provide: function() {
     return {
       $pcInputOtp: this,
       $parentInstance: this
     };
   }
-}, Wt = {
+}, re = {
   name: "InputOtp",
-  extends: dr,
+  extends: Rt,
   inheritAttrs: !1,
   emits: ["change", "focus", "blur"],
   data: function() {
@@ -3113,108 +3113,108 @@ var ur = ({ dt: e }) => `
   watch: {
     modelValue: {
       immediate: !0,
-      handler: function(t) {
-        this.tokens = t ? t.split("") : new Array(this.length);
+      handler: function(r) {
+        this.tokens = r ? r.split("") : new Array(this.length);
       }
     }
   },
   methods: {
-    getTemplateAttrs: function(t) {
+    getTemplateAttrs: function(r) {
       return {
-        value: this.tokens[t]
+        value: this.tokens[r]
       };
     },
-    getTemplateEvents: function(t) {
-      var i = this;
+    getTemplateEvents: function(r) {
+      var n = this;
       return {
-        input: function(h) {
-          return i.onInput(h, t);
+        input: function(p) {
+          return n.onInput(p, r);
         },
-        keydown: function(h) {
-          return i.onKeyDown(h);
+        keydown: function(p) {
+          return n.onKeyDown(p);
         },
-        focus: function(h) {
-          return i.onFocus(h);
+        focus: function(p) {
+          return n.onFocus(p);
         },
-        blur: function(h) {
-          return i.onBlur(h);
+        blur: function(p) {
+          return n.onBlur(p);
         },
-        paste: function(h) {
-          return i.onPaste(h);
+        paste: function(p) {
+          return n.onPaste(p);
         }
       };
     },
-    onInput: function(t, i) {
-      this.tokens[i] = t.target.value, this.updateModel(t), t.inputType === "deleteContentBackward" ? this.moveToPrev(t) : (t.inputType === "insertText" || t.inputType === "deleteContentForward" || en() && t instanceof CustomEvent) && this.moveToNext(t);
+    onInput: function(r, n) {
+      this.tokens[n] = r.target.value, this.updateModel(r), r.inputType === "deleteContentBackward" ? this.moveToPrev(r) : (r.inputType === "insertText" || r.inputType === "deleteContentForward" || pe() && r instanceof CustomEvent) && this.moveToNext(r);
     },
-    updateModel: function(t) {
-      var i = this.tokens.join("");
-      this.writeValue(i, t), this.$emit("change", {
-        originalEvent: t,
-        value: i
+    updateModel: function(r) {
+      var n = this.tokens.join("");
+      this.writeValue(n, r), this.$emit("change", {
+        originalEvent: r,
+        value: n
       });
     },
-    moveToPrev: function(t) {
-      var i = this.findPrevInput(t.target);
-      i && (i.focus(), i.select());
+    moveToPrev: function(r) {
+      var n = this.findPrevInput(r.target);
+      n && (n.focus(), n.select());
     },
-    moveToNext: function(t) {
-      var i = this.findNextInput(t.target);
-      i && (i.focus(), i.select());
+    moveToNext: function(r) {
+      var n = this.findNextInput(r.target);
+      n && (n.focus(), n.select());
     },
-    findNextInput: function(t) {
-      var i = t.nextElementSibling;
-      if (i)
-        return i.nodeName === "INPUT" ? i : this.findNextInput(i);
+    findNextInput: function(r) {
+      var n = r.nextElementSibling;
+      if (n)
+        return n.nodeName === "INPUT" ? n : this.findNextInput(n);
     },
-    findPrevInput: function(t) {
-      var i = t.previousElementSibling;
-      if (i)
-        return i.nodeName === "INPUT" ? i : this.findPrevInput(i);
+    findPrevInput: function(r) {
+      var n = r.previousElementSibling;
+      if (n)
+        return n.nodeName === "INPUT" ? n : this.findPrevInput(n);
     },
-    onFocus: function(t) {
-      t.target.select(), this.$emit("focus", t);
+    onFocus: function(r) {
+      r.target.select(), this.$emit("focus", r);
     },
-    onBlur: function(t) {
-      this.$emit("blur", t);
+    onBlur: function(r) {
+      this.$emit("blur", r);
     },
-    onClick: function(t) {
+    onClick: function(r) {
       setTimeout(function() {
-        return t.target.select();
+        return r.target.select();
       }, 1);
     },
-    onKeyDown: function(t) {
-      if (!(t.ctrlKey || t.metaKey))
-        switch (t.code) {
+    onKeyDown: function(r) {
+      if (!(r.ctrlKey || r.metaKey))
+        switch (r.code) {
           case "ArrowLeft":
-            this.moveToPrev(t), t.preventDefault();
+            this.moveToPrev(r), r.preventDefault();
             break;
           case "ArrowUp":
           case "ArrowDown":
-            t.preventDefault();
+            r.preventDefault();
             break;
           case "Backspace":
-            t.target.value.length === 0 && (this.moveToPrev(t), t.preventDefault());
+            r.target.value.length === 0 && (this.moveToPrev(r), r.preventDefault());
             break;
           case "ArrowRight":
-            this.moveToNext(t), t.preventDefault();
+            this.moveToNext(r), r.preventDefault();
             break;
           case "Enter":
           case "NumpadEnter":
           case "Tab":
             break;
           default:
-            (this.integerOnly && !(t.code !== "Space" && Number(t.key) >= 0 && Number(t.key) <= 9) || this.tokens.join("").length >= this.length && t.code !== "Delete") && t.preventDefault();
+            (this.integerOnly && !(r.code !== "Space" && Number(r.key) >= 0 && Number(r.key) <= 9) || this.tokens.join("").length >= this.length && r.code !== "Delete") && r.preventDefault();
             break;
         }
     },
-    onPaste: function(t) {
-      var i = t.clipboardData.getData("text");
-      if (i.length) {
-        var c = i.substring(0, this.length);
-        (!this.integerOnly || !isNaN(c)) && (this.tokens = c.split(""), this.updateModel(t));
+    onPaste: function(r) {
+      var n = r.clipboardData.getData("text");
+      if (n.length) {
+        var s = n.substring(0, this.length);
+        (!this.integerOnly || !isNaN(s)) && (this.tokens = s.split(""), this.updateModel(r));
       }
-      t.preventDefault();
+      r.preventDefault();
     }
   },
   computed: {
@@ -3226,153 +3226,153 @@ var ur = ({ dt: e }) => `
     }
   },
   components: {
-    OtpInputText: we
+    OtpInputText: So
   }
 };
-function fr(e, t, i, c, h, d) {
-  var g = rn("OtpInputText");
-  return R(), N("div", Fe({
-    class: e.cx("root")
-  }, e.ptmi("root")), [(R(!0), N(on, null, sn(e.length, function(f) {
-    return Ft(e.$slots, "default", {
+function Bt(o, r, n, s, p, u) {
+  var b = ke("OtpInputText");
+  return P(), N("div", Vo({
+    class: o.cx("root")
+  }, o.ptmi("root")), [(P(!0), N(ye, null, we(o.length, function(f) {
+    return Xr(o.$slots, "default", {
       key: f,
-      events: d.getTemplateEvents(f - 1),
-      attrs: d.getTemplateAttrs(f - 1),
+      events: u.getTemplateEvents(f - 1),
+      attrs: u.getTemplateAttrs(f - 1),
       index: f
     }, function() {
-      return [L(g, {
-        value: h.tokens[f - 1],
-        type: d.inputType,
-        class: jt(e.cx("pcInputText")),
-        name: e.$formName,
-        inputmode: d.inputMode,
-        variant: e.variant,
-        readonly: e.readonly,
-        disabled: e.disabled,
-        size: e.size,
-        invalid: e.invalid,
-        tabindex: e.tabindex,
-        unstyled: e.unstyled,
-        onInput: function(a) {
-          return d.onInput(a, f - 1);
+      return [L(b, {
+        value: p.tokens[f - 1],
+        type: u.inputType,
+        class: Kr(o.cx("pcInputText")),
+        name: o.$formName,
+        inputmode: u.inputMode,
+        variant: o.variant,
+        readonly: o.readonly,
+        disabled: o.disabled,
+        size: o.size,
+        invalid: o.invalid,
+        tabindex: o.tabindex,
+        unstyled: o.unstyled,
+        onInput: function(d) {
+          return u.onInput(d, f - 1);
         },
-        onFocus: t[0] || (t[0] = function(u) {
-          return d.onFocus(u);
+        onFocus: r[0] || (r[0] = function(c) {
+          return u.onFocus(c);
         }),
-        onBlur: t[1] || (t[1] = function(u) {
-          return d.onBlur(u);
+        onBlur: r[1] || (r[1] = function(c) {
+          return u.onBlur(c);
         }),
-        onPaste: t[2] || (t[2] = function(u) {
-          return d.onPaste(u);
+        onPaste: r[2] || (r[2] = function(c) {
+          return u.onPaste(c);
         }),
-        onKeydown: t[3] || (t[3] = function(u) {
-          return d.onKeyDown(u);
+        onKeydown: r[3] || (r[3] = function(c) {
+          return u.onKeyDown(c);
         }),
-        onClick: t[4] || (t[4] = function(u) {
-          return d.onClick(u);
+        onClick: r[4] || (r[4] = function(c) {
+          return u.onClick(c);
         }),
-        pt: e.ptm("pcInputText")
+        pt: o.ptm("pcInputText")
       }, null, 8, ["value", "type", "class", "name", "inputmode", "variant", "readonly", "disabled", "size", "invalid", "tabindex", "unstyled", "onInput", "pt"])];
     });
   }), 128))], 16);
 }
-Wt.render = fr;
-const pr = { class: "spacing-form" }, hr = {
+re.render = Bt;
+const It = { class: "spacing-form" }, _t = {
   key: 0,
   class: "validation"
-}, vr = { class: "spacing-form" }, mr = /* @__PURE__ */ D({
+}, St = { class: "spacing-form" }, Pt = /* @__PURE__ */ z({
   __name: "VerifyCode",
   props: {
     pageAuthType: {}
   },
   emits: ["verificationCodeSuccess", "resendCodeSuccess"],
-  setup(e, { emit: t }) {
-    const i = t, { addToast: c, toastContent: h } = le(), d = j(""), g = j(!1), f = j(0), u = j(0), a = X(() => `Invalid code. You have ${u.value - f.value} attempts left.`);
-    async function r() {
-      const o = "Error processing your OTP code", s = "Please try again later.";
-      g.value = !1;
+  setup(o, { emit: r }) {
+    const n = r, { addToast: s, toastContent: p } = go(), u = D(""), b = D(!1), f = D(0), c = D(0), d = oo(() => `Invalid code. You have ${c.value - f.value} attempts left.`);
+    async function t() {
+      const a = "Error processing your OTP code", i = "Please try again later.";
+      b.value = !1;
       try {
-        const l = await Z.consumeCode({ userInputCode: d.value });
-        l.status === "OK" ? (await Z.clearLoginAttemptInfo(), l.createdNewRecipeUser && l.user.loginMethods.length === 1 ? console.info("New user signed up successfully") : console.info("Existing user signed in successfully"), window.location.href = "/home") : (console.error("Submit code: ", l), l.status === "INCORRECT_USER_INPUT_CODE_ERROR" ? (f.value = l.failedCodeInputAttemptCount, u.value = l.maximumCodeInputAttempts, g.value = !0) : (await Z.clearLoginAttemptInfo(), c({
+        const l = await ro.consumeCode({ userInputCode: u.value });
+        l.status === "OK" ? (await ro.clearLoginAttemptInfo(), l.createdNewRecipeUser && l.user.loginMethods.length === 1 ? console.info("New user signed up successfully") : console.info("Existing user signed in successfully"), window.location.href = "/home") : (console.error("Submit code: ", l), l.status === "INCORRECT_USER_INPUT_CODE_ERROR" ? (f.value = l.failedCodeInputAttemptCount, c.value = l.maximumCodeInputAttempts, b.value = !0) : (await ro.clearLoginAttemptInfo(), s({
           severity: "error",
-          summary: o,
-          detail: s,
+          summary: a,
+          detail: i,
           error: l
-        }), i("verificationCodeSuccess", !1)));
+        }), n("verificationCodeSuccess", !1)));
       } catch (l) {
-        c({
+        s({
           severity: "error",
-          summary: h.error.somethingWentWrong.summary,
-          detail: h.error.somethingWentWrong.detail,
+          summary: p.error.somethingWentWrong.summary,
+          detail: p.error.somethingWentWrong.detail,
           error: l
-        }), i("verificationCodeSuccess", !1);
+        }), n("verificationCodeSuccess", !1);
       }
     }
-    async function n() {
-      const o = "Resend OTP failed", s = "Please try again later.";
+    async function e() {
+      const a = "Resend OTP failed", i = "Please try again later.";
       try {
-        const l = await Z.resendCode();
-        console.log("resend code response: ", l), l.status === "RESTART_FLOW_ERROR" ? (await Z.clearLoginAttemptInfo(), c({
+        const l = await ro.resendCode();
+        console.log("resend code response: ", l), l.status === "RESTART_FLOW_ERROR" ? (await ro.clearLoginAttemptInfo(), s({
           severity: "error",
-          summary: o,
-          detail: s,
+          summary: a,
+          detail: i,
           error: l
-        }), i("resendCodeSuccess", !1)) : (c({
+        }), n("resendCodeSuccess", !1)) : (s({
           severity: "success",
           summary: "Code re-sent",
           detail: "Please check your email for the new code."
-        }), i("resendCodeSuccess", !0));
+        }), n("resendCodeSuccess", !0));
       } catch (l) {
-        c({
+        s({
           severity: "error",
-          summary: h.error.somethingWentWrong.summary,
-          detail: h.error.somethingWentWrong.detail,
+          summary: p.error.somethingWentWrong.summary,
+          detail: p.error.somethingWentWrong.detail,
           error: l
-        }), i("resendCodeSuccess", !1);
+        }), n("resendCodeSuccess", !1);
       }
     }
-    return (o, s) => (R(), M(S(ue), { class: "max-w-xl p-12 w-full mx-auto" }, {
-      title: $(() => s[2] || (s[2] = [
-        b("h1", { class: "h1 mt-0" }, "Input validation code", -1)
+    return (a, i) => (P(), M(B(fo), { class: "max-w-xl p-12 w-full mx-auto" }, {
+      title: O(() => i[2] || (i[2] = [
+        C("h1", { class: "h1 mt-0" }, "Input validation code", -1)
       ])),
-      content: $(() => [
-        b("form", {
-          onSubmit: s[1] || (s[1] = je(() => {
+      content: O(() => [
+        C("form", {
+          onSubmit: i[1] || (i[1] = Go(() => {
           }, ["prevent"])),
           class: "spacing-groups"
         }, [
-          b("div", pr, [
-            s[4] || (s[4] = b("p", null, " To finish the signup process, enter the code that was emailed to you. Note that the code is only valid for 10 minutes. ", -1)),
-            L(S(Wt), {
+          C("div", It, [
+            i[4] || (i[4] = C("p", null, " To finish the signup process, enter the code that was emailed to you. Note that the code is only valid for 10 minutes. ", -1)),
+            L(B(re), {
               length: 6,
               class: "w-50",
-              modelValue: S(d),
-              "onUpdate:modelValue": s[0] || (s[0] = (l) => He(d) ? d.value = l : null),
+              modelValue: B(u),
+              "onUpdate:modelValue": i[0] || (i[0] = (l) => Yo(u) ? u.value = l : null),
               type: "text",
               placeholder: "Input email code",
               required: ""
             }, null, 8, ["modelValue"]),
-            S(g) ? (R(), N("p", hr, ee(S(a)), 1)) : Ee("", !0),
-            L(S(pe), {
+            B(b) ? (P(), N("p", _t, eo(B(d)), 1)) : zo("", !0),
+            L(B(bo), {
               class: "w-fit",
               type: "submit",
-              onClick: r
+              onClick: t
             }, {
-              default: $(() => s[3] || (s[3] = [
-                he("Submit code")
+              default: O(() => i[3] || (i[3] = [
+                vo("Submit code")
               ])),
               _: 1
             })
           ]),
-          b("div", vr, [
-            s[6] || (s[6] = b("p", null, "If you didnt receive an email, please check your Junk folder or resend another code.", -1)),
-            L(S(pe), {
+          C("div", St, [
+            i[6] || (i[6] = C("p", null, "If you didnt receive an email, please check your Junk folder or resend another code.", -1)),
+            L(B(bo), {
               class: "w-fit",
               type: "button",
-              onClick: n
+              onClick: e
             }, {
-              default: $(() => s[5] || (s[5] = [
-                he("Resend code")
+              default: O(() => i[5] || (i[5] = [
+                vo("Resend code")
               ])),
               _: 1
             })
@@ -3388,113 +3388,113 @@ const pr = { class: "spacing-form" }, hr = {
   * (c) 2024 Eduardo San Martin Morote
   * @license MIT
   */
-const gr = typeof document < "u", yr = () => {
-}, ye = Array.isArray;
-function wt(e) {
-  const t = Array.from(arguments).slice(1);
-  console.warn.apply(console, ["[Vue Router warn]: " + e].concat(t));
+const Tt = typeof document < "u", At = () => {
+}, Bo = Array.isArray;
+function Pr(o) {
+  const r = Array.from(arguments).slice(1);
+  console.warn.apply(console, ["[Vue Router warn]: " + o].concat(r));
 }
-function bt(e, t) {
-  return (e.aliasOf || e) === (t.aliasOf || t);
+function Tr(o, r) {
+  return (o.aliasOf || o) === (r.aliasOf || r);
 }
-function Ir(e, t) {
-  if (Object.keys(e).length !== Object.keys(t).length)
+function Ot(o, r) {
+  if (Object.keys(o).length !== Object.keys(r).length)
     return !1;
-  for (const i in e)
-    if (!_r(e[i], t[i]))
+  for (const n in o)
+    if (!Et(o[n], r[n]))
       return !1;
   return !0;
 }
-function _r(e, t) {
-  return ye(e) ? Pt(e, t) : ye(t) ? Pt(t, e) : e === t;
+function Et(o, r) {
+  return Bo(o) ? Ar(o, r) : Bo(r) ? Ar(r, o) : o === r;
 }
-function Pt(e, t) {
-  return ye(t) ? e.length === t.length && e.every((i, c) => i === t[c]) : e.length === 1 && e[0] === t;
+function Ar(o, r) {
+  return Bo(r) ? o.length === r.length && o.every((n, s) => n === r[s]) : o.length === 1 && o[0] === r;
 }
-var xt;
-(function(e) {
-  e.pop = "pop", e.push = "push";
-})(xt || (xt = {}));
-var kt;
-(function(e) {
-  e.back = "back", e.forward = "forward", e.unknown = "";
-})(kt || (kt = {}));
-function St(e) {
-  return typeof e == "string" || e && typeof e == "object";
+var Or;
+(function(o) {
+  o.pop = "pop", o.push = "push";
+})(Or || (Or = {}));
+var Er;
+(function(o) {
+  o.back = "back", o.forward = "forward", o.unknown = "";
+})(Er || (Er = {}));
+function Lr(o) {
+  return typeof o == "string" || o && typeof o == "object";
 }
 Symbol(process.env.NODE_ENV !== "production" ? "navigation failure" : "");
-var Ct;
-(function(e) {
-  e[e.aborted = 4] = "aborted", e[e.cancelled = 8] = "cancelled", e[e.duplicated = 16] = "duplicated";
-})(Ct || (Ct = {}));
+var Nr;
+(function(o) {
+  o[o.aborted = 4] = "aborted", o[o.cancelled = 8] = "cancelled", o[o.duplicated = 16] = "duplicated";
+})(Nr || (Nr = {}));
 Symbol(process.env.NODE_ENV !== "production" ? "router view location matched" : "");
 Symbol(process.env.NODE_ENV !== "production" ? "router view depth" : "");
-const Ve = Symbol(process.env.NODE_ENV !== "production" ? "router" : ""), qt = Symbol(process.env.NODE_ENV !== "production" ? "route location" : "");
+const Zo = Symbol(process.env.NODE_ENV !== "production" ? "router" : ""), ee = Symbol(process.env.NODE_ENV !== "production" ? "route location" : "");
 Symbol(process.env.NODE_ENV !== "production" ? "router view location" : "");
-function At(e) {
-  const t = ae(Ve), i = ae(qt);
-  let c = !1, h = null;
-  const d = X(() => {
-    const r = S(e.to);
-    return process.env.NODE_ENV !== "production" && (!c || r !== h) && (St(r) || (c ? wt(`Invalid value for prop "to" in useLink()
-- to:`, r, `
-- previous to:`, h, `
-- props:`, e) : wt(`Invalid value for prop "to" in useLink()
-- to:`, r, `
-- props:`, e)), h = r, c = !0), t.resolve(r);
-  }), g = X(() => {
-    const { matched: r } = d.value, { length: n } = r, o = r[n - 1], s = i.matched;
-    if (!o || !s.length)
+function Wr(o) {
+  const r = uo(Zo), n = uo(ee);
+  let s = !1, p = null;
+  const u = oo(() => {
+    const t = B(o.to);
+    return process.env.NODE_ENV !== "production" && (!s || t !== p) && (Lr(t) || (s ? Pr(`Invalid value for prop "to" in useLink()
+- to:`, t, `
+- previous to:`, p, `
+- props:`, o) : Pr(`Invalid value for prop "to" in useLink()
+- to:`, t, `
+- props:`, o)), p = t, s = !0), r.resolve(t);
+  }), b = oo(() => {
+    const { matched: t } = u.value, { length: e } = t, a = t[e - 1], i = n.matched;
+    if (!a || !i.length)
       return -1;
-    const l = s.findIndex(bt.bind(null, o));
+    const l = i.findIndex(Tr.bind(null, a));
     if (l > -1)
       return l;
-    const p = Tt(r[n - 2]);
+    const g = Fr(t[e - 2]);
     return (
       // we are dealing with nested routes
-      n > 1 && // if the parent and matched route have the same path, this link is
+      e > 1 && // if the parent and matched route have the same path, this link is
       // referring to the empty child. Or we currently are on a different
       // child of the same parent
-      Tt(o) === p && // avoid comparing the child with its parent
-      s[s.length - 1].path !== p ? s.findIndex(bt.bind(null, r[n - 2])) : l
+      Fr(a) === g && // avoid comparing the child with its parent
+      i[i.length - 1].path !== g ? i.findIndex(Tr.bind(null, t[e - 2])) : l
     );
-  }), f = X(() => g.value > -1 && kr(i.params, d.value.params)), u = X(() => g.value > -1 && g.value === i.matched.length - 1 && Ir(i.params, d.value.params));
-  function a(r = {}) {
-    if (xr(r)) {
-      const n = t[S(e.replace) ? "replace" : "push"](
-        S(e.to)
+  }), f = oo(() => b.value > -1 && Dt(n.params, u.value.params)), c = oo(() => b.value > -1 && b.value === n.matched.length - 1 && Ot(n.params, u.value.params));
+  function d(t = {}) {
+    if (Ft(t)) {
+      const e = r[B(o.replace) ? "replace" : "push"](
+        B(o.to)
         // avoid uncaught errors are they are logged anyway
-      ).catch(yr);
-      return e.viewTransition && typeof document < "u" && "startViewTransition" in document && document.startViewTransition(() => n), n;
+      ).catch(At);
+      return o.viewTransition && typeof document < "u" && "startViewTransition" in document && document.startViewTransition(() => e), e;
     }
     return Promise.resolve();
   }
-  if (process.env.NODE_ENV !== "production" && gr) {
-    const r = ln();
-    if (r) {
-      const n = {
-        route: d.value,
+  if (process.env.NODE_ENV !== "production" && Tt) {
+    const t = xe();
+    if (t) {
+      const e = {
+        route: u.value,
         isActive: f.value,
-        isExactActive: u.value,
+        isExactActive: c.value,
         error: null
       };
-      r.__vrl_devtools = r.__vrl_devtools || [], r.__vrl_devtools.push(n), cn(() => {
-        n.route = d.value, n.isActive = f.value, n.isExactActive = u.value, n.error = St(S(e.to)) ? null : 'Invalid "to" value';
+      t.__vrl_devtools = t.__vrl_devtools || [], t.__vrl_devtools.push(e), $e(() => {
+        e.route = u.value, e.isActive = f.value, e.isExactActive = c.value, e.error = Lr(B(o.to)) ? null : 'Invalid "to" value';
       }, { flush: "post" });
     }
   }
   return {
-    route: d,
-    href: X(() => d.value.href),
+    route: u,
+    href: oo(() => u.value.href),
     isActive: f,
-    isExactActive: u,
-    navigate: a
+    isExactActive: c,
+    navigate: d
   };
 }
-function wr(e) {
-  return e.length === 1 ? e[0] : e;
+function Lt(o) {
+  return o.length === 1 ? o[0] : o;
 }
-const br = /* @__PURE__ */ D({
+const Nt = /* @__PURE__ */ z({
   name: "RouterLink",
   compatConfig: { MODE: 3 },
   props: {
@@ -3512,248 +3512,248 @@ const br = /* @__PURE__ */ D({
       default: "page"
     }
   },
-  useLink: At,
-  setup(e, { slots: t }) {
-    const i = an(At(e)), { options: c } = ae(Ve), h = X(() => ({
-      [Rt(e.activeClass, c.linkActiveClass, "router-link-active")]: i.isActive,
+  useLink: Wr,
+  setup(o, { slots: r }) {
+    const n = Jr(Wr(o)), { options: s } = uo(Zo), p = oo(() => ({
+      [Dr(o.activeClass, s.linkActiveClass, "router-link-active")]: n.isActive,
       // [getLinkClass(
       //   props.inactiveClass,
       //   options.linkInactiveClass,
       //   'router-link-inactive'
       // )]: !link.isExactActive,
-      [Rt(e.exactActiveClass, c.linkExactActiveClass, "router-link-exact-active")]: i.isExactActive
+      [Dr(o.exactActiveClass, s.linkExactActiveClass, "router-link-exact-active")]: n.isExactActive
     }));
     return () => {
-      const d = t.default && wr(t.default(i));
-      return e.custom ? d : un("a", {
-        "aria-current": i.isExactActive ? e.ariaCurrentValue : null,
-        href: i.href,
+      const u = r.default && Lt(r.default(n));
+      return o.custom ? u : Ce("a", {
+        "aria-current": n.isExactActive ? o.ariaCurrentValue : null,
+        href: n.href,
         // this would override user added attrs but Vue will still add
         // the listener, so we end up triggering both
-        onClick: i.navigate,
-        class: h.value
-      }, d);
+        onClick: n.navigate,
+        class: p.value
+      }, u);
     };
   }
-}), Pr = br;
-function xr(e) {
-  if (!(e.metaKey || e.altKey || e.ctrlKey || e.shiftKey) && !e.defaultPrevented && !(e.button !== void 0 && e.button !== 0)) {
-    if (e.currentTarget && e.currentTarget.getAttribute) {
-      const t = e.currentTarget.getAttribute("target");
-      if (/\b_blank\b/i.test(t))
+}), Wt = Nt;
+function Ft(o) {
+  if (!(o.metaKey || o.altKey || o.ctrlKey || o.shiftKey) && !o.defaultPrevented && !(o.button !== void 0 && o.button !== 0)) {
+    if (o.currentTarget && o.currentTarget.getAttribute) {
+      const r = o.currentTarget.getAttribute("target");
+      if (/\b_blank\b/i.test(r))
         return;
     }
-    return e.preventDefault && e.preventDefault(), !0;
+    return o.preventDefault && o.preventDefault(), !0;
   }
 }
-function kr(e, t) {
-  for (const i in t) {
-    const c = t[i], h = e[i];
-    if (typeof c == "string") {
-      if (c !== h)
+function Dt(o, r) {
+  for (const n in r) {
+    const s = r[n], p = o[n];
+    if (typeof s == "string") {
+      if (s !== p)
         return !1;
-    } else if (!ye(h) || h.length !== c.length || c.some((d, g) => d !== h[g]))
+    } else if (!Bo(p) || p.length !== s.length || s.some((u, b) => u !== p[b]))
       return !1;
   }
   return !0;
 }
-function Tt(e) {
-  return e ? e.aliasOf ? e.aliasOf.path : e.path : "";
+function Fr(o) {
+  return o ? o.aliasOf ? o.aliasOf.path : o.path : "";
 }
-const Rt = (e, t, i) => e ?? t ?? i;
-function Mt() {
-  return ae(Ve);
+const Dr = (o, r, n) => o ?? r ?? n;
+function te() {
+  return uo(Zo);
 }
-function Vt(e) {
-  return ae(qt);
+function ne(o) {
+  return uo(ee);
 }
-const Sr = /* @__PURE__ */ D({
+const Ut = /* @__PURE__ */ z({
   __name: "SignInUp",
-  setup(e) {
-    const { addToast: t, toastContent: i } = le(), c = Vt(), h = Mt(), d = j(!0), g = j(!1);
-    Ie(async () => {
-      g.value = !!await u(), h.currentRoute.value.query.thirdPartyId === "google" && await a();
+  setup(o) {
+    const { addToast: r, toastContent: n } = go(), s = ne(), p = te(), u = D(!0), b = D(!1);
+    Io(async () => {
+      b.value = !!await c(), p.currentRoute.value.query.thirdPartyId === "google" && await d();
     });
-    const f = X(() => c.name === "signup" ? "Sign up" : "Sign in");
-    async function u() {
-      d.value = !0;
+    const f = oo(() => s.name === "signup" ? "Sign up" : "Sign in");
+    async function c() {
+      u.value = !0;
       try {
-        const r = await Z.getLoginAttemptInfo();
-        return r && console.info("Code already sent: ", r), r !== void 0;
-      } catch (r) {
-        t({
+        const t = await ro.getLoginAttemptInfo();
+        return t && console.info("Code already sent: ", t), t !== void 0;
+      } catch (t) {
+        r({
           severity: "error",
-          summary: i.error.somethingWentWrong.summary,
-          detail: i.error.somethingWentWrong.detail,
-          error: r
+          summary: n.error.somethingWentWrong.summary,
+          detail: n.error.somethingWentWrong.detail,
+          error: t
         });
       } finally {
-        d.value = !1;
+        u.value = !1;
       }
     }
-    async function a() {
-      const r = "Failed to sign in with Google", n = "Please try again later or try another form of login.";
+    async function d() {
+      const t = "Failed to sign in with Google", e = "Please try again later or try another form of login.";
       try {
-        d.value = !0;
-        const o = await Me.signInAndUp();
-        o.status === "OK" ? (console.log("handleGoogleCallback> ", o.user), o.createdNewRecipeUser && o.user.loginMethods.length === 1 ? console.log("New user signed up successfully") : console.log("Existing user signed in successfully"), window.location.assign("/home")) : o.status === "SIGN_IN_UP_NOT_ALLOWED" ? t({
+        u.value = !0;
+        const a = await Jo.signInAndUp();
+        a.status === "OK" ? (console.log("handleGoogleCallback> ", a.user), a.createdNewRecipeUser && a.user.loginMethods.length === 1 ? console.log("New user signed up successfully") : console.log("Existing user signed in successfully"), window.location.assign("/home")) : a.status === "SIGN_IN_UP_NOT_ALLOWED" ? r({
           severity: "error",
-          summary: r,
-          detail: n,
-          error: o
-        }) : (t({
+          summary: t,
+          detail: e,
+          error: a
+        }) : (r({
           severity: "error",
-          summary: r,
-          detail: n,
-          error: o
+          summary: t,
+          detail: e,
+          error: a
         }), window.location.assign("/signin"));
-      } catch (o) {
-        t({
+      } catch (a) {
+        r({
           severity: "error",
-          summary: i.error.somethingWentWrong.summary,
-          detail: i.error.somethingWentWrong.detail,
-          error: o
+          summary: n.error.somethingWentWrong.summary,
+          detail: n.error.somethingWentWrong.detail,
+          error: a
         });
       } finally {
-        d.value = !1;
+        u.value = !1;
       }
     }
-    return (r, n) => (R(), M(Lt, { isLoading: S(d) }, {
-      default: $(() => [
-        S(g) ? (R(), M(mr, {
+    return (t, e) => (P(), M(Gr, { isLoading: B(u) }, {
+      default: O(() => [
+        B(b) ? (P(), M(Pt, {
           key: 1,
-          pageAuthType: S(f),
-          onVerificationCodeSuccess: n[1] || (n[1] = (o) => g.value = o),
-          onResendCodeSuccess: n[2] || (n[2] = (o) => g.value = o)
-        }, null, 8, ["pageAuthType"])) : (R(), M(ar, {
+          pageAuthType: B(f),
+          onVerificationCodeSuccess: e[1] || (e[1] = (a) => b.value = a),
+          onResendCodeSuccess: e[2] || (e[2] = (a) => b.value = a)
+        }, null, 8, ["pageAuthType"])) : (P(), M(wt, {
           key: 0,
-          pageAuthType: S(f),
-          onSendCodeSuccess: n[0] || (n[0] = (o) => g.value = o)
+          pageAuthType: B(f),
+          onSendCodeSuccess: e[0] || (e[0] = (a) => b.value = a)
         }, null, 8, ["pageAuthType"]))
       ]),
       _: 1
     }, 8, ["isLoading"]));
   }
-}), Cr = { class: "flex flex-grow items-center justify-center w-full" }, Ot = /* @__PURE__ */ D({
+}), zt = { class: "flex flex-grow items-center justify-center w-full" }, Ur = /* @__PURE__ */ z({
   __name: "AuthPage",
-  setup(e) {
-    return (t, i) => (R(), N("div", Cr, [
-      L(Sr)
+  setup(o) {
+    return (r, n) => (P(), N("div", zt, [
+      L(Ut)
     ]));
   }
-}), Et = 5e3, Ar = /* @__PURE__ */ D({
+}), zr = 5e3, Ht = /* @__PURE__ */ z({
   __name: "GoodbyePage",
-  setup(e) {
-    const t = Mt();
-    return Ie(() => {
+  setup(o) {
+    const r = te();
+    return Io(() => {
       setTimeout(() => {
-        t.push("/");
-      }, Et);
-    }), (i, c) => (R(), N("div", null, [
-      c[0] || (c[0] = b("h1", null, "Goodbye", -1)),
-      c[1] || (c[1] = b("p", null, "Your account has been deleted, thank you for visiting!", -1)),
-      b("p", null, "You will be redirected to the landing page in " + ee(Et) + " seconds automatically.")
+        r.push("/");
+      }, zr);
+    }), (n, s) => (P(), N("div", null, [
+      s[0] || (s[0] = C("h1", null, "Goodbye", -1)),
+      s[1] || (s[1] = C("p", null, "Your account has been deleted, thank you for visiting!", -1)),
+      C("p", null, "You will be redirected to the landing page in " + eo(zr) + " seconds automatically.")
     ]));
   }
-}), Tr = async () => await fetch("https://localhost:443/auth/get-email", {
+}), jt = async () => await fetch("https://localhost:443/auth/get-email", {
   method: "GET",
   credentials: "include",
   headers: {
     "Content-Type": "application/json"
   }
-}), Rr = async (e) => await fetch("https://localhost:443/auth/change-email", {
+}), Mt = async (o) => await fetch("https://localhost:443/auth/change-email", {
   method: "POST",
   headers: {
     "Content-Type": "application/json"
   },
   credentials: "include",
-  body: JSON.stringify({ email: e })
-}), Or = async () => await fetch("https://localhost:443/auth/request-delete", {
+  body: JSON.stringify({ email: o })
+}), qt = async () => await fetch("https://localhost:443/auth/request-delete", {
   method: "POST",
   credentials: "include"
-}), Er = async (e) => await fetch("https://localhost:443/auth/delete-account", {
+}), Vt = async (o) => await fetch("https://localhost:443/auth/delete-account", {
   method: "DELETE",
   credentials: "include",
   headers: {
-    "X-Delete-Token": e,
+    "X-Delete-Token": o,
     "Content-Type": "application/json"
   }
-}), be = { getEmail: Tr, changeEmail: Rr, requestDelete: Or, deleteAccount: Er }, $r = { class: "flex flex-col items-center gap-4 text-center" }, Ur = { class: "flex flex-col gap-2" }, Bt = /* @__PURE__ */ D({
+}), Po = { getEmail: jt, changeEmail: Mt, requestDelete: qt, deleteAccount: Vt }, Gt = { class: "flex flex-col items-center gap-4 text-center" }, Yt = { class: "flex flex-col gap-2" }, ae = /* @__PURE__ */ z({
   __name: "ActionConfirmMsg",
   props: {
     iconClass: {}
   },
-  setup(e) {
-    return (t, i) => (R(), N("div", $r, [
-      b("i", {
-        class: jt([t.iconClass, "border-2 p-4 rounded-full text-primary"]),
+  setup(o) {
+    return (r, n) => (P(), N("div", Gt, [
+      C("i", {
+        class: Kr([r.iconClass, "border-2 p-4 rounded-full text-primary"]),
         style: { "font-size": "1.2rem !important" }
       }, null, 2),
-      b("div", Ur, [
-        Ft(t.$slots, "default")
+      C("div", Yt, [
+        Xr(r.$slots, "default")
       ])
     ]));
   }
-}), Lr = {
+}), Qt = {
   key: 0,
   class: "spacing-elements"
-}, Nr = { class: "text-primary break-all px-2" }, Fr = /* @__PURE__ */ D({
+}, Xt = { class: "text-primary break-all px-2" }, Kt = /* @__PURE__ */ z({
   __name: "ChangeEmail",
-  setup(e) {
-    const { addToast: t, toastContent: i } = le(), c = j(""), h = j(!1);
-    async function d() {
+  setup(o) {
+    const { addToast: r, toastContent: n } = go(), s = D(""), p = D(!1);
+    async function u() {
       try {
-        const g = await be.changeEmail(c.value);
-        if (!g.ok)
-          throw h.value = !1, new Error(`Error changing email: ${g.status} - ${g.statusText}`);
-        h.value = !0;
-      } catch (g) {
-        h.value = !1, t({
+        const b = await Po.changeEmail(s.value);
+        if (!b.ok)
+          throw p.value = !1, new Error(`Error changing email: ${b.status} - ${b.statusText}`);
+        p.value = !0;
+      } catch (b) {
+        p.value = !1, r({
           severity: "error",
-          summary: i.error.somethingWentWrong.summary,
-          detail: i.error.somethingWentWrong.detail,
-          error: g
+          summary: n.error.somethingWentWrong.summary,
+          detail: n.error.somethingWentWrong.detail,
+          error: b
         });
       }
     }
-    return (g, f) => (R(), M(S(ue), null, {
-      title: $(() => f[1] || (f[1] = [
-        b("h2", { class: "h2" }, "Change your email", -1)
+    return (b, f) => (P(), M(B(fo), null, {
+      title: O(() => f[1] || (f[1] = [
+        C("h2", { class: "h2" }, "Change your email", -1)
       ])),
-      content: $(() => [
-        S(h) ? (R(), M(Bt, {
+      content: O(() => [
+        B(p) ? (P(), M(ae, {
           key: 1,
           iconClass: "pi pi-envelope"
         }, {
-          default: $(() => [
-            b("p", null, [
-              f[5] || (f[5] = b("span", { class: "block text-wrap" }, "We have a verification email to:", -1)),
-              b("strong", Nr, ee(S(c)), 1),
-              f[6] || (f[6] = b("span", { class: "block" }, " Please check the inbox of your new email and click on the verification link to change your email. ", -1))
+          default: O(() => [
+            C("p", null, [
+              f[5] || (f[5] = C("span", { class: "block text-wrap" }, "We have a verification email to:", -1)),
+              C("strong", Xt, eo(B(s)), 1),
+              f[6] || (f[6] = C("span", { class: "block" }, " Please check the inbox of your new email and click on the verification link to change your email. ", -1))
             ])
           ]),
           _: 1
-        })) : (R(), N("div", Lr, [
-          f[4] || (f[4] = b("p", null, " You will receive an email to your old email to verify your new email address. Please click on the email link to update your email. ", -1)),
-          b("form", {
-            onSubmit: je(d, ["prevent"]),
+        })) : (P(), N("div", Qt, [
+          f[4] || (f[4] = C("p", null, " You will receive an email to your old email to verify your new email address. Please click on the email link to update your email. ", -1)),
+          C("form", {
+            onSubmit: Go(u, ["prevent"]),
             class: "spacing-form"
           }, [
-            f[3] || (f[3] = b("label", {
+            f[3] || (f[3] = C("label", {
               for: "email",
               class: "label"
             }, "Enter your new email", -1)),
-            L(S(we), {
-              modelValue: S(c),
-              "onUpdate:modelValue": f[0] || (f[0] = (u) => He(c) ? c.value = u : null),
+            L(B(So), {
+              modelValue: B(s),
+              "onUpdate:modelValue": f[0] || (f[0] = (c) => Yo(s) ? s.value = c : null),
               type: "email",
               id: "email",
               name: "email",
               required: ""
             }, null, 8, ["modelValue"]),
-            L(S(pe), { type: "submit" }, {
-              default: $(() => f[2] || (f[2] = [
-                he("Change email")
+            L(B(bo), { type: "submit" }, {
+              default: O(() => f[2] || (f[2] = [
+                vo("Change email")
               ])),
               _: 1
             })
@@ -3763,50 +3763,50 @@ const Sr = /* @__PURE__ */ D({
       _: 1
     }));
   }
-}), jr = {
+}), Jt = {
   key: 0,
   class: "spacing-elements"
-}, Hr = /* @__PURE__ */ D({
+}, Zt = /* @__PURE__ */ z({
   __name: "DeleteAccount",
-  setup(e) {
-    const { addToast: t, toastContent: i } = le(), c = j(!1);
-    async function h() {
+  setup(o) {
+    const { addToast: r, toastContent: n } = go(), s = D(!1);
+    async function p() {
       try {
-        const d = await be.requestDelete();
-        if (d.ok)
-          c.value = !0;
+        const u = await Po.requestDelete();
+        if (u.ok)
+          s.value = !0;
         else
-          throw new Error(`Error requesting account deletion: ${d.status} - ${d.statusText}`);
-      } catch (d) {
-        c.value = !1, t({
+          throw new Error(`Error requesting account deletion: ${u.status} - ${u.statusText}`);
+      } catch (u) {
+        s.value = !1, r({
           severity: "error",
-          summary: i.error.somethingWentWrong.summary,
-          detail: i.error.somethingWentWrong.detail,
-          error: d
+          summary: n.error.somethingWentWrong.summary,
+          detail: n.error.somethingWentWrong.detail,
+          error: u
         });
       }
     }
-    return (d, g) => (R(), M(S(ue), null, {
-      title: $(() => g[0] || (g[0] = [
-        b("h2", { class: "h2" }, "Delete your account", -1)
+    return (u, b) => (P(), M(B(fo), null, {
+      title: O(() => b[0] || (b[0] = [
+        C("h2", { class: "h2" }, "Delete your account", -1)
       ])),
-      content: $(() => [
-        S(c) ? (R(), M(Bt, {
+      content: O(() => [
+        B(s) ? (P(), M(ae, {
           key: 1,
           iconClass: "pi pi-envelope"
         }, {
-          default: $(() => g[3] || (g[3] = [
-            b("p", null, " We have sent you an email to verify your account deletion. Please check your inbox and click on the verification link. ", -1)
+          default: O(() => b[3] || (b[3] = [
+            C("p", null, " We have sent you an email to verify your account deletion. Please check your inbox and click on the verification link. ", -1)
           ])),
           _: 1
-        })) : (R(), N("div", jr, [
-          g[2] || (g[2] = b("p", null, " You will receive an email to verify your account deletion. Please click on the email link to delete your account. ", -1)),
-          L(S(pe), {
+        })) : (P(), N("div", Jt, [
+          b[2] || (b[2] = C("p", null, " You will receive an email to verify your account deletion. Please click on the email link to delete your account. ", -1)),
+          L(B(bo), {
             type: "button",
-            onClick: h
+            onClick: p
           }, {
-            default: $(() => g[1] || (g[1] = [
-              he("Send deletion email")
+            default: O(() => b[1] || (b[1] = [
+              vo("Send deletion email")
             ])),
             _: 1
           })
@@ -3815,100 +3815,100 @@ const Sr = /* @__PURE__ */ D({
       _: 1
     }));
   }
-}), Dr = { class: "spacing-elements" }, Wr = {
+}), on = { class: "spacing-elements" }, rn = {
   key: 0,
   class: "flex flex-row gap-2"
-}, qr = { class: "text-primary break-all" }, Mr = {
+}, en = { class: "text-primary break-all" }, tn = {
   key: 1,
   class: "flex flex-row gap-2"
-}, Vr = { class: "text-primary break-all px-2" }, Br = /* @__PURE__ */ D({
+}, nn = { class: "text-primary break-all px-2" }, an = /* @__PURE__ */ z({
   __name: "YourAccount",
-  setup(e) {
-    const t = j(""), i = j("");
-    Ie(() => {
-      c();
+  setup(o) {
+    const r = D(""), n = D("");
+    Io(() => {
+      s();
     });
-    async function c() {
+    async function s() {
       try {
-        t.value = await Ne.getUserId();
-        const h = await be.getEmail();
-        if (!h.ok)
-          throw new Error(`Error getting user email: ${h.status} - ${h.statusText}`);
-        const d = await h.json();
-        i.value = d.email;
-      } catch (h) {
-        console.error("Error fetching user email: ", h);
+        r.value = await qo.getUserId();
+        const p = await Po.getEmail();
+        if (!p.ok)
+          throw new Error(`Error getting user email: ${p.status} - ${p.statusText}`);
+        const u = await p.json();
+        n.value = u.email;
+      } catch (p) {
+        console.error("Error fetching user email: ", p);
       }
     }
-    return (h, d) => (R(), M(S(ue), null, {
-      title: $(() => d[0] || (d[0] = [
-        b("h2", { class: "h2" }, "Your details", -1)
+    return (p, u) => (P(), M(B(fo), null, {
+      title: O(() => u[0] || (u[0] = [
+        C("h2", { class: "h2" }, "Your details", -1)
       ])),
-      content: $(() => [
-        b("div", Dr, [
-          S(t) ? (R(), N("div", Wr, [
-            d[1] || (d[1] = b("div", null, "ID:", -1)),
-            b("div", null, [
-              b("code", qr, ee(S(t)), 1)
+      content: O(() => [
+        C("div", on, [
+          B(r) ? (P(), N("div", rn, [
+            u[1] || (u[1] = C("div", null, "ID:", -1)),
+            C("div", null, [
+              C("code", en, eo(B(r)), 1)
             ])
-          ])) : Ee("", !0),
-          S(i) ? (R(), N("div", Mr, [
-            d[2] || (d[2] = b("div", null, "Email:", -1)),
-            b("div", null, [
-              b("strong", Vr, ee(S(i)), 1)
+          ])) : zo("", !0),
+          B(n) ? (P(), N("div", tn, [
+            u[2] || (u[2] = C("div", null, "Email:", -1)),
+            C("div", null, [
+              C("strong", nn, eo(B(n)), 1)
             ])
-          ])) : Ee("", !0)
+          ])) : zo("", !0)
         ])
       ]),
       _: 1
     }));
   }
-}), Gr = { class: "container flex items-center justify-center w-full" }, Kr = {
+}), dn = { class: "container flex items-center justify-center w-full" }, cn = {
   key: 0,
   class: "max-w-xl"
-}, Qr = { class: "spacing-page-sections" }, zr = { key: 1 }, Jr = { class: "spacing-elements p-12" }, Yr = /* @__PURE__ */ D({
+}, sn = { class: "spacing-page-sections" }, ln = { key: 1 }, un = { class: "spacing-elements p-12" }, fn = /* @__PURE__ */ z({
   __name: "AccountPage",
-  setup(e) {
-    const { addToast: t } = le(), i = Vt(), c = j(!1), h = j(i.query.del_token);
-    Ie(() => {
-      h.value && d();
+  setup(o) {
+    const { addToast: r } = go(), n = ne(), s = D(!1), p = D(n.query.del_token);
+    Io(() => {
+      p.value && u();
     });
-    async function d() {
-      const g = "We failed to delete your account!", f = "Something went wrong while deleting your account. Please try again or contact us to let us know about this issue.";
+    async function u() {
+      const b = "We failed to delete your account!", f = "Something went wrong while deleting your account. Please try again or contact us to let us know about this issue.";
       try {
-        const u = await be.deleteAccount(h.value);
-        if (!u.ok)
-          throw new Error(`Error deleting account: ${u.status} - ${u.statusText}`);
-        await Ne.signOut(), window.location.href = "/goodbye";
-      } catch (u) {
-        t({
+        const c = await Po.deleteAccount(p.value);
+        if (!c.ok)
+          throw new Error(`Error deleting account: ${c.status} - ${c.statusText}`);
+        await qo.signOut(), window.location.href = "/goodbye";
+      } catch (c) {
+        r({
           severity: "error",
-          summary: g,
+          summary: b,
           detail: f,
           life: 0,
-          error: { msg: "Failed to delete user account", error: u }
-        }), h.value = void 0;
+          error: { msg: "Failed to delete user account", error: c }
+        }), p.value = void 0;
       }
     }
-    return (g, f) => (R(), M(Lt, { isLoading: S(c) }, {
-      default: $(() => [
-        b("div", Gr, [
-          S(h) ? (R(), N("div", zr, [
-            L(S(ue), null, {
-              content: $(() => [
-                b("div", Jr, [
-                  f[1] || (f[1] = b("p", { class: "text-2xl" }, "Deleting your account...", -1)),
-                  L(S(tn))
+    return (b, f) => (P(), M(Gr, { isLoading: B(s) }, {
+      default: O(() => [
+        C("div", dn, [
+          B(p) ? (P(), N("div", ln, [
+            L(B(fo), null, {
+              content: O(() => [
+                C("div", un, [
+                  f[1] || (f[1] = C("p", { class: "text-2xl" }, "Deleting your account...", -1)),
+                  L(B(me))
                 ])
               ]),
               _: 1
             })
-          ])) : (R(), N("div", Kr, [
-            f[0] || (f[0] = b("h1", { class: "h1 text-color" }, "Your account", -1)),
-            b("div", Qr, [
-              L(Br),
-              L(Fr),
-              L(Hr)
+          ])) : (P(), N("div", cn, [
+            f[0] || (f[0] = C("h1", { class: "h1 text-color" }, "Your account", -1)),
+            C("div", sn, [
+              L(an),
+              L(Kt),
+              L(Zt)
             ])
           ]))
         ])
@@ -3916,88 +3916,459 @@ const Sr = /* @__PURE__ */ D({
       _: 1
     }, 8, ["isLoading"]));
   }
-}), Xr = { class: "not-found-page" }, Zr = /* @__PURE__ */ D({
+}), gn = { class: "not-found-page" }, pn = /* @__PURE__ */ z({
   __name: "NotFoundPage",
-  setup(e) {
-    return (t, i) => (R(), N("div", Xr, [
-      i[1] || (i[1] = b("h1", null, "Page Not Found", -1)),
-      i[2] || (i[2] = b("p", null, "Sorry, the page you are looking for does not exist.", -1)),
-      L(S(Pr), { to: "/" }, {
-        default: $(() => i[0] || (i[0] = [
-          he("Go back to Home")
+  setup(o) {
+    return (r, n) => (P(), N("div", gn, [
+      n[1] || (n[1] = C("h1", null, "Page Not Found", -1)),
+      n[2] || (n[2] = C("p", null, "Sorry, the page you are looking for does not exist.", -1)),
+      L(B(Wt), { to: "/" }, {
+        default: O(() => n[0] || (n[0] = [
+          vo("Go back to Home")
         ])),
         _: 1
       })
     ]));
   }
-}), eo = /* @__PURE__ */ $t(Zr, [["__scopeId", "data-v-86d9ef49"]]), to = {
+}), mn = /* @__PURE__ */ Vr(pn, [["__scopeId", "data-v-86d9ef49"]]), hn = {
   class: "container max-w-xl rounded-2xl mt-10 p-8",
   style: { background: "white" }
-}, no = /* @__PURE__ */ D({
+}, bn = /* @__PURE__ */ z({
   __name: "ErrorPage",
-  setup(e) {
-    return (t, i) => (R(), N("div", to));
+  setup(o) {
+    return (r, n) => (P(), N("div", hn));
   }
-}), ro = [
+}), vn = [
   {
     path: "/account",
     name: "account",
-    component: Yr,
+    component: fn,
     meta: { requiresAuth: !0 }
   },
   {
     path: "/goodbye",
     name: "goodbye",
-    component: Ar
+    component: Ht
   },
   {
     path: "/signup",
     name: "signup",
-    component: Ot,
+    component: Ur,
     props: { authType: "signup" },
     meta: { guestOnly: !0 }
   },
   {
     path: "/signin",
     name: "signin",
-    component: Ot,
+    component: Ur,
     props: { authType: "signin" },
     meta: { guestOnly: !0 }
   },
   {
     path: "/error",
     name: "error",
-    component: no
+    component: bn
   },
   {
     path: "/:pathMatch(.*)*",
     name: "not-found",
-    component: eo
+    component: mn
   }
 ];
-function oo(e) {
-  e.beforeEach(async (t, i, c) => {
-    const h = Nt();
-    await h.updateAuth(), t.meta.requiresAuth && !h.isSignedIn ? c("/signin") : t.meta.guestOnly && h.isSignedIn ? c("/home") : c();
+function kn(o) {
+  o.beforeEach(async (r, n, s) => {
+    const p = Yr();
+    await p.updateAuth(), r.meta.requiresAuth && !p.isSignedIn ? s("/signin") : r.meta.guestOnly && p.isSignedIn ? s("/home") : s();
   });
 }
-const ao = (e) => {
-  kn.init({
-    appInfo: {
-      appName: e.appInfo.appName,
-      apiDomain: e.appInfo.apiDomain,
-      apiBasePath: e.appInfo.apiBasePath || "/auth"
-    },
-    recipeList: [Ne.init(), En.init({}), jn.init()]
+var F = {
+  STARTS_WITH: "startsWith",
+  CONTAINS: "contains",
+  NOT_CONTAINS: "notContains",
+  ENDS_WITH: "endsWith",
+  EQUALS: "equals",
+  NOT_EQUALS: "notEquals",
+  LESS_THAN: "lt",
+  LESS_THAN_OR_EQUAL_TO: "lte",
+  GREATER_THAN: "gt",
+  GREATER_THAN_OR_EQUAL_TO: "gte",
+  DATE_IS: "dateIs",
+  DATE_IS_NOT: "dateIsNot",
+  DATE_BEFORE: "dateBefore",
+  DATE_AFTER: "dateAfter"
+};
+function yo(o) {
+  "@babel/helpers - typeof";
+  return yo = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function(r) {
+    return typeof r;
+  } : function(r) {
+    return r && typeof Symbol == "function" && r.constructor === Symbol && r !== Symbol.prototype ? "symbol" : typeof r;
+  }, yo(o);
+}
+function Hr(o, r) {
+  var n = Object.keys(o);
+  if (Object.getOwnPropertySymbols) {
+    var s = Object.getOwnPropertySymbols(o);
+    r && (s = s.filter(function(p) {
+      return Object.getOwnPropertyDescriptor(o, p).enumerable;
+    })), n.push.apply(n, s);
+  }
+  return n;
+}
+function Ro(o) {
+  for (var r = 1; r < arguments.length; r++) {
+    var n = arguments[r] != null ? arguments[r] : {};
+    r % 2 ? Hr(Object(n), !0).forEach(function(s) {
+      yn(o, s, n[s]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(n)) : Hr(Object(n)).forEach(function(s) {
+      Object.defineProperty(o, s, Object.getOwnPropertyDescriptor(n, s));
+    });
+  }
+  return o;
+}
+function yn(o, r, n) {
+  return (r = wn(r)) in o ? Object.defineProperty(o, r, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : o[r] = n, o;
+}
+function wn(o) {
+  var r = Cn(o, "string");
+  return yo(r) == "symbol" ? r : r + "";
+}
+function Cn(o, r) {
+  if (yo(o) != "object" || !o) return o;
+  var n = o[Symbol.toPrimitive];
+  if (n !== void 0) {
+    var s = n.call(o, r);
+    if (yo(s) != "object") return s;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return (r === "string" ? String : Number)(o);
+}
+var xn = {
+  ripple: !1,
+  inputStyle: null,
+  inputVariant: null,
+  locale: {
+    startsWith: "Starts with",
+    contains: "Contains",
+    notContains: "Not contains",
+    endsWith: "Ends with",
+    equals: "Equals",
+    notEquals: "Not equals",
+    noFilter: "No Filter",
+    lt: "Less than",
+    lte: "Less than or equal to",
+    gt: "Greater than",
+    gte: "Greater than or equal to",
+    dateIs: "Date is",
+    dateIsNot: "Date is not",
+    dateBefore: "Date is before",
+    dateAfter: "Date is after",
+    clear: "Clear",
+    apply: "Apply",
+    matchAll: "Match All",
+    matchAny: "Match Any",
+    addRule: "Add Rule",
+    removeRule: "Remove Rule",
+    accept: "Yes",
+    reject: "No",
+    choose: "Choose",
+    upload: "Upload",
+    cancel: "Cancel",
+    completed: "Completed",
+    pending: "Pending",
+    fileSizeTypes: ["B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"],
+    dayNames: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    dayNamesShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    dayNamesMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
+    monthNames: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    monthNamesShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    chooseYear: "Choose Year",
+    chooseMonth: "Choose Month",
+    chooseDate: "Choose Date",
+    prevDecade: "Previous Decade",
+    nextDecade: "Next Decade",
+    prevYear: "Previous Year",
+    nextYear: "Next Year",
+    prevMonth: "Previous Month",
+    nextMonth: "Next Month",
+    prevHour: "Previous Hour",
+    nextHour: "Next Hour",
+    prevMinute: "Previous Minute",
+    nextMinute: "Next Minute",
+    prevSecond: "Previous Second",
+    nextSecond: "Next Second",
+    am: "am",
+    pm: "pm",
+    today: "Today",
+    weekHeader: "Wk",
+    firstDayOfWeek: 0,
+    showMonthAfterYear: !1,
+    dateFormat: "mm/dd/yy",
+    weak: "Weak",
+    medium: "Medium",
+    strong: "Strong",
+    passwordPrompt: "Enter a password",
+    emptyFilterMessage: "No results found",
+    searchMessage: "{0} results are available",
+    selectionMessage: "{0} items selected",
+    emptySelectionMessage: "No selected item",
+    emptySearchMessage: "No results found",
+    fileChosenMessage: "{0} files",
+    noFileChosenMessage: "No file chosen",
+    emptyMessage: "No available options",
+    aria: {
+      trueLabel: "True",
+      falseLabel: "False",
+      nullLabel: "Not Selected",
+      star: "1 star",
+      stars: "{star} stars",
+      selectAll: "All items selected",
+      unselectAll: "All items unselected",
+      close: "Close",
+      previous: "Previous",
+      next: "Next",
+      navigation: "Navigation",
+      scrollTop: "Scroll Top",
+      moveTop: "Move Top",
+      moveUp: "Move Up",
+      moveDown: "Move Down",
+      moveBottom: "Move Bottom",
+      moveToTarget: "Move to Target",
+      moveToSource: "Move to Source",
+      moveAllToTarget: "Move All to Target",
+      moveAllToSource: "Move All to Source",
+      pageLabel: "Page {page}",
+      firstPageLabel: "First Page",
+      lastPageLabel: "Last Page",
+      nextPageLabel: "Next Page",
+      prevPageLabel: "Previous Page",
+      rowsPerPageLabel: "Rows per page",
+      jumpToPageDropdownLabel: "Jump to Page Dropdown",
+      jumpToPageInputLabel: "Jump to Page Input",
+      selectRow: "Row Selected",
+      unselectRow: "Row Unselected",
+      expandRow: "Row Expanded",
+      collapseRow: "Row Collapsed",
+      showFilterMenu: "Show Filter Menu",
+      hideFilterMenu: "Hide Filter Menu",
+      filterOperator: "Filter Operator",
+      filterConstraint: "Filter Constraint",
+      editRow: "Row Edit",
+      saveEdit: "Save Edit",
+      cancelEdit: "Cancel Edit",
+      listView: "List View",
+      gridView: "Grid View",
+      slide: "Slide",
+      slideNumber: "{slideNumber}",
+      zoomImage: "Zoom Image",
+      zoomIn: "Zoom In",
+      zoomOut: "Zoom Out",
+      rotateRight: "Rotate Right",
+      rotateLeft: "Rotate Left",
+      listLabel: "Option List"
+    }
+  },
+  filterMatchModeOptions: {
+    text: [F.STARTS_WITH, F.CONTAINS, F.NOT_CONTAINS, F.ENDS_WITH, F.EQUALS, F.NOT_EQUALS],
+    numeric: [F.EQUALS, F.NOT_EQUALS, F.LESS_THAN, F.LESS_THAN_OR_EQUAL_TO, F.GREATER_THAN, F.GREATER_THAN_OR_EQUAL_TO],
+    date: [F.DATE_IS, F.DATE_IS_NOT, F.DATE_BEFORE, F.DATE_AFTER]
+  },
+  zIndex: {
+    modal: 1100,
+    overlay: 1e3,
+    menu: 1e3,
+    tooltip: 1100
+  },
+  theme: void 0,
+  unstyled: !1,
+  pt: void 0,
+  ptOptions: {
+    mergeSections: !0,
+    mergeProps: !1
+  },
+  csp: {
+    nonce: void 0
+  }
+}, $n = Symbol();
+function Rn(o, r) {
+  var n = {
+    config: Jr(r)
+  };
+  return o.config.globalProperties.$primevue = n, o.provide($n, n), Bn(), In(o, n), n;
+}
+var lo = [];
+function Bn() {
+  Qr.clear(), lo.forEach(function(o) {
+    return o == null ? void 0 : o();
+  }), lo = [];
+}
+function In(o, r) {
+  var n = D(!1), s = function() {
+    var d;
+    if (((d = r.config) === null || d === void 0 ? void 0 : d.theme) !== "none" && !Ao.isStyleNameLoaded("common")) {
+      var t, e, a = ((t = Z.getCommonTheme) === null || t === void 0 ? void 0 : t.call(Z)) || {}, i = a.primitive, l = a.semantic, g = a.global, h = a.style, m = {
+        nonce: (e = r.config) === null || e === void 0 || (e = e.csp) === null || e === void 0 ? void 0 : e.nonce
+      };
+      Z.load(i == null ? void 0 : i.css, Ro({
+        name: "primitive-variables"
+      }, m)), Z.load(l == null ? void 0 : l.css, Ro({
+        name: "semantic-variables"
+      }, m)), Z.load(g == null ? void 0 : g.css, Ro({
+        name: "global-variables"
+      }, m)), Z.loadStyle(Ro({
+        name: "global-style"
+      }, m), h), Ao.setLoadedStyleName("common");
+    }
+  };
+  Qr.on("theme:change", function(c) {
+    n.value || (o.config.globalProperties.$primevue.config.theme = c, n.value = !0);
   });
-}, uo = {
-  useUserStore: Nt
-}, lo = {
-  routes: ro,
-  setupAuthGuard: oo
+  var p = Co(r.config, function(c, d) {
+    wo.emit("config:change", {
+      newValue: c,
+      oldValue: d
+    });
+  }, {
+    immediate: !0,
+    deep: !0
+  }), u = Co(function() {
+    return r.config.ripple;
+  }, function(c, d) {
+    wo.emit("config:ripple:change", {
+      newValue: c,
+      oldValue: d
+    });
+  }, {
+    immediate: !0,
+    deep: !0
+  }), b = Co(function() {
+    return r.config.theme;
+  }, function(c, d) {
+    n.value || Ao.setTheme(c), r.config.unstyled || s(), n.value = !1, wo.emit("config:theme:change", {
+      newValue: c,
+      oldValue: d
+    });
+  }, {
+    immediate: !0,
+    deep: !1
+  }), f = Co(function() {
+    return r.config.unstyled;
+  }, function(c, d) {
+    !c && r.config.theme && s(), wo.emit("config:unstyled:change", {
+      newValue: c,
+      oldValue: d
+    });
+  }, {
+    immediate: !0,
+    deep: !0
+  });
+  lo.push(p), lo.push(u), lo.push(b), lo.push(f);
+}
+var _n = {
+  install: function(r, n) {
+    var s = he(xn, n);
+    Rn(r, s);
+  }
+}, Sn = (...o) => be(...o), Pn = { transitionDuration: "{transition.duration}" }, Tn = { borderWidth: "0", borderColor: "{content.border.color}" }, An = { color: "{text.muted.color}", hoverColor: "{text.color}", activeColor: "{text.color}", padding: "1.125rem", fontWeight: "700", borderRadius: "0", borderWidth: "0 1px 1px 1px", borderColor: "{content.border.color}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "inset {focus.ring.shadow}" }, toggleIcon: { color: "{text.muted.color}", hoverColor: "{text.color}", activeColor: "{text.color}", activeHoverColor: "{text.color}" }, first: { topBorderRadius: "{content.border.radius}", borderWidth: "1px" }, last: { bottomBorderRadius: "{content.border.radius}", activeBottomBorderRadius: "0" } }, On = { borderWidth: "0 1px 1px 1px", borderColor: "{content.border.color}", background: "{content.background}", color: "{text.color}", padding: "1.125rem" }, En = { light: { header: { background: "{surface.50}", hoverBackground: "{surface.100}", activeBackground: "{surface.50}", activeHoverBackground: "{surface.100}" } }, dark: { header: { background: "{surface.800}", hoverBackground: "{surface.700}", activeBackground: "{surface.800}", activeHoverBackground: "{surface.700}" } } }, Ln = { root: Pn, panel: Tn, header: An, content: On, colorScheme: En }, Nn = { background: "{form.field.background}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", filledHoverBackground: "{form.field.filled.hover.background}", filledFocusBackground: "{form.field.filled.focus.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.focus.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", color: "{form.field.color}", disabledColor: "{form.field.disabled.color}", placeholderColor: "{form.field.placeholder.color}", invalidPlaceholderColor: "{form.field.invalid.placeholder.color}", shadow: "{form.field.shadow}", paddingX: "{form.field.padding.x}", paddingY: "{form.field.padding.y}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}" }, Wn = { background: "{overlay.select.background}", borderColor: "{overlay.select.border.color}", borderRadius: "{overlay.select.border.radius}", color: "{overlay.select.color}", shadow: "{overlay.select.shadow}" }, Fn = { padding: "{list.padding}", gap: "{list.gap}" }, Dn = { focusBackground: "{list.option.focus.background}", selectedBackground: "{list.option.selected.background}", selectedFocusBackground: "{list.option.selected.focus.background}", color: "{list.option.color}", focusColor: "{list.option.focus.color}", selectedColor: "{list.option.selected.color}", selectedFocusColor: "{list.option.selected.focus.color}", padding: "{list.option.padding}", borderRadius: "{list.option.border.radius}" }, Un = { background: "{list.option.group.background}", color: "{list.option.group.color}", fontWeight: "{list.option.group.font.weight}", padding: "{list.option.group.padding}" }, zn = { width: "2.5rem", sm: { width: "2rem" }, lg: { width: "3rem" }, borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.border.color}", activeBorderColor: "{form.field.border.color}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" } }, Hn = { borderRadius: "{border.radius.sm}" }, jn = { padding: "{list.option.padding}" }, Mn = { light: { chip: { focusBackground: "{surface.200}", focusColor: "{surface.800}" }, dropdown: { background: "{surface.50}", hoverBackground: "{surface.100}", activeBackground: "{surface.200}", color: "{surface.600}", hoverColor: "{surface.700}", activeColor: "{surface.800}" } }, dark: { chip: { focusBackground: "{surface.700}", focusColor: "{surface.0}" }, dropdown: { background: "{surface.800}", hoverBackground: "{surface.700}", activeBackground: "{surface.600}", color: "{surface.300}", hoverColor: "{surface.200}", activeColor: "{surface.100}" } } }, qn = { root: Nn, overlay: Wn, list: Fn, option: Dn, optionGroup: Un, dropdown: zn, chip: Hn, emptyMessage: jn, colorScheme: Mn }, Vn = { width: "2rem", height: "2rem", fontSize: "1rem", background: "{content.border.color}", color: "{content.color}", borderRadius: "{content.border.radius}" }, Gn = { size: "1rem" }, Yn = { borderColor: "{content.background}", offset: "-0.75rem" }, Qn = { width: "3rem", height: "3rem", fontSize: "1.5rem", icon: { size: "1.5rem" }, group: { offset: "-1rem" } }, Xn = { width: "4rem", height: "4rem", fontSize: "2rem", icon: { size: "2rem" }, group: { offset: "-1.5rem" } }, Kn = { root: Vn, icon: Gn, group: Yn, lg: Qn, xl: Xn }, Jn = { borderRadius: "{border.radius.md}", padding: "0 0.5rem", fontSize: "0.75rem", fontWeight: "700", minWidth: "1.5rem", height: "1.5rem" }, Zn = { size: "0.5rem" }, oa = { fontSize: "0.625rem", minWidth: "1.25rem", height: "1.25rem" }, ra = { fontSize: "0.875rem", minWidth: "1.75rem", height: "1.75rem" }, ea = { fontSize: "1rem", minWidth: "2rem", height: "2rem" }, ta = { light: { primary: { background: "{primary.color}", color: "{primary.contrast.color}" }, secondary: { background: "{surface.100}", color: "{surface.600}" }, success: { background: "{green.500}", color: "{surface.0}" }, info: { background: "{sky.500}", color: "{surface.0}" }, warn: { background: "{orange.500}", color: "{surface.0}" }, danger: { background: "{red.500}", color: "{surface.0}" }, contrast: { background: "{surface.950}", color: "{surface.0}" } }, dark: { primary: { background: "{primary.color}", color: "{primary.contrast.color}" }, secondary: { background: "{surface.800}", color: "{surface.300}" }, success: { background: "{green.400}", color: "{green.950}" }, info: { background: "{sky.400}", color: "{sky.950}" }, warn: { background: "{orange.400}", color: "{orange.950}" }, danger: { background: "{red.400}", color: "{red.950}" }, contrast: { background: "{surface.0}", color: "{surface.950}" } } }, na = { root: Jn, dot: Zn, sm: oa, lg: ra, xl: ea, colorScheme: ta }, aa = { borderRadius: { none: "0", xs: "2px", sm: "4px", md: "6px", lg: "8px", xl: "12px" }, emerald: { 50: "#ecfdf5", 100: "#d1fae5", 200: "#a7f3d0", 300: "#6ee7b7", 400: "#34d399", 500: "#10b981", 600: "#059669", 700: "#047857", 800: "#065f46", 900: "#064e3b", 950: "#022c22" }, green: { 50: "#f0fdf4", 100: "#dcfce7", 200: "#bbf7d0", 300: "#86efac", 400: "#4ade80", 500: "#22c55e", 600: "#16a34a", 700: "#15803d", 800: "#166534", 900: "#14532d", 950: "#052e16" }, lime: { 50: "#f7fee7", 100: "#ecfccb", 200: "#d9f99d", 300: "#bef264", 400: "#a3e635", 500: "#84cc16", 600: "#65a30d", 700: "#4d7c0f", 800: "#3f6212", 900: "#365314", 950: "#1a2e05" }, red: { 50: "#fef2f2", 100: "#fee2e2", 200: "#fecaca", 300: "#fca5a5", 400: "#f87171", 500: "#ef4444", 600: "#dc2626", 700: "#b91c1c", 800: "#991b1b", 900: "#7f1d1d", 950: "#450a0a" }, orange: { 50: "#fff7ed", 100: "#ffedd5", 200: "#fed7aa", 300: "#fdba74", 400: "#fb923c", 500: "#f97316", 600: "#ea580c", 700: "#c2410c", 800: "#9a3412", 900: "#7c2d12", 950: "#431407" }, amber: { 50: "#fffbeb", 100: "#fef3c7", 200: "#fde68a", 300: "#fcd34d", 400: "#fbbf24", 500: "#f59e0b", 600: "#d97706", 700: "#b45309", 800: "#92400e", 900: "#78350f", 950: "#451a03" }, yellow: { 50: "#fefce8", 100: "#fef9c3", 200: "#fef08a", 300: "#fde047", 400: "#facc15", 500: "#eab308", 600: "#ca8a04", 700: "#a16207", 800: "#854d0e", 900: "#713f12", 950: "#422006" }, teal: { 50: "#f0fdfa", 100: "#ccfbf1", 200: "#99f6e4", 300: "#5eead4", 400: "#2dd4bf", 500: "#14b8a6", 600: "#0d9488", 700: "#0f766e", 800: "#115e59", 900: "#134e4a", 950: "#042f2e" }, cyan: { 50: "#ecfeff", 100: "#cffafe", 200: "#a5f3fc", 300: "#67e8f9", 400: "#22d3ee", 500: "#06b6d4", 600: "#0891b2", 700: "#0e7490", 800: "#155e75", 900: "#164e63", 950: "#083344" }, sky: { 50: "#f0f9ff", 100: "#e0f2fe", 200: "#bae6fd", 300: "#7dd3fc", 400: "#38bdf8", 500: "#0ea5e9", 600: "#0284c7", 700: "#0369a1", 800: "#075985", 900: "#0c4a6e", 950: "#082f49" }, blue: { 50: "#eff6ff", 100: "#dbeafe", 200: "#bfdbfe", 300: "#93c5fd", 400: "#60a5fa", 500: "#3b82f6", 600: "#2563eb", 700: "#1d4ed8", 800: "#1e40af", 900: "#1e3a8a", 950: "#172554" }, indigo: { 50: "#eef2ff", 100: "#e0e7ff", 200: "#c7d2fe", 300: "#a5b4fc", 400: "#818cf8", 500: "#6366f1", 600: "#4f46e5", 700: "#4338ca", 800: "#3730a3", 900: "#312e81", 950: "#1e1b4b" }, violet: { 50: "#f5f3ff", 100: "#ede9fe", 200: "#ddd6fe", 300: "#c4b5fd", 400: "#a78bfa", 500: "#8b5cf6", 600: "#7c3aed", 700: "#6d28d9", 800: "#5b21b6", 900: "#4c1d95", 950: "#2e1065" }, purple: { 50: "#faf5ff", 100: "#f3e8ff", 200: "#e9d5ff", 300: "#d8b4fe", 400: "#c084fc", 500: "#a855f7", 600: "#9333ea", 700: "#7e22ce", 800: "#6b21a8", 900: "#581c87", 950: "#3b0764" }, fuchsia: { 50: "#fdf4ff", 100: "#fae8ff", 200: "#f5d0fe", 300: "#f0abfc", 400: "#e879f9", 500: "#d946ef", 600: "#c026d3", 700: "#a21caf", 800: "#86198f", 900: "#701a75", 950: "#4a044e" }, pink: { 50: "#fdf2f8", 100: "#fce7f3", 200: "#fbcfe8", 300: "#f9a8d4", 400: "#f472b6", 500: "#ec4899", 600: "#db2777", 700: "#be185d", 800: "#9d174d", 900: "#831843", 950: "#500724" }, rose: { 50: "#fff1f2", 100: "#ffe4e6", 200: "#fecdd3", 300: "#fda4af", 400: "#fb7185", 500: "#f43f5e", 600: "#e11d48", 700: "#be123c", 800: "#9f1239", 900: "#881337", 950: "#4c0519" }, slate: { 50: "#f8fafc", 100: "#f1f5f9", 200: "#e2e8f0", 300: "#cbd5e1", 400: "#94a3b8", 500: "#64748b", 600: "#475569", 700: "#334155", 800: "#1e293b", 900: "#0f172a", 950: "#020617" }, gray: { 50: "#f9fafb", 100: "#f3f4f6", 200: "#e5e7eb", 300: "#d1d5db", 400: "#9ca3af", 500: "#6b7280", 600: "#4b5563", 700: "#374151", 800: "#1f2937", 900: "#111827", 950: "#030712" }, zinc: { 50: "#fafafa", 100: "#f4f4f5", 200: "#e4e4e7", 300: "#d4d4d8", 400: "#a1a1aa", 500: "#71717a", 600: "#52525b", 700: "#3f3f46", 800: "#27272a", 900: "#18181b", 950: "#09090b" }, neutral: { 50: "#fafafa", 100: "#f5f5f5", 200: "#e5e5e5", 300: "#d4d4d4", 400: "#a3a3a3", 500: "#737373", 600: "#525252", 700: "#404040", 800: "#262626", 900: "#171717", 950: "#0a0a0a" }, stone: { 50: "#fafaf9", 100: "#f5f5f4", 200: "#e7e5e4", 300: "#d6d3d1", 400: "#a8a29e", 500: "#78716c", 600: "#57534e", 700: "#44403c", 800: "#292524", 900: "#1c1917", 950: "#0c0a09" } }, ia = { transitionDuration: "0.2s", focusRing: { width: "0", style: "none", color: "transparent", offset: "0" }, disabledOpacity: "0.6", iconSize: "1rem", anchorGutter: "2px", primary: { 50: "{emerald.50}", 100: "{emerald.100}", 200: "{emerald.200}", 300: "{emerald.300}", 400: "{emerald.400}", 500: "{emerald.500}", 600: "{emerald.600}", 700: "{emerald.700}", 800: "{emerald.800}", 900: "{emerald.900}", 950: "{emerald.950}" }, formField: { paddingX: "0.75rem", paddingY: "0.625rem", sm: { fontSize: "0.875rem", paddingX: "0.625rem", paddingY: "0.5rem" }, lg: { fontSize: "1.125rem", paddingX: "0.875rem", paddingY: "0.75rem" }, borderRadius: "{border.radius.md}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" }, transitionDuration: "{transition.duration}" }, list: { padding: "0.5rem 0", gap: "0", header: { padding: "0.625rem 1rem 0 1rem" }, option: { padding: "0.625rem 1rem", borderRadius: "0" }, optionGroup: { padding: "0.625rem 1rem", fontWeight: "600" } }, content: { borderRadius: "{border.radius.md}" }, mask: { transitionDuration: "0.15s" }, navigation: { list: { padding: "0.5rem 0", gap: "0" }, item: { padding: "0.625rem 1rem", borderRadius: "0", gap: "0.5rem" }, submenuLabel: { padding: "0.625rem 1rem", fontWeight: "600" }, submenuIcon: { size: "0.875rem" } }, overlay: { select: { borderRadius: "{border.radius.md}", shadow: "0 2px 12px 0 rgba(0, 0, 0, 0.1)" }, popover: { borderRadius: "{border.radius.md}", padding: "1rem", shadow: "0 1px 3px rgba(0, 0, 0, 0.1)" }, modal: { borderRadius: "{border.radius.xl}", padding: "1.5rem", shadow: "0 1px 3px rgba(0, 0, 0, 0.3)" }, navigation: { shadow: "0 2px 12px 0 rgba(0, 0, 0, 0.1)" } }, colorScheme: { light: { surface: { 0: "#ffffff", 50: "{slate.50}", 100: "{slate.100}", 200: "{slate.200}", 300: "{slate.300}", 400: "{slate.400}", 500: "{slate.500}", 600: "{slate.600}", 700: "{slate.700}", 800: "{slate.800}", 900: "{slate.900}", 950: "{slate.950}" }, primary: { color: "{primary.500}", contrastColor: "#ffffff", hoverColor: "{primary.600}", activeColor: "{primary.700}" }, highlight: { background: "{primary.50}", focusBackground: "{primary.100}", color: "{primary.700}", focusColor: "{primary.800}" }, focusRing: { shadow: "0 0 0 0.2rem {primary.200}" }, mask: { background: "rgba(0,0,0,0.4)", color: "{surface.200}" }, formField: { background: "{surface.0}", disabledBackground: "{surface.200}", filledBackground: "{surface.50}", filledHoverBackground: "{surface.50}", filledFocusBackground: "{surface.0}", borderColor: "{surface.300}", hoverBorderColor: "{primary.color}", focusBorderColor: "{primary.color}", invalidBorderColor: "{red.400}", color: "{surface.700}", disabledColor: "{surface.500}", placeholderColor: "{surface.500}", invalidPlaceholderColor: "{red.600}", floatLabelColor: "{surface.500}", floatLabelFocusColor: "{primary.600}", floatLabelActiveColor: "{surface.500}", floatLabelInvalidColor: "{form.field.invalid.placeholder.color}", iconColor: "{surface.500}", shadow: "none" }, text: { color: "{surface.700}", hoverColor: "{surface.800}", mutedColor: "{surface.500}", hoverMutedColor: "{surface.600}" }, content: { background: "{surface.0}", hoverBackground: "{surface.100}", borderColor: "{surface.200}", color: "{text.color}", hoverColor: "{text.hover.color}" }, overlay: { select: { background: "{surface.0}", borderColor: "{surface.200}", color: "{text.color}" }, popover: { background: "{surface.0}", borderColor: "{surface.200}", color: "{text.color}" }, modal: { background: "{surface.0}", borderColor: "{surface.200}", color: "{text.color}" } }, list: { option: { focusBackground: "{surface.100}", selectedBackground: "{highlight.background}", selectedFocusBackground: "{highlight.focus.background}", color: "{text.color}", focusColor: "{text.hover.color}", selectedColor: "{highlight.color}", selectedFocusColor: "{highlight.focus.color}", icon: { color: "{surface.400}", focusColor: "{surface.500}" } }, optionGroup: { background: "transparent", color: "{text.color}" } }, navigation: { item: { focusBackground: "{surface.100}", activeBackground: "{surface.100}", color: "{text.color}", focusColor: "{text.hover.color}", activeColor: "{text.hover.color}", icon: { color: "{surface.400}", focusColor: "{surface.500}", activeColor: "{surface.500}" } }, submenuLabel: { background: "transparent", color: "{text.color}" }, submenuIcon: { color: "{surface.400}", focusColor: "{surface.500}", activeColor: "{surface.500}" } } }, dark: { surface: { 0: "#ffffff", 50: "{zinc.50}", 100: "{zinc.100}", 200: "{zinc.200}", 300: "{zinc.300}", 400: "{zinc.400}", 500: "{zinc.500}", 600: "{zinc.600}", 700: "{zinc.700}", 800: "{zinc.800}", 900: "{zinc.900}", 950: "{zinc.950}" }, primary: { color: "{primary.400}", contrastColor: "{surface.900}", hoverColor: "{primary.300}", activeColor: "{primary.200}" }, highlight: { background: "color-mix(in srgb, {primary.400}, transparent 84%)", focusBackground: "color-mix(in srgb, {primary.400}, transparent 76%)", color: "rgba(255,255,255,.87)", focusColor: "rgba(255,255,255,.87)" }, focusRing: { shadow: "0 0 0 0.2rem color-mix(in srgb, {primary.color}, transparent 80%)" }, mask: { background: "rgba(0,0,0,0.6)", color: "{surface.200}" }, formField: { background: "{surface.950}", disabledBackground: "{surface.700}", filledBackground: "{surface.800}", filledHoverBackground: "{surface.800}", filledFocusBackground: "{surface.950}", borderColor: "{surface.600}", hoverBorderColor: "{primary.color}", focusBorderColor: "{primary.color}", invalidBorderColor: "{red.300}", color: "{surface.0}", disabledColor: "{surface.400}", placeholderColor: "{surface.400}", invalidPlaceholderColor: "{red.400}", floatLabelColor: "{surface.400}", floatLabelFocusColor: "{primary.color}", floatLabelActiveColor: "{surface.400}", floatLabelInvalidColor: "{form.field.invalid.placeholder.color}", iconColor: "{surface.400}", shadow: "none" }, text: { color: "{surface.0}", hoverColor: "{surface.0}", mutedColor: "{surface.400}", hoverMutedColor: "{surface.300}" }, content: { background: "{surface.900}", hoverBackground: "{surface.800}", borderColor: "{surface.700}", color: "{text.color}", hoverColor: "{text.hover.color}" }, overlay: { select: { background: "{surface.900}", borderColor: "{surface.700}", color: "{text.color}" }, popover: { background: "{surface.900}", borderColor: "{surface.700}", color: "{text.color}" }, modal: { background: "{surface.900}", borderColor: "{surface.700}", color: "{text.color}" } }, list: { option: { focusBackground: "{surface.800}", selectedBackground: "{highlight.background}", selectedFocusBackground: "{highlight.focus.background}", color: "{text.color}", focusColor: "{text.hover.color}", selectedColor: "{highlight.color}", selectedFocusColor: "{highlight.focus.color}", icon: { color: "{surface.500}", focusColor: "{surface.400}" } }, optionGroup: { background: "transparent", color: "{text.color}" } }, navigation: { item: { focusBackground: "{surface.800}", activeBackground: "{surface.800}", color: "{text.color}", focusColor: "{text.hover.color}", activeColor: "{text.hover.color}", icon: { color: "{surface.500}", focusColor: "{surface.400}", activeColor: "{surface.400}" } }, submenuLabel: { background: "transparent", color: "{text.color}" }, submenuIcon: { color: "{surface.500}", focusColor: "{surface.400}", activeColor: "{surface.400}" } } } } }, da = { primitive: aa, semantic: ia }, ca = { borderRadius: "{content.border.radius}" }, sa = { root: ca }, la = { padding: "1.25rem", background: "{content.background}", gap: "0.5rem", transitionDuration: "{transition.duration}" }, ua = { color: "{text.muted.color}", hoverColor: "{text.color}", borderRadius: "{content.border.radius}", gap: "{navigation.item.gap}", icon: { color: "{navigation.item.icon.color}", hoverColor: "{navigation.item.icon.focus.color}" }, focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, fa = { color: "{navigation.item.icon.color}" }, ga = { root: la, item: ua, separator: fa }, pa = { borderRadius: "{form.field.border.radius}", roundedBorderRadius: "2rem", gap: "0.5rem", paddingX: "1rem", paddingY: "{form.field.padding.y}", iconOnlyWidth: "2.75rem", sm: { fontSize: "{form.field.sm.font.size}", paddingX: "{form.field.sm.padding.x}", paddingY: "{form.field.sm.padding.y}", iconOnlyWidth: "2.25rem" }, lg: { fontSize: "{form.field.lg.font.size}", paddingX: "{form.field.lg.padding.x}", paddingY: "{form.field.lg.padding.y}", iconOnlyWidth: "3.25rem" }, label: { fontWeight: "600" }, raisedShadow: "0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12)", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", offset: "{form.field.focus.ring.offset}" }, badgeSize: "1rem", transitionDuration: "{form.field.transition.duration}" }, ma = { light: { root: { primary: { background: "{primary.color}", hoverBackground: "{primary.hover.color}", activeBackground: "{primary.active.color}", borderColor: "{primary.color}", hoverBorderColor: "{primary.hover.color}", activeBorderColor: "{primary.active.color}", color: "{primary.contrast.color}", hoverColor: "{primary.contrast.color}", activeColor: "{primary.contrast.color}", focusRing: { color: "transparent", shadow: "0 0 0 0.2rem {primary.200}" } }, secondary: { background: "{surface.100}", hoverBackground: "{surface.200}", activeBackground: "{surface.300}", borderColor: "{surface.100}", hoverBorderColor: "{surface.200}", activeBorderColor: "{surface.300}", color: "{surface.600}", hoverColor: "{surface.700}", activeColor: "{surface.800}", focusRing: { color: "transparent", shadow: "0 0 0 0.2rem {surface.200}" } }, info: { background: "{sky.500}", hoverBackground: "{sky.600}", activeBackground: "{sky.700}", borderColor: "{sky.500}", hoverBorderColor: "{sky.600}", activeBorderColor: "{sky.700}", color: "#ffffff", hoverColor: "#ffffff", activeColor: "#ffffff", focusRing: { color: "transparent", shadow: "0 0 0 0.2rem {sky.200}" } }, success: { background: "{green.500}", hoverBackground: "{green.600}", activeBackground: "{green.700}", borderColor: "{green.500}", hoverBorderColor: "{green.600}", activeBorderColor: "{green.700}", color: "#ffffff", hoverColor: "#ffffff", activeColor: "#ffffff", focusRing: { color: "transparent", shadow: "0 0 0 0.2rem {green.200}" } }, warn: { background: "{orange.500}", hoverBackground: "{orange.600}", activeBackground: "{orange.700}", borderColor: "{orange.500}", hoverBorderColor: "{orange.600}", activeBorderColor: "{orange.700}", color: "#ffffff", hoverColor: "#ffffff", activeColor: "#ffffff", focusRing: { color: "transparent", shadow: "0 0 0 0.2rem {orange.200}" } }, help: { background: "{purple.500}", hoverBackground: "{purple.600}", activeBackground: "{purple.700}", borderColor: "{purple.500}", hoverBorderColor: "{purple.600}", activeBorderColor: "{purple.700}", color: "#ffffff", hoverColor: "#ffffff", activeColor: "#ffffff", focusRing: { color: "transparent", shadow: "0 0 0 0.2rem {purple.200}" } }, danger: { background: "{red.500}", hoverBackground: "{red.600}", activeBackground: "{red.700}", borderColor: "{red.500}", hoverBorderColor: "{red.600}", activeBorderColor: "{red.700}", color: "#ffffff", hoverColor: "#ffffff", activeColor: "#ffffff", focusRing: { color: "transparent", shadow: "0 0 0 0.2rem {red.200}" } }, contrast: { background: "{surface.950}", hoverBackground: "{surface.900}", activeBackground: "{surface.800}", borderColor: "{surface.950}", hoverBorderColor: "{surface.900}", activeBorderColor: "{surface.800}", color: "{surface.0}", hoverColor: "{surface.0}", activeColor: "{surface.0}", focusRing: { color: "transparent", shadow: "0 0 0 0.2rem {surface.400}" } } }, outlined: { primary: { hoverBackground: "{primary.50}", activeBackground: "{primary.100}", borderColor: "{primary.200}", color: "{primary.color}" }, secondary: { hoverBackground: "{surface.50}", activeBackground: "{surface.100}", borderColor: "{surface.200}", color: "{surface.500}" }, success: { hoverBackground: "{green.50}", activeBackground: "{green.100}", borderColor: "{green.200}", color: "{green.500}" }, info: { hoverBackground: "{sky.50}", activeBackground: "{sky.100}", borderColor: "{sky.200}", color: "{sky.500}" }, warn: { hoverBackground: "{orange.50}", activeBackground: "{orange.100}", borderColor: "{orange.200}", color: "{orange.500}" }, help: { hoverBackground: "{purple.50}", activeBackground: "{purple.100}", borderColor: "{purple.200}", color: "{purple.500}" }, danger: { hoverBackground: "{red.50}", activeBackground: "{red.100}", borderColor: "{red.200}", color: "{red.500}" }, contrast: { hoverBackground: "{surface.50}", activeBackground: "{surface.100}", borderColor: "{surface.700}", color: "{surface.950}" }, plain: { hoverBackground: "{surface.50}", activeBackground: "{surface.100}", borderColor: "{surface.200}", color: "{surface.700}" } }, text: { primary: { hoverBackground: "{primary.50}", activeBackground: "{primary.100}", color: "{primary.color}" }, secondary: { hoverBackground: "{surface.100}", activeBackground: "{surface.200}", color: "{surface.600}" }, success: { hoverBackground: "{green.50}", activeBackground: "{green.100}", color: "{green.500}" }, info: { hoverBackground: "{sky.50}", activeBackground: "{sky.100}", color: "{sky.500}" }, warn: { hoverBackground: "{orange.50}", activeBackground: "{orange.100}", color: "{orange.500}" }, help: { hoverBackground: "{purple.50}", activeBackground: "{purple.100}", color: "{purple.500}" }, danger: { hoverBackground: "{red.50}", activeBackground: "{red.100}", color: "{red.500}" }, contrast: { hoverBackground: "{surface.50}", activeBackground: "{surface.100}", color: "{surface.950}" }, plain: { hoverBackground: "{surface.50}", activeBackground: "{surface.100}", color: "{surface.700}" } }, link: { color: "{primary.color}", hoverColor: "{primary.color}", activeColor: "{primary.color}" } }, dark: { root: { primary: { background: "{primary.color}", hoverBackground: "{primary.hover.color}", activeBackground: "{primary.active.color}", borderColor: "{primary.color}", hoverBorderColor: "{primary.hover.color}", activeBorderColor: "{primary.active.color}", color: "{primary.contrast.color}", hoverColor: "{primary.contrast.color}", activeColor: "{primary.contrast.color}", focusRing: { color: "transparent", shadow: "0 0 0 0.2rem color-mix(in srgb, {primary.color}, transparent 80%)" } }, secondary: { background: "{surface.800}", hoverBackground: "{surface.700}", activeBackground: "{surface.600}", borderColor: "{surface.800}", hoverBorderColor: "{surface.700}", activeBorderColor: "{surface.600}", color: "{surface.300}", hoverColor: "{surface.200}", activeColor: "{surface.100}", focusRing: { color: "transparent", shadow: "0 0 0 0.2rem color-mix(in srgb, {surface.300}, transparent 80%)" } }, info: { background: "{sky.400}", hoverBackground: "{sky.300}", activeBackground: "{sky.200}", borderColor: "{sky.400}", hoverBorderColor: "{sky.300}", activeBorderColor: "{sky.200}", color: "{sky.950}", hoverColor: "{sky.950}", activeColor: "{sky.950}", focusRing: { color: "transparent", shadow: "0 0 0 0.2rem color-mix(in srgb, {sky.400}, transparent 80%)" } }, success: { background: "{green.400}", hoverBackground: "{green.300}", activeBackground: "{green.200}", borderColor: "{green.400}", hoverBorderColor: "{green.300}", activeBorderColor: "{green.200}", color: "{green.950}", hoverColor: "{green.950}", activeColor: "{green.950}", focusRing: { color: "transparent", shadow: "0 0 0 0.2rem color-mix(in srgb, {green.400}, transparent 80%)" } }, warn: { background: "{orange.400}", hoverBackground: "{orange.300}", activeBackground: "{orange.200}", borderColor: "{orange.400}", hoverBorderColor: "{orange.300}", activeBorderColor: "{orange.200}", color: "{orange.950}", hoverColor: "{orange.950}", activeColor: "{orange.950}", focusRing: { color: "transparent", shadow: "0 0 0 0.2rem color-mix(in srgb, {orange.400}, transparent 80%)" } }, help: { background: "{purple.400}", hoverBackground: "{purple.300}", activeBackground: "{purple.200}", borderColor: "{purple.400}", hoverBorderColor: "{purple.300}", activeBorderColor: "{purple.200}", color: "{purple.950}", hoverColor: "{purple.950}", activeColor: "{purple.950}", focusRing: { color: "transparent", shadow: "0 0 0 0.2rem color-mix(in srgb, {purple.400}, transparent 80%)" } }, danger: { background: "{red.400}", hoverBackground: "{red.300}", activeBackground: "{red.200}", borderColor: "{red.400}", hoverBorderColor: "{red.300}", activeBorderColor: "{red.200}", color: "{red.950}", hoverColor: "{red.950}", activeColor: "{red.950}", focusRing: { color: "transparent", shadow: "0 0 0 0.2rem color-mix(in srgb, {red.400}, transparent 80%)" } }, contrast: { background: "{surface.0}", hoverBackground: "{surface.100}", activeBackground: "{surface.200}", borderColor: "{surface.0}", hoverBorderColor: "{surface.100}", activeBorderColor: "{surface.200}", color: "{surface.950}", hoverColor: "{surface.950}", activeColor: "{surface.950}", focusRing: { color: "transparent", shadow: "0 0 0 0.2rem color-mix(in srgb, {surface.0}, transparent 80%)" } } }, outlined: { primary: { hoverBackground: "color-mix(in srgb, {primary.color}, transparent 96%)", activeBackground: "color-mix(in srgb, {primary.color}, transparent 84%)", borderColor: "{primary.700}", color: "{primary.color}" }, secondary: { hoverBackground: "rgba(255,255,255,0.04)", activeBackground: "rgba(255,255,255,0.16)", borderColor: "{surface.700}", color: "{surface.400}" }, success: { hoverBackground: "color-mix(in srgb, {green.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {green.400}, transparent 84%)", borderColor: "{green.700}", color: "{green.400}" }, info: { hoverBackground: "color-mix(in srgb, {sky.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {sky.400}, transparent 84%)", borderColor: "{sky.700}", color: "{sky.400}" }, warn: { hoverBackground: "color-mix(in srgb, {orange.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {orange.400}, transparent 84%)", borderColor: "{orange.700}", color: "{orange.400}" }, help: { hoverBackground: "color-mix(in srgb, {help.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {help.400}, transparent 84%)", borderColor: "{purple.700}", color: "{purple.400}" }, danger: { hoverBackground: "color-mix(in srgb, {danger.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {danger.400}, transparent 84%)", borderColor: "{red.700}", color: "{red.400}" }, contrast: { hoverBackground: "{surface.800}", activeBackground: "{surface.700}", borderColor: "{surface.500}", color: "{surface.0}" }, plain: { hoverBackground: "{surface.800}", activeBackground: "{surface.700}", borderColor: "{surface.600}", color: "{surface.0}" } }, text: { primary: { hoverBackground: "color-mix(in srgb, {primary.color}, transparent 96%)", activeBackground: "color-mix(in srgb, {primary.color}, transparent 84%)", color: "{primary.color}" }, secondary: { hoverBackground: "{surface.700}", activeBackground: "{surface.600}", color: "{surface.300}" }, success: { hoverBackground: "color-mix(in srgb, {green.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {green.400}, transparent 84%)", color: "{green.400}" }, info: { hoverBackground: "color-mix(in srgb, {sky.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {sky.400}, transparent 84%)", color: "{sky.400}" }, warn: { hoverBackground: "color-mix(in srgb, {orange.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {orange.400}, transparent 84%)", color: "{orange.400}" }, help: { hoverBackground: "color-mix(in srgb, {purple.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {purple.400}, transparent 84%)", color: "{purple.400}" }, danger: { hoverBackground: "color-mix(in srgb, {red.400}, transparent 96%)", activeBackground: "color-mix(in srgb, {red.400}, transparent 84%)", color: "{red.400}" }, contrast: { hoverBackground: "{surface.800}", activeBackground: "{surface.700}", color: "{surface.0}" }, plain: { hoverBackground: "{surface.800}", activeBackground: "{surface.700}", color: "{surface.0}" } }, link: { color: "{primary.color}", hoverColor: "{primary.color}", activeColor: "{primary.color}" } } }, ha = { root: pa, colorScheme: ma }, ba = { background: "{content.background}", borderRadius: "{border.radius.lg}", color: "{content.color}", shadow: "0 .125rem .25rem rgba(0,0,0,.075)" }, va = { padding: "1.5rem", gap: "0.75rem" }, ka = { gap: "0.5rem" }, ya = { fontSize: "1.25rem", fontWeight: "700" }, wa = { color: "{text.muted.color}" }, Ca = { root: ba, body: va, caption: ka, title: ya, subtitle: wa }, xa = { transitionDuration: "{transition.duration}" }, $a = { gap: "0.25rem" }, Ra = { padding: "1rem", gap: "0.5rem" }, Ba = { width: "1rem", height: "1rem", borderRadius: "50", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, Ia = { light: { indicator: { background: "{surface.200}", hoverBackground: "{surface.300}", activeBackground: "{primary.color}" } }, dark: { indicator: { background: "{surface.700}", hoverBackground: "{surface.600}", activeBackground: "{primary.color}" } } }, _a = { root: xa, content: $a, indicatorList: Ra, indicator: Ba, colorScheme: Ia }, Sa = { background: "{form.field.background}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", filledHoverBackground: "{form.field.filled.hover.background}", filledFocusBackground: "{form.field.filled.focus.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.focus.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", color: "{form.field.color}", disabledColor: "{form.field.disabled.color}", placeholderColor: "{form.field.placeholder.color}", invalidPlaceholderColor: "{form.field.invalid.placeholder.color}", shadow: "{form.field.shadow}", paddingX: "{form.field.padding.x}", paddingY: "{form.field.padding.y}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}", sm: { fontSize: "{form.field.sm.font.size}", paddingX: "{form.field.sm.padding.x}", paddingY: "{form.field.sm.padding.y}" }, lg: { fontSize: "{form.field.lg.font.size}", paddingX: "{form.field.lg.padding.x}", paddingY: "{form.field.lg.padding.y}" } }, Pa = { width: "2.5rem", color: "{form.field.icon.color}" }, Ta = { background: "{overlay.select.background}", borderColor: "{overlay.select.border.color}", borderRadius: "{overlay.select.border.radius}", color: "{overlay.select.color}", shadow: "{overlay.select.shadow}" }, Aa = { padding: "{list.padding}", gap: "{list.gap}", mobileIndent: "1.25rem" }, Oa = { focusBackground: "{list.option.focus.background}", selectedBackground: "{list.option.selected.background}", selectedFocusBackground: "{list.option.selected.focus.background}", color: "{list.option.color}", focusColor: "{list.option.focus.color}", selectedColor: "{list.option.selected.color}", selectedFocusColor: "{list.option.selected.focus.color}", padding: "{list.option.padding}", borderRadius: "{list.option.border.radius}", icon: { color: "{list.option.icon.color}", focusColor: "{list.option.icon.focus.color}", size: "0.875rem" } }, Ea = { color: "{form.field.icon.color}" }, La = { root: Sa, dropdown: Pa, overlay: Ta, list: Aa, option: Oa, clearIcon: Ea }, Na = { borderRadius: "{border.radius.sm}", width: "1.5rem", height: "1.5rem", background: "{form.field.background}", checkedBackground: "{primary.color}", checkedHoverBackground: "{primary.hover.color}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.focus.border.color}", checkedBorderColor: "{primary.color}", checkedHoverBorderColor: "{primary.hover.color}", checkedFocusBorderColor: "{primary.color}", checkedDisabledBorderColor: "{form.field.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", shadow: "{form.field.shadow}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}", sm: { width: "1.25rem", height: "1.25rem" }, lg: { width: "1.75rem", height: "1.75rem" } }, Wa = { size: "1rem", color: "{form.field.color}", checkedColor: "{primary.contrast.color}", checkedHoverColor: "{primary.contrast.color}", disabledColor: "{form.field.disabled.color}", sm: { size: "0.75rem" }, lg: { size: "1.25rem" } }, Fa = { root: Na, icon: Wa }, Da = { borderRadius: "16px", paddingX: "0.875rem", paddingY: "0.625rem", gap: "0.5rem", transitionDuration: "{transition.duration}" }, Ua = { width: "2rem", height: "2rem" }, za = { size: "1rem" }, Ha = { size: "1rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, ja = { light: { root: { background: "{surface.100}", color: "{surface.800}" }, icon: { color: "{surface.800}" }, removeIcon: { color: "{surface.800}" } }, dark: { root: { background: "{surface.800}", color: "{surface.0}" }, icon: { color: "{surface.0}" }, removeIcon: { color: "{surface.0}" } } }, Ma = { root: Da, image: Ua, icon: za, removeIcon: Ha, colorScheme: ja }, qa = { transitionDuration: "{transition.duration}" }, Va = { width: "1.75rem", height: "1.75rem", borderRadius: "{form.field.border.radius}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" } }, Ga = { shadow: "{overlay.popover.shadow}", borderRadius: "{overlay.popover.borderRadius}" }, Ya = { light: { panel: { background: "{surface.800}", borderColor: "{surface.900}" }, handle: { color: "{surface.0}" } }, dark: { panel: { background: "{surface.900}", borderColor: "{surface.700}" }, handle: { color: "{surface.0}" } } }, Qa = { root: qa, preview: Va, panel: Ga, colorScheme: Ya }, Xa = { size: "2rem", color: "{overlay.modal.color}" }, Ka = { gap: "1rem" }, Ja = { icon: Xa, content: Ka }, Za = { background: "{overlay.popover.background}", borderColor: "{overlay.popover.border.color}", color: "{overlay.popover.color}", borderRadius: "{overlay.popover.border.radius}", shadow: "{overlay.popover.shadow}", gutter: "10px", arrowOffset: "1.25rem" }, oi = { padding: "{overlay.popover.padding}", gap: "1rem" }, ri = { size: "1.5rem", color: "{overlay.popover.color}" }, ei = { gap: "0.5rem", padding: "0 {overlay.popover.padding} {overlay.popover.padding} {overlay.popover.padding}" }, ti = { root: Za, content: oi, icon: ri, footer: ei }, ni = { background: "{content.background}", borderColor: "{content.border.color}", color: "{content.color}", borderRadius: "{content.border.radius}", shadow: "{overlay.navigation.shadow}", transitionDuration: "{transition.duration}" }, ai = { padding: "{navigation.list.padding}", gap: "{navigation.list.gap}" }, ii = { focusBackground: "{navigation.item.focus.background}", activeBackground: "{navigation.item.active.background}", color: "{navigation.item.color}", focusColor: "{navigation.item.focus.color}", activeColor: "{navigation.item.active.color}", padding: "{navigation.item.padding}", borderRadius: "{navigation.item.border.radius}", gap: "{navigation.item.gap}", icon: { color: "{navigation.item.icon.color}", focusColor: "{navigation.item.icon.focus.color}", activeColor: "{navigation.item.icon.active.color}" } }, di = { mobileIndent: "1.25rem" }, ci = { size: "{navigation.submenu.icon.size}", color: "{navigation.submenu.icon.color}", focusColor: "{navigation.submenu.icon.focus.color}", activeColor: "{navigation.submenu.icon.active.color}" }, si = { borderColor: "{content.border.color}" }, li = { root: ni, list: ai, item: ii, submenu: di, submenuIcon: ci, separator: si }, ui = { transitionDuration: "{transition.duration}" }, fi = { borderColor: "{datatable.border.color}", borderWidth: "1px 0 1px 0", padding: "0.75rem 1rem", sm: { padding: "0.375rem 0.5rem" }, lg: { padding: "1rem 1.25rem" } }, gi = { selectedBackground: "{highlight.background}", borderColor: "{datatable.border.color}", hoverColor: "{content.hover.color}", selectedColor: "{highlight.color}", gap: "0.5rem", padding: "0.75rem 1rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "inset {focus.ring.shadow}" }, sm: { padding: "0.375rem 0.5rem" }, lg: { padding: "1rem 1.25rem" } }, pi = { fontWeight: "700" }, mi = { background: "{content.background}", hoverBackground: "{content.hover.background}", selectedBackground: "{highlight.background}", color: "{content.color}", hoverColor: "{content.hover.color}", selectedColor: "{highlight.color}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "inset {focus.ring.shadow}" } }, hi = { borderColor: "{datatable.border.color}", padding: "0.75rem 1rem", sm: { padding: "0.375rem 0.5rem" }, lg: { padding: "1rem 1.25rem" } }, bi = { borderColor: "{datatable.border.color}", padding: "0.75rem 1rem", sm: { padding: "0.375rem 0.5rem" }, lg: { padding: "1rem 1.25rem" } }, vi = { fontWeight: "700" }, ki = { borderColor: "{datatable.border.color}", borderWidth: "0 0 1px 0", padding: "0.75rem 1rem", sm: { padding: "0.375rem 0.5rem" }, lg: { padding: "1rem 1.25rem" } }, yi = { color: "{primary.color}" }, wi = { width: "0.5rem" }, Ci = { width: "1px", color: "{primary.color}" }, xi = { color: "{text.muted.color}", hoverColor: "{text.hover.muted.color}", size: "0.875rem" }, $i = { size: "2rem" }, Ri = { hoverBackground: "{content.hover.background}", selectedHoverBackground: "{content.background}", color: "{text.muted.color}", hoverColor: "{text.color}", selectedHoverColor: "{primary.color}", size: "1.75rem", borderRadius: "50%", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, Bi = { inlineGap: "0.5rem", overlaySelect: { background: "{overlay.select.background}", borderColor: "{overlay.select.border.color}", borderRadius: "{overlay.select.border.radius}", color: "{overlay.select.color}", shadow: "{overlay.select.shadow}" }, overlayPopover: { background: "{overlay.popover.background}", borderColor: "{overlay.popover.border.color}", borderRadius: "{overlay.popover.border.radius}", color: "{overlay.popover.color}", shadow: "{overlay.popover.shadow}", padding: "{overlay.popover.padding}", gap: "0.5rem" }, rule: { borderColor: "{content.border.color}" }, constraintList: { padding: "{list.padding}", gap: "{list.gap}" }, constraint: { focusBackground: "{list.option.focus.background}", selectedBackground: "{list.option.selected.background}", selectedFocusBackground: "{list.option.selected.focus.background}", color: "{list.option.color}", focusColor: "{list.option.focus.color}", selectedColor: "{list.option.selected.color}", selectedFocusColor: "{list.option.selected.focus.color}", separator: { borderColor: "{content.border.color}" }, padding: "{list.option.padding}", borderRadius: "{list.option.border.radius}" } }, Ii = { borderColor: "{datatable.border.color}", borderWidth: "0 0 1px 0" }, _i = { borderColor: "{datatable.border.color}", borderWidth: "0 0 1px 0" }, Si = { light: { root: { borderColor: "{content.border.color}" }, header: { background: "{surface.50}", color: "{text.color}" }, headerCell: { background: "{surface.50}", hoverBackground: "{surface.100}", color: "{text.color}" }, footer: { background: "{surface.50}", color: "{text.color}" }, footerCell: { background: "{surface.50}", color: "{text.color}" }, row: { stripedBackground: "{surface.50}" }, bodyCell: { selectedBorderColor: "{primary.100}" } }, dark: { root: { borderColor: "{surface.800}" }, header: { background: "{surface.800}", color: "{text.color}" }, headerCell: { background: "{surface.800}", hoverBackground: "{surface.700}", color: "{text.color}" }, footer: { background: "{surface.800}", color: "{text.color}" }, footerCell: { background: "{surface.800}", color: "{text.color}" }, row: { stripedBackground: "{surface.950}" }, bodyCell: { selectedBorderColor: "{primary.900}" } } }, Pi = { root: ui, header: fi, headerCell: gi, columnTitle: pi, row: mi, bodyCell: hi, footerCell: bi, columnFooter: vi, footer: ki, dropPoint: yi, columnResizer: wi, resizeIndicator: Ci, sortIcon: xi, loadingIcon: $i, rowToggleButton: Ri, filter: Bi, paginatorTop: Ii, paginatorBottom: _i, colorScheme: Si }, Ti = { borderColor: "{content.border.color}", borderWidth: "1px", borderRadius: "4px", padding: "0" }, Ai = { borderColor: "{content.border.color}", borderWidth: "0 0 1px 0", padding: "0.875rem 1.125rem", borderRadius: "5px 5px 0 0" }, Oi = { background: "{content.background}", color: "{content.color}", borderColor: "transparent", borderWidth: "0", padding: "0", borderRadius: "5px" }, Ei = { background: "{content.background}", color: "{content.color}", borderColor: "{content.border.color}", borderWidth: "1px 0 0 0", padding: "0.875rem 1.125rem", borderRadius: "0 0 5px 5px" }, Li = { borderColor: "{content.border.color}", borderWidth: "0 0 1px 0" }, Ni = { borderColor: "{content.border.color}", borderWidth: "1px 0 0 0" }, Wi = { light: { header: { background: "{surface.50}", color: "{text.color}" } }, dark: { header: { background: "{surface.800}", color: "{text.color}" } } }, Fi = { root: Ti, header: Ai, content: Oi, footer: Ei, paginatorTop: Li, paginatorBottom: Ni, colorScheme: Wi }, Di = { transitionDuration: "{transition.duration}" }, Ui = { background: "{content.background}", borderColor: "{content.border.color}", color: "{content.color}", borderRadius: "{content.border.radius}", shadow: "{overlay.popover.shadow}", padding: "{overlay.popover.padding}" }, zi = { background: "{content.background}", borderColor: "{content.border.color}", color: "{content.color}", padding: "0 0 0.75rem 0" }, Hi = { gap: "0.5rem", fontWeight: "700" }, ji = { width: "2.5rem", sm: { width: "2rem" }, lg: { width: "3rem" }, borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.border.color}", activeBorderColor: "{form.field.border.color}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" } }, Mi = { color: "{form.field.icon.color}" }, qi = { hoverBackground: "{content.hover.background}", color: "{content.color}", hoverColor: "{content.hover.color}", padding: "0.375rem 0.625rem", borderRadius: "{content.border.radius}" }, Vi = { hoverBackground: "{content.hover.background}", color: "{content.color}", hoverColor: "{content.hover.color}", padding: "0.375rem 0.625rem", borderRadius: "{content.border.radius}" }, Gi = { borderColor: "{content.border.color}", gap: "{overlay.popover.padding}" }, Yi = { margin: "0.75rem 0 0 0" }, Qi = { padding: "0.375rem", fontWeight: "700", color: "{content.color}" }, Xi = { hoverBackground: "{content.hover.background}", selectedBackground: "{primary.color}", rangeSelectedBackground: "{highlight.background}", color: "{content.color}", hoverColor: "{content.hover.color}", selectedColor: "{primary.contrast.color}", rangeSelectedColor: "{highlight.color}", width: "2.5rem", height: "2.5rem", borderRadius: "50%", padding: "0.375rem", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" } }, Ki = { margin: "0.75rem 0 0 0" }, Ji = { padding: "0.5rem", borderRadius: "{content.border.radius}" }, Zi = { margin: "0.75rem 0 0 0" }, od = { padding: "0.5rem", borderRadius: "{content.border.radius}" }, rd = { padding: "0.75rem 0 0 0", borderColor: "{content.border.color}" }, ed = { padding: "0.75rem 0 0 0", borderColor: "{content.border.color}", gap: "0.5rem", buttonGap: "0.25rem" }, td = { light: { dropdown: { background: "{surface.50}", hoverBackground: "{surface.100}", activeBackground: "{surface.200}", color: "{surface.600}", hoverColor: "{surface.700}", activeColor: "{surface.800}" }, today: { background: "{surface.200}", color: "{surface.900}" } }, dark: { dropdown: { background: "{surface.800}", hoverBackground: "{surface.700}", activeBackground: "{surface.600}", color: "{surface.300}", hoverColor: "{surface.200}", activeColor: "{surface.100}" }, today: { background: "{surface.700}", color: "{surface.0}" } } }, nd = { root: Di, panel: Ui, header: zi, title: Hi, dropdown: ji, inputIcon: Mi, selectMonth: qi, selectYear: Vi, group: Gi, dayView: Yi, weekDay: Qi, date: Xi, monthView: Ki, month: Ji, yearView: Zi, year: od, buttonbar: rd, timePicker: ed, colorScheme: td }, ad = { background: "{overlay.modal.background}", borderColor: "{overlay.modal.border.color}", color: "{overlay.modal.color}", borderRadius: "{overlay.modal.border.radius}", shadow: "{overlay.modal.shadow}" }, id = { padding: "{overlay.modal.padding}", gap: "0.5rem" }, dd = { fontSize: "1.25rem", fontWeight: "600" }, cd = { padding: "0 {overlay.modal.padding} {overlay.modal.padding} {overlay.modal.padding}" }, sd = { padding: "0 {overlay.modal.padding} {overlay.modal.padding} {overlay.modal.padding}", gap: "0.5rem" }, ld = { root: ad, header: id, title: dd, content: cd, footer: sd }, ud = { borderColor: "{content.border.color}" }, fd = { background: "{content.background}", color: "{text.color}" }, gd = { margin: "1.125rem 0", padding: "0 1.125rem", content: { padding: "0 0.625rem" } }, pd = { margin: "0 1.125rem", padding: "1.125rem 0", content: { padding: "0.625rem 0" } }, md = { root: ud, content: fd, horizontal: gd, vertical: pd }, hd = { background: "rgba(255, 255, 255, 0.1)", borderColor: "rgba(255, 255, 255, 0.2)", padding: "0.5rem", borderRadius: "{border.radius.lg}" }, bd = { borderRadius: "{content.border.radius}", padding: "0.5rem", size: "3rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, vd = { root: hd, item: bd }, kd = { background: "{overlay.modal.background}", borderColor: "{overlay.modal.border.color}", color: "{overlay.modal.color}", shadow: "{overlay.modal.shadow}" }, yd = { padding: "{overlay.modal.padding}" }, wd = { fontSize: "1.5rem", fontWeight: "600" }, Cd = { padding: "0 {overlay.modal.padding} {overlay.modal.padding} {overlay.modal.padding}" }, xd = { padding: "{overlay.modal.padding}" }, $d = { root: kd, header: yd, title: wd, content: Cd, footer: xd }, Rd = { borderColor: "{content.border.color}", borderRadius: "{content.border.radius}" }, Bd = { color: "{text.muted.color}", hoverColor: "{text.color}", activeColor: "{primary.color}" }, Id = { background: "{overlay.select.background}", borderColor: "{overlay.select.border.color}", borderRadius: "{overlay.select.border.radius}", color: "{overlay.select.color}", shadow: "{overlay.select.shadow}", padding: "{list.padding}" }, _d = { focusBackground: "{list.option.focus.background}", color: "{list.option.color}", focusColor: "{list.option.focus.color}", padding: "{list.option.padding}", borderRadius: "{list.option.border.radius}" }, Sd = { background: "{content.background}", borderColor: "{content.border.color}", color: "{content.color}", borderRadius: "{content.border.radius}" }, Pd = { light: { toolbar: { background: "{surface.50}" } }, dark: { toolbar: { background: "{surface.800}" } } }, Td = { toolbar: Rd, toolbarItem: Bd, overlay: Id, overlayOption: _d, content: Sd, colorScheme: Pd }, Ad = { background: "{content.background}", borderColor: "{content.border.color}", borderRadius: "{content.border.radius}", color: "{content.color}", padding: "0.75rem 1.125rem 1.125rem 1.125rem", transitionDuration: "{transition.duration}" }, Od = { borderRadius: "{content.border.radius}", borderWidth: "1px", borderColor: "{content.border.color}", padding: "0.625rem 0.875rem", gap: "0.5rem", fontWeight: "700", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, Ed = { color: "{text.muted.color}", hoverColor: "{text.hover.muted.color}" }, Ld = { padding: "0" }, Nd = { light: { legend: { background: "{surface.50}", hoverBackground: "{surface.100}", color: "{text.color}", hoverColor: "{text.hover.color}" } }, dark: { legend: { background: "{surface.800}", hoverBackground: "{surface.700}", color: "{text.color}", hoverColor: "{text.hover.color}" } } }, Wd = { root: Ad, legend: Od, toggleIcon: Ed, content: Ld, colorScheme: Nd }, Fd = { background: "{content.background}", borderColor: "{content.border.color}", color: "{content.color}", borderRadius: "{content.border.radius}", transitionDuration: "{transition.duration}" }, Dd = { borderWidth: "0 0 1px 0", borderColor: "{content.border.color}", padding: "1.125rem", borderRadius: "5px 5px 0 0", gap: "0.5rem" }, Ud = { highlightBorderColor: "{primary.color}", padding: "1.125rem", gap: "1rem" }, zd = { padding: "1rem", gap: "1rem", borderColor: "{content.border.color}", info: { gap: "0.5rem" } }, Hd = { gap: "0.5rem" }, jd = { height: "0.25rem" }, Md = { gap: "0.5rem" }, qd = { light: { header: { background: "{surface.50}", color: "{text.color}" } }, dark: { header: { background: "{surface.800}", color: "{text.color}" } } }, Vd = { root: Fd, header: Dd, content: Ud, file: zd, fileList: Hd, progressbar: jd, basic: Md, colorScheme: qd }, Gd = { color: "{form.field.float.label.color}", focusColor: "{form.field.float.label.focus.color}", activeColor: "{form.field.float.label.active.color}", invalidColor: "{form.field.float.label.invalid.color}", transitionDuration: "0.2s", positionX: "{form.field.padding.x}", positionY: "{form.field.padding.y}", fontWeight: "500", active: { fontSize: "0.75rem", fontWeight: "400" } }, Yd = { active: { top: "-1.375rem" } }, Qd = { input: { paddingTop: "1.875rem", paddingBottom: "{form.field.padding.y}" }, active: { top: "{form.field.padding.y}" } }, Xd = { borderRadius: "{border.radius.xs}", active: { background: "{form.field.background}", padding: "0 0.125rem" } }, Kd = { root: Gd, over: Yd, in: Qd, on: Xd }, Jd = { borderWidth: "1px", borderColor: "{content.border.color}", borderRadius: "{content.border.radius}", transitionDuration: "{transition.duration}" }, Zd = { background: "rgba(255, 255, 255, 0.1)", hoverBackground: "rgba(255, 255, 255, 0.2)", color: "{surface.100}", hoverColor: "{surface.0}", size: "3rem", gutter: "0", prev: { borderRadius: "0 12px 12px 0" }, next: { borderRadius: "12px 0 0 12px" }, focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, oc = { size: "1.5rem" }, rc = { padding: "1rem 0.25rem" }, ec = { size: "2rem", borderRadius: "{content.border.radius}", gutter: "0.5rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, tc = { size: "1rem" }, nc = { background: "rgba(0, 0, 0, 0.5)", color: "{surface.100}", padding: "1rem" }, ac = { gap: "0.5rem", padding: "1rem" }, ic = { width: "1rem", height: "1rem", activeBackground: "{primary.color}", borderRadius: "50%", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, dc = { background: "rgba(0, 0, 0, 0.5)" }, cc = { background: "rgba(255, 255, 255, 0.4)", hoverBackground: "rgba(255, 255, 255, 0.6)", activeBackground: "rgba(255, 255, 255, 0.9)" }, sc = { size: "3rem", gutter: "0.5rem", background: "rgba(255, 255, 255, 0.1)", hoverBackground: "rgba(255, 255, 255, 0.2)", color: "{surface.50}", hoverColor: "{surface.0}", borderRadius: "50%", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, lc = { size: "1.5rem" }, uc = { light: { thumbnailsContent: { background: "{surface.50}" }, thumbnailNavButton: { hoverBackground: "{surface.100}", color: "{surface.600}", hoverColor: "{surface.700}" }, indicatorButton: { background: "{surface.200}", hoverBackground: "{surface.300}" } }, dark: { thumbnailsContent: { background: "{surface.800}" }, thumbnailNavButton: { hoverBackground: "{surface.700}", color: "{surface.400}", hoverColor: "{surface.0}" }, indicatorButton: { background: "{surface.700}", hoverBackground: "{surface.600}" } } }, fc = { root: Jd, navButton: Zd, navIcon: oc, thumbnailsContent: rc, thumbnailNavButton: ec, thumbnailNavButtonIcon: tc, caption: nc, indicatorList: ac, indicatorButton: ic, insetIndicatorList: dc, insetIndicatorButton: cc, closeButton: sc, closeButtonIcon: lc, colorScheme: uc }, gc = { color: "{form.field.icon.color}" }, pc = { icon: gc }, mc = { color: "{form.field.float.label.color}", focusColor: "{form.field.float.label.focus.color}", invalidColor: "{form.field.float.label.invalid.color}", transitionDuration: "0.2s", positionX: "{form.field.padding.x}", top: "{form.field.padding.y}", fontSize: "0.75rem", fontWeight: "400" }, hc = { paddingTop: "1.875rem", paddingBottom: "{form.field.padding.y}" }, bc = { root: mc, input: hc }, vc = { transitionDuration: "{transition.duration}" }, kc = { icon: { size: "1.5rem" }, mask: { background: "{mask.background}", color: "{mask.color}" } }, yc = { position: { left: "auto", right: "1rem", top: "1rem", bottom: "auto" }, blur: "8px", background: "rgba(255,255,255,0.1)", borderColor: "rgba(255,255,255,0.2)", borderWidth: "1px", borderRadius: "{content.border.radius}", padding: ".5rem", gap: "0.5rem" }, wc = { hoverBackground: "rgba(255,255,255,0.1)", color: "{surface.50}", hoverColor: "{surface.0}", size: "3rem", iconSize: "1.5rem", borderRadius: "{content.border.radius}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, Cc = { root: vc, preview: kc, toolbar: yc, action: wc }, xc = { size: "15px", hoverSize: "30px", background: "rgba(255,255,255,0.3)", hoverBackground: "rgba(255,255,255,0.3)", borderColor: "rgba(255,255,255,0.3)", hoverBorderColor: "rgba(255,255,255,0.3)", borderWidth: "3px", borderRadius: "50%", transitionDuration: "{transition.duration}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "rgba(255,255,255,0.3)", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, $c = { handle: xc }, Rc = { padding: "{form.field.padding.y} {form.field.padding.x}", borderRadius: "{content.border.radius}", gap: "0.5rem" }, Bc = { fontWeight: "500" }, Ic = { size: "1.125rem" }, _c = { light: { info: { background: "color-mix(in srgb, {blue.50}, transparent 5%)", borderColor: "color-mix(in srgb, {blue.50}, transparent 5%)", color: "{blue.600}", shadow: "none" }, success: { background: "color-mix(in srgb, {green.50}, transparent 5%)", borderColor: "color-mix(in srgb, {green.50}, transparent 5%)", color: "{green.600}", shadow: "none" }, warn: { background: "color-mix(in srgb,{yellow.50}, transparent 5%)", borderColor: "color-mix(in srgb,{yellow.50}, transparent 5%)", color: "{yellow.600}", shadow: "none" }, error: { background: "color-mix(in srgb, {red.50}, transparent 5%)", borderColor: "color-mix(in srgb, {red.50}, transparent 5%)", color: "{red.600}", shadow: "none" }, secondary: { background: "{surface.100}", borderColor: "{surface.100}", color: "{surface.600}", shadow: "none" }, contrast: { background: "{surface.900}", borderColor: "{surface.900}", color: "{surface.50}", shadow: "none" } }, dark: { info: { background: "color-mix(in srgb, {blue.500}, transparent 84%)", borderColor: "color-mix(in srgb, {blue.500}, transparent 84%)", color: "{blue.500}", shadow: "none" }, success: { background: "color-mix(in srgb, {green.500}, transparent 84%)", borderColor: "color-mix(in srgb, {green.500}, transparent 84%)", color: "{green.500}", shadow: "none" }, warn: { background: "color-mix(in srgb, {yellow.500}, transparent 84%)", borderColor: "color-mix(in srgb, {yellow.500}, transparent 84%)", color: "{yellow.500}", shadow: "none" }, error: { background: "color-mix(in srgb, {red.500}, transparent 84%)", borderColor: "color-mix(in srgb, {red.500}, transparent 84%)", color: "{red.500}", shadow: "none" }, secondary: { background: "{surface.800}", borderColor: "{surface.800}", color: "{surface.300}", shadow: "none" }, contrast: { background: "{surface.0}", borderColor: "{surface.0}", color: "{surface.950}", shadow: "none" } } }, Sc = { root: Rc, text: Bc, icon: Ic, colorScheme: _c }, Pc = { padding: "{form.field.padding.y} {form.field.padding.x}", borderRadius: "{content.border.radius}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" }, transitionDuration: "{transition.duration}" }, Tc = { hoverBackground: "{content.hover.background}", hoverColor: "{content.hover.color}" }, Ac = { root: Pc, display: Tc }, Oc = { background: "{form.field.background}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", filledFocusBackground: "{form.field.filled.focus.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.focus.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", color: "{form.field.color}", disabledColor: "{form.field.disabled.color}", placeholderColor: "{form.field.placeholder.color}", shadow: "{form.field.shadow}", paddingX: "{form.field.padding.x}", paddingY: "{form.field.padding.y}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}" }, Ec = { borderRadius: "{border.radius.sm}" }, Lc = { light: { chip: { focusBackground: "{surface.200}", color: "{surface.800}" } }, dark: { chip: { focusBackground: "{surface.700}", color: "{surface.0}" } } }, Nc = { root: Oc, chip: Ec, colorScheme: Lc }, Wc = { borderRadius: "{form.field.border.radius}", padding: "0.625rem 0.5rem", minWidth: "2.75rem" }, Fc = { light: { addon: { background: "{surface.50}", borderColor: "{form.field.border.color}", color: "{text.muted.color}" } }, dark: { addon: { background: "{surface.800}", borderColor: "{form.field.border.color}", color: "{text.muted.color}" } } }, Dc = { addon: Wc, colorScheme: Fc }, Uc = { transitionDuration: "{transition.duration}" }, zc = { width: "2.5rem", borderRadius: "{form.field.border.radius}", verticalPadding: "{form.field.padding.y}" }, Hc = { light: { button: { background: "{surface.100}", hoverBackground: "{surface.200}", activeBackground: "{surface.300}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.border.color}", activeBorderColor: "{form.field.border.color}", color: "{surface.600}", hoverColor: "{surface.700}", activeColor: "{surface.800}" } }, dark: { button: { background: "{surface.800}", hoverBackground: "{surface.700}", activeBackground: "{surface.500}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.border.color}", activeBorderColor: "{form.field.border.color}", color: "{surface.300}", hoverColor: "{surface.200}", activeColor: "{surface.100}" } } }, jc = { root: Uc, button: zc, colorScheme: Hc }, Mc = { gap: "0.5rem" }, qc = { width: "2.5rem", sm: { width: "2rem" }, lg: { width: "3rem" } }, Vc = { root: Mc, input: qc }, Gc = { background: "{form.field.background}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", filledHoverBackground: "{form.field.filled.hover.background}", filledFocusBackground: "{form.field.filled.focus.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.focus.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", color: "{form.field.color}", disabledColor: "{form.field.disabled.color}", placeholderColor: "{form.field.placeholder.color}", invalidPlaceholderColor: "{form.field.invalid.placeholder.color}", shadow: "{form.field.shadow}", paddingX: "{form.field.padding.x}", paddingY: "{form.field.padding.y}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}", sm: { fontSize: "{form.field.sm.font.size}", paddingX: "{form.field.sm.padding.x}", paddingY: "{form.field.sm.padding.y}" }, lg: { fontSize: "{form.field.lg.font.size}", paddingX: "{form.field.lg.padding.x}", paddingY: "{form.field.lg.padding.y}" } }, Yc = { root: Gc }, Qc = { transitionDuration: "{transition.duration}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, Xc = { background: "{primary.color}" }, Kc = { background: "{content.border.color}" }, Jc = { color: "{text.muted.color}" }, Zc = { root: Qc, value: Xc, range: Kc, text: Jc }, os = { background: "{form.field.background}", disabledBackground: "{form.field.disabled.background}", borderColor: "{form.field.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", color: "{form.field.color}", disabledColor: "{form.field.disabled.color}", shadow: "{form.field.shadow}", borderRadius: "{form.field.border.radius}", transitionDuration: "{form.field.transition.duration}" }, rs = { padding: "{list.padding}", gap: "{list.gap}", header: { padding: "{list.header.padding}" } }, es = { focusBackground: "{list.option.focus.background}", selectedBackground: "{list.option.selected.background}", selectedFocusBackground: "{list.option.selected.focus.background}", color: "{list.option.color}", focusColor: "{list.option.focus.color}", selectedColor: "{list.option.selected.color}", selectedFocusColor: "{list.option.selected.focus.color}", padding: "{list.option.padding}", borderRadius: "{list.option.border.radius}" }, ts = { background: "{list.option.group.background}", color: "{list.option.group.color}", fontWeight: "{list.option.group.font.weight}", padding: "{list.option.group.padding}" }, ns = { color: "{list.option.color}", gutterStart: "-0.5rem", gutterEnd: "0.5rem" }, as = { padding: "{list.option.padding}" }, is = { light: { option: { stripedBackground: "{surface.50}" } }, dark: { option: { stripedBackground: "{surface.900}" } } }, ds = { root: os, list: rs, option: es, optionGroup: ts, checkmark: ns, emptyMessage: as, colorScheme: is }, cs = { borderColor: "transparent", borderRadius: "{content.border.radius}", color: "{content.color}", gap: "0.5rem", verticalOrientation: { padding: "{navigation.list.padding}", gap: "{navigation.list.gap}" }, horizontalOrientation: { padding: "0.75rem 1rem", gap: "0.5rem" }, transitionDuration: "{transition.duration}" }, ss = { borderRadius: "{content.border.radius}", padding: "0.75rem 1rem" }, ls = { focusBackground: "{navigation.item.focus.background}", activeBackground: "{navigation.item.active.background}", color: "{navigation.item.color}", focusColor: "{navigation.item.focus.color}", activeColor: "{navigation.item.active.color}", padding: "{navigation.item.padding}", borderRadius: "{navigation.item.border.radius}", gap: "{navigation.item.gap}", icon: { color: "{navigation.item.icon.color}", focusColor: "{navigation.item.icon.focus.color}", activeColor: "{navigation.item.icon.active.color}" } }, us = { padding: "0", background: "{content.background}", borderColor: "{content.border.color}", borderRadius: "{content.border.radius}", color: "{content.color}", shadow: "{overlay.navigation.shadow}", gap: "0.5rem" }, fs = { padding: "{navigation.list.padding}", gap: "{navigation.list.gap}" }, gs = { padding: "{navigation.submenu.label.padding}", fontWeight: "{navigation.submenu.label.font.weight}", background: "{navigation.submenu.label.background.}", color: "{navigation.submenu.label.color}" }, ps = { size: "{navigation.submenu.icon.size}", color: "{navigation.submenu.icon.color}", focusColor: "{navigation.submenu.icon.focus.color}", activeColor: "{navigation.submenu.icon.active.color}" }, ms = { borderColor: "{content.border.color}" }, hs = { borderRadius: "50%", size: "2rem", color: "{text.muted.color}", hoverColor: "{text.hover.muted.color}", hoverBackground: "{content.hover.background}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, bs = { light: { root: { background: "{surface.50}" } }, dark: { root: { background: "{surface.800}" } } }, vs = { root: cs, baseItem: ss, item: ls, overlay: us, submenu: fs, submenuLabel: gs, submenuIcon: ps, separator: ms, mobileButton: hs, colorScheme: bs }, ks = { background: "{content.background}", borderColor: "{content.border.color}", color: "{content.color}", borderRadius: "{content.border.radius}", shadow: "{overlay.navigation.shadow}", transitionDuration: "{transition.duration}" }, ys = { padding: "{navigation.list.padding}", gap: "{navigation.list.gap}" }, ws = { focusBackground: "{navigation.item.focus.background}", color: "{navigation.item.color}", focusColor: "{navigation.item.focus.color}", padding: "{navigation.item.padding}", borderRadius: "{navigation.item.border.radius}", gap: "{navigation.item.gap}", icon: { color: "{navigation.item.icon.color}", focusColor: "{navigation.item.icon.focus.color}" } }, Cs = { padding: "{navigation.submenu.label.padding}", fontWeight: "{navigation.submenu.label.font.weight}", background: "{navigation.submenu.label.background.}", color: "{navigation.submenu.label.color}" }, xs = { borderColor: "{content.border.color}" }, $s = { root: ks, list: ys, item: ws, submenuLabel: Cs, separator: xs }, Rs = { borderColor: "transparent", borderRadius: "{content.border.radius}", color: "{content.color}", gap: "0.5rem", padding: "0.75rem 1rem", transitionDuration: "{transition.duration}" }, Bs = { borderRadius: "{content.border.radius}", padding: "0.75rem 1rem" }, Is = { focusBackground: "{navigation.item.focus.background}", activeBackground: "{navigation.item.active.background}", color: "{navigation.item.color}", focusColor: "{navigation.item.focus.color}", activeColor: "{navigation.item.active.color}", padding: "{navigation.item.padding}", borderRadius: "{navigation.item.border.radius}", gap: "{navigation.item.gap}", icon: { color: "{navigation.item.icon.color}", focusColor: "{navigation.item.icon.focus.color}", activeColor: "{navigation.item.icon.active.color}" } }, _s = { padding: "{navigation.list.padding}", gap: "{navigation.list.gap}", background: "{content.background}", borderColor: "{content.border.color}", borderRadius: "{content.border.radius}", shadow: "{overlay.navigation.shadow}", mobileIndent: "1.25rem", icon: { size: "{navigation.submenu.icon.size}", color: "{navigation.submenu.icon.color}", focusColor: "{navigation.submenu.icon.focus.color}", activeColor: "{navigation.submenu.icon.active.color}" } }, Ss = { borderColor: "{content.border.color}" }, Ps = { borderRadius: "50%", size: "2rem", color: "{text.muted.color}", hoverColor: "{text.hover.muted.color}", hoverBackground: "{content.hover.background}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, Ts = { light: { root: { background: "{surface.50}" } }, dark: { root: { background: "{surface.800}" } } }, As = { root: Rs, baseItem: Bs, item: Is, submenu: _s, separator: Ss, mobileButton: Ps, colorScheme: Ts }, Os = { borderRadius: "{content.border.radius}", borderWidth: "1px", transitionDuration: "{transition.duration}" }, Es = { padding: "0.75rem 1rem", gap: "0.5rem", sm: { padding: "0.5rem 0.625rem" }, lg: { padding: "0.75rem 0.875rem" } }, Ls = { fontSize: "1rem", fontWeight: "500", sm: { fontSize: "0.875rem" }, lg: { fontSize: "1.125rem" } }, Ns = { size: "1.25rem", sm: { size: "1rem" }, lg: { size: "1.5rem" } }, Ws = { width: "2rem", height: "2rem", borderRadius: "50%", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", offset: "{focus.ring.offset}" } }, Fs = { size: "1rem", sm: { size: "0.875rem" }, lg: { size: "1.125rem" } }, Ds = { root: { borderWidth: "1px" } }, Us = { content: { padding: "0" } }, zs = { light: { info: { background: "color-mix(in srgb, {blue.50}, transparent 5%)", borderColor: "transparent", color: "{blue.600}", shadow: "none", closeButton: { hoverBackground: "{blue.100}", focusRing: { color: "{focus.ring.color}", shadow: "0 0 0 0.2rem {blue.200}" } }, outlined: { color: "{blue.600}", borderColor: "{blue.600}" }, simple: { color: "{blue.600}" } }, success: { background: "color-mix(in srgb, {green.50}, transparent 5%)", borderColor: "transparent", color: "{green.600}", shadow: "none", closeButton: { hoverBackground: "{green.100}", focusRing: { color: "{focus.ring.color}", shadow: "0 0 0 0.2rem {green.200}" } }, outlined: { color: "{green.600}", borderColor: "{green.600}" }, simple: { color: "{green.600}" } }, warn: { background: "color-mix(in srgb,{yellow.50}, transparent 5%)", borderColor: "transparent", color: "{yellow.600}", shadow: "none", closeButton: { hoverBackground: "{yellow.100}", focusRing: { color: "{focus.ring.color}", shadow: "0 0 0 0.2rem {yellow.200}" } }, outlined: { color: "{yellow.600}", borderColor: "{yellow.600}" }, simple: { color: "{yellow.600}" } }, error: { background: "color-mix(in srgb, {red.50}, transparent 5%)", borderColor: "transparent", color: "{red.600}", shadow: "none", closeButton: { hoverBackground: "{red.100}", focusRing: { color: "{focus.ring.color}", shadow: "0 0 0 0.2rem {red.200}" } }, outlined: { color: "{red.600}", borderColor: "{red.600}" }, simple: { color: "{red.600}" } }, secondary: { background: "{surface.100}", borderColor: "transparent", color: "{surface.600}", shadow: "none", closeButton: { hoverBackground: "{surface.200}", focusRing: { color: "{focus.ring.color}", shadow: "0 0 0 0.2rem {surface.200}" } }, outlined: { color: "{surface.500}", borderColor: "{surface.500}" }, simple: { color: "{surface.500}" } }, contrast: { background: "{surface.900}", borderColor: "transparent", color: "{surface.50}", shadow: "none", closeButton: { hoverBackground: "{surface.800}", focusRing: { color: "{focus.ring.color}", shadow: "0 0 0 0.2rem {surface.400}" } }, outlined: { color: "{surface.900}", borderColor: "{surface.900}" }, simple: { color: "{surface.900}" } } }, dark: { info: { background: "color-mix(in srgb, {blue.500}, transparent 84%)", borderColor: "transparent", color: "{blue.500}", shadow: "none", closeButton: { hoverBackground: "rgba(255, 255, 255, 0.05)", focusRing: { color: "{focus.ring.color}", shadow: "0 0 0 0.2rem color-mix(in srgb, {blue.500}, transparent 80%)" } }, outlined: { color: "{blue.500}", borderColor: "{blue.500}" }, simple: { color: "{blue.500}" } }, success: { background: "color-mix(in srgb, {green.500}, transparent 84%)", borderColor: "transparent", color: "{green.500}", shadow: "none", closeButton: { hoverBackground: "rgba(255, 255, 255, 0.05)", focusRing: { color: "{focus.ring.color}", shadow: "0 0 0 0.2rem color-mix(in srgb, {green.500}, transparent 80%)" } }, outlined: { color: "{green.500}", borderColor: "{green.500}" }, simple: { color: "{green.500}" } }, warn: { background: "color-mix(in srgb, {yellow.500}, transparent 84%)", borderColor: "transparent", color: "{yellow.500}", shadow: "none", closeButton: { hoverBackground: "rgba(255, 255, 255, 0.05)", focusRing: { color: "{focus.ring.color}", shadow: "0 0 0 0.2rem color-mix(in srgb, {yellow.500}, transparent 80%)" } }, outlined: { color: "{yellow.500}", borderColor: "{yellow.500}" }, simple: { color: "{yellow.500}" } }, error: { background: "color-mix(in srgb, {red.500}, transparent 84%)", borderColor: "transparent", color: "{red.500}", shadow: "none", closeButton: { hoverBackground: "rgba(255, 255, 255, 0.05)", focusRing: { color: "{focus.ring.color}", shadow: "0 0 0 0.2rem color-mix(in srgb, {red.500}, transparent 80%)" } }, outlined: { color: "{red.500}", borderColor: "{red.500}" }, simple: { color: "{red.500}" } }, secondary: { background: "{surface.800}", borderColor: "transparent", color: "{surface.300}", shadow: "none", closeButton: { hoverBackground: "{surface.700}", focusRing: { color: "{focus.ring.color}", shadow: "0 0 0 0.2rem color-mix(in srgb, {surface.300}, transparent 80%)" } }, outlined: { color: "{surface.400}", borderColor: "{surface.400}" }, simple: { color: "{surface.400}" } }, contrast: { background: "{surface.0}", borderColor: "transparent", color: "{surface.950}", shadow: "none", closeButton: { hoverBackground: "{surface.100}", focusRing: { color: "{focus.ring.color}", shadow: "0 0 0 0.2rem color-mix(in srgb, {surface.950}, transparent 80%)" } }, outlined: { color: "{surface.0}", borderColor: "{surface.0}" }, simple: { color: "{surface.0}" } } } }, Hs = { root: Os, content: Es, text: Ls, icon: Ns, closeButton: Ws, closeIcon: Fs, outlined: Ds, simple: Us, colorScheme: zs }, js = { borderRadius: "{content.border.radius}", gap: "1rem" }, Ms = { background: "{content.border.color}", size: "0.625rem" }, qs = { gap: "0.5rem" }, Vs = { size: "0.5rem" }, Gs = { size: "1rem" }, Ys = { verticalGap: "0.5rem", horizontalGap: "1rem" }, Qs = { root: js, meters: Ms, label: qs, labelMarker: Vs, labelIcon: Gs, labelList: Ys }, Xs = { background: "{form.field.background}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", filledHoverBackground: "{form.field.filled.hover.background}", filledFocusBackground: "{form.field.filled.focus.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.focus.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", color: "{form.field.color}", disabledColor: "{form.field.disabled.color}", placeholderColor: "{form.field.placeholder.color}", invalidPlaceholderColor: "{form.field.invalid.placeholder.color}", shadow: "{form.field.shadow}", paddingX: "{form.field.padding.x}", paddingY: "{form.field.padding.y}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}", sm: { fontSize: "{form.field.sm.font.size}", paddingX: "{form.field.sm.padding.x}", paddingY: "{form.field.sm.padding.y}" }, lg: { fontSize: "{form.field.lg.font.size}", paddingX: "{form.field.lg.padding.x}", paddingY: "{form.field.lg.padding.y}" } }, Ks = { width: "2.5rem", color: "{form.field.icon.color}" }, Js = { background: "{overlay.select.background}", borderColor: "{overlay.select.border.color}", borderRadius: "{overlay.select.border.radius}", color: "{overlay.select.color}", shadow: "{overlay.select.shadow}" }, Zs = { padding: "{list.padding}", gap: "{list.gap}", header: { padding: "{list.header.padding}" } }, ol = { focusBackground: "{list.option.focus.background}", selectedBackground: "{list.option.selected.background}", selectedFocusBackground: "{list.option.selected.focus.background}", color: "{list.option.color}", focusColor: "{list.option.focus.color}", selectedColor: "{list.option.selected.color}", selectedFocusColor: "{list.option.selected.focus.color}", padding: "{list.option.padding}", borderRadius: "{list.option.border.radius}", gap: "0.5rem" }, rl = { background: "{list.option.group.background}", color: "{list.option.group.color}", fontWeight: "{list.option.group.font.weight}", padding: "{list.option.group.padding}" }, el = { color: "{form.field.icon.color}" }, tl = { borderRadius: "{border.radius.sm}" }, nl = { padding: "{list.option.padding}" }, al = { root: Xs, dropdown: Ks, overlay: Js, list: Zs, option: ol, optionGroup: rl, chip: tl, clearIcon: el, emptyMessage: nl }, il = { gap: "1.125rem" }, dl = { gap: "0.5rem" }, cl = { root: il, controls: dl }, sl = { gutter: "0.75rem", transitionDuration: "{transition.duration}" }, ll = { background: "{content.background}", hoverBackground: "{content.hover.background}", selectedBackground: "{highlight.background}", borderColor: "{content.border.color}", color: "{content.color}", selectedColor: "{highlight.color}", hoverColor: "{content.hover.color}", padding: "1rem 1.25rem", toggleablePadding: "1rem 1.25rem 1.5rem 1.25rem", borderRadius: "{content.border.radius}" }, ul = { background: "{content.background}", hoverBackground: "{content.hover.background}", borderColor: "{content.border.color}", color: "{text.muted.color}", hoverColor: "{text.color}", size: "1.75rem", borderRadius: "50%", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, fl = { color: "{content.border.color}", borderRadius: "{content.border.radius}", height: "24px" }, gl = { root: sl, node: ll, nodeToggleButton: ul, connector: fl }, pl = { outline: { width: "2px", color: "{content.background}" } }, ml = { root: pl }, hl = { padding: "0.5rem 1rem", gap: "0.25rem", borderRadius: "{content.border.radius}", background: "{content.background}", color: "{content.color}", transitionDuration: "{transition.duration}" }, bl = { background: "transparent", hoverBackground: "{content.hover.background}", selectedBackground: "{highlight.background}", color: "{text.muted.color}", hoverColor: "{text.hover.muted.color}", selectedColor: "{highlight.color}", width: "2.5rem", height: "2.5rem", borderRadius: "50%", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, vl = { color: "{text.muted.color}" }, kl = { maxWidth: "2.5rem" }, yl = { root: hl, navButton: bl, currentPageReport: vl, jumpToPageInput: kl }, wl = { background: "{content.background}", borderColor: "{content.border.color}", borderRadius: "{content.border.radius}", color: "{content.color}" }, Cl = { borderWidth: "0 0 1px 0", borderColor: "{content.border.color}", padding: "1.125rem", borderRadius: "5px 5px 0 0" }, xl = { padding: "0.25rem 1.125rem" }, $l = { fontWeight: "700" }, Rl = { padding: "1.125rem" }, Bl = { padding: "1.125rem" }, Il = { light: { header: { background: "{surface.50}", color: "{text.color}" } }, dark: { header: { background: "{surface.800}", color: "{text.color}" } } }, _l = { root: wl, header: Cl, toggleableHeader: xl, title: $l, content: Rl, footer: Bl, colorScheme: Il }, Sl = { gap: "0", transitionDuration: "{transition.duration}" }, Pl = { background: "{content.background}", borderColor: "{content.border.color}", borderWidth: "1px", color: "{content.color}", padding: "0.25rem 0.25rem", borderRadius: "0", first: { borderWidth: "1px 1px 0 1px", topBorderRadius: "{content.border.radius}" }, last: { borderWidth: "0 1px 1px 1px", bottomBorderRadius: "{content.border.radius}" } }, Tl = { focusBackground: "{navigation.item.focus.background}", color: "{navigation.item.color}", focusColor: "{navigation.item.focus.color}", gap: "0.5rem", padding: "{navigation.item.padding}", borderRadius: "{content.border.radius}", icon: { color: "{navigation.item.icon.color}", focusColor: "{navigation.item.icon.focus.color}" } }, Al = { indent: "1rem" }, Ol = { color: "{navigation.submenu.icon.color}", focusColor: "{navigation.submenu.icon.focus.color}" }, El = { root: Sl, panel: Pl, item: Tl, submenu: Al, submenuIcon: Ol }, Ll = { background: "{content.border.color}", borderRadius: "{content.border.radius}", height: ".75rem" }, Nl = { color: "{form.field.icon.color}" }, Wl = { background: "{overlay.popover.background}", borderColor: "{overlay.popover.border.color}", borderRadius: "{overlay.popover.border.radius}", color: "{overlay.popover.color}", padding: "{overlay.popover.padding}", shadow: "{overlay.popover.shadow}" }, Fl = { gap: "0.75rem" }, Dl = { light: { strength: { weakBackground: "{red.500}", mediumBackground: "{amber.500}", strongBackground: "{green.500}" } }, dark: { strength: { weakBackground: "{red.400}", mediumBackground: "{amber.400}", strongBackground: "{green.400}" } } }, Ul = { meter: Ll, icon: Nl, overlay: Wl, content: Fl, colorScheme: Dl }, zl = { gap: "1.125rem" }, Hl = { gap: "0.5rem" }, jl = { root: zl, controls: Hl }, Ml = { background: "{overlay.popover.background}", borderColor: "{overlay.popover.border.color}", color: "{overlay.popover.color}", borderRadius: "{overlay.popover.border.radius}", shadow: "{overlay.popover.shadow}", gutter: "10px", arrowOffset: "1.25rem" }, ql = { padding: "{overlay.popover.padding}" }, Vl = { root: Ml, content: ql }, Gl = { background: "{content.border.color}", borderRadius: "{content.border.radius}", height: "1.5rem" }, Yl = { background: "{primary.color}" }, Ql = { color: "{primary.contrast.color}", fontSize: "0.875rem", fontWeight: "600" }, Xl = { root: Gl, value: Yl, label: Ql }, Kl = { light: { root: { colorOne: "{pink.500}", colorTwo: "{sky.500}", colorThree: "{emerald.500}", colorFour: "{amber.500}" } }, dark: { root: { colorOne: "{pink.400}", colorTwo: "{sky.400}", colorThree: "{emerald.400}", colorFour: "{amber.400}" } } }, Jl = { colorScheme: Kl }, Zl = { width: "1.5rem", height: "1.5rem", background: "{form.field.background}", checkedBackground: "{primary.color}", checkedHoverBackground: "{primary.hover.color}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.focus.border.color}", checkedBorderColor: "{primary.color}", checkedHoverBorderColor: "{primary.hover.color}", checkedFocusBorderColor: "{primary.color}", checkedDisabledBorderColor: "{form.field.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", shadow: "{form.field.shadow}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}", sm: { width: "1.25rem", height: "1.25rem" }, lg: { width: "1.75rem", height: "1.75rem" } }, ou = { size: "1rem", checkedColor: "{primary.contrast.color}", checkedHoverColor: "{primary.contrast.color}", disabledColor: "{form.field.disabled.color}", sm: { size: "0.75rem" }, lg: { size: "1.25rem" } }, ru = { root: Zl, icon: ou }, eu = { gap: "0.25rem", transitionDuration: "{transition.duration}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, tu = { size: "1.25rem", color: "{text.muted.color}", hoverColor: "{primary.color}", activeColor: "{primary.color}" }, nu = { root: eu, icon: tu }, au = { light: { root: { background: "rgba(0,0,0,0.1)" } }, dark: { root: { background: "rgba(255,255,255,0.3)" } } }, iu = { colorScheme: au }, du = { transitionDuration: "{transition.duration}" }, cu = { size: "9px", borderRadius: "{border.radius.sm}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, su = { light: { bar: { background: "{surface.200}" } }, dark: { bar: { background: "{surface.700}" } } }, lu = { root: du, bar: cu, colorScheme: su }, uu = { background: "{form.field.background}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", filledHoverBackground: "{form.field.filled.hover.background}", filledFocusBackground: "{form.field.filled.focus.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.focus.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", color: "{form.field.color}", disabledColor: "{form.field.disabled.color}", placeholderColor: "{form.field.placeholder.color}", invalidPlaceholderColor: "{form.field.invalid.placeholder.color}", shadow: "{form.field.shadow}", paddingX: "{form.field.padding.x}", paddingY: "{form.field.padding.y}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}", sm: { fontSize: "{form.field.sm.font.size}", paddingX: "{form.field.sm.padding.x}", paddingY: "{form.field.sm.padding.y}" }, lg: { fontSize: "{form.field.lg.font.size}", paddingX: "{form.field.lg.padding.x}", paddingY: "{form.field.lg.padding.y}" } }, fu = { width: "2.5rem", color: "{form.field.icon.color}" }, gu = { background: "{overlay.select.background}", borderColor: "{overlay.select.border.color}", borderRadius: "{overlay.select.border.radius}", color: "{overlay.select.color}", shadow: "{overlay.select.shadow}" }, pu = { padding: "{list.padding}", gap: "{list.gap}", header: { padding: "{list.header.padding}" } }, mu = { focusBackground: "{list.option.focus.background}", selectedBackground: "{list.option.selected.background}", selectedFocusBackground: "{list.option.selected.focus.background}", color: "{list.option.color}", focusColor: "{list.option.focus.color}", selectedColor: "{list.option.selected.color}", selectedFocusColor: "{list.option.selected.focus.color}", padding: "{list.option.padding}", borderRadius: "{list.option.border.radius}" }, hu = { background: "{list.option.group.background}", color: "{list.option.group.color}", fontWeight: "{list.option.group.font.weight}", padding: "{list.option.group.padding}" }, bu = { color: "{form.field.icon.color}" }, vu = { color: "{list.option.color}", gutterStart: "-0.5rem", gutterEnd: "0.5rem" }, ku = { padding: "{list.option.padding}" }, yu = { root: uu, dropdown: fu, overlay: gu, list: pu, option: mu, optionGroup: hu, clearIcon: bu, checkmark: vu, emptyMessage: ku }, wu = { borderRadius: "{form.field.border.radius}" }, Cu = { light: { root: { invalidBorderColor: "{form.field.invalid.border.color}" } }, dark: { root: { invalidBorderColor: "{form.field.invalid.border.color}" } } }, xu = { root: wu, colorScheme: Cu }, $u = { borderRadius: "{content.border.radius}" }, Ru = { light: { root: { background: "{surface.200}", animationBackground: "rgba(255,255,255,0.4)" } }, dark: { root: { background: "rgba(255, 255, 255, 0.06)", animationBackground: "rgba(255, 255, 255, 0.04)" } } }, Bu = { root: $u, colorScheme: Ru }, Iu = { transitionDuration: "{transition.duration}" }, _u = { background: "{content.border.color}", borderRadius: "{content.border.radius}", size: "3px" }, Su = { background: "{primary.color}" }, Pu = { width: "16px", height: "16px", borderRadius: "50%", background: "{primary.color}", hoverBackground: "{primary.color}", content: { borderRadius: "50%", hoverBackground: "{primary.color}", width: "12px", height: "12px", shadow: "none" }, focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" } }, Tu = { light: { handle: { content: { background: "{surface.0}" } } }, dark: { handle: { content: { background: "{surface.950}" } } } }, Au = { root: Iu, track: _u, range: Su, handle: Pu, colorScheme: Tu }, Ou = { gap: "0.5rem", transitionDuration: "{transition.duration}" }, Eu = { root: Ou }, Lu = { borderRadius: "{form.field.border.radius}", roundedBorderRadius: "2rem", raisedShadow: "0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12)" }, Nu = { root: Lu }, Wu = { background: "{content.background}", borderColor: "{content.border.color}", color: "{content.color}", transitionDuration: "{transition.duration}" }, Fu = { background: "{content.border.color}" }, Du = { size: "24px", borderRadius: "{content.border.radius}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, Uu = { light: { handle: { background: "{surface.400}" } }, dark: { handle: { background: "{surface.600}" } } }, zu = { root: Wu, gutter: Fu, handle: Du, colorScheme: Uu }, Hu = { transitionDuration: "{transition.duration}" }, ju = { background: "{content.border.color}", activeBackground: "{primary.color}", margin: "0 0 0 1.625rem", size: "2px" }, Mu = { padding: "0.5rem", gap: "1rem" }, qu = { padding: "0", borderRadius: "{content.border.radius}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" }, gap: "0.5rem" }, Vu = { color: "{text.muted.color}", activeColor: "{primary.color}", fontWeight: "500" }, Gu = { background: "{content.background}", activeBackground: "{primary.color}", borderColor: "{content.border.color}", activeBorderColor: "{primary.color}", color: "{text.muted.color}", activeColor: "{primary.contrast.color}", size: "2.25rem", fontSize: "1.125rem", fontWeight: "500", borderRadius: "50%", shadow: "none" }, Yu = { padding: "0.875rem 0.5rem 1.125rem 0.5rem" }, Qu = { background: "{content.background}", color: "{content.color}", padding: "0", indent: "1rem" }, Xu = { root: Hu, separator: ju, step: Mu, stepHeader: qu, stepTitle: Vu, stepNumber: Gu, steppanels: Yu, steppanel: Qu }, Ku = { transitionDuration: "{transition.duration}" }, Ju = { background: "{content.border.color}" }, Zu = { borderRadius: "{content.border.radius}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" }, gap: "0.5rem" }, of = { color: "{text.muted.color}", activeColor: "{primary.color}", fontWeight: "500" }, rf = { background: "{content.background}", activeBackground: "{primary.color}", borderColor: "{content.border.color}", activeBorderColor: "{primary.color}", color: "{text.muted.color}", activeColor: "{primary.contrast.color}", size: "2.25rem", fontSize: "1.125rem", fontWeight: "500", borderRadius: "50%", shadow: "none" }, ef = { root: Ku, separator: Ju, itemLink: Zu, itemLabel: of, itemNumber: rf }, tf = { transitionDuration: "{transition.duration}" }, nf = { borderWidth: "0", background: "{content.background}", borderColor: "{content.border.color}" }, af = { borderWidth: "2px 0 0 0", borderColor: "transparent", hoverBorderColor: "transparent", activeBorderColor: "{primary.color}", color: "{text.muted.color}", hoverColor: "{text.color}", activeColor: "{primary.color}", padding: "1rem 1.25rem", fontWeight: "600", margin: "0", gap: "0.5rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, df = { color: "{text.muted.color}", hoverColor: "{text.color}", activeColor: "{primary.color}" }, cf = { height: "0", bottom: "0", background: "transparent" }, sf = { light: { item: { background: "{surface.50}", hoverBackground: "{surface.100}", activeBackground: "{surface.0}" } }, dark: { item: { background: "{surface.800}", hoverBackground: "{surface.700}", activeBackground: "{surface.900}" } } }, lf = { root: tf, tablist: nf, item: af, itemIcon: df, activeBar: cf, colorScheme: sf }, uf = { transitionDuration: "{transition.duration}" }, ff = { borderWidth: "0", background: "{content.background}", borderColor: "{content.border.color}" }, gf = { borderWidth: "2px 0 0 0", borderColor: "transparent", hoverBorderColor: "transparent", activeBorderColor: "{primary.color}", color: "{text.muted.color}", hoverColor: "{text.color}", activeColor: "{primary.color}", padding: "1rem 1.25rem", fontWeight: "700", margin: "0", gap: "0.5rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "inset {focus.ring.shadow}" } }, pf = { background: "{content.background}", color: "{content.color}", padding: "0.875rem 1.125rem 1.125rem 1.125rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "inset {focus.ring.shadow}" } }, mf = { background: "{content.background}", color: "{text.muted.color}", hoverColor: "{text.color}", width: "2.5rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "inset {focus.ring.shadow}" } }, hf = { height: "0", bottom: "0", background: "transparent" }, bf = { light: { navButton: { shadow: "0px 0px 10px 50px rgba(255, 255, 255, 0.6)" }, tab: { background: "{surface.50}", hoverBackground: "{surface.100}", activeBackground: "{surface.0}" } }, dark: { navButton: { shadow: "0px 0px 10px 50px color-mix(in srgb, {content.background}, transparent 50%)" }, tab: { background: "{surface.800}", hoverBackground: "{surface.700}", activeBackground: "{surface.900}" } } }, vf = { root: uf, tablist: ff, tab: gf, tabpanel: pf, navButton: mf, activeBar: hf, colorScheme: bf }, kf = { transitionDuration: "{transition.duration}" }, yf = { background: "{content.background}", borderColor: "{content.border.color}" }, wf = { borderColor: "{content.border.color}", activeBorderColor: "{primary.color}", color: "{text.muted.color}", hoverColor: "{text.color}", activeColor: "{primary.color}" }, Cf = { background: "{content.background}", color: "{content.color}" }, xf = { background: "{content.background}", color: "{text.muted.color}", hoverColor: "{text.color}" }, $f = { light: { navButton: { shadow: "0px 0px 10px 50px rgba(255, 255, 255, 0.6)" } }, dark: { navButton: { shadow: "0px 0px 10px 50px color-mix(in srgb, {content.background}, transparent 50%)" } } }, Rf = { root: kf, tabList: yf, tab: wf, tabPanel: Cf, navButton: xf, colorScheme: $f }, Bf = { fontSize: "0.875rem", fontWeight: "700", padding: "0.25rem 0.5rem", gap: "0.25rem", borderRadius: "{content.border.radius}", roundedBorderRadius: "{border.radius.xl}" }, If = { size: "0.75rem" }, _f = { light: { primary: { background: "{primary.color}", color: "{primary.contrast.color}" }, secondary: { background: "{surface.100}", color: "{surface.600}" }, success: { background: "{green.500}", color: "{surface.0}" }, info: { background: "{sky.500}", color: "{surface.0}" }, warn: { background: "{orange.500}", color: "{surface.0}" }, danger: { background: "{red.500}", color: "{surface.0}" }, contrast: { background: "{surface.950}", color: "{surface.0}" } }, dark: { primary: { background: "{primary.color}", color: "{primary.contrast.color}" }, secondary: { background: "{surface.800}", color: "{surface.300}" }, success: { background: "{green.400}", color: "{green.950}" }, info: { background: "{sky.400}", color: "{sky.950}" }, warn: { background: "{orange.400}", color: "{orange.950}" }, danger: { background: "{red.400}", color: "{red.950}" }, contrast: { background: "{surface.0}", color: "{surface.950}" } } }, Sf = { root: Bf, icon: If, colorScheme: _f }, Pf = { background: "{form.field.background}", borderColor: "{form.field.border.color}", color: "{form.field.color}", height: "18rem", padding: "{form.field.padding.y} {form.field.padding.x}", borderRadius: "{form.field.border.radius}" }, Tf = { gap: "0.25rem" }, Af = { margin: "2px 0" }, Of = { root: Pf, prompt: Tf, commandResponse: Af }, Ef = { background: "{form.field.background}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", filledHoverBackground: "{form.field.filled.hover.background}", filledFocusBackground: "{form.field.filled.focus.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.focus.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", color: "{form.field.color}", disabledColor: "{form.field.disabled.color}", placeholderColor: "{form.field.placeholder.color}", invalidPlaceholderColor: "{form.field.invalid.placeholder.color}", shadow: "{form.field.shadow}", paddingX: "{form.field.padding.x}", paddingY: "{form.field.padding.y}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}", sm: { fontSize: "{form.field.sm.font.size}", paddingX: "{form.field.sm.padding.x}", paddingY: "{form.field.sm.padding.y}" }, lg: { fontSize: "{form.field.lg.font.size}", paddingX: "{form.field.lg.padding.x}", paddingY: "{form.field.lg.padding.y}" } }, Lf = { root: Ef }, Nf = { background: "{content.background}", borderColor: "{content.border.color}", color: "{content.color}", borderRadius: "{content.border.radius}", shadow: "{overlay.navigation.shadow}", transitionDuration: "{transition.duration}" }, Wf = { padding: "{navigation.list.padding}", gap: "{navigation.list.gap}" }, Ff = { focusBackground: "{navigation.item.focus.background}", activeBackground: "{navigation.item.active.background}", color: "{navigation.item.color}", focusColor: "{navigation.item.focus.color}", activeColor: "{navigation.item.active.color}", padding: "{navigation.item.padding}", borderRadius: "{navigation.item.border.radius}", gap: "{navigation.item.gap}", icon: { color: "{navigation.item.icon.color}", focusColor: "{navigation.item.icon.focus.color}", activeColor: "{navigation.item.icon.active.color}" } }, Df = { mobileIndent: "1.25rem" }, Uf = { size: "{navigation.submenu.icon.size}", color: "{navigation.submenu.icon.color}", focusColor: "{navigation.submenu.icon.focus.color}", activeColor: "{navigation.submenu.icon.active.color}" }, zf = { borderColor: "{content.border.color}" }, Hf = { root: Nf, list: Wf, item: Ff, submenu: Df, submenuIcon: Uf, separator: zf }, jf = { minHeight: "5rem" }, Mf = { eventContent: { padding: "1rem 0" } }, qf = { eventContent: { padding: "0 1rem" } }, Vf = { size: "1.125rem", borderRadius: "50%", borderWidth: "2px", background: "{content.background}", borderColor: "{primary.color}", content: { borderRadius: "50%", size: "0.375rem", background: "transparent", insetShadow: "none" } }, Gf = { color: "{content.border.color}", size: "2px" }, Yf = { event: jf, horizontal: Mf, vertical: qf, eventMarker: Vf, eventConnector: Gf }, Qf = { width: "25rem", borderRadius: "{content.border.radius}", borderWidth: "0 0 0 6px", transitionDuration: "{transition.duration}" }, Xf = { size: "1.25rem" }, Kf = { padding: "{overlay.popover.padding}", gap: "0.5rem" }, Jf = { gap: "0.5rem" }, Zf = { fontWeight: "500", fontSize: "1rem" }, o0 = { fontWeight: "500", fontSize: "0.875rem" }, r0 = { width: "2rem", height: "2rem", borderRadius: "50%", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", offset: "{focus.ring.offset}" } }, e0 = { size: "1rem" }, t0 = { light: { root: { blur: "1.5px" }, info: { background: "color-mix(in srgb, {blue.50}, transparent 5%)", borderColor: "{blue.500}", color: "{blue.600}", detailColor: "{surface.700}", shadow: "{overlay.popover.shadow}", closeButton: { hoverBackground: "{blue.100}", focusRing: { color: "{focus.ring.color}", shadow: "0 0 0 0.2rem {blue.200}" } } }, success: { background: "color-mix(in srgb, {green.50}, transparent 5%)", borderColor: "{green.500}", color: "{green.600}", detailColor: "{surface.700}", shadow: "{overlay.popover.shadow}", closeButton: { hoverBackground: "{green.100}", focusRing: { color: "{focus.ring.color}", shadow: "0 0 0 0.2rem {green.200}" } } }, warn: { background: "color-mix(in srgb,{yellow.50}, transparent 5%)", borderColor: "{yellow.500}", color: "{yellow.600}", detailColor: "{surface.700}", shadow: "{overlay.popover.shadow}", closeButton: { hoverBackground: "{yellow.100}", focusRing: { color: "{focus.ring.color}", shadow: "0 0 0 0.2rem {yellow.200}" } } }, error: { background: "color-mix(in srgb, {red.50}, transparent 5%)", borderColor: "{red.500}", color: "{red.600}", detailColor: "{surface.700}", shadow: "{overlay.popover.shadow}", closeButton: { hoverBackground: "{red.100}", focusRing: { color: "{focus.ring.color}", shadow: "0 0 0 0.2rem {red.200}" } } }, secondary: { background: "{surface.100}", borderColor: "{surface.500}", color: "{surface.600}", detailColor: "{surface.700}", shadow: "{overlay.popover.shadow}", closeButton: { hoverBackground: "{surface.200}", focusRing: { color: "{focus.ring.color}", shadow: "0 0 0 0.2rem {surface.200}" } } }, contrast: { background: "{surface.900}", borderColor: "{primary.color}", color: "{surface.50}", detailColor: "{surface.0}", shadow: "{overlay.popover.shadow}", closeButton: { hoverBackground: "{surface.800}", focusRing: { color: "{focus.ring.color}", shadow: "0 0 0 0.2rem {surface.400}" } } } }, dark: { root: { blur: "10px" }, info: { background: "color-mix(in srgb, {blue.500}, transparent 84%)", borderColor: "color-mix(in srgb, {blue.700}, transparent 64%)", color: "{blue.500}", detailColor: "{surface.0}", shadow: "{overlay.popover.shadow}", closeButton: { hoverBackground: "rgba(255, 255, 255, 0.05)", focusRing: { color: "{focus.ring.color}", shadow: "0 0 0 0.2rem color-mix(in srgb, {blue.500}, transparent 80%)" } } }, success: { background: "color-mix(in srgb, {green.500}, transparent 84%)", borderColor: "color-mix(in srgb, {green.700}, transparent 64%)", color: "{green.500}", detailColor: "{surface.0}", shadow: "{overlay.popover.shadow}", closeButton: { hoverBackground: "rgba(255, 255, 255, 0.05)", focusRing: { color: "{focus.ring.color}", shadow: "0 0 0 0.2rem color-mix(in srgb, {green.500}, transparent 80%)" } } }, warn: { background: "color-mix(in srgb, {yellow.500}, transparent 84%)", borderColor: "color-mix(in srgb, {yellow.700}, transparent 64%)", color: "{yellow.500}", detailColor: "{surface.0}", shadow: "{overlay.popover.shadow}", closeButton: { hoverBackground: "rgba(255, 255, 255, 0.05)", focusRing: { color: "{focus.ring.color}", shadow: "0 0 0 0.2rem color-mix(in srgb, {yellow.500}, transparent 80%)" } } }, error: { background: "color-mix(in srgb, {red.500}, transparent 84%)", borderColor: "color-mix(in srgb, {red.700}, transparent 64%)", color: "{red.500}", detailColor: "{surface.0}", shadow: "{overlay.popover.shadow}", closeButton: { hoverBackground: "rgba(255, 255, 255, 0.05)", focusRing: { color: "{focus.ring.color}", shadow: "0 0 0 0.2rem color-mix(in srgb, {red.500}, transparent 80%)" } } }, secondary: { background: "{surface.800}", borderColor: "{surface.700}", color: "{surface.300}", detailColor: "{surface.0}", shadow: "{overlay.popover.shadow}", closeButton: { hoverBackground: "{surface.700}", focusRing: { color: "{focus.ring.color}", shadow: "0 0 0 0.2rem color-mix(in srgb, {surface.300}, transparent 80%)" } } }, contrast: { background: "{surface.0}", borderColor: "{surface.100}", color: "{surface.950}", detailColor: "{surface.950}", shadow: "{overlay.popover.shadow}", closeButton: { hoverBackground: "{surface.100}", focusRing: { color: "{focus.ring.color}", shadow: "0 0 0 0.2rem color-mix(in srgb, {surface.950}, transparent 80%)" } } } } }, n0 = { root: Qf, icon: Xf, content: Kf, text: Jf, summary: Zf, detail: o0, closeButton: r0, closeIcon: e0, colorScheme: t0 }, a0 = { padding: "0.625rem 1rem", borderRadius: "{content.border.radius}", gap: "0.5rem", fontWeight: "500", background: "{form.field.background}", borderColor: "{form.field.border.color}", color: "{form.field.color}", hoverColor: "{form.field.color}", checkedBackground: "{highlight.background}", checkedColor: "{highlight.color}", checkedBorderColor: "{form.field.border.color}", disabledBackground: "{form.field.disabled.background}", disabledBorderColor: "{form.field.disabled.background}", disabledColor: "{form.field.disabled.color}", invalidBorderColor: "{form.field.invalid.border.color}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}", sm: { fontSize: "{form.field.sm.font.size}", padding: "0.5rem 0.75rem" }, lg: { fontSize: "{form.field.lg.font.size}", padding: "0.75rem 1.25rem" } }, i0 = { color: "{text.muted.color}", hoverColor: "{text.muted.color}", checkedColor: "{highlight.color}", disabledColor: "{form.field.disabled.color}" }, d0 = { checkedBackground: "transparent", checkedShadow: "none", padding: "0", borderRadius: "0", sm: { padding: "0" }, lg: { padding: "0" } }, c0 = { light: { root: { hoverBackground: "{surface.100}" } }, dark: { root: { hoverBackground: "{surface.800}" } } }, s0 = { root: a0, icon: i0, content: d0, colorScheme: c0 }, l0 = { width: "3rem", height: "1.75rem", borderRadius: "30px", gap: "0.25rem", shadow: "{form.field.shadow}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" }, borderWidth: "1px", borderColor: "transparent", hoverBorderColor: "transparent", checkedBorderColor: "transparent", checkedHoverBorderColor: "transparent", invalidBorderColor: "{form.field.invalid.border.color}", transitionDuration: "{form.field.transition.duration}", slideDuration: "0.2s" }, u0 = { borderRadius: "50%", size: "1.25rem" }, f0 = { light: { root: { background: "{surface.300}", disabledBackground: "{form.field.disabled.background}", hoverBackground: "{surface.400}", checkedBackground: "{primary.color}", checkedHoverBackground: "{primary.hover.color}" }, handle: { background: "{surface.0}", disabledBackground: "{form.field.disabled.color}", hoverBackground: "{surface.0}", checkedBackground: "{surface.0}", checkedHoverBackground: "{surface.0}", color: "{text.muted.color}", hoverColor: "{text.color}", checkedColor: "{primary.color}", checkedHoverColor: "{primary.hover.color}" } }, dark: { root: { background: "{surface.700}", disabledBackground: "{surface.600}", hoverBackground: "{surface.600}", checkedBackground: "{primary.color}", checkedHoverBackground: "{primary.hover.color}" }, handle: { background: "{surface.400}", disabledBackground: "{surface.900}", hoverBackground: "{surface.300}", checkedBackground: "{surface.900}", checkedHoverBackground: "{surface.900}", color: "{surface.900}", hoverColor: "{surface.800}", checkedColor: "{primary.color}", checkedHoverColor: "{primary.hover.color}" } } }, g0 = { root: l0, handle: u0, colorScheme: f0 }, p0 = { background: "{content.background}", borderColor: "{content.border.color}", borderRadius: "{content.border.radius}", color: "{content.color}", gap: "0.5rem", padding: "0.75rem" }, m0 = { light: { root: { background: "{surface.50}", color: "{content.color}" } }, dark: { root: { background: "{surface.800}", color: "{content.color}" } } }, h0 = { root: p0, colorScheme: m0 }, b0 = { maxWidth: "12.5rem", gutter: "0.25rem", shadow: "{overlay.popover.shadow}", padding: "0.625rem 0.75rem", borderRadius: "{overlay.popover.border.radius}" }, v0 = { light: { root: { background: "{surface.700}", color: "{surface.0}" } }, dark: { root: { background: "{surface.700}", color: "{surface.0}" } } }, k0 = { root: b0, colorScheme: v0 }, y0 = { background: "{content.background}", color: "{content.color}", padding: "1rem", gap: "2px", indent: "1rem", transitionDuration: "{transition.duration}" }, w0 = { padding: "0.375rem 0.625rem", borderRadius: "{content.border.radius}", hoverBackground: "{content.hover.background}", selectedBackground: "{highlight.background}", color: "{text.color}", hoverColor: "{text.hover.color}", selectedColor: "{highlight.color}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "inset {focus.ring.shadow}" }, gap: "0.25rem" }, C0 = { color: "{text.muted.color}", hoverColor: "{text.hover.muted.color}", selectedColor: "{highlight.color}" }, x0 = { borderRadius: "50%", size: "1.75rem", hoverBackground: "{content.hover.background}", selectedHoverBackground: "{content.background}", color: "{text.muted.color}", hoverColor: "{text.hover.muted.color}", selectedHoverColor: "{primary.color}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, $0 = { size: "2rem" }, R0 = { margin: "0 0 0.5rem 0" }, B0 = { root: y0, node: w0, nodeIcon: C0, nodeToggleButton: x0, loadingIcon: $0, filter: R0 }, I0 = { background: "{form.field.background}", disabledBackground: "{form.field.disabled.background}", filledBackground: "{form.field.filled.background}", filledHoverBackground: "{form.field.filled.hover.background}", filledFocusBackground: "{form.field.filled.focus.background}", borderColor: "{form.field.border.color}", hoverBorderColor: "{form.field.hover.border.color}", focusBorderColor: "{form.field.focus.border.color}", invalidBorderColor: "{form.field.invalid.border.color}", color: "{form.field.color}", disabledColor: "{form.field.disabled.color}", placeholderColor: "{form.field.placeholder.color}", invalidPlaceholderColor: "{form.field.invalid.placeholder.color}", shadow: "{form.field.shadow}", paddingX: "{form.field.padding.x}", paddingY: "{form.field.padding.y}", borderRadius: "{form.field.border.radius}", focusRing: { width: "{form.field.focus.ring.width}", style: "{form.field.focus.ring.style}", color: "{form.field.focus.ring.color}", offset: "{form.field.focus.ring.offset}", shadow: "{form.field.focus.ring.shadow}" }, transitionDuration: "{form.field.transition.duration}", sm: { fontSize: "{form.field.sm.font.size}", paddingX: "{form.field.sm.padding.x}", paddingY: "{form.field.sm.padding.y}" }, lg: { fontSize: "{form.field.lg.font.size}", paddingX: "{form.field.lg.padding.x}", paddingY: "{form.field.lg.padding.y}" } }, _0 = { width: "2.5rem", color: "{form.field.icon.color}" }, S0 = { background: "{overlay.select.background}", borderColor: "{overlay.select.border.color}", borderRadius: "{overlay.select.border.radius}", color: "{overlay.select.color}", shadow: "{overlay.select.shadow}" }, P0 = { padding: "{list.padding}" }, T0 = { padding: "{list.option.padding}" }, A0 = { borderRadius: "{border.radius.sm}" }, O0 = { color: "{form.field.icon.color}" }, E0 = { root: I0, dropdown: _0, overlay: S0, tree: P0, emptyMessage: T0, chip: A0, clearIcon: O0 }, L0 = { transitionDuration: "{transition.duration}" }, N0 = { borderColor: "{treetable.border.color}", borderWidth: "1px 0 1px 0", padding: "0.75rem 1rem" }, W0 = { selectedBackground: "{highlight.background}", borderColor: "{treetable.border.color}", hoverColor: "{content.hover.color}", selectedColor: "{highlight.color}", gap: "0.5rem", padding: "0.75rem 1rem", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "inset {focus.ring.shadow}" } }, F0 = { fontWeight: "700" }, D0 = { background: "{content.background}", hoverBackground: "{content.hover.background}", selectedBackground: "{highlight.background}", color: "{content.color}", hoverColor: "{sr.hover.color}", selectedColor: "{highlight.color}", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "inset {focus.ring.shadow}" } }, U0 = { borderColor: "{treetable.border.color}", padding: "0.75rem 1rem", gap: "0.5rem" }, z0 = { borderColor: "{treetable.border.color}", padding: "0.75rem 1rem" }, H0 = { fontWeight: "700" }, j0 = { borderColor: "{treetable.border.color}", borderWidth: "0 0 1px 0", padding: "0.75rem 1rem" }, M0 = { width: "0.5rem" }, q0 = { width: "1px", color: "{primary.color}" }, V0 = { color: "{text.muted.color}", hoverColor: "{text.hover.muted.color}", size: "0.875rem" }, G0 = { size: "2rem" }, Y0 = { hoverBackground: "{content.hover.background}", selectedHoverBackground: "{content.background}", color: "{text.muted.color}", hoverColor: "{text.color}", selectedHoverColor: "{primary.color}", size: "1.75rem", borderRadius: "50%", focusRing: { width: "{focus.ring.width}", style: "{focus.ring.style}", color: "{focus.ring.color}", offset: "{focus.ring.offset}", shadow: "{focus.ring.shadow}" } }, Q0 = { borderColor: "{content.border.color}", borderWidth: "0 0 1px 0" }, X0 = { borderColor: "{content.border.color}", borderWidth: "0 0 1px 0" }, K0 = { light: { root: { borderColor: "{content.border.color}" }, header: { background: "{surface.50}", color: "{text.color}" }, headerCell: { background: "{surface.50}", hoverBackground: "{surface.100}", color: "{text.color}" }, footer: { background: "{surface.50}", color: "{text.color}" }, footerCell: { background: "{surface.50}", color: "{text.color}" }, bodyCell: { selectedBorderColor: "{primary.100}" } }, dark: { root: { borderColor: "{surface.800}" }, header: { background: "{surface.800}", color: "{text.color}" }, headerCell: { background: "{surface.800}", hoverBackground: "{surface.700}", color: "{text.color}" }, footer: { background: "{surface.800}", color: "{text.color}" }, footerCell: { background: "{surface.800}", color: "{text.color}" }, bodyCell: { selectedBorderColor: "{primary.900}" } } }, J0 = { root: L0, header: N0, headerCell: W0, columnTitle: F0, row: D0, bodyCell: U0, footerCell: z0, columnFooter: H0, footer: j0, columnResizer: M0, resizeIndicator: q0, sortIcon: V0, loadingIcon: G0, nodeToggleButton: Y0, paginatorTop: Q0, paginatorBottom: X0, colorScheme: K0 }, Z0 = { mask: { background: "{content.background}", color: "{text.muted.color}" }, icon: { size: "2rem" } }, og = { loader: Z0 }, rg = Object.defineProperty, eg = Object.defineProperties, tg = Object.getOwnPropertyDescriptors, jr = Object.getOwnPropertySymbols, ng = Object.prototype.hasOwnProperty, ag = Object.prototype.propertyIsEnumerable, Mr = (o, r, n) => r in o ? rg(o, r, { enumerable: !0, configurable: !0, writable: !0, value: n }) : o[r] = n, qr, ig = (qr = ((o, r) => {
+  for (var n in r || (r = {})) ng.call(r, n) && Mr(o, n, r[n]);
+  if (jr) for (var n of jr(r)) ag.call(r, n) && Mr(o, n, r[n]);
+  return o;
+})({}, da), eg(qr, tg({ components: { accordion: Ln, autocomplete: qn, avatar: Kn, badge: na, blockui: sa, breadcrumb: ga, button: ha, datepicker: nd, card: Ca, carousel: _a, cascadeselect: La, checkbox: Fa, chip: Ma, colorpicker: Qa, confirmdialog: Ja, confirmpopup: ti, contextmenu: li, dataview: Fi, datatable: Pi, dialog: ld, divider: md, dock: vd, drawer: $d, editor: Td, fieldset: Wd, fileupload: Vd, iftalabel: bc, floatlabel: Kd, galleria: fc, iconfield: pc, image: Cc, imagecompare: $c, inlinemessage: Sc, inplace: Ac, inputchips: Nc, inputgroup: Dc, inputnumber: jc, inputotp: Vc, inputtext: Yc, knob: Zc, listbox: ds, megamenu: vs, menu: $s, menubar: As, message: Hs, metergroup: Qs, multiselect: al, orderlist: cl, organizationchart: gl, overlaybadge: ml, popover: Vl, paginator: yl, password: Ul, panel: _l, panelmenu: El, picklist: jl, progressbar: Xl, progressspinner: Jl, radiobutton: ru, rating: nu, ripple: iu, scrollpanel: lu, select: yu, selectbutton: xu, skeleton: Bu, slider: Au, speeddial: Eu, splitter: zu, splitbutton: Nu, stepper: Xu, steps: ef, tabmenu: lf, tabs: vf, tabview: Rf, textarea: Lf, tieredmenu: Hf, tag: Sf, terminal: Of, timeline: Yf, togglebutton: s0, toggleswitch: g0, tree: B0, treeselect: E0, treetable: J0, toast: n0, toolbar: h0, tooltip: k0, virtualscroller: og } })));
+const dg = Sn(ig, {
+  semantic: {
+    primary: {
+      50: "{green.50}",
+      100: "{green.100}",
+      200: "{green.200}",
+      300: "{green.300}",
+      400: "{green.400}",
+      500: "{green.500}",
+      600: "{green.600}",
+      700: "{green.700}",
+      800: "{green.800}",
+      900: "{green.900}",
+      950: "{green.950}"
+    },
+    colorScheme: {
+      light: {
+        surface: {
+          0: "#fff",
+          50: "{amber.50}",
+          100: "{zinc.100}",
+          200: "{zinc.200}",
+          300: "{zinc.300}",
+          400: "{zinc.400}",
+          500: "{zinc.500}",
+          600: "{zinc.600}",
+          700: "{zinc.700}",
+          800: "{zinc.800}",
+          900: "{zinc.900}",
+          950: "{zinc.950}"
+        }
+      },
+      dark: {
+        surface: {
+          0: "{amber.50}",
+          50: "{slate.50}",
+          100: "{slate.50}",
+          200: "{slate.100}",
+          300: "{slate.200}",
+          400: "{slate.300}",
+          500: "{slate.400}",
+          600: "{slate.500}",
+          700: "{slate.600}",
+          800: "{slate.700}",
+          900: "{slate.800}",
+          950: "{slate.950}"
+        }
+      }
+    }
+  },
+  components: {
+    menubar: {
+      colorScheme: {
+        light: {
+          root: {
+            background: "#fff"
+          }
+        },
+        dark: {
+          root: {
+            background: "{surface.900}"
+          }
+        }
+      }
+    }
+  }
+});
+function lg(o) {
+  o.use(_n, {
+    theme: {
+      preset: dg,
+      options: {
+        darkModeSelector: ".dark"
+      }
+    }
+  });
+}
+const ug = (o) => {
+  De.init({
+    appInfo: {
+      appName: o.appInfo.appName,
+      apiDomain: o.appInfo.apiDomain,
+      apiBasePath: o.appInfo.apiBasePath || "/auth"
+    },
+    recipeList: [qo.init(), Ve.init({}), Je.init()]
+  });
+}, fg = {
+  useUserStore: Yr
+}, gg = {
+  routes: vn,
+  setupAuthGuard: kn
 };
 export {
-  lo as baseRouting,
-  ao as initializeSuperTokens,
-  uo as stores
+  gg as baseRouting,
+  ug as initializeSuperTokens,
+  lg as setupPrimeVue,
+  fg as stores
 };
