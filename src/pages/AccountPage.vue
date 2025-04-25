@@ -1,20 +1,18 @@
 <template>
-   <PageLoader :isLoading="isPageLoading">
-      <div class="container flex items-center justify-center w-full">
-         <div v-if="!deleteToken" class="max-w-xl">
-            <h1 class="h1 text-color">Your account</h1>
+   <div class="container flex items-center justify-center w-full">
+      <div v-if="!deleteToken" class="max-w-xl">
+         <h1 class="h1 text-color">Your account</h1>
 
-            <div class="spacing-page-sections">
-               <YourAccount />
-               <ChangeEmail @error="onChangeEmailError" />
-               <DeleteAccountRequest />
-            </div>
-         </div>
-         <div v-else>
-            <DeleteAccountAction :deleteToken="deleteToken" @error="onDeleteAccountError" />
+         <div class="spacing-page-sections">
+            <YourAccount />
+            <ChangeEmail @error="onChangeEmailError" />
+            <DeleteAccountRequest />
          </div>
       </div>
-   </PageLoader>
+      <div v-else>
+         <DeleteAccountAction :deleteToken="deleteToken" @error="onDeleteAccountError" />
+      </div>
+   </div>
 </template>
 
 <script setup lang="ts">

@@ -40,9 +40,27 @@
                         @click="toggleMenu"
                         aria-label="Navigation menu"
                         aria-haspopup="true"
-                        aria-controls="overlay_menu"
+                        aria-controls="overlay_tmenu"
                      />
-                     <Menu ref="menu" id="overlay_menu" :model="mobileItems" popup />
+                     <TieredMenu ref="tieredMenu" id="overlay_tmenu" :model="mobileItems" popup>
+                        <template #item="{ item, props }">
+                           <router-link v-if="item.route" :to="item.route" v-bind="props.action">
+                              <span :class="item.icon" />
+                              <span class="ml-2">{{ item.label }}</span>
+                           </router-link>
+
+                           <!-- Fallback for commands (e.g., sign out) -->
+                           <button
+                              v-else
+                              type="button"
+                              v-bind="props.action"
+                              @click="(e) => item.command?.({ originalEvent: e, item })"
+                           >
+                              <span :class="item.icon" />
+                              <span>{{ item.label }}</span>
+                           </button>
+                        </template>
+                     </TieredMenu>
                   </div>
 
                   <ThemeToggle class="ms-2" />
@@ -54,10 +72,10 @@
 </template>
 
 <script setup lang="ts">
-import Menu from "primevue/menu";
 import Button from "primevue/button";
-import ThemeToggle from "../../components/themeToggle/ThemeToggle.vue";
 import Menubar from "primevue/menubar";
+import TieredMenu from "primevue/tieredmenu";
+import ThemeToggle from "../../components/themeToggle/ThemeToggle.vue";
 import Session from "supertokens-web-js/recipe/session";
 import { useUserStore } from "../../stores/userStore";
 import toastContent from "../../content/generic/toastContent";
@@ -83,11 +101,11 @@ const props = withDefaults(
 // -----------------------------------------
 const userStore = useUserStore();
 const signOutloading = ref(false);
-const menu = ref<InstanceType<typeof Menu> | null>(null);
+const tieredMenu = ref<InstanceType<typeof TieredMenu> | null>(null);
 
 const signInUpItems = ref([
-   { label: "Sign in", icon: "pi pi-sign-in", to: "/signin" },
-   { label: "Sign up", icon: "pi pi-user-plus", to: "/signup" },
+   { label: "Sign in", icon: "pi pi-sign-in", route: "/signin" },
+   { label: "Sign up", icon: "pi pi-user-plus", route: "/signup" },
 ]);
 
 // computed
@@ -120,7 +138,7 @@ const mobileItems = computed(() => {
 // methods
 // -----------------------------------------
 const toggleMenu = (event: Event) => {
-   menu.value?.toggle(event);
+   tieredMenu.value?.toggle(event);
 };
 
 async function onSignout() {

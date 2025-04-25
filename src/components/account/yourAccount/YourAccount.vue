@@ -24,8 +24,8 @@
             </div>
          </div>
          <div class="spacing-elements">
-            <Skeleton height="4rem"></Skeleton>
-            <Skeleton height="4rem"></Skeleton>
+            <Skeleton height="2rem"></Skeleton>
+            <Skeleton height="2rem"></Skeleton>
          </div>
       </template>
    </Card>
@@ -33,6 +33,7 @@
 
 <script setup lang="ts">
 import Card from "primevue/card";
+import Skeleton from "primevue/skeleton";
 import Session from "supertokens-web-js/recipe/session";
 import accountService from "../../../services/account/accountService";
 

@@ -38,13 +38,17 @@
                         {{ invalidCodeText }}
                      </Message>
                   </div>
-                  <Button class="w-fit" type="submit" @click="onCodeSubmit">Submit code</Button>
+                  <Button class="w-fit" type="submit" :loading="isSubmittingCode" @click="onCodeSubmit">
+                     Submit code
+                  </Button>
                </div>
 
                <!-- Code re-send -->
                <div class="spacing-form">
                   <p>If you didnt receive an email, please check your Junk folder or resend another code.</p>
-                  <Button class="w-fit" type="button" @click="onResendCode">Resend code</Button>
+                  <Button class="w-fit" type="button" :loading="isResendingCode" @click="onResendCode">
+                     Resend code
+                  </Button>
                </div>
             </form>
          </template>
@@ -72,6 +76,8 @@ const userMagicCode = ref(""); // user input code
 const isCodeValid = ref<boolean | null>(null);
 const codeInputAttemptCount = ref(0);
 const codeInputAttemptMax = ref(0);
+const isSubmittingCode = ref(false);
+const isResendingCode = ref(false);
 
 // lifecycle
 // -----------------------------------------
@@ -107,6 +113,7 @@ async function onCodeSubmit() {
    }
 
    try {
+      isSubmittingCode.value = true;
       const response = await consumeCode({ userInputCode: userMagicCode.value });
 
       // Success: clear login attempt info
@@ -162,6 +169,8 @@ async function onCodeSubmit() {
          detail: toastContent.error.somethingWentWrong.detail,
          error: error,
       });
+   } finally {
+      isSubmittingCode.value = false;
    }
 }
 
@@ -171,6 +180,7 @@ async function onResendCode() {
    const resendOtpFailedDetail = "Please try again later.";
 
    try {
+      isResendingCode.value = true;
       const response = await resendCode();
       console.log("resend code response: ", response);
 
@@ -206,6 +216,8 @@ async function onResendCode() {
          detail: toastContent.error.somethingWentWrong.detail,
          error,
       });
+   } finally {
+      isResendingCode.value = false;
    }
 }
 
