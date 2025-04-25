@@ -1,39 +1,55 @@
 <template>
-   <Card class="max-w-xl p-12 w-full mx-auto">
-      <template #title>
-         <h1 class="h1 mt-0">Input validation code</h1>
-      </template>
-      <template #content>
-         <form @submit.prevent class="spacing-groups">
-            <div class="spacing-form">
-               <p>
-                  To finish the signup process, enter the code that was emailed to you. Note that the code is
-                  only valid for 10 minutes.
-               </p>
+   <div class="px-4 py-8 sm:p-8">
+      <Card class="max-w-xl p-0 sm:p-12 w-full mx-auto">
+         <template #title>
+            <div class="flex flex-col items-stretch gap-4 sm:flex-row sm:items-start">
+               <!-- reset sign in/up process -->
+               <Button
+                  class="me-4 sm:me-0"
+                  type="button"
+                  variant="outlined"
+                  icon="pi pi-arrow-left"
+                  aria-label="Start over"
+                  @click="onRestartFlow"
+               />
+               <h1 class="h1 mt-0 sm:mt-0">Input validation code</h1>
+            </div>
+         </template>
+         <template #content>
+            <form @submit.prevent class="spacing-groups">
+               <!-- Code input & Submit -->
+               <div class="spacing-form">
+                  <p>
+                     To finish the signup process, enter the code that was emailed to you. Note that the code
+                     is only valid for 10 minutes.
+                  </p>
 
-               <div>
-                  <InputOtp
-                     :length="6"
-                     class="w-50"
-                     v-model="userMagicCode"
-                     type="text"
-                     placeholder="Input email code"
-                     required
-                     :invalid="!isCodeValid"
-                  />
-                  <Message v-if="!isCodeValid" severity="error" size="small" variant="simple">
-                     {{ invalidCodeText }}
-                  </Message>
+                  <div>
+                     <InputOtp
+                        :length="6"
+                        class="w-50"
+                        v-model="userMagicCode"
+                        type="text"
+                        placeholder="Input email code"
+                        required
+                        :invalid="isCodeValid === false"
+                     />
+                     <Message v-if="isCodeValid === false" severity="error" size="small" variant="simple">
+                        {{ invalidCodeText }}
+                     </Message>
+                  </div>
+                  <Button class="w-fit" type="submit" @click="onCodeSubmit">Submit code</Button>
                </div>
-               <Button class="w-fit" type="submit" @click="onCodeSubmit">Submit code</Button>
-            </div>
-            <div class="spacing-form">
-               <p>If you didnt receive an email, please check your Junk folder or resend another code.</p>
-               <Button class="w-fit" type="button" @click="onResendCode">Resend code</Button>
-            </div>
-         </form>
-      </template>
-   </Card>
+
+               <!-- Code re-send -->
+               <div class="spacing-form">
+                  <p>If you didnt receive an email, please check your Junk folder or resend another code.</p>
+                  <Button class="w-fit" type="button" @click="onResendCode">Resend code</Button>
+               </div>
+            </form>
+         </template>
+      </Card>
+   </div>
 </template>
 
 <script setup lang="ts">
@@ -44,7 +60,7 @@ import { resendCode, clearLoginAttemptInfo, consumeCode } from "supertokens-web-
 import toastContent from "../../../content/generic/toastContent";
 import Message from "primevue/message";
 
-const emits = defineEmits(["verificationCodeSuccess", "resendCodeSuccess", "error"]);
+const emits = defineEmits(["verificationCodeSuccess", "resendCodeSuccess", "error", "restartFlow"]);
 
 defineProps<{
    pageAuthType: "Sign in" | "Sign up";
@@ -53,14 +69,27 @@ defineProps<{
 // data
 // -----------------------------------------
 const userMagicCode = ref(""); // user input code
-const isCodeValid = ref(false);
+const isCodeValid = ref<boolean | null>(null);
 const codeInputAttemptCount = ref(0);
 const codeInputAttemptMax = ref(0);
+
+// lifecycle
+// -----------------------------------------
+// reset code validity when the user starts typing
+watch(userMagicCode, () => {
+   if (isCodeValid.value !== null) {
+      isCodeValid.value = null;
+   }
+});
 
 // computed
 // -----------------------------------------
 const invalidCodeText = computed(() => {
-   return `Invalid code. You have ${codeInputAttemptMax.value - codeInputAttemptCount.value} attempts left.`;
+   if (userMagicCode.value.length < 6) {
+      return "Please enter a valid code length";
+   } else {
+      return `Invalid code. You have ${codeInputAttemptMax.value - codeInputAttemptCount.value} attempts left.`;
+   }
 });
 
 // methods
@@ -70,6 +99,12 @@ async function onCodeSubmit() {
    const otpErrorSummary = "Unable to process your OTP code";
    const otpErrorDetail = "Please try again later.";
    isCodeValid.value = false;
+
+   // validate code length
+   if (userMagicCode.value.length < 6) {
+      isCodeValid.value = false;
+      return;
+   }
 
    try {
       const response = await consumeCode({ userInputCode: userMagicCode.value });
@@ -86,6 +121,8 @@ async function onCodeSubmit() {
          else {
             console.info("Existing user signed in successfully");
          }
+
+         isCodeValid.value = true;
 
          emits("verificationCodeSuccess", {
             summary: "Code verified",
@@ -170,6 +207,14 @@ async function onResendCode() {
          error,
       });
    }
+}
+
+function onRestartFlow() {
+   // we clear the login attempt info that was added when the createCode function
+   // was called - so that if the user does a page reload, they will now see the
+   // enter email / phone UI again.
+   clearLoginAttemptInfo();
+   emits("restartFlow");
 }
 </script>
 

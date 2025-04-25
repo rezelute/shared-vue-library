@@ -16,7 +16,19 @@
                   This website offers a Passwordless Sign-In option. Instead of remembering a password, you'll
                   receive a one-time code via email each time you sign in.
                </p>
-               <Textbox v-model="email" placeholder="Email" required />
+               <div>
+                  {{ isEmailValid }}
+                  <Textbox
+                     v-model="email"
+                     :invalid="!isEmailValid"
+                     placeholder="Email"
+                     required
+                     class="w-full"
+                  />
+                  <Message v-if="isEmailValid === false" severity="error" size="small" variant="simple">
+                     {{ emailInvalidText }}
+                  </Message>
+               </div>
                <Button
                   :label="pageAuthType"
                   submit="submit"
@@ -36,6 +48,8 @@ import Textbox from "primevue/inputtext";
 import Button from "primevue/button";
 import { createCode } from "supertokens-web-js/recipe/passwordless";
 import toastContent from "../../../content/generic/toastContent";
+import { validateEmail } from "../../../utils/validation";
+import Message from "primevue/message";
 
 const emits = defineEmits(["sendCodeSuccess", "error"]);
 
@@ -47,12 +61,17 @@ defineProps<{
 // -----------------------------------------
 const signingUpLoading = ref(false);
 const email = ref("mytestemail1235667@gmail.com"); // todo: remove this
+const isEmailValid = ref<boolean | null>(null);
+const emailInvalidText = "Please enter a valid email address";
 
 // methods
 // -----------------------------------------
 /** If the email is valid, we will send an OTP code by email */
 async function onSignupStart() {
-   // TODO: validate email
+   isEmailValid.value = validateEmail(email.value);
+   if (!isEmailValid.value) {
+      return;
+   }
 
    try {
       signingUpLoading.value = true;

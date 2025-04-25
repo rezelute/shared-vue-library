@@ -1,6 +1,6 @@
 <template>
    <header class="bg-surface-0 dark:bg-surface-900">
-      <div class="container border">
+      <div class="container">
          <Menubar :model="[]">
             <template #start>
                <Button asChild v-slot="slotProps" variant="link">

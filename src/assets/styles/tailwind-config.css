@@ -61,13 +61,13 @@
    /* === TEXT === */
    /* H1 - Mainly used for page headings */
    .h1 {
-      @apply text-4xl font-medium mb-10;
+      @apply text-2xl sm:text-4xl font-medium mb-10;
    }
    .h2 {
-      @apply text-2xl font-medium mb-4;
+      @apply text-xl sm:text-2xl font-medium mb-4;
    }
    .h3 {
-      @apply text-xl font-medium;
+      @apply text-lg sm:text-xl font-medium;
    }
    label {
       @apply text-base;

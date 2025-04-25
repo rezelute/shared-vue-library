@@ -15,7 +15,7 @@ function onSignInUpError(param: EmitError) {
       severity: "error",
       summary: param.summary,
       detail: param.detail,
-      // life: 0,
+      life: 0,
       error: param.error,
    });
 }

@@ -11,6 +11,7 @@
          :pageAuthType="pageAuthType"
          @verificationCodeSuccess="onVerificationCodeSuccess"
          @resendCodeSuccess="onResendCodeSuccess"
+         @restartFlow="() => (showMagicInputCode = false)"
          @error="onVerifyCodeError"
       />
    </PageLoader>
