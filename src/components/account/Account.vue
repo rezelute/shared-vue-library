@@ -1,57 +1,32 @@
 <template>
    <div v-if="!deleteToken" class="max-w-xl">
-      <h1 class="h1 text-color">Your account</h1>
+      <slot id="header">
+         <h1 class="h1 text-color">Your account</h1>
+      </slot>
 
       <div class="spacing-page-sections">
-         <YourAccount />
-         <ChangeEmail @error="onChangeEmailError" />
-         <DeleteAccountRequest />
+         <UserAccountInfo />
+         <ChangeEmail @error="(...args) => $emit('changeEmailError', ...args)" />
+         <DeleteAccountRequest @error="(...args) => $emit('deleteAccountRequestError', ...args)" />
       </div>
    </div>
    <div v-else>
-      <DeleteAccountAction :deleteToken="deleteToken" @error="onDeleteAccountError" />
+      <DeleteAccountAction
+         :deleteToken="deleteToken"
+         @error="(...args) => $emit('deleteAccountError', ...args)"
+      />
    </div>
 </template>
 
 <script setup lang="ts">
-import ChangeEmail from "../components/account/changeEmail/ChangeEmail.vue";
-import DeleteAccountRequest from "../components/account/deleteAccount/DeleteAccountRequest.vue";
-import DeleteAccountAction from "../components/account/deleteAccount/DeleteAccountAction.vue";
-import YourAccount from "../components/account/YourAccount.vue";
-import PageLoader from "../components/pageLoader/PageLoader.vue";
-import useToast from "../composables/toast";
+import ChangeEmail from "./ChangeEmail.vue";
+import DeleteAccountRequest from "./DeleteAccountRequest.vue";
+import DeleteAccountAction from "./DeleteAccountAction.vue";
+import UserAccountInfo from "./UserAccountInfo.vue";
 
-const { addToast } = useToast();
-const route = useRoute();
-
-// data
-// -----------------------------------------
-// const isUserAccountLoading = ref(true);
-
-const deleteToken = ref(route.query.del_token as string | undefined);
-
-// methods
-// -----------------------------------------
-function onDeleteAccountError(error: any) {
-   addToast({
-      severity: "error",
-      summary: error.summary,
-      detail: error.detail,
-      life: 0,
-      error,
-   });
-
-   deleteToken.value = undefined;
-}
-
-function onChangeEmailError(error: any) {
-   addToast({
-      severity: "error",
-      summary: error.summary,
-      detail: error.detail,
-      error,
-   });
-}
+defineProps<{
+   deleteToken?: string | undefined;
+}>();
 </script>
 
 <style scoped></style>

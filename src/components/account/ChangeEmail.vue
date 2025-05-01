@@ -38,9 +38,9 @@
 import Card from "primevue/card";
 import Button from "primevue/button";
 import InputText from "primevue/inputtext";
-import accountService from "../../../services/account/accountService";
-import ActionConfirmMsg from "../../../components/actionConfirmMsg/ActionConfirmMsg.vue";
-import toastContent from "../../../content/generic/toastContent";
+import accountService from "../../services/account/accountService";
+import ActionConfirmMsg from "../../components/actionConfirmMsg/ActionConfirmMsg.vue";
+import toastContent from "../../content/generic/toastContent";
 
 const emits = defineEmits(["error"]);
 

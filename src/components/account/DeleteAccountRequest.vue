@@ -27,9 +27,9 @@
 <script setup lang="ts">
 import Card from "primevue/card";
 import Button from "primevue/button";
-import accountService from "../../../services/account/accountService";
-import ActionConfirmMsg from "../../../components/actionConfirmMsg/ActionConfirmMsg.vue";
-import toastContent from "../../../content/generic/toastContent";
+import accountService from "../../services/account/accountService";
+import ActionConfirmMsg from "../../components/actionConfirmMsg/ActionConfirmMsg.vue";
+import toastContent from "../../content/generic/toastContent";
 
 const emits = defineEmits(["error"]);
 

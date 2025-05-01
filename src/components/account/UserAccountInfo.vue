@@ -1,5 +1,5 @@
 <template>
-   <Card v-if="userId || userEmail">
+   <Card v-if="(!isLoading && (userId || userEmail)) || isLoading">
       <template #title>
          <h2 class="h2">Your details</h2>
       </template>
@@ -23,6 +23,7 @@
                </div>
             </div>
          </div>
+         <!-- loading -->
          <div v-else class="spacing-elements">
             <Skeleton height="2rem"></Skeleton>
             <Skeleton height="2rem"></Skeleton>
@@ -37,7 +38,6 @@ import Skeleton from "primevue/skeleton";
 import Session from "supertokens-web-js/recipe/session";
 import accountService from "../../services/account/accountService";
 
-const emits = defineEmits(["error"]);
 const userId = ref("");
 const userEmail = ref("");
 const isLoading = ref(false);
@@ -51,9 +51,6 @@ onMounted(() => {
 // methods
 // -----------------------------------------
 async function getUserInfo() {
-   const userFetchErrorSummary = "Error fetching user info";
-   const userFetchErrorDetail = "Please try again later.";
-
    try {
       isLoading.value = true;
 
@@ -67,13 +64,8 @@ async function getUserInfo() {
       const data = await response.json();
       userEmail.value = data.email;
    } catch (error) {
-      emits("error", {
-         type: "unexpected",
-         summary: userFetchErrorSummary,
-         detail: userFetchErrorDetail,
-         error,
-      });
-      console.error("Error fetching user email: ", error);
+      // console error but we dont emit an error to the parent, we just hide the whole section
+      console.error("Error fetching user getUserInfo: ", error);
    } finally {
       isLoading.value = false;
    }

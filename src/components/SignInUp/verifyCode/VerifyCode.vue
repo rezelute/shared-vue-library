@@ -93,7 +93,11 @@ watch(userMagicCode, () => {
 const invalidCodeText = computed(() => {
    if (userMagicCode.value.length < 6) {
       return "Please enter a valid code length";
-   } else {
+   } else if (
+      codeInputAttemptMax.value > 0 &&
+      codeInputAttemptCount.value > 0 &&
+      codeInputAttemptCount.value < codeInputAttemptMax.value
+   ) {
       return `Invalid code. You have ${codeInputAttemptMax.value - codeInputAttemptCount.value} attempts left.`;
    }
 });
@@ -104,7 +108,7 @@ const invalidCodeText = computed(() => {
 async function onCodeSubmit() {
    const otpErrorSummary = "Unable to process your OTP code";
    const otpErrorDetail = "Please try again later.";
-   isCodeValid.value = false;
+   isCodeValid.value = true;
 
    // validate code length
    if (userMagicCode.value.length < 6) {

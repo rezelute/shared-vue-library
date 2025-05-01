@@ -4,13 +4,13 @@
          v-if="!showMagicInputCode"
          :pageAuthType="pageAuthType"
          @sendCodeSuccess="() => (showMagicInputCode = true)"
-         @error="onSignInUpError"
+         @error="(...args) => $emit('error', ...args)"
       />
       <VerifyCode
          v-else
          :pageAuthType="pageAuthType"
          @verificationCodeSuccess="onVerificationCodeSuccess"
-         @resendCodeSuccess="onResendCodeSuccess"
+         @resendCodeSuccess="(...args) => $emit('resendCodeSuccess', ...args)"
          @restartFlow="() => (showMagicInputCode = false)"
          @error="onVerifyCodeError"
       />
@@ -131,21 +131,10 @@ async function handleGoogleCallback() {
    }
 }
 
-// -- sign in / sign up handlers --
-function onSignInUpError(param: EmitError) {
-   // emit back up to the parent component to handle toasting
-   emits("error", param);
-}
-
 // -- verification code handlers --
 function onVerificationCodeSuccess(param: EmitSuccess) {
    // redirect to home page with vue router
    window.location.href = "/home";
-}
-
-function onResendCodeSuccess(param: EmitSuccess) {
-   // emit back up to the parent component to handle toasting
-   emits("resendCodeSuccess", param);
 }
 
 function onVerifyCodeError(param: EmitError) {
