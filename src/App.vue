@@ -54,7 +54,6 @@ const navItems = computed(() => (userStore.isSignedIn ? navSignedInItems : navSi
 // methods
 // -----------------------------------------
 async function checkServer() {
-   // isLoading.value = true;
    try {
       isLoading.value = true;
 
