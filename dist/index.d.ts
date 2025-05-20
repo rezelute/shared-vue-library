@@ -1,6 +1,7 @@
 import { AppInfoUserInput } from '../node_modules/supertokens-web-js/lib/build/types';
 import { setupAuthGuard } from './router/routeGuards';
 import { setupPrimeVue } from './primeVueSetup';
+import { default as useToast } from './composables/toast';
 declare const initializeSuperTokens: (config: {
     appInfo: AppInfoUserInput;
 }) => void;
@@ -49,4 +50,7 @@ declare const baseRouting: {
     })[];
     setupAuthGuard: typeof setupAuthGuard;
 };
-export { stores, baseRouting, initializeSuperTokens, setupPrimeVue };
+declare const composables: {
+    useToast: typeof useToast;
+};
+export { stores, baseRouting, initializeSuperTokens, setupPrimeVue, composables };

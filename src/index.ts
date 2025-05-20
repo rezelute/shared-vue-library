@@ -15,6 +15,9 @@ import { setupAuthGuard } from "./router/routeGuards";
 // shared utils
 import { setupPrimeVue } from "./primeVueSetup";
 
+// shared COMPOSABLES
+import useToast from "./composables/toast";
+
 const initializeSuperTokens = (config: { appInfo: AppInfoUserInput }) => {
    SuperTokens.init({
       appInfo: {
@@ -35,7 +38,15 @@ const baseRouting = {
    setupAuthGuard,
 };
 
-export { stores, baseRouting, initializeSuperTokens, setupPrimeVue };
+const composables = {
+   useToast,
+};
+
+// export declare type GlobalTypes = {
+//    emitNotify: EmitNotify
+// }
+
+export { stores, baseRouting, initializeSuperTokens, setupPrimeVue, composables };
 
 // export default {
 //    install: (app: any) => {

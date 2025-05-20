@@ -1,37 +1,37 @@
-import { ref as xt, readonly as Gr, getCurrentInstance as rn, onMounted as Xr, nextTick as zr, watch as Kr } from "vue";
-var Qr = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {};
-function Bt(e) {
+import { ref as xt, readonly as Kr, getCurrentInstance as on, onMounted as Qr, nextTick as Jr, watch as Yr } from "vue";
+var Zr = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {};
+function Gt(e) {
   return e && e.__esModule && Object.prototype.hasOwnProperty.call(e, "default") ? e.default : e;
 }
-var J = {}, Dt = {}, Mt = {}, et = {}, _e = {}, on;
-function Jr() {
-  if (on) return _e;
-  on = 1;
-  var e = _e && _e.__awaiter || function(g, d, m, h) {
-    function i(a) {
+var J = {}, Dt = {}, Mt = {}, et = {}, _e = {}, sn;
+function eo() {
+  if (sn) return _e;
+  sn = 1;
+  var e = _e && _e.__awaiter || function(g, d, m, f) {
+    function s(a) {
       return a instanceof m ? a : new m(function(c) {
         c(a);
       });
     }
     return new (m || (m = Promise))(function(a, c) {
-      function s(v) {
+      function i(v) {
         try {
-          u(h.next(v));
+          u(f.next(v));
         } catch (y) {
           c(y);
         }
       }
       function r(v) {
         try {
-          u(h.throw(v));
+          u(f.throw(v));
         } catch (y) {
           c(y);
         }
       }
       function u(v) {
-        v.done ? a(v.value) : i(v.value).then(s, r);
+        v.done ? a(v.value) : s(v.value).then(i, r);
       }
-      u((h = h.apply(g, d || [])).next());
+      u((f = f.apply(g, d || [])).next());
     });
   }, o = _e && _e.__generator || function(g, d) {
     var m = {
@@ -42,22 +42,22 @@ function Jr() {
       },
       trys: [],
       ops: []
-    }, h, i, a, c;
-    return c = { next: s(0), throw: s(1), return: s(2) }, typeof Symbol == "function" && (c[Symbol.iterator] = function() {
+    }, f, s, a, c;
+    return c = { next: i(0), throw: i(1), return: i(2) }, typeof Symbol == "function" && (c[Symbol.iterator] = function() {
       return this;
     }), c;
-    function s(u) {
+    function i(u) {
       return function(v) {
         return r([u, v]);
       };
     }
     function r(u) {
-      if (h) throw new TypeError("Generator is already executing.");
+      if (f) throw new TypeError("Generator is already executing.");
       for (; m; )
         try {
-          if (h = 1, i && (a = u[0] & 2 ? i.return : u[0] ? i.throw || ((a = i.return) && a.call(i), 0) : i.next) && !(a = a.call(i, u[1])).done)
+          if (f = 1, s && (a = u[0] & 2 ? s.return : u[0] ? s.throw || ((a = s.return) && a.call(s), 0) : s.next) && !(a = a.call(s, u[1])).done)
             return a;
-          switch (i = 0, a && (u = [u[0] & 2, a.value]), u[0]) {
+          switch (s = 0, a && (u = [u[0] & 2, a.value]), u[0]) {
             case 0:
             case 1:
               a = u;
@@ -65,7 +65,7 @@ function Jr() {
             case 4:
               return m.label++, { value: u[1], done: !1 };
             case 5:
-              m.label++, i = u[1], u = [0];
+              m.label++, s = u[1], u = [0];
               continue;
             case 7:
               u = m.ops.pop(), m.trys.pop();
@@ -92,211 +92,211 @@ function Jr() {
           }
           u = d.call(g, m);
         } catch (v) {
-          u = [6, v], i = 0;
+          u = [6, v], s = 0;
         } finally {
-          h = a = 0;
+          f = a = 0;
         }
       if (u[0] & 5) throw u[1];
       return { value: u[0] ? u[1] : void 0, done: !0 };
     }
   };
   Object.defineProperty(_e, "__esModule", { value: !0 }), _e.defaultWindowHandlerImplementation = void 0;
-  function n() {
+  function t() {
     if (typeof window > "u")
       throw Error(
         "If you are using this package with server-side rendering, please make sure that you are checking if the window object is defined."
       );
     return window;
   }
-  var t = {
+  var n = {
     key: function(g) {
       return e(this, void 0, void 0, function() {
         return o(this, function(d) {
-          return [2, n().localStorage.key(g)];
+          return [2, t().localStorage.key(g)];
         });
       });
     },
     clear: function() {
       return e(this, void 0, void 0, function() {
         return o(this, function(g) {
-          return [2, n().localStorage.clear()];
+          return [2, t().localStorage.clear()];
         });
       });
     },
     getItem: function(g) {
       return e(this, void 0, void 0, function() {
         return o(this, function(d) {
-          return [2, n().localStorage.getItem(g)];
+          return [2, t().localStorage.getItem(g)];
         });
       });
     },
     removeItem: function(g) {
       return e(this, void 0, void 0, function() {
         return o(this, function(d) {
-          return [2, n().localStorage.removeItem(g)];
+          return [2, t().localStorage.removeItem(g)];
         });
       });
     },
     setItem: function(g, d) {
       return e(this, void 0, void 0, function() {
         return o(this, function(m) {
-          return [2, n().localStorage.setItem(g, d)];
+          return [2, t().localStorage.setItem(g, d)];
         });
       });
     },
     keySync: function(g) {
-      return n().localStorage.key(g);
+      return t().localStorage.key(g);
     },
     clearSync: function() {
-      return n().localStorage.clear();
+      return t().localStorage.clear();
     },
     getItemSync: function(g) {
-      return n().localStorage.getItem(g);
+      return t().localStorage.getItem(g);
     },
     removeItemSync: function(g) {
-      return n().localStorage.removeItem(g);
+      return t().localStorage.removeItem(g);
     },
     setItemSync: function(g, d) {
-      return n().localStorage.setItem(g, d);
+      return t().localStorage.setItem(g, d);
     }
   }, l = {
     key: function(g) {
       return e(this, void 0, void 0, function() {
         return o(this, function(d) {
-          return [2, n().sessionStorage.key(g)];
+          return [2, t().sessionStorage.key(g)];
         });
       });
     },
     clear: function() {
       return e(this, void 0, void 0, function() {
         return o(this, function(g) {
-          return [2, n().sessionStorage.clear()];
+          return [2, t().sessionStorage.clear()];
         });
       });
     },
     getItem: function(g) {
       return e(this, void 0, void 0, function() {
         return o(this, function(d) {
-          return [2, n().sessionStorage.getItem(g)];
+          return [2, t().sessionStorage.getItem(g)];
         });
       });
     },
     removeItem: function(g) {
       return e(this, void 0, void 0, function() {
         return o(this, function(d) {
-          return [2, n().sessionStorage.removeItem(g)];
+          return [2, t().sessionStorage.removeItem(g)];
         });
       });
     },
     setItem: function(g, d) {
       return e(this, void 0, void 0, function() {
         return o(this, function(m) {
-          return [2, n().sessionStorage.setItem(g, d)];
+          return [2, t().sessionStorage.setItem(g, d)];
         });
       });
     },
     keySync: function(g) {
-      return n().sessionStorage.key(g);
+      return t().sessionStorage.key(g);
     },
     clearSync: function() {
-      return n().sessionStorage.clear();
+      return t().sessionStorage.clear();
     },
     getItemSync: function(g) {
-      return n().sessionStorage.getItem(g);
+      return t().sessionStorage.getItem(g);
     },
     removeItemSync: function(g) {
-      return n().sessionStorage.removeItem(g);
+      return t().sessionStorage.removeItem(g);
     },
     setItemSync: function(g, d) {
-      return n().sessionStorage.setItem(g, d);
+      return t().sessionStorage.setItem(g, d);
     }
   };
   return _e.defaultWindowHandlerImplementation = {
     history: {
       replaceState: function(g, d, m) {
-        return n().history.replaceState(g, d, m);
+        return t().history.replaceState(g, d, m);
       },
       getState: function() {
-        return n().history.state;
+        return t().history.state;
       }
     },
     location: {
       getHref: function() {
-        return n().location.href;
+        return t().location.href;
       },
       setHref: function(g) {
-        n().location.href = g;
+        t().location.href = g;
       },
       getSearch: function() {
-        return n().location.search;
+        return t().location.search;
       },
       getHash: function() {
-        return n().location.hash;
+        return t().location.hash;
       },
       getPathName: function() {
-        return n().location.pathname;
+        return t().location.pathname;
       },
       assign: function(g) {
-        n().location.assign(g);
+        t().location.assign(g);
       },
       getHostName: function() {
-        return n().location.hostname;
+        return t().location.hostname;
       },
       getHost: function() {
-        return n().location.host;
+        return t().location.host;
       },
       getOrigin: function() {
-        return n().location.origin;
+        return t().location.origin;
       }
     },
     getDocument: function() {
-      return n().document;
+      return t().document;
     },
     getWindowUnsafe: function() {
-      return n().window;
+      return t().window;
     },
-    localStorage: t,
+    localStorage: n,
     sessionStorage: l
   }, _e;
 }
-var sn;
+var an;
 function je() {
-  if (sn) return et;
-  sn = 1, Object.defineProperty(et, "__esModule", { value: !0 }), et.WindowHandlerReference = void 0;
-  var e = Jr(), o = (
+  if (an) return et;
+  an = 1, Object.defineProperty(et, "__esModule", { value: !0 }), et.WindowHandlerReference = void 0;
+  var e = eo(), o = (
     /** @class */
     function() {
-      function n(t) {
+      function t(n) {
         var l = function(g) {
           return g;
         };
-        t !== void 0 && (l = t), this.windowHandler = l(e.defaultWindowHandlerImplementation);
+        n !== void 0 && (l = n), this.windowHandler = l(e.defaultWindowHandlerImplementation);
       }
-      return n.init = function(t) {
-        n.instance === void 0 && (n.instance = new n(t));
-      }, n.getReferenceOrThrow = function() {
-        if (n.instance === void 0)
+      return t.init = function(n) {
+        t.instance === void 0 && (t.instance = new t(n));
+      }, t.getReferenceOrThrow = function() {
+        if (t.instance === void 0)
           throw new Error("SuperTokensWindowHandler must be initialized before calling this method.");
-        return n.instance;
-      }, n;
+        return t.instance;
+      }, t;
     }()
   );
   return et.WindowHandlerReference = o, et.default = o, et;
 }
-var an;
-function Yr() {
-  return an || (an = 1, function(e) {
-    function o(n) {
-      for (var t in n) e.hasOwnProperty(t) || (e[t] = n[t]);
+var un;
+function to() {
+  return un || (un = 1, function(e) {
+    function o(t) {
+      for (var n in t) e.hasOwnProperty(n) || (e[n] = t[n]);
     }
     e.__esModule = !0, o(je());
   }(Mt)), Mt;
 }
-var un;
-function Gt() {
-  return un || (un = 1, function(e) {
+var cn;
+function Xt() {
+  return cn || (cn = 1, function(e) {
     Object.defineProperty(e, "__esModule", { value: !0 }), e.WindowHandlerReference = void 0;
-    var o = Yr();
+    var o = to();
     Object.defineProperty(e, "WindowHandlerReference", {
       enumerable: !0,
       get: function() {
@@ -305,142 +305,41 @@ function Gt() {
     });
   }(Dt)), Dt;
 }
-var $e = {}, cn;
-function Zr() {
-  return cn || (cn = 1, Object.defineProperty($e, "__esModule", { value: !0 }), $e.SSR_ERROR = $e.DEFAULT_API_BASE_PATH = void 0, $e.DEFAULT_API_BASE_PATH = "/auth", $e.SSR_ERROR = `
+var $e = {}, ln;
+function no() {
+  return ln || (ln = 1, Object.defineProperty($e, "__esModule", { value: !0 }), $e.SSR_ERROR = $e.DEFAULT_API_BASE_PATH = void 0, $e.DEFAULT_API_BASE_PATH = "/auth", $e.SSR_ERROR = `
 If you are trying to use this method doing server-side-rendering, please make sure you move this method inside a componentDidMount method or useEffect hook.`), $e;
 }
-var kt = {}, ln;
-function eo() {
-  if (ln) return kt;
-  ln = 1, Object.defineProperty(kt, "__esModule", { value: !0 });
+var Rt = {}, dn;
+function ro() {
+  if (dn) return Rt;
+  dn = 1, Object.defineProperty(Rt, "__esModule", { value: !0 });
   var e = (
     /** @class */
     /* @__PURE__ */ function() {
-      function n(t) {
+      function t(n) {
         var l = this;
         this.getAsStringDangerous = function() {
           return l.value;
-        }, this.value = o(t);
+        }, this.value = o(n);
       }
-      return n;
+      return t;
     }()
   );
-  kt.default = e;
-  function o(n, t) {
-    t === void 0 && (t = !1);
+  Rt.default = e;
+  function o(t, n) {
+    n === void 0 && (n = !1);
     function l(d) {
       return /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(
         d
       );
     }
-    n = n.trim();
-    try {
-      if (!n.startsWith("http://") && !n.startsWith("https://"))
-        throw new Error("Error converting to proper URL");
-      var g = new URL(n);
-      return t ? g.hostname.startsWith("localhost") || l(g.hostname) ? n = "http://" + g.host : n = "https://" + g.host : n = g.protocol + "//" + g.host, n;
-    } catch {
-    }
-    if (n.startsWith("/"))
-      throw new Error("Please provide a valid domain name");
-    if (n.indexOf(".") === 0 && (n = n.substr(1)), (n.indexOf(".") !== -1 || n.startsWith("localhost")) && !n.startsWith("http://") && !n.startsWith("https://")) {
-      n = "https://" + n;
-      try {
-        return new URL(n), o(n, !0);
-      } catch {
-      }
-    }
-    throw new Error("Please provide a valid domain name");
-  }
-  return kt;
-}
-var It = {}, dn;
-function Tr() {
-  if (dn) return It;
-  dn = 1, Object.defineProperty(It, "__esModule", { value: !0 });
-  var e = (
-    /** @class */
-    /* @__PURE__ */ function() {
-      function t(l) {
-        var g = this;
-        this.startsWith = function(d) {
-          return g.value.startsWith(d.value);
-        }, this.appendPath = function(d) {
-          return new t(g.value + d.value);
-        }, this.getAsStringDangerous = function() {
-          return g.value;
-        }, this.value = o(l);
-      }
-      return t;
-    }()
-  );
-  It.default = e;
-  function o(t) {
     t = t.trim();
     try {
       if (!t.startsWith("http://") && !t.startsWith("https://"))
         throw new Error("Error converting to proper URL");
-      var l = new URL(t);
-      return t = l.pathname, t.charAt(t.length - 1) === "/" ? t.substr(0, t.length - 1) : t;
-    } catch {
-    }
-    if ((n(t) || t.startsWith("localhost")) && !t.startsWith("http://") && !t.startsWith("https://"))
-      return t = "http://" + t, o(t);
-    t.charAt(0) !== "/" && (t = "/" + t);
-    try {
-      return new URL("http://example.com" + t), o("http://example.com" + t);
-    } catch {
-      throw new Error("Please provide a valid URL path");
-    }
-  }
-  function n(t) {
-    if (t.indexOf(".") === -1 || t.startsWith("/"))
-      return !1;
-    try {
-      var l = new URL(t);
-      return l.hostname.indexOf(".") !== -1;
-    } catch {
-    }
-    try {
-      var l = new URL("http://" + t);
-      return l.hostname.indexOf(".") !== -1;
-    } catch {
-    }
-    return !1;
-  }
-  return It;
-}
-var Lt = {}, ct = {}, ee = {}, tt = {}, fn;
-function to() {
-  if (fn) return tt;
-  fn = 1, Object.defineProperty(tt, "__esModule", { value: !0 }), tt.isAnIpAddress = void 0;
-  function e(t) {
-    return /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(
-      t
-    );
-  }
-  tt.isAnIpAddress = e;
-  var o = (
-    /** @class */
-    /* @__PURE__ */ function() {
-      function t(l) {
-        var g = this;
-        this.getAsStringDangerous = function() {
-          return g.value;
-        }, this.value = n(l);
-      }
-      return t;
-    }()
-  );
-  tt.default = o;
-  function n(t, l) {
-    l === void 0 && (l = !1), t = t.trim();
-    try {
-      if (!t.startsWith("http://") && !t.startsWith("https://"))
-        throw new Error("converting to proper URL");
       var g = new URL(t);
-      return l ? g.hostname.startsWith("localhost") || e(g.hostname) ? t = "http://" + g.host : t = "https://" + g.host : t = g.protocol + "//" + g.host, t;
+      return n ? g.hostname.startsWith("localhost") || l(g.hostname) ? t = "http://" + g.host : t = "https://" + g.host : t = g.protocol + "//" + g.host, t;
     } catch {
     }
     if (t.startsWith("/"))
@@ -448,7 +347,108 @@ function to() {
     if (t.indexOf(".") === 0 && (t = t.substr(1)), (t.indexOf(".") !== -1 || t.startsWith("localhost")) && !t.startsWith("http://") && !t.startsWith("https://")) {
       t = "https://" + t;
       try {
-        return new URL(t), n(t, !0);
+        return new URL(t), o(t, !0);
+      } catch {
+      }
+    }
+    throw new Error("Please provide a valid domain name");
+  }
+  return Rt;
+}
+var kt = {}, fn;
+function Ar() {
+  if (fn) return kt;
+  fn = 1, Object.defineProperty(kt, "__esModule", { value: !0 });
+  var e = (
+    /** @class */
+    /* @__PURE__ */ function() {
+      function n(l) {
+        var g = this;
+        this.startsWith = function(d) {
+          return g.value.startsWith(d.value);
+        }, this.appendPath = function(d) {
+          return new n(g.value + d.value);
+        }, this.getAsStringDangerous = function() {
+          return g.value;
+        }, this.value = o(l);
+      }
+      return n;
+    }()
+  );
+  kt.default = e;
+  function o(n) {
+    n = n.trim();
+    try {
+      if (!n.startsWith("http://") && !n.startsWith("https://"))
+        throw new Error("Error converting to proper URL");
+      var l = new URL(n);
+      return n = l.pathname, n.charAt(n.length - 1) === "/" ? n.substr(0, n.length - 1) : n;
+    } catch {
+    }
+    if ((t(n) || n.startsWith("localhost")) && !n.startsWith("http://") && !n.startsWith("https://"))
+      return n = "http://" + n, o(n);
+    n.charAt(0) !== "/" && (n = "/" + n);
+    try {
+      return new URL("http://example.com" + n), o("http://example.com" + n);
+    } catch {
+      throw new Error("Please provide a valid URL path");
+    }
+  }
+  function t(n) {
+    if (n.indexOf(".") === -1 || n.startsWith("/"))
+      return !1;
+    try {
+      var l = new URL(n);
+      return l.hostname.indexOf(".") !== -1;
+    } catch {
+    }
+    try {
+      var l = new URL("http://" + n);
+      return l.hostname.indexOf(".") !== -1;
+    } catch {
+    }
+    return !1;
+  }
+  return kt;
+}
+var Lt = {}, ct = {}, ee = {}, tt = {}, hn;
+function oo() {
+  if (hn) return tt;
+  hn = 1, Object.defineProperty(tt, "__esModule", { value: !0 }), tt.isAnIpAddress = void 0;
+  function e(n) {
+    return /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(
+      n
+    );
+  }
+  tt.isAnIpAddress = e;
+  var o = (
+    /** @class */
+    /* @__PURE__ */ function() {
+      function n(l) {
+        var g = this;
+        this.getAsStringDangerous = function() {
+          return g.value;
+        }, this.value = t(l);
+      }
+      return n;
+    }()
+  );
+  tt.default = o;
+  function t(n, l) {
+    l === void 0 && (l = !1), n = n.trim();
+    try {
+      if (!n.startsWith("http://") && !n.startsWith("https://"))
+        throw new Error("converting to proper URL");
+      var g = new URL(n);
+      return l ? g.hostname.startsWith("localhost") || e(g.hostname) ? n = "http://" + g.host : n = "https://" + g.host : n = g.protocol + "//" + g.host, n;
+    } catch {
+    }
+    if (n.startsWith("/"))
+      throw new Error("Please provide a valid domain name");
+    if (n.indexOf(".") === 0 && (n = n.substr(1)), (n.indexOf(".") !== -1 || n.startsWith("localhost")) && !n.startsWith("http://") && !n.startsWith("https://")) {
+      n = "https://" + n;
+      try {
+        return new URL(n), t(n, !0);
       } catch {
       }
     }
@@ -456,81 +456,81 @@ function to() {
   }
   return tt;
 }
-var _t = {}, hn;
-function no() {
-  if (hn) return _t;
-  hn = 1, Object.defineProperty(_t, "__esModule", { value: !0 });
+var It = {}, gn;
+function io() {
+  if (gn) return It;
+  gn = 1, Object.defineProperty(It, "__esModule", { value: !0 });
   var e = (
     /** @class */
     /* @__PURE__ */ function() {
-      function t(l) {
+      function n(l) {
         var g = this;
         this.startsWith = function(d) {
           return g.value.startsWith(d.value);
         }, this.appendPath = function(d) {
-          return new t(g.value + d.value);
+          return new n(g.value + d.value);
         }, this.getAsStringDangerous = function() {
           return g.value;
         }, this.value = o(l);
       }
-      return t;
+      return n;
     }()
   );
-  _t.default = e;
-  function o(t) {
-    t = t.trim();
+  It.default = e;
+  function o(n) {
+    n = n.trim();
     try {
-      if (!t.startsWith("http://") && !t.startsWith("https://"))
+      if (!n.startsWith("http://") && !n.startsWith("https://"))
         throw new Error("converting to proper URL");
-      var l = new URL(t);
-      return t = l.pathname, t.charAt(t.length - 1) === "/" ? t.substr(0, t.length - 1) : t;
+      var l = new URL(n);
+      return n = l.pathname, n.charAt(n.length - 1) === "/" ? n.substr(0, n.length - 1) : n;
     } catch {
     }
-    if ((n(t) || t.startsWith("localhost")) && !t.startsWith("http://") && !t.startsWith("https://"))
-      return t = "http://" + t, o(t);
-    t.charAt(0) !== "/" && (t = "/" + t);
+    if ((t(n) || n.startsWith("localhost")) && !n.startsWith("http://") && !n.startsWith("https://"))
+      return n = "http://" + n, o(n);
+    n.charAt(0) !== "/" && (n = "/" + n);
     try {
-      return new URL("http://example.com" + t), o("http://example.com" + t);
+      return new URL("http://example.com" + n), o("http://example.com" + n);
     } catch {
       throw new Error("Please provide a valid URL path");
     }
   }
-  function n(t) {
-    if (t.indexOf(".") === -1 || t.startsWith("/"))
+  function t(n) {
+    if (n.indexOf(".") === -1 || n.startsWith("/"))
       return !1;
     try {
-      var l = new URL(t);
+      var l = new URL(n);
       return l.hostname.indexOf(".") !== -1;
     } catch {
     }
     try {
-      var l = new URL("http://" + t);
+      var l = new URL("http://" + n);
       return l.hostname.indexOf(".") !== -1;
     } catch {
     }
     return !1;
   }
-  return _t;
+  return It;
 }
-var gn;
-function Xt() {
-  if (gn) return ee;
-  gn = 1;
+var vn;
+function zt() {
+  if (vn) return ee;
+  vn = 1;
   var e = ee && ee.__assign || function() {
-    return e = Object.assign || function(s) {
+    return e = Object.assign || function(i) {
       for (var r, u = 1, v = arguments.length; u < v; u++) {
         r = arguments[u];
-        for (var y in r) Object.prototype.hasOwnProperty.call(r, y) && (s[y] = r[y]);
+        for (var y in r) Object.prototype.hasOwnProperty.call(r, y) && (i[y] = r[y]);
       }
-      return s;
+      return i;
     }, e.apply(this, arguments);
-  }, o = ee && ee.__awaiter || function(s, r, u, v) {
-    function y(f) {
-      return f instanceof u ? f : new u(function(p) {
-        p(f);
+  }, o = ee && ee.__awaiter || function(i, r, u, v) {
+    function y(h) {
+      return h instanceof u ? h : new u(function(p) {
+        p(h);
       });
     }
-    return new (u || (u = Promise))(function(f, p) {
+    return new (u || (u = Promise))(function(h, p) {
       function w(R) {
         try {
           S(v.next(R));
@@ -546,20 +546,20 @@ function Xt() {
         }
       }
       function S(R) {
-        R.done ? f(R.value) : y(R.value).then(w, b);
+        R.done ? h(R.value) : y(R.value).then(w, b);
       }
-      S((v = v.apply(s, r || [])).next());
+      S((v = v.apply(i, r || [])).next());
     });
-  }, n = ee && ee.__generator || function(s, r) {
+  }, t = ee && ee.__generator || function(i, r) {
     var u = {
       label: 0,
       sent: function() {
-        if (f[0] & 1) throw f[1];
-        return f[1];
+        if (h[0] & 1) throw h[1];
+        return h[1];
       },
       trys: [],
       ops: []
-    }, v, y, f, p;
+    }, v, y, h, p;
     return p = { next: w(0), throw: w(1), return: w(2) }, typeof Symbol == "function" && (p[Symbol.iterator] = function() {
       return this;
     }), p;
@@ -572,12 +572,12 @@ function Xt() {
       if (v) throw new TypeError("Generator is already executing.");
       for (; u; )
         try {
-          if (v = 1, y && (f = S[0] & 2 ? y.return : S[0] ? y.throw || ((f = y.return) && f.call(y), 0) : y.next) && !(f = f.call(y, S[1])).done)
-            return f;
-          switch (y = 0, f && (S = [S[0] & 2, f.value]), S[0]) {
+          if (v = 1, y && (h = S[0] & 2 ? y.return : S[0] ? y.throw || ((h = y.return) && h.call(y), 0) : y.next) && !(h = h.call(y, S[1])).done)
+            return h;
+          switch (y = 0, h && (S = [S[0] & 2, h.value]), S[0]) {
             case 0:
             case 1:
-              f = S;
+              h = S;
               break;
             case 4:
               return u.label++, { value: S[1], done: !1 };
@@ -588,47 +588,47 @@ function Xt() {
               S = u.ops.pop(), u.trys.pop();
               continue;
             default:
-              if (f = u.trys, !(f = f.length > 0 && f[f.length - 1]) && (S[0] === 6 || S[0] === 2)) {
+              if (h = u.trys, !(h = h.length > 0 && h[h.length - 1]) && (S[0] === 6 || S[0] === 2)) {
                 u = 0;
                 continue;
               }
-              if (S[0] === 3 && (!f || S[1] > f[0] && S[1] < f[3])) {
+              if (S[0] === 3 && (!h || S[1] > h[0] && S[1] < h[3])) {
                 u.label = S[1];
                 break;
               }
-              if (S[0] === 6 && u.label < f[1]) {
-                u.label = f[1], f = S;
+              if (S[0] === 6 && u.label < h[1]) {
+                u.label = h[1], h = S;
                 break;
               }
-              if (f && u.label < f[2]) {
-                u.label = f[2], u.ops.push(S);
+              if (h && u.label < h[2]) {
+                u.label = h[2], u.ops.push(S);
                 break;
               }
-              f[2] && u.ops.pop(), u.trys.pop();
+              h[2] && u.ops.pop(), u.trys.pop();
               continue;
           }
-          S = r.call(s, u);
+          S = r.call(i, u);
         } catch (R) {
           S = [6, R], y = 0;
         } finally {
-          v = f = 0;
+          v = h = 0;
         }
       if (S[0] & 5) throw S[1];
       return { value: S[0] ? S[1] : void 0, done: !0 };
     }
   };
   Object.defineProperty(ee, "__esModule", { value: !0 }), ee.matchesDomainOrSubdomain = ee.getNormalisedUserContext = ee.validateAndNormaliseInputOrThrowError = ee.normaliseSessionScopeOrThrowError = ee.normaliseURLPathOrThrowError = ee.normaliseURLDomainOrThrowError = void 0;
-  var t = to(), l = no(), g = je();
-  function d(s) {
-    var r = new t.default(s).getAsStringDangerous();
+  var n = oo(), l = io(), g = je();
+  function d(i) {
+    var r = new n.default(i).getAsStringDangerous();
     return r;
   }
   ee.normaliseURLDomainOrThrowError = d;
-  function m(s) {
-    return new l.default(s).getAsStringDangerous();
+  function m(i) {
+    return new l.default(i).getAsStringDangerous();
   }
   ee.normaliseURLPathOrThrowError = m;
-  function h(s) {
+  function f(i) {
     function r(v) {
       v = v.trim().toLowerCase(), v.startsWith(".") && (v = v.substr(1)), !v.startsWith("http://") && !v.startsWith("https://") && (v = "http://" + v);
       try {
@@ -638,43 +638,43 @@ function Xt() {
         throw new Error("Please provide a valid sessionScope");
       }
     }
-    var u = r(s);
-    return u === "localhost" || (0, t.isAnIpAddress)(u) ? u : s.startsWith(".") ? "." + u : u;
+    var u = r(i);
+    return u === "localhost" || (0, n.isAnIpAddress)(u) ? u : i.startsWith(".") ? "." + u : u;
   }
-  ee.normaliseSessionScopeOrThrowError = h;
-  function i(s) {
-    var r = this, u = d(s.apiDomain), v = m("/auth");
-    s.apiBasePath !== void 0 && (v = m(s.apiBasePath));
-    var y = g.default.getReferenceOrThrow().windowHandler.location.getHostName(), f = h(
-      s !== void 0 && s.sessionTokenFrontendDomain !== void 0 ? s.sessionTokenFrontendDomain : y
+  ee.normaliseSessionScopeOrThrowError = f;
+  function s(i) {
+    var r = this, u = d(i.apiDomain), v = m("/auth");
+    i.apiBasePath !== void 0 && (v = m(i.apiBasePath));
+    var y = g.default.getReferenceOrThrow().windowHandler.location.getHostName(), h = f(
+      i !== void 0 && i.sessionTokenFrontendDomain !== void 0 ? i.sessionTokenFrontendDomain : y
     ), p = 401;
-    s.sessionExpiredStatusCode !== void 0 && (p = s.sessionExpiredStatusCode);
+    i.sessionExpiredStatusCode !== void 0 && (p = i.sessionExpiredStatusCode);
     var w = 403;
-    if (s.invalidClaimStatusCode !== void 0 && (w = s.invalidClaimStatusCode), p === w)
+    if (i.invalidClaimStatusCode !== void 0 && (w = i.invalidClaimStatusCode), p === w)
       throw new Error("sessionExpiredStatusCode and invalidClaimStatusCode cannot be the same.");
     var b = !0;
-    s.autoAddCredentials !== void 0 && (b = s.autoAddCredentials);
+    i.autoAddCredentials !== void 0 && (b = i.autoAddCredentials);
     var S = !1;
-    s.isInIframe !== void 0 && (S = s.isInIframe);
+    i.isInIframe !== void 0 && (S = i.isInIframe);
     var R = void 0;
-    s.sessionTokenBackendDomain !== void 0 && (R = h(s.sessionTokenBackendDomain));
+    i.sessionTokenBackendDomain !== void 0 && (R = f(i.sessionTokenBackendDomain));
     var I = 10;
-    if (s.maxRetryAttemptsForSessionRefresh !== void 0) {
-      if (s.maxRetryAttemptsForSessionRefresh < 0)
+    if (i.maxRetryAttemptsForSessionRefresh !== void 0) {
+      if (i.maxRetryAttemptsForSessionRefresh < 0)
         throw new Error("maxRetryAttemptsForSessionRefresh must be greater than or equal to 0.");
-      I = s.maxRetryAttemptsForSessionRefresh;
+      I = i.maxRetryAttemptsForSessionRefresh;
     }
     var T = function(x) {
       return o(r, void 0, void 0, function() {
-        return n(this, function(E) {
+        return t(this, function(E) {
           return [2, { url: x.url, requestInit: x.requestInit }];
         });
       });
     };
-    s.preAPIHook !== void 0 && (T = s.preAPIHook);
+    i.preAPIHook !== void 0 && (T = i.preAPIHook);
     var _ = function() {
       return o(r, void 0, void 0, function() {
-        return n(this, function(x) {
+        return t(this, function(x) {
           return [
             2
             /*return*/
@@ -682,27 +682,27 @@ function Xt() {
         });
       });
     };
-    s.postAPIHook !== void 0 && (_ = s.postAPIHook);
+    i.postAPIHook !== void 0 && (_ = i.postAPIHook);
     var P = function() {
     };
-    s.onHandleEvent !== void 0 && (P = s.onHandleEvent);
+    i.onHandleEvent !== void 0 && (P = i.onHandleEvent);
     var C = e(
       {
         functions: function(x) {
           return x;
         }
       },
-      s.override
+      i.override
     );
     return {
       apiDomain: u,
       apiBasePath: v,
-      sessionTokenFrontendDomain: f,
+      sessionTokenFrontendDomain: h,
       sessionExpiredStatusCode: p,
       invalidClaimStatusCode: w,
       autoAddCredentials: b,
       isInIframe: S,
-      tokenTransferMethod: s.tokenTransferMethod !== void 0 ? s.tokenTransferMethod : "cookie",
+      tokenTransferMethod: i.tokenTransferMethod !== void 0 ? i.tokenTransferMethod : "cookie",
       sessionTokenBackendDomain: R,
       maxRetryAttemptsForSessionRefresh: I,
       preAPIHook: T,
@@ -711,13 +711,13 @@ function Xt() {
       override: C
     };
   }
-  ee.validateAndNormaliseInputOrThrowError = i;
-  function a(s) {
-    return s === void 0 ? {} : s;
+  ee.validateAndNormaliseInputOrThrowError = s;
+  function a(i) {
+    return i === void 0 ? {} : i;
   }
   ee.getNormalisedUserContext = a;
-  function c(s, r) {
-    for (var u = s.split("."), v = 0; v < u.length; v++) {
+  function c(i, r) {
+    for (var u = i.split("."), v = 0; v < u.length; v++) {
       var y = u.slice(v).join(".");
       if (y === r || ".".concat(y) === r)
         return !0;
@@ -726,16 +726,16 @@ function Xt() {
   }
   return ee.matchesDomainOrSubdomain = c, ee;
 }
-var Te = {}, Ve = {}, vn;
-function zt() {
-  return vn || (vn = 1, function(e) {
+var Te = {}, Ve = {}, mn;
+function Kt() {
+  return mn || (mn = 1, function(e) {
     var o = Ve && Ve.__awaiter || function(l, g, d, m) {
-      function h(i) {
-        return i instanceof d ? i : new d(function(a) {
-          a(i);
+      function f(s) {
+        return s instanceof d ? s : new d(function(a) {
+          a(s);
         });
       }
-      return new (d || (d = Promise))(function(i, a) {
+      return new (d || (d = Promise))(function(s, a) {
         function c(u) {
           try {
             r(m.next(u));
@@ -743,7 +743,7 @@ function zt() {
             a(v);
           }
         }
-        function s(u) {
+        function i(u) {
           try {
             r(m.throw(u));
           } catch (v) {
@@ -751,72 +751,72 @@ function zt() {
           }
         }
         function r(u) {
-          u.done ? i(u.value) : h(u.value).then(c, s);
+          u.done ? s(u.value) : f(u.value).then(c, i);
         }
         r((m = m.apply(l, g || [])).next());
       });
-    }, n = Ve && Ve.__generator || function(l, g) {
+    }, t = Ve && Ve.__generator || function(l, g) {
       var d = {
         label: 0,
         sent: function() {
-          if (i[0] & 1) throw i[1];
-          return i[1];
+          if (s[0] & 1) throw s[1];
+          return s[1];
         },
         trys: [],
         ops: []
-      }, m, h, i, a;
+      }, m, f, s, a;
       return a = { next: c(0), throw: c(1), return: c(2) }, typeof Symbol == "function" && (a[Symbol.iterator] = function() {
         return this;
       }), a;
       function c(r) {
         return function(u) {
-          return s([r, u]);
+          return i([r, u]);
         };
       }
-      function s(r) {
+      function i(r) {
         if (m) throw new TypeError("Generator is already executing.");
         for (; d; )
           try {
-            if (m = 1, h && (i = r[0] & 2 ? h.return : r[0] ? h.throw || ((i = h.return) && i.call(h), 0) : h.next) && !(i = i.call(h, r[1])).done)
-              return i;
-            switch (h = 0, i && (r = [r[0] & 2, i.value]), r[0]) {
+            if (m = 1, f && (s = r[0] & 2 ? f.return : r[0] ? f.throw || ((s = f.return) && s.call(f), 0) : f.next) && !(s = s.call(f, r[1])).done)
+              return s;
+            switch (f = 0, s && (r = [r[0] & 2, s.value]), r[0]) {
               case 0:
               case 1:
-                i = r;
+                s = r;
                 break;
               case 4:
                 return d.label++, { value: r[1], done: !1 };
               case 5:
-                d.label++, h = r[1], r = [0];
+                d.label++, f = r[1], r = [0];
                 continue;
               case 7:
                 r = d.ops.pop(), d.trys.pop();
                 continue;
               default:
-                if (i = d.trys, !(i = i.length > 0 && i[i.length - 1]) && (r[0] === 6 || r[0] === 2)) {
+                if (s = d.trys, !(s = s.length > 0 && s[s.length - 1]) && (r[0] === 6 || r[0] === 2)) {
                   d = 0;
                   continue;
                 }
-                if (r[0] === 3 && (!i || r[1] > i[0] && r[1] < i[3])) {
+                if (r[0] === 3 && (!s || r[1] > s[0] && r[1] < s[3])) {
                   d.label = r[1];
                   break;
                 }
-                if (r[0] === 6 && d.label < i[1]) {
-                  d.label = i[1], i = r;
+                if (r[0] === 6 && d.label < s[1]) {
+                  d.label = s[1], s = r;
                   break;
                 }
-                if (i && d.label < i[2]) {
-                  d.label = i[2], d.ops.push(r);
+                if (s && d.label < s[2]) {
+                  d.label = s[2], d.ops.push(r);
                   break;
                 }
-                i[2] && d.ops.pop(), d.trys.pop();
+                s[2] && d.ops.pop(), d.trys.pop();
                 continue;
             }
             r = g.call(l, d);
           } catch (u) {
-            r = [6, u], h = 0;
+            r = [6, u], f = 0;
           } finally {
-            m = i = 0;
+            m = s = 0;
           }
         if (r[0] & 5) throw r[1];
         return { value: r[0] ? r[1] : void 0, done: !0 };
@@ -825,7 +825,7 @@ function zt() {
     Object.defineProperty(e, "__esModule", { value: !0 }), e.ProcessState = e.PROCESS_STATE = void 0, function(l) {
       l[l.CALLING_INTERCEPTION_REQUEST = 0] = "CALLING_INTERCEPTION_REQUEST", l[l.CALLING_INTERCEPTION_RESPONSE = 1] = "CALLING_INTERCEPTION_RESPONSE";
     }(e.PROCESS_STATE || (e.PROCESS_STATE = {}));
-    var t = (
+    var n = (
       /** @class */
       function() {
         function l() {
@@ -843,15 +843,15 @@ function zt() {
             g.history = [];
           }, this.waitForEvent = function(d, m) {
             return m === void 0 && (m = 7e3), o(g, void 0, void 0, function() {
-              var h, i = this;
-              return n(this, function(a) {
-                return h = Date.now(), [
+              var f, s = this;
+              return t(this, function(a) {
+                return f = Date.now(), [
                   2,
                   new Promise(function(c) {
-                    var s = i;
+                    var i = s;
                     function r() {
-                      var u = s.getEventByLastEventByName(d);
-                      u === void 0 ? Date.now() - h > m ? c(void 0) : setTimeout(r, 1e3) : c(u);
+                      var u = i.getEventByLastEventByName(d);
+                      u === void 0 ? Date.now() - f > m ? c(void 0) : setTimeout(r, 1e3) : c(u);
                     }
                     r();
                   })
@@ -865,127 +865,127 @@ function zt() {
         }, l;
       }()
     );
-    e.ProcessState = t;
+    e.ProcessState = n;
   }(Ve)), Ve;
 }
-var We = {}, mn;
-function Kt() {
-  return mn || (mn = 1, Object.defineProperty(We, "__esModule", { value: !0 }), We.supported_fdi = We.package_version = void 0, We.package_version = "20.1.6", We.supported_fdi = ["1.16", "1.17", "1.18", "1.19", "2.0", "3.0", "3.1", "4.0", "4.1"]), We;
+var We = {}, pn;
+function Qt() {
+  return pn || (pn = 1, Object.defineProperty(We, "__esModule", { value: !0 }), We.supported_fdi = We.package_version = void 0, We.package_version = "20.1.6", We.supported_fdi = ["1.16", "1.17", "1.18", "1.19", "2.0", "3.0", "3.1", "4.0", "4.1"]), We;
 }
-var nt = {}, Ce = {}, pn;
-function ro() {
-  if (pn) return Ce;
-  pn = 1;
-  var e = Ce && Ce.__awaiter || function(t, l, g, d) {
-    function m(h) {
-      return h instanceof g ? h : new g(function(i) {
-        i(h);
+var nt = {}, Ce = {}, yn;
+function so() {
+  if (yn) return Ce;
+  yn = 1;
+  var e = Ce && Ce.__awaiter || function(n, l, g, d) {
+    function m(f) {
+      return f instanceof g ? f : new g(function(s) {
+        s(f);
       });
     }
-    return new (g || (g = Promise))(function(h, i) {
+    return new (g || (g = Promise))(function(f, s) {
       function a(r) {
         try {
-          s(d.next(r));
+          i(d.next(r));
         } catch (u) {
-          i(u);
+          s(u);
         }
       }
       function c(r) {
         try {
-          s(d.throw(r));
+          i(d.throw(r));
         } catch (u) {
-          i(u);
+          s(u);
         }
       }
-      function s(r) {
-        r.done ? h(r.value) : m(r.value).then(a, c);
+      function i(r) {
+        r.done ? f(r.value) : m(r.value).then(a, c);
       }
-      s((d = d.apply(t, l || [])).next());
+      i((d = d.apply(n, l || [])).next());
     });
-  }, o = Ce && Ce.__generator || function(t, l) {
+  }, o = Ce && Ce.__generator || function(n, l) {
     var g = {
       label: 0,
       sent: function() {
-        if (h[0] & 1) throw h[1];
-        return h[1];
+        if (f[0] & 1) throw f[1];
+        return f[1];
       },
       trys: [],
       ops: []
-    }, d, m, h, i;
-    return i = { next: a(0), throw: a(1), return: a(2) }, typeof Symbol == "function" && (i[Symbol.iterator] = function() {
+    }, d, m, f, s;
+    return s = { next: a(0), throw: a(1), return: a(2) }, typeof Symbol == "function" && (s[Symbol.iterator] = function() {
       return this;
-    }), i;
-    function a(s) {
+    }), s;
+    function a(i) {
       return function(r) {
-        return c([s, r]);
+        return c([i, r]);
       };
     }
-    function c(s) {
+    function c(i) {
       if (d) throw new TypeError("Generator is already executing.");
       for (; g; )
         try {
-          if (d = 1, m && (h = s[0] & 2 ? m.return : s[0] ? m.throw || ((h = m.return) && h.call(m), 0) : m.next) && !(h = h.call(m, s[1])).done)
-            return h;
-          switch (m = 0, h && (s = [s[0] & 2, h.value]), s[0]) {
+          if (d = 1, m && (f = i[0] & 2 ? m.return : i[0] ? m.throw || ((f = m.return) && f.call(m), 0) : m.next) && !(f = f.call(m, i[1])).done)
+            return f;
+          switch (m = 0, f && (i = [i[0] & 2, f.value]), i[0]) {
             case 0:
             case 1:
-              h = s;
+              f = i;
               break;
             case 4:
-              return g.label++, { value: s[1], done: !1 };
+              return g.label++, { value: i[1], done: !1 };
             case 5:
-              g.label++, m = s[1], s = [0];
+              g.label++, m = i[1], i = [0];
               continue;
             case 7:
-              s = g.ops.pop(), g.trys.pop();
+              i = g.ops.pop(), g.trys.pop();
               continue;
             default:
-              if (h = g.trys, !(h = h.length > 0 && h[h.length - 1]) && (s[0] === 6 || s[0] === 2)) {
+              if (f = g.trys, !(f = f.length > 0 && f[f.length - 1]) && (i[0] === 6 || i[0] === 2)) {
                 g = 0;
                 continue;
               }
-              if (s[0] === 3 && (!h || s[1] > h[0] && s[1] < h[3])) {
-                g.label = s[1];
+              if (i[0] === 3 && (!f || i[1] > f[0] && i[1] < f[3])) {
+                g.label = i[1];
                 break;
               }
-              if (s[0] === 6 && g.label < h[1]) {
-                g.label = h[1], h = s;
+              if (i[0] === 6 && g.label < f[1]) {
+                g.label = f[1], f = i;
                 break;
               }
-              if (h && g.label < h[2]) {
-                g.label = h[2], g.ops.push(s);
+              if (f && g.label < f[2]) {
+                g.label = f[2], g.ops.push(i);
                 break;
               }
-              h[2] && g.ops.pop(), g.trys.pop();
+              f[2] && g.ops.pop(), g.trys.pop();
               continue;
           }
-          s = l.call(t, g);
+          i = l.call(n, g);
         } catch (r) {
-          s = [6, r], m = 0;
+          i = [6, r], m = 0;
         } finally {
-          d = h = 0;
+          d = f = 0;
         }
-      if (s[0] & 5) throw s[1];
-      return { value: s[0] ? s[1] : void 0, done: !0 };
+      if (i[0] & 5) throw i[1];
+      return { value: i[0] ? i[1] : void 0, done: !0 };
     }
   };
   Object.defineProperty(Ce, "__esModule", { value: !0 }), Ce.defaultCookieHandlerImplementation = void 0;
-  var n = je();
+  var t = je();
   return Ce.defaultCookieHandlerImplementation = {
     getCookie: function() {
       return e(this, void 0, void 0, function() {
-        return o(this, function(t) {
+        return o(this, function(n) {
           return [
             2,
-            n.default.getReferenceOrThrow().windowHandler.getWindowUnsafe().document.cookie
+            t.default.getReferenceOrThrow().windowHandler.getWindowUnsafe().document.cookie
           ];
         });
       });
     },
-    setCookie: function(t) {
+    setCookie: function(n) {
       return e(this, void 0, void 0, function() {
         return o(this, function(l) {
-          return n.default.getReferenceOrThrow().windowHandler.getWindowUnsafe().document.cookie = t, [
+          return t.default.getReferenceOrThrow().windowHandler.getWindowUnsafe().document.cookie = n, [
             2
             /*return*/
           ];
@@ -994,74 +994,74 @@ function ro() {
     }
   }, Ce;
 }
-var yn;
-function Cr() {
-  if (yn) return nt;
-  yn = 1, Object.defineProperty(nt, "__esModule", { value: !0 }), nt.CookieHandlerReference = void 0;
-  var e = ro(), o = (
+var wn;
+function Or() {
+  if (wn) return nt;
+  wn = 1, Object.defineProperty(nt, "__esModule", { value: !0 }), nt.CookieHandlerReference = void 0;
+  var e = so(), o = (
     /** @class */
     function() {
-      function n(t) {
+      function t(n) {
         var l = function(g) {
           return g;
         };
-        t !== void 0 && (l = t), this.cookieHandler = l(e.defaultCookieHandlerImplementation);
+        n !== void 0 && (l = n), this.cookieHandler = l(e.defaultCookieHandlerImplementation);
       }
-      return n.init = function(t) {
-        n.instance === void 0 && (n.instance = new n(t));
-      }, n.getReferenceOrThrow = function() {
-        if (n.instance === void 0)
+      return t.init = function(n) {
+        t.instance === void 0 && (t.instance = new t(n));
+      }, t.getReferenceOrThrow = function() {
+        if (t.instance === void 0)
           throw new Error("SuperTokensCookieHandler must be initialized before calling this method.");
-        return n.instance;
-      }, n;
+        return t.instance;
+      }, t;
     }()
   );
   return nt.CookieHandlerReference = o, nt.default = o, nt;
 }
-var rt = {}, Ae = {}, Tt = {}, wn;
-function oo() {
-  if (wn) return Tt;
-  wn = 1, Object.defineProperty(Tt, "__esModule", { value: !0 });
+var rt = {}, Ae = {}, _t = {}, bn;
+function ao() {
+  if (bn) return _t;
+  bn = 1, Object.defineProperty(_t, "__esModule", { value: !0 });
   var e = (
     /** @class */
     function() {
-      function n() {
-        var t = this;
+      function t() {
+        var n = this;
         this.locked = /* @__PURE__ */ new Map(), this.addToLocked = function(l, g) {
-          var d = t.locked.get(l);
-          d === void 0 ? g === void 0 ? t.locked.set(l, []) : t.locked.set(l, [g]) : g !== void 0 && (d.unshift(g), t.locked.set(l, d));
+          var d = n.locked.get(l);
+          d === void 0 ? g === void 0 ? n.locked.set(l, []) : n.locked.set(l, [g]) : g !== void 0 && (d.unshift(g), n.locked.set(l, d));
         }, this.isLocked = function(l) {
-          return t.locked.has(l);
+          return n.locked.has(l);
         }, this.lock = function(l) {
           return new Promise(function(g, d) {
-            t.isLocked(l) ? t.addToLocked(l, g) : (t.addToLocked(l), g());
+            n.isLocked(l) ? n.addToLocked(l, g) : (n.addToLocked(l), g());
           });
         }, this.unlock = function(l) {
-          var g = t.locked.get(l);
+          var g = n.locked.get(l);
           if (g === void 0 || g.length === 0) {
-            t.locked.delete(l);
+            n.locked.delete(l);
             return;
           }
           var d = g.pop();
-          t.locked.set(l, g), d !== void 0 && setTimeout(d, 0);
+          n.locked.set(l, g), d !== void 0 && setTimeout(d, 0);
         };
       }
-      return n.getInstance = function() {
-        return n.instance === void 0 && (n.instance = new n()), n.instance;
-      }, n;
+      return t.getInstance = function() {
+        return t.instance === void 0 && (t.instance = new t()), t.instance;
+      }, t;
     }()
   );
   function o() {
     return e.getInstance();
   }
-  return Tt.default = o, Tt;
+  return _t.default = o, _t;
 }
-var bn;
-function so() {
-  if (bn) return Ae;
-  bn = 1;
-  var e = Ae && Ae.__awaiter || function(a, c, s, r) {
-    return new (s || (s = Promise))(function(u, v) {
+var Sn;
+function uo() {
+  if (Sn) return Ae;
+  Sn = 1;
+  var e = Ae && Ae.__awaiter || function(a, c, i, r) {
+    return new (i || (i = Promise))(function(u, v) {
       function y(w) {
         try {
           p(r.next(w));
@@ -1069,7 +1069,7 @@ function so() {
           v(b);
         }
       }
-      function f(w) {
+      function h(w) {
         try {
           p(r.throw(w));
         } catch (b) {
@@ -1077,28 +1077,28 @@ function so() {
         }
       }
       function p(w) {
-        w.done ? u(w.value) : new s(function(b) {
+        w.done ? u(w.value) : new i(function(b) {
           b(w.value);
-        }).then(y, f);
+        }).then(y, h);
       }
       p((r = r.apply(a, c || [])).next());
     });
   }, o = Ae && Ae.__generator || function(a, c) {
-    var s = { label: 0, sent: function() {
+    var i = { label: 0, sent: function() {
       if (v[0] & 1) throw v[1];
       return v[1];
     }, trys: [], ops: [] }, r, u, v, y;
-    return y = { next: f(0), throw: f(1), return: f(2) }, typeof Symbol == "function" && (y[Symbol.iterator] = function() {
+    return y = { next: h(0), throw: h(1), return: h(2) }, typeof Symbol == "function" && (y[Symbol.iterator] = function() {
       return this;
     }), y;
-    function f(w) {
+    function h(w) {
       return function(b) {
         return p([w, b]);
       };
     }
     function p(w) {
       if (r) throw new TypeError("Generator is already executing.");
-      for (; s; ) try {
+      for (; i; ) try {
         if (r = 1, u && (v = w[0] & 2 ? u.return : w[0] ? u.throw || ((v = u.return) && v.call(u), 0) : u.next) && !(v = v.call(u, w[1])).done) return v;
         switch (u = 0, v && (w = [w[0] & 2, v.value]), w[0]) {
           case 0:
@@ -1106,34 +1106,34 @@ function so() {
             v = w;
             break;
           case 4:
-            return s.label++, { value: w[1], done: !1 };
+            return i.label++, { value: w[1], done: !1 };
           case 5:
-            s.label++, u = w[1], w = [0];
+            i.label++, u = w[1], w = [0];
             continue;
           case 7:
-            w = s.ops.pop(), s.trys.pop();
+            w = i.ops.pop(), i.trys.pop();
             continue;
           default:
-            if (v = s.trys, !(v = v.length > 0 && v[v.length - 1]) && (w[0] === 6 || w[0] === 2)) {
-              s = 0;
+            if (v = i.trys, !(v = v.length > 0 && v[v.length - 1]) && (w[0] === 6 || w[0] === 2)) {
+              i = 0;
               continue;
             }
             if (w[0] === 3 && (!v || w[1] > v[0] && w[1] < v[3])) {
-              s.label = w[1];
+              i.label = w[1];
               break;
             }
-            if (w[0] === 6 && s.label < v[1]) {
-              s.label = v[1], v = w;
+            if (w[0] === 6 && i.label < v[1]) {
+              i.label = v[1], v = w;
               break;
             }
-            if (v && s.label < v[2]) {
-              s.label = v[2], s.ops.push(w);
+            if (v && i.label < v[2]) {
+              i.label = v[2], i.ops.push(w);
               break;
             }
-            v[2] && s.ops.pop(), s.trys.pop();
+            v[2] && i.ops.pop(), i.trys.pop();
             continue;
         }
-        w = c.call(a, s);
+        w = c.call(a, i);
       } catch (b) {
         w = [6, b], u = 0;
       } finally {
@@ -1142,40 +1142,40 @@ function so() {
       if (w[0] & 5) throw w[1];
       return { value: w[0] ? w[1] : void 0, done: !0 };
     }
-  }, n = Ae;
+  }, t = Ae;
   Object.defineProperty(Ae, "__esModule", { value: !0 });
-  var t = oo(), l = "browser-tabs-lock-key", g = {
+  var n = ao(), l = "browser-tabs-lock-key", g = {
     key: function(a) {
-      return e(n, void 0, void 0, function() {
+      return e(t, void 0, void 0, function() {
         return o(this, function(c) {
           throw new Error("Unsupported");
         });
       });
     },
     getItem: function(a) {
-      return e(n, void 0, void 0, function() {
+      return e(t, void 0, void 0, function() {
         return o(this, function(c) {
           throw new Error("Unsupported");
         });
       });
     },
     clear: function() {
-      return e(n, void 0, void 0, function() {
+      return e(t, void 0, void 0, function() {
         return o(this, function(a) {
           return [2, window.localStorage.clear()];
         });
       });
     },
     removeItem: function(a) {
-      return e(n, void 0, void 0, function() {
+      return e(t, void 0, void 0, function() {
         return o(this, function(c) {
           throw new Error("Unsupported");
         });
       });
     },
     setItem: function(a, c) {
-      return e(n, void 0, void 0, function() {
-        return o(this, function(s) {
+      return e(t, void 0, void 0, function() {
+        return o(this, function(i) {
           throw new Error("Unsupported");
         });
       });
@@ -1202,32 +1202,32 @@ function so() {
     });
   }
   function m(a) {
-    for (var c = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz", s = "", r = 0; r < a; r++) {
+    for (var c = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz", i = "", r = 0; r < a; r++) {
       var u = Math.floor(Math.random() * c.length);
-      s += c[u];
+      i += c[u];
     }
-    return s;
+    return i;
   }
-  function h() {
+  function f() {
     return Date.now().toString() + m(15);
   }
-  var i = (
+  var s = (
     /** @class */
     function() {
       function a(c) {
-        this.acquiredIatSet = /* @__PURE__ */ new Set(), this.storageHandler = void 0, this.id = h(), this.acquireLock = this.acquireLock.bind(this), this.releaseLock = this.releaseLock.bind(this), this.releaseLock__private__ = this.releaseLock__private__.bind(this), this.waitForSomethingToChange = this.waitForSomethingToChange.bind(this), this.refreshLockWhileAcquired = this.refreshLockWhileAcquired.bind(this), this.storageHandler = c, a.waiters === void 0 && (a.waiters = []);
+        this.acquiredIatSet = /* @__PURE__ */ new Set(), this.storageHandler = void 0, this.id = f(), this.acquireLock = this.acquireLock.bind(this), this.releaseLock = this.releaseLock.bind(this), this.releaseLock__private__ = this.releaseLock__private__.bind(this), this.waitForSomethingToChange = this.waitForSomethingToChange.bind(this), this.refreshLockWhileAcquired = this.refreshLockWhileAcquired.bind(this), this.storageHandler = c, a.waiters === void 0 && (a.waiters = []);
       }
-      return a.prototype.acquireLock = function(c, s) {
-        return s === void 0 && (s = 5e3), e(this, void 0, void 0, function() {
-          var r, u, v, y, f, p, w, b;
+      return a.prototype.acquireLock = function(c, i) {
+        return i === void 0 && (i = 5e3), e(this, void 0, void 0, function() {
+          var r, u, v, y, h, p, w, b;
           return o(this, function(S) {
             switch (S.label) {
               case 0:
-                r = Date.now() + m(4), u = Date.now() + s, v = l + "-" + c, y = this.storageHandler === void 0 ? g : this.storageHandler, S.label = 1;
+                r = Date.now() + m(4), u = Date.now() + i, v = l + "-" + c, y = this.storageHandler === void 0 ? g : this.storageHandler, S.label = 1;
               case 1:
                 return Date.now() < u ? [4, d(30)] : [3, 8];
               case 2:
-                return S.sent(), f = y.getItemSync(v), f !== null ? [3, 5] : (p = this.id + "-" + c + "-" + r, [4, d(Math.floor(Math.random() * 25))]);
+                return S.sent(), h = y.getItemSync(v), h !== null ? [3, 5] : (p = this.id + "-" + c + "-" + r, [4, d(Math.floor(Math.random() * 25))]);
               case 3:
                 return S.sent(), y.setItemSync(v, JSON.stringify({
                   id: this.id,
@@ -1249,31 +1249,31 @@ function so() {
             }
           });
         });
-      }, a.prototype.refreshLockWhileAcquired = function(c, s) {
+      }, a.prototype.refreshLockWhileAcquired = function(c, i) {
         return e(this, void 0, void 0, function() {
           var r = this;
           return o(this, function(u) {
             return setTimeout(function() {
               return e(r, void 0, void 0, function() {
-                var v, y, f;
+                var v, y, h;
                 return o(this, function(p) {
                   switch (p.label) {
                     case 0:
-                      return [4, t.default().lock(s)];
+                      return [4, n.default().lock(i)];
                     case 1:
-                      if (p.sent(), !this.acquiredIatSet.has(s))
-                        return t.default().unlock(s), [
+                      if (p.sent(), !this.acquiredIatSet.has(i))
+                        return n.default().unlock(i), [
                           2
                           /*return*/
                         ];
                       if (v = this.storageHandler === void 0 ? g : this.storageHandler, y = v.getItemSync(c), y !== null)
-                        f = JSON.parse(y), f.timeRefreshed = Date.now(), v.setItemSync(c, JSON.stringify(f)), t.default().unlock(s);
+                        h = JSON.parse(y), h.timeRefreshed = Date.now(), v.setItemSync(c, JSON.stringify(h)), n.default().unlock(i);
                       else
-                        return t.default().unlock(s), [
+                        return n.default().unlock(i), [
                           2
                           /*return*/
                         ];
-                      return this.refreshLockWhileAcquired(c, s), [
+                      return this.refreshLockWhileAcquired(c, i), [
                         2
                         /*return*/
                       ];
@@ -1288,13 +1288,13 @@ function so() {
         });
       }, a.prototype.waitForSomethingToChange = function(c) {
         return e(this, void 0, void 0, function() {
-          return o(this, function(s) {
-            switch (s.label) {
+          return o(this, function(i) {
+            switch (i.label) {
               case 0:
                 return [4, new Promise(function(r) {
-                  var u = !1, v = Date.now(), y = 50, f = !1;
+                  var u = !1, v = Date.now(), y = 50, h = !1;
                   function p() {
-                    if (f || (window.removeEventListener("storage", p), a.removeFromWaiting(p), clearTimeout(w), f = !0), !u) {
+                    if (h || (window.removeEventListener("storage", p), a.removeFromWaiting(p), clearTimeout(w), h = !0), !u) {
                       u = !0;
                       var b = y - (Date.now() - v);
                       b > 0 ? setTimeout(r, b) : r(null);
@@ -1304,7 +1304,7 @@ function so() {
                   var w = setTimeout(p, Math.max(0, c - Date.now()));
                 })];
               case 1:
-                return s.sent(), [
+                return i.sent(), [
                   2
                   /*return*/
                 ];
@@ -1314,39 +1314,39 @@ function so() {
       }, a.addToWaiting = function(c) {
         this.removeFromWaiting(c), a.waiters !== void 0 && a.waiters.push(c);
       }, a.removeFromWaiting = function(c) {
-        a.waiters !== void 0 && (a.waiters = a.waiters.filter(function(s) {
-          return s !== c;
+        a.waiters !== void 0 && (a.waiters = a.waiters.filter(function(i) {
+          return i !== c;
         }));
       }, a.notifyWaiters = function() {
         if (a.waiters !== void 0) {
           var c = a.waiters.slice();
-          c.forEach(function(s) {
-            return s();
+          c.forEach(function(i) {
+            return i();
           });
         }
       }, a.prototype.releaseLock = function(c) {
         return e(this, void 0, void 0, function() {
-          return o(this, function(s) {
-            switch (s.label) {
+          return o(this, function(i) {
+            switch (i.label) {
               case 0:
                 return [4, this.releaseLock__private__(c)];
               case 1:
-                return [2, s.sent()];
+                return [2, i.sent()];
             }
           });
         });
       }, a.prototype.releaseLock__private__ = function(c) {
         return e(this, void 0, void 0, function() {
-          var s, r, u, v;
+          var i, r, u, v;
           return o(this, function(y) {
             switch (y.label) {
               case 0:
-                return s = this.storageHandler === void 0 ? g : this.storageHandler, r = l + "-" + c, u = s.getItemSync(r), u === null ? [
+                return i = this.storageHandler === void 0 ? g : this.storageHandler, r = l + "-" + c, u = i.getItemSync(r), u === null ? [
                   2
                   /*return*/
-                ] : (v = JSON.parse(u), v.id !== this.id ? [3, 2] : [4, t.default().lock(v.iat)]);
+                ] : (v = JSON.parse(u), v.id !== this.id ? [3, 2] : [4, n.default().lock(v.iat)]);
               case 1:
-                y.sent(), this.acquiredIatSet.delete(v.iat), s.removeItemSync(r), t.default().unlock(v.iat), a.notifyWaiters(), y.label = 2;
+                y.sent(), this.acquiredIatSet.delete(v.iat), i.removeItemSync(r), n.default().unlock(v.iat), a.notifyWaiters(), y.label = 2;
               case 2:
                 return [
                   2
@@ -1356,136 +1356,136 @@ function so() {
           });
         });
       }, a.lockCorrector = function(c) {
-        for (var s = Date.now() - 5e3, r = c, u = [], v = 0; ; ) {
+        for (var i = Date.now() - 5e3, r = c, u = [], v = 0; ; ) {
           var y = r.keySync(v);
           if (y === null)
             break;
           u.push(y), v++;
         }
-        for (var f = !1, p = 0; p < u.length; p++) {
+        for (var h = !1, p = 0; p < u.length; p++) {
           var w = u[p];
           if (w.includes(l)) {
             var b = r.getItemSync(w);
             if (b !== null) {
               var S = JSON.parse(b);
-              (S.timeRefreshed === void 0 && S.timeAcquired < s || S.timeRefreshed !== void 0 && S.timeRefreshed < s) && (r.removeItemSync(w), f = !0);
+              (S.timeRefreshed === void 0 && S.timeAcquired < i || S.timeRefreshed !== void 0 && S.timeRefreshed < i) && (r.removeItemSync(w), h = !0);
             }
           }
         }
-        f && a.notifyWaiters();
+        h && a.notifyWaiters();
       }, a.waiters = void 0, a;
     }()
   );
-  return Ae.default = i, Ae;
+  return Ae.default = s, Ae;
 }
-var Sn;
-function Qt() {
-  if (Sn) return rt;
-  Sn = 1, Object.defineProperty(rt, "__esModule", { value: !0 }), rt.LockFactoryReference = void 0;
-  var e = so(), o = function(t) {
+var Rn;
+function Jt() {
+  if (Rn) return rt;
+  Rn = 1, Object.defineProperty(rt, "__esModule", { value: !0 }), rt.LockFactoryReference = void 0;
+  var e = uo(), o = function(n) {
     return function() {
-      return Promise.resolve(new e.default(t));
+      return Promise.resolve(new e.default(n));
     };
-  }, n = (
+  }, t = (
     /** @class */
     function() {
-      function t(l) {
+      function n(l) {
         this.lockFactory = l;
       }
-      return t.init = function(l, g) {
-        this.instance === void 0 && (this.instance = new t(
+      return n.init = function(l, g) {
+        this.instance === void 0 && (this.instance = new n(
           l ?? o(g)
         ));
-      }, t.getReferenceOrThrow = function() {
-        if (t.instance === void 0)
+      }, n.getReferenceOrThrow = function() {
+        if (n.instance === void 0)
           throw new Error("SuperTokensLockReference must be initialized before calling this method.");
-        return t.instance;
-      }, t;
+        return n.instance;
+      }, n;
     }()
   );
-  return rt.LockFactoryReference = n, rt.default = n, rt;
+  return rt.LockFactoryReference = t, rt.default = t, rt;
 }
-var Oe = {}, Rn;
+var Oe = {}, kn;
 function wt() {
-  if (Rn) return Oe;
-  Rn = 1, Object.defineProperty(Oe, "__esModule", { value: !0 }), Oe.logDebugMessage = Oe.disableLogging = Oe.enableLogging = void 0;
-  var e = Kt(), o = "com.supertokens", n = !1;
-  function t() {
-    n = !0;
+  if (kn) return Oe;
+  kn = 1, Object.defineProperty(Oe, "__esModule", { value: !0 }), Oe.logDebugMessage = Oe.disableLogging = Oe.enableLogging = void 0;
+  var e = Qt(), o = "com.supertokens", t = !1;
+  function n() {
+    t = !0;
   }
-  Oe.enableLogging = t;
+  Oe.enableLogging = n;
   function l() {
-    n = !1;
+    t = !1;
   }
   Oe.disableLogging = l;
   function g(d) {
-    n && console.log(
+    t && console.log(
       "".concat(o, ' {t: "').concat((/* @__PURE__ */ new Date()).toISOString(), '", message: "').concat(d, '", supertokens-website-ver: "').concat(e.package_version, '"}')
     );
   }
   return Oe.logDebugMessage = g, Oe;
 }
-var ot = {}, lt = {}, kn;
-function io() {
-  if (kn) return lt;
-  kn = 1, Object.defineProperty(lt, "__esModule", { value: !0 }), lt.DateProvider = void 0;
+var ot = {}, lt = {}, In;
+function co() {
+  if (In) return lt;
+  In = 1, Object.defineProperty(lt, "__esModule", { value: !0 }), lt.DateProvider = void 0;
   var e = je(), o = (
     /** @class */
     function() {
-      function n() {
+      function t() {
         this.clockSkewInMillis = 0, this.thresholdInSeconds = 7;
       }
-      return n.init = function() {
-        if (n.instance === void 0) {
-          n.instance = new n();
-          var t = e.default.getReferenceOrThrow().windowHandler.localStorage, l = t.getItemSync(n.CLOCK_SKEW_KEY), g = l !== null ? parseInt(l, 10) : 0;
-          n.instance.setClientClockSkewInMillis(g);
+      return t.init = function() {
+        if (t.instance === void 0) {
+          t.instance = new t();
+          var n = e.default.getReferenceOrThrow().windowHandler.localStorage, l = n.getItemSync(t.CLOCK_SKEW_KEY), g = l !== null ? parseInt(l, 10) : 0;
+          t.instance.setClientClockSkewInMillis(g);
         }
-      }, n.getReferenceOrThrow = function() {
-        if (n.instance === void 0)
+      }, t.getReferenceOrThrow = function() {
+        if (t.instance === void 0)
           throw new Error("DateProvider must be initialized before calling this method.");
-        return n.instance;
-      }, n.prototype.getThresholdInSeconds = function() {
+        return t.instance;
+      }, t.prototype.getThresholdInSeconds = function() {
         return this.thresholdInSeconds;
-      }, n.prototype.setThresholdInSeconds = function(t) {
-        this.thresholdInSeconds = t;
-      }, n.prototype.setClientClockSkewInMillis = function(t) {
-        this.clockSkewInMillis = Math.abs(t) >= this.thresholdInSeconds * 1e3 ? t : 0;
+      }, t.prototype.setThresholdInSeconds = function(n) {
+        this.thresholdInSeconds = n;
+      }, t.prototype.setClientClockSkewInMillis = function(n) {
+        this.clockSkewInMillis = Math.abs(n) >= this.thresholdInSeconds * 1e3 ? n : 0;
         var l = e.default.getReferenceOrThrow().windowHandler.localStorage;
-        l.setItemSync(n.CLOCK_SKEW_KEY, String(t));
-      }, n.prototype.getClientClockSkewInMillis = function() {
+        l.setItemSync(t.CLOCK_SKEW_KEY, String(n));
+      }, t.prototype.getClientClockSkewInMillis = function() {
         return this.clockSkewInMillis;
-      }, n.prototype.now = function() {
+      }, t.prototype.now = function() {
         return Date.now() + this.getClientClockSkewInMillis();
-      }, n.CLOCK_SKEW_KEY = "__st_clockSkewInMillis", n;
+      }, t.CLOCK_SKEW_KEY = "__st_clockSkewInMillis", t;
     }()
   );
   return lt.DateProvider = o, lt;
 }
-var In;
+var _n;
 function bt() {
-  if (In) return ot;
-  In = 1, Object.defineProperty(ot, "__esModule", { value: !0 }), ot.DateProviderReference = void 0;
-  var e = io(), o = (
+  if (_n) return ot;
+  _n = 1, Object.defineProperty(ot, "__esModule", { value: !0 }), ot.DateProviderReference = void 0;
+  var e = co(), o = (
     /** @class */
     function() {
-      function n(t) {
-        t !== void 0 ? this.dateProvider = t() : (e.DateProvider.init(), this.dateProvider = e.DateProvider.getReferenceOrThrow());
+      function t(n) {
+        n !== void 0 ? this.dateProvider = n() : (e.DateProvider.init(), this.dateProvider = e.DateProvider.getReferenceOrThrow());
       }
-      return n.init = function(t) {
-        n.instance === void 0 && (n.instance = new n(t));
-      }, n.getReferenceOrThrow = function() {
-        if (n.instance === void 0)
+      return t.init = function(n) {
+        t.instance === void 0 && (t.instance = new t(n));
+      }, t.getReferenceOrThrow = function() {
+        if (t.instance === void 0)
           throw new Error("SuperTokensDateProvider must be initialized before calling this method.");
-        return n.instance;
-      }, n;
+        return t.instance;
+      }, t;
     }()
   );
   return ot.DateProviderReference = o, ot.default = o, ot;
 }
-var _n;
+var Tn;
 function St() {
-  return _n || (_n = 1, function(e) {
+  return Tn || (Tn = 1, function(e) {
     var o = Te && Te.__assign || function() {
       return o = Object.assign || function(k) {
         for (var O, A = 1, D = arguments.length; A < D; A++) {
@@ -1494,7 +1494,7 @@ function St() {
         }
         return k;
       }, o.apply(this, arguments);
-    }, n = Te && Te.__awaiter || function(k, O, A, D) {
+    }, t = Te && Te.__awaiter || function(k, O, A, D) {
       function M(N) {
         return N instanceof A ? N : new A(function($) {
           $(N);
@@ -1520,7 +1520,7 @@ function St() {
         }
         j((D = D.apply(k, O || [])).next());
       });
-    }, t = Te && Te.__generator || function(k, O) {
+    }, n = Te && Te.__generator || function(k, O) {
       var A = {
         label: 0,
         sent: function() {
@@ -1588,20 +1588,20 @@ function St() {
       }
     };
     Object.defineProperty(e, "__esModule", { value: !0 }), e.updateClockSkewUsingFrontToken = e.fireSessionUpdateEventsIfNecessary = e.setFrontToken = e.getFrontToken = e.setAntiCSRF = e.saveLastAccessTokenUpdate = e.getTokenForHeaderAuth = e.setToken = e.getStorageNameForToken = e.getLocalSessionState = e.onInvalidClaimResponse = e.onTokenUpdate = e.onUnauthorisedResponse = e.FrontToken = e.AntiCsrfToken = void 0;
-    var l = zt(), g = Kt(), d = Cr(), m = je(), h = Qt(), i = wt(), a = bt(), c = (
+    var l = Kt(), g = Qt(), d = Or(), m = je(), f = Jt(), s = wt(), a = bt(), c = (
       /** @class */
       function() {
         function k() {
         }
         return k.getToken = function(O) {
-          return n(this, void 0, void 0, function() {
+          return t(this, void 0, void 0, function() {
             var A;
-            return t(this, function(D) {
+            return n(this, function(D) {
               switch (D.label) {
                 case 0:
-                  return (0, i.logDebugMessage)("AntiCsrfToken.getToken: called"), O === void 0 ? (k.tokenInfo = void 0, (0, i.logDebugMessage)("AntiCsrfToken.getToken: returning undefined"), [2, void 0]) : k.tokenInfo !== void 0 ? [3, 2] : [4, ne()];
+                  return (0, s.logDebugMessage)("AntiCsrfToken.getToken: called"), O === void 0 ? (k.tokenInfo = void 0, (0, s.logDebugMessage)("AntiCsrfToken.getToken: returning undefined"), [2, void 0]) : k.tokenInfo !== void 0 ? [3, 2] : [4, ne()];
                 case 1:
-                  return A = D.sent(), A === null ? ((0, i.logDebugMessage)("AntiCsrfToken.getToken: returning undefined"), [2, void 0]) : (k.tokenInfo = {
+                  return A = D.sent(), A === null ? ((0, s.logDebugMessage)("AntiCsrfToken.getToken: returning undefined"), [2, void 0]) : (k.tokenInfo = {
                     antiCsrf: A,
                     associatedAccessTokenUpdate: O
                   }, [3, 4]);
@@ -1610,16 +1610,16 @@ function St() {
                 case 3:
                   return [2, D.sent()];
                 case 4:
-                  return (0, i.logDebugMessage)("AntiCsrfToken.getToken: returning: " + k.tokenInfo.antiCsrf), [2, k.tokenInfo.antiCsrf];
+                  return (0, s.logDebugMessage)("AntiCsrfToken.getToken: returning: " + k.tokenInfo.antiCsrf), [2, k.tokenInfo.antiCsrf];
               }
             });
           });
         }, k.removeToken = function() {
-          return n(this, void 0, void 0, function() {
-            return t(this, function(O) {
+          return t(this, void 0, void 0, function() {
+            return n(this, function(O) {
               switch (O.label) {
                 case 0:
-                  return (0, i.logDebugMessage)("AntiCsrfToken.removeToken: called"), k.tokenInfo = void 0, [4, re(void 0)];
+                  return (0, s.logDebugMessage)("AntiCsrfToken.removeToken: called"), k.tokenInfo = void 0, [4, re(void 0)];
                 case 1:
                   return O.sent(), [
                     2
@@ -1629,14 +1629,14 @@ function St() {
             });
           });
         }, k.setItem = function(O, A) {
-          return n(this, void 0, void 0, function() {
-            return t(this, function(D) {
+          return t(this, void 0, void 0, function() {
+            return n(this, function(D) {
               switch (D.label) {
                 case 0:
                   return O === void 0 ? (k.tokenInfo = void 0, [
                     2
                     /*return*/
-                  ]) : ((0, i.logDebugMessage)("AntiCsrfToken.setItem: called"), [4, re(A)]);
+                  ]) : ((0, s.logDebugMessage)("AntiCsrfToken.setItem: called"), [4, re(A)]);
                 case 1:
                   return D.sent(), k.tokenInfo = {
                     antiCsrf: A,
@@ -1652,18 +1652,18 @@ function St() {
       }()
     );
     e.AntiCsrfToken = c;
-    var s = (
+    var i = (
       /** @class */
       function() {
         function k() {
         }
         return k.getTokenInfo = function() {
-          return n(this, void 0, void 0, function() {
+          return t(this, void 0, void 0, function() {
             var O, A;
-            return t(this, function(D) {
+            return n(this, function(D) {
               switch (D.label) {
                 case 0:
-                  return (0, i.logDebugMessage)("FrontToken.getTokenInfo: called"), [4, q()];
+                  return (0, s.logDebugMessage)("FrontToken.getTokenInfo: called"), [4, q()];
                 case 1:
                   return O = D.sent(), O !== null ? [3, 5] : [4, R(!1)];
                 case 2:
@@ -1678,16 +1678,16 @@ function St() {
                 case 4:
                   return [2, void 0];
                 case 5:
-                  return A = L(O), (0, i.logDebugMessage)("FrontToken.getTokenInfo: returning ate: " + A.ate), (0, i.logDebugMessage)("FrontToken.getTokenInfo: returning uid: " + A.uid), (0, i.logDebugMessage)("FrontToken.getTokenInfo: returning up: " + A.up), [2, A];
+                  return A = L(O), (0, s.logDebugMessage)("FrontToken.getTokenInfo: returning ate: " + A.ate), (0, s.logDebugMessage)("FrontToken.getTokenInfo: returning uid: " + A.uid), (0, s.logDebugMessage)("FrontToken.getTokenInfo: returning up: " + A.up), [2, A];
               }
             });
           });
         }, k.removeToken = function() {
-          return n(this, void 0, void 0, function() {
-            return t(this, function(O) {
+          return t(this, void 0, void 0, function() {
+            return n(this, function(O) {
               switch (O.label) {
                 case 0:
-                  return (0, i.logDebugMessage)("FrontToken.removeToken: called"), [4, F(void 0)];
+                  return (0, s.logDebugMessage)("FrontToken.removeToken: called"), [4, F(void 0)];
                 case 1:
                   return O.sent(), [4, T("access", "")];
                 case 2:
@@ -1705,13 +1705,13 @@ function St() {
             });
           });
         }, k.setItem = function(O) {
-          return n(this, void 0, void 0, function() {
-            return t(this, function(A) {
+          return t(this, void 0, void 0, function() {
+            return n(this, function(A) {
               switch (A.label) {
                 case 0:
                   return [4, K()];
                 case 1:
-                  return A.sent(), O === "remove" ? [2, k.removeToken()] : ((0, i.logDebugMessage)("FrontToken.setItem: called"), [4, F(O)]);
+                  return A.sent(), O === "remove" ? [2, k.removeToken()] : ((0, s.logDebugMessage)("FrontToken.setItem: called"), [4, F(O)]);
                 case 2:
                   return A.sent(), k.waiters.forEach(function(D) {
                     return D(void 0);
@@ -1723,9 +1723,9 @@ function St() {
             });
           });
         }, k.doesTokenExists = function() {
-          return n(this, void 0, void 0, function() {
+          return t(this, void 0, void 0, function() {
             var O;
-            return t(this, function(A) {
+            return n(this, function(A) {
               switch (A.label) {
                 case 0:
                   return [4, H()];
@@ -1737,16 +1737,16 @@ function St() {
         }, k.waiters = [], k;
       }()
     );
-    e.FrontToken = s;
+    e.FrontToken = i;
     var r = (
       /** @class */
       function() {
         function k() {
         }
         k.init = function(A, D) {
-          (0, i.logDebugMessage)("init: called"), (0, i.logDebugMessage)("init: Input apiBasePath: " + A.apiBasePath), (0, i.logDebugMessage)("init: Input apiDomain: " + A.apiDomain), (0, i.logDebugMessage)("init: Input autoAddCredentials: " + A.autoAddCredentials), (0, i.logDebugMessage)("init: Input sessionTokenBackendDomain: " + A.sessionTokenBackendDomain), (0, i.logDebugMessage)("init: Input isInIframe: " + A.isInIframe), (0, i.logDebugMessage)("init: Input sessionExpiredStatusCode: " + A.sessionExpiredStatusCode), (0, i.logDebugMessage)("init: Input sessionTokenFrontendDomain: " + A.sessionTokenFrontendDomain), (0, i.logDebugMessage)("init: Input tokenTransferMethod: " + A.tokenTransferMethod);
+          (0, s.logDebugMessage)("init: called"), (0, s.logDebugMessage)("init: Input apiBasePath: " + A.apiBasePath), (0, s.logDebugMessage)("init: Input apiDomain: " + A.apiDomain), (0, s.logDebugMessage)("init: Input autoAddCredentials: " + A.autoAddCredentials), (0, s.logDebugMessage)("init: Input sessionTokenBackendDomain: " + A.sessionTokenBackendDomain), (0, s.logDebugMessage)("init: Input isInIframe: " + A.isInIframe), (0, s.logDebugMessage)("init: Input sessionExpiredStatusCode: " + A.sessionExpiredStatusCode), (0, s.logDebugMessage)("init: Input sessionTokenFrontendDomain: " + A.sessionTokenFrontendDomain), (0, s.logDebugMessage)("init: Input tokenTransferMethod: " + A.tokenTransferMethod);
           var M = m.default.getReferenceOrThrow().windowHandler.getWindowUnsafe();
-          k.env = M === void 0 || M.fetch === void 0 ? Qr : M, k.refreshTokenUrl = A.apiDomain + A.apiBasePath + "/session/refresh", k.signOutUrl = A.apiDomain + A.apiBasePath + "/signout", k.rid = "session", k.config = A, k.env.__supertokensOriginalFetch === void 0 && ((0, i.logDebugMessage)("init: __supertokensOriginalFetch is undefined"), k.env.__supertokensOriginalFetch = k.env.fetch.bind(k.env), k.env.__supertokensSessionRecipe = D, k.env.fetch = k.env.__supertokensSessionRecipe.addFetchInterceptorsAndReturnModifiedFetch({
+          k.env = M === void 0 || M.fetch === void 0 ? Zr : M, k.refreshTokenUrl = A.apiDomain + A.apiBasePath + "/session/refresh", k.signOutUrl = A.apiDomain + A.apiBasePath + "/signout", k.rid = "session", k.config = A, k.env.__supertokensOriginalFetch === void 0 && ((0, s.logDebugMessage)("init: __supertokensOriginalFetch is undefined"), k.env.__supertokensOriginalFetch = k.env.fetch.bind(k.env), k.env.__supertokensSessionRecipe = D, k.env.fetch = k.env.__supertokensSessionRecipe.addFetchInterceptorsAndReturnModifiedFetch({
             originalFetch: k.env.__supertokensOriginalFetch,
             userContext: {}
           }), k.env.__supertokensSessionRecipe.addXMLHttpRequestInterceptor({
@@ -1755,23 +1755,23 @@ function St() {
         };
         var O;
         return O = k, k.initCalled = !1, k.doRequest = function(A, D, M) {
-          return n(void 0, void 0, void 0, function() {
+          return t(void 0, void 0, void 0, function() {
             var N, $, U, W, j, Q, Z, he, ae, ue, ge, z, le, ut, Ne;
-            return t(O, function(oe) {
+            return n(O, function(oe) {
               switch (oe.label) {
                 case 0:
                   if (!k.initCalled)
                     throw Error("init function not called");
-                  (0, i.logDebugMessage)("doRequest: start of fetch interception"), N = !1;
+                  (0, s.logDebugMessage)("doRequest: start of fetch interception"), N = !1;
                   try {
                     $ = void 0, typeof M == "string" ? $ = M : typeof M == "object" && (typeof M.url == "string" ? $ = M.url : typeof M.href == "string" && ($ = M.href)), N = !k.recipeImpl.shouldDoInterceptionBasedOnUrl(
                       $,
                       k.config.apiDomain,
                       k.config.sessionTokenBackendDomain
                     );
-                  } catch (nn) {
-                    if (nn.message === "Please provide a valid domain name")
-                      (0, i.logDebugMessage)(
+                  } catch (rn) {
+                    if (rn.message === "Please provide a valid domain name")
+                      (0, s.logDebugMessage)(
                         "doRequest: Trying shouldDoInterceptionBasedOnUrl with location.origin"
                       ), N = !k.recipeImpl.shouldDoInterceptionBasedOnUrl(
                         m.default.getReferenceOrThrow().windowHandler.location.getOrigin(),
@@ -1779,9 +1779,9 @@ function St() {
                         k.config.sessionTokenBackendDomain
                       );
                     else
-                      throw nn;
+                      throw rn;
                   }
-                  return (0, i.logDebugMessage)("doRequest: Value of doNotDoInterception: " + N), N ? ((0, i.logDebugMessage)("doRequest: Returning without interception"), [4, A(D)]) : [3, 2];
+                  return (0, s.logDebugMessage)("doRequest: Value of doNotDoInterception: " + N), N ? ((0, s.logDebugMessage)("doRequest: Returning without interception"), [4, A(D)]) : [3, 2];
                 case 1:
                   return [2, oe.sent()];
                 case 2:
@@ -1791,11 +1791,11 @@ function St() {
                 case 3:
                   return W = oe.sent(), [4, P("refresh")];
                 case 4:
-                  j = oe.sent(), W !== void 0 && j !== void 0 && U.get("Authorization") === "Bearer ".concat(W) && ((0, i.logDebugMessage)(
+                  j = oe.sent(), W !== void 0 && j !== void 0 && U.get("Authorization") === "Bearer ".concat(W) && ((0, s.logDebugMessage)(
                     "doRequest: Removing Authorization from user provided headers because it contains our access token"
                   ), U.delete("Authorization")), oe.label = 5;
                 case 5:
-                  (0, i.logDebugMessage)("doRequest: Interception started"), l.ProcessState.getInstance().addState(
+                  (0, s.logDebugMessage)("doRequest: Interception started"), l.ProcessState.getInstance().addState(
                     l.PROCESS_STATE.CALLING_INTERCEPTION_REQUEST
                   ), Q = 0, Z = void 0, oe.label = 6;
                 case 6:
@@ -1803,17 +1803,17 @@ function St() {
                 case 7:
                   return he = oe.sent(), ae = new Headers(U), ue = o(o({}, D), { headers: ae }), he.status !== "EXISTS" ? [3, 9] : [4, c.getToken(he.lastAccessTokenUpdate)];
                 case 8:
-                  ge = oe.sent(), ge !== void 0 && ((0, i.logDebugMessage)("doRequest: Adding anti-csrf token to request"), ae.set("anti-csrf", ge)), oe.label = 9;
+                  ge = oe.sent(), ge !== void 0 && ((0, s.logDebugMessage)("doRequest: Adding anti-csrf token to request"), ae.set("anti-csrf", ge)), oe.label = 9;
                 case 9:
-                  return k.config.autoAddCredentials && ((0, i.logDebugMessage)("doRequest: Adding credentials include"), ue === void 0 ? ue = {
+                  return k.config.autoAddCredentials && ((0, s.logDebugMessage)("doRequest: Adding credentials include"), ue === void 0 ? ue = {
                     credentials: "include"
                   } : ue.credentials === void 0 && (ue = o(o({}, ue), {
                     credentials: "include"
-                  }))), ae.has("rid") ? (0, i.logDebugMessage)("doRequest: rid header was already there in request") : ((0, i.logDebugMessage)("doRequest: Adding rid header: anti-csrf"), ae.set("rid", "anti-csrf")), z = k.config.tokenTransferMethod, (0, i.logDebugMessage)("doRequest: Adding st-auth-mode header: " + z), ae.set("st-auth-mode", z), [4, x(ae)];
+                  }))), ae.has("rid") ? (0, s.logDebugMessage)("doRequest: rid header was already there in request") : ((0, s.logDebugMessage)("doRequest: Adding rid header: anti-csrf"), ae.set("rid", "anti-csrf")), z = k.config.tokenTransferMethod, (0, s.logDebugMessage)("doRequest: Adding st-auth-mode header: " + z), ae.set("st-auth-mode", z), [4, x(ae)];
                 case 10:
-                  return oe.sent(), (0, i.logDebugMessage)("doRequest: Making user's http call"), [4, A(ue)];
+                  return oe.sent(), (0, s.logDebugMessage)("doRequest: Making user's http call"), [4, A(ue)];
                 case 11:
-                  return le = oe.sent(), (0, i.logDebugMessage)("doRequest: User's http call ended"), [4, E(le)];
+                  return le = oe.sent(), (0, s.logDebugMessage)("doRequest: User's http call ended"), [4, E(le)];
                 case 12:
                   if (oe.sent(), V(
                     he.status === "EXISTS",
@@ -1821,8 +1821,8 @@ function St() {
                     le.headers.get("front-token")
                   ), le.status !== k.config.sessionExpiredStatusCode)
                     return [3, 14];
-                  if ((0, i.logDebugMessage)("doRequest: Status code is: " + le.status), Q >= k.config.maxRetryAttemptsForSessionRefresh)
-                    throw (0, i.logDebugMessage)(
+                  if ((0, s.logDebugMessage)("doRequest: Status code is: " + le.status), Q >= k.config.maxRetryAttemptsForSessionRefresh)
+                    throw (0, s.logDebugMessage)(
                       "doRequest: Maximum session refresh attempts reached. sessionRefreshAttempts: ".concat(Q, ", maxRetryAttemptsForSessionRefresh: ").concat(k.config.maxRetryAttemptsForSessionRefresh)
                     ), ut = "Received a 401 response from ".concat(
                       M,
@@ -1833,8 +1833,8 @@ function St() {
                     ), console.error(ut), new Error(ut);
                   return [4, w(he)];
                 case 13:
-                  if (Ne = oe.sent(), Q++, (0, i.logDebugMessage)("doRequest: sessionRefreshAttempts: " + Q), Ne.result !== "RETRY") {
-                    if ((0, i.logDebugMessage)("doRequest: Not retrying original request"), Ne.error !== void 0)
+                  if (Ne = oe.sent(), Q++, (0, s.logDebugMessage)("doRequest: sessionRefreshAttempts: " + Q), Ne.result !== "RETRY") {
+                    if ((0, s.logDebugMessage)("doRequest: Not retrying original request"), Ne.error !== void 0)
                       if (Ne.error instanceof Response)
                         Z = Ne.error;
                       else
@@ -1843,7 +1843,7 @@ function St() {
                       Z = le;
                     return [3, 18];
                   }
-                  return (0, i.logDebugMessage)("doRequest: Retrying original request"), [3, 17];
+                  return (0, s.logDebugMessage)("doRequest: Retrying original request"), [3, 17];
                 case 14:
                   return le.status !== k.config.invalidClaimStatusCode ? [3, 16] : [4, S(le)];
                 case 15:
@@ -1858,9 +1858,9 @@ function St() {
             });
           });
         }, k.attemptRefreshingSession = function() {
-          return n(void 0, void 0, void 0, function() {
+          return t(void 0, void 0, void 0, function() {
             var A, D;
-            return t(O, function(M) {
+            return n(O, function(M) {
               switch (M.label) {
                 case 0:
                   if (!k.initCalled)
@@ -1879,43 +1879,43 @@ function St() {
       }()
     );
     e.default = r;
-    var u = "st-last-access-token-update", v = "st-refresh-token", y = "st-access-token", f = "sAntiCsrf", p = "sFrontToken";
+    var u = "st-last-access-token-update", v = "st-refresh-token", y = "st-access-token", h = "sAntiCsrf", p = "sFrontToken";
     function w(k) {
-      return n(this, void 0, void 0, function() {
+      return t(this, void 0, void 0, function() {
         var O, A, D, M, N, $, U, W, j, Q, Z, he, ae, ue, ge;
-        return t(this, function(z) {
+        return n(this, function(z) {
           switch (z.label) {
             case 0:
-              return [4, h.default.getReferenceOrThrow().lockFactory()];
+              return [4, f.default.getReferenceOrThrow().lockFactory()];
             case 1:
               O = z.sent(), z.label = 2;
             case 2:
-              return (0, i.logDebugMessage)("onUnauthorisedResponse: trying to acquire lock"), [4, O.acquireLock("REFRESH_TOKEN_USE", 1e3)];
+              return (0, s.logDebugMessage)("onUnauthorisedResponse: trying to acquire lock"), [4, O.acquireLock("REFRESH_TOKEN_USE", 1e3)];
             case 3:
               if (!z.sent()) return [3, 21];
-              (0, i.logDebugMessage)("onUnauthorisedResponse: lock acquired"), z.label = 4;
+              (0, s.logDebugMessage)("onUnauthorisedResponse: lock acquired"), z.label = 4;
             case 4:
               return z.trys.push([4, 17, 19, 21]), [4, R(!1)];
             case 5:
-              return A = z.sent(), A.status === "NOT_EXISTS" ? ((0, i.logDebugMessage)(
+              return A = z.sent(), A.status === "NOT_EXISTS" ? ((0, s.logDebugMessage)(
                 "onUnauthorisedResponse: Not refreshing because local session state is NOT_EXISTS"
               ), r.config.onHandleEvent({
                 action: "UNAUTHORISED",
                 sessionExpiredOrRevoked: !1,
                 userContext: {}
-              }), [2, { result: "SESSION_EXPIRED" }]) : (D = A.status === "EXISTS", M = k.status === "EXISTS", N = A.status !== k.status, $ = "lastAccessTokenUpdate" in A && "lastAccessTokenUpdate" in k && A.lastAccessTokenUpdate !== k.lastAccessTokenUpdate, N && D ? ((0, i.logDebugMessage)(
+              }), [2, { result: "SESSION_EXPIRED" }]) : (D = A.status === "EXISTS", M = k.status === "EXISTS", N = A.status !== k.status, $ = "lastAccessTokenUpdate" in A && "lastAccessTokenUpdate" in k && A.lastAccessTokenUpdate !== k.lastAccessTokenUpdate, N && D ? ((0, s.logDebugMessage)(
                 "onUnauthorisedResponse: Retrying early because session status has changed and postLockLSS.status is EXISTS"
-              ), [2, { result: "RETRY" }]) : D && M && $ ? ((0, i.logDebugMessage)(
+              ), [2, { result: "RETRY" }]) : D && M && $ ? ((0, s.logDebugMessage)(
                 "onUnauthorisedResponse: Retrying early because pre and post lastAccessTokenUpdate don't match"
               ), [2, { result: "RETRY" }]) : (U = new Headers(), k.status !== "EXISTS" ? [3, 7] : [4, c.getToken(k.lastAccessTokenUpdate)]));
             case 6:
-              W = z.sent(), W !== void 0 && ((0, i.logDebugMessage)(
+              W = z.sent(), W !== void 0 && ((0, s.logDebugMessage)(
                 "onUnauthorisedResponse: Adding anti-csrf token to refresh API call"
               ), U.set("anti-csrf", W)), z.label = 7;
             case 7:
-              return (0, i.logDebugMessage)("onUnauthorisedResponse: Adding rid and fdi-versions to refresh call header"), U.set("rid", r.rid), U.set("fdi-version", g.supported_fdi.join(",")), j = r.config.tokenTransferMethod, (0, i.logDebugMessage)("onUnauthorisedResponse: Adding st-auth-mode header: " + j), U.set("st-auth-mode", j), [4, x(U, !0)];
+              return (0, s.logDebugMessage)("onUnauthorisedResponse: Adding rid and fdi-versions to refresh call header"), U.set("rid", r.rid), U.set("fdi-version", g.supported_fdi.join(",")), j = r.config.tokenTransferMethod, (0, s.logDebugMessage)("onUnauthorisedResponse: Adding st-auth-mode header: " + j), U.set("st-auth-mode", j), [4, x(U, !0)];
             case 8:
-              return z.sent(), (0, i.logDebugMessage)("onUnauthorisedResponse: Calling refresh pre API hook"), [
+              return z.sent(), (0, s.logDebugMessage)("onUnauthorisedResponse: Calling refresh pre API hook"), [
                 4,
                 r.config.preAPIHook({
                   action: "REFRESH_SESSION",
@@ -1929,14 +1929,14 @@ function St() {
                 })
               ];
             case 9:
-              return Q = z.sent(), (0, i.logDebugMessage)("onUnauthorisedResponse: Making refresh call"), [
+              return Q = z.sent(), (0, s.logDebugMessage)("onUnauthorisedResponse: Making refresh call"), [
                 4,
                 r.env.__supertokensOriginalFetch(Q.url, Q.requestInit)
               ];
             case 10:
-              return Z = z.sent(), (0, i.logDebugMessage)("onUnauthorisedResponse: Refresh call ended"), [4, E(Z)];
+              return Z = z.sent(), (0, s.logDebugMessage)("onUnauthorisedResponse: Refresh call ended"), [4, E(Z)];
             case 11:
-              return z.sent(), (0, i.logDebugMessage)("onUnauthorisedResponse: Refresh status code is: " + Z.status), he = Z.status === r.config.sessionExpiredStatusCode, Z.headers.get("front-token") !== null ? [3, 14] : he ? [4, s.setItem("remove")] : [3, 13];
+              return z.sent(), (0, s.logDebugMessage)("onUnauthorisedResponse: Refresh status code is: " + Z.status), he = Z.status === r.config.sessionExpiredStatusCode, Z.headers.get("front-token") !== null ? [3, 14] : he ? [4, i.setItem("remove")] : [3, 13];
             case 12:
               return z.sent(), [3, 14];
             case 13:
@@ -1963,31 +1963,31 @@ function St() {
             case 15:
               return z.sent(), [4, R(!1)];
             case 16:
-              return z.sent().status === "NOT_EXISTS" ? ((0, i.logDebugMessage)(
+              return z.sent().status === "NOT_EXISTS" ? ((0, s.logDebugMessage)(
                 "onUnauthorisedResponse: local session doesn't exist, so returning session expired"
               ), [2, { result: "SESSION_EXPIRED" }]) : (r.config.onHandleEvent({
                 action: "REFRESH_SESSION",
                 userContext: {}
-              }), (0, i.logDebugMessage)("onUnauthorisedResponse: Sending RETRY signal"), [2, { result: "RETRY" }]);
+              }), (0, s.logDebugMessage)("onUnauthorisedResponse: Sending RETRY signal"), [2, { result: "RETRY" }]);
             case 17:
               return ue = z.sent(), [4, R(!1)];
             case 18:
-              return z.sent().status === "NOT_EXISTS" ? ((0, i.logDebugMessage)(
+              return z.sent().status === "NOT_EXISTS" ? ((0, s.logDebugMessage)(
                 "onUnauthorisedResponse: local session doesn't exist, so returning session expired"
-              ), [2, { result: "SESSION_EXPIRED", error: ue }]) : ((0, i.logDebugMessage)("onUnauthorisedResponse: sending API_ERROR"), [2, { result: "API_ERROR", error: ue }]);
+              ), [2, { result: "SESSION_EXPIRED", error: ue }]) : ((0, s.logDebugMessage)("onUnauthorisedResponse: sending API_ERROR"), [2, { result: "API_ERROR", error: ue }]);
             case 19:
               return [4, O.releaseLock("REFRESH_TOKEN_USE")];
             case 20:
-              return z.sent(), (0, i.logDebugMessage)("onUnauthorisedResponse: Released lock"), [
+              return z.sent(), (0, s.logDebugMessage)("onUnauthorisedResponse: Released lock"), [
                 7
                 /*endfinally*/
               ];
             case 21:
               return [4, R(!1)];
             case 22:
-              return ge = z.sent(), ge.status === "NOT_EXISTS" ? ((0, i.logDebugMessage)(
+              return ge = z.sent(), ge.status === "NOT_EXISTS" ? ((0, s.logDebugMessage)(
                 "onUnauthorisedResponse: lock acquired failed and local session doesn't exist, so sending SESSION_EXPIRED"
-              ), [2, { result: "SESSION_EXPIRED" }]) : ge.status !== k.status || ge.status === "EXISTS" && k.status === "EXISTS" && ge.lastAccessTokenUpdate !== k.lastAccessTokenUpdate ? ((0, i.logDebugMessage)(
+              ), [2, { result: "SESSION_EXPIRED" }]) : ge.status !== k.status || ge.status === "EXISTS" && k.status === "EXISTS" && ge.lastAccessTokenUpdate !== k.lastAccessTokenUpdate ? ((0, s.logDebugMessage)(
                 "onUnauthorisedResponse: lock acquired failed and retrying early because pre and post lastAccessTokenUpdate don't match"
               ), [2, { result: "RETRY" }]) : [3, 2];
             case 23:
@@ -2001,16 +2001,16 @@ function St() {
     }
     e.onUnauthorisedResponse = w;
     function b() {
-      (0, i.logDebugMessage)("onTokenUpdate: firing ACCESS_TOKEN_PAYLOAD_UPDATED event"), r.config.onHandleEvent({
+      (0, s.logDebugMessage)("onTokenUpdate: firing ACCESS_TOKEN_PAYLOAD_UPDATED event"), r.config.onHandleEvent({
         action: "ACCESS_TOKEN_PAYLOAD_UPDATED",
         userContext: {}
       });
     }
     e.onTokenUpdate = b;
     function S(k) {
-      return n(this, void 0, void 0, function() {
+      return t(this, void 0, void 0, function() {
         var O;
-        return t(this, function(A) {
+        return n(this, function(A) {
           switch (A.label) {
             case 0:
               return A.trys.push([0, 2, , 3]), [
@@ -2039,24 +2039,24 @@ function St() {
     }
     e.onInvalidClaimResponse = S;
     function R(k) {
-      return n(this, void 0, void 0, function() {
+      return t(this, void 0, void 0, function() {
         var O, A, D, M, N, $, U;
-        return t(this, function(W) {
+        return n(this, function(W) {
           switch (W.label) {
             case 0:
-              return (0, i.logDebugMessage)("getLocalSessionState: called"), [4, C(u)];
+              return (0, s.logDebugMessage)("getLocalSessionState: called"), [4, C(u)];
             case 1:
-              return O = W.sent(), [4, s.doesTokenExists()];
+              return O = W.sent(), [4, i.doesTokenExists()];
             case 2:
-              return A = W.sent(), A && O !== void 0 ? ((0, i.logDebugMessage)("getLocalSessionState: returning EXISTS since both frontToken and lastAccessTokenUpdate exists"), [2, { status: "EXISTS", lastAccessTokenUpdate: O }]) : [3, 3];
+              return A = W.sent(), A && O !== void 0 ? ((0, s.logDebugMessage)("getLocalSessionState: returning EXISTS since both frontToken and lastAccessTokenUpdate exists"), [2, { status: "EXISTS", lastAccessTokenUpdate: O }]) : [3, 3];
             case 3:
-              return O ? ((0, i.logDebugMessage)("getLocalSessionState: returning NOT_EXISTS since frontToken was cleared but lastAccessTokenUpdate exists"), [2, { status: "NOT_EXISTS" }]) : [3, 4];
+              return O ? ((0, s.logDebugMessage)("getLocalSessionState: returning NOT_EXISTS since frontToken was cleared but lastAccessTokenUpdate exists"), [2, { status: "NOT_EXISTS" }]) : [3, 4];
             case 4:
               return D = {
                 status: "MAY_EXIST"
-              }, k ? ((0, i.logDebugMessage)("getLocalSessionState: trying to refresh"), [4, w(D)]) : [3, 8];
+              }, k ? ((0, s.logDebugMessage)("getLocalSessionState: trying to refresh"), [4, w(D)]) : [3, 8];
             case 5:
-              return M = W.sent(), M.result !== "RETRY" ? ((0, i.logDebugMessage)(
+              return M = W.sent(), M.result !== "RETRY" ? ((0, s.logDebugMessage)(
                 "getLocalSessionState: return NOT_EXISTS in case error from backend" + M.result
               ), [
                 2,
@@ -2065,13 +2065,13 @@ function St() {
                 }
               ]) : [4, C(u)];
             case 6:
-              return N = W.sent(), [4, s.doesTokenExists()];
+              return N = W.sent(), [4, i.doesTokenExists()];
             case 7:
               if ($ = W.sent(), !$ || N === void 0)
                 throw U = "Failed to retrieve local session state from cookies after a successful session refresh. This indicates a configuration error or that the browser is preventing cookie writes.", console.error(U), new Error(U);
-              return (0, i.logDebugMessage)("getLocalSessionState: returning EXISTS since both frontToken and lastAccessTokenUpdate exists post refresh"), [2, { status: "EXISTS", lastAccessTokenUpdate: N }];
+              return (0, s.logDebugMessage)("getLocalSessionState: returning EXISTS since both frontToken and lastAccessTokenUpdate exists post refresh"), [2, { status: "EXISTS", lastAccessTokenUpdate: N }];
             case 8:
-              return (0, i.logDebugMessage)("getLocalSessionState: returning: " + D.status), [2, D];
+              return (0, s.logDebugMessage)("getLocalSessionState: returning: " + D.status), [2, D];
           }
         });
       });
@@ -2088,7 +2088,7 @@ function St() {
     e.getStorageNameForToken = I;
     function T(k, O) {
       var A = I(k);
-      return O !== "" ? ((0, i.logDebugMessage)("setToken: saved ".concat(k, " token into cookies")), _(A, O, Date.now() + 31536e5)) : ((0, i.logDebugMessage)("setToken: cleared ".concat(k, " token from cookies")), _(A, O, 0));
+      return O !== "" ? ((0, s.logDebugMessage)("setToken: saved ".concat(k, " token into cookies")), _(A, O, Date.now() + 31536e5)) : ((0, s.logDebugMessage)("setToken: cleared ".concat(k, " token from cookies")), _(A, O, 0));
     }
     e.setToken = T;
     function _(k, O, A) {
@@ -2102,18 +2102,18 @@ function St() {
       );
     }
     function P(k) {
-      return n(this, void 0, void 0, function() {
+      return t(this, void 0, void 0, function() {
         var O;
-        return t(this, function(A) {
+        return n(this, function(A) {
           return O = I(k), [2, C(O)];
         });
       });
     }
     e.getTokenForHeaderAuth = P;
     function C(k) {
-      return n(this, void 0, void 0, function() {
+      return t(this, void 0, void 0, function() {
         var O, A, D, M;
-        return t(this, function(N) {
+        return n(this, function(N) {
           switch (N.label) {
             case 0:
               return A = "; ", [4, d.default.getReferenceOrThrow().cookieHandler.getCookie()];
@@ -2124,23 +2124,23 @@ function St() {
       });
     }
     function x(k, O) {
-      return O === void 0 && (O = !1), n(this, void 0, void 0, function() {
+      return O === void 0 && (O = !1), t(this, void 0, void 0, function() {
         var A, D;
-        return t(this, function(M) {
+        return n(this, function(M) {
           switch (M.label) {
             case 0:
-              return (0, i.logDebugMessage)("setTokenHeaders: adding existing tokens as header"), [4, P("access")];
+              return (0, s.logDebugMessage)("setTokenHeaders: adding existing tokens as header"), [4, P("access")];
             case 1:
               return A = M.sent(), [4, P("refresh")];
             case 2:
-              return D = M.sent(), (O || A !== void 0) && D !== void 0 ? k.has("Authorization") ? (0, i.logDebugMessage)(
+              return D = M.sent(), (O || A !== void 0) && D !== void 0 ? k.has("Authorization") ? (0, s.logDebugMessage)(
                 "setAuthorizationHeaderIfRequired: Authorization header defined by the user, not adding"
-              ) : ((0, i.logDebugMessage)(
+              ) : ((0, s.logDebugMessage)(
                 "setAuthorizationHeaderIfRequired: added authorization header"
               ), k.set(
                 "Authorization",
                 "Bearer ".concat(O ? D : A)
-              )) : (0, i.logDebugMessage)(
+              )) : (0, s.logDebugMessage)(
                 "setAuthorizationHeaderIfRequired: token for header based auth not found"
               ), [
                 2
@@ -2151,26 +2151,26 @@ function St() {
       });
     }
     function E(k) {
-      return n(this, void 0, void 0, function() {
+      return t(this, void 0, void 0, function() {
         var O, A, D, M, N;
-        return t(this, function($) {
+        return n(this, function($) {
           switch ($.label) {
             case 0:
-              return (0, i.logDebugMessage)("saveTokensFromHeaders: Saving updated tokens from the response headers"), O = k.headers.get("st-refresh-token"), O === null ? [3, 2] : ((0, i.logDebugMessage)("saveTokensFromHeaders: saving new refresh token"), [4, T("refresh", O)]);
+              return (0, s.logDebugMessage)("saveTokensFromHeaders: Saving updated tokens from the response headers"), O = k.headers.get("st-refresh-token"), O === null ? [3, 2] : ((0, s.logDebugMessage)("saveTokensFromHeaders: saving new refresh token"), [4, T("refresh", O)]);
             case 1:
               $.sent(), $.label = 2;
             case 2:
-              return A = k.headers.get("st-access-token"), A === null ? [3, 4] : ((0, i.logDebugMessage)("saveTokensFromHeaders: saving new access token"), [4, T("access", A)]);
+              return A = k.headers.get("st-access-token"), A === null ? [3, 4] : ((0, s.logDebugMessage)("saveTokensFromHeaders: saving new access token"), [4, T("access", A)]);
             case 3:
               $.sent(), $.label = 4;
             case 4:
-              return D = k.headers.get("front-token"), D === null ? [3, 6] : ((0, i.logDebugMessage)("saveTokensFromHeaders: Setting sFrontToken: " + D), [4, s.setItem(D)]);
+              return D = k.headers.get("front-token"), D === null ? [3, 6] : ((0, s.logDebugMessage)("saveTokensFromHeaders: Setting sFrontToken: " + D), [4, i.setItem(D)]);
             case 5:
               $.sent(), (0, e.updateClockSkewUsingFrontToken)({ frontToken: D, responseHeaders: k.headers }), $.label = 6;
             case 6:
               return M = k.headers.get("anti-csrf"), M === null ? [3, 9] : [4, R(!1)];
             case 7:
-              return N = $.sent(), N.status !== "EXISTS" ? [3, 9] : ((0, i.logDebugMessage)("saveTokensFromHeaders: Setting anti-csrf token"), [4, c.setItem(N.lastAccessTokenUpdate, M)]);
+              return N = $.sent(), N.status !== "EXISTS" ? [3, 9] : ((0, s.logDebugMessage)("saveTokensFromHeaders: Setting anti-csrf token"), [4, c.setItem(N.lastAccessTokenUpdate, M)]);
             case 8:
               $.sent(), $.label = 9;
             case 9:
@@ -2184,12 +2184,12 @@ function St() {
     }
     var B = void 0;
     function K() {
-      return n(this, void 0, void 0, function() {
+      return t(this, void 0, void 0, function() {
         var k;
-        return t(this, function(O) {
+        return n(this, function(O) {
           switch (O.label) {
             case 0:
-              return (0, i.logDebugMessage)("saveLastAccessTokenUpdate: called"), k = Date.now().toString(), (0, i.logDebugMessage)("saveLastAccessTokenUpdate: setting " + k), [4, _(u, k, Number.MAX_SAFE_INTEGER)];
+              return (0, s.logDebugMessage)("saveLastAccessTokenUpdate: called"), k = Date.now().toString(), (0, s.logDebugMessage)("saveLastAccessTokenUpdate: setting " + k), [4, _(u, k, Number.MAX_SAFE_INTEGER)];
             case 1:
               return O.sent(), B !== void 0 ? [3, 3] : [4, C(u)];
             case 2:
@@ -2209,11 +2209,11 @@ function St() {
     }
     e.saveLastAccessTokenUpdate = K;
     function ne() {
-      return n(this, void 0, void 0, function() {
+      return t(this, void 0, void 0, function() {
         function k() {
-          return n(this, void 0, void 0, function() {
+          return t(this, void 0, void 0, function() {
             var A, D, M, N, $;
-            return t(this, function(U) {
+            return n(this, function(U) {
               switch (U.label) {
                 case 0:
                   return D = "; ", [
@@ -2221,36 +2221,36 @@ function St() {
                     d.default.getReferenceOrThrow().cookieHandler.getCookie()
                   ];
                 case 1:
-                  return A = D + U.sent(), M = A.split("; " + f + "="), M.length >= 2 && (N = M.pop(), N !== void 0) ? ($ = N.split(";").shift(), $ === void 0 ? [2, null] : [2, $]) : [2, null];
+                  return A = D + U.sent(), M = A.split("; " + h + "="), M.length >= 2 && (N = M.pop(), N !== void 0) ? ($ = N.split(";").shift(), $ === void 0 ? [2, null] : [2, $]) : [2, null];
               }
             });
           });
         }
         var O;
-        return t(this, function(A) {
+        return n(this, function(A) {
           switch (A.label) {
             case 0:
-              return (0, i.logDebugMessage)("getAntiCSRFToken: called"), [4, R(!0)];
+              return (0, s.logDebugMessage)("getAntiCSRFToken: called"), [4, R(!0)];
             case 1:
-              return A.sent().status !== "EXISTS" ? ((0, i.logDebugMessage)(
+              return A.sent().status !== "EXISTS" ? ((0, s.logDebugMessage)(
                 "getAntiCSRFToken: Returning because local session state != EXISTS"
               ), [2, null]) : [4, k()];
             case 2:
-              return O = A.sent(), (0, i.logDebugMessage)("getAntiCSRFToken: returning: " + O), [2, O];
+              return O = A.sent(), (0, s.logDebugMessage)("getAntiCSRFToken: returning: " + O), [2, O];
           }
         });
       });
     }
     function re(k) {
-      return n(this, void 0, void 0, function() {
-        return t(this, function(O) {
+      return t(this, void 0, void 0, function() {
+        return n(this, function(O) {
           switch (O.label) {
             case 0:
-              return (0, i.logDebugMessage)("setAntiCSRF: called: " + k), k === void 0 ? [3, 2] : [4, _(f, k, Number.MAX_SAFE_INTEGER)];
+              return (0, s.logDebugMessage)("setAntiCSRF: called: " + k), k === void 0 ? [3, 2] : [4, _(h, k, Number.MAX_SAFE_INTEGER)];
             case 1:
               return O.sent(), [3, 4];
             case 2:
-              return [4, _(f, "", 0)];
+              return [4, _(h, "", 0)];
             case 3:
               O.sent(), O.label = 4;
             case 4:
@@ -2264,12 +2264,12 @@ function St() {
     }
     e.setAntiCSRF = re;
     function H() {
-      return n(this, void 0, void 0, function() {
+      return t(this, void 0, void 0, function() {
         var k;
-        return t(this, function(O) {
+        return n(this, function(O) {
           switch (O.label) {
             case 0:
-              return (0, i.logDebugMessage)("getFrontTokenFromCookie: called"), [4, C(p)];
+              return (0, s.logDebugMessage)("getFrontTokenFromCookie: called"), [4, C(p)];
             case 1:
               return k = O.sent(), [2, k === void 0 ? null : k];
           }
@@ -2280,28 +2280,28 @@ function St() {
       return JSON.parse(decodeURIComponent(escape(atob(k))));
     }
     function q() {
-      return n(this, void 0, void 0, function() {
+      return t(this, void 0, void 0, function() {
         var k;
-        return t(this, function(O) {
+        return n(this, function(O) {
           switch (O.label) {
             case 0:
-              return (0, i.logDebugMessage)("getFrontToken: called"), [4, R(!0)];
+              return (0, s.logDebugMessage)("getFrontToken: called"), [4, R(!0)];
             case 1:
-              return O.sent().status !== "EXISTS" ? ((0, i.logDebugMessage)("getFrontToken: Returning because sIRTFrontend != EXISTS"), [2, null]) : [4, H()];
+              return O.sent().status !== "EXISTS" ? ((0, s.logDebugMessage)("getFrontToken: Returning because sIRTFrontend != EXISTS"), [2, null]) : [4, H()];
             case 2:
-              return k = O.sent(), (0, i.logDebugMessage)("getFrontToken: returning: " + k), [2, k];
+              return k = O.sent(), (0, s.logDebugMessage)("getFrontToken: returning: " + k), [2, k];
           }
         });
       });
     }
     e.getFrontToken = q;
     function F(k) {
-      return n(this, void 0, void 0, function() {
+      return t(this, void 0, void 0, function() {
         var O, A, D;
-        return t(this, function(M) {
+        return n(this, function(M) {
           switch (M.label) {
             case 0:
-              return (0, i.logDebugMessage)("setFrontToken: called"), [4, H()];
+              return (0, s.logDebugMessage)("setFrontToken: called"), [4, H()];
             case 1:
               return O = M.sent(), O !== null && k !== void 0 && (A = L(O).up, D = L(k).up, JSON.stringify(A) !== JSON.stringify(D) && b()), k !== void 0 ? [3, 3] : [4, _(p, "", 0)];
             case 2:
@@ -2322,22 +2322,22 @@ function St() {
     e.setFrontToken = F;
     function V(k, O, A) {
       if (A == null) {
-        (0, i.logDebugMessage)(
+        (0, s.logDebugMessage)(
           "fireSessionUpdateEventsIfNecessary returning early because the front token was not updated"
         );
         return;
       }
       var D = A !== "remove";
-      (0, i.logDebugMessage)(
+      (0, s.logDebugMessage)(
         "fireSessionUpdateEventsIfNecessary wasLoggedIn: ".concat(k, " frontTokenExistsAfter: ").concat(D, " status: ").concat(O)
-      ), k ? D || (O === r.config.sessionExpiredStatusCode ? ((0, i.logDebugMessage)("onUnauthorisedResponse: firing UNAUTHORISED event"), r.config.onHandleEvent({
+      ), k ? D || (O === r.config.sessionExpiredStatusCode ? ((0, s.logDebugMessage)("onUnauthorisedResponse: firing UNAUTHORISED event"), r.config.onHandleEvent({
         action: "UNAUTHORISED",
         sessionExpiredOrRevoked: !0,
         userContext: {}
-      })) : ((0, i.logDebugMessage)("onUnauthorisedResponse: firing SIGN_OUT event"), r.config.onHandleEvent({
+      })) : ((0, s.logDebugMessage)("onUnauthorisedResponse: firing SIGN_OUT event"), r.config.onHandleEvent({
         action: "SIGN_OUT",
         userContext: {}
-      }))) : D && ((0, i.logDebugMessage)("onUnauthorisedResponse: firing SESSION_CREATED event"), r.config.onHandleEvent({
+      }))) : D && ((0, s.logDebugMessage)("onUnauthorisedResponse: firing SESSION_CREATED event"), r.config.onHandleEvent({
         action: "SESSION_CREATED",
         userContext: {}
       }));
@@ -2345,8 +2345,8 @@ function St() {
     e.fireSessionUpdateEventsIfNecessary = V;
     var X = function(k) {
       var O = k.frontToken, A = k.responseHeaders;
-      if ((0, i.logDebugMessage)("updateClockSkewUsingFrontToken: frontToken: " + O), O == null || O === "remove") {
-        (0, i.logDebugMessage)(
+      if ((0, s.logDebugMessage)("updateClockSkewUsingFrontToken: frontToken: " + O), O == null || O === "remove") {
+        (0, s.logDebugMessage)(
           "updateClockSkewUsingFrontToken: the access token payload wasn't updated or is being removed, skipping clock skew update"
         );
         return;
@@ -2355,68 +2355,68 @@ function St() {
         accessTokenPayload: D.up,
         responseHeaders: A
       });
-      a.default.getReferenceOrThrow().dateProvider.setClientClockSkewInMillis(M), (0, i.logDebugMessage)("updateClockSkewUsingFrontToken: Client clock synchronized successfully");
+      a.default.getReferenceOrThrow().dateProvider.setClientClockSkewInMillis(M), (0, s.logDebugMessage)("updateClockSkewUsingFrontToken: Client clock synchronized successfully");
     };
     e.updateClockSkewUsingFrontToken = X;
   }(Te)), Te;
 }
-var st = {}, Tn;
-function Ar() {
-  if (Tn) return st;
-  Tn = 1, Object.defineProperty(st, "__esModule", { value: !0 }), st.SessionClaimValidatorStore = void 0;
+var it = {}, Cn;
+function Pr() {
+  if (Cn) return it;
+  Cn = 1, Object.defineProperty(it, "__esModule", { value: !0 }), it.SessionClaimValidatorStore = void 0;
   var e = (
     /** @class */
     function() {
       function o() {
       }
-      return o.claimValidatorsAddedByOtherRecipes = [], o.addClaimValidatorFromOtherRecipe = function(n) {
-        o.claimValidatorsAddedByOtherRecipes.push(n);
+      return o.claimValidatorsAddedByOtherRecipes = [], o.addClaimValidatorFromOtherRecipe = function(t) {
+        o.claimValidatorsAddedByOtherRecipes.push(t);
       }, o.getClaimValidatorsAddedByOtherRecipes = function() {
         return o.claimValidatorsAddedByOtherRecipes;
       }, o;
     }()
   );
-  return st.SessionClaimValidatorStore = e, st.default = e, st;
-}
-var Cn;
-function ao() {
-  if (Cn) return ct;
-  Cn = 1, Object.defineProperty(ct, "__esModule", { value: !0 }), ct.getGlobalClaimValidators = void 0;
-  var e = Xt(), o = St(), n = Ar();
-  function t(l, g) {
-    var d = (0, e.getNormalisedUserContext)(g), m = n.default.getClaimValidatorsAddedByOtherRecipes(), h = o.default.recipeImpl.getGlobalClaimValidators({
-      claimValidatorsAddedByOtherRecipes: m,
-      userContext: d
-    }), i = l !== void 0 ? l(h, d) : h;
-    return i;
-  }
-  return ct.getGlobalClaimValidators = t, ct;
+  return it.SessionClaimValidatorStore = e, it.default = e, it;
 }
 var An;
-function uo() {
-  return An || (An = 1, function(e) {
-    function o(n) {
-      for (var t in n) e.hasOwnProperty(t) || (e[t] = n[t]);
-    }
-    e.__esModule = !0, o(ao());
-  }(Lt)), Lt;
+function lo() {
+  if (An) return ct;
+  An = 1, Object.defineProperty(ct, "__esModule", { value: !0 }), ct.getGlobalClaimValidators = void 0;
+  var e = zt(), o = St(), t = Pr();
+  function n(l, g) {
+    var d = (0, e.getNormalisedUserContext)(g), m = t.default.getClaimValidatorsAddedByOtherRecipes(), f = o.default.recipeImpl.getGlobalClaimValidators({
+      claimValidatorsAddedByOtherRecipes: m,
+      userContext: d
+    }), s = l !== void 0 ? l(f, d) : f;
+    return s;
+  }
+  return ct.getGlobalClaimValidators = n, ct;
 }
 var On;
+function fo() {
+  return On || (On = 1, function(e) {
+    function o(t) {
+      for (var n in t) e.hasOwnProperty(n) || (e[n] = t[n]);
+    }
+    e.__esModule = !0, o(lo());
+  }(Lt)), Lt;
+}
+var Pn;
 function Ie() {
-  if (On) return J;
-  On = 1, Object.defineProperty(J, "__esModule", { value: !0 }), J.normaliseUser = J.normaliseUserResponse = J.getGlobalClaimValidators = J.getHashFromLocation = J.getNormalisedUserContext = J.checkForSSRErrorAndAppendIfNeeded = J.getAllQueryParams = J.getQueryParams = J.isTest = J.normaliseInputAppInfoOrThrowError = J.appendQueryParamsToURL = void 0;
-  var e = Gt(), o = Zr(), n = eo(), t = Tr(), l = uo();
-  function g(f, p) {
+  if (Pn) return J;
+  Pn = 1, Object.defineProperty(J, "__esModule", { value: !0 }), J.normaliseUser = J.normaliseUserResponse = J.getGlobalClaimValidators = J.getHashFromLocation = J.getNormalisedUserContext = J.checkForSSRErrorAndAppendIfNeeded = J.getAllQueryParams = J.getQueryParams = J.isTest = J.normaliseInputAppInfoOrThrowError = J.appendQueryParamsToURL = void 0;
+  var e = Xt(), o = no(), t = ro(), n = Ar(), l = fo();
+  function g(h, p) {
     if (p === void 0)
-      return f;
+      return h;
     try {
-      var w = new URL(f);
+      var w = new URL(h);
       return Object.entries(p).forEach(function(R) {
         var I = R[0], T = R[1];
         w.searchParams.set(I, T);
       }), w.href;
     } catch {
-      var b = f.startsWith("/") ? "http:localhost" : "http://localhost/", S = new URL("".concat(b).concat(f));
+      var b = h.startsWith("/") ? "http:localhost" : "http://localhost/", S = new URL("".concat(b).concat(h));
       return Object.entries(p).forEach(function(I) {
         var T = I[0], _ = I[1];
         S.searchParams.set(T, _);
@@ -2424,73 +2424,73 @@ function Ie() {
     }
   }
   J.appendQueryParamsToURL = g;
-  function d(f, p) {
-    return p !== void 0 ? new t.default(p) : new t.default(f);
+  function d(h, p) {
+    return p !== void 0 ? new n.default(p) : new n.default(h);
   }
-  function m(f) {
-    if (f === void 0)
+  function m(h) {
+    if (h === void 0)
       throw new Error("Please provide the appInfo object when calling supertokens.init");
-    if (f.apiDomain === void 0)
+    if (h.apiDomain === void 0)
       throw new Error("Please provide your apiDomain inside the appInfo object when calling supertokens.init");
-    if (f.appName === void 0)
+    if (h.appName === void 0)
       throw new Error("Please provide your appName inside the appInfo object when calling supertokens.init");
-    var p = new t.default("");
-    return f.apiGatewayPath !== void 0 && (p = new t.default(f.apiGatewayPath)), {
-      appName: f.appName,
-      apiDomain: new n.default(f.apiDomain),
+    var p = new n.default("");
+    return h.apiGatewayPath !== void 0 && (p = new n.default(h.apiGatewayPath)), {
+      appName: h.appName,
+      apiDomain: new t.default(h.apiDomain),
       apiBasePath: p.appendPath(
-        d(o.DEFAULT_API_BASE_PATH, f.apiBasePath)
+        d(o.DEFAULT_API_BASE_PATH, h.apiBasePath)
       )
     };
   }
   J.normaliseInputAppInfoOrThrowError = m;
-  function h() {
+  function f() {
     try {
       return process.env.TEST_MODE === "testing";
     } catch {
       return !1;
     }
   }
-  J.isTest = h;
-  function i(f) {
+  J.isTest = f;
+  function s(h) {
     var p = new URLSearchParams(
       e.WindowHandlerReference.getReferenceOrThrow().windowHandler.location.getSearch()
-    ), w = p.get(f);
+    ), w = p.get(h);
     if (w !== null)
       return w;
   }
-  J.getQueryParams = i;
+  J.getQueryParams = s;
   function a() {
     return new URLSearchParams(
       e.WindowHandlerReference.getReferenceOrThrow().windowHandler.location.getSearch()
     );
   }
   J.getAllQueryParams = a;
-  function c(f) {
-    return typeof window > "u" && (f = f + o.SSR_ERROR), f;
+  function c(h) {
+    return typeof window > "u" && (h = h + o.SSR_ERROR), h;
   }
   J.checkForSSRErrorAndAppendIfNeeded = c;
-  function s(f) {
-    return f === void 0 ? {} : f;
+  function i(h) {
+    return h === void 0 ? {} : h;
   }
-  J.getNormalisedUserContext = s;
+  J.getNormalisedUserContext = i;
   function r() {
     return e.WindowHandlerReference.getReferenceOrThrow().windowHandler.location.getHash().substring(1);
   }
   J.getHashFromLocation = r;
-  function u(f) {
-    var p = f.overrideGlobalClaimValidators, w = f.userContext;
+  function u(h) {
+    var p = h.overrideGlobalClaimValidators, w = h.userContext;
     return (0, l.getGlobalClaimValidators)(p, w);
   }
   J.getGlobalClaimValidators = u;
-  function v(f, p) {
+  function v(h, p) {
     return "createdNewRecipeUser" in p ? p : {
       createdNewRecipeUser: p.createdNewUser,
-      user: y(f, p.user)
+      user: y(h, p.user)
     };
   }
   J.normaliseUserResponse = v;
-  function y(f, p) {
+  function y(h, p) {
     if ("loginMethods" in p)
       return p;
     var w = p.email !== void 0 ? [p.email] : [], b = p.phoneNumber !== void 0 ? [p.phoneNumber] : [], S = p.thirdParty !== void 0 ? [p.thirdParty] : [];
@@ -2504,7 +2504,7 @@ function Ie() {
       timeJoined: p.timeJoined,
       loginMethods: [
         {
-          recipeId: f,
+          recipeId: h,
           recipeUserId: p.id,
           timeJoined: p.timeJoined,
           tenantIds: p.tenantIds,
@@ -2516,114 +2516,114 @@ function Ie() {
   }
   return J.normaliseUser = y, J;
 }
-var pe = {}, Be = {}, dt = {}, Pe = {}, Pn;
-function co() {
-  if (Pn) return Pe;
-  Pn = 1;
-  var e = Pe && Pe.__awaiter || function(t, l, g, d) {
-    function m(h) {
-      return h instanceof g ? h : new g(function(i) {
-        i(h);
+var pe = {}, Be = {}, dt = {}, Pe = {}, En;
+function ho() {
+  if (En) return Pe;
+  En = 1;
+  var e = Pe && Pe.__awaiter || function(n, l, g, d) {
+    function m(f) {
+      return f instanceof g ? f : new g(function(s) {
+        s(f);
       });
     }
-    return new (g || (g = Promise))(function(h, i) {
+    return new (g || (g = Promise))(function(f, s) {
       function a(r) {
         try {
-          s(d.next(r));
+          i(d.next(r));
         } catch (u) {
-          i(u);
+          s(u);
         }
       }
       function c(r) {
         try {
-          s(d.throw(r));
+          i(d.throw(r));
         } catch (u) {
-          i(u);
+          s(u);
         }
       }
-      function s(r) {
-        r.done ? h(r.value) : m(r.value).then(a, c);
+      function i(r) {
+        r.done ? f(r.value) : m(r.value).then(a, c);
       }
-      s((d = d.apply(t, l || [])).next());
+      i((d = d.apply(n, l || [])).next());
     });
-  }, o = Pe && Pe.__generator || function(t, l) {
+  }, o = Pe && Pe.__generator || function(n, l) {
     var g = {
       label: 0,
       sent: function() {
-        if (h[0] & 1) throw h[1];
-        return h[1];
+        if (f[0] & 1) throw f[1];
+        return f[1];
       },
       trys: [],
       ops: []
-    }, d, m, h, i;
-    return i = { next: a(0), throw: a(1), return: a(2) }, typeof Symbol == "function" && (i[Symbol.iterator] = function() {
+    }, d, m, f, s;
+    return s = { next: a(0), throw: a(1), return: a(2) }, typeof Symbol == "function" && (s[Symbol.iterator] = function() {
       return this;
-    }), i;
-    function a(s) {
+    }), s;
+    function a(i) {
       return function(r) {
-        return c([s, r]);
+        return c([i, r]);
       };
     }
-    function c(s) {
+    function c(i) {
       if (d) throw new TypeError("Generator is already executing.");
       for (; g; )
         try {
-          if (d = 1, m && (h = s[0] & 2 ? m.return : s[0] ? m.throw || ((h = m.return) && h.call(m), 0) : m.next) && !(h = h.call(m, s[1])).done)
-            return h;
-          switch (m = 0, h && (s = [s[0] & 2, h.value]), s[0]) {
+          if (d = 1, m && (f = i[0] & 2 ? m.return : i[0] ? m.throw || ((f = m.return) && f.call(m), 0) : m.next) && !(f = f.call(m, i[1])).done)
+            return f;
+          switch (m = 0, f && (i = [i[0] & 2, f.value]), i[0]) {
             case 0:
             case 1:
-              h = s;
+              f = i;
               break;
             case 4:
-              return g.label++, { value: s[1], done: !1 };
+              return g.label++, { value: i[1], done: !1 };
             case 5:
-              g.label++, m = s[1], s = [0];
+              g.label++, m = i[1], i = [0];
               continue;
             case 7:
-              s = g.ops.pop(), g.trys.pop();
+              i = g.ops.pop(), g.trys.pop();
               continue;
             default:
-              if (h = g.trys, !(h = h.length > 0 && h[h.length - 1]) && (s[0] === 6 || s[0] === 2)) {
+              if (f = g.trys, !(f = f.length > 0 && f[f.length - 1]) && (i[0] === 6 || i[0] === 2)) {
                 g = 0;
                 continue;
               }
-              if (s[0] === 3 && (!h || s[1] > h[0] && s[1] < h[3])) {
-                g.label = s[1];
+              if (i[0] === 3 && (!f || i[1] > f[0] && i[1] < f[3])) {
+                g.label = i[1];
                 break;
               }
-              if (s[0] === 6 && g.label < h[1]) {
-                g.label = h[1], h = s;
+              if (i[0] === 6 && g.label < f[1]) {
+                g.label = f[1], f = i;
                 break;
               }
-              if (h && g.label < h[2]) {
-                g.label = h[2], g.ops.push(s);
+              if (f && g.label < f[2]) {
+                g.label = f[2], g.ops.push(i);
                 break;
               }
-              h[2] && g.ops.pop(), g.trys.pop();
+              f[2] && g.ops.pop(), g.trys.pop();
               continue;
           }
-          s = l.call(t, g);
+          i = l.call(n, g);
         } catch (r) {
-          s = [6, r], m = 0;
+          i = [6, r], m = 0;
         } finally {
-          d = h = 0;
+          d = f = 0;
         }
-      if (s[0] & 5) throw s[1];
-      return { value: s[0] ? s[1] : void 0, done: !0 };
+      if (i[0] & 5) throw i[1];
+      return { value: i[0] ? i[1] : void 0, done: !0 };
     }
   };
   Object.defineProperty(Pe, "__esModule", { value: !0 }), Pe.normaliseRecipeModuleConfig = void 0;
-  function n(t) {
-    var l = this, g = t.preAPIHook;
+  function t(n) {
+    var l = this, g = n.preAPIHook;
     g === void 0 && (g = function(m) {
       return e(l, void 0, void 0, function() {
-        return o(this, function(h) {
+        return o(this, function(f) {
           return [2, m];
         });
       });
     });
-    var d = t.postAPIHook;
+    var d = n.postAPIHook;
     return d === void 0 && (d = function() {
       return e(l, void 0, void 0, function() {
         return o(this, function(m) {
@@ -2634,314 +2634,314 @@ function co() {
         });
       });
     }), {
-      recipeId: t.recipeId,
-      appInfo: t.appInfo,
-      clientType: t.clientType,
+      recipeId: n.recipeId,
+      appInfo: n.appInfo,
+      clientType: n.clientType,
       preAPIHook: g,
       postAPIHook: d
     };
   }
-  return Pe.normaliseRecipeModuleConfig = n, Pe;
+  return Pe.normaliseRecipeModuleConfig = t, Pe;
 }
-var En;
-function Jt() {
-  if (En) return dt;
-  En = 1, Object.defineProperty(dt, "__esModule", { value: !0 }), dt.normaliseAuthRecipe = void 0;
-  var e = co();
-  function o(n) {
-    return (0, e.normaliseRecipeModuleConfig)(n);
+var xn;
+function Yt() {
+  if (xn) return dt;
+  xn = 1, Object.defineProperty(dt, "__esModule", { value: !0 }), dt.normaliseAuthRecipe = void 0;
+  var e = ho();
+  function o(t) {
+    return (0, e.normaliseRecipeModuleConfig)(t);
   }
   return dt.normaliseAuthRecipe = o, dt;
 }
-var xn;
-function lo() {
-  if (xn) return Be;
-  xn = 1;
+var Dn;
+function go() {
+  if (Dn) return Be;
+  Dn = 1;
   var e = Be && Be.__assign || function() {
-    return e = Object.assign || function(t) {
+    return e = Object.assign || function(n) {
       for (var l, g = 1, d = arguments.length; g < d; g++) {
         l = arguments[g];
-        for (var m in l) Object.prototype.hasOwnProperty.call(l, m) && (t[m] = l[m]);
+        for (var m in l) Object.prototype.hasOwnProperty.call(l, m) && (n[m] = l[m]);
       }
-      return t;
+      return n;
     }, e.apply(this, arguments);
   };
   Object.defineProperty(Be, "__esModule", { value: !0 }), Be.normaliseUserInput = void 0;
-  var o = Jt();
-  function n(t) {
+  var o = Yt();
+  function t(n) {
     var l = e(
       {
         functions: function(g) {
           return g;
         }
       },
-      t.override
+      n.override
     );
-    return e(e({}, (0, o.normaliseAuthRecipe)(t)), { override: l });
+    return e(e({}, (0, o.normaliseAuthRecipe)(n)), { override: l });
   }
-  return Be.normaliseUserInput = n, Be;
+  return Be.normaliseUserInput = t, Be;
 }
-var it = {}, Ge = {}, Dn;
-function fo() {
-  if (Dn) return Ge;
-  Dn = 1;
+var st = {}, Ge = {}, Mn;
+function vo() {
+  if (Mn) return Ge;
+  Mn = 1;
   var e = Ge && Ge.__assign || function() {
-    return e = Object.assign || function(n) {
-      for (var t, l = 1, g = arguments.length; l < g; l++) {
-        t = arguments[l];
-        for (var d in t) Object.prototype.hasOwnProperty.call(t, d) && (n[d] = t[d]);
+    return e = Object.assign || function(t) {
+      for (var n, l = 1, g = arguments.length; l < g; l++) {
+        n = arguments[l];
+        for (var d in n) Object.prototype.hasOwnProperty.call(n, d) && (t[d] = n[d]);
       }
-      return n;
+      return t;
     }, e.apply(this, arguments);
   };
   Object.defineProperty(Ge, "__esModule", { value: !0 }), Ge.getProxyObject = void 0;
-  function o(n) {
-    for (var t = e(e({}, n), { _call: function(i, a) {
+  function o(t) {
+    for (var n = e(e({}, t), { _call: function(s, a) {
       throw new Error("This function should only be called through the recipe object");
-    } }), l = Object.keys(t), g = function(i) {
-      i !== "_call" && (t[i] = function() {
+    } }), l = Object.keys(n), g = function(s) {
+      s !== "_call" && (n[s] = function() {
         for (var a = [], c = 0; c < arguments.length; c++)
           a[c] = arguments[c];
-        return this._call(i, a);
+        return this._call(s, a);
       });
     }, d = 0, m = l; d < m.length; d++) {
-      var h = m[d];
-      g(h);
+      var f = m[d];
+      g(f);
     }
-    return t;
+    return n;
   }
   return Ge.getProxyObject = o, Ge;
 }
-var Mn;
-function Et() {
-  if (Mn) return it;
-  Mn = 1, Object.defineProperty(it, "__esModule", { value: !0 }), it.OverrideableBuilder = void 0;
-  var e = fo(), o = (
+var Ln;
+function Pt() {
+  if (Ln) return st;
+  Ln = 1, Object.defineProperty(st, "__esModule", { value: !0 }), st.OverrideableBuilder = void 0;
+  var e = vo(), o = (
     /** @class */
     function() {
-      function n(t) {
-        this.layers = [t], this.proxies = [];
+      function t(n) {
+        this.layers = [n], this.proxies = [];
       }
-      return n.prototype.override = function(t) {
-        for (var l = (0, e.getProxyObject)(this.layers[0]), g = t(l, this), d = 0, m = Object.keys(this.layers[0]); d < m.length; d++) {
-          var h = m[d];
-          g[h] === l[h] || h === "_call" ? delete g[h] : g[h] === void 0 && (g[h] = null);
+      return t.prototype.override = function(n) {
+        for (var l = (0, e.getProxyObject)(this.layers[0]), g = n(l, this), d = 0, m = Object.keys(this.layers[0]); d < m.length; d++) {
+          var f = m[d];
+          g[f] === l[f] || f === "_call" ? delete g[f] : g[f] === void 0 && (g[f] = null);
         }
         return this.layers.push(g), this.proxies.push(l), this;
-      }, n.prototype.build = function() {
-        var t = this;
+      }, t.prototype.build = function() {
+        var n = this;
         if (this.result)
           return this.result;
         this.result = {};
         for (var l = 0, g = this.layers; l < g.length; l++)
-          for (var d = g[l], m = 0, h = Object.keys(d); m < h.length; m++) {
-            var i = h[m], a = d[i];
-            a !== void 0 && (a === null ? this.result[i] = void 0 : typeof a == "function" ? this.result[i] = a.bind(this.result) : this.result[i] = a);
+          for (var d = g[l], m = 0, f = Object.keys(d); m < f.length; m++) {
+            var s = f[m], a = d[s];
+            a !== void 0 && (a === null ? this.result[s] = void 0 : typeof a == "function" ? this.result[s] = a.bind(this.result) : this.result[s] = a);
           }
         for (var c = function(u) {
-          var v = s.proxies[u];
-          v._call = function(y, f) {
+          var v = i.proxies[u];
+          v._call = function(y, h) {
             for (var p = u; p >= 0; --p) {
-              var w = t.layers[p][y];
+              var w = n.layers[p][y];
               if (w != null)
-                return w.bind(t.result).apply(void 0, f);
+                return w.bind(n.result).apply(void 0, h);
             }
           };
-        }, s = this, r = 0; r < this.proxies.length; ++r)
+        }, i = this, r = 0; r < this.proxies.length; ++r)
           c(r);
         return this.result;
-      }, n;
+      }, t;
     }()
   );
-  return it.OverrideableBuilder = o, it.default = o, it;
+  return st.OverrideableBuilder = o, st.default = o, st;
 }
-var ye = {}, we = {}, Xe = {}, Ln;
-function ho() {
-  return Ln || (Ln = 1, Object.defineProperty(Xe, "__esModule", { value: !0 }), Xe.supported_fdi = Xe.package_version = void 0, Xe.package_version = "0.14.0", Xe.supported_fdi = ["3.1", "4.0"]), Xe;
+var ye = {}, we = {}, Xe = {}, Un;
+function mo() {
+  return Un || (Un = 1, Object.defineProperty(Xe, "__esModule", { value: !0 }), Xe.supported_fdi = Xe.package_version = void 0, Xe.package_version = "0.14.0", Xe.supported_fdi = ["3.1", "4.0"]), Xe;
 }
-var Ct = {}, Ut = {}, ze = {}, Un;
-function Or() {
-  if (Un) return ze;
-  Un = 1;
+var Tt = {}, Ut = {}, ze = {}, Hn;
+function Er() {
+  if (Hn) return ze;
+  Hn = 1;
   var e = ze && ze.__extends || /* @__PURE__ */ function() {
-    var n = function(t, l) {
-      return n = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(g, d) {
+    var t = function(n, l) {
+      return t = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(g, d) {
         g.__proto__ = d;
       } || function(g, d) {
         for (var m in d) Object.prototype.hasOwnProperty.call(d, m) && (g[m] = d[m]);
-      }, n(t, l);
+      }, t(n, l);
     };
-    return function(t, l) {
+    return function(n, l) {
       if (typeof l != "function" && l !== null)
         throw new TypeError("Class extends value " + String(l) + " is not a constructor or null");
-      n(t, l);
+      t(n, l);
       function g() {
-        this.constructor = t;
+        this.constructor = n;
       }
-      t.prototype = l === null ? Object.create(l) : (g.prototype = l.prototype, new g());
+      n.prototype = l === null ? Object.create(l) : (g.prototype = l.prototype, new g());
     };
   }();
   Object.defineProperty(ze, "__esModule", { value: !0 }), ze.STGeneralError = void 0;
   var o = (
     /** @class */
-    function(n) {
-      e(t, n);
-      function t(l) {
-        var g = n.call(this, l) || this;
+    function(t) {
+      e(n, t);
+      function n(l) {
+        var g = t.call(this, l) || this;
         return g.isSuperTokensGeneralError = !0, g;
       }
-      return t.isThisError = function(l) {
+      return n.isThisError = function(l) {
         return l.isSuperTokensGeneralError === !0;
-      }, t;
+      }, n;
     }(Error)
   );
   return ze.STGeneralError = o, ze;
 }
-var Hn;
-function go() {
-  return Hn || (Hn = 1, function(e) {
-    function o(t) {
-      for (var l in t) e.hasOwnProperty(l) || (e[l] = t[l]);
+var Nn;
+function po() {
+  return Nn || (Nn = 1, function(e) {
+    function o(n) {
+      for (var l in n) e.hasOwnProperty(l) || (e[l] = n[l]);
     }
     e.__esModule = !0;
-    let n = Or();
-    n.default !== void 0 ? o(n) : o({
-      default: n,
-      ...n
+    let t = Er();
+    t.default !== void 0 ? o(t) : o({
+      default: t,
+      ...t
     });
   }(Ut)), Ut;
 }
-var Nn;
-function Pr() {
-  if (Nn) return Ct;
-  Nn = 1, Object.defineProperty(Ct, "__esModule", { value: !0 });
-  var e = go();
-  return Ct.default = e.STGeneralError, Ct;
-}
 var Fn;
-function Yt() {
-  if (Fn) return we;
-  Fn = 1;
+function xr() {
+  if (Fn) return Tt;
+  Fn = 1, Object.defineProperty(Tt, "__esModule", { value: !0 });
+  var e = po();
+  return Tt.default = e.STGeneralError, Tt;
+}
+var qn;
+function Zt() {
+  if (qn) return we;
+  qn = 1;
   var e = we && we.__assign || function() {
     return e = Object.assign || function(m) {
-      for (var h, i = 1, a = arguments.length; i < a; i++) {
-        h = arguments[i];
-        for (var c in h) Object.prototype.hasOwnProperty.call(h, c) && (m[c] = h[c]);
+      for (var f, s = 1, a = arguments.length; s < a; s++) {
+        f = arguments[s];
+        for (var c in f) Object.prototype.hasOwnProperty.call(f, c) && (m[c] = f[c]);
       }
       return m;
     }, e.apply(this, arguments);
-  }, o = we && we.__awaiter || function(m, h, i, a) {
-    function c(s) {
-      return s instanceof i ? s : new i(function(r) {
-        r(s);
+  }, o = we && we.__awaiter || function(m, f, s, a) {
+    function c(i) {
+      return i instanceof s ? i : new s(function(r) {
+        r(i);
       });
     }
-    return new (i || (i = Promise))(function(s, r) {
-      function u(f) {
+    return new (s || (s = Promise))(function(i, r) {
+      function u(h) {
         try {
-          y(a.next(f));
+          y(a.next(h));
         } catch (p) {
           r(p);
         }
       }
-      function v(f) {
+      function v(h) {
         try {
-          y(a.throw(f));
+          y(a.throw(h));
         } catch (p) {
           r(p);
         }
       }
-      function y(f) {
-        f.done ? s(f.value) : c(f.value).then(u, v);
+      function y(h) {
+        h.done ? i(h.value) : c(h.value).then(u, v);
       }
-      y((a = a.apply(m, h || [])).next());
+      y((a = a.apply(m, f || [])).next());
     });
-  }, n = we && we.__generator || function(m, h) {
-    var i = {
+  }, t = we && we.__generator || function(m, f) {
+    var s = {
       label: 0,
       sent: function() {
-        if (s[0] & 1) throw s[1];
-        return s[1];
+        if (i[0] & 1) throw i[1];
+        return i[1];
       },
       trys: [],
       ops: []
-    }, a, c, s, r;
+    }, a, c, i, r;
     return r = { next: u(0), throw: u(1), return: u(2) }, typeof Symbol == "function" && (r[Symbol.iterator] = function() {
       return this;
     }), r;
     function u(y) {
-      return function(f) {
-        return v([y, f]);
+      return function(h) {
+        return v([y, h]);
       };
     }
     function v(y) {
       if (a) throw new TypeError("Generator is already executing.");
-      for (; i; )
+      for (; s; )
         try {
-          if (a = 1, c && (s = y[0] & 2 ? c.return : y[0] ? c.throw || ((s = c.return) && s.call(c), 0) : c.next) && !(s = s.call(c, y[1])).done)
-            return s;
-          switch (c = 0, s && (y = [y[0] & 2, s.value]), y[0]) {
+          if (a = 1, c && (i = y[0] & 2 ? c.return : y[0] ? c.throw || ((i = c.return) && i.call(c), 0) : c.next) && !(i = i.call(c, y[1])).done)
+            return i;
+          switch (c = 0, i && (y = [y[0] & 2, i.value]), y[0]) {
             case 0:
             case 1:
-              s = y;
+              i = y;
               break;
             case 4:
-              return i.label++, { value: y[1], done: !1 };
+              return s.label++, { value: y[1], done: !1 };
             case 5:
-              i.label++, c = y[1], y = [0];
+              s.label++, c = y[1], y = [0];
               continue;
             case 7:
-              y = i.ops.pop(), i.trys.pop();
+              y = s.ops.pop(), s.trys.pop();
               continue;
             default:
-              if (s = i.trys, !(s = s.length > 0 && s[s.length - 1]) && (y[0] === 6 || y[0] === 2)) {
-                i = 0;
+              if (i = s.trys, !(i = i.length > 0 && i[i.length - 1]) && (y[0] === 6 || y[0] === 2)) {
+                s = 0;
                 continue;
               }
-              if (y[0] === 3 && (!s || y[1] > s[0] && y[1] < s[3])) {
-                i.label = y[1];
+              if (y[0] === 3 && (!i || y[1] > i[0] && y[1] < i[3])) {
+                s.label = y[1];
                 break;
               }
-              if (y[0] === 6 && i.label < s[1]) {
-                i.label = s[1], s = y;
+              if (y[0] === 6 && s.label < i[1]) {
+                s.label = i[1], i = y;
                 break;
               }
-              if (s && i.label < s[2]) {
-                i.label = s[2], i.ops.push(y);
+              if (i && s.label < i[2]) {
+                s.label = i[2], s.ops.push(y);
                 break;
               }
-              s[2] && i.ops.pop(), i.trys.pop();
+              i[2] && s.ops.pop(), s.trys.pop();
               continue;
           }
-          y = h.call(m, i);
-        } catch (f) {
-          y = [6, f], c = 0;
+          y = f.call(m, s);
+        } catch (h) {
+          y = [6, h], c = 0;
         } finally {
-          a = s = 0;
+          a = i = 0;
         }
       if (y[0] & 5) throw y[1];
       return { value: y[0] ? y[1] : void 0, done: !0 };
     }
   };
   Object.defineProperty(we, "__esModule", { value: !0 });
-  var t = Tr(), l = ho(), g = Pr(), d = (
+  var n = Ar(), l = mo(), g = xr(), d = (
     /** @class */
     function() {
-      function m(i, a) {
+      function m(s, a) {
         var c = this;
-        this.recipeId = i, this.appInfo = a, this.get = function(s, r, u, v, y, f) {
+        this.recipeId = s, this.appInfo = a, this.get = function(i, r, u, v, y, h) {
           return o(c, void 0, void 0, function() {
             var p, w;
-            return n(this, function(b) {
+            return t(this, function(b) {
               switch (b.label) {
                 case 0:
                   return [
                     4,
                     this.fetch(
-                      this.getFullUrl(s, r, v),
+                      this.getFullUrl(i, r, v),
                       e({ method: "GET" }, u),
                       y,
-                      f
+                      h
                     )
                   ];
                 case 1:
@@ -2957,10 +2957,10 @@ function Yt() {
               }
             });
           });
-        }, this.post = function(s, r, u, v, y) {
+        }, this.post = function(i, r, u, v, y) {
           return o(c, void 0, void 0, function() {
-            var f, p;
-            return n(this, function(w) {
+            var h, p;
+            return t(this, function(w) {
               switch (w.label) {
                 case 0:
                   if (u.body === void 0)
@@ -2968,92 +2968,92 @@ function Yt() {
                   return [
                     4,
                     this.fetch(
-                      this.getFullUrl(s, r),
+                      this.getFullUrl(i, r),
                       e({ method: "POST" }, u),
                       v,
                       y
                     )
                   ];
                 case 1:
-                  return f = w.sent(), [4, this.getResponseJsonOrThrowGeneralError(f)];
+                  return h = w.sent(), [4, this.getResponseJsonOrThrowGeneralError(h)];
                 case 2:
                   return p = w.sent(), [
                     2,
                     {
                       jsonBody: p,
-                      fetchResponse: f
+                      fetchResponse: h
                     }
                   ];
               }
             });
           });
-        }, this.delete = function(s, r, u, v, y) {
+        }, this.delete = function(i, r, u, v, y) {
           return o(c, void 0, void 0, function() {
-            var f, p;
-            return n(this, function(w) {
+            var h, p;
+            return t(this, function(w) {
               switch (w.label) {
                 case 0:
                   return [
                     4,
                     this.fetch(
-                      this.getFullUrl(s, r),
+                      this.getFullUrl(i, r),
                       e({ method: "DELETE" }, u),
                       v,
                       y
                     )
                   ];
                 case 1:
-                  return f = w.sent(), [4, this.getResponseJsonOrThrowGeneralError(f)];
+                  return h = w.sent(), [4, this.getResponseJsonOrThrowGeneralError(h)];
                 case 2:
                   return p = w.sent(), [
                     2,
                     {
                       jsonBody: p,
-                      fetchResponse: f
+                      fetchResponse: h
                     }
                   ];
               }
             });
           });
-        }, this.put = function(s, r, u, v, y) {
+        }, this.put = function(i, r, u, v, y) {
           return o(c, void 0, void 0, function() {
-            var f, p;
-            return n(this, function(w) {
+            var h, p;
+            return t(this, function(w) {
               switch (w.label) {
                 case 0:
                   return [
                     4,
                     this.fetch(
-                      this.getFullUrl(s, r),
+                      this.getFullUrl(i, r),
                       e({ method: "PUT" }, u),
                       v,
                       y
                     )
                   ];
                 case 1:
-                  return f = w.sent(), [4, this.getResponseJsonOrThrowGeneralError(f)];
+                  return h = w.sent(), [4, this.getResponseJsonOrThrowGeneralError(h)];
                 case 2:
                   return p = w.sent(), [
                     2,
                     {
                       jsonBody: p,
-                      fetchResponse: f
+                      fetchResponse: h
                     }
                   ];
               }
             });
           });
-        }, this.fetch = function(s, r, u, v) {
+        }, this.fetch = function(i, r, u, v) {
           return o(c, void 0, void 0, function() {
-            var y, f, p, w, b, S;
-            return n(this, function(R) {
+            var y, h, p, w, b, S;
+            return t(this, function(R) {
               switch (R.label) {
                 case 0:
                   return r === void 0 ? y = {} : y = r.headers, [
                     4,
                     this.callPreAPIHook({
                       preAPIHook: u,
-                      url: s,
+                      url: i,
                       requestInit: e(e({}, r), {
                         headers: e(e({}, y), {
                           "fdi-version": l.supported_fdi.join(","),
@@ -3064,7 +3064,7 @@ function Yt() {
                     })
                   ];
                 case 1:
-                  return f = R.sent(), p = f.requestInit, w = f.url, [4, fetch(w, p)];
+                  return h = R.sent(), p = h.requestInit, w = h.url, [4, fetch(w, p)];
                 case 2:
                   if (b = R.sent(), b.status >= 300)
                     throw b;
@@ -3072,7 +3072,7 @@ function Yt() {
                     4,
                     v({
                       requestInit: p,
-                      url: s,
+                      url: i,
                       fetchResponse: S
                     })
                   ]);
@@ -3083,23 +3083,23 @@ function Yt() {
               }
             });
           });
-        }, this.callPreAPIHook = function(s) {
+        }, this.callPreAPIHook = function(i) {
           return o(c, void 0, void 0, function() {
             var r;
-            return n(this, function(u) {
+            return t(this, function(u) {
               switch (u.label) {
                 case 0:
-                  return s.preAPIHook === void 0 ? [
+                  return i.preAPIHook === void 0 ? [
                     2,
                     {
-                      url: s.url,
-                      requestInit: s.requestInit
+                      url: i.url,
+                      requestInit: i.requestInit
                     }
                   ] : [
                     4,
-                    s.preAPIHook({
-                      url: s.url,
-                      requestInit: s.requestInit
+                    i.preAPIHook({
+                      url: i.url,
+                      requestInit: i.requestInit
                     })
                   ];
                 case 1:
@@ -3107,18 +3107,18 @@ function Yt() {
               }
             });
           });
-        }, this.getFullUrl = function(s, r, u) {
+        }, this.getFullUrl = function(i, r, u) {
           var v = c.appInfo.apiBasePath.getAsStringDangerous();
-          s !== void 0 && s !== "public" && (v = "".concat(v, "/").concat(s));
-          var y = new t.default(r), f = "".concat(c.appInfo.apiDomain.getAsStringDangerous()).concat(v).concat(y.getAsStringDangerous());
-          return u === void 0 ? f : f + "?" + new URLSearchParams(u);
-        }, this.getResponseJsonOrThrowGeneralError = function(s) {
+          i !== void 0 && i !== "public" && (v = "".concat(v, "/").concat(i));
+          var y = new n.default(r), h = "".concat(c.appInfo.apiDomain.getAsStringDangerous()).concat(v).concat(y.getAsStringDangerous());
+          return u === void 0 ? h : h + "?" + new URLSearchParams(u);
+        }, this.getResponseJsonOrThrowGeneralError = function(i) {
           return o(c, void 0, void 0, function() {
             var r, u;
-            return n(this, function(v) {
+            return t(this, function(v) {
               switch (v.label) {
                 case 0:
-                  return [4, s.clone().json()];
+                  return [4, i.clone().json()];
                 case 1:
                   if (r = v.sent(), r.status === "GENERAL_ERROR")
                     throw u = r.message === void 0 ? "No Error Message Provided" : r.message, new g.default(u);
@@ -3128,13 +3128,13 @@ function Yt() {
           });
         };
       }
-      var h;
-      return h = m, m.preparePreAPIHook = function(i) {
-        var a = i.recipePreAPIHook, c = i.action, s = i.options, r = i.userContext;
+      var f;
+      return f = m, m.preparePreAPIHook = function(s) {
+        var a = s.recipePreAPIHook, c = s.action, i = s.options, r = s.userContext;
         return function(u) {
           return o(void 0, void 0, void 0, function() {
             var v;
-            return n(h, function(y) {
+            return t(f, function(y) {
               switch (y.label) {
                 case 0:
                   return [
@@ -3144,9 +3144,9 @@ function Yt() {
                     )
                   ];
                 case 1:
-                  return v = y.sent(), s === void 0 || s.preAPIHook === void 0 ? [2, v] : [
+                  return v = y.sent(), i === void 0 || i.preAPIHook === void 0 ? [2, v] : [
                     2,
-                    s.preAPIHook({
+                    i.preAPIHook({
                       url: v.url,
                       requestInit: v.requestInit,
                       userContext: r
@@ -3156,17 +3156,17 @@ function Yt() {
             });
           });
         };
-      }, m.preparePostAPIHook = function(i) {
-        var a = i.recipePostAPIHook, c = i.action, s = i.userContext;
+      }, m.preparePostAPIHook = function(s) {
+        var a = s.recipePostAPIHook, c = s.action, i = s.userContext;
         return function(r) {
           return o(void 0, void 0, void 0, function() {
-            return n(h, function(u) {
+            return t(f, function(u) {
               switch (u.label) {
                 case 0:
                   return [
                     4,
                     a(
-                      e(e({}, r), { userContext: s, action: c })
+                      e(e({}, r), { userContext: i, action: c })
                     )
                   ];
                 case 1:
@@ -3183,35 +3183,35 @@ function Yt() {
   );
   return we.default = d, we;
 }
-var qn;
-function vo() {
-  if (qn) return ye;
-  qn = 1;
-  var e = ye && ye.__awaiter || function(g, d, m, h) {
-    function i(a) {
+var jn;
+function yo() {
+  if (jn) return ye;
+  jn = 1;
+  var e = ye && ye.__awaiter || function(g, d, m, f) {
+    function s(a) {
       return a instanceof m ? a : new m(function(c) {
         c(a);
       });
     }
     return new (m || (m = Promise))(function(a, c) {
-      function s(v) {
+      function i(v) {
         try {
-          u(h.next(v));
+          u(f.next(v));
         } catch (y) {
           c(y);
         }
       }
       function r(v) {
         try {
-          u(h.throw(v));
+          u(f.throw(v));
         } catch (y) {
           c(y);
         }
       }
       function u(v) {
-        v.done ? a(v.value) : i(v.value).then(s, r);
+        v.done ? a(v.value) : s(v.value).then(i, r);
       }
-      u((h = h.apply(g, d || [])).next());
+      u((f = f.apply(g, d || [])).next());
     });
   }, o = ye && ye.__generator || function(g, d) {
     var m = {
@@ -3222,22 +3222,22 @@ function vo() {
       },
       trys: [],
       ops: []
-    }, h, i, a, c;
-    return c = { next: s(0), throw: s(1), return: s(2) }, typeof Symbol == "function" && (c[Symbol.iterator] = function() {
+    }, f, s, a, c;
+    return c = { next: i(0), throw: i(1), return: i(2) }, typeof Symbol == "function" && (c[Symbol.iterator] = function() {
       return this;
     }), c;
-    function s(u) {
+    function i(u) {
       return function(v) {
         return r([u, v]);
       };
     }
     function r(u) {
-      if (h) throw new TypeError("Generator is already executing.");
+      if (f) throw new TypeError("Generator is already executing.");
       for (; m; )
         try {
-          if (h = 1, i && (a = u[0] & 2 ? i.return : u[0] ? i.throw || ((a = i.return) && a.call(i), 0) : i.next) && !(a = a.call(i, u[1])).done)
+          if (f = 1, s && (a = u[0] & 2 ? s.return : u[0] ? s.throw || ((a = s.return) && a.call(s), 0) : s.next) && !(a = a.call(s, u[1])).done)
             return a;
-          switch (i = 0, a && (u = [u[0] & 2, a.value]), u[0]) {
+          switch (s = 0, a && (u = [u[0] & 2, a.value]), u[0]) {
             case 0:
             case 1:
               a = u;
@@ -3245,7 +3245,7 @@ function vo() {
             case 4:
               return m.label++, { value: u[1], done: !1 };
             case 5:
-              m.label++, i = u[1], u = [0];
+              m.label++, s = u[1], u = [0];
               continue;
             case 7:
               u = m.ops.pop(), m.trys.pop();
@@ -3272,45 +3272,45 @@ function vo() {
           }
           u = d.call(g, m);
         } catch (v) {
-          u = [6, v], i = 0;
+          u = [6, v], s = 0;
         } finally {
-          h = a = 0;
+          f = a = 0;
         }
       if (u[0] & 5) throw u[1];
       return { value: u[0] ? u[1] : void 0, done: !0 };
     }
   };
   Object.defineProperty(ye, "__esModule", { value: !0 }), ye.getRecipeImplementation = void 0;
-  var n = Yt(), t = Ie();
+  var t = Zt(), n = Ie();
   function l(g) {
-    var d = new n.default(g.recipeId, g.appInfo);
+    var d = new t.default(g.recipeId, g.appInfo);
     return {
       getTenantId: function() {
-        var m = (0, t.getQueryParams)("tenantId");
+        var m = (0, n.getQueryParams)("tenantId");
         if ((m == null ? void 0 : m.trim()) !== "")
           return m;
       },
       getLoginMethods: function(m) {
-        var h = m.tenantId, i = m.options, a = m.userContext;
+        var f = m.tenantId, s = m.options, a = m.userContext;
         return e(this, void 0, void 0, function() {
-          var c, s, r, u, v;
+          var c, i, r, u, v;
           return o(this, function(y) {
             switch (y.label) {
               case 0:
                 return c = {}, g.clientType !== void 0 && (c.clientType = g.clientType), [
                   4,
                   d.get(
-                    h,
+                    f,
                     "/loginmethods",
                     {},
                     c,
-                    n.default.preparePreAPIHook({
+                    t.default.preparePreAPIHook({
                       recipePreAPIHook: g.preAPIHook,
                       action: "GET_LOGIN_METHODS",
-                      options: i,
+                      options: s,
                       userContext: a
                     }),
-                    n.default.preparePostAPIHook({
+                    t.default.preparePostAPIHook({
                       recipePostAPIHook: g.postAPIHook,
                       action: "GET_LOGIN_METHODS",
                       userContext: a
@@ -3318,7 +3318,7 @@ function vo() {
                   )
                 ];
               case 1:
-                return s = y.sent(), r = s.jsonBody, u = s.fetchResponse, r.firstFactors === void 0 ? (v = [], r.emailPassword.enabled && v.push("emailpassword"), r.thirdParty.enabled && v.push("thirdparty"), r.passwordless.enabled && (v.push("otp-email"), v.push("otp-phone"), v.push("link-email"), v.push("link-phone"))) : v = r.firstFactors, [
+                return i = y.sent(), r = i.jsonBody, u = i.fetchResponse, r.firstFactors === void 0 ? (v = [], r.emailPassword.enabled && v.push("emailpassword"), r.thirdParty.enabled && v.push("thirdparty"), r.passwordless.enabled && (v.push("otp-email"), v.push("otp-phone"), v.push("link-email"), v.push("link-phone"))) : v = r.firstFactors, [
                   2,
                   {
                     status: "OK",
@@ -3337,32 +3337,32 @@ function vo() {
   }
   return ye.default = l, ye.getRecipeImplementation = l, ye;
 }
-var be = {}, At = {}, jn;
-function Er() {
-  if (jn) return At;
-  jn = 1, Object.defineProperty(At, "__esModule", { value: !0 });
+var be = {}, Ct = {}, $n;
+function Dr() {
+  if ($n) return Ct;
+  $n = 1, Object.defineProperty(Ct, "__esModule", { value: !0 });
   var e = (
     /** @class */
     /* @__PURE__ */ function() {
-      function o(n) {
-        this.config = n;
+      function o(t) {
+        this.config = t;
       }
       return o;
     }()
   );
-  return At.default = e, At;
+  return Ct.default = e, Ct;
 }
-var se = {}, Ht = {}, Ke = {}, Se = {}, ie = {}, Ee = {}, $n;
-function mo() {
-  if ($n) return Ee;
-  $n = 1;
+var ie = {}, Ht = {}, Ke = {}, Se = {}, se = {}, Ee = {}, Vn;
+function wo() {
+  if (Vn) return Ee;
+  Vn = 1;
   var e = Ee && Ee.__awaiter || function(l, g, d, m) {
-    function h(i) {
-      return i instanceof d ? i : new d(function(a) {
-        a(i);
+    function f(s) {
+      return s instanceof d ? s : new d(function(a) {
+        a(s);
       });
     }
-    return new (d || (d = Promise))(function(i, a) {
+    return new (d || (d = Promise))(function(s, a) {
       function c(u) {
         try {
           r(m.next(u));
@@ -3370,7 +3370,7 @@ function mo() {
           a(v);
         }
       }
-      function s(u) {
+      function i(u) {
         try {
           r(m.throw(u));
         } catch (v) {
@@ -3378,7 +3378,7 @@ function mo() {
         }
       }
       function r(u) {
-        u.done ? i(u.value) : h(u.value).then(c, s);
+        u.done ? s(u.value) : f(u.value).then(c, i);
       }
       r((m = m.apply(l, g || [])).next());
     });
@@ -3386,72 +3386,72 @@ function mo() {
     var d = {
       label: 0,
       sent: function() {
-        if (i[0] & 1) throw i[1];
-        return i[1];
+        if (s[0] & 1) throw s[1];
+        return s[1];
       },
       trys: [],
       ops: []
-    }, m, h, i, a;
+    }, m, f, s, a;
     return a = { next: c(0), throw: c(1), return: c(2) }, typeof Symbol == "function" && (a[Symbol.iterator] = function() {
       return this;
     }), a;
     function c(r) {
       return function(u) {
-        return s([r, u]);
+        return i([r, u]);
       };
     }
-    function s(r) {
+    function i(r) {
       if (m) throw new TypeError("Generator is already executing.");
       for (; d; )
         try {
-          if (m = 1, h && (i = r[0] & 2 ? h.return : r[0] ? h.throw || ((i = h.return) && i.call(h), 0) : h.next) && !(i = i.call(h, r[1])).done)
-            return i;
-          switch (h = 0, i && (r = [r[0] & 2, i.value]), r[0]) {
+          if (m = 1, f && (s = r[0] & 2 ? f.return : r[0] ? f.throw || ((s = f.return) && s.call(f), 0) : f.next) && !(s = s.call(f, r[1])).done)
+            return s;
+          switch (f = 0, s && (r = [r[0] & 2, s.value]), r[0]) {
             case 0:
             case 1:
-              i = r;
+              s = r;
               break;
             case 4:
               return d.label++, { value: r[1], done: !1 };
             case 5:
-              d.label++, h = r[1], r = [0];
+              d.label++, f = r[1], r = [0];
               continue;
             case 7:
               r = d.ops.pop(), d.trys.pop();
               continue;
             default:
-              if (i = d.trys, !(i = i.length > 0 && i[i.length - 1]) && (r[0] === 6 || r[0] === 2)) {
+              if (s = d.trys, !(s = s.length > 0 && s[s.length - 1]) && (r[0] === 6 || r[0] === 2)) {
                 d = 0;
                 continue;
               }
-              if (r[0] === 3 && (!i || r[1] > i[0] && r[1] < i[3])) {
+              if (r[0] === 3 && (!s || r[1] > s[0] && r[1] < s[3])) {
                 d.label = r[1];
                 break;
               }
-              if (r[0] === 6 && d.label < i[1]) {
-                d.label = i[1], i = r;
+              if (r[0] === 6 && d.label < s[1]) {
+                d.label = s[1], s = r;
                 break;
               }
-              if (i && d.label < i[2]) {
-                d.label = i[2], d.ops.push(r);
+              if (s && d.label < s[2]) {
+                d.label = s[2], d.ops.push(r);
                 break;
               }
-              i[2] && d.ops.pop(), d.trys.pop();
+              s[2] && d.ops.pop(), d.trys.pop();
               continue;
           }
           r = g.call(l, d);
         } catch (u) {
-          r = [6, u], h = 0;
+          r = [6, u], f = 0;
         } finally {
-          m = i = 0;
+          m = s = 0;
         }
       if (r[0] & 5) throw r[1];
       return { value: r[0] ? r[1] : void 0, done: !0 };
     }
   };
   Object.defineProperty(Ee, "__esModule", { value: !0 }), Ee.createAxiosErrorFromFetchResp = void 0;
-  function n(l, g, d, m, h) {
-    return l.config = g, d && (l.code = d), l.request = m, l.response = h, l.isAxiosError = !0, l.toJSON = function() {
+  function t(l, g, d, m, f) {
+    return l.config = g, d && (l.code = d), l.request = m, l.response = f, l.isAxiosError = !0, l.toJSON = function() {
       return {
         // Standard
         message: this.message,
@@ -3470,9 +3470,9 @@ function mo() {
       };
     }, l;
   }
-  function t(l) {
+  function n(l) {
     return e(this, void 0, void 0, function() {
-      var g, d, m, h, i;
+      var g, d, m, f, s;
       return o(this, function(a) {
         switch (a.label) {
           case 0:
@@ -3480,31 +3480,31 @@ function mo() {
               url: l.url,
               headers: l.headers
             }, d = "status" in l, !d) return [3, 12];
-            if (h = l.headers.get("content-type"), i = void 0, h !== null) return [3, 5];
+            if (f = l.headers.get("content-type"), s = void 0, f !== null) return [3, 5];
             a.label = 1;
           case 1:
             return a.trys.push([1, 3, , 4]), [4, l.text()];
           case 2:
-            return i = a.sent(), [3, 4];
+            return s = a.sent(), [3, 4];
           case 3:
-            return a.sent(), i = "", [3, 4];
+            return a.sent(), s = "", [3, 4];
           case 4:
             return [3, 11];
           case 5:
-            return h.includes("application/json") ? [4, l.json()] : [3, 7];
+            return f.includes("application/json") ? [4, l.json()] : [3, 7];
           case 6:
-            return i = a.sent(), [3, 11];
+            return s = a.sent(), [3, 11];
           case 7:
-            return h.includes("text/") ? [4, l.text()] : [3, 9];
+            return f.includes("text/") ? [4, l.text()] : [3, 9];
           case 8:
-            return i = a.sent(), [3, 11];
+            return s = a.sent(), [3, 11];
           case 9:
             return [4, l.blob()];
           case 10:
-            i = a.sent(), a.label = 11;
+            s = a.sent(), a.label = 11;
           case 11:
             m = {
-              data: i,
+              data: s,
               status: l.status,
               statusText: l.statusText,
               headers: l.headers,
@@ -3514,7 +3514,7 @@ function mo() {
           case 12:
             return [
               2,
-              n(
+              t(
                 d ? new Error("Request failed with status code " + l.status) : l,
                 g,
                 l.code,
@@ -3526,13 +3526,13 @@ function mo() {
       });
     });
   }
-  return Ee.createAxiosErrorFromFetchResp = t, Ee;
+  return Ee.createAxiosErrorFromFetchResp = n, Ee;
 }
-var Vn;
-function po() {
-  if (Vn) return ie;
-  Vn = 1;
-  var e = ie && ie.__assign || function() {
+var Wn;
+function bo() {
+  if (Wn) return se;
+  Wn = 1;
+  var e = se && se.__assign || function() {
     return e = Object.assign || function(p) {
       for (var w, b = 1, S = arguments.length; b < S; b++) {
         w = arguments[b];
@@ -3540,7 +3540,7 @@ function po() {
       }
       return p;
     }, e.apply(this, arguments);
-  }, o = ie && ie.__awaiter || function(p, w, b, S) {
+  }, o = se && se.__awaiter || function(p, w, b, S) {
     function R(I) {
       return I instanceof b ? I : new b(function(T) {
         T(I);
@@ -3566,7 +3566,7 @@ function po() {
       }
       C((S = S.apply(p, w || [])).next());
     });
-  }, n = ie && ie.__generator || function(p, w) {
+  }, t = se && se.__generator || function(p, w) {
     var b = {
       label: 0,
       sent: function() {
@@ -3633,12 +3633,12 @@ function po() {
       return { value: C[0] ? C[1] : void 0, done: !0 };
     }
   };
-  Object.defineProperty(ie, "__esModule", { value: !0 }), ie.responseErrorInterceptor = ie.responseInterceptor = ie.interceptorFunctionRequestFulfilled = void 0;
-  var t = mo(), l = St(), g = zt(), d = je(), m = wt();
-  function h(p) {
+  Object.defineProperty(se, "__esModule", { value: !0 }), se.responseErrorInterceptor = se.responseInterceptor = se.interceptorFunctionRequestFulfilled = void 0;
+  var n = wo(), l = St(), g = Kt(), d = je(), m = wt();
+  function f(p) {
     p.__supertokensSessionRefreshAttempts === void 0 && (p.__supertokensSessionRefreshAttempts = 0), p.__supertokensSessionRefreshAttempts++;
   }
-  function i(p) {
+  function s(p) {
     return p.__supertokensSessionRefreshAttempts === void 0 && (p.__supertokensSessionRefreshAttempts = 0), p.__supertokensSessionRefreshAttempts >= l.default.config.maxRetryAttemptsForSessionRefresh;
   }
   function a(p) {
@@ -3648,7 +3648,7 @@ function po() {
   function c(p) {
     return o(this, void 0, void 0, function() {
       var w, b, S, R, I, T;
-      return n(this, function(_) {
+      return t(this, function(_) {
         switch (_.label) {
           case 0:
             (0, m.logDebugMessage)("interceptorFunctionRequestFulfilled: started axios interception"), w = a(p), b = !1;
@@ -3692,7 +3692,7 @@ function po() {
               headers: R === void 0 ? {
                 rid: "anti-csrf"
               } : e({ rid: "anti-csrf" }, R.headers)
-            }), T = l.default.config.tokenTransferMethod, (0, m.logDebugMessage)("interceptorFunctionRequestFulfilled: Adding st-auth-mode header: " + T), R.headers["st-auth-mode"] = T, [4, f(R)];
+            }), T = l.default.config.tokenTransferMethod, (0, m.logDebugMessage)("interceptorFunctionRequestFulfilled: Adding st-auth-mode header: " + T), R.headers["st-auth-mode"] = T, [4, h(R)];
           case 4:
             return R = _.sent(), [4, v(R)];
           case 5:
@@ -3701,13 +3701,13 @@ function po() {
       });
     });
   }
-  ie.interceptorFunctionRequestFulfilled = c;
-  function s(p) {
+  se.interceptorFunctionRequestFulfilled = c;
+  function i(p) {
     var w = this;
     return function(b) {
       return o(w, void 0, void 0, function() {
         var S, R, I, T;
-        return n(this, function(_) {
+        return t(this, function(_) {
           switch (_.label) {
             case 0:
               if (S = !1, !l.default.initCalled)
@@ -3761,13 +3761,13 @@ function po() {
       });
     };
   }
-  ie.responseInterceptor = s;
+  se.responseInterceptor = i;
   function r(p) {
     var w = this;
     return function(b) {
       return o(w, void 0, void 0, function() {
         var S;
-        return n(this, function(R) {
+        return t(this, function(R) {
           switch (R.label) {
             case 0:
               if ((0, m.logDebugMessage)("responseErrorInterceptor: called"), (0, m.logDebugMessage)("responseErrorInterceptor: already intercepted: " + (b.response && b.response.headers["x-supertokens-xhr-intercepted"])), b.response === void 0 || b.response.headers["x-supertokens-xhr-intercepted"])
@@ -3796,7 +3796,7 @@ function po() {
       });
     };
   }
-  ie.responseErrorInterceptor = r;
+  se.responseErrorInterceptor = r;
   var u = (
     /** @class */
     function() {
@@ -3806,7 +3806,7 @@ function po() {
       return w = p, p.doRequest = function(b, S, R, I, T, _) {
         return _ === void 0 && (_ = !1), o(void 0, void 0, void 0, function() {
           var P, C, x, E, B, K, ne, re, q, H, L, q, F, V, X;
-          return n(w, function(k) {
+          return t(w, function(k) {
             switch (k.label) {
               case 0:
                 if (!l.default.initCalled)
@@ -3837,7 +3837,7 @@ function po() {
               case 1:
                 return [2, k.sent()];
               case 2:
-                return (0, m.logDebugMessage)("doRequest: Interception started"), [4, f(S)];
+                return (0, m.logDebugMessage)("doRequest: Interception started"), [4, h(S)];
               case 3:
                 S = k.sent(), C = void 0, k.label = 4;
               case 4:
@@ -3881,7 +3881,7 @@ function po() {
               case 15:
                 if (k.sent(), (0, l.fireSessionUpdateEventsIfNecessary)(x.status === "EXISTS", q.status, q.headers["front-token"]), q.status !== l.default.config.sessionExpiredStatusCode)
                   return [3, 21];
-                if ((0, m.logDebugMessage)("doRequest: Status code is: " + q.status), i(S))
+                if ((0, m.logDebugMessage)("doRequest: Status code is: " + q.status), s(S))
                   throw (0, m.logDebugMessage)(
                     "doRequest: Maximum session refresh attempts reached. sessionRefreshAttempts: ".concat(
                       S.__supertokensSessionRefreshAttempts,
@@ -3896,7 +3896,7 @@ function po() {
                   ), console.error(F), new Error(F);
                 return [4, (0, l.onUnauthorisedResponse)(x)];
               case 16:
-                return V = k.sent(), h(S), (0, m.logDebugMessage)("doRequest: sessionRefreshAttempts: " + S.__supertokensSessionRefreshAttempts), V.result === "RETRY" ? [3, 20] : ((0, m.logDebugMessage)("doRequest: Not retrying original request"), V.error === void 0 ? [3, 18] : [4, (0, t.createAxiosErrorFromFetchResp)(V.error)]);
+                return V = k.sent(), f(S), (0, m.logDebugMessage)("doRequest: sessionRefreshAttempts: " + S.__supertokensSessionRefreshAttempts), V.result === "RETRY" ? [3, 20] : ((0, m.logDebugMessage)("doRequest: Not retrying original request"), V.error === void 0 ? [3, 18] : [4, (0, n.createAxiosErrorFromFetchResp)(V.error)]);
               case 17:
                 return X = k.sent(), [3, 19];
               case 18:
@@ -3927,11 +3927,11 @@ function po() {
       }, p;
     }()
   );
-  ie.default = u;
+  se.default = u;
   function v(p) {
     return o(this, void 0, void 0, function() {
       var w, b;
-      return n(this, function(S) {
+      return t(this, function(S) {
         switch (S.label) {
           case 0:
             return p.headers === void 0 && (p.headers = {}), (0, m.logDebugMessage)("setAuthorizationHeaderIfRequired: adding existing tokens as header"), [4, (0, l.getTokenForHeaderAuth)("access")];
@@ -3957,7 +3957,7 @@ function po() {
   function y(p) {
     return o(this, void 0, void 0, function() {
       var w, b, S, R, I, T;
-      return n(this, function(_) {
+      return t(this, function(_) {
         switch (_.label) {
           case 0:
             return (0, m.logDebugMessage)("saveTokensFromHeaders: Saving updated tokens from the response"), w = p.headers["st-refresh-token"], w === void 0 ? [3, 2] : ((0, m.logDebugMessage)("saveTokensFromHeaders: saving new refresh token"), [4, (0, l.setToken)("refresh", w)]);
@@ -3991,10 +3991,10 @@ function po() {
       });
     });
   }
-  function f(p) {
+  function h(p) {
     return o(this, void 0, void 0, function() {
       var w, b, S, R;
-      return n(this, function(I) {
+      return t(this, function(I) {
         switch (I.label) {
           case 0:
             return [4, (0, l.getTokenForHeaderAuth)("access")];
@@ -4008,19 +4008,19 @@ function po() {
       });
     });
   }
-  return ie;
+  return se;
 }
-var xe = {}, Wn;
-function yo() {
-  if (Wn) return xe;
-  Wn = 1;
-  var e = xe && xe.__awaiter || function(s, r, u, v) {
-    function y(f) {
-      return f instanceof u ? f : new u(function(p) {
-        p(f);
+var xe = {}, Bn;
+function So() {
+  if (Bn) return xe;
+  Bn = 1;
+  var e = xe && xe.__awaiter || function(i, r, u, v) {
+    function y(h) {
+      return h instanceof u ? h : new u(function(p) {
+        p(h);
       });
     }
-    return new (u || (u = Promise))(function(f, p) {
+    return new (u || (u = Promise))(function(h, p) {
       function w(R) {
         try {
           S(v.next(R));
@@ -4036,20 +4036,20 @@ function yo() {
         }
       }
       function S(R) {
-        R.done ? f(R.value) : y(R.value).then(w, b);
+        R.done ? h(R.value) : y(R.value).then(w, b);
       }
-      S((v = v.apply(s, r || [])).next());
+      S((v = v.apply(i, r || [])).next());
     });
-  }, o = xe && xe.__generator || function(s, r) {
+  }, o = xe && xe.__generator || function(i, r) {
     var u = {
       label: 0,
       sent: function() {
-        if (f[0] & 1) throw f[1];
-        return f[1];
+        if (h[0] & 1) throw h[1];
+        return h[1];
       },
       trys: [],
       ops: []
-    }, v, y, f, p;
+    }, v, y, h, p;
     return p = { next: w(0), throw: w(1), return: w(2) }, typeof Symbol == "function" && (p[Symbol.iterator] = function() {
       return this;
     }), p;
@@ -4062,12 +4062,12 @@ function yo() {
       if (v) throw new TypeError("Generator is already executing.");
       for (; u; )
         try {
-          if (v = 1, y && (f = S[0] & 2 ? y.return : S[0] ? y.throw || ((f = y.return) && f.call(y), 0) : y.next) && !(f = f.call(y, S[1])).done)
-            return f;
-          switch (y = 0, f && (S = [S[0] & 2, f.value]), S[0]) {
+          if (v = 1, y && (h = S[0] & 2 ? y.return : S[0] ? y.throw || ((h = y.return) && h.call(y), 0) : y.next) && !(h = h.call(y, S[1])).done)
+            return h;
+          switch (y = 0, h && (S = [S[0] & 2, h.value]), S[0]) {
             case 0:
             case 1:
-              f = S;
+              h = S;
               break;
             case 4:
               return u.label++, { value: S[1], done: !1 };
@@ -4078,43 +4078,43 @@ function yo() {
               S = u.ops.pop(), u.trys.pop();
               continue;
             default:
-              if (f = u.trys, !(f = f.length > 0 && f[f.length - 1]) && (S[0] === 6 || S[0] === 2)) {
+              if (h = u.trys, !(h = h.length > 0 && h[h.length - 1]) && (S[0] === 6 || S[0] === 2)) {
                 u = 0;
                 continue;
               }
-              if (S[0] === 3 && (!f || S[1] > f[0] && S[1] < f[3])) {
+              if (S[0] === 3 && (!h || S[1] > h[0] && S[1] < h[3])) {
                 u.label = S[1];
                 break;
               }
-              if (S[0] === 6 && u.label < f[1]) {
-                u.label = f[1], f = S;
+              if (S[0] === 6 && u.label < h[1]) {
+                u.label = h[1], h = S;
                 break;
               }
-              if (f && u.label < f[2]) {
-                u.label = f[2], u.ops.push(S);
+              if (h && u.label < h[2]) {
+                u.label = h[2], u.ops.push(S);
                 break;
               }
-              f[2] && u.ops.pop(), u.trys.pop();
+              h[2] && u.ops.pop(), u.trys.pop();
               continue;
           }
-          S = r.call(s, u);
+          S = r.call(i, u);
         } catch (R) {
           S = [6, R], y = 0;
         } finally {
-          v = f = 0;
+          v = h = 0;
         }
       if (S[0] & 5) throw S[1];
       return { value: S[0] ? S[1] : void 0, done: !0 };
     }
   };
   Object.defineProperty(xe, "__esModule", { value: !0 }), xe.addInterceptorsToXMLHttpRequest = void 0;
-  var n = St(), t = wt(), l = je(), g = zt(), d = ["readystatechange", "abort", "error", "load", "loadend", "loadstart", "progress", "timeout"];
+  var t = St(), n = wt(), l = je(), g = Kt(), d = ["readystatechange", "abort", "error", "load", "loadend", "loadstart", "progress", "timeout"];
   function m() {
-    var s = new Promise(function(u) {
+    var i = new Promise(function(u) {
       return setTimeout(u, 0);
     }), r = XMLHttpRequest;
-    (0, t.logDebugMessage)("addInterceptorsToXMLHttpRequest called"), XMLHttpRequest = function() {
-      var u = new r(), v = this, y = [], f = [], p = {}, w, b = /* @__PURE__ */ new Map(), S = s;
+    (0, n.logDebugMessage)("addInterceptorsToXMLHttpRequest called"), XMLHttpRequest = function() {
+      var u = new r(), v = this, y = [], h = [], p = {}, w, b = /* @__PURE__ */ new Map(), S = i;
       function R(H) {
         S = S.finally(function() {
           var L;
@@ -4134,7 +4134,7 @@ function yo() {
       };
       function x(H, L) {
         var q = b.get(H);
-        (0, t.logDebugMessage)(
+        (0, n.logDebugMessage)(
           "XHRInterceptor dispatching ".concat(L.type, " to ").concat(q ? q.size : 0, " listeners")
         ), q && Array.from(q).forEach(function(F) {
           return F.apply(v, [L]);
@@ -4148,26 +4148,26 @@ function yo() {
               case 0:
                 if (_ === void 0)
                   throw new Error("Should never come here..");
-                if ((0, t.logDebugMessage)("XHRInterceptor.handleRetryPostRefreshing: preRequestLSS " + _.status), C >= n.default.config.maxRetryAttemptsForSessionRefresh)
-                  throw (0, t.logDebugMessage)(
-                    "XHRInterceptor.handleRetryPostRefreshing: Maximum session refresh attempts reached. sessionRefreshAttempts: ".concat(C, ", maxRetryAttemptsForSessionRefresh: ").concat(n.default.config.maxRetryAttemptsForSessionRefresh)
+                if ((0, n.logDebugMessage)("XHRInterceptor.handleRetryPostRefreshing: preRequestLSS " + _.status), C >= t.default.config.maxRetryAttemptsForSessionRefresh)
+                  throw (0, n.logDebugMessage)(
+                    "XHRInterceptor.handleRetryPostRefreshing: Maximum session refresh attempts reached. sessionRefreshAttempts: ".concat(C, ", maxRetryAttemptsForSessionRefresh: ").concat(t.default.config.maxRetryAttemptsForSessionRefresh)
                   ), p.status = 0, p.statusText = "", p.responseType = "", H = "Received a 401 response from ".concat(
                     I,
                     ". Attempted to refresh the session and retry the request with the updated session tokens "
                   ).concat(
-                    n.default.config.maxRetryAttemptsForSessionRefresh,
+                    t.default.config.maxRetryAttemptsForSessionRefresh,
                     " times, but each attempt resulted in a 401 error. The maximum session refresh limit has been reached. Please investigate your API. To increase the session refresh attempts, update maxRetryAttemptsForSessionRefresh in the config."
                   ), console.error(H), new Error(H);
-                return [4, (0, n.onUnauthorisedResponse)(_)];
+                return [4, (0, t.onUnauthorisedResponse)(_)];
               case 1:
-                if (L = F.sent(), C++, (0, t.logDebugMessage)("XHRInterceptor.handleRetryPostRefreshing: sessionRefreshAttempts: " + C), L.result !== "RETRY") {
-                  if ((0, t.logDebugMessage)(
+                if (L = F.sent(), C++, (0, n.logDebugMessage)("XHRInterceptor.handleRetryPostRefreshing: sessionRefreshAttempts: " + C), L.result !== "RETRY") {
+                  if ((0, n.logDebugMessage)(
                     "XHRInterceptor.handleRetryPostRefreshing: Not retrying original request " + !!L.error
                   ), L.error !== void 0)
                     throw L.error;
                   return [2, !0];
                 }
-                return (0, t.logDebugMessage)("XHRInterceptor.handleRetryPostRefreshing: Retrying original request"), q = new r(), ne(v, q, !0), y.forEach(function(V) {
+                return (0, n.logDebugMessage)("XHRInterceptor.handleRetryPostRefreshing: Retrying original request"), q = new r(), ne(v, q, !0), y.forEach(function(V) {
                   V(q);
                 }), re(q, P), [2, !1];
             }
@@ -4181,26 +4181,26 @@ function yo() {
             switch (k.label) {
               case 0:
                 if (T)
-                  return (0, t.logDebugMessage)(
+                  return (0, n.logDebugMessage)(
                     "XHRInterceptor.handleResponse: Returning without interception"
                   ), [2, !0];
                 k.label = 1;
               case 1:
-                return k.trys.push([1, 7, , 11]), (0, t.logDebugMessage)("XHRInterceptor.handleResponse: Interception started"), g.ProcessState.getInstance().addState(
+                return k.trys.push([1, 7, , 11]), (0, n.logDebugMessage)("XHRInterceptor.handleResponse: Interception started"), g.ProcessState.getInstance().addState(
                   g.PROCESS_STATE.CALLING_INTERCEPTION_RESPONSE
                 ), L = H.status, q = c(H), [4, a(q)];
               case 2:
-                return k.sent(), (0, n.fireSessionUpdateEventsIfNecessary)(_.status === "EXISTS", L, q.get("front-token")), L !== n.default.config.sessionExpiredStatusCode ? [3, 4] : ((0, t.logDebugMessage)("responseInterceptor: Status code is: " + L), [4, E()]);
+                return k.sent(), (0, t.fireSessionUpdateEventsIfNecessary)(_.status === "EXISTS", L, q.get("front-token")), L !== t.default.config.sessionExpiredStatusCode ? [3, 4] : ((0, n.logDebugMessage)("responseInterceptor: Status code is: " + L), [4, E()]);
               case 3:
                 return [2, k.sent()];
               case 4:
-                return L !== n.default.config.invalidClaimStatusCode ? [3, 6] : [4, (0, n.onInvalidClaimResponse)({ data: H.responseText })];
+                return L !== t.default.config.invalidClaimStatusCode ? [3, 6] : [4, (0, t.onInvalidClaimResponse)({ data: H.responseText })];
               case 5:
                 k.sent(), k.label = 6;
               case 6:
                 return [2, !0];
               case 7:
-                return F = k.sent(), (0, t.logDebugMessage)("XHRInterceptor.handleResponse: caught error"), F.status === void 0 ? [3, 9] : [4, h(F)];
+                return F = k.sent(), (0, n.logDebugMessage)("XHRInterceptor.handleResponse: caught error"), F.status === void 0 ? [3, 9] : [4, f(F)];
               case 8:
                 if (V = k.sent(), p.status = V.status, p.statusText = V.statusText, p.responseType = V.responseType, w = V.headers, V.responseType === "json")
                   try {
@@ -4225,27 +4225,27 @@ function yo() {
         });
       }
       v.open = function(H, L) {
-        (0, t.logDebugMessage)("XHRInterceptor.open called");
+        (0, n.logDebugMessage)("XHRInterceptor.open called");
         var q = arguments;
         I = L;
         try {
-          T = typeof I == "string" && !n.default.recipeImpl.shouldDoInterceptionBasedOnUrl(
+          T = typeof I == "string" && !t.default.recipeImpl.shouldDoInterceptionBasedOnUrl(
             I,
-            n.default.config.apiDomain,
-            n.default.config.sessionTokenBackendDomain
-          ) || typeof I != "string" && !n.default.recipeImpl.shouldDoInterceptionBasedOnUrl(
+            t.default.config.apiDomain,
+            t.default.config.sessionTokenBackendDomain
+          ) || typeof I != "string" && !t.default.recipeImpl.shouldDoInterceptionBasedOnUrl(
             I.toString(),
-            n.default.config.apiDomain,
-            n.default.config.sessionTokenBackendDomain
+            t.default.config.apiDomain,
+            t.default.config.sessionTokenBackendDomain
           );
         } catch (F) {
           if (F.message === "Please provide a valid domain name")
-            (0, t.logDebugMessage)(
+            (0, n.logDebugMessage)(
               "XHRInterceptor.open: Trying shouldDoInterceptionBasedOnUrl with location.origin"
-            ), T = !n.default.recipeImpl.shouldDoInterceptionBasedOnUrl(
+            ), T = !t.default.recipeImpl.shouldDoInterceptionBasedOnUrl(
               l.default.getReferenceOrThrow().windowHandler.location.getOrigin(),
-              n.default.config.apiDomain,
-              n.default.config.sessionTokenBackendDomain
+              t.default.config.apiDomain,
+              t.default.config.sessionTokenBackendDomain
             );
           else
             throw F;
@@ -4259,7 +4259,7 @@ function yo() {
         P = H, re(u, P);
       }, v.setRequestHeader = function(H, L) {
         var q = this;
-        if ((0, t.logDebugMessage)("XHRInterceptor.setRequestHeader: Called with ".concat(H)), T) {
+        if ((0, n.logDebugMessage)("XHRInterceptor.setRequestHeader: Called with ".concat(H)), T) {
           R(function() {
             return u.setRequestHeader(H, L);
           });
@@ -4271,12 +4271,12 @@ function yo() {
             return o(this, function(X) {
               switch (X.label) {
                 case 0:
-                  return H.toLowerCase() !== "authorization" ? [3, 3] : ((0, t.logDebugMessage)("XHRInterceptor.setRequestHeader: checking if user provided auth header matches local token"), [4, (0, n.getTokenForHeaderAuth)("access")]);
+                  return H.toLowerCase() !== "authorization" ? [3, 3] : ((0, n.logDebugMessage)("XHRInterceptor.setRequestHeader: checking if user provided auth header matches local token"), [4, (0, t.getTokenForHeaderAuth)("access")]);
                 case 1:
-                  return F = X.sent(), [4, (0, n.getTokenForHeaderAuth)("refresh")];
+                  return F = X.sent(), [4, (0, t.getTokenForHeaderAuth)("refresh")];
                 case 2:
                   if (V = X.sent(), F !== void 0 && V !== void 0 && L === "Bearer ".concat(F))
-                    return (0, t.logDebugMessage)(
+                    return (0, n.logDebugMessage)(
                       "XHRInterceptor.setRequestHeader: skipping Authorization from user provided headers because it contains our access token"
                     ), [
                       2
@@ -4286,7 +4286,7 @@ function yo() {
                 case 3:
                   return y.push(function(k) {
                     k.setRequestHeader(H, L);
-                  }), f.push({ name: H, value: L }), u.setRequestHeader(H, L), [
+                  }), h.push({ name: H, value: L }), u.setRequestHeader(H, L), [
                     2
                     /*return*/
                   ];
@@ -4299,10 +4299,10 @@ function yo() {
       ne(v, u, !1);
       function ne(H, L, q) {
         var F, V = ["load", "loadend", "readystatechange"];
-        (0, t.logDebugMessage)("XHRInterceptor.setUpXHR called");
+        (0, n.logDebugMessage)("XHRInterceptor.setUpXHR called");
         for (var X = function(U) {
-          (0, t.logDebugMessage)("XHRInterceptor added listener for event ".concat(U)), L.addEventListener(U, function(W) {
-            (0, t.logDebugMessage)("XHRInterceptor got event ".concat(U)), V.includes(U) || x(U, W);
+          (0, n.logDebugMessage)("XHRInterceptor added listener for event ".concat(U)), L.addEventListener(U, function(W) {
+            (0, n.logDebugMessage)("XHRInterceptor got event ".concat(U)), V.includes(U) || x(U, W);
           });
         }, k = 0, O = d; k < O.length; k++) {
           var A = O[k];
@@ -4351,7 +4351,7 @@ function yo() {
             set: function(W) {
               q || y.push(function(j) {
                 j[U] = W;
-              }), (0, t.logDebugMessage)("XHRInterceptor.set[".concat(U, "] = ").concat(W)), L[U] = W;
+              }), (0, n.logDebugMessage)("XHRInterceptor.set[".concat(U, "] = ").concat(W)), L[U] = W;
             }
           });
         }, N = 0, $ = K; N < $.length; N++) {
@@ -4361,13 +4361,13 @@ function yo() {
       }
       function re(H, L) {
         var q = this;
-        if ((0, t.logDebugMessage)("XHRInterceptor.send: called"), (0, t.logDebugMessage)("XHRInterceptor.send: Value of doNotDoInterception: " + T), T) {
-          (0, t.logDebugMessage)("XHRInterceptor.send: Returning without interception"), R(function() {
+        if ((0, n.logDebugMessage)("XHRInterceptor.send: called"), (0, n.logDebugMessage)("XHRInterceptor.send: Value of doNotDoInterception: " + T), T) {
+          (0, n.logDebugMessage)("XHRInterceptor.send: Returning without interception"), R(function() {
             return H.send(L);
           });
           return;
         }
-        (0, t.logDebugMessage)("XHRInterceptor.send: Interception started"), g.ProcessState.getInstance().addState(
+        (0, n.logDebugMessage)("XHRInterceptor.send: Interception started"), g.ProcessState.getInstance().addState(
           g.PROCESS_STATE.CALLING_INTERCEPTION_REQUEST
         ), R(function() {
           return e(q, void 0, void 0, function() {
@@ -4375,30 +4375,30 @@ function yo() {
             return o(this, function(X) {
               switch (X.label) {
                 case 0:
-                  return [4, (0, n.getLocalSessionState)(!0)];
+                  return [4, (0, t.getLocalSessionState)(!0)];
                 case 1:
                   return _ = X.sent(), _.status !== "EXISTS" ? [3, 3] : [
                     4,
-                    n.AntiCsrfToken.getToken(_.lastAccessTokenUpdate)
+                    t.AntiCsrfToken.getToken(_.lastAccessTokenUpdate)
                   ];
                 case 2:
-                  F = X.sent(), F !== void 0 && ((0, t.logDebugMessage)(
+                  F = X.sent(), F !== void 0 && ((0, n.logDebugMessage)(
                     "XHRInterceptor.send: Adding anti-csrf token to request"
                   ), H.setRequestHeader("anti-csrf", F)), X.label = 3;
                 case 3:
-                  return n.default.config.autoAddCredentials && ((0, t.logDebugMessage)("XHRInterceptor.send: Adding credentials include"), v.withCredentials = !0), f.some(function(k) {
+                  return t.default.config.autoAddCredentials && ((0, n.logDebugMessage)("XHRInterceptor.send: Adding credentials include"), v.withCredentials = !0), h.some(function(k) {
                     return k.name === "rid";
-                  }) ? (0, t.logDebugMessage)(
+                  }) ? (0, n.logDebugMessage)(
                     "XHRInterceptor.send: rid header was already there in request"
-                  ) : ((0, t.logDebugMessage)("XHRInterceptor.send: Adding rid header: anti-csrf"), H.setRequestHeader("rid", "anti-csrf")), V = n.default.config.tokenTransferMethod, f.some(function(k) {
+                  ) : ((0, n.logDebugMessage)("XHRInterceptor.send: Adding rid header: anti-csrf"), H.setRequestHeader("rid", "anti-csrf")), V = t.default.config.tokenTransferMethod, h.some(function(k) {
                     return k.name === "st-auth-mode";
-                  }) ? (0, t.logDebugMessage)(
+                  }) ? (0, n.logDebugMessage)(
                     "XHRInterceptor.send: st-auth-mode header was already there in request"
-                  ) : ((0, t.logDebugMessage)(
+                  ) : ((0, n.logDebugMessage)(
                     "XHRInterceptor.send: Adding st-auth-mode header: " + V
-                  ), H.setRequestHeader("st-auth-mode", V)), [4, i(H, f)];
+                  ), H.setRequestHeader("st-auth-mode", V)), [4, s(H, h)];
                 case 4:
-                  return X.sent(), (0, t.logDebugMessage)("XHRInterceptor.send: Making user's http call"), [2, H.send(L)];
+                  return X.sent(), (0, n.logDebugMessage)("XHRInterceptor.send: Making user's http call"), [2, H.send(L)];
               }
             });
           });
@@ -4407,16 +4407,16 @@ function yo() {
     }, XMLHttpRequest.__interceptedBySuperTokens = !0, XMLHttpRequest.__original = r;
   }
   xe.addInterceptorsToXMLHttpRequest = m;
-  function h(s) {
+  function f(i) {
     return e(this, void 0, void 0, function() {
-      var r, u, v, y, f;
+      var r, u, v, y, h;
       return o(this, function(p) {
         switch (p.label) {
           case 0:
-            if (r = s.headers.get("content-type"), u = "", v = "text", r !== null) return [3, 5];
+            if (r = i.headers.get("content-type"), u = "", v = "text", r !== null) return [3, 5];
             p.label = 1;
           case 1:
-            return p.trys.push([1, 3, , 4]), [4, s.text()];
+            return p.trys.push([1, 3, , 4]), [4, i.text()];
           case 2:
             return u = p.sent(), [3, 4];
           case 3:
@@ -4424,46 +4424,46 @@ function yo() {
           case 4:
             return [3, 9];
           case 5:
-            return r.includes("application/json") ? (v = "json", f = (y = JSON).stringify, [4, s.json()]) : [3, 7];
+            return r.includes("application/json") ? (v = "json", h = (y = JSON).stringify, [4, i.json()]) : [3, 7];
           case 6:
-            return u = f.apply(y, [p.sent()]), [3, 9];
+            return u = h.apply(y, [p.sent()]), [3, 9];
           case 7:
-            return r.includes("text/") ? [4, s.text()] : [3, 9];
+            return r.includes("text/") ? [4, i.text()] : [3, 9];
           case 8:
             u = p.sent(), p.label = 9;
           case 9:
             return [
               2,
               {
-                status: s.status,
+                status: i.status,
                 responseText: u,
-                statusText: s.statusText,
+                statusText: i.statusText,
                 responseType: v,
-                headers: s.headers
+                headers: i.headers
               }
             ];
         }
       });
     });
   }
-  function i(s, r) {
+  function s(i, r) {
     return e(this, void 0, void 0, function() {
       var u, v;
       return o(this, function(y) {
         switch (y.label) {
           case 0:
-            return (0, t.logDebugMessage)("setAuthorizationHeaderIfRequired: adding existing tokens as header"), [4, (0, n.getTokenForHeaderAuth)("access")];
+            return (0, n.logDebugMessage)("setAuthorizationHeaderIfRequired: adding existing tokens as header"), [4, (0, t.getTokenForHeaderAuth)("access")];
           case 1:
-            return u = y.sent(), [4, (0, n.getTokenForHeaderAuth)("refresh")];
+            return u = y.sent(), [4, (0, t.getTokenForHeaderAuth)("refresh")];
           case 2:
-            return v = y.sent(), u !== void 0 && v !== void 0 ? r.some(function(f) {
-              var p = f.name;
+            return v = y.sent(), u !== void 0 && v !== void 0 ? r.some(function(h) {
+              var p = h.name;
               return p.toLowerCase() === "authorization";
-            }) ? (0, t.logDebugMessage)(
+            }) ? (0, n.logDebugMessage)(
               "setAuthorizationHeaderIfRequired: Authorization header defined by the user, not adding"
-            ) : u !== void 0 && ((0, t.logDebugMessage)(
+            ) : u !== void 0 && ((0, n.logDebugMessage)(
               "setAuthorizationHeaderIfRequired: added authorization header"
-            ), s.setRequestHeader("Authorization", "Bearer ".concat(u))) : (0, t.logDebugMessage)(
+            ), i.setRequestHeader("Authorization", "Bearer ".concat(u))) : (0, n.logDebugMessage)(
               "setAuthorizationHeaderIfRequired: token for header based auth not found"
             ), [
               2
@@ -4473,27 +4473,27 @@ function yo() {
       });
     });
   }
-  function a(s) {
+  function a(i) {
     return e(this, void 0, void 0, function() {
-      var r, u, v, y, f;
+      var r, u, v, y, h;
       return o(this, function(p) {
         switch (p.label) {
           case 0:
-            return (0, t.logDebugMessage)("saveTokensFromHeaders: Saving updated tokens from the response"), r = s.get("st-refresh-token"), r === null ? [3, 2] : ((0, t.logDebugMessage)("saveTokensFromHeaders: saving new refresh token"), [4, (0, n.setToken)("refresh", r)]);
+            return (0, n.logDebugMessage)("saveTokensFromHeaders: Saving updated tokens from the response"), r = i.get("st-refresh-token"), r === null ? [3, 2] : ((0, n.logDebugMessage)("saveTokensFromHeaders: saving new refresh token"), [4, (0, t.setToken)("refresh", r)]);
           case 1:
             p.sent(), p.label = 2;
           case 2:
-            return u = s.get("st-access-token"), u === null ? [3, 4] : ((0, t.logDebugMessage)("saveTokensFromHeaders: saving new access token"), [4, (0, n.setToken)("access", u)]);
+            return u = i.get("st-access-token"), u === null ? [3, 4] : ((0, n.logDebugMessage)("saveTokensFromHeaders: saving new access token"), [4, (0, t.setToken)("access", u)]);
           case 3:
             p.sent(), p.label = 4;
           case 4:
-            return v = s.get("front-token"), v === null ? [3, 6] : ((0, t.logDebugMessage)("saveTokensFromHeaders: Setting sFrontToken: " + v), [4, n.FrontToken.setItem(v)]);
+            return v = i.get("front-token"), v === null ? [3, 6] : ((0, n.logDebugMessage)("saveTokensFromHeaders: Setting sFrontToken: " + v), [4, t.FrontToken.setItem(v)]);
           case 5:
-            p.sent(), (0, n.updateClockSkewUsingFrontToken)({ frontToken: v, responseHeaders: s }), p.label = 6;
+            p.sent(), (0, t.updateClockSkewUsingFrontToken)({ frontToken: v, responseHeaders: i }), p.label = 6;
           case 6:
-            return y = s.get("anti-csrf"), y === null ? [3, 9] : [4, (0, n.getLocalSessionState)(!1)];
+            return y = i.get("anti-csrf"), y === null ? [3, 9] : [4, (0, t.getLocalSessionState)(!1)];
           case 7:
-            return f = p.sent(), f.status !== "EXISTS" ? [3, 9] : ((0, t.logDebugMessage)("saveTokensFromHeaders: Setting anti-csrf token"), [4, n.AntiCsrfToken.setItem(f.lastAccessTokenUpdate, y)]);
+            return h = p.sent(), h.status !== "EXISTS" ? [3, 9] : ((0, n.logDebugMessage)("saveTokensFromHeaders: Setting anti-csrf token"), [4, t.AntiCsrfToken.setItem(h.lastAccessTokenUpdate, y)]);
           case 8:
             p.sent(), p.label = 9;
           case 9:
@@ -4505,9 +4505,9 @@ function yo() {
       });
     });
   }
-  function c(s) {
+  function c(i) {
     return new Headers(
-      s.getAllResponseHeaders().split(`\r
+      i.getAllResponseHeaders().split(`\r
 `).map(function(r) {
         var u = r.indexOf(": ");
         return u === -1 ? ["", ""] : [r.slice(0, u), r.slice(u + 2)];
@@ -4518,25 +4518,25 @@ function yo() {
   }
   return xe;
 }
-var Bn;
-function wo() {
-  if (Bn) return Se;
-  Bn = 1;
+var Gn;
+function Ro() {
+  if (Gn) return Se;
+  Gn = 1;
   var e = Se && Se.__assign || function() {
     return e = Object.assign || function(v) {
-      for (var y, f = 1, p = arguments.length; f < p; f++) {
-        y = arguments[f];
+      for (var y, h = 1, p = arguments.length; h < p; h++) {
+        y = arguments[h];
         for (var w in y) Object.prototype.hasOwnProperty.call(y, w) && (v[w] = y[w]);
       }
       return v;
     }, e.apply(this, arguments);
-  }, o = Se && Se.__awaiter || function(v, y, f, p) {
+  }, o = Se && Se.__awaiter || function(v, y, h, p) {
     function w(b) {
-      return b instanceof f ? b : new f(function(S) {
+      return b instanceof h ? b : new h(function(S) {
         S(b);
       });
     }
-    return new (f || (f = Promise))(function(b, S) {
+    return new (h || (h = Promise))(function(b, S) {
       function R(_) {
         try {
           T(p.next(_));
@@ -4556,8 +4556,8 @@ function wo() {
       }
       T((p = p.apply(v, y || [])).next());
     });
-  }, n = Se && Se.__generator || function(v, y) {
-    var f = {
+  }, t = Se && Se.__generator || function(v, y) {
+    var h = {
       label: 0,
       sent: function() {
         if (b[0] & 1) throw b[1];
@@ -4576,7 +4576,7 @@ function wo() {
     }
     function I(T) {
       if (p) throw new TypeError("Generator is already executing.");
-      for (; f; )
+      for (; h; )
         try {
           if (p = 1, w && (b = T[0] & 2 ? w.return : T[0] ? w.throw || ((b = w.return) && b.call(w), 0) : w.next) && !(b = b.call(w, T[1])).done)
             return b;
@@ -4586,34 +4586,34 @@ function wo() {
               b = T;
               break;
             case 4:
-              return f.label++, { value: T[1], done: !1 };
+              return h.label++, { value: T[1], done: !1 };
             case 5:
-              f.label++, w = T[1], T = [0];
+              h.label++, w = T[1], T = [0];
               continue;
             case 7:
-              T = f.ops.pop(), f.trys.pop();
+              T = h.ops.pop(), h.trys.pop();
               continue;
             default:
-              if (b = f.trys, !(b = b.length > 0 && b[b.length - 1]) && (T[0] === 6 || T[0] === 2)) {
-                f = 0;
+              if (b = h.trys, !(b = b.length > 0 && b[b.length - 1]) && (T[0] === 6 || T[0] === 2)) {
+                h = 0;
                 continue;
               }
               if (T[0] === 3 && (!b || T[1] > b[0] && T[1] < b[3])) {
-                f.label = T[1];
+                h.label = T[1];
                 break;
               }
-              if (T[0] === 6 && f.label < b[1]) {
-                f.label = b[1], b = T;
+              if (T[0] === 6 && h.label < b[1]) {
+                h.label = b[1], b = T;
                 break;
               }
-              if (b && f.label < b[2]) {
-                f.label = b[2], f.ops.push(T);
+              if (b && h.label < b[2]) {
+                h.label = b[2], h.ops.push(T);
                 break;
               }
-              b[2] && f.ops.pop(), f.trys.pop();
+              b[2] && h.ops.pop(), h.trys.pop();
               continue;
           }
-          T = y.call(v, f);
+          T = y.call(v, h);
         } catch (_) {
           T = [6, _], w = 0;
         } finally {
@@ -4624,29 +4624,29 @@ function wo() {
     }
   };
   Object.defineProperty(Se, "__esModule", { value: !0 });
-  var t = St(), l = po(), g = Kt(), d = wt(), m = Or(), h = yo(), i = Xt(), a = bt(), c = Qt(), s = 100, r = "CLAIM_REFRESH_LOCK";
+  var n = St(), l = bo(), g = Qt(), d = wt(), m = Er(), f = So(), s = zt(), a = bt(), c = Jt(), i = 100, r = "CLAIM_REFRESH_LOCK";
   function u(v) {
     return {
       addXMLHttpRequestInterceptor: function(y) {
-        (0, d.logDebugMessage)("addXMLHttpRequestInterceptorAndReturnModified: called"), (0, h.addInterceptorsToXMLHttpRequest)();
+        (0, d.logDebugMessage)("addXMLHttpRequestInterceptorAndReturnModified: called"), (0, f.addInterceptorsToXMLHttpRequest)();
       },
       addFetchInterceptorsAndReturnModifiedFetch: function(y) {
-        return (0, d.logDebugMessage)("addFetchInterceptorsAndReturnModifiedFetch: called"), function(f, p) {
+        return (0, d.logDebugMessage)("addFetchInterceptorsAndReturnModifiedFetch: called"), function(h, p) {
           return o(this, void 0, void 0, function() {
-            return n(this, function(w) {
+            return t(this, function(w) {
               switch (w.label) {
                 case 0:
                   return [
                     4,
-                    t.default.doRequest(
+                    n.default.doRequest(
                       function(b) {
                         return y.originalFetch(
-                          typeof f == "object" && "clone" in f ? f.clone() : f,
+                          typeof h == "object" && "clone" in h ? h.clone() : h,
                           e({}, b)
                         );
                       },
                       p,
-                      f
+                      h
                     )
                   ];
                 case 1:
@@ -4669,8 +4669,8 @@ function wo() {
           );
           return;
         }
-        for (var f = y.axiosInstance.interceptors.request, p = 0; p < f.handlers.length; p++)
-          if (f.handlers[p].fulfilled === l.interceptorFunctionRequestFulfilled) {
+        for (var h = y.axiosInstance.interceptors.request, p = 0; p < h.handlers.length; p++)
+          if (h.handlers[p].fulfilled === l.interceptorFunctionRequestFulfilled) {
             (0, d.logDebugMessage)(
               "addAxiosInterceptors: not adding because already added on this instance"
             );
@@ -4678,7 +4678,7 @@ function wo() {
           }
         y.axiosInstance.interceptors.request.use(l.interceptorFunctionRequestFulfilled, function(w) {
           return o(this, void 0, void 0, function() {
-            return n(this, function(b) {
+            return t(this, function(b) {
               throw w;
             });
           });
@@ -4689,30 +4689,30 @@ function wo() {
       },
       getUserId: function(y) {
         return o(this, void 0, void 0, function() {
-          var f;
-          return n(this, function(p) {
+          var h;
+          return t(this, function(p) {
             switch (p.label) {
               case 0:
-                return (0, d.logDebugMessage)("getUserId: called"), [4, t.FrontToken.getTokenInfo()];
+                return (0, d.logDebugMessage)("getUserId: called"), [4, n.FrontToken.getTokenInfo()];
               case 1:
-                if (f = p.sent(), f === void 0)
+                if (h = p.sent(), h === void 0)
                   throw new Error("No session exists");
-                return (0, d.logDebugMessage)("getUserId: returning: " + f.uid), [2, f.uid];
+                return (0, d.logDebugMessage)("getUserId: returning: " + h.uid), [2, h.uid];
             }
           });
         });
       },
       getAccessTokenPayloadSecurely: function(y) {
         return o(this, void 0, void 0, function() {
-          var f, p;
-          return n(this, function(w) {
+          var h, p;
+          return t(this, function(w) {
             switch (w.label) {
               case 0:
-                return (0, d.logDebugMessage)("getAccessTokenPayloadSecurely: called"), [4, t.FrontToken.getTokenInfo()];
+                return (0, d.logDebugMessage)("getAccessTokenPayloadSecurely: called"), [4, n.FrontToken.getTokenInfo()];
               case 1:
-                if (f = w.sent(), f === void 0)
+                if (h = w.sent(), h === void 0)
                   throw new Error("No session exists");
-                return f.ate < a.default.getReferenceOrThrow().dateProvider.now() ? ((0, d.logDebugMessage)("getAccessTokenPayloadSecurely: access token expired. Refreshing session"), [4, t.default.attemptRefreshingSession()]) : [3, 5];
+                return h.ate < a.default.getReferenceOrThrow().dateProvider.now() ? ((0, d.logDebugMessage)("getAccessTokenPayloadSecurely: access token expired. Refreshing session"), [4, n.default.attemptRefreshingSession()]) : [3, 5];
               case 2:
                 return p = w.sent(), p ? [
                   4,
@@ -4725,22 +4725,22 @@ function wo() {
               case 4:
                 throw new Error("Could not refresh session");
               case 5:
-                return (0, d.logDebugMessage)("getAccessTokenPayloadSecurely: returning: " + JSON.stringify(f.up)), [2, f.up];
+                return (0, d.logDebugMessage)("getAccessTokenPayloadSecurely: returning: " + JSON.stringify(h.up)), [2, h.up];
             }
           });
         });
       },
       doesSessionExist: function(y) {
         return o(this, void 0, void 0, function() {
-          var f, p, w;
-          return n(this, function(b) {
+          var h, p, w;
+          return t(this, function(b) {
             switch (b.label) {
               case 0:
-                return (0, d.logDebugMessage)("doesSessionExist: called"), [4, t.FrontToken.getTokenInfo()];
+                return (0, d.logDebugMessage)("doesSessionExist: called"), [4, n.FrontToken.getTokenInfo()];
               case 1:
-                return f = b.sent(), f === void 0 ? ((0, d.logDebugMessage)("doesSessionExist: access token does not exist locally"), [2, !1]) : f.ate < a.default.getReferenceOrThrow().dateProvider.now() ? ((0, d.logDebugMessage)("doesSessionExist: access token expired. Refreshing session"), [4, (0, t.getLocalSessionState)(!1)]) : [3, 4];
+                return h = b.sent(), h === void 0 ? ((0, d.logDebugMessage)("doesSessionExist: access token does not exist locally"), [2, !1]) : h.ate < a.default.getReferenceOrThrow().dateProvider.now() ? ((0, d.logDebugMessage)("doesSessionExist: access token expired. Refreshing session"), [4, (0, n.getLocalSessionState)(!1)]) : [3, 4];
               case 2:
-                return p = b.sent(), [4, (0, t.onUnauthorisedResponse)(p)];
+                return p = b.sent(), [4, (0, n.onUnauthorisedResponse)(p)];
               case 3:
                 return w = b.sent(), [2, w.result === "RETRY"];
               case 4:
@@ -4751,8 +4751,8 @@ function wo() {
       },
       signOut: function(y) {
         return o(this, void 0, void 0, function() {
-          var f, p, w, b;
-          return n(this, function(S) {
+          var h, p, w, b;
+          return t(this, function(S) {
             switch (S.label) {
               case 0:
                 return (0, d.logDebugMessage)("signOut: called"), [4, this.doesSessionExist(y)];
@@ -4765,10 +4765,10 @@ function wo() {
                       method: "post",
                       headers: {
                         "fdi-version": g.supported_fdi.join(","),
-                        rid: t.default.rid
+                        rid: n.default.rid
                       }
                     },
-                    url: t.default.signOutUrl,
+                    url: n.default.signOutUrl,
                     userContext: y.userContext
                   })
                 ]) : ((0, d.logDebugMessage)("signOut: exiting early because session does not exist"), (0, d.logDebugMessage)("signOut: firing SIGN_OUT event"), v.onHandleEvent({
@@ -4779,7 +4779,7 @@ function wo() {
                   /*return*/
                 ]);
               case 2:
-                return f = S.sent(), (0, d.logDebugMessage)("signOut: Calling API"), [4, fetch(f.url, f.requestInit)];
+                return h = S.sent(), (0, d.logDebugMessage)("signOut: Calling API"), [4, fetch(h.url, h.requestInit)];
               case 3:
                 if (p = S.sent(), (0, d.logDebugMessage)("signOut: API ended"), (0, d.logDebugMessage)("signOut: API responded with status code: " + p.status), p.status === v.sessionExpiredStatusCode)
                   return [
@@ -4792,8 +4792,8 @@ function wo() {
                   4,
                   v.postAPIHook({
                     action: "SIGN_OUT",
-                    requestInit: f.requestInit,
-                    url: f.url,
+                    requestInit: h.requestInit,
+                    url: h.url,
                     fetchResponse: p.clone(),
                     userContext: y.userContext
                   })
@@ -4813,17 +4813,17 @@ function wo() {
       },
       getInvalidClaimsFromResponse: function(y) {
         return o(this, void 0, void 0, function() {
-          var f;
-          return n(this, function(p) {
+          var h;
+          return t(this, function(p) {
             switch (p.label) {
               case 0:
                 return "body" in y.response ? [4, y.response.clone().json()] : [3, 2];
               case 1:
-                return f = p.sent(), [3, 3];
+                return h = p.sent(), [3, 3];
               case 2:
-                typeof y.response.data == "string" ? f = JSON.parse(y.response.data) : f = y.response.data, p.label = 3;
+                typeof y.response.data == "string" ? h = JSON.parse(y.response.data) : h = y.response.data, p.label = 3;
               case 3:
-                return [2, f.claimValidationErrors];
+                return [2, h.claimValidationErrors];
             }
           });
         });
@@ -4833,13 +4833,13 @@ function wo() {
       },
       validateClaims: function(y) {
         return o(this, void 0, void 0, function() {
-          var f, p, w, b, S, R, C, I, T, _, P, C, x;
-          return n(this, function(E) {
+          var h, p, w, b, S, R, C, I, T, _, P, C, x;
+          return t(this, function(E) {
             switch (E.label) {
               case 0:
                 p = 0, E.label = 1;
               case 1:
-                return ++p < s ? [4, c.default.getReferenceOrThrow().lockFactory()] : [3, 20];
+                return ++p < i ? [4, c.default.getReferenceOrThrow().lockFactory()] : [3, 20];
               case 2:
                 return w = E.sent(), (0, d.logDebugMessage)("validateClaims: trying to acquire claim refresh lock"), [4, w.acquireLock(r)];
               case 3:
@@ -4853,9 +4853,9 @@ function wo() {
                   })
                 ];
               case 5:
-                f = E.sent(), (0, d.logDebugMessage)("validateClaims: claim refresh lock acquired"), S = 0, R = y.claimValidators, E.label = 6;
+                h = E.sent(), (0, d.logDebugMessage)("validateClaims: claim refresh lock acquired"), S = 0, R = y.claimValidators, E.label = 6;
               case 6:
-                return S < R.length ? (C = R[S], [4, C.shouldRefresh(f, y.userContext)]) : [3, 14];
+                return S < R.length ? (C = R[S], [4, C.shouldRefresh(h, y.userContext)]) : [3, 14];
               case 7:
                 if (!E.sent()) return [3, 13];
                 E.label = 8;
@@ -4876,7 +4876,7 @@ function wo() {
                   })
                 ];
               case 12:
-                f = E.sent(), E.label = 13;
+                h = E.sent(), E.label = 13;
               case 13:
                 return S++, [3, 6];
               case 14:
@@ -4891,20 +4891,20 @@ function wo() {
               case 17:
                 return [3, 20];
               case 18:
-                (0, d.logDebugMessage)("validateClaims: Retrying refresh lock ".concat(p, "/").concat(s)), E.label = 19;
+                (0, d.logDebugMessage)("validateClaims: Retrying refresh lock ".concat(p, "/").concat(i)), E.label = 19;
               case 19:
                 return [3, 1];
               case 20:
-                return p !== s ? [3, 22] : ((0, d.logDebugMessage)("validateClaims: ran out of retries while trying to acquire claim refresh lock"), [
+                return p !== i ? [3, 22] : ((0, d.logDebugMessage)("validateClaims: ran out of retries while trying to acquire claim refresh lock"), [
                   4,
                   this.getAccessTokenPayloadSecurely({ userContext: y.userContext })
                 ]);
               case 21:
-                f = E.sent(), E.label = 22;
+                h = E.sent(), E.label = 22;
               case 22:
                 T = [], _ = 0, P = y.claimValidators, E.label = 23;
               case 23:
-                return _ < P.length ? (C = P[_], [4, C.validate(f, y.userContext)]) : [3, 26];
+                return _ < P.length ? (C = P[_], [4, C.validate(h, y.userContext)]) : [3, 26];
               case 24:
                 x = E.sent(), x.isValid || T.push({
                   id: C.id,
@@ -4918,27 +4918,27 @@ function wo() {
           });
         });
       },
-      shouldDoInterceptionBasedOnUrl: function(y, f, p) {
+      shouldDoInterceptionBasedOnUrl: function(y, h, p) {
         if ((0, d.logDebugMessage)(
-          "shouldDoInterceptionBasedOnUrl: toCheckUrl: " + y + " apiDomain: " + f + " sessionTokenBackendDomain: " + p
+          "shouldDoInterceptionBasedOnUrl: toCheckUrl: " + y + " apiDomain: " + h + " sessionTokenBackendDomain: " + p
         ), y.includes("superTokensDoNotDoInterception"))
           return !1;
-        y = (0, i.normaliseURLDomainOrThrowError)(y);
+        y = (0, s.normaliseURLDomainOrThrowError)(y);
         var w = new URL(y), b = w.hostname, S = !1;
-        if (f !== "") {
-          f = (0, i.normaliseURLDomainOrThrowError)(f);
-          var R = new URL(f);
+        if (h !== "") {
+          h = (0, s.normaliseURLDomainOrThrowError)(h);
+          var R = new URL(h);
           S = b === R.hostname;
         }
         if (p === void 0 || S)
           return S;
-        var I = (0, i.normaliseSessionScopeOrThrowError)(p);
-        return (0, i.matchesDomainOrSubdomain)(b, I);
+        var I = (0, s.normaliseSessionScopeOrThrowError)(p);
+        return (0, s.matchesDomainOrSubdomain)(b, I);
       },
       calculateClockSkewInMillis: function(y) {
-        var f = y.accessTokenPayload;
+        var h = y.accessTokenPayload;
         (0, d.logDebugMessage)("calculateClockSkewInMillis: called");
-        var p = f == null ? void 0 : f.iat;
+        var p = h == null ? void 0 : h.iat;
         if (p === void 0 || typeof p != "number")
           return (0, d.logDebugMessage)(
             "calculateClockSkewInMillis: payload iat is undefined or not a number. This may happen due to an unsupported backend sdk. Returning 0"
@@ -4950,47 +4950,47 @@ function wo() {
   }
   return Se.default = u, Se;
 }
-var ft = {}, Gn;
-function xr() {
-  if (Gn) return ft;
-  Gn = 1, Object.defineProperty(ft, "__esModule", { value: !0 }), ft.PrimitiveClaim = void 0;
+var ft = {}, Xn;
+function Mr() {
+  if (Xn) return ft;
+  Xn = 1, Object.defineProperty(ft, "__esModule", { value: !0 }), ft.PrimitiveClaim = void 0;
   var e = bt(), o = (
     /** @class */
     function() {
-      function n(t) {
+      function t(n) {
         var l = this;
         this.validators = {
           hasValue: function(g, d, m) {
             d === void 0 && (d = l.defaultMaxAgeInSeconds);
-            var h = e.default.getReferenceOrThrow().dateProvider;
+            var f = e.default.getReferenceOrThrow().dateProvider;
             return {
               id: m !== void 0 ? m : l.id,
-              refresh: function(i) {
-                return l.refresh(i);
+              refresh: function(s) {
+                return l.refresh(s);
               },
-              shouldRefresh: function(i, a) {
-                if (d !== void 0 && d < h.getThresholdInSeconds())
+              shouldRefresh: function(s, a) {
+                if (d !== void 0 && d < f.getThresholdInSeconds())
                   throw new Error(
                     "maxAgeInSeconds must be greater than or equal to the DateProvider threshold value -> ".concat(
-                      h.getThresholdInSeconds()
+                      f.getThresholdInSeconds()
                     )
                   );
-                return l.getValueFromPayload(i, a) === void 0 || // We know payload[this.id] is defined since the value is not undefined in this branch
-                d !== void 0 && i[l.id].t < h.now() - d * 1e3;
+                return l.getValueFromPayload(s, a) === void 0 || // We know payload[this.id] is defined since the value is not undefined in this branch
+                d !== void 0 && s[l.id].t < f.now() - d * 1e3;
               },
-              validate: function(i, a) {
-                var c = l.getValueFromPayload(i, a);
+              validate: function(s, a) {
+                var c = l.getValueFromPayload(s, a);
                 if (c === void 0)
                   return {
                     isValid: !1,
                     reason: { message: "value does not exist", expectedValue: g, actualValue: c }
                   };
-                var s = (h.now() - l.getLastFetchedTime(i, a)) / 1e3;
-                return d !== void 0 && s > d ? {
+                var i = (f.now() - l.getLastFetchedTime(s, a)) / 1e3;
+                return d !== void 0 && i > d ? {
                   isValid: !1,
                   reason: {
                     message: "expired",
-                    ageInSeconds: s,
+                    ageInSeconds: i,
                     maxAgeInSeconds: d
                   }
                 } : c !== g ? {
@@ -5000,28 +5000,28 @@ function xr() {
               }
             };
           }
-        }, this.id = t.id, this.refresh = t.refresh, this.defaultMaxAgeInSeconds = t.defaultMaxAgeInSeconds;
+        }, this.id = n.id, this.refresh = n.refresh, this.defaultMaxAgeInSeconds = n.defaultMaxAgeInSeconds;
       }
-      return n.prototype.getValueFromPayload = function(t, l) {
-        return t[this.id] !== void 0 ? t[this.id].v : void 0;
-      }, n.prototype.getLastFetchedTime = function(t, l) {
-        return t[this.id] !== void 0 ? t[this.id].t : void 0;
-      }, n;
+      return t.prototype.getValueFromPayload = function(n, l) {
+        return n[this.id] !== void 0 ? n[this.id].v : void 0;
+      }, t.prototype.getLastFetchedTime = function(n, l) {
+        return n[this.id] !== void 0 ? n[this.id].t : void 0;
+      }, t;
     }()
   );
   return ft.PrimitiveClaim = o, ft;
 }
-var De = {}, Xn;
-function bo() {
-  if (Xn) return De;
-  Xn = 1;
+var De = {}, zn;
+function ko() {
+  if (zn) return De;
+  zn = 1;
   var e = De && De.__awaiter || function(l, g, d, m) {
-    function h(i) {
-      return i instanceof d ? i : new d(function(a) {
-        a(i);
+    function f(s) {
+      return s instanceof d ? s : new d(function(a) {
+        a(s);
       });
     }
-    return new (d || (d = Promise))(function(i, a) {
+    return new (d || (d = Promise))(function(s, a) {
       function c(u) {
         try {
           r(m.next(u));
@@ -5029,7 +5029,7 @@ function bo() {
           a(v);
         }
       }
-      function s(u) {
+      function i(u) {
         try {
           r(m.throw(u));
         } catch (v) {
@@ -5037,7 +5037,7 @@ function bo() {
         }
       }
       function r(u) {
-        u.done ? i(u.value) : h(u.value).then(c, s);
+        u.done ? s(u.value) : f(u.value).then(c, i);
       }
       r((m = m.apply(l, g || [])).next());
     });
@@ -5045,99 +5045,99 @@ function bo() {
     var d = {
       label: 0,
       sent: function() {
-        if (i[0] & 1) throw i[1];
-        return i[1];
+        if (s[0] & 1) throw s[1];
+        return s[1];
       },
       trys: [],
       ops: []
-    }, m, h, i, a;
+    }, m, f, s, a;
     return a = { next: c(0), throw: c(1), return: c(2) }, typeof Symbol == "function" && (a[Symbol.iterator] = function() {
       return this;
     }), a;
     function c(r) {
       return function(u) {
-        return s([r, u]);
+        return i([r, u]);
       };
     }
-    function s(r) {
+    function i(r) {
       if (m) throw new TypeError("Generator is already executing.");
       for (; d; )
         try {
-          if (m = 1, h && (i = r[0] & 2 ? h.return : r[0] ? h.throw || ((i = h.return) && i.call(h), 0) : h.next) && !(i = i.call(h, r[1])).done)
-            return i;
-          switch (h = 0, i && (r = [r[0] & 2, i.value]), r[0]) {
+          if (m = 1, f && (s = r[0] & 2 ? f.return : r[0] ? f.throw || ((s = f.return) && s.call(f), 0) : f.next) && !(s = s.call(f, r[1])).done)
+            return s;
+          switch (f = 0, s && (r = [r[0] & 2, s.value]), r[0]) {
             case 0:
             case 1:
-              i = r;
+              s = r;
               break;
             case 4:
               return d.label++, { value: r[1], done: !1 };
             case 5:
-              d.label++, h = r[1], r = [0];
+              d.label++, f = r[1], r = [0];
               continue;
             case 7:
               r = d.ops.pop(), d.trys.pop();
               continue;
             default:
-              if (i = d.trys, !(i = i.length > 0 && i[i.length - 1]) && (r[0] === 6 || r[0] === 2)) {
+              if (s = d.trys, !(s = s.length > 0 && s[s.length - 1]) && (r[0] === 6 || r[0] === 2)) {
                 d = 0;
                 continue;
               }
-              if (r[0] === 3 && (!i || r[1] > i[0] && r[1] < i[3])) {
+              if (r[0] === 3 && (!s || r[1] > s[0] && r[1] < s[3])) {
                 d.label = r[1];
                 break;
               }
-              if (r[0] === 6 && d.label < i[1]) {
-                d.label = i[1], i = r;
+              if (r[0] === 6 && d.label < s[1]) {
+                d.label = s[1], s = r;
                 break;
               }
-              if (i && d.label < i[2]) {
-                d.label = i[2], d.ops.push(r);
+              if (s && d.label < s[2]) {
+                d.label = s[2], d.ops.push(r);
                 break;
               }
-              i[2] && d.ops.pop(), d.trys.pop();
+              s[2] && d.ops.pop(), d.trys.pop();
               continue;
           }
           r = g.call(l, d);
         } catch (u) {
-          r = [6, u], h = 0;
+          r = [6, u], f = 0;
         } finally {
-          m = i = 0;
+          m = s = 0;
         }
       if (r[0] & 5) throw r[1];
       return { value: r[0] ? r[1] : void 0, done: !0 };
     }
   };
   Object.defineProperty(De, "__esModule", { value: !0 }), De.PrimitiveArrayClaim = void 0;
-  var n = bt(), t = (
+  var t = bt(), n = (
     /** @class */
     function() {
       function l(g) {
         var d = this;
         this.validators = {
-          includes: function(m, h, i) {
-            h === void 0 && (h = d.defaultMaxAgeInSeconds);
-            var a = n.default.getReferenceOrThrow().dateProvider;
+          includes: function(m, f, s) {
+            f === void 0 && (f = d.defaultMaxAgeInSeconds);
+            var a = t.default.getReferenceOrThrow().dateProvider;
             return {
-              id: i !== void 0 ? i : d.id,
+              id: s !== void 0 ? s : d.id,
               refresh: function(c) {
                 return d.refresh(c);
               },
-              shouldRefresh: function(c, s) {
-                if (h !== void 0 && h < a.getThresholdInSeconds())
+              shouldRefresh: function(c, i) {
+                if (f !== void 0 && f < a.getThresholdInSeconds())
                   throw new Error(
                     "maxAgeInSeconds must be greater than or equal to the DateProvider threshold value -> ".concat(
                       a.getThresholdInSeconds()
                     )
                   );
-                return d.getValueFromPayload(c, s) === void 0 || // We know payload[this.id] is defined since the value is not undefined in this branch
-                h !== void 0 && c[d.id].t < a.now() - h * 1e3;
+                return d.getValueFromPayload(c, i) === void 0 || // We know payload[this.id] is defined since the value is not undefined in this branch
+                f !== void 0 && c[d.id].t < a.now() - f * 1e3;
               },
-              validate: function(c, s) {
+              validate: function(c, i) {
                 return e(d, void 0, void 0, function() {
                   var r, u;
                   return o(this, function(v) {
-                    return r = this.getValueFromPayload(c, s), r === void 0 ? [
+                    return r = this.getValueFromPayload(c, i), r === void 0 ? [
                       2,
                       {
                         isValid: !1,
@@ -5147,14 +5147,14 @@ function bo() {
                           actualValue: r
                         }
                       }
-                    ] : (u = (a.now() - this.getLastFetchedTime(c, s)) / 1e3, h !== void 0 && u > h ? [
+                    ] : (u = (a.now() - this.getLastFetchedTime(c, i)) / 1e3, f !== void 0 && u > f ? [
                       2,
                       {
                         isValid: !1,
                         reason: {
                           message: "expired",
                           ageInSeconds: u,
-                          maxAgeInSeconds: h
+                          maxAgeInSeconds: f
                         }
                       }
                     ] : r.includes(m) ? [2, { isValid: !0 }] : [
@@ -5173,29 +5173,29 @@ function bo() {
               }
             };
           },
-          excludes: function(m, h, i) {
-            h === void 0 && (h = d.defaultMaxAgeInSeconds);
-            var a = n.default.getReferenceOrThrow().dateProvider;
+          excludes: function(m, f, s) {
+            f === void 0 && (f = d.defaultMaxAgeInSeconds);
+            var a = t.default.getReferenceOrThrow().dateProvider;
             return {
-              id: i !== void 0 ? i : d.id,
+              id: s !== void 0 ? s : d.id,
               refresh: function(c) {
                 return d.refresh(c);
               },
-              shouldRefresh: function(c, s) {
-                if (h !== void 0 && h < a.getThresholdInSeconds())
+              shouldRefresh: function(c, i) {
+                if (f !== void 0 && f < a.getThresholdInSeconds())
                   throw new Error(
                     "maxAgeInSeconds must be greater than or equal to the DateProvider threshold value -> ".concat(
                       a.getThresholdInSeconds()
                     )
                   );
-                return d.getValueFromPayload(c, s) === void 0 || // We know payload[this.id] is defined since the value is not undefined in this branch
-                h !== void 0 && c[d.id].t < a.now() - h * 1e3;
+                return d.getValueFromPayload(c, i) === void 0 || // We know payload[this.id] is defined since the value is not undefined in this branch
+                f !== void 0 && c[d.id].t < a.now() - f * 1e3;
               },
-              validate: function(c, s) {
+              validate: function(c, i) {
                 return e(d, void 0, void 0, function() {
                   var r, u;
                   return o(this, function(v) {
-                    return r = this.getValueFromPayload(c, s), r === void 0 ? [
+                    return r = this.getValueFromPayload(c, i), r === void 0 ? [
                       2,
                       {
                         isValid: !1,
@@ -5205,14 +5205,14 @@ function bo() {
                           actualValue: r
                         }
                       }
-                    ] : (u = (a.now() - this.getLastFetchedTime(c, s)) / 1e3, h !== void 0 && u > h ? [
+                    ] : (u = (a.now() - this.getLastFetchedTime(c, i)) / 1e3, f !== void 0 && u > f ? [
                       2,
                       {
                         isValid: !1,
                         reason: {
                           message: "expired",
                           ageInSeconds: u,
-                          maxAgeInSeconds: h
+                          maxAgeInSeconds: f
                         }
                       }
                     ] : r.includes(m) ? [
@@ -5231,29 +5231,29 @@ function bo() {
               }
             };
           },
-          includesAll: function(m, h, i) {
-            h === void 0 && (h = d.defaultMaxAgeInSeconds);
-            var a = n.default.getReferenceOrThrow().dateProvider;
+          includesAll: function(m, f, s) {
+            f === void 0 && (f = d.defaultMaxAgeInSeconds);
+            var a = t.default.getReferenceOrThrow().dateProvider;
             return {
-              id: i !== void 0 ? i : d.id,
+              id: s !== void 0 ? s : d.id,
               refresh: function(c) {
                 return d.refresh(c);
               },
-              shouldRefresh: function(c, s) {
-                if (h !== void 0 && h < a.getThresholdInSeconds())
+              shouldRefresh: function(c, i) {
+                if (f !== void 0 && f < a.getThresholdInSeconds())
                   throw new Error(
                     "maxAgeInSeconds must be greater than or equal to the DateProvider threshold value -> ".concat(
                       a.getThresholdInSeconds()
                     )
                   );
-                return d.getValueFromPayload(c, s) === void 0 || // We know payload[this.id] is defined since the value is not undefined in this branch
-                h !== void 0 && c[d.id].t < a.now() - h * 1e3;
+                return d.getValueFromPayload(c, i) === void 0 || // We know payload[this.id] is defined since the value is not undefined in this branch
+                f !== void 0 && c[d.id].t < a.now() - f * 1e3;
               },
-              validate: function(c, s) {
+              validate: function(c, i) {
                 return e(d, void 0, void 0, function() {
                   var r, u, v, y;
-                  return o(this, function(f) {
-                    return r = this.getValueFromPayload(c, s), r === void 0 ? [
+                  return o(this, function(h) {
+                    return r = this.getValueFromPayload(c, i), r === void 0 ? [
                       2,
                       {
                         isValid: !1,
@@ -5263,14 +5263,14 @@ function bo() {
                           actualValue: r
                         }
                       }
-                    ] : (u = (a.now() - this.getLastFetchedTime(c, s)) / 1e3, h !== void 0 && u > h ? [
+                    ] : (u = (a.now() - this.getLastFetchedTime(c, i)) / 1e3, f !== void 0 && u > f ? [
                       2,
                       {
                         isValid: !1,
                         reason: {
                           message: "expired",
                           ageInSeconds: u,
-                          maxAgeInSeconds: h
+                          maxAgeInSeconds: f
                         }
                       }
                     ] : (v = new Set(r), y = m.every(function(p) {
@@ -5291,29 +5291,29 @@ function bo() {
               }
             };
           },
-          includesAny: function(m, h, i) {
-            h === void 0 && (h = d.defaultMaxAgeInSeconds);
-            var a = n.default.getReferenceOrThrow().dateProvider;
+          includesAny: function(m, f, s) {
+            f === void 0 && (f = d.defaultMaxAgeInSeconds);
+            var a = t.default.getReferenceOrThrow().dateProvider;
             return {
-              id: i !== void 0 ? i : d.id,
+              id: s !== void 0 ? s : d.id,
               refresh: function(c) {
                 return d.refresh(c);
               },
-              shouldRefresh: function(c, s) {
-                if (h !== void 0 && h < a.getThresholdInSeconds())
+              shouldRefresh: function(c, i) {
+                if (f !== void 0 && f < a.getThresholdInSeconds())
                   throw new Error(
                     "maxAgeInSeconds must be greater than or equal to the DateProvider threshold value -> ".concat(
                       a.getThresholdInSeconds()
                     )
                   );
-                return d.getValueFromPayload(c, s) === void 0 || // We know payload[this.id] is defined since the value is not undefined in this branch
-                h !== void 0 && c[d.id].t < a.now() - h * 1e3;
+                return d.getValueFromPayload(c, i) === void 0 || // We know payload[this.id] is defined since the value is not undefined in this branch
+                f !== void 0 && c[d.id].t < a.now() - f * 1e3;
               },
-              validate: function(c, s) {
+              validate: function(c, i) {
                 return e(d, void 0, void 0, function() {
                   var r, u, v, y;
-                  return o(this, function(f) {
-                    return r = this.getValueFromPayload(c, s), r === void 0 ? [
+                  return o(this, function(h) {
+                    return r = this.getValueFromPayload(c, i), r === void 0 ? [
                       2,
                       {
                         isValid: !1,
@@ -5323,14 +5323,14 @@ function bo() {
                           actualValue: r
                         }
                       }
-                    ] : (u = (a.now() - this.getLastFetchedTime(c, s)) / 1e3, h !== void 0 && u > h ? [
+                    ] : (u = (a.now() - this.getLastFetchedTime(c, i)) / 1e3, f !== void 0 && u > f ? [
                       2,
                       {
                         isValid: !1,
                         reason: {
                           message: "expired",
                           ageInSeconds: u,
-                          maxAgeInSeconds: h
+                          maxAgeInSeconds: f
                         }
                       }
                     ] : (v = new Set(r), y = m.some(function(p) {
@@ -5351,29 +5351,29 @@ function bo() {
               }
             };
           },
-          excludesAll: function(m, h, i) {
-            h === void 0 && (h = d.defaultMaxAgeInSeconds);
-            var a = n.default.getReferenceOrThrow().dateProvider;
+          excludesAll: function(m, f, s) {
+            f === void 0 && (f = d.defaultMaxAgeInSeconds);
+            var a = t.default.getReferenceOrThrow().dateProvider;
             return {
-              id: i !== void 0 ? i : d.id,
+              id: s !== void 0 ? s : d.id,
               refresh: function(c) {
                 return d.refresh(c);
               },
-              shouldRefresh: function(c, s) {
-                if (h !== void 0 && h < a.getThresholdInSeconds())
+              shouldRefresh: function(c, i) {
+                if (f !== void 0 && f < a.getThresholdInSeconds())
                   throw new Error(
                     "maxAgeInSeconds must be greater than or equal to the DateProvider threshold value -> ".concat(
                       a.getThresholdInSeconds()
                     )
                   );
-                return d.getValueFromPayload(c, s) === void 0 || // We know payload[this.id] is defined since the value is not undefined in this branch
-                h !== void 0 && c[d.id].t < a.now() - h * 1e3;
+                return d.getValueFromPayload(c, i) === void 0 || // We know payload[this.id] is defined since the value is not undefined in this branch
+                f !== void 0 && c[d.id].t < a.now() - f * 1e3;
               },
-              validate: function(c, s) {
+              validate: function(c, i) {
                 return e(d, void 0, void 0, function() {
                   var r, u, v, y;
-                  return o(this, function(f) {
-                    return r = this.getValueFromPayload(c, s), r === void 0 ? [
+                  return o(this, function(h) {
+                    return r = this.getValueFromPayload(c, i), r === void 0 ? [
                       2,
                       {
                         isValid: !1,
@@ -5383,14 +5383,14 @@ function bo() {
                           actualValue: r
                         }
                       }
-                    ] : (u = (a.now() - this.getLastFetchedTime(c, s)) / 1e3, h !== void 0 && u > h ? [
+                    ] : (u = (a.now() - this.getLastFetchedTime(c, i)) / 1e3, f !== void 0 && u > f ? [
                       2,
                       {
                         isValid: !1,
                         reason: {
                           message: "expired",
                           ageInSeconds: u,
-                          maxAgeInSeconds: h
+                          maxAgeInSeconds: f
                         }
                       }
                     ] : (v = new Set(r), y = m.every(function(p) {
@@ -5420,18 +5420,18 @@ function bo() {
       }, l;
     }()
   );
-  return De.PrimitiveArrayClaim = t, De;
+  return De.PrimitiveArrayClaim = n, De;
 }
-var Me = {}, zn;
-function So() {
-  if (zn) return Me;
-  zn = 1;
+var Me = {}, Kn;
+function Io() {
+  if (Kn) return Me;
+  Kn = 1;
   var e = Me && Me.__extends || /* @__PURE__ */ function() {
     var l = function(g, d) {
-      return l = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(m, h) {
-        m.__proto__ = h;
-      } || function(m, h) {
-        for (var i in h) Object.prototype.hasOwnProperty.call(h, i) && (m[i] = h[i]);
+      return l = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(m, f) {
+        m.__proto__ = f;
+      } || function(m, f) {
+        for (var s in f) Object.prototype.hasOwnProperty.call(f, s) && (m[s] = f[s]);
       }, l(g, d);
     };
     return function(g, d) {
@@ -5447,36 +5447,36 @@ function So() {
     return o = Object.assign || function(l) {
       for (var g, d = 1, m = arguments.length; d < m; d++) {
         g = arguments[d];
-        for (var h in g) Object.prototype.hasOwnProperty.call(g, h) && (l[h] = g[h]);
+        for (var f in g) Object.prototype.hasOwnProperty.call(g, f) && (l[f] = g[f]);
       }
       return l;
     }, o.apply(this, arguments);
   };
   Object.defineProperty(Me, "__esModule", { value: !0 }), Me.BooleanClaim = void 0;
-  var n = xr(), t = (
+  var t = Mr(), n = (
     /** @class */
     function(l) {
       e(g, l);
       function g(d) {
         var m = l.call(this, d) || this;
         return m.validators = o(o({}, m.validators), {
-          isTrue: function(h) {
-            return m.validators.hasValue(!0, h);
+          isTrue: function(f) {
+            return m.validators.hasValue(!0, f);
           },
-          isFalse: function(h) {
-            return m.validators.hasValue(!1, h);
+          isFalse: function(f) {
+            return m.validators.hasValue(!1, f);
           }
         }), m;
       }
       return g;
-    }(n.PrimitiveClaim)
+    }(t.PrimitiveClaim)
   );
-  return Me.BooleanClaim = t, Me;
+  return Me.BooleanClaim = n, Me;
 }
-var Kn;
-function Ro() {
-  return Kn || (Kn = 1, function(e) {
-    var o = Ke && Ke.__awaiter || function(f, p, w, b) {
+var Qn;
+function _o() {
+  return Qn || (Qn = 1, function(e) {
+    var o = Ke && Ke.__awaiter || function(h, p, w, b) {
       function S(R) {
         return R instanceof w ? R : new w(function(I) {
           I(R);
@@ -5500,9 +5500,9 @@ function Ro() {
         function P(C) {
           C.done ? R(C.value) : S(C.value).then(T, _);
         }
-        P((b = b.apply(f, p || [])).next());
+        P((b = b.apply(h, p || [])).next());
       });
-    }, n = Ke && Ke.__generator || function(f, p) {
+    }, t = Ke && Ke.__generator || function(h, p) {
       var w = {
         label: 0,
         sent: function() {
@@ -5559,7 +5559,7 @@ function Ro() {
                 R[2] && w.ops.pop(), w.trys.pop();
                 continue;
             }
-            P = p.call(f, w);
+            P = p.call(h, w);
           } catch (C) {
             P = [6, C], S = 0;
           } finally {
@@ -5570,15 +5570,15 @@ function Ro() {
       }
     };
     Object.defineProperty(e, "__esModule", { value: !0 }), e.BooleanClaim = e.PrimitiveArrayClaim = e.PrimitiveClaim = e.getInvalidClaimsFromResponse = e.getClaimValue = e.validateClaims = e.signOut = e.addAxiosInterceptors = e.doesSessionExist = e.attemptRefreshingSession = e.getAccessToken = e.getAccessTokenPayloadSecurely = e.getUserId = e.init = void 0;
-    var t = St(), l = wo(), g = Et(), d = Xt(), m = Cr(), h = je(), i = Qt(), a = Ar(), c = wt(), s = bt(), r = (
+    var n = St(), l = Ro(), g = Pt(), d = zt(), m = Or(), f = je(), s = Jt(), a = Pr(), c = wt(), i = bt(), r = (
       /** @class */
       function() {
-        function f() {
+        function h() {
         }
-        f.init = function(w) {
-          m.default.init(w.cookieHandler), h.default.init(w.windowHandler), s.default.init(w.dateProvider), i.default.init(
+        h.init = function(w) {
+          m.default.init(w.cookieHandler), f.default.init(w.windowHandler), i.default.init(w.dateProvider), s.default.init(
             w.lockFactory,
-            h.default.getReferenceOrThrow().windowHandler.localStorage
+            f.default.getReferenceOrThrow().windowHandler.localStorage
           );
           var b = (0, d.validateAndNormaliseInputOrThrowError)(w);
           w.enableDebugLogs !== void 0 && w.enableDebugLogs && (0, c.enableLogging)();
@@ -5590,19 +5590,19 @@ function Ro() {
               sessionExpiredStatusCode: b.sessionExpiredStatusCode
             })
           ).override(b.override.functions).build();
-          t.default.init(b, S), f.axiosInterceptorQueue.forEach(function(R) {
+          n.default.init(b, S), h.axiosInterceptorQueue.forEach(function(R) {
             R();
-          }), f.axiosInterceptorQueue = [];
-        }, f.getUserId = function(w) {
-          return t.default.recipeImpl.getUserId({
+          }), h.axiosInterceptorQueue = [];
+        }, h.getUserId = function(w) {
+          return n.default.recipeImpl.getUserId({
             userContext: (0, d.getNormalisedUserContext)(w === void 0 ? void 0 : w.userContext)
           });
-        }, f.getAccessTokenPayloadSecurely = function(w) {
+        }, h.getAccessTokenPayloadSecurely = function(w) {
           return o(this, void 0, void 0, function() {
-            return n(this, function(b) {
+            return t(this, function(b) {
               return [
                 2,
-                t.default.recipeImpl.getAccessTokenPayloadSecurely({
+                n.default.recipeImpl.getAccessTokenPayloadSecurely({
                   userContext: (0, d.getNormalisedUserContext)(
                     w === void 0 ? void 0 : w.userContext
                   )
@@ -5612,105 +5612,105 @@ function Ro() {
           });
         };
         var p;
-        return p = f, f.axiosInterceptorQueue = [], f.attemptRefreshingSession = function() {
+        return p = h, h.axiosInterceptorQueue = [], h.attemptRefreshingSession = function() {
           return o(void 0, void 0, void 0, function() {
-            return n(p, function(w) {
-              return [2, t.default.attemptRefreshingSession()];
+            return t(p, function(w) {
+              return [2, n.default.attemptRefreshingSession()];
             });
           });
-        }, f.doesSessionExist = function(w) {
-          return t.default.recipeImpl.doesSessionExist({
+        }, h.doesSessionExist = function(w) {
+          return n.default.recipeImpl.doesSessionExist({
             userContext: (0, d.getNormalisedUserContext)(w === void 0 ? void 0 : w.userContext)
           });
-        }, f.addAxiosInterceptors = function(w, b) {
-          t.default.initCalled ? t.default.recipeImpl.addAxiosInterceptors({
+        }, h.addAxiosInterceptors = function(w, b) {
+          n.default.initCalled ? n.default.recipeImpl.addAxiosInterceptors({
             axiosInstance: w,
             userContext: (0, d.getNormalisedUserContext)(b)
-          }) : f.axiosInterceptorQueue.push(function() {
-            t.default.recipeImpl.addAxiosInterceptors({
+          }) : h.axiosInterceptorQueue.push(function() {
+            n.default.recipeImpl.addAxiosInterceptors({
               axiosInstance: w,
               userContext: (0, d.getNormalisedUserContext)(b)
             });
           });
-        }, f.signOut = function(w) {
-          return t.default.recipeImpl.signOut({
+        }, h.signOut = function(w) {
+          return n.default.recipeImpl.signOut({
             userContext: (0, d.getNormalisedUserContext)(w === void 0 ? void 0 : w.userContext)
           });
-        }, f.getInvalidClaimsFromResponse = function(w) {
+        }, h.getInvalidClaimsFromResponse = function(w) {
           return o(this, void 0, void 0, function() {
-            return n(this, function(b) {
+            return t(this, function(b) {
               return [
                 2,
-                t.default.recipeImpl.getInvalidClaimsFromResponse({
+                n.default.recipeImpl.getInvalidClaimsFromResponse({
                   response: w.response,
                   userContext: (0, d.getNormalisedUserContext)(w.userContext)
                 })
               ];
             });
           });
-        }, f.getClaimValue = function(w) {
+        }, h.getClaimValue = function(w) {
           return o(this, void 0, void 0, function() {
             var b, S;
-            return n(this, function(R) {
+            return t(this, function(R) {
               switch (R.label) {
                 case 0:
                   return b = (0, d.getNormalisedUserContext)(
                     w === void 0 ? void 0 : w.userContext
                   ), [
                     4,
-                    f.getAccessTokenPayloadSecurely({ userContext: b })
+                    h.getAccessTokenPayloadSecurely({ userContext: b })
                   ];
                 case 1:
                   return S = R.sent(), [2, w.claim.getValueFromPayload(S, b)];
               }
             });
           });
-        }, f.validateClaims = function(w, b) {
-          var S = (0, d.getNormalisedUserContext)(b), R = a.SessionClaimValidatorStore.getClaimValidatorsAddedByOtherRecipes(), I = t.default.recipeImpl.getGlobalClaimValidators({
+        }, h.validateClaims = function(w, b) {
+          var S = (0, d.getNormalisedUserContext)(b), R = a.SessionClaimValidatorStore.getClaimValidatorsAddedByOtherRecipes(), I = n.default.recipeImpl.getGlobalClaimValidators({
             claimValidatorsAddedByOtherRecipes: R,
             userContext: S
           }), T = w !== void 0 ? w(I, S) : I;
-          return T.length === 0 ? [] : t.default.recipeImpl.validateClaims({
+          return T.length === 0 ? [] : n.default.recipeImpl.validateClaims({
             claimValidators: T,
             userContext: (0, d.getNormalisedUserContext)(b)
           });
-        }, f.getAccessToken = function(w) {
+        }, h.getAccessToken = function(w) {
           return o(void 0, void 0, void 0, function() {
-            return n(p, function(b) {
+            return t(p, function(b) {
               switch (b.label) {
                 case 0:
                   return [
                     4,
-                    t.default.recipeImpl.doesSessionExist({
+                    n.default.recipeImpl.doesSessionExist({
                       userContext: (0, d.getNormalisedUserContext)(
                         w === void 0 ? void 0 : w.userContext
                       )
                     })
                   ];
                 case 1:
-                  return b.sent() ? [2, (0, t.getTokenForHeaderAuth)("access")] : [2, void 0];
+                  return b.sent() ? [2, (0, n.getTokenForHeaderAuth)("access")] : [2, void 0];
               }
             });
           });
-        }, f;
+        }, h;
       }()
     );
     e.default = r, e.init = r.init, e.getUserId = r.getUserId, e.getAccessTokenPayloadSecurely = r.getAccessTokenPayloadSecurely, e.getAccessToken = r.getAccessToken, e.attemptRefreshingSession = r.attemptRefreshingSession, e.doesSessionExist = r.doesSessionExist, e.addAxiosInterceptors = r.addAxiosInterceptors, e.signOut = r.signOut, e.validateClaims = r.validateClaims, e.getClaimValue = r.getClaimValue, e.getInvalidClaimsFromResponse = r.getInvalidClaimsFromResponse;
-    var u = xr();
+    var u = Mr();
     Object.defineProperty(e, "PrimitiveClaim", {
       enumerable: !0,
       get: function() {
         return u.PrimitiveClaim;
       }
     });
-    var v = bo();
+    var v = ko();
     Object.defineProperty(e, "PrimitiveArrayClaim", {
       enumerable: !0,
       get: function() {
         return v.PrimitiveArrayClaim;
       }
     });
-    var y = So();
+    var y = Io();
     Object.defineProperty(e, "BooleanClaim", {
       enumerable: !0,
       get: function() {
@@ -5719,75 +5719,75 @@ function Ro() {
     });
   }(Ke)), Ke;
 }
-var Qn;
-function Dr() {
-  return Qn || (Qn = 1, function(e) {
-    function o(n) {
-      for (var t in n) e.hasOwnProperty(t) || (e[t] = n[t]);
+var Jn;
+function Lr() {
+  return Jn || (Jn = 1, function(e) {
+    function o(t) {
+      for (var n in t) e.hasOwnProperty(n) || (e[n] = t[n]);
     }
-    e.__esModule = !0, o(Ro());
+    e.__esModule = !0, o(_o());
   }(Ht)), Ht;
 }
-var ht = {}, Jn;
-function ko() {
-  return Jn || (Jn = 1, Object.defineProperty(ht, "__esModule", { value: !0 }), ht.EMAILVERIFICATION_CLAIM_ID = void 0, ht.EMAILVERIFICATION_CLAIM_ID = "st-ev"), ht;
+var ht = {}, Yn;
+function To() {
+  return Yn || (Yn = 1, Object.defineProperty(ht, "__esModule", { value: !0 }), ht.EMAILVERIFICATION_CLAIM_ID = void 0, ht.EMAILVERIFICATION_CLAIM_ID = "st-ev"), ht;
 }
-var Yn;
-function Mr() {
-  if (Yn) return se;
-  Yn = 1;
-  var e = se && se.__extends || /* @__PURE__ */ function() {
-    var c = function(s, r) {
+var Zn;
+function Ur() {
+  if (Zn) return ie;
+  Zn = 1;
+  var e = ie && ie.__extends || /* @__PURE__ */ function() {
+    var c = function(i, r) {
       return c = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(u, v) {
         u.__proto__ = v;
       } || function(u, v) {
         for (var y in v) Object.prototype.hasOwnProperty.call(v, y) && (u[y] = v[y]);
-      }, c(s, r);
+      }, c(i, r);
     };
-    return function(s, r) {
+    return function(i, r) {
       if (typeof r != "function" && r !== null)
         throw new TypeError("Class extends value " + String(r) + " is not a constructor or null");
-      c(s, r);
+      c(i, r);
       function u() {
-        this.constructor = s;
+        this.constructor = i;
       }
-      s.prototype = r === null ? Object.create(r) : (u.prototype = r.prototype, new u());
+      i.prototype = r === null ? Object.create(r) : (u.prototype = r.prototype, new u());
     };
-  }(), o = se && se.__assign || function() {
+  }(), o = ie && ie.__assign || function() {
     return o = Object.assign || function(c) {
-      for (var s, r = 1, u = arguments.length; r < u; r++) {
-        s = arguments[r];
-        for (var v in s) Object.prototype.hasOwnProperty.call(s, v) && (c[v] = s[v]);
+      for (var i, r = 1, u = arguments.length; r < u; r++) {
+        i = arguments[r];
+        for (var v in i) Object.prototype.hasOwnProperty.call(i, v) && (c[v] = i[v]);
       }
       return c;
     }, o.apply(this, arguments);
-  }, n = se && se.__awaiter || function(c, s, r, u) {
+  }, t = ie && ie.__awaiter || function(c, i, r, u) {
     function v(y) {
-      return y instanceof r ? y : new r(function(f) {
-        f(y);
+      return y instanceof r ? y : new r(function(h) {
+        h(y);
       });
     }
-    return new (r || (r = Promise))(function(y, f) {
+    return new (r || (r = Promise))(function(y, h) {
       function p(S) {
         try {
           b(u.next(S));
         } catch (R) {
-          f(R);
+          h(R);
         }
       }
       function w(S) {
         try {
           b(u.throw(S));
         } catch (R) {
-          f(R);
+          h(R);
         }
       }
       function b(S) {
         S.done ? y(S.value) : v(S.value).then(p, w);
       }
-      b((u = u.apply(c, s || [])).next());
+      b((u = u.apply(c, i || [])).next());
     });
-  }, t = se && se.__generator || function(c, s) {
+  }, n = ie && ie.__generator || function(c, i) {
     var r = {
       label: 0,
       sent: function() {
@@ -5796,10 +5796,10 @@ function Mr() {
       },
       trys: [],
       ops: []
-    }, u, v, y, f;
-    return f = { next: p(0), throw: p(1), return: p(2) }, typeof Symbol == "function" && (f[Symbol.iterator] = function() {
+    }, u, v, y, h;
+    return h = { next: p(0), throw: p(1), return: p(2) }, typeof Symbol == "function" && (h[Symbol.iterator] = function() {
       return this;
-    }), f;
+    }), h;
     function p(b) {
       return function(S) {
         return w([b, S]);
@@ -5844,7 +5844,7 @@ function Mr() {
               y[2] && r.ops.pop(), r.trys.pop();
               continue;
           }
-          b = s.call(c, r);
+          b = i.call(c, r);
         } catch (S) {
           b = [6, S], v = 0;
         } finally {
@@ -5853,26 +5853,26 @@ function Mr() {
       if (b[0] & 5) throw b[1];
       return { value: b[0] ? b[1] : void 0, done: !0 };
     }
-  }, l = se && se.__spreadArray || function(c, s, r) {
+  }, l = ie && ie.__spreadArray || function(c, i, r) {
     if (r || arguments.length === 2)
-      for (var u = 0, v = s.length, y; u < v; u++)
-        (y || !(u in s)) && (y || (y = Array.prototype.slice.call(s, 0, u)), y[u] = s[u]);
-    return c.concat(y || Array.prototype.slice.call(s));
+      for (var u = 0, v = i.length, y; u < v; u++)
+        (y || !(u in i)) && (y || (y = Array.prototype.slice.call(i, 0, u)), y[u] = i[u]);
+    return c.concat(y || Array.prototype.slice.call(i));
   };
-  Object.defineProperty(se, "__esModule", { value: !0 }), se.Recipe = void 0;
-  var g = Er(), d = Dr(), m = Ie(), h = ko(), i = [h.EMAILVERIFICATION_CLAIM_ID], a = (
+  Object.defineProperty(ie, "__esModule", { value: !0 }), ie.Recipe = void 0;
+  var g = Dr(), d = Lr(), m = Ie(), f = To(), s = [f.EMAILVERIFICATION_CLAIM_ID], a = (
     /** @class */
     function(c) {
-      e(s, c);
-      function s(r) {
+      e(i, c);
+      function i(r) {
         var u = c.call(this, r) || this;
         return u.getUserId = function(v) {
           return d.default.getUserId({
             userContext: v.userContext
           });
         }, u.getAccessToken = function(v) {
-          return n(u, void 0, void 0, function() {
-            return t(this, function(y) {
+          return t(u, void 0, void 0, function() {
+            return n(this, function(y) {
               return [
                 2,
                 d.default.getAccessToken({
@@ -5882,8 +5882,8 @@ function Mr() {
             });
           });
         }, u.getAccessTokenPayloadSecurely = function(v) {
-          return n(u, void 0, void 0, function() {
-            return t(this, function(y) {
+          return t(u, void 0, void 0, function() {
+            return n(this, function(y) {
               return [
                 2,
                 d.default.getAccessTokenPayloadSecurely({
@@ -5901,8 +5901,8 @@ function Mr() {
             userContext: v.userContext
           });
         }, u.attemptRefreshingSession = function() {
-          return n(u, void 0, void 0, function() {
-            return t(this, function(v) {
+          return t(u, void 0, void 0, function() {
+            return n(this, function(v) {
               return [2, d.default.attemptRefreshingSession()];
             });
           });
@@ -5912,7 +5912,7 @@ function Mr() {
           o(o({}, r), {
             override: {
               functions: function(v, y) {
-                var f;
+                var h;
                 return y.override(function(p) {
                   return o(o({}, p), {
                     getGlobalClaimValidators: function(w) {
@@ -5921,27 +5921,27 @@ function Mr() {
                         l(
                           [],
                           b.filter(function(S) {
-                            return i.includes(S.id);
+                            return s.includes(S.id);
                           }),
                           !0
                         ),
                         b.filter(function(S) {
-                          return !i.includes(S.id);
+                          return !s.includes(S.id);
                         }),
                         !0
                       );
                     }
                   });
-                }), !((f = r.override) === null || f === void 0) && f.functions && y.override(r.override.functions), v;
+                }), !((h = r.override) === null || h === void 0) && h.functions && y.override(r.override.functions), v;
               }
             },
             preAPIHook: function(v) {
-              return n(u, void 0, void 0, function() {
-                var y, f;
-                return t(this, function(p) {
-                  return y = new Headers(v.requestInit.headers), y.set("rid", r.recipeId), f = o(o({}, v), {
+              return t(u, void 0, void 0, function() {
+                var y, h;
+                return n(this, function(p) {
+                  return y = new Headers(v.requestInit.headers), y.set("rid", r.recipeId), h = o(o({}, v), {
                     requestInit: o(o({}, v.requestInit), { headers: y })
-                  }), r.preAPIHook === void 0 ? [2, f] : [2, r.preAPIHook(v)];
+                  }), r.preAPIHook === void 0 ? [2, h] : [2, r.preAPIHook(v)];
                 });
               });
             },
@@ -5950,84 +5950,84 @@ function Mr() {
           })
         ), u;
       }
-      return s.init = function(r) {
+      return i.init = function(r) {
         return function(u, v, y) {
-          return s.instance = new s(
+          return i.instance = new i(
             o(o({}, r), {
               appInfo: u,
-              recipeId: s.RECIPE_ID,
+              recipeId: i.RECIPE_ID,
               enableDebugLogs: y
             })
-          ), s.instance;
+          ), i.instance;
         };
-      }, s.prototype.getClaimValue = function(r) {
+      }, i.prototype.getClaimValue = function(r) {
         return d.default.getClaimValue(r);
-      }, s.prototype.getInvalidClaimsFromResponse = function(r) {
+      }, i.prototype.getInvalidClaimsFromResponse = function(r) {
         return d.default.getInvalidClaimsFromResponse(r);
-      }, s.addAxiosInterceptors = function(r, u) {
+      }, i.addAxiosInterceptors = function(r, u) {
         return d.default.addAxiosInterceptors(r, u);
-      }, s.getInstanceOrThrow = function() {
-        if (s.instance === void 0) {
+      }, i.getInstanceOrThrow = function() {
+        if (i.instance === void 0) {
           var r = "No instance of Session found. Ensure that the 'Session.init' method is called within the 'SuperTokens.init' recipeList.";
           throw r = (0, m.checkForSSRErrorAndAppendIfNeeded)(r), Error(r);
         }
-        return s.instance;
-      }, s.reset = function() {
-        (0, m.isTest)() && (s.instance = void 0);
-      }, s.RECIPE_ID = "session", s;
+        return i.instance;
+      }, i.reset = function() {
+        (0, m.isTest)() && (i.instance = void 0);
+      }, i.RECIPE_ID = "session", i;
     }(g.default)
   );
-  return se.Recipe = a, se.default = a, se;
+  return ie.Recipe = a, ie.default = a, ie;
 }
-var Zn;
-function Zt() {
-  if (Zn) return be;
-  Zn = 1;
+var er;
+function en() {
+  if (er) return be;
+  er = 1;
   var e = be && be.__extends || /* @__PURE__ */ function() {
-    var d = function(m, h) {
-      return d = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(i, a) {
-        i.__proto__ = a;
-      } || function(i, a) {
-        for (var c in a) Object.prototype.hasOwnProperty.call(a, c) && (i[c] = a[c]);
-      }, d(m, h);
+    var d = function(m, f) {
+      return d = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(s, a) {
+        s.__proto__ = a;
+      } || function(s, a) {
+        for (var c in a) Object.prototype.hasOwnProperty.call(a, c) && (s[c] = a[c]);
+      }, d(m, f);
     };
-    return function(m, h) {
-      if (typeof h != "function" && h !== null)
-        throw new TypeError("Class extends value " + String(h) + " is not a constructor or null");
-      d(m, h);
-      function i() {
+    return function(m, f) {
+      if (typeof f != "function" && f !== null)
+        throw new TypeError("Class extends value " + String(f) + " is not a constructor or null");
+      d(m, f);
+      function s() {
         this.constructor = m;
       }
-      m.prototype = h === null ? Object.create(h) : (i.prototype = h.prototype, new i());
+      m.prototype = f === null ? Object.create(f) : (s.prototype = f.prototype, new s());
     };
-  }(), o = be && be.__awaiter || function(d, m, h, i) {
+  }(), o = be && be.__awaiter || function(d, m, f, s) {
     function a(c) {
-      return c instanceof h ? c : new h(function(s) {
-        s(c);
+      return c instanceof f ? c : new f(function(i) {
+        i(c);
       });
     }
-    return new (h || (h = Promise))(function(c, s) {
+    return new (f || (f = Promise))(function(c, i) {
       function r(y) {
         try {
-          v(i.next(y));
-        } catch (f) {
-          s(f);
+          v(s.next(y));
+        } catch (h) {
+          i(h);
         }
       }
       function u(y) {
         try {
-          v(i.throw(y));
-        } catch (f) {
-          s(f);
+          v(s.throw(y));
+        } catch (h) {
+          i(h);
         }
       }
       function v(y) {
         y.done ? c(y.value) : a(y.value).then(r, u);
       }
-      v((i = i.apply(d, m || [])).next());
+      v((s = s.apply(d, m || [])).next());
     });
-  }, n = be && be.__generator || function(d, m) {
-    var h = {
+  }, t = be && be.__generator || function(d, m) {
+    var f = {
       label: 0,
       sent: function() {
         if (c[0] & 1) throw c[1];
@@ -6035,20 +6035,20 @@ function Zt() {
       },
       trys: [],
       ops: []
-    }, i, a, c, s;
-    return s = { next: r(0), throw: r(1), return: r(2) }, typeof Symbol == "function" && (s[Symbol.iterator] = function() {
+    }, s, a, c, i;
+    return i = { next: r(0), throw: r(1), return: r(2) }, typeof Symbol == "function" && (i[Symbol.iterator] = function() {
       return this;
-    }), s;
+    }), i;
     function r(v) {
       return function(y) {
         return u([v, y]);
       };
     }
     function u(v) {
-      if (i) throw new TypeError("Generator is already executing.");
-      for (; h; )
+      if (s) throw new TypeError("Generator is already executing.");
+      for (; f; )
         try {
-          if (i = 1, a && (c = v[0] & 2 ? a.return : v[0] ? a.throw || ((c = a.return) && c.call(a), 0) : a.next) && !(c = c.call(a, v[1])).done)
+          if (s = 1, a && (c = v[0] & 2 ? a.return : v[0] ? a.throw || ((c = a.return) && c.call(a), 0) : a.next) && !(c = c.call(a, v[1])).done)
             return c;
           switch (a = 0, c && (v = [v[0] & 2, c.value]), v[0]) {
             case 0:
@@ -6056,53 +6056,53 @@ function Zt() {
               c = v;
               break;
             case 4:
-              return h.label++, { value: v[1], done: !1 };
+              return f.label++, { value: v[1], done: !1 };
             case 5:
-              h.label++, a = v[1], v = [0];
+              f.label++, a = v[1], v = [0];
               continue;
             case 7:
-              v = h.ops.pop(), h.trys.pop();
+              v = f.ops.pop(), f.trys.pop();
               continue;
             default:
-              if (c = h.trys, !(c = c.length > 0 && c[c.length - 1]) && (v[0] === 6 || v[0] === 2)) {
-                h = 0;
+              if (c = f.trys, !(c = c.length > 0 && c[c.length - 1]) && (v[0] === 6 || v[0] === 2)) {
+                f = 0;
                 continue;
               }
               if (v[0] === 3 && (!c || v[1] > c[0] && v[1] < c[3])) {
-                h.label = v[1];
+                f.label = v[1];
                 break;
               }
-              if (v[0] === 6 && h.label < c[1]) {
-                h.label = c[1], c = v;
+              if (v[0] === 6 && f.label < c[1]) {
+                f.label = c[1], c = v;
                 break;
               }
-              if (c && h.label < c[2]) {
-                h.label = c[2], h.ops.push(v);
+              if (c && f.label < c[2]) {
+                f.label = c[2], f.ops.push(v);
                 break;
               }
-              c[2] && h.ops.pop(), h.trys.pop();
+              c[2] && f.ops.pop(), f.trys.pop();
               continue;
           }
-          v = m.call(d, h);
+          v = m.call(d, f);
         } catch (y) {
           v = [6, y], a = 0;
         } finally {
-          i = c = 0;
+          s = c = 0;
         }
       if (v[0] & 5) throw v[1];
       return { value: v[0] ? v[1] : void 0, done: !0 };
     }
   };
   Object.defineProperty(be, "__esModule", { value: !0 });
-  var t = Er(), l = Mr(), g = (
+  var n = Dr(), l = Ur(), g = (
     /** @class */
     function(d) {
       e(m, d);
-      function m(h) {
-        var i = d.call(this, h) || this;
-        return i.signOut = function(a) {
-          return o(i, void 0, void 0, function() {
-            return n(this, function(c) {
+      function m(f) {
+        var s = d.call(this, f) || this;
+        return s.signOut = function(a) {
+          return o(s, void 0, void 0, function() {
+            return t(this, function(c) {
               switch (c.label) {
                 case 0:
                   return [
@@ -6116,50 +6116,50 @@ function Zt() {
               }
             });
           });
-        }, i;
+        }, s;
       }
       return m;
-    }(t.default)
+    }(n.default)
   );
   return be.default = g, be;
 }
-var er;
-function en() {
-  if (er) return pe;
-  er = 1;
+var tr;
+function tn() {
+  if (tr) return pe;
+  tr = 1;
   var e = pe && pe.__extends || /* @__PURE__ */ function() {
-    var h = function(i, a) {
-      return h = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(c, s) {
-        c.__proto__ = s;
-      } || function(c, s) {
-        for (var r in s) Object.prototype.hasOwnProperty.call(s, r) && (c[r] = s[r]);
-      }, h(i, a);
+    var f = function(s, a) {
+      return f = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(c, i) {
+        c.__proto__ = i;
+      } || function(c, i) {
+        for (var r in i) Object.prototype.hasOwnProperty.call(i, r) && (c[r] = i[r]);
+      }, f(s, a);
     };
-    return function(i, a) {
+    return function(s, a) {
       if (typeof a != "function" && a !== null)
         throw new TypeError("Class extends value " + String(a) + " is not a constructor or null");
-      h(i, a);
+      f(s, a);
       function c() {
-        this.constructor = i;
+        this.constructor = s;
       }
-      i.prototype = a === null ? Object.create(a) : (c.prototype = a.prototype, new c());
+      s.prototype = a === null ? Object.create(a) : (c.prototype = a.prototype, new c());
     };
   }(), o = pe && pe.__assign || function() {
-    return o = Object.assign || function(h) {
-      for (var i, a = 1, c = arguments.length; a < c; a++) {
-        i = arguments[a];
-        for (var s in i) Object.prototype.hasOwnProperty.call(i, s) && (h[s] = i[s]);
+    return o = Object.assign || function(f) {
+      for (var s, a = 1, c = arguments.length; a < c; a++) {
+        s = arguments[a];
+        for (var i in s) Object.prototype.hasOwnProperty.call(s, i) && (f[i] = s[i]);
       }
-      return h;
+      return f;
     }, o.apply(this, arguments);
   };
   Object.defineProperty(pe, "__esModule", { value: !0 }), pe.Recipe = void 0;
-  var n = lo(), t = Et(), l = vo(), g = Ie(), d = Zt(), m = (
+  var t = go(), n = Pt(), l = yo(), g = Ie(), d = en(), m = (
     /** @class */
-    function(h) {
-      e(i, h);
-      function i(a) {
-        var c = h.call(this, (0, n.normaliseUserInput)(a)) || this, s = new t.default(
+    function(f) {
+      e(s, f);
+      function s(a) {
+        var c = f.call(this, (0, t.normaliseUserInput)(a)) || this, i = new n.default(
           (0, l.default)({
             recipeId: c.config.recipeId,
             appInfo: c.config.appInfo,
@@ -6168,72 +6168,72 @@ function en() {
             postAPIHook: c.config.postAPIHook
           })
         );
-        return c.recipeImplementation = s.override(c.config.override.functions).build(), c;
+        return c.recipeImplementation = i.override(c.config.override.functions).build(), c;
       }
-      return i.init = function(a) {
-        return function(c, s) {
-          return i.instance = new i(
-            o(o({}, a), { recipeId: i.RECIPE_ID, appInfo: c, clientType: s })
-          ), i.instance;
+      return s.init = function(a) {
+        return function(c, i) {
+          return s.instance = new s(
+            o(o({}, a), { recipeId: s.RECIPE_ID, appInfo: c, clientType: i })
+          ), s.instance;
         };
-      }, i.getInstanceOrThrow = function() {
-        if (i.instance === void 0) {
+      }, s.getInstanceOrThrow = function() {
+        if (s.instance === void 0) {
           var a = "No instance of Multitenancy found. Ensure that 'SuperTokens.init' method has been called.";
           throw a = (0, g.checkForSSRErrorAndAppendIfNeeded)(a), Error(a);
         }
-        return i.instance;
-      }, i.reset = function() {
-        (0, g.isTest)() && (i.instance = void 0);
-      }, i.RECIPE_ID = "multitenancy", i;
+        return s.instance;
+      }, s.reset = function() {
+        (0, g.isTest)() && (s.instance = void 0);
+      }, s.RECIPE_ID = "multitenancy", s;
     }(d.default)
   );
   return pe.Recipe = m, pe.default = m, pe;
 }
-var Nt = {}, G = {}, Re = {}, Qe = {}, tr;
-function Io() {
-  if (tr) return Qe;
-  tr = 1;
+var Nt = {}, G = {}, Re = {}, Qe = {}, nr;
+function Co() {
+  if (nr) return Qe;
+  nr = 1;
   var e = Qe && Qe.__assign || function() {
-    return e = Object.assign || function(t) {
+    return e = Object.assign || function(n) {
       for (var l, g = 1, d = arguments.length; g < d; g++) {
         l = arguments[g];
-        for (var m in l) Object.prototype.hasOwnProperty.call(l, m) && (t[m] = l[m]);
+        for (var m in l) Object.prototype.hasOwnProperty.call(l, m) && (n[m] = l[m]);
       }
-      return t;
+      return n;
     }, e.apply(this, arguments);
   };
   Object.defineProperty(Qe, "__esModule", { value: !0 }), Qe.normaliseUserInput = void 0;
-  var o = Jt();
-  function n(t) {
+  var o = Yt();
+  function t(n) {
     var l = e(
       {
         functions: function(g) {
           return g;
         }
       },
-      t.override
+      n.override
     );
-    return e(e({}, (0, o.normaliseAuthRecipe)(t)), { override: l });
+    return e(e({}, (0, o.normaliseAuthRecipe)(n)), { override: l });
   }
-  return Qe.normaliseUserInput = n, Qe;
+  return Qe.normaliseUserInput = t, Qe;
 }
-var de = {}, gt = {}, nr;
-function _o() {
-  return nr || (nr = 1, Object.defineProperty(gt, "__esModule", { value: !0 }), gt.PASSWORDLESS_LOGIN_ATTEMPT_INFO_STORAGE_KEY = void 0, gt.PASSWORDLESS_LOGIN_ATTEMPT_INFO_STORAGE_KEY = "supertokens-passwordless-loginAttemptInfo"), gt;
+var de = {}, gt = {}, rr;
+function Ao() {
+  return rr || (rr = 1, Object.defineProperty(gt, "__esModule", { value: !0 }), gt.PASSWORDLESS_LOGIN_ATTEMPT_INFO_STORAGE_KEY = void 0, gt.PASSWORDLESS_LOGIN_ATTEMPT_INFO_STORAGE_KEY = "supertokens-passwordless-loginAttemptInfo"), gt;
 }
-var rr;
-function To() {
-  if (rr) return de;
-  rr = 1;
+var or;
+function Oo() {
+  if (or) return de;
+  or = 1;
   var e = de && de.__assign || function() {
-    return e = Object.assign || function(i) {
-      for (var a, c = 1, s = arguments.length; c < s; c++) {
+    return e = Object.assign || function(s) {
+      for (var a, c = 1, i = arguments.length; c < i; c++) {
         a = arguments[c];
-        for (var r in a) Object.prototype.hasOwnProperty.call(a, r) && (i[r] = a[r]);
+        for (var r in a) Object.prototype.hasOwnProperty.call(a, r) && (s[r] = a[r]);
       }
-      return i;
+      return s;
     }, e.apply(this, arguments);
-  }, o = de && de.__awaiter || function(i, a, c, s) {
+  }, o = de && de.__awaiter || function(s, a, c, i) {
     function r(u) {
       return u instanceof c ? u : new c(function(v) {
         v(u);
@@ -6242,24 +6242,24 @@ function To() {
     return new (c || (c = Promise))(function(u, v) {
       function y(w) {
         try {
-          p(s.next(w));
+          p(i.next(w));
         } catch (b) {
           v(b);
         }
       }
-      function f(w) {
+      function h(w) {
         try {
-          p(s.throw(w));
+          p(i.throw(w));
         } catch (b) {
           v(b);
         }
       }
       function p(w) {
-        w.done ? u(w.value) : r(w.value).then(y, f);
+        w.done ? u(w.value) : r(w.value).then(y, h);
       }
-      p((s = s.apply(i, a || [])).next());
+      p((i = i.apply(s, a || [])).next());
     });
-  }, n = de && de.__generator || function(i, a) {
+  }, t = de && de.__generator || function(s, a) {
     var c = {
       label: 0,
       sent: function() {
@@ -6268,20 +6268,20 @@ function To() {
       },
       trys: [],
       ops: []
-    }, s, r, u, v;
+    }, i, r, u, v;
     return v = { next: y(0), throw: y(1), return: y(2) }, typeof Symbol == "function" && (v[Symbol.iterator] = function() {
       return this;
     }), v;
     function y(p) {
       return function(w) {
-        return f([p, w]);
+        return h([p, w]);
       };
     }
-    function f(p) {
-      if (s) throw new TypeError("Generator is already executing.");
+    function h(p) {
+      if (i) throw new TypeError("Generator is already executing.");
       for (; c; )
         try {
-          if (s = 1, r && (u = p[0] & 2 ? r.return : p[0] ? r.throw || ((u = r.return) && u.call(r), 0) : r.next) && !(u = u.call(r, p[1])).done)
+          if (i = 1, r && (u = p[0] & 2 ? r.return : p[0] ? r.throw || ((u = r.return) && u.call(r), 0) : r.next) && !(u = u.call(r, p[1])).done)
             return u;
           switch (r = 0, u && (p = [p[0] & 2, u.value]), p[0]) {
             case 0:
@@ -6316,34 +6316,34 @@ function To() {
               u[2] && c.ops.pop(), c.trys.pop();
               continue;
           }
-          p = a.call(i, c);
+          p = a.call(s, c);
         } catch (w) {
           p = [6, w], r = 0;
         } finally {
-          s = u = 0;
+          i = u = 0;
         }
       if (p[0] & 5) throw p[1];
       return { value: p[0] ? p[1] : void 0, done: !0 };
     }
   };
   Object.defineProperty(de, "__esModule", { value: !0 }), de.getRecipeImplementation = void 0;
-  var t = Gt(), l = Yt(), g = Ie(), d = en(), m = _o();
-  function h(i) {
-    var a = new l.default(i.recipeId, i.appInfo);
+  var n = Xt(), l = Zt(), g = Ie(), d = tn(), m = Ao();
+  function f(s) {
+    var a = new l.default(s.recipeId, s.appInfo);
     return {
       createCode: function(c) {
         return o(this, void 0, void 0, function() {
-          var s, r, u, v, y, f;
-          return n(this, function(p) {
+          var i, r, u, v, y, h;
+          return t(this, function(p) {
             switch (p.label) {
               case 0:
-                return "email" in c && (s = {
+                return "email" in c && (i = {
                   email: c.email,
                   shouldTryLinkingWithSessionUser: c.shouldTryLinkingWithSessionUser
-                }), "phoneNumber" in c && (s = {
+                }), "phoneNumber" in c && (i = {
                   phoneNumber: c.phoneNumber,
                   shouldTryLinkingWithSessionUser: c.shouldTryLinkingWithSessionUser
-                }), f = (y = a).post, [
+                }), h = (y = a).post, [
                   4,
                   d.default.getInstanceOrThrow().recipeImplementation.getTenantId({
                     userContext: c.userContext
@@ -6352,18 +6352,18 @@ function To() {
               case 1:
                 return [
                   4,
-                  f.apply(y, [
+                  h.apply(y, [
                     p.sent(),
                     "/signinup/code",
-                    { body: JSON.stringify(s) },
+                    { body: JSON.stringify(i) },
                     l.default.preparePreAPIHook({
-                      recipePreAPIHook: i.preAPIHook,
+                      recipePreAPIHook: s.preAPIHook,
                       action: "PASSWORDLESS_CREATE_CODE",
                       userContext: c.userContext,
                       options: c.options
                     }),
                     l.default.preparePostAPIHook({
-                      recipePostAPIHook: i.postAPIHook,
+                      recipePostAPIHook: s.postAPIHook,
                       action: "PASSWORDLESS_CREATE_CODE",
                       userContext: c.userContext
                     })
@@ -6377,11 +6377,11 @@ function To() {
       },
       resendCode: function(c) {
         return o(this, void 0, void 0, function() {
-          var s, r, u, v;
-          return n(this, function(y) {
+          var i, r, u, v;
+          return t(this, function(y) {
             switch (y.label) {
               case 0:
-                return s = {
+                return i = {
                   deviceId: c.deviceId,
                   preAuthSessionId: c.preAuthSessionId,
                   shouldTryLinkingWithSessionUser: c.shouldTryLinkingWithSessionUser
@@ -6390,15 +6390,15 @@ function To() {
                   a.post(
                     c.tenantId,
                     "/signinup/code/resend",
-                    { body: JSON.stringify(s) },
+                    { body: JSON.stringify(i) },
                     l.default.preparePreAPIHook({
-                      recipePreAPIHook: i.preAPIHook,
+                      recipePreAPIHook: s.preAPIHook,
                       action: "PASSWORDLESS_RESEND_CODE",
                       userContext: c.userContext,
                       options: c.options
                     }),
                     l.default.preparePostAPIHook({
-                      recipePostAPIHook: i.postAPIHook,
+                      recipePostAPIHook: s.postAPIHook,
                       action: "PASSWORDLESS_RESEND_CODE",
                       userContext: c.userContext
                     })
@@ -6418,16 +6418,16 @@ function To() {
       },
       consumeCode: function(c) {
         return o(this, void 0, void 0, function() {
-          var s, r, u, v;
-          return n(this, function(y) {
+          var i, r, u, v;
+          return t(this, function(y) {
             switch (y.label) {
               case 0:
-                return "userInputCode" in c ? s = {
+                return "userInputCode" in c ? i = {
                   userInputCode: c.userInputCode,
                   deviceId: c.deviceId,
                   preAuthSessionId: c.preAuthSessionId,
                   shouldTryLinkingWithSessionUser: c.shouldTryLinkingWithSessionUser
-                } : s = {
+                } : i = {
                   linkCode: c.linkCode,
                   preAuthSessionId: c.preAuthSessionId,
                   shouldTryLinkingWithSessionUser: c.shouldTryLinkingWithSessionUser
@@ -6436,15 +6436,15 @@ function To() {
                   a.post(
                     c.tenantId,
                     "/signinup/code/consume",
-                    { body: JSON.stringify(s) },
+                    { body: JSON.stringify(i) },
                     l.default.preparePreAPIHook({
-                      recipePreAPIHook: i.preAPIHook,
+                      recipePreAPIHook: s.preAPIHook,
                       action: "PASSWORDLESS_CONSUME_CODE",
                       userContext: c.userContext,
                       options: c.options
                     }),
                     l.default.preparePostAPIHook({
-                      recipePostAPIHook: i.postAPIHook,
+                      recipePostAPIHook: s.postAPIHook,
                       action: "PASSWORDLESS_CONSUME_CODE",
                       userContext: c.userContext
                     })
@@ -6480,9 +6480,9 @@ function To() {
       },
       doesEmailExist: function(c) {
         return o(this, void 0, void 0, function() {
-          var s, r, u, v, y;
-          return n(this, function(f) {
-            switch (f.label) {
+          var i, r, u, v, y;
+          return t(this, function(h) {
+            switch (h.label) {
               case 0:
                 return y = (v = a).get, [
                   4,
@@ -6494,25 +6494,25 @@ function To() {
                 return [
                   4,
                   y.apply(v, [
-                    f.sent(),
+                    h.sent(),
                     "/passwordless/email/exists",
                     {},
                     { email: c.email },
                     l.default.preparePreAPIHook({
-                      recipePreAPIHook: i.preAPIHook,
+                      recipePreAPIHook: s.preAPIHook,
                       action: "EMAIL_EXISTS",
                       userContext: c.userContext,
                       options: c.options
                     }),
                     l.default.preparePostAPIHook({
-                      recipePostAPIHook: i.postAPIHook,
+                      recipePostAPIHook: s.postAPIHook,
                       action: "EMAIL_EXISTS",
                       userContext: c.userContext
                     })
                   ])
                 ];
               case 2:
-                return s = f.sent(), r = s.jsonBody, u = s.fetchResponse, [
+                return i = h.sent(), r = i.jsonBody, u = i.fetchResponse, [
                   2,
                   {
                     status: r.status,
@@ -6526,9 +6526,9 @@ function To() {
       },
       doesPhoneNumberExist: function(c) {
         return o(this, void 0, void 0, function() {
-          var s, r, u, v, y;
-          return n(this, function(f) {
-            switch (f.label) {
+          var i, r, u, v, y;
+          return t(this, function(h) {
+            switch (h.label) {
               case 0:
                 return y = (v = a).get, [
                   4,
@@ -6540,25 +6540,25 @@ function To() {
                 return [
                   4,
                   y.apply(v, [
-                    f.sent(),
+                    h.sent(),
                     "/passwordless/phonenumber/exists",
                     {},
                     { phoneNumber: c.phoneNumber },
                     l.default.preparePreAPIHook({
-                      recipePreAPIHook: i.preAPIHook,
+                      recipePreAPIHook: s.preAPIHook,
                       action: "PHONE_NUMBER_EXISTS",
                       userContext: c.userContext,
                       options: c.options
                     }),
                     l.default.preparePostAPIHook({
-                      recipePostAPIHook: i.postAPIHook,
+                      recipePostAPIHook: s.postAPIHook,
                       action: "PHONE_NUMBER_EXISTS",
                       userContext: c.userContext
                     })
                   ])
                 ];
               case 2:
-                return s = f.sent(), r = s.jsonBody, u = s.fetchResponse, [
+                return i = h.sent(), r = i.jsonBody, u = i.fetchResponse, [
                   2,
                   {
                     status: r.status,
@@ -6573,17 +6573,17 @@ function To() {
       getLoginAttemptInfo: function() {
         return o(this, void 0, void 0, function() {
           var c;
-          return n(this, function(s) {
-            switch (s.label) {
+          return t(this, function(i) {
+            switch (i.label) {
               case 0:
                 return [
                   4,
-                  t.WindowHandlerReference.getReferenceOrThrow().windowHandler.localStorage.getItem(
+                  n.WindowHandlerReference.getReferenceOrThrow().windowHandler.localStorage.getItem(
                     m.PASSWORDLESS_LOGIN_ATTEMPT_INFO_STORAGE_KEY
                   )
                 ];
               case 1:
-                if (c = s.sent(), c === null)
+                if (c = i.sent(), c === null)
                   return [2, void 0];
                 try {
                   return [2, JSON.parse(c)];
@@ -6600,12 +6600,12 @@ function To() {
       },
       setLoginAttemptInfo: function(c) {
         return o(this, void 0, void 0, function() {
-          return n(this, function(s) {
-            switch (s.label) {
+          return t(this, function(i) {
+            switch (i.label) {
               case 0:
                 return [
                   4,
-                  t.WindowHandlerReference.getReferenceOrThrow().windowHandler.localStorage.setItem(
+                  n.WindowHandlerReference.getReferenceOrThrow().windowHandler.localStorage.setItem(
                     m.PASSWORDLESS_LOGIN_ATTEMPT_INFO_STORAGE_KEY,
                     JSON.stringify(
                       e(
@@ -6619,7 +6619,7 @@ function To() {
                   )
                 ];
               case 1:
-                return s.sent(), [
+                return i.sent(), [
                   2
                   /*return*/
                 ];
@@ -6629,8 +6629,8 @@ function To() {
       },
       clearLoginAttemptInfo: function() {
         return o(this, void 0, void 0, function() {
-          return n(this, function(c) {
-            return t.WindowHandlerReference.getReferenceOrThrow().windowHandler.localStorage.removeItem(
+          return t(this, function(c) {
+            return n.WindowHandlerReference.getReferenceOrThrow().windowHandler.localStorage.removeItem(
               m.PASSWORDLESS_LOGIN_ATTEMPT_INFO_STORAGE_KEY
             ), [
               2
@@ -6641,45 +6641,45 @@ function To() {
       }
     };
   }
-  return de.default = h, de.getRecipeImplementation = h, de;
+  return de.default = f, de.getRecipeImplementation = f, de;
 }
-var or;
-function Co() {
-  if (or) return Re;
-  or = 1;
+var ir;
+function Po() {
+  if (ir) return Re;
+  ir = 1;
   var e = Re && Re.__extends || /* @__PURE__ */ function() {
-    var h = function(i, a) {
-      return h = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(c, s) {
-        c.__proto__ = s;
-      } || function(c, s) {
-        for (var r in s) Object.prototype.hasOwnProperty.call(s, r) && (c[r] = s[r]);
-      }, h(i, a);
+    var f = function(s, a) {
+      return f = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(c, i) {
+        c.__proto__ = i;
+      } || function(c, i) {
+        for (var r in i) Object.prototype.hasOwnProperty.call(i, r) && (c[r] = i[r]);
+      }, f(s, a);
     };
-    return function(i, a) {
+    return function(s, a) {
       if (typeof a != "function" && a !== null)
         throw new TypeError("Class extends value " + String(a) + " is not a constructor or null");
-      h(i, a);
+      f(s, a);
       function c() {
-        this.constructor = i;
+        this.constructor = s;
       }
-      i.prototype = a === null ? Object.create(a) : (c.prototype = a.prototype, new c());
+      s.prototype = a === null ? Object.create(a) : (c.prototype = a.prototype, new c());
     };
   }(), o = Re && Re.__assign || function() {
-    return o = Object.assign || function(h) {
-      for (var i, a = 1, c = arguments.length; a < c; a++) {
-        i = arguments[a];
-        for (var s in i) Object.prototype.hasOwnProperty.call(i, s) && (h[s] = i[s]);
+    return o = Object.assign || function(f) {
+      for (var s, a = 1, c = arguments.length; a < c; a++) {
+        s = arguments[a];
+        for (var i in s) Object.prototype.hasOwnProperty.call(s, i) && (f[i] = s[i]);
       }
-      return h;
+      return f;
     }, o.apply(this, arguments);
   };
   Object.defineProperty(Re, "__esModule", { value: !0 }), Re.Recipe = void 0;
-  var n = Et(), t = Ie(), l = Zt(), g = Io(), d = To(), m = (
+  var t = Pt(), n = Ie(), l = en(), g = Co(), d = Oo(), m = (
     /** @class */
-    function(h) {
-      e(i, h);
-      function i(a) {
-        var c = h.call(this, (0, g.normaliseUserInput)(a)) || this, s = new n.default(
+    function(f) {
+      e(s, f);
+      function s(a) {
+        var c = f.call(this, (0, g.normaliseUserInput)(a)) || this, i = new t.default(
           (0, d.default)({
             recipeId: c.config.recipeId,
             appInfo: c.config.appInfo,
@@ -6688,29 +6688,29 @@ function Co() {
             postAPIHook: c.config.postAPIHook
           })
         );
-        return c.recipeImplementation = s.override(c.config.override.functions).build(), c;
+        return c.recipeImplementation = i.override(c.config.override.functions).build(), c;
       }
-      return i.init = function(a) {
-        return function(c, s) {
-          return i.instance = new i(
-            o(o({}, a), { recipeId: i.RECIPE_ID, appInfo: c, clientType: s })
-          ), i.instance;
+      return s.init = function(a) {
+        return function(c, i) {
+          return s.instance = new s(
+            o(o({}, a), { recipeId: s.RECIPE_ID, appInfo: c, clientType: i })
+          ), s.instance;
         };
-      }, i.getInstanceOrThrow = function() {
-        if (i.instance === void 0) {
+      }, s.getInstanceOrThrow = function() {
+        if (s.instance === void 0) {
           var a = "No instance of Passwordless found. Ensure that the 'Passwordless.init' method is called within the 'SuperTokens.init' recipeList.";
-          throw a = (0, t.checkForSSRErrorAndAppendIfNeeded)(a), Error(a);
+          throw a = (0, n.checkForSSRErrorAndAppendIfNeeded)(a), Error(a);
         }
-        return i.instance;
-      }, i.reset = function() {
-        (0, t.isTest)() && (i.instance = void 0);
-      }, i.RECIPE_ID = "passwordless", i;
+        return s.instance;
+      }, s.reset = function() {
+        (0, n.isTest)() && (s.instance = void 0);
+      }, s.RECIPE_ID = "passwordless", s;
     }(l.default)
   );
   return Re.Recipe = m, Re.default = m, Re;
 }
 var sr;
-function Ao() {
+function Eo() {
   if (sr) return G;
   sr = 1;
   var e = G && G.__assign || function() {
@@ -6747,7 +6747,7 @@ function Ao() {
       }
       E((I = I.apply(b, S || [])).next());
     });
-  }, n = G && G.__generator || function(b, S) {
+  }, t = G && G.__generator || function(b, S) {
     var R = {
       label: 0,
       sent: function() {
@@ -6815,7 +6815,7 @@ function Ao() {
     }
   };
   Object.defineProperty(G, "__esModule", { value: !0 }), G.clearLoginAttemptInfo = G.setLoginAttemptInfo = G.getLoginAttemptInfo = G.getTenantIdFromURL = G.getPreAuthSessionIdFromURL = G.getLinkCodeFromURL = G.signOut = G.doesPhoneNumberExist = G.doesEmailExist = G.consumeCode = G.resendCode = G.createCode = G.init = void 0;
-  var t = Ie(), l = en(), g = Co(), d = (
+  var n = Ie(), l = tn(), g = Po(), d = (
     /** @class */
     function() {
       function b() {
@@ -6826,10 +6826,10 @@ function Ao() {
         var R, I;
         return o(this, void 0, void 0, function() {
           var T, _, P, C, x;
-          return n(this, function(E) {
+          return t(this, function(E) {
             switch (E.label) {
               case 0:
-                return T = g.default.getInstanceOrThrow(), _ = T.recipeImplementation, P = (0, t.getNormalisedUserContext)(S.userContext), [
+                return T = g.default.getInstanceOrThrow(), _ = T.recipeImplementation, P = (0, n.getNormalisedUserContext)(S.userContext), [
                   4,
                   l.default.getInstanceOrThrow().recipeImplementation.getTenantId({
                     userContext: S.userContext
@@ -6869,10 +6869,10 @@ function Ao() {
       }, b.resendCode = function(S) {
         return o(this, void 0, void 0, function() {
           var R, I, T, _;
-          return n(this, function(P) {
+          return t(this, function(P) {
             switch (P.label) {
               case 0:
-                return R = g.default.getInstanceOrThrow(), I = R.recipeImplementation, T = (0, t.getNormalisedUserContext)(
+                return R = g.default.getInstanceOrThrow(), I = R.recipeImplementation, T = (0, n.getNormalisedUserContext)(
                   S == null ? void 0 : S.userContext
                 ), [
                   4,
@@ -6900,10 +6900,10 @@ function Ao() {
         var R;
         return o(this, void 0, void 0, function() {
           var I, T, _, P, C, x, x, E, B, K;
-          return n(this, function(ne) {
+          return t(this, function(ne) {
             switch (ne.label) {
               case 0:
-                return I = g.default.getInstanceOrThrow(), T = I.recipeImplementation, _ = (0, t.getNormalisedUserContext)(
+                return I = g.default.getInstanceOrThrow(), T = I.recipeImplementation, _ = (0, n.getNormalisedUserContext)(
                   S == null ? void 0 : S.userContext
                 ), S !== void 0 && "userInputCode" in S ? [
                   4,
@@ -6951,7 +6951,7 @@ function Ao() {
       }, b.getLinkCodeFromURL = function(S) {
         return g.default.getInstanceOrThrow().recipeImplementation.getLinkCodeFromURL(
           e(e({}, S), {
-            userContext: (0, t.getNormalisedUserContext)(
+            userContext: (0, n.getNormalisedUserContext)(
               S == null ? void 0 : S.userContext
             )
           })
@@ -6959,7 +6959,7 @@ function Ao() {
       }, b.getPreAuthSessionIdFromURL = function(S) {
         return g.default.getInstanceOrThrow().recipeImplementation.getPreAuthSessionIdFromURL(
           e(e({}, S), {
-            userContext: (0, t.getNormalisedUserContext)(
+            userContext: (0, n.getNormalisedUserContext)(
               S == null ? void 0 : S.userContext
             )
           })
@@ -6967,23 +6967,23 @@ function Ao() {
       }, b.getTenantIdFromURL = function(S) {
         return g.default.getInstanceOrThrow().recipeImplementation.getTenantIdFromURL(
           e(e({}, S), {
-            userContext: (0, t.getNormalisedUserContext)(
+            userContext: (0, n.getNormalisedUserContext)(
               S == null ? void 0 : S.userContext
             )
           })
         );
       }, b.doesEmailExist = function(S) {
         return g.default.getInstanceOrThrow().recipeImplementation.doesEmailExist(
-          e(e({}, S), { userContext: (0, t.getNormalisedUserContext)(S.userContext) })
+          e(e({}, S), { userContext: (0, n.getNormalisedUserContext)(S.userContext) })
         );
       }, b.doesPhoneNumberExist = function(S) {
         return g.default.getInstanceOrThrow().recipeImplementation.doesPhoneNumberExist(
-          e(e({}, S), { userContext: (0, t.getNormalisedUserContext)(S.userContext) })
+          e(e({}, S), { userContext: (0, n.getNormalisedUserContext)(S.userContext) })
         );
       }, b.getLoginAttemptInfo = function(S) {
         return g.default.getInstanceOrThrow().recipeImplementation.getLoginAttemptInfo(
           e(e({}, S), {
-            userContext: (0, t.getNormalisedUserContext)(
+            userContext: (0, n.getNormalisedUserContext)(
               S == null ? void 0 : S.userContext
             )
           })
@@ -6991,10 +6991,10 @@ function Ao() {
       }, b.setLoginAttemptInfo = function(S) {
         return o(this, void 0, void 0, function() {
           var R, I, T;
-          return n(this, function(_) {
+          return t(this, function(_) {
             switch (_.label) {
               case 0:
-                return R = (0, t.getNormalisedUserContext)(S.userContext), I = g.default.getInstanceOrThrow(), [
+                return R = (0, n.getNormalisedUserContext)(S.userContext), I = g.default.getInstanceOrThrow(), [
                   4,
                   l.default.getInstanceOrThrow().recipeImplementation.getTenantId({ userContext: R })
                 ];
@@ -7018,14 +7018,14 @@ function Ao() {
       }, b.clearLoginAttemptInfo = function(S) {
         return g.default.getInstanceOrThrow().recipeImplementation.clearLoginAttemptInfo(
           e(e({}, S), {
-            userContext: (0, t.getNormalisedUserContext)(
+            userContext: (0, n.getNormalisedUserContext)(
               S == null ? void 0 : S.userContext
             )
           })
         );
       }, b.signOut = function(S) {
         return g.default.getInstanceOrThrow().signOut({
-          userContext: (0, t.getNormalisedUserContext)(
+          userContext: (0, n.getNormalisedUserContext)(
             S == null ? void 0 : S.userContext
           )
         });
@@ -7035,16 +7035,16 @@ function Ao() {
   G.default = d;
   var m = d.init;
   G.init = m;
-  var h = d.createCode;
-  G.createCode = h;
-  var i = d.resendCode;
-  G.resendCode = i;
+  var f = d.createCode;
+  G.createCode = f;
+  var s = d.resendCode;
+  G.resendCode = s;
   var a = d.consumeCode;
   G.consumeCode = a;
   var c = d.doesEmailExist;
   G.doesEmailExist = c;
-  var s = d.doesPhoneNumberExist;
-  G.doesPhoneNumberExist = s;
+  var i = d.doesPhoneNumberExist;
+  G.doesPhoneNumberExist = i;
   var r = d.signOut;
   G.signOut = r;
   var u = d.getLinkCodeFromURL;
@@ -7053,66 +7053,66 @@ function Ao() {
   G.getPreAuthSessionIdFromURL = v;
   var y = d.getTenantIdFromURL;
   G.getTenantIdFromURL = y;
-  var f = d.getLoginAttemptInfo;
-  G.getLoginAttemptInfo = f;
+  var h = d.getLoginAttemptInfo;
+  G.getLoginAttemptInfo = h;
   var p = d.setLoginAttemptInfo;
   G.setLoginAttemptInfo = p;
   var w = d.clearLoginAttemptInfo;
   return G.clearLoginAttemptInfo = w, G;
 }
-var ir;
-function Oo() {
-  return ir || (ir = 1, function(e) {
-    function o(n) {
-      for (var t in n) e.hasOwnProperty(t) || (e[t] = n[t]);
+var ar;
+function xo() {
+  return ar || (ar = 1, function(e) {
+    function o(t) {
+      for (var n in t) e.hasOwnProperty(n) || (e[n] = t[n]);
     }
-    e.__esModule = !0, o(Ao());
+    e.__esModule = !0, o(Eo());
   }(Nt)), Nt;
 }
-var Po = Oo();
-const Es = /* @__PURE__ */ Bt(Po);
-var Ft = {}, te = {}, ke = {}, Je = {}, ar;
-function Eo() {
-  if (ar) return Je;
-  ar = 1;
+var Do = xo();
+const Fi = /* @__PURE__ */ Gt(Do);
+var Ft = {}, te = {}, ke = {}, Je = {}, ur;
+function Mo() {
+  if (ur) return Je;
+  ur = 1;
   var e = Je && Je.__assign || function() {
-    return e = Object.assign || function(t) {
+    return e = Object.assign || function(n) {
       for (var l, g = 1, d = arguments.length; g < d; g++) {
         l = arguments[g];
-        for (var m in l) Object.prototype.hasOwnProperty.call(l, m) && (t[m] = l[m]);
+        for (var m in l) Object.prototype.hasOwnProperty.call(l, m) && (n[m] = l[m]);
       }
-      return t;
+      return n;
     }, e.apply(this, arguments);
   };
   Object.defineProperty(Je, "__esModule", { value: !0 }), Je.normaliseUserInput = void 0;
-  var o = Jt();
-  function n(t) {
+  var o = Yt();
+  function t(n) {
     var l = e(
       {
         functions: function(g) {
           return g;
         }
       },
-      t.override
+      n.override
     );
-    return e(e({}, (0, o.normaliseAuthRecipe)(t)), { override: l });
+    return e(e({}, (0, o.normaliseAuthRecipe)(n)), { override: l });
   }
-  return Je.normaliseUserInput = n, Je;
+  return Je.normaliseUserInput = t, Je;
 }
-var fe = {}, ur;
-function xo() {
-  if (ur) return fe;
-  ur = 1;
+var fe = {}, cr;
+function Lo() {
+  if (cr) return fe;
+  cr = 1;
   var e = fe && fe.__assign || function() {
-    return e = Object.assign || function(h) {
-      for (var i, a = 1, c = arguments.length; a < c; a++) {
-        i = arguments[a];
-        for (var s in i) Object.prototype.hasOwnProperty.call(i, s) && (h[s] = i[s]);
+    return e = Object.assign || function(f) {
+      for (var s, a = 1, c = arguments.length; a < c; a++) {
+        s = arguments[a];
+        for (var i in s) Object.prototype.hasOwnProperty.call(s, i) && (f[i] = s[i]);
       }
-      return h;
+      return f;
     }, e.apply(this, arguments);
-  }, o = fe && fe.__awaiter || function(h, i, a, c) {
-    function s(r) {
+  }, o = fe && fe.__awaiter || function(f, s, a, c) {
+    function i(r) {
       return r instanceof a ? r : new a(function(u) {
         u(r);
       });
@@ -7120,24 +7120,24 @@ function xo() {
     return new (a || (a = Promise))(function(r, u) {
       function v(p) {
         try {
-          f(c.next(p));
+          h(c.next(p));
         } catch (w) {
           u(w);
         }
       }
       function y(p) {
         try {
-          f(c.throw(p));
+          h(c.throw(p));
         } catch (w) {
           u(w);
         }
       }
-      function f(p) {
-        p.done ? r(p.value) : s(p.value).then(v, y);
+      function h(p) {
+        p.done ? r(p.value) : i(p.value).then(v, y);
       }
-      f((c = c.apply(h, i || [])).next());
+      h((c = c.apply(f, s || [])).next());
     });
-  }, n = fe && fe.__generator || function(h, i) {
+  }, t = fe && fe.__generator || function(f, s) {
     var a = {
       label: 0,
       sent: function() {
@@ -7146,68 +7146,68 @@ function xo() {
       },
       trys: [],
       ops: []
-    }, c, s, r, u;
+    }, c, i, r, u;
     return u = { next: v(0), throw: v(1), return: v(2) }, typeof Symbol == "function" && (u[Symbol.iterator] = function() {
       return this;
     }), u;
-    function v(f) {
+    function v(h) {
       return function(p) {
-        return y([f, p]);
+        return y([h, p]);
       };
     }
-    function y(f) {
+    function y(h) {
       if (c) throw new TypeError("Generator is already executing.");
       for (; a; )
         try {
-          if (c = 1, s && (r = f[0] & 2 ? s.return : f[0] ? s.throw || ((r = s.return) && r.call(s), 0) : s.next) && !(r = r.call(s, f[1])).done)
+          if (c = 1, i && (r = h[0] & 2 ? i.return : h[0] ? i.throw || ((r = i.return) && r.call(i), 0) : i.next) && !(r = r.call(i, h[1])).done)
             return r;
-          switch (s = 0, r && (f = [f[0] & 2, r.value]), f[0]) {
+          switch (i = 0, r && (h = [h[0] & 2, r.value]), h[0]) {
             case 0:
             case 1:
-              r = f;
+              r = h;
               break;
             case 4:
-              return a.label++, { value: f[1], done: !1 };
+              return a.label++, { value: h[1], done: !1 };
             case 5:
-              a.label++, s = f[1], f = [0];
+              a.label++, i = h[1], h = [0];
               continue;
             case 7:
-              f = a.ops.pop(), a.trys.pop();
+              h = a.ops.pop(), a.trys.pop();
               continue;
             default:
-              if (r = a.trys, !(r = r.length > 0 && r[r.length - 1]) && (f[0] === 6 || f[0] === 2)) {
+              if (r = a.trys, !(r = r.length > 0 && r[r.length - 1]) && (h[0] === 6 || h[0] === 2)) {
                 a = 0;
                 continue;
               }
-              if (f[0] === 3 && (!r || f[1] > r[0] && f[1] < r[3])) {
-                a.label = f[1];
+              if (h[0] === 3 && (!r || h[1] > r[0] && h[1] < r[3])) {
+                a.label = h[1];
                 break;
               }
-              if (f[0] === 6 && a.label < r[1]) {
-                a.label = r[1], r = f;
+              if (h[0] === 6 && a.label < r[1]) {
+                a.label = r[1], r = h;
                 break;
               }
               if (r && a.label < r[2]) {
-                a.label = r[2], a.ops.push(f);
+                a.label = r[2], a.ops.push(h);
                 break;
               }
               r[2] && a.ops.pop(), a.trys.pop();
               continue;
           }
-          f = i.call(h, a);
+          h = s.call(f, a);
         } catch (p) {
-          f = [6, p], s = 0;
+          h = [6, p], i = 0;
         } finally {
           c = r = 0;
         }
-      if (f[0] & 5) throw f[1];
-      return { value: f[0] ? f[1] : void 0, done: !0 };
+      if (h[0] & 5) throw h[1];
+      return { value: h[0] ? h[1] : void 0, done: !0 };
     }
   };
   Object.defineProperty(fe, "__esModule", { value: !0 }), fe.getRecipeImplementation = void 0;
-  var t = Yt(), l = Ie(), g = Pr(), d = Gt();
-  function m(h) {
-    var i = new t.default(h.recipeId, h.appInfo);
+  var n = Zt(), l = Ie(), g = xr(), d = Xt();
+  function m(f) {
+    var s = new n.default(f.recipeId, f.appInfo);
     return {
       getStateAndOtherInfoFromStorage: function() {
         var a = d.WindowHandlerReference.getReferenceOrThrow().windowHandler.sessionStorage.getItemSync(
@@ -7223,8 +7223,8 @@ function xo() {
       setStateAndOtherInfoToStorage: function(a) {
         return o(this, void 0, void 0, function() {
           var c;
-          return n(this, function(s) {
-            switch (s.label) {
+          return t(this, function(i) {
+            switch (i.label) {
               case 0:
                 return c = JSON.stringify(e({}, a.state)), [
                   4,
@@ -7234,7 +7234,7 @@ function xo() {
                   )
                 ];
               case 1:
-                return s.sent(), [
+                return i.sent(), [
                   2
                   /*return*/
                 ];
@@ -7244,8 +7244,8 @@ function xo() {
       },
       getAuthorisationURLWithQueryParamsAndSetState: function(a) {
         return o(this, void 0, void 0, function() {
-          var c, s, r, u, v;
-          return n(this, function(y) {
+          var c, i, r, u, v;
+          return t(this, function(y) {
             switch (y.label) {
               case 0:
                 return [
@@ -7259,8 +7259,8 @@ function xo() {
                   })
                 ];
               case 1:
-                return c = y.sent(), s = a.redirectURIOnProviderDashboard !== void 0 && a.frontendRedirectURI !== a.redirectURIOnProviderDashboard ? a.frontendRedirectURI : void 0, r = this.generateStateToSendToOAuthProvider({
-                  frontendRedirectURI: s,
+                return c = y.sent(), i = a.redirectURIOnProviderDashboard !== void 0 && a.frontendRedirectURI !== a.redirectURIOnProviderDashboard ? a.frontendRedirectURI : void 0, r = this.generateStateToSendToOAuthProvider({
+                  frontendRedirectURI: i,
                   userContext: a.userContext
                 }), u = Date.now() + 1e3 * 60 * 10, [
                   4,
@@ -7287,35 +7287,35 @@ function xo() {
       },
       getAuthorisationURLFromBackend: function(a) {
         return o(this, void 0, void 0, function() {
-          var c, s, r, u;
-          return n(this, function(v) {
+          var c, i, r, u;
+          return t(this, function(v) {
             switch (v.label) {
               case 0:
                 return c = {
                   thirdPartyId: a.thirdPartyId,
                   redirectURIOnProviderDashboard: a.redirectURIOnProviderDashboard
-                }, h.clientType !== void 0 && (c.clientType = h.clientType), [
+                }, f.clientType !== void 0 && (c.clientType = f.clientType), [
                   4,
-                  i.get(
+                  s.get(
                     a.tenantId,
                     "/authorisationurl",
                     {},
                     c,
-                    t.default.preparePreAPIHook({
-                      recipePreAPIHook: h.preAPIHook,
+                    n.default.preparePreAPIHook({
+                      recipePreAPIHook: f.preAPIHook,
                       action: "GET_AUTHORISATION_URL",
                       options: a.options,
                       userContext: a.userContext
                     }),
-                    t.default.preparePostAPIHook({
-                      recipePostAPIHook: h.postAPIHook,
+                    n.default.preparePostAPIHook({
+                      recipePostAPIHook: f.postAPIHook,
                       action: "GET_AUTHORISATION_URL",
                       userContext: a.userContext
                     })
                   )
                 ];
               case 1:
-                return s = v.sent(), r = s.jsonBody, u = s.fetchResponse, [
+                return i = v.sent(), r = i.jsonBody, u = i.fetchResponse, [
                   2,
                   {
                     status: "OK",
@@ -7330,18 +7330,18 @@ function xo() {
       },
       signInAndUp: function(a) {
         return o(this, void 0, void 0, function() {
-          var c, s, r, u, v, y, f, p, w;
-          return n(this, function(b) {
+          var c, i, r, u, v, y, h, p, w;
+          return t(this, function(b) {
             switch (b.label) {
               case 0:
                 return c = this.getStateAndOtherInfoFromStorage({
                   userContext: a.userContext
-                }), s = this.getAuthStateFromURL({
+                }), i = this.getAuthStateFromURL({
                   userContext: a.userContext
                 }), [
                   4,
                   this.verifyAndGetStateOrThrowError({
-                    stateFromAuthProvider: s,
+                    stateFromAuthProvider: i,
                     stateObjectFromStorage: c,
                     userContext: a.userContext
                   })
@@ -7353,13 +7353,13 @@ function xo() {
                   throw new Error("Auth provider responded with error: ".concat(u));
                 return v = (0, l.getAllQueryParams)(), y = Object.fromEntries(v), [
                   4,
-                  i.post(
+                  s.post(
                     r.tenantId,
                     "/signinup",
                     {
                       body: JSON.stringify({
                         thirdPartyId: r.thirdPartyId,
-                        clientType: h.clientType,
+                        clientType: f.clientType,
                         redirectURIInfo: {
                           redirectURIOnProviderDashboard: r.redirectURIOnProviderDashboard,
                           redirectURIQueryParams: y,
@@ -7368,21 +7368,21 @@ function xo() {
                         shouldTryLinkingWithSessionUser: r.shouldTryLinkingWithSessionUser
                       })
                     },
-                    t.default.preparePreAPIHook({
-                      recipePreAPIHook: h.preAPIHook,
+                    n.default.preparePreAPIHook({
+                      recipePreAPIHook: f.preAPIHook,
                       action: "THIRD_PARTY_SIGN_IN_UP",
                       options: a.options,
                       userContext: a.userContext
                     }),
-                    t.default.preparePostAPIHook({
-                      recipePostAPIHook: h.postAPIHook,
+                    n.default.preparePostAPIHook({
+                      recipePostAPIHook: f.postAPIHook,
                       action: "THIRD_PARTY_SIGN_IN_UP",
                       userContext: a.userContext
                     })
                   )
                 ];
               case 2:
-                if (f = b.sent(), p = f.jsonBody, w = f.fetchResponse, p.status === "FIELD_ERROR")
+                if (h = b.sent(), p = h.jsonBody, w = h.fetchResponse, p.status === "FIELD_ERROR")
                   throw new g.default(p.error);
                 return p.status !== "OK" ? [
                   2,
@@ -7403,15 +7403,15 @@ function xo() {
       },
       generateStateToSendToOAuthProvider: function(a) {
         var c = {
-          state: "".concat(1e20).replace(/[018]/g, function(s) {
-            return (parseInt(s) ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> parseInt(s) / 4).toString(16);
+          state: "".concat(1e20).replace(/[018]/g, function(i) {
+            return (parseInt(i) ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> parseInt(i) / 4).toString(16);
           })
         };
         return a !== void 0 && a.frontendRedirectURI !== void 0 && (c.frontendRedirectURI = a.frontendRedirectURI), btoa(JSON.stringify(c));
       },
       verifyAndGetStateOrThrowError: function(a) {
         return o(this, void 0, void 0, function() {
-          return n(this, function(c) {
+          return t(this, function(c) {
             if (a.stateObjectFromStorage === void 0 || a.stateObjectFromStorage.stateForAuthProvider === void 0)
               throw new Error("No valid auth state present in session storage");
             if (a.stateFromAuthProvider === void 0)
@@ -7437,43 +7437,43 @@ function xo() {
   }
   return fe.default = m, fe.getRecipeImplementation = m, fe;
 }
-var cr;
-function Do() {
-  if (cr) return ke;
-  cr = 1;
+var lr;
+function Uo() {
+  if (lr) return ke;
+  lr = 1;
   var e = ke && ke.__extends || /* @__PURE__ */ function() {
-    var h = function(i, a) {
-      return h = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(c, s) {
-        c.__proto__ = s;
-      } || function(c, s) {
-        for (var r in s) Object.prototype.hasOwnProperty.call(s, r) && (c[r] = s[r]);
-      }, h(i, a);
+    var f = function(s, a) {
+      return f = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(c, i) {
+        c.__proto__ = i;
+      } || function(c, i) {
+        for (var r in i) Object.prototype.hasOwnProperty.call(i, r) && (c[r] = i[r]);
+      }, f(s, a);
     };
-    return function(i, a) {
+    return function(s, a) {
       if (typeof a != "function" && a !== null)
         throw new TypeError("Class extends value " + String(a) + " is not a constructor or null");
-      h(i, a);
+      f(s, a);
       function c() {
-        this.constructor = i;
+        this.constructor = s;
       }
-      i.prototype = a === null ? Object.create(a) : (c.prototype = a.prototype, new c());
+      s.prototype = a === null ? Object.create(a) : (c.prototype = a.prototype, new c());
     };
   }(), o = ke && ke.__assign || function() {
-    return o = Object.assign || function(h) {
-      for (var i, a = 1, c = arguments.length; a < c; a++) {
-        i = arguments[a];
-        for (var s in i) Object.prototype.hasOwnProperty.call(i, s) && (h[s] = i[s]);
+    return o = Object.assign || function(f) {
+      for (var s, a = 1, c = arguments.length; a < c; a++) {
+        s = arguments[a];
+        for (var i in s) Object.prototype.hasOwnProperty.call(s, i) && (f[i] = s[i]);
       }
-      return h;
+      return f;
     }, o.apply(this, arguments);
   };
   Object.defineProperty(ke, "__esModule", { value: !0 }), ke.Recipe = void 0;
-  var n = Eo(), t = Et(), l = xo(), g = Ie(), d = Zt(), m = (
+  var t = Mo(), n = Pt(), l = Lo(), g = Ie(), d = en(), m = (
     /** @class */
-    function(h) {
-      e(i, h);
-      function i(a) {
-        var c = h.call(this, (0, n.normaliseUserInput)(a)) || this, s = new t.default(
+    function(f) {
+      e(s, f);
+      function s(a) {
+        var c = f.call(this, (0, t.normaliseUserInput)(a)) || this, i = new n.default(
           (0, l.default)({
             recipeId: c.config.recipeId,
             appInfo: c.config.appInfo,
@@ -7482,46 +7482,46 @@ function Do() {
             postAPIHook: c.config.postAPIHook
           })
         );
-        return c.recipeImplementation = s.override(c.config.override.functions).build(), c;
+        return c.recipeImplementation = i.override(c.config.override.functions).build(), c;
       }
-      return i.init = function(a) {
-        return function(c, s) {
-          return i.instance = new i(
-            o(o({}, a), { recipeId: i.RECIPE_ID, appInfo: c, clientType: s })
-          ), i.instance;
+      return s.init = function(a) {
+        return function(c, i) {
+          return s.instance = new s(
+            o(o({}, a), { recipeId: s.RECIPE_ID, appInfo: c, clientType: i })
+          ), s.instance;
         };
-      }, i.getInstanceOrThrow = function() {
-        if (i.instance === void 0) {
+      }, s.getInstanceOrThrow = function() {
+        if (s.instance === void 0) {
           var a = "No instance of ThirdParty found. Ensure that the 'ThirdParty.init' method is called within the 'SuperTokens.init' recipeList.";
           throw a = (0, g.checkForSSRErrorAndAppendIfNeeded)(a), Error(a);
         }
-        return i.instance;
-      }, i.reset = function() {
-        (0, g.isTest)() && (i.instance = void 0);
-      }, i.RECIPE_ID = "thirdparty", i;
+        return s.instance;
+      }, s.reset = function() {
+        (0, g.isTest)() && (s.instance = void 0);
+      }, s.RECIPE_ID = "thirdparty", s;
     }(d.default)
   );
   return ke.Recipe = m, ke.default = m, ke;
 }
-var lr;
-function Mo() {
-  if (lr) return te;
-  lr = 1;
+var dr;
+function Ho() {
+  if (dr) return te;
+  dr = 1;
   var e = te && te.__assign || function() {
-    return e = Object.assign || function(s) {
+    return e = Object.assign || function(i) {
       for (var r, u = 1, v = arguments.length; u < v; u++) {
         r = arguments[u];
-        for (var y in r) Object.prototype.hasOwnProperty.call(r, y) && (s[y] = r[y]);
+        for (var y in r) Object.prototype.hasOwnProperty.call(r, y) && (i[y] = r[y]);
       }
-      return s;
+      return i;
     }, e.apply(this, arguments);
-  }, o = te && te.__awaiter || function(s, r, u, v) {
-    function y(f) {
-      return f instanceof u ? f : new u(function(p) {
-        p(f);
+  }, o = te && te.__awaiter || function(i, r, u, v) {
+    function y(h) {
+      return h instanceof u ? h : new u(function(p) {
+        p(h);
       });
     }
-    return new (u || (u = Promise))(function(f, p) {
+    return new (u || (u = Promise))(function(h, p) {
       function w(R) {
         try {
           S(v.next(R));
@@ -7537,20 +7537,20 @@ function Mo() {
         }
       }
       function S(R) {
-        R.done ? f(R.value) : y(R.value).then(w, b);
+        R.done ? h(R.value) : y(R.value).then(w, b);
       }
-      S((v = v.apply(s, r || [])).next());
+      S((v = v.apply(i, r || [])).next());
     });
-  }, n = te && te.__generator || function(s, r) {
+  }, t = te && te.__generator || function(i, r) {
     var u = {
       label: 0,
       sent: function() {
-        if (f[0] & 1) throw f[1];
-        return f[1];
+        if (h[0] & 1) throw h[1];
+        return h[1];
       },
       trys: [],
       ops: []
-    }, v, y, f, p;
+    }, v, y, h, p;
     return p = { next: w(0), throw: w(1), return: w(2) }, typeof Symbol == "function" && (p[Symbol.iterator] = function() {
       return this;
     }), p;
@@ -7563,12 +7563,12 @@ function Mo() {
       if (v) throw new TypeError("Generator is already executing.");
       for (; u; )
         try {
-          if (v = 1, y && (f = S[0] & 2 ? y.return : S[0] ? y.throw || ((f = y.return) && f.call(y), 0) : y.next) && !(f = f.call(y, S[1])).done)
-            return f;
-          switch (y = 0, f && (S = [S[0] & 2, f.value]), S[0]) {
+          if (v = 1, y && (h = S[0] & 2 ? y.return : S[0] ? y.throw || ((h = y.return) && h.call(y), 0) : y.next) && !(h = h.call(y, S[1])).done)
+            return h;
+          switch (y = 0, h && (S = [S[0] & 2, h.value]), S[0]) {
             case 0:
             case 1:
-              f = S;
+              h = S;
               break;
             case 4:
               return u.label++, { value: S[1], done: !1 };
@@ -7579,69 +7579,69 @@ function Mo() {
               S = u.ops.pop(), u.trys.pop();
               continue;
             default:
-              if (f = u.trys, !(f = f.length > 0 && f[f.length - 1]) && (S[0] === 6 || S[0] === 2)) {
+              if (h = u.trys, !(h = h.length > 0 && h[h.length - 1]) && (S[0] === 6 || S[0] === 2)) {
                 u = 0;
                 continue;
               }
-              if (S[0] === 3 && (!f || S[1] > f[0] && S[1] < f[3])) {
+              if (S[0] === 3 && (!h || S[1] > h[0] && S[1] < h[3])) {
                 u.label = S[1];
                 break;
               }
-              if (S[0] === 6 && u.label < f[1]) {
-                u.label = f[1], f = S;
+              if (S[0] === 6 && u.label < h[1]) {
+                u.label = h[1], h = S;
                 break;
               }
-              if (f && u.label < f[2]) {
-                u.label = f[2], u.ops.push(S);
+              if (h && u.label < h[2]) {
+                u.label = h[2], u.ops.push(S);
                 break;
               }
-              f[2] && u.ops.pop(), u.trys.pop();
+              h[2] && u.ops.pop(), u.trys.pop();
               continue;
           }
-          S = r.call(s, u);
+          S = r.call(i, u);
         } catch (R) {
           S = [6, R], y = 0;
         } finally {
-          v = f = 0;
+          v = h = 0;
         }
       if (S[0] & 5) throw S[1];
       return { value: S[0] ? S[1] : void 0, done: !0 };
     }
   };
   Object.defineProperty(te, "__esModule", { value: !0 }), te.signOut = te.signInAndUp = te.getAuthorisationURLWithQueryParamsAndSetState = te.getStateAndOtherInfoFromStorage = te.init = void 0;
-  var t = Ie(), l = en(), g = Do(), d = (
+  var n = Ie(), l = tn(), g = Uo(), d = (
     /** @class */
     function() {
-      function s() {
+      function i() {
       }
-      return s.init = function(r) {
+      return i.init = function(r) {
         return g.default.init(r);
-      }, s.signOut = function(r) {
+      }, i.signOut = function(r) {
         return g.default.getInstanceOrThrow().signOut({
-          userContext: (0, t.getNormalisedUserContext)(
+          userContext: (0, n.getNormalisedUserContext)(
             r == null ? void 0 : r.userContext
           )
         });
-      }, s.getStateAndOtherInfoFromStorage = function(r) {
+      }, i.getStateAndOtherInfoFromStorage = function(r) {
         return g.default.getInstanceOrThrow().recipeImplementation.getStateAndOtherInfoFromStorage(
           e(e({}, r), {
-            userContext: (0, t.getNormalisedUserContext)(
+            userContext: (0, n.getNormalisedUserContext)(
               r == null ? void 0 : r.userContext
             )
           })
         );
-      }, s.getAuthorisationURLWithQueryParamsAndSetState = function(r) {
+      }, i.getAuthorisationURLWithQueryParamsAndSetState = function(r) {
         return o(this, void 0, void 0, function() {
           var u, v, y;
-          return n(this, function(f) {
-            switch (f.label) {
+          return t(this, function(h) {
+            switch (h.label) {
               case 0:
-                return u = (0, t.getNormalisedUserContext)(r.userContext), v = g.default.getInstanceOrThrow(), [
+                return u = (0, n.getNormalisedUserContext)(r.userContext), v = g.default.getInstanceOrThrow(), [
                   4,
                   l.default.getInstanceOrThrow().recipeImplementation.getTenantId({ userContext: u })
                 ];
               case 1:
-                return y = f.sent(), [
+                return y = h.sent(), [
                   2,
                   v.recipeImplementation.getAuthorisationURLWithQueryParamsAndSetState(
                     e(e({ tenantId: y }, r), {
@@ -7653,43 +7653,43 @@ function Mo() {
             }
           });
         });
-      }, s.signInAndUp = function(r) {
+      }, i.signInAndUp = function(r) {
         return g.default.getInstanceOrThrow().recipeImplementation.signInAndUp(
           e(e({}, r), {
-            userContext: (0, t.getNormalisedUserContext)(
+            userContext: (0, n.getNormalisedUserContext)(
               r == null ? void 0 : r.userContext
             )
           })
         );
-      }, s;
+      }, i;
     }()
   );
   te.default = d;
   var m = d.init;
   te.init = m;
-  var h = d.getAuthorisationURLWithQueryParamsAndSetState;
-  te.getAuthorisationURLWithQueryParamsAndSetState = h;
-  var i = d.getStateAndOtherInfoFromStorage;
-  te.getStateAndOtherInfoFromStorage = i;
+  var f = d.getAuthorisationURLWithQueryParamsAndSetState;
+  te.getAuthorisationURLWithQueryParamsAndSetState = f;
+  var s = d.getStateAndOtherInfoFromStorage;
+  te.getStateAndOtherInfoFromStorage = s;
   var a = d.signInAndUp;
   te.signInAndUp = a;
   var c = d.signOut;
   return te.signOut = c, te;
 }
-var dr;
-function Lo() {
-  return dr || (dr = 1, function(e) {
-    function o(n) {
-      for (var t in n) e.hasOwnProperty(t) || (e[t] = n[t]);
+var fr;
+function No() {
+  return fr || (fr = 1, function(e) {
+    function o(t) {
+      for (var n in t) e.hasOwnProperty(n) || (e[n] = t[n]);
     }
-    e.__esModule = !0, o(Mo());
+    e.__esModule = !0, o(Ho());
   }(Ft)), Ft;
 }
-var Uo = Lo();
-const xs = /* @__PURE__ */ Bt(Uo);
-var qt = {}, Ye = {}, fr;
-function Ho() {
-  return fr || (fr = 1, function(e) {
+var Fo = No();
+const qi = /* @__PURE__ */ Gt(Fo);
+var qt = {}, Ye = {}, hr;
+function qo() {
+  return hr || (hr = 1, function(e) {
     var o = Ye && Ye.__awaiter || function(p, w, b, S) {
       function R(I) {
         return I instanceof b ? I : new b(function(T) {
@@ -7716,7 +7716,7 @@ function Ho() {
         }
         C((S = S.apply(p, w || [])).next());
       });
-    }, n = Ye && Ye.__generator || function(p, w) {
+    }, t = Ye && Ye.__generator || function(p, w) {
       var b = {
         label: 0,
         sent: function() {
@@ -7784,7 +7784,7 @@ function Ho() {
       }
     };
     Object.defineProperty(e, "__esModule", { value: !0 }), e.getInvalidClaimsFromResponse = e.getClaimValue = e.validateClaims = e.signOut = e.addAxiosInterceptors = e.doesSessionExist = e.attemptRefreshingSession = e.getAccessToken = e.getAccessTokenPayloadSecurely = e.getUserId = e.init = e.BooleanClaim = e.PrimitiveArrayClaim = e.PrimitiveClaim = void 0;
-    var t = Ie(), l = Mr(), g = (
+    var n = Ie(), l = Ur(), g = (
       /** @class */
       function() {
         function p() {
@@ -7793,23 +7793,23 @@ function Ho() {
           return l.default.init(w);
         }, p.getUserId = function(w) {
           return l.default.getInstanceOrThrow().getUserId({
-            userContext: (0, t.getNormalisedUserContext)(
+            userContext: (0, n.getNormalisedUserContext)(
               w == null ? void 0 : w.userContext
             )
           });
         }, p.getAccessToken = function(w) {
           return l.default.getInstanceOrThrow().getAccessToken({
-            userContext: (0, t.getNormalisedUserContext)(
+            userContext: (0, n.getNormalisedUserContext)(
               w == null ? void 0 : w.userContext
             )
           });
         }, p.getAccessTokenPayloadSecurely = function(w) {
           return o(this, void 0, void 0, function() {
-            return n(this, function(b) {
+            return t(this, function(b) {
               return [
                 2,
                 l.default.getInstanceOrThrow().getAccessTokenPayloadSecurely({
-                  userContext: (0, t.getNormalisedUserContext)(
+                  userContext: (0, n.getNormalisedUserContext)(
                     w == null ? void 0 : w.userContext
                   )
                 })
@@ -7818,42 +7818,42 @@ function Ho() {
           });
         }, p.attemptRefreshingSession = function() {
           return o(this, void 0, void 0, function() {
-            return n(this, function(w) {
+            return t(this, function(w) {
               return [2, l.default.getInstanceOrThrow().attemptRefreshingSession()];
             });
           });
         }, p.doesSessionExist = function(w) {
           return l.default.getInstanceOrThrow().doesSessionExist({
-            userContext: (0, t.getNormalisedUserContext)(
+            userContext: (0, n.getNormalisedUserContext)(
               w == null ? void 0 : w.userContext
             )
           });
         }, p.addAxiosInterceptors = function(w, b) {
-          return l.default.addAxiosInterceptors(w, (0, t.getNormalisedUserContext)(b));
+          return l.default.addAxiosInterceptors(w, (0, n.getNormalisedUserContext)(b));
         }, p.signOut = function(w) {
           return l.default.getInstanceOrThrow().signOut({
-            userContext: (0, t.getNormalisedUserContext)(
+            userContext: (0, n.getNormalisedUserContext)(
               w == null ? void 0 : w.userContext
             )
           });
         }, p.getClaimValue = function(w) {
           return l.default.getInstanceOrThrow().getClaimValue({
             claim: w.claim,
-            userContext: (0, t.getNormalisedUserContext)(
+            userContext: (0, n.getNormalisedUserContext)(
               w == null ? void 0 : w.userContext
             )
           });
         }, p.validateClaims = function(w) {
           return l.default.getInstanceOrThrow().validateClaims({
             overrideGlobalClaimValidators: w == null ? void 0 : w.overrideGlobalClaimValidators,
-            userContext: (0, t.getNormalisedUserContext)(
+            userContext: (0, n.getNormalisedUserContext)(
               w == null ? void 0 : w.userContext
             )
           });
         }, p.getInvalidClaimsFromResponse = function(w) {
           return l.default.getInstanceOrThrow().getInvalidClaimsFromResponse({
             response: w.response,
-            userContext: (0, t.getNormalisedUserContext)(
+            userContext: (0, n.getNormalisedUserContext)(
               w == null ? void 0 : w.userContext
             )
           });
@@ -7865,16 +7865,16 @@ function Ho() {
     e.init = d;
     var m = g.getUserId;
     e.getUserId = m;
-    var h = g.getAccessTokenPayloadSecurely;
-    e.getAccessTokenPayloadSecurely = h;
-    var i = g.getAccessToken;
-    e.getAccessToken = i;
+    var f = g.getAccessTokenPayloadSecurely;
+    e.getAccessTokenPayloadSecurely = f;
+    var s = g.getAccessToken;
+    e.getAccessToken = s;
     var a = g.attemptRefreshingSession;
     e.attemptRefreshingSession = a;
     var c = g.doesSessionExist;
     e.doesSessionExist = c;
-    var s = g.addAxiosInterceptors;
-    e.addAxiosInterceptors = s;
+    var i = g.addAxiosInterceptors;
+    e.addAxiosInterceptors = i;
     var r = g.signOut;
     e.signOut = r;
     var u = g.validateClaims;
@@ -7883,142 +7883,142 @@ function Ho() {
     e.getClaimValue = v;
     var y = g.getInvalidClaimsFromResponse;
     e.getInvalidClaimsFromResponse = y;
-    var f = Dr();
+    var h = Lr();
     Object.defineProperty(e, "PrimitiveClaim", {
       enumerable: !0,
       get: function() {
-        return f.PrimitiveClaim;
+        return h.PrimitiveClaim;
       }
     }), Object.defineProperty(e, "PrimitiveArrayClaim", {
       enumerable: !0,
       get: function() {
-        return f.PrimitiveArrayClaim;
+        return h.PrimitiveArrayClaim;
       }
     }), Object.defineProperty(e, "BooleanClaim", {
       enumerable: !0,
       get: function() {
-        return f.BooleanClaim;
+        return h.BooleanClaim;
       }
     });
   }(Ye)), Ye;
 }
-var hr;
-function No() {
-  return hr || (hr = 1, function(e) {
-    function o(n) {
-      for (var t in n) e.hasOwnProperty(t) || (e[t] = n[t]);
+var gr;
+function jo() {
+  return gr || (gr = 1, function(e) {
+    function o(t) {
+      for (var n in t) e.hasOwnProperty(n) || (e[n] = t[n]);
     }
-    e.__esModule = !0, o(Ho());
+    e.__esModule = !0, o(qo());
   }(qt)), qt;
 }
-var Fo = No();
-const Ds = /* @__PURE__ */ Bt(Fo);
-var qo = Object.defineProperty, gr = Object.getOwnPropertySymbols, jo = Object.prototype.hasOwnProperty, $o = Object.prototype.propertyIsEnumerable, vr = (e, o, n) => o in e ? qo(e, o, { enumerable: !0, configurable: !0, writable: !0, value: n }) : e[o] = n, Vo = (e, o) => {
-  for (var n in o || (o = {}))
-    jo.call(o, n) && vr(e, n, o[n]);
-  if (gr)
-    for (var n of gr(o))
-      $o.call(o, n) && vr(e, n, o[n]);
+var $o = jo();
+const ji = /* @__PURE__ */ Gt($o);
+var Vo = Object.defineProperty, vr = Object.getOwnPropertySymbols, Wo = Object.prototype.hasOwnProperty, Bo = Object.prototype.propertyIsEnumerable, mr = (e, o, t) => o in e ? Vo(e, o, { enumerable: !0, configurable: !0, writable: !0, value: t }) : e[o] = t, Go = (e, o) => {
+  for (var t in o || (o = {}))
+    Wo.call(o, t) && mr(e, t, o[t]);
+  if (vr)
+    for (var t of vr(o))
+      Bo.call(o, t) && mr(e, t, o[t]);
   return e;
 };
-function tn(e) {
+function nn(e) {
   return e == null || e === "" || Array.isArray(e) && e.length === 0 || !(e instanceof Date) && typeof e == "object" && Object.keys(e).length === 0;
 }
-function Wo(e) {
+function Xo(e) {
   return typeof e == "function" && "call" in e && "apply" in e;
 }
 function Y(e) {
-  return !tn(e);
+  return !nn(e);
 }
 function Fe(e, o = !0) {
   return e instanceof Object && e.constructor === Object && (o || Object.keys(e).length !== 0);
 }
-function Lr(e = {}, o = {}) {
-  const n = Vo({}, e);
-  return Object.keys(o).forEach((t) => {
-    const l = t;
-    Fe(o[l]) && l in e && Fe(e[l]) ? n[l] = Lr(e[l], o[l]) : n[l] = o[l];
-  }), n;
+function Hr(e = {}, o = {}) {
+  const t = Go({}, e);
+  return Object.keys(o).forEach((n) => {
+    const l = n;
+    Fe(o[l]) && l in e && Fe(e[l]) ? t[l] = Hr(e[l], o[l]) : t[l] = o[l];
+  }), t;
 }
-function Ur(...e) {
-  return e.reduce((o, n, t) => t === 0 ? n : Lr(o, n), {});
+function Nr(...e) {
+  return e.reduce((o, t, n) => n === 0 ? t : Hr(o, t), {});
 }
-function Ms(e, o) {
-  let n = -1;
+function $i(e, o) {
+  let t = -1;
   if (Y(e))
     try {
-      n = e.findLastIndex(o);
+      t = e.findLastIndex(o);
     } catch {
-      n = e.lastIndexOf([...e].reverse().find(o));
+      t = e.lastIndexOf([...e].reverse().find(o));
     }
-  return n;
+  return t;
 }
 function Ue(e, ...o) {
-  return Wo(e) ? e(...o) : e;
+  return Xo(e) ? e(...o) : e;
 }
 function qe(e, o = !0) {
   return typeof e == "string" && (o || e !== "");
 }
-function mr(e) {
+function pr(e) {
   return qe(e) ? e.replace(/(-|_)/g, "").toLowerCase() : e;
 }
-function Bo(e, o = "", n = {}) {
-  const t = mr(o).split("."), l = t.shift();
+function zo(e, o = "", t = {}) {
+  const n = pr(o).split("."), l = n.shift();
   if (l) {
     if (Fe(e)) {
-      const g = Object.keys(e).find((d) => mr(d) === l) || "";
-      return Bo(Ue(e[g], n), t.join("."), n);
+      const g = Object.keys(e).find((d) => pr(d) === l) || "";
+      return zo(Ue(e[g], t), n.join("."), t);
     }
     return;
   }
-  return Ue(e, n);
+  return Ue(e, t);
 }
-function Hr(e, o = !0) {
+function Fr(e, o = !0) {
   return Array.isArray(e) && (o || e.length !== 0);
 }
-function Go(e) {
+function Ko(e) {
   return Y(e) && !isNaN(e);
 }
-function Ls(e = "") {
+function Vi(e = "") {
   return Y(e) && e.length === 1 && !!e.match(/\S| /);
 }
 function He(e, o) {
   if (o) {
-    const n = o.test(e);
-    return o.lastIndex = 0, n;
+    const t = o.test(e);
+    return o.lastIndex = 0, t;
   }
   return !1;
 }
-function Us(...e) {
-  return Ur(...e);
+function Wi(...e) {
+  return Nr(...e);
 }
 function vt(e) {
   return e && e.replace(/\/\*(?:(?!\*\/)[\s\S])*\*\/|[\r\n\t]+/g, "").replace(/ {2,}/g, " ").replace(/ ([{:}]) /g, "$1").replace(/([;,]) /g, "$1").replace(/ !/g, "!").replace(/: /g, ":");
 }
-function Hs(e) {
+function Bi(e) {
   return qe(e, !1) ? e[0].toUpperCase() + e.slice(1) : e;
 }
-function Nr(e) {
-  return qe(e) ? e.replace(/(_)/g, "-").replace(/[A-Z]/g, (o, n) => n === 0 ? o : "-" + o.toLowerCase()).toLowerCase() : e;
+function qr(e) {
+  return qe(e) ? e.replace(/(_)/g, "-").replace(/[A-Z]/g, (o, t) => t === 0 ? o : "-" + o.toLowerCase()).toLowerCase() : e;
 }
-function pr(e) {
-  return qe(e) ? e.replace(/[A-Z]/g, (o, n) => n === 0 ? o : "." + o.toLowerCase()).toLowerCase() : e;
+function yr(e) {
+  return qe(e) ? e.replace(/[A-Z]/g, (o, t) => t === 0 ? o : "." + o.toLowerCase()).toLowerCase() : e;
 }
-function Fr() {
+function jr() {
   const e = /* @__PURE__ */ new Map();
   return {
-    on(o, n) {
-      let t = e.get(o);
-      return t ? t.push(n) : t = [n], e.set(o, t), this;
+    on(o, t) {
+      let n = e.get(o);
+      return n ? n.push(t) : n = [t], e.set(o, n), this;
     },
-    off(o, n) {
-      const t = e.get(o);
-      return t && t.splice(t.indexOf(n) >>> 0, 1), this;
+    off(o, t) {
+      const n = e.get(o);
+      return n && n.splice(n.indexOf(t) >>> 0, 1), this;
     },
-    emit(o, n) {
-      const t = e.get(o);
-      t && t.forEach((l) => {
-        l(n);
+    emit(o, t) {
+      const n = e.get(o);
+      n && n.forEach((l) => {
+        l(t);
       });
     },
     clear() {
@@ -8026,146 +8026,175 @@ function Fr() {
     }
   };
 }
-function Xo(e, o) {
+function Qo(e, o) {
   return e ? e.classList ? e.classList.contains(o) : new RegExp("(^| )" + o + "( |$)", "gi").test(e.className) : !1;
 }
-function Ns(e, o) {
+function Gi(e, o) {
   if (e && o) {
-    const n = (t) => {
-      Xo(e, t) || (e.classList ? e.classList.add(t) : e.className += " " + t);
+    const t = (n) => {
+      Qo(e, n) || (e.classList ? e.classList.add(n) : e.className += " " + n);
     };
-    [o].flat().filter(Boolean).forEach((t) => t.split(" ").forEach(n));
+    [o].flat().filter(Boolean).forEach((n) => n.split(" ").forEach(t));
   }
 }
-function Fs(e, o) {
+function Xi(e, o) {
   if (e && o) {
-    const n = (t) => {
-      e.classList ? e.classList.remove(t) : e.className = e.className.replace(new RegExp("(^|\\b)" + t.split(" ").join("|") + "(\\b|$)", "gi"), " ");
+    const t = (n) => {
+      e.classList ? e.classList.remove(n) : e.className = e.className.replace(new RegExp("(^|\\b)" + n.split(" ").join("|") + "(\\b|$)", "gi"), " ");
     };
-    [o].flat().filter(Boolean).forEach((t) => t.split(" ").forEach(n));
+    [o].flat().filter(Boolean).forEach((n) => n.split(" ").forEach(t));
   }
 }
-function yr(e) {
+function wr(e) {
   for (const o of document == null ? void 0 : document.styleSheets)
     try {
-      for (const n of o == null ? void 0 : o.cssRules)
-        for (const t of n == null ? void 0 : n.style)
-          if (e.test(t))
-            return { name: t, value: n.style.getPropertyValue(t).trim() };
+      for (const t of o == null ? void 0 : o.cssRules)
+        for (const n of t == null ? void 0 : t.style)
+          if (e.test(n))
+            return { name: n, value: t.style.getPropertyValue(n).trim() };
     } catch {
     }
   return null;
 }
-function zo(e) {
+function Jo(e) {
   const o = { width: 0, height: 0 };
   return e && (e.style.visibility = "hidden", e.style.display = "block", o.width = e.offsetWidth, o.height = e.offsetHeight, e.style.display = "none", e.style.visibility = "visible"), o;
 }
-function Ko() {
-  const e = window, o = document, n = o.documentElement, t = o.getElementsByTagName("body")[0], l = e.innerWidth || n.clientWidth || t.clientWidth, g = e.innerHeight || n.clientHeight || t.clientHeight;
+function $r() {
+  const e = window, o = document, t = o.documentElement, n = o.getElementsByTagName("body")[0], l = e.innerWidth || t.clientWidth || n.clientWidth, g = e.innerHeight || t.clientHeight || n.clientHeight;
   return { width: l, height: g };
 }
-function Vt(e) {
+function Wt(e) {
   return e ? Math.abs(e.scrollLeft) : 0;
 }
-function Qo() {
+function Yo() {
   const e = document.documentElement;
-  return (window.pageXOffset || Vt(e)) - (e.clientLeft || 0);
+  return (window.pageXOffset || Wt(e)) - (e.clientLeft || 0);
 }
-function Jo() {
+function Zo() {
   const e = document.documentElement;
   return (window.pageYOffset || e.scrollTop) - (e.clientTop || 0);
 }
-function Yo(e) {
+function ei(e) {
   return e ? getComputedStyle(e).direction === "rtl" : !1;
 }
-function qs(e, o, n = !0) {
-  var t, l, g, d;
+function zi(e, o, t = !0) {
+  var n, l, g, d;
   if (e) {
-    const m = e.offsetParent ? { width: e.offsetWidth, height: e.offsetHeight } : zo(e), h = m.height, i = m.width, a = o.offsetHeight, c = o.offsetWidth, s = o.getBoundingClientRect(), r = Jo(), u = Qo(), v = Ko();
-    let y, f, p = "top";
-    s.top + a + h > v.height ? (y = s.top + r - h, p = "bottom", y < 0 && (y = r)) : y = a + s.top + r, s.left + i > v.width ? f = Math.max(0, s.left + u + c - i) : f = s.left + u, Yo(e) ? e.style.insetInlineEnd = f + "px" : e.style.insetInlineStart = f + "px", e.style.top = y + "px", e.style.transformOrigin = p, n && (e.style.marginTop = p === "bottom" ? `calc(${(l = (t = yr(/-anchor-gutter$/)) == null ? void 0 : t.value) != null ? l : "2px"} * -1)` : (d = (g = yr(/-anchor-gutter$/)) == null ? void 0 : g.value) != null ? d : "");
+    const m = e.offsetParent ? { width: e.offsetWidth, height: e.offsetHeight } : Jo(e), f = m.height, s = m.width, a = o.offsetHeight, c = o.offsetWidth, i = o.getBoundingClientRect(), r = Zo(), u = Yo(), v = $r();
+    let y, h, p = "top";
+    i.top + a + f > v.height ? (y = i.top + r - f, p = "bottom", y < 0 && (y = r)) : y = a + i.top + r, i.left + s > v.width ? h = Math.max(0, i.left + u + c - s) : h = i.left + u, ei(e) ? e.style.insetInlineEnd = h + "px" : e.style.insetInlineStart = h + "px", e.style.top = y + "px", e.style.transformOrigin = p, t && (e.style.marginTop = p === "bottom" ? `calc(${(l = (n = wr(/-anchor-gutter$/)) == null ? void 0 : n.value) != null ? l : "2px"} * -1)` : (d = (g = wr(/-anchor-gutter$/)) == null ? void 0 : g.value) != null ? d : "");
   }
 }
-function js(e, o) {
-  e && (typeof o == "string" ? e.style.cssText = o : Object.entries(o || {}).forEach(([n, t]) => e.style[n] = t));
+function ti(e, o) {
+  e && (typeof o == "string" ? e.style.cssText = o : Object.entries(o || {}).forEach(([t, n]) => e.style[t] = n));
 }
-function $s(e, o) {
+function ni(e, o) {
   return e instanceof HTMLElement ? e.offsetWidth : 0;
 }
-function qr(e) {
+function Vr(e) {
   if (e) {
     let o = e.parentNode;
     return o && o instanceof ShadowRoot && o.host && (o = o.host), o;
   }
   return null;
 }
-function Zo(e) {
-  return !!(e !== null && typeof e < "u" && e.nodeName && qr(e));
+function ri(e) {
+  return !!(e !== null && typeof e < "u" && e.nodeName && Vr(e));
 }
-function Rt(e) {
+function Et(e) {
   return typeof Element < "u" ? e instanceof Element : e !== null && typeof e == "object" && e.nodeType === 1 && typeof e.nodeName == "string";
 }
-function Ot(e, o = {}) {
-  if (Rt(e)) {
-    const n = (t, l) => {
+var jt = void 0;
+function br(e) {
+  {
+    if (jt != null) return jt;
+    const o = document.createElement("div");
+    ti(o, {
+      width: "100px",
+      height: "100px",
+      overflow: "scroll",
+      position: "absolute",
+      top: "-9999px"
+    }), document.body.appendChild(o);
+    const t = o.offsetWidth - o.clientWidth;
+    return document.body.removeChild(o), jt = t, t;
+  }
+}
+function At(e, o = {}) {
+  if (Et(e)) {
+    const t = (n, l) => {
       var g, d;
-      const m = (g = e == null ? void 0 : e.$attrs) != null && g[t] ? [(d = e == null ? void 0 : e.$attrs) == null ? void 0 : d[t]] : [];
-      return [l].flat().reduce((h, i) => {
-        if (i != null) {
-          const a = typeof i;
+      const m = (g = e == null ? void 0 : e.$attrs) != null && g[n] ? [(d = e == null ? void 0 : e.$attrs) == null ? void 0 : d[n]] : [];
+      return [l].flat().reduce((f, s) => {
+        if (s != null) {
+          const a = typeof s;
           if (a === "string" || a === "number")
-            h.push(i);
+            f.push(s);
           else if (a === "object") {
-            const c = Array.isArray(i) ? n(t, i) : Object.entries(i).map(([s, r]) => t === "style" && (r || r === 0) ? `${s.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase()}:${r}` : r ? s : void 0);
-            h = c.length ? h.concat(c.filter((s) => !!s)) : h;
+            const c = Array.isArray(s) ? t(n, s) : Object.entries(s).map(([i, r]) => n === "style" && (r || r === 0) ? `${i.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase()}:${r}` : r ? i : void 0);
+            f = c.length ? f.concat(c.filter((i) => !!i)) : f;
           }
         }
-        return h;
+        return f;
       }, m);
     };
-    Object.entries(o).forEach(([t, l]) => {
+    Object.entries(o).forEach(([n, l]) => {
       if (l != null) {
-        const g = t.match(/^on(.+)/);
-        g ? e.addEventListener(g[1].toLowerCase(), l) : t === "p-bind" || t === "pBind" ? Ot(e, l) : (l = t === "class" ? [...new Set(n("class", l))].join(" ").trim() : t === "style" ? n("style", l).join(";").trim() : l, (e.$attrs = e.$attrs || {}) && (e.$attrs[t] = l), e.setAttribute(t, l));
+        const g = n.match(/^on(.+)/);
+        g ? e.addEventListener(g[1].toLowerCase(), l) : n === "p-bind" || n === "pBind" ? At(e, l) : (l = n === "class" ? [...new Set(t("class", l))].join(" ").trim() : n === "style" ? t("style", l).join(";").trim() : l, (e.$attrs = e.$attrs || {}) && (e.$attrs[n] = l), e.setAttribute(n, l));
       }
     });
   }
 }
-function Vs(e, o = {}, ...n) {
+function Ki(e, o = {}, ...t) {
   {
-    const t = document.createElement(e);
-    return Ot(t, o), t.append(...n), t;
+    const n = document.createElement(e);
+    return At(n, o), n.append(...t), n;
   }
 }
-function Ws(e, o) {
-  return Rt(e) ? Array.from(e.querySelectorAll(o)) : [];
+function oi(e, o) {
+  return Et(e) ? e.matches(o) ? e : e.querySelector(o) : null;
 }
-function es(e, o) {
-  return Rt(e) ? e.matches(o) ? e : e.querySelector(o) : null;
-}
-function Bs(e, o) {
+function Qi(e, o) {
   e && document.activeElement !== e && e.focus(o);
 }
-function Gs(e, o) {
-  if (Rt(e)) {
-    const n = e.getAttribute(o);
-    return isNaN(n) ? n === "true" || n === "false" ? n === "true" : n : +n;
+function Ji(e, o) {
+  if (Et(e)) {
+    const t = e.getAttribute(o);
+    return isNaN(t) ? t === "true" || t === "false" ? t === "true" : t : +t;
   }
 }
-function Xs(e) {
+function Yi(e) {
   if (e) {
     let o = e.offsetHeight;
-    const n = getComputedStyle(e);
-    return o -= parseFloat(n.paddingTop) + parseFloat(n.paddingBottom) + parseFloat(n.borderTopWidth) + parseFloat(n.borderBottomWidth), o;
+    const t = getComputedStyle(e);
+    return o -= parseFloat(t.paddingTop) + parseFloat(t.paddingBottom) + parseFloat(t.borderTopWidth) + parseFloat(t.borderBottomWidth), o;
   }
   return 0;
 }
-function zs(e) {
+function ii(e) {
+  if (e) {
+    e.style.visibility = "hidden", e.style.display = "block";
+    const o = e.offsetHeight;
+    return e.style.display = "none", e.style.visibility = "visible", o;
+  }
+  return 0;
+}
+function si(e) {
+  if (e) {
+    e.style.visibility = "hidden", e.style.display = "block";
+    const o = e.offsetWidth;
+    return e.style.display = "none", e.style.visibility = "visible", o;
+  }
+  return 0;
+}
+function ai(e) {
   if (e) {
     const o = e.getBoundingClientRect();
     return {
       top: o.top + (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0),
-      left: o.left + (window.pageXOffset || Vt(document.documentElement) || Vt(document.body) || 0)
+      left: o.left + (window.pageXOffset || Wt(document.documentElement) || Wt(document.body) || 0)
     };
   }
   return {
@@ -8173,31 +8202,31 @@ function zs(e) {
     left: "auto"
   };
 }
-function Ks(e, o) {
+function ui(e, o) {
   return e ? e.offsetHeight : 0;
 }
-function jr(e, o = []) {
-  const n = qr(e);
-  return n === null ? o : jr(n, o.concat([n]));
+function Wr(e, o = []) {
+  const t = Vr(e);
+  return t === null ? o : Wr(t, o.concat([t]));
 }
-function Qs(e) {
+function Zi(e) {
   const o = [];
   if (e) {
-    const n = jr(e), t = /(auto|scroll)/, l = (g) => {
+    const t = Wr(e), n = /(auto|scroll)/, l = (g) => {
       try {
         const d = window.getComputedStyle(g, null);
-        return t.test(d.getPropertyValue("overflow")) || t.test(d.getPropertyValue("overflowX")) || t.test(d.getPropertyValue("overflowY"));
+        return n.test(d.getPropertyValue("overflow")) || n.test(d.getPropertyValue("overflowX")) || n.test(d.getPropertyValue("overflowY"));
       } catch {
         return !1;
       }
     };
-    for (const g of n) {
+    for (const g of t) {
       const d = g.nodeType === 1 && g.dataset.scrollselectors;
       if (d) {
         const m = d.split(",");
-        for (const h of m) {
-          const i = es(g, h);
-          i && l(i) && o.push(i);
+        for (const f of m) {
+          const s = oi(g, f);
+          s && l(s) && o.push(s);
         }
       }
       g.nodeType !== 9 && l(g) && o.push(g);
@@ -8205,107 +8234,115 @@ function Qs(e) {
   }
   return o;
 }
-function Js(e) {
+function es(e) {
   if (e) {
     let o = e.offsetWidth;
-    const n = getComputedStyle(e);
-    return o -= parseFloat(n.paddingLeft) + parseFloat(n.paddingRight) + parseFloat(n.borderLeftWidth) + parseFloat(n.borderRightWidth), o;
+    const t = getComputedStyle(e);
+    return o -= parseFloat(t.paddingLeft) + parseFloat(t.paddingRight) + parseFloat(t.borderLeftWidth) + parseFloat(t.borderRightWidth), o;
   }
   return 0;
 }
-function ts() {
+function ci() {
   return !!(typeof window < "u" && window.document && window.document.createElement);
 }
-function Ys() {
+function ts() {
   return "ontouchstart" in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
 }
-function ns(e, o = "", n) {
-  Rt(e) && n !== null && n !== void 0 && e.setAttribute(o, n);
+function ns(e, o) {
+  var t, n;
+  if (e) {
+    const l = e.parentElement, g = ai(l), d = $r(), m = e.offsetParent ? e.offsetWidth : si(e), f = e.offsetParent ? e.offsetHeight : ii(e), s = ni((t = l == null ? void 0 : l.children) == null ? void 0 : t[0]), a = ui((n = l == null ? void 0 : l.children) == null ? void 0 : n[0]);
+    let c = "", i = "";
+    g.left + s + m > d.width - br() ? g.left < m ? o % 2 === 1 ? c = g.left ? "-" + g.left + "px" : "100%" : o % 2 === 0 && (c = d.width - m - br() + "px") : c = "-100%" : c = "100%", e.getBoundingClientRect().top + a + f > d.height ? i = `-${f - a}px` : i = "0px", e.style.top = i, e.style.insetInlineStart = c;
+  }
 }
-var rs = Object.defineProperty, os = Object.defineProperties, ss = Object.getOwnPropertyDescriptors, Pt = Object.getOwnPropertySymbols, $r = Object.prototype.hasOwnProperty, Vr = Object.prototype.propertyIsEnumerable, wr = (e, o, n) => o in e ? rs(e, o, { enumerable: !0, configurable: !0, writable: !0, value: n }) : e[o] = n, me = (e, o) => {
-  for (var n in o || (o = {}))
-    $r.call(o, n) && wr(e, n, o[n]);
-  if (Pt)
-    for (var n of Pt(o))
-      Vr.call(o, n) && wr(e, n, o[n]);
+function li(e, o = "", t) {
+  Et(e) && t !== null && t !== void 0 && e.setAttribute(o, t);
+}
+var di = Object.defineProperty, fi = Object.defineProperties, hi = Object.getOwnPropertyDescriptors, Ot = Object.getOwnPropertySymbols, Br = Object.prototype.hasOwnProperty, Gr = Object.prototype.propertyIsEnumerable, Sr = (e, o, t) => o in e ? di(e, o, { enumerable: !0, configurable: !0, writable: !0, value: t }) : e[o] = t, me = (e, o) => {
+  for (var t in o || (o = {}))
+    Br.call(o, t) && Sr(e, t, o[t]);
+  if (Ot)
+    for (var t of Ot(o))
+      Gr.call(o, t) && Sr(e, t, o[t]);
   return e;
-}, jt = (e, o) => os(e, ss(o)), Le = (e, o) => {
-  var n = {};
-  for (var t in e)
-    $r.call(e, t) && o.indexOf(t) < 0 && (n[t] = e[t]);
-  if (e != null && Pt)
-    for (var t of Pt(e))
-      o.indexOf(t) < 0 && Vr.call(e, t) && (n[t] = e[t]);
-  return n;
+}, $t = (e, o) => fi(e, hi(o)), Le = (e, o) => {
+  var t = {};
+  for (var n in e)
+    Br.call(e, n) && o.indexOf(n) < 0 && (t[n] = e[n]);
+  if (e != null && Ot)
+    for (var n of Ot(e))
+      o.indexOf(n) < 0 && Gr.call(e, n) && (t[n] = e[n]);
+  return t;
 };
-function Zs(...e) {
-  return Ur(...e);
+function rs(...e) {
+  return Nr(...e);
 }
-var is = Fr(), Ze = is;
-function br(e, o) {
-  Hr(e) ? e.push(...o || []) : Fe(e) && Object.assign(e, o);
+var gi = jr(), Ze = gi;
+function Rr(e, o) {
+  Fr(e) ? e.push(...o || []) : Fe(e) && Object.assign(e, o);
 }
-function as(e) {
+function vi(e) {
   return Fe(e) && e.hasOwnProperty("$value") && e.hasOwnProperty("$type") ? e.$value : e;
 }
-function us(e) {
+function mi(e) {
   return e.replaceAll(/ /g, "").replace(/[^\w]/g, "-");
 }
-function Wt(e = "", o = "") {
-  return us(`${qe(e, !1) && qe(o, !1) ? `${e}-` : e}${o}`);
+function Bt(e = "", o = "") {
+  return mi(`${qe(e, !1) && qe(o, !1) ? `${e}-` : e}${o}`);
 }
-function Wr(e = "", o = "") {
-  return `--${Wt(e, o)}`;
+function Xr(e = "", o = "") {
+  return `--${Bt(e, o)}`;
 }
-function cs(e = "") {
-  const o = (e.match(/{/g) || []).length, n = (e.match(/}/g) || []).length;
-  return (o + n) % 2 !== 0;
+function pi(e = "") {
+  const o = (e.match(/{/g) || []).length, t = (e.match(/}/g) || []).length;
+  return (o + t) % 2 !== 0;
 }
-function Br(e, o = "", n = "", t = [], l) {
+function zr(e, o = "", t = "", n = [], l) {
   if (qe(e)) {
     const g = /{([^}]*)}/g, d = e.trim();
-    if (cs(d))
+    if (pi(d))
       return;
     if (He(d, g)) {
       const m = d.replaceAll(g, (a) => {
-        const s = a.replace(/{|}/g, "").split(".").filter((r) => !t.some((u) => He(r, u)));
-        return `var(${Wr(n, Nr(s.join("-")))}${Y(l) ? `, ${l}` : ""})`;
-      }), h = /(\d+\s+[\+\-\*\/]\s+\d+)/g, i = /var\([^)]+\)/g;
-      return He(m.replace(i, "0"), h) ? `calc(${m})` : m;
+        const i = a.replace(/{|}/g, "").split(".").filter((r) => !n.some((u) => He(r, u)));
+        return `var(${Xr(t, qr(i.join("-")))}${Y(l) ? `, ${l}` : ""})`;
+      }), f = /(\d+\s+[\+\-\*\/]\s+\d+)/g, s = /var\([^)]+\)/g;
+      return He(m.replace(s, "0"), f) ? `calc(${m})` : m;
     }
     return d;
-  } else if (Go(e))
+  } else if (Ko(e))
     return e;
 }
-function ls(e, o, n) {
-  qe(o, !1) && e.push(`${o}:${n};`);
+function yi(e, o, t) {
+  qe(o, !1) && e.push(`${o}:${t};`);
 }
 function at(e, o) {
   return e ? `${e}{${o}}` : "";
 }
-var mt = (...e) => ds(ce.getTheme(), ...e), ds = (e = {}, o, n, t) => {
+var mt = (...e) => wi(ce.getTheme(), ...e), wi = (e = {}, o, t, n) => {
   if (o) {
-    const { variable: l, options: g } = ce.defaults || {}, { prefix: d, transform: m } = (e == null ? void 0 : e.options) || g || {}, i = He(o, /{([^}]*)}/g) ? o : `{${o}}`;
-    return t === "value" || tn(t) && m === "strict" ? ce.getTokenValue(o) : Br(i, void 0, d, [l.excludedKeyRegex], n);
+    const { variable: l, options: g } = ce.defaults || {}, { prefix: d, transform: m } = (e == null ? void 0 : e.options) || g || {}, s = He(o, /{([^}]*)}/g) ? o : `{${o}}`;
+    return n === "value" || nn(n) && m === "strict" ? ce.getTokenValue(o) : zr(s, void 0, d, [l.excludedKeyRegex], t);
   }
   return "";
 };
-function fs(e, o = {}) {
-  const n = ce.defaults.variable, { prefix: t = n.prefix, selector: l = n.selector, excludedKeyRegex: g = n.excludedKeyRegex } = o, d = (i, a = "") => Object.entries(i).reduce(
-    (c, [s, r]) => {
-      const u = He(s, g) ? Wt(a) : Wt(a, Nr(s)), v = as(r);
+function bi(e, o = {}) {
+  const t = ce.defaults.variable, { prefix: n = t.prefix, selector: l = t.selector, excludedKeyRegex: g = t.excludedKeyRegex } = o, d = (s, a = "") => Object.entries(s).reduce(
+    (c, [i, r]) => {
+      const u = He(i, g) ? Bt(a) : Bt(a, qr(i)), v = vi(r);
       if (Fe(v)) {
-        const { variables: y, tokens: f } = d(v, u);
-        br(c.tokens, f), br(c.variables, y);
+        const { variables: y, tokens: h } = d(v, u);
+        Rr(c.tokens, h), Rr(c.variables, y);
       } else
-        c.tokens.push((t ? u.replace(`${t}-`, "") : u).replaceAll("-", ".")), ls(c.variables, Wr(u), Br(v, u, t, [g]));
+        c.tokens.push((n ? u.replace(`${n}-`, "") : u).replaceAll("-", ".")), yi(c.variables, Xr(u), zr(v, u, n, [g]));
       return c;
     },
     { variables: [], tokens: [] }
-  ), { variables: m, tokens: h } = d(e, t);
+  ), { variables: m, tokens: f } = d(e, n);
   return {
     value: m,
-    tokens: h,
+    tokens: f,
     declarations: m.join(""),
     css: at(l, m.join(""))
   };
@@ -8344,27 +8381,27 @@ var ve = {
       }
     },
     resolve(e) {
-      const o = Object.keys(this.rules).filter((n) => n !== "custom").map((n) => this.rules[n]);
-      return [e].flat().map((n) => {
-        var t;
-        return (t = o.map((l) => l.resolve(n)).find((l) => l.matched)) != null ? t : this.rules.custom.resolve(n);
+      const o = Object.keys(this.rules).filter((t) => t !== "custom").map((t) => this.rules[t]);
+      return [e].flat().map((t) => {
+        var n;
+        return (n = o.map((l) => l.resolve(t)).find((l) => l.matched)) != null ? n : this.rules.custom.resolve(t);
       });
     }
   },
   _toVariables(e, o) {
-    return fs(e, { prefix: o == null ? void 0 : o.prefix });
+    return bi(e, { prefix: o == null ? void 0 : o.prefix });
   },
-  getCommon({ name: e = "", theme: o = {}, params: n, set: t, defaults: l }) {
-    var g, d, m, h, i, a, c;
-    const { preset: s, options: r } = o;
-    let u, v, y, f, p, w, b;
-    if (Y(s) && r.transform !== "strict") {
-      const { primitive: S, semantic: R, extend: I } = s, T = R || {}, { colorScheme: _ } = T, P = Le(T, ["colorScheme"]), C = I || {}, { colorScheme: x } = C, E = Le(C, ["colorScheme"]), B = _ || {}, { dark: K } = B, ne = Le(B, ["dark"]), re = x || {}, { dark: H } = re, L = Le(re, ["dark"]), q = Y(S) ? this._toVariables({ primitive: S }, r) : {}, F = Y(P) ? this._toVariables({ semantic: P }, r) : {}, V = Y(ne) ? this._toVariables({ light: ne }, r) : {}, X = Y(K) ? this._toVariables({ dark: K }, r) : {}, k = Y(E) ? this._toVariables({ semantic: E }, r) : {}, O = Y(L) ? this._toVariables({ light: L }, r) : {}, A = Y(H) ? this._toVariables({ dark: H }, r) : {}, [D, M] = [(g = q.declarations) != null ? g : "", q.tokens], [N, $] = [(d = F.declarations) != null ? d : "", F.tokens || []], [U, W] = [(m = V.declarations) != null ? m : "", V.tokens || []], [j, Q] = [(h = X.declarations) != null ? h : "", X.tokens || []], [Z, he] = [(i = k.declarations) != null ? i : "", k.tokens || []], [ae, ue] = [(a = O.declarations) != null ? a : "", O.tokens || []], [ge, z] = [(c = A.declarations) != null ? c : "", A.tokens || []];
-      u = this.transformCSS(e, D, "light", "variable", r, t, l), v = M;
-      const le = this.transformCSS(e, `${N}${U}`, "light", "variable", r, t, l), ut = this.transformCSS(e, `${j}`, "dark", "variable", r, t, l);
-      y = `${le}${ut}`, f = [.../* @__PURE__ */ new Set([...$, ...W, ...Q])];
-      const Ne = this.transformCSS(e, `${Z}${ae}color-scheme:light`, "light", "variable", r, t, l), oe = this.transformCSS(e, `${ge}color-scheme:dark`, "dark", "variable", r, t, l);
-      p = `${Ne}${oe}`, w = [.../* @__PURE__ */ new Set([...he, ...ue, ...z])], b = Ue(s.css, { dt: mt });
+  getCommon({ name: e = "", theme: o = {}, params: t, set: n, defaults: l }) {
+    var g, d, m, f, s, a, c;
+    const { preset: i, options: r } = o;
+    let u, v, y, h, p, w, b;
+    if (Y(i) && r.transform !== "strict") {
+      const { primitive: S, semantic: R, extend: I } = i, T = R || {}, { colorScheme: _ } = T, P = Le(T, ["colorScheme"]), C = I || {}, { colorScheme: x } = C, E = Le(C, ["colorScheme"]), B = _ || {}, { dark: K } = B, ne = Le(B, ["dark"]), re = x || {}, { dark: H } = re, L = Le(re, ["dark"]), q = Y(S) ? this._toVariables({ primitive: S }, r) : {}, F = Y(P) ? this._toVariables({ semantic: P }, r) : {}, V = Y(ne) ? this._toVariables({ light: ne }, r) : {}, X = Y(K) ? this._toVariables({ dark: K }, r) : {}, k = Y(E) ? this._toVariables({ semantic: E }, r) : {}, O = Y(L) ? this._toVariables({ light: L }, r) : {}, A = Y(H) ? this._toVariables({ dark: H }, r) : {}, [D, M] = [(g = q.declarations) != null ? g : "", q.tokens], [N, $] = [(d = F.declarations) != null ? d : "", F.tokens || []], [U, W] = [(m = V.declarations) != null ? m : "", V.tokens || []], [j, Q] = [(f = X.declarations) != null ? f : "", X.tokens || []], [Z, he] = [(s = k.declarations) != null ? s : "", k.tokens || []], [ae, ue] = [(a = O.declarations) != null ? a : "", O.tokens || []], [ge, z] = [(c = A.declarations) != null ? c : "", A.tokens || []];
+      u = this.transformCSS(e, D, "light", "variable", r, n, l), v = M;
+      const le = this.transformCSS(e, `${N}${U}`, "light", "variable", r, n, l), ut = this.transformCSS(e, `${j}`, "dark", "variable", r, n, l);
+      y = `${le}${ut}`, h = [.../* @__PURE__ */ new Set([...$, ...W, ...Q])];
+      const Ne = this.transformCSS(e, `${Z}${ae}color-scheme:light`, "light", "variable", r, n, l), oe = this.transformCSS(e, `${ge}color-scheme:dark`, "dark", "variable", r, n, l);
+      p = `${Ne}${oe}`, w = [.../* @__PURE__ */ new Set([...he, ...ue, ...z])], b = Ue(i.css, { dt: mt });
     }
     return {
       primitive: {
@@ -8373,7 +8410,7 @@ var ve = {
       },
       semantic: {
         css: y,
-        tokens: f
+        tokens: h
       },
       global: {
         css: p,
@@ -8382,113 +8419,113 @@ var ve = {
       style: b
     };
   },
-  getPreset({ name: e = "", preset: o = {}, options: n, params: t, set: l, defaults: g, selector: d }) {
-    var m, h, i;
-    let a, c, s;
-    if (Y(o) && n.transform !== "strict") {
-      const r = e.replace("-directive", ""), u = o, { colorScheme: v, extend: y, css: f } = u, p = Le(u, ["colorScheme", "extend", "css"]), w = y || {}, { colorScheme: b } = w, S = Le(w, ["colorScheme"]), R = v || {}, { dark: I } = R, T = Le(R, ["dark"]), _ = b || {}, { dark: P } = _, C = Le(_, ["dark"]), x = Y(p) ? this._toVariables({ [r]: me(me({}, p), S) }, n) : {}, E = Y(T) ? this._toVariables({ [r]: me(me({}, T), C) }, n) : {}, B = Y(I) ? this._toVariables({ [r]: me(me({}, I), P) }, n) : {}, [K, ne] = [(m = x.declarations) != null ? m : "", x.tokens || []], [re, H] = [(h = E.declarations) != null ? h : "", E.tokens || []], [L, q] = [(i = B.declarations) != null ? i : "", B.tokens || []], F = this.transformCSS(r, `${K}${re}`, "light", "variable", n, l, g, d), V = this.transformCSS(r, L, "dark", "variable", n, l, g, d);
-      a = `${F}${V}`, c = [.../* @__PURE__ */ new Set([...ne, ...H, ...q])], s = Ue(f, { dt: mt });
+  getPreset({ name: e = "", preset: o = {}, options: t, params: n, set: l, defaults: g, selector: d }) {
+    var m, f, s;
+    let a, c, i;
+    if (Y(o) && t.transform !== "strict") {
+      const r = e.replace("-directive", ""), u = o, { colorScheme: v, extend: y, css: h } = u, p = Le(u, ["colorScheme", "extend", "css"]), w = y || {}, { colorScheme: b } = w, S = Le(w, ["colorScheme"]), R = v || {}, { dark: I } = R, T = Le(R, ["dark"]), _ = b || {}, { dark: P } = _, C = Le(_, ["dark"]), x = Y(p) ? this._toVariables({ [r]: me(me({}, p), S) }, t) : {}, E = Y(T) ? this._toVariables({ [r]: me(me({}, T), C) }, t) : {}, B = Y(I) ? this._toVariables({ [r]: me(me({}, I), P) }, t) : {}, [K, ne] = [(m = x.declarations) != null ? m : "", x.tokens || []], [re, H] = [(f = E.declarations) != null ? f : "", E.tokens || []], [L, q] = [(s = B.declarations) != null ? s : "", B.tokens || []], F = this.transformCSS(r, `${K}${re}`, "light", "variable", t, l, g, d), V = this.transformCSS(r, L, "dark", "variable", t, l, g, d);
+      a = `${F}${V}`, c = [.../* @__PURE__ */ new Set([...ne, ...H, ...q])], i = Ue(h, { dt: mt });
     }
     return {
       css: a,
       tokens: c,
-      style: s
+      style: i
     };
   },
-  getPresetC({ name: e = "", theme: o = {}, params: n, set: t, defaults: l }) {
+  getPresetC({ name: e = "", theme: o = {}, params: t, set: n, defaults: l }) {
     var g;
-    const { preset: d, options: m } = o, h = (g = d == null ? void 0 : d.components) == null ? void 0 : g[e];
-    return this.getPreset({ name: e, preset: h, options: m, params: n, set: t, defaults: l });
+    const { preset: d, options: m } = o, f = (g = d == null ? void 0 : d.components) == null ? void 0 : g[e];
+    return this.getPreset({ name: e, preset: f, options: m, params: t, set: n, defaults: l });
   },
   // @deprecated - use getPresetC instead
-  getPresetD({ name: e = "", theme: o = {}, params: n, set: t, defaults: l }) {
+  getPresetD({ name: e = "", theme: o = {}, params: t, set: n, defaults: l }) {
     var g, d;
-    const m = e.replace("-directive", ""), { preset: h, options: i } = o, a = ((g = h == null ? void 0 : h.components) == null ? void 0 : g[m]) || ((d = h == null ? void 0 : h.directives) == null ? void 0 : d[m]);
-    return this.getPreset({ name: m, preset: a, options: i, params: n, set: t, defaults: l });
+    const m = e.replace("-directive", ""), { preset: f, options: s } = o, a = ((g = f == null ? void 0 : f.components) == null ? void 0 : g[m]) || ((d = f == null ? void 0 : f.directives) == null ? void 0 : d[m]);
+    return this.getPreset({ name: m, preset: a, options: s, params: t, set: n, defaults: l });
   },
   applyDarkColorScheme(e) {
     return !(e.darkModeSelector === "none" || e.darkModeSelector === !1);
   },
   getColorSchemeOption(e, o) {
-    var n;
-    return this.applyDarkColorScheme(e) ? this.regex.resolve(e.darkModeSelector === !0 ? o.options.darkModeSelector : (n = e.darkModeSelector) != null ? n : o.options.darkModeSelector) : [];
+    var t;
+    return this.applyDarkColorScheme(e) ? this.regex.resolve(e.darkModeSelector === !0 ? o.options.darkModeSelector : (t = e.darkModeSelector) != null ? t : o.options.darkModeSelector) : [];
   },
-  getLayerOrder(e, o = {}, n, t) {
+  getLayerOrder(e, o = {}, t, n) {
     const { cssLayer: l } = o;
-    return l ? `@layer ${Ue(l.order || "primeui", n)}` : "";
+    return l ? `@layer ${Ue(l.order || "primeui", t)}` : "";
   },
-  getCommonStyleSheet({ name: e = "", theme: o = {}, params: n, props: t = {}, set: l, defaults: g }) {
-    const d = this.getCommon({ name: e, theme: o, params: n, set: l, defaults: g }), m = Object.entries(t).reduce((h, [i, a]) => h.push(`${i}="${a}"`) && h, []).join(" ");
-    return Object.entries(d || {}).reduce((h, [i, a]) => {
+  getCommonStyleSheet({ name: e = "", theme: o = {}, params: t, props: n = {}, set: l, defaults: g }) {
+    const d = this.getCommon({ name: e, theme: o, params: t, set: l, defaults: g }), m = Object.entries(n).reduce((f, [s, a]) => f.push(`${s}="${a}"`) && f, []).join(" ");
+    return Object.entries(d || {}).reduce((f, [s, a]) => {
       if (a != null && a.css) {
-        const c = vt(a == null ? void 0 : a.css), s = `${i}-variables`;
-        h.push(`<style type="text/css" data-primevue-style-id="${s}" ${m}>${c}</style>`);
+        const c = vt(a == null ? void 0 : a.css), i = `${s}-variables`;
+        f.push(`<style type="text/css" data-primevue-style-id="${i}" ${m}>${c}</style>`);
       }
-      return h;
+      return f;
     }, []).join("");
   },
-  getStyleSheet({ name: e = "", theme: o = {}, params: n, props: t = {}, set: l, defaults: g }) {
+  getStyleSheet({ name: e = "", theme: o = {}, params: t, props: n = {}, set: l, defaults: g }) {
     var d;
-    const m = { name: e, theme: o, params: n, set: l, defaults: g }, h = (d = e.includes("-directive") ? this.getPresetD(m) : this.getPresetC(m)) == null ? void 0 : d.css, i = Object.entries(t).reduce((a, [c, s]) => a.push(`${c}="${s}"`) && a, []).join(" ");
-    return h ? `<style type="text/css" data-primevue-style-id="${e}-variables" ${i}>${vt(h)}</style>` : "";
+    const m = { name: e, theme: o, params: t, set: l, defaults: g }, f = (d = e.includes("-directive") ? this.getPresetD(m) : this.getPresetC(m)) == null ? void 0 : d.css, s = Object.entries(n).reduce((a, [c, i]) => a.push(`${c}="${i}"`) && a, []).join(" ");
+    return f ? `<style type="text/css" data-primevue-style-id="${e}-variables" ${s}>${vt(f)}</style>` : "";
   },
-  createTokens(e = {}, o, n = "", t = "", l = {}) {
+  createTokens(e = {}, o, t = "", n = "", l = {}) {
     return Object.entries(e).forEach(([g, d]) => {
-      const m = He(g, o.variable.excludedKeyRegex) ? n : n ? `${n}.${pr(g)}` : pr(g), h = t ? `${t}.${g}` : g;
-      Fe(d) ? this.createTokens(d, o, m, h, l) : (l[m] || (l[m] = {
+      const m = He(g, o.variable.excludedKeyRegex) ? t : t ? `${t}.${yr(g)}` : yr(g), f = n ? `${n}.${g}` : g;
+      Fe(d) ? this.createTokens(d, o, m, f, l) : (l[m] || (l[m] = {
         paths: [],
-        computed(i, a = {}) {
-          var c, s;
-          return this.paths.length === 1 ? (c = this.paths[0]) == null ? void 0 : c.computed(this.paths[0].scheme, a.binding) : i && i !== "none" ? (s = this.paths.find((r) => r.scheme === i)) == null ? void 0 : s.computed(i, a.binding) : this.paths.map((r) => r.computed(r.scheme, a[r.scheme]));
+        computed(s, a = {}) {
+          var c, i;
+          return this.paths.length === 1 ? (c = this.paths[0]) == null ? void 0 : c.computed(this.paths[0].scheme, a.binding) : s && s !== "none" ? (i = this.paths.find((r) => r.scheme === s)) == null ? void 0 : i.computed(s, a.binding) : this.paths.map((r) => r.computed(r.scheme, a[r.scheme]));
         }
       }), l[m].paths.push({
-        path: h,
+        path: f,
         value: d,
-        scheme: h.includes("colorScheme.light") ? "light" : h.includes("colorScheme.dark") ? "dark" : "none",
-        computed(i, a = {}) {
+        scheme: f.includes("colorScheme.light") ? "light" : f.includes("colorScheme.dark") ? "dark" : "none",
+        computed(s, a = {}) {
           const c = /{([^}]*)}/g;
-          let s = d;
+          let i = d;
           if (a.name = this.path, a.binding || (a.binding = {}), He(d, c)) {
-            const u = d.trim().replaceAll(c, (f) => {
+            const u = d.trim().replaceAll(c, (h) => {
               var p;
-              const w = f.replace(/{|}/g, ""), b = (p = l[w]) == null ? void 0 : p.computed(i, a);
-              return Hr(b) && b.length === 2 ? `light-dark(${b[0].value},${b[1].value})` : b == null ? void 0 : b.value;
+              const w = h.replace(/{|}/g, ""), b = (p = l[w]) == null ? void 0 : p.computed(s, a);
+              return Fr(b) && b.length === 2 ? `light-dark(${b[0].value},${b[1].value})` : b == null ? void 0 : b.value;
             }), v = /(\d+\w*\s+[\+\-\*\/]\s+\d+\w*)/g, y = /var\([^)]+\)/g;
-            s = He(u.replace(y, "0"), v) ? `calc(${u})` : u;
+            i = He(u.replace(y, "0"), v) ? `calc(${u})` : u;
           }
-          return tn(a.binding) && delete a.binding, {
-            colorScheme: i,
+          return nn(a.binding) && delete a.binding, {
+            colorScheme: s,
             path: this.path,
             paths: a,
-            value: s.includes("undefined") ? void 0 : s
+            value: i.includes("undefined") ? void 0 : i
           };
         }
       }));
     }), l;
   },
-  getTokenValue(e, o, n) {
-    var t;
-    const g = ((h) => h.split(".").filter((a) => !He(a.toLowerCase(), n.variable.excludedKeyRegex)).join("."))(o), d = o.includes("colorScheme.light") ? "light" : o.includes("colorScheme.dark") ? "dark" : void 0, m = [(t = e[g]) == null ? void 0 : t.computed(d)].flat().filter((h) => h);
-    return m.length === 1 ? m[0].value : m.reduce((h = {}, i) => {
-      const a = i, { colorScheme: c } = a, s = Le(a, ["colorScheme"]);
-      return h[c] = s, h;
+  getTokenValue(e, o, t) {
+    var n;
+    const g = ((f) => f.split(".").filter((a) => !He(a.toLowerCase(), t.variable.excludedKeyRegex)).join("."))(o), d = o.includes("colorScheme.light") ? "light" : o.includes("colorScheme.dark") ? "dark" : void 0, m = [(n = e[g]) == null ? void 0 : n.computed(d)].flat().filter((f) => f);
+    return m.length === 1 ? m[0].value : m.reduce((f = {}, s) => {
+      const a = s, { colorScheme: c } = a, i = Le(a, ["colorScheme"]);
+      return f[c] = i, f;
     }, void 0);
   },
-  getSelectorRule(e, o, n, t) {
-    return n === "class" || n === "attr" ? at(Y(o) ? `${e}${o},${e} ${o}` : e, t) : at(e, Y(o) ? at(o, t) : t);
+  getSelectorRule(e, o, t, n) {
+    return t === "class" || t === "attr" ? at(Y(o) ? `${e}${o},${e} ${o}` : e, n) : at(e, Y(o) ? at(o, n) : n);
   },
-  transformCSS(e, o, n, t, l = {}, g, d, m) {
+  transformCSS(e, o, t, n, l = {}, g, d, m) {
     if (Y(o)) {
-      const { cssLayer: h } = l;
-      if (t !== "style") {
-        const i = this.getColorSchemeOption(l, d);
-        o = n === "dark" ? i.reduce((a, { type: c, selector: s }) => (Y(s) && (a += s.includes("[CSS]") ? s.replace("[CSS]", o) : this.getSelectorRule(s, m, c, o)), a), "") : at(m ?? ":root", o);
+      const { cssLayer: f } = l;
+      if (n !== "style") {
+        const s = this.getColorSchemeOption(l, d);
+        o = t === "dark" ? s.reduce((a, { type: c, selector: i }) => (Y(i) && (a += i.includes("[CSS]") ? i.replace("[CSS]", o) : this.getSelectorRule(i, m, c, o)), a), "") : at(m ?? ":root", o);
       }
-      if (h) {
-        const i = {
+      if (f) {
+        const s = {
           name: "primeui"
         };
-        Fe(h) && (i.name = Ue(h.name, { name: e, type: t })), Y(i.name) && (o = at(`@layer ${i.name}`, o), g == null || g.layerNames(i.name));
+        Fe(f) && (s.name = Ue(f.name, { name: e, type: n })), Y(s.name) && (o = at(`@layer ${s.name}`, o), g == null || g.layerNames(s.name));
       }
       return o;
     }
@@ -8514,7 +8551,7 @@ var ve = {
   _tokens: {},
   update(e = {}) {
     const { theme: o } = e;
-    o && (this._theme = jt(me({}, o), {
+    o && (this._theme = $t(me({}, o), {
       options: me(me({}, this.defaults.options), o.options)
     }), this._tokens = ve.createTokens(this.preset, this.defaults), this.clearLoadedStyleNames());
   },
@@ -8542,13 +8579,13 @@ var ve = {
     return this.preset;
   },
   setPreset(e) {
-    this._theme = jt(me({}, this.theme), { preset: e }), this._tokens = ve.createTokens(e, this.defaults), this.clearLoadedStyleNames(), Ze.emit("preset:change", e), Ze.emit("theme:change", this.theme);
+    this._theme = $t(me({}, this.theme), { preset: e }), this._tokens = ve.createTokens(e, this.defaults), this.clearLoadedStyleNames(), Ze.emit("preset:change", e), Ze.emit("theme:change", this.theme);
   },
   getOptions() {
     return this.options;
   },
   setOptions(e) {
-    this._theme = jt(me({}, this.theme), { options: e }), this.clearLoadedStyleNames(), Ze.emit("options:change", e), Ze.emit("theme:change", this.theme);
+    this._theme = $t(me({}, this.theme), { options: e }), this.clearLoadedStyleNames(), Ze.emit("options:change", e), Ze.emit("theme:change", this.theme);
   },
   getLayerNames() {
     return [...this._layerNames];
@@ -8578,29 +8615,29 @@ var ve = {
     return ve.getCommon({ name: e, theme: this.theme, params: o, defaults: this.defaults, set: { layerNames: this.setLayerNames.bind(this) } });
   },
   getComponent(e = "", o) {
-    const n = { name: e, theme: this.theme, params: o, defaults: this.defaults, set: { layerNames: this.setLayerNames.bind(this) } };
-    return ve.getPresetC(n);
+    const t = { name: e, theme: this.theme, params: o, defaults: this.defaults, set: { layerNames: this.setLayerNames.bind(this) } };
+    return ve.getPresetC(t);
   },
   // @deprecated - use getComponent instead
   getDirective(e = "", o) {
-    const n = { name: e, theme: this.theme, params: o, defaults: this.defaults, set: { layerNames: this.setLayerNames.bind(this) } };
-    return ve.getPresetD(n);
+    const t = { name: e, theme: this.theme, params: o, defaults: this.defaults, set: { layerNames: this.setLayerNames.bind(this) } };
+    return ve.getPresetD(t);
   },
-  getCustomPreset(e = "", o, n, t) {
-    const l = { name: e, preset: o, options: this.options, selector: n, params: t, defaults: this.defaults, set: { layerNames: this.setLayerNames.bind(this) } };
+  getCustomPreset(e = "", o, t, n) {
+    const l = { name: e, preset: o, options: this.options, selector: t, params: n, defaults: this.defaults, set: { layerNames: this.setLayerNames.bind(this) } };
     return ve.getPreset(l);
   },
   getLayerOrderCSS(e = "") {
     return ve.getLayerOrder(e, this.options, { names: this.getLayerNames() }, this.defaults);
   },
-  transformCSS(e = "", o, n = "style", t) {
-    return ve.transformCSS(e, o, t, n, this.options, { layerNames: this.setLayerNames.bind(this) }, this.defaults);
+  transformCSS(e = "", o, t = "style", n) {
+    return ve.transformCSS(e, o, n, t, this.options, { layerNames: this.setLayerNames.bind(this) }, this.defaults);
   },
-  getCommonStyleSheet(e = "", o, n = {}) {
-    return ve.getCommonStyleSheet({ name: e, theme: this.theme, params: o, props: n, defaults: this.defaults, set: { layerNames: this.setLayerNames.bind(this) } });
+  getCommonStyleSheet(e = "", o, t = {}) {
+    return ve.getCommonStyleSheet({ name: e, theme: this.theme, params: o, props: t, defaults: this.defaults, set: { layerNames: this.setLayerNames.bind(this) } });
   },
-  getStyleSheet(e, o, n = {}) {
-    return ve.getStyleSheet({ name: e, theme: this.theme, params: o, props: n, defaults: this.defaults, set: { layerNames: this.setLayerNames.bind(this) } });
+  getStyleSheet(e, o, t = {}) {
+    return ve.getStyleSheet({ name: e, theme: this.theme, params: o, props: t, defaults: this.defaults, set: { layerNames: this.setLayerNames.bind(this) } });
   },
   onStyleMounted(e) {
     this._loadingStyles.add(e);
@@ -8611,7 +8648,7 @@ var ve = {
   onStyleLoaded(e, { name: o }) {
     this._loadingStyles.size && (this._loadingStyles.delete(o), Ze.emit(`theme:${o}:load`, e), !this._loadingStyles.size && Ze.emit("theme:load"));
   }
-}, hs = ({ dt: e }) => `
+}, Si = ({ dt: e }) => `
 *,
 ::before,
 ::after {
@@ -8741,81 +8778,81 @@ function pt(e) {
     return o && typeof Symbol == "function" && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
   }, pt(e);
 }
-function Sr(e, o) {
-  var n = Object.keys(e);
+function kr(e, o) {
+  var t = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
-    var t = Object.getOwnPropertySymbols(e);
-    o && (t = t.filter(function(l) {
+    var n = Object.getOwnPropertySymbols(e);
+    o && (n = n.filter(function(l) {
       return Object.getOwnPropertyDescriptor(e, l).enumerable;
-    })), n.push.apply(n, t);
+    })), t.push.apply(t, n);
   }
-  return n;
+  return t;
 }
-function Rr(e) {
+function Ir(e) {
   for (var o = 1; o < arguments.length; o++) {
-    var n = arguments[o] != null ? arguments[o] : {};
-    o % 2 ? Sr(Object(n), !0).forEach(function(t) {
-      gs(e, t, n[t]);
-    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n)) : Sr(Object(n)).forEach(function(t) {
-      Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
+    var t = arguments[o] != null ? arguments[o] : {};
+    o % 2 ? kr(Object(t), !0).forEach(function(n) {
+      Ri(e, n, t[n]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : kr(Object(t)).forEach(function(n) {
+      Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
     });
   }
   return e;
 }
-function gs(e, o, n) {
-  return (o = vs(o)) in e ? Object.defineProperty(e, o, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : e[o] = n, e;
+function Ri(e, o, t) {
+  return (o = ki(o)) in e ? Object.defineProperty(e, o, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[o] = t, e;
 }
-function vs(e) {
-  var o = ms(e, "string");
+function ki(e) {
+  var o = Ii(e, "string");
   return pt(o) == "symbol" ? o : o + "";
 }
-function ms(e, o) {
+function Ii(e, o) {
   if (pt(e) != "object" || !e) return e;
-  var n = e[Symbol.toPrimitive];
-  if (n !== void 0) {
-    var t = n.call(e, o);
-    if (pt(t) != "object") return t;
+  var t = e[Symbol.toPrimitive];
+  if (t !== void 0) {
+    var n = t.call(e, o);
+    if (pt(n) != "object") return n;
     throw new TypeError("@@toPrimitive must return a primitive value.");
   }
   return (o === "string" ? String : Number)(e);
 }
-function ps(e) {
+function _i(e) {
   var o = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : !0;
-  rn() && rn().components ? Xr(e) : o ? e() : zr(e);
+  on() && on().components ? Qr(e) : o ? e() : Jr(e);
 }
-var ys = 0;
-function ws(e) {
-  var o = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {}, n = xt(!1), t = xt(e), l = xt(null), g = ts() ? window.document : void 0, d = o.document, m = d === void 0 ? g : d, h = o.immediate, i = h === void 0 ? !0 : h, a = o.manual, c = a === void 0 ? !1 : a, s = o.name, r = s === void 0 ? "style_".concat(++ys) : s, u = o.id, v = u === void 0 ? void 0 : u, y = o.media, f = y === void 0 ? void 0 : y, p = o.nonce, w = p === void 0 ? void 0 : p, b = o.first, S = b === void 0 ? !1 : b, R = o.onMounted, I = R === void 0 ? void 0 : R, T = o.onUpdated, _ = T === void 0 ? void 0 : T, P = o.onLoad, C = P === void 0 ? void 0 : P, x = o.props, E = x === void 0 ? {} : x, B = function() {
+var Ti = 0;
+function Ci(e) {
+  var o = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {}, t = xt(!1), n = xt(e), l = xt(null), g = ci() ? window.document : void 0, d = o.document, m = d === void 0 ? g : d, f = o.immediate, s = f === void 0 ? !0 : f, a = o.manual, c = a === void 0 ? !1 : a, i = o.name, r = i === void 0 ? "style_".concat(++Ti) : i, u = o.id, v = u === void 0 ? void 0 : u, y = o.media, h = y === void 0 ? void 0 : y, p = o.nonce, w = p === void 0 ? void 0 : p, b = o.first, S = b === void 0 ? !1 : b, R = o.onMounted, I = R === void 0 ? void 0 : R, T = o.onUpdated, _ = T === void 0 ? void 0 : T, P = o.onLoad, C = P === void 0 ? void 0 : P, x = o.props, E = x === void 0 ? {} : x, B = function() {
   }, K = function(H) {
     var L = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
     if (m) {
-      var q = Rr(Rr({}, E), L), F = q.name || r, V = q.id || v, X = q.nonce || w;
-      l.value = m.querySelector('style[data-primevue-style-id="'.concat(F, '"]')) || m.getElementById(V) || m.createElement("style"), l.value.isConnected || (t.value = H || e, Ot(l.value, {
+      var q = Ir(Ir({}, E), L), F = q.name || r, V = q.id || v, X = q.nonce || w;
+      l.value = m.querySelector('style[data-primevue-style-id="'.concat(F, '"]')) || m.getElementById(V) || m.createElement("style"), l.value.isConnected || (n.value = H || e, At(l.value, {
         type: "text/css",
         id: V,
-        media: f,
+        media: h,
         nonce: X
-      }), S ? m.head.prepend(l.value) : m.head.appendChild(l.value), ns(l.value, "data-primevue-style-id", F), Ot(l.value, q), l.value.onload = function(k) {
+      }), S ? m.head.prepend(l.value) : m.head.appendChild(l.value), li(l.value, "data-primevue-style-id", F), At(l.value, q), l.value.onload = function(k) {
         return C == null ? void 0 : C(k, {
           name: F
         });
-      }, I == null || I(F)), !n.value && (B = Kr(t, function(k) {
+      }, I == null || I(F)), !t.value && (B = Yr(n, function(k) {
         l.value.textContent = k, _ == null || _(F);
       }, {
         immediate: !0
-      }), n.value = !0);
+      }), t.value = !0);
     }
   }, ne = function() {
-    !m || !n.value || (B(), Zo(l.value) && m.head.removeChild(l.value), n.value = !1, l.value = null);
+    !m || !t.value || (B(), ri(l.value) && m.head.removeChild(l.value), t.value = !1, l.value = null);
   };
-  return i && !c && ps(K), {
+  return s && !c && _i(K), {
     id: v,
     name: r,
     el: l,
-    css: t,
+    css: n,
     unload: ne,
     load: K,
-    isLoaded: Gr(n)
+    isLoaded: Kr(t)
   };
 }
 function yt(e) {
@@ -8826,86 +8863,86 @@ function yt(e) {
     return o && typeof Symbol == "function" && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
   }, yt(e);
 }
-function kr(e, o) {
-  return ks(e) || Rs(e, o) || Ss(e, o) || bs();
+function _r(e, o) {
+  return Ei(e) || Pi(e, o) || Oi(e, o) || Ai();
 }
-function bs() {
+function Ai() {
   throw new TypeError(`Invalid attempt to destructure non-iterable instance.
 In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`);
 }
-function Ss(e, o) {
+function Oi(e, o) {
   if (e) {
-    if (typeof e == "string") return Ir(e, o);
-    var n = {}.toString.call(e).slice(8, -1);
-    return n === "Object" && e.constructor && (n = e.constructor.name), n === "Map" || n === "Set" ? Array.from(e) : n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n) ? Ir(e, o) : void 0;
+    if (typeof e == "string") return Tr(e, o);
+    var t = {}.toString.call(e).slice(8, -1);
+    return t === "Object" && e.constructor && (t = e.constructor.name), t === "Map" || t === "Set" ? Array.from(e) : t === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? Tr(e, o) : void 0;
   }
 }
-function Ir(e, o) {
+function Tr(e, o) {
   (o == null || o > e.length) && (o = e.length);
-  for (var n = 0, t = Array(o); n < o; n++) t[n] = e[n];
-  return t;
+  for (var t = 0, n = Array(o); t < o; t++) n[t] = e[t];
+  return n;
 }
-function Rs(e, o) {
-  var n = e == null ? null : typeof Symbol < "u" && e[Symbol.iterator] || e["@@iterator"];
-  if (n != null) {
-    var t, l, g, d, m = [], h = !0, i = !1;
+function Pi(e, o) {
+  var t = e == null ? null : typeof Symbol < "u" && e[Symbol.iterator] || e["@@iterator"];
+  if (t != null) {
+    var n, l, g, d, m = [], f = !0, s = !1;
     try {
-      if (g = (n = n.call(e)).next, o !== 0) for (; !(h = (t = g.call(n)).done) && (m.push(t.value), m.length !== o); h = !0) ;
+      if (g = (t = t.call(e)).next, o !== 0) for (; !(f = (n = g.call(t)).done) && (m.push(n.value), m.length !== o); f = !0) ;
     } catch (a) {
-      i = !0, l = a;
+      s = !0, l = a;
     } finally {
       try {
-        if (!h && n.return != null && (d = n.return(), Object(d) !== d)) return;
+        if (!f && t.return != null && (d = t.return(), Object(d) !== d)) return;
       } finally {
-        if (i) throw l;
+        if (s) throw l;
       }
     }
     return m;
   }
 }
-function ks(e) {
+function Ei(e) {
   if (Array.isArray(e)) return e;
 }
-function _r(e, o) {
-  var n = Object.keys(e);
+function Cr(e, o) {
+  var t = Object.keys(e);
   if (Object.getOwnPropertySymbols) {
-    var t = Object.getOwnPropertySymbols(e);
-    o && (t = t.filter(function(l) {
+    var n = Object.getOwnPropertySymbols(e);
+    o && (n = n.filter(function(l) {
       return Object.getOwnPropertyDescriptor(e, l).enumerable;
-    })), n.push.apply(n, t);
+    })), t.push.apply(t, n);
   }
-  return n;
+  return t;
 }
-function $t(e) {
+function Vt(e) {
   for (var o = 1; o < arguments.length; o++) {
-    var n = arguments[o] != null ? arguments[o] : {};
-    o % 2 ? _r(Object(n), !0).forEach(function(t) {
-      Is(e, t, n[t]);
-    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n)) : _r(Object(n)).forEach(function(t) {
-      Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
+    var t = arguments[o] != null ? arguments[o] : {};
+    o % 2 ? Cr(Object(t), !0).forEach(function(n) {
+      xi(e, n, t[n]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : Cr(Object(t)).forEach(function(n) {
+      Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
     });
   }
   return e;
 }
-function Is(e, o, n) {
-  return (o = _s(o)) in e ? Object.defineProperty(e, o, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : e[o] = n, e;
+function xi(e, o, t) {
+  return (o = Di(o)) in e ? Object.defineProperty(e, o, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[o] = t, e;
 }
-function _s(e) {
-  var o = Ts(e, "string");
+function Di(e) {
+  var o = Mi(e, "string");
   return yt(o) == "symbol" ? o : o + "";
 }
-function Ts(e, o) {
+function Mi(e, o) {
   if (yt(e) != "object" || !e) return e;
-  var n = e[Symbol.toPrimitive];
-  if (n !== void 0) {
-    var t = n.call(e, o);
-    if (yt(t) != "object") return t;
+  var t = e[Symbol.toPrimitive];
+  if (t !== void 0) {
+    var n = t.call(e, o);
+    if (yt(n) != "object") return n;
     throw new TypeError("@@toPrimitive must return a primitive value.");
   }
   return (o === "string" ? String : Number)(e);
 }
-var Cs = function(o) {
-  var n = o.dt;
+var Li = function(o) {
+  var t = o.dt;
   return `
 .p-hidden-accessible {
     border: 0;
@@ -8923,34 +8960,34 @@ var Cs = function(o) {
 
 .p-overflow-hidden {
     overflow: hidden;
-    padding-right: `.concat(n("scrollbar.width"), `;
+    padding-right: `.concat(t("scrollbar.width"), `;
 }
 `);
-}, As = {}, Os = {}, ei = {
+}, Ui = {}, Hi = {}, os = {
   name: "base",
-  css: Cs,
-  style: hs,
-  classes: As,
-  inlineStyles: Os,
+  css: Li,
+  style: Si,
+  classes: Ui,
+  inlineStyles: Hi,
   load: function(o) {
-    var n = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {}, t = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : function(g) {
+    var t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {}, n = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : function(g) {
       return g;
-    }, l = t(Ue(o, {
+    }, l = n(Ue(o, {
       dt: mt
     }));
-    return Y(l) ? ws(vt(l), $t({
+    return Y(l) ? Ci(vt(l), Vt({
       name: this.name
-    }, n)) : {};
+    }, t)) : {};
   },
   loadCSS: function() {
     var o = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
     return this.load(this.css, o);
   },
   loadStyle: function() {
-    var o = this, n = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {}, t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : "";
-    return this.load(this.style, n, function() {
+    var o = this, t = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {}, n = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : "";
+    return this.load(this.style, t, function() {
       var l = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : "";
-      return ce.transformCSS(n.name || o.name, "".concat(l).concat(t));
+      return ce.transformCSS(t.name || o.name, "".concat(l).concat(n));
     });
   },
   getCommonTheme: function(o) {
@@ -8962,96 +8999,105 @@ var Cs = function(o) {
   getDirectiveTheme: function(o) {
     return ce.getDirective(this.name, o);
   },
-  getPresetTheme: function(o, n, t) {
-    return ce.getCustomPreset(this.name, o, n, t);
+  getPresetTheme: function(o, t, n) {
+    return ce.getCustomPreset(this.name, o, t, n);
   },
   getLayerOrderThemeCSS: function() {
     return ce.getLayerOrderCSS(this.name);
   },
   getStyleSheet: function() {
-    var o = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : "", n = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
+    var o = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : "", t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
     if (this.css) {
-      var t = Ue(this.css, {
+      var n = Ue(this.css, {
         dt: mt
-      }) || "", l = vt("".concat(t).concat(o)), g = Object.entries(n).reduce(function(d, m) {
-        var h = kr(m, 2), i = h[0], a = h[1];
-        return d.push("".concat(i, '="').concat(a, '"')) && d;
+      }) || "", l = vt("".concat(n).concat(o)), g = Object.entries(t).reduce(function(d, m) {
+        var f = _r(m, 2), s = f[0], a = f[1];
+        return d.push("".concat(s, '="').concat(a, '"')) && d;
       }, []).join(" ");
       return Y(l) ? '<style type="text/css" data-primevue-style-id="'.concat(this.name, '" ').concat(g, ">").concat(l, "</style>") : "";
     }
     return "";
   },
   getCommonThemeStyleSheet: function(o) {
-    var n = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
-    return ce.getCommonStyleSheet(this.name, o, n);
+    var t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
+    return ce.getCommonStyleSheet(this.name, o, t);
   },
   getThemeStyleSheet: function(o) {
-    var n = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {}, t = [ce.getStyleSheet(this.name, o, n)];
+    var t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {}, n = [ce.getStyleSheet(this.name, o, t)];
     if (this.style) {
       var l = this.name === "base" ? "global-style" : "".concat(this.name, "-style"), g = Ue(this.style, {
         dt: mt
-      }), d = vt(ce.transformCSS(l, g)), m = Object.entries(n).reduce(function(h, i) {
-        var a = kr(i, 2), c = a[0], s = a[1];
-        return h.push("".concat(c, '="').concat(s, '"')) && h;
+      }), d = vt(ce.transformCSS(l, g)), m = Object.entries(t).reduce(function(f, s) {
+        var a = _r(s, 2), c = a[0], i = a[1];
+        return f.push("".concat(c, '="').concat(i, '"')) && f;
       }, []).join(" ");
-      Y(d) && t.push('<style type="text/css" data-primevue-style-id="'.concat(l, '" ').concat(m, ">").concat(d, "</style>"));
+      Y(d) && n.push('<style type="text/css" data-primevue-style-id="'.concat(l, '" ').concat(m, ">").concat(d, "</style>"));
     }
-    return t.join("");
+    return n.join("");
   },
   extend: function(o) {
-    return $t($t({}, this), {}, {
+    return Vt(Vt({}, this), {}, {
       css: void 0,
       style: void 0
     }, o);
   }
-}, ti = Fr();
+}, is = jr();
+const ss = {
+  error: {
+    somethingWentWrong: {
+      summary: "Something went wrong",
+      detail: "Sorry but something isnt working as expected! Please try again later. We have been notified of the issue."
+    }
+  }
+};
 export {
-  Gs as A,
-  ei as B,
-  Fs as C,
-  Xs as D,
-  Fr as E,
-  Js as F,
-  Ks as G,
-  zs as H,
-  Ns as I,
-  Vs as J,
-  Cr as K,
-  bt as L,
-  Ie as M,
-  Gt as N,
-  en as O,
-  ti as P,
-  Bt as Q,
-  Us as R,
-  Ds as S,
-  Zs as T,
-  Es as U,
-  xs as V,
-  ts as a,
-  qs as b,
-  $s as c,
-  js as d,
-  Ws as e,
-  Bs as f,
-  Qs as g,
-  es as h,
-  Ys as i,
-  Y as j,
-  Ms as k,
-  tn as l,
-  Ls as m,
-  qe as n,
-  Hr as o,
-  Po as p,
-  mr as q,
+  Fe as A,
+  os as B,
+  Ji as C,
+  Xi as D,
+  jr as E,
+  Yi as F,
+  es as G,
+  ui as H,
+  ai as I,
+  Gi as J,
+  Ki as K,
+  Or as L,
+  bt as M,
+  Ie as N,
+  Xt as O,
+  is as P,
+  tn as Q,
+  Gt as R,
+  ji as S,
+  Wi as T,
+  rs as U,
+  Fi as V,
+  qi as W,
+  Fo as a,
+  Y as b,
+  $i as c,
+  nn as d,
+  Qi as e,
+  oi as f,
+  Vi as g,
+  Zi as h,
+  ts as i,
+  ci as j,
+  zi as k,
+  ni as l,
+  ti as m,
+  ns as n,
+  qe as o,
+  Do as p,
+  Fr as q,
   Ue as r,
-  Bo as s,
-  Uo as t,
-  Ze as u,
-  ce as v,
-  Wo as w,
-  Rt as x,
-  Hs as y,
-  Fe as z
+  pr as s,
+  ss as t,
+  zo as u,
+  Ze as v,
+  ce as w,
+  Xo as x,
+  Et as y,
+  Bi as z
 };

@@ -13,27 +13,29 @@ declare function __VLS_template(): {
         logo?(_: {}): any;
     };
     refs: {
-        menu: ({
-            $props: import('primevue/menu').MenuProps & import('vue').VNodeProps & import('vue').AllowedComponentProps & import('vue').ComponentCustomProps;
-            $slots: import('primevue/menu').MenuSlots;
-            $emit: ((e: "blur", event: Event) => void) & ((e: "focus", event: Event) => void) & ((e: "show") => void) & ((e: "hide") => void);
-        } & import('primevue/menu').MenuMethods) | null;
+        tieredMenu: ({
+            $props: import('primevue/tieredmenu').TieredMenuProps & import('vue').VNodeProps & import('vue').AllowedComponentProps & import('vue').ComponentCustomProps;
+            $slots: import('primevue/tieredmenu').TieredMenuSlots;
+            $emit: ((e: "blur", event: Event) => void) & ((e: "focus", event: Event) => void) & ((e: "before-show") => void) & ((e: "before-hide") => void) & ((e: "show") => void) & ((e: "hide") => void);
+        } & import('primevue/tieredmenu').TieredMenuMethods) | null;
     };
     rootEl: HTMLElement;
 };
 type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
 declare const __VLS_component: import('vue').DefineComponent<__VLS_Props, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
-    signout: (...args: any[]) => void;
+    notify: (...args: any[]) => void;
+    signoutSuccess: (...args: any[]) => void;
 }, string, import('vue').PublicProps, Readonly<__VLS_Props> & Readonly<{
-    onSignout?: ((...args: any[]) => any) | undefined;
+    onNotify?: ((...args: any[]) => any) | undefined;
+    onSignoutSuccess?: ((...args: any[]) => any) | undefined;
 }>, {
     userSignedIn: boolean;
 }, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {
-    menu: ({
-        $props: import('primevue/menu').MenuProps & import('vue').VNodeProps & import('vue').AllowedComponentProps & import('vue').ComponentCustomProps;
-        $slots: import('primevue/menu').MenuSlots;
-        $emit: ((e: "blur", event: Event) => void) & ((e: "focus", event: Event) => void) & ((e: "show") => void) & ((e: "hide") => void);
-    } & import('primevue/menu').MenuMethods) | null;
+    tieredMenu: ({
+        $props: import('primevue/tieredmenu').TieredMenuProps & import('vue').VNodeProps & import('vue').AllowedComponentProps & import('vue').ComponentCustomProps;
+        $slots: import('primevue/tieredmenu').TieredMenuSlots;
+        $emit: ((e: "blur", event: Event) => void) & ((e: "focus", event: Event) => void) & ((e: "before-show") => void) & ((e: "before-hide") => void) & ((e: "show") => void) & ((e: "hide") => void);
+    } & import('primevue/tieredmenu').TieredMenuMethods) | null;
 }, HTMLElement>;
 declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;
 export default _default;
