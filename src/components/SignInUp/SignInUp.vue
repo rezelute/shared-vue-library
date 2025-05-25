@@ -25,6 +25,7 @@ import { useRouter } from "vue-router";
 import { signInAndUp } from "supertokens-web-js/recipe/thirdparty";
 import PageLoader from "../../components/pageLoader/PageLoader.vue";
 import toastContent from "../../content/generic/toastContent";
+import { type EmitNotify, type EmitSuccess } from "../../types";
 
 const emits = defineEmits(["notify", "resendCodeSuccess"]);
 const route = useRoute();

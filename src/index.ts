@@ -5,18 +5,8 @@ import ThirdParty from "supertokens-web-js/recipe/thirdparty";
 import Session from "supertokens-web-js/recipe/session";
 import { type AppInfoUserInput } from "supertokens-web-js/lib/build/types";
 
-// shared STORES
-import { useUserStore } from "./stores/userStore";
-
-// shared routes
-import { sharedRoutes } from "./router/sharedRoutes";
-import { setupAuthGuard } from "./router/routeGuards";
-
 // shared utils
-import { setupPrimeVue } from "./primeVueSetup";
-
-// shared COMPOSABLES
-import useToast from "./composables/toast";
+import { themePresets } from "./primeThemePresets";
 
 const initializeSuperTokens = (config: { appInfo: AppInfoUserInput }) => {
    SuperTokens.init({
@@ -29,24 +19,7 @@ const initializeSuperTokens = (config: { appInfo: AppInfoUserInput }) => {
    });
 };
 
-const stores = {
-   useUserStore,
-};
-
-const baseRouting = {
-   routes: sharedRoutes,
-   setupAuthGuard,
-};
-
-const composables = {
-   useToast,
-};
-
-// export declare type GlobalTypes = {
-//    emitNotify: EmitNotify
-// }
-
-export { stores, baseRouting, initializeSuperTokens, setupPrimeVue, composables };
+export { initializeSuperTokens, themePresets };
 
 // export default {
 //    install: (app: any) => {

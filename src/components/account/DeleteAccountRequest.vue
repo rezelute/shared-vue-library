@@ -30,6 +30,7 @@ import Button from "primevue/button";
 import accountService from "../../services/account/accountService";
 import ActionConfirmMsg from "../../components/actionConfirmMsg/ActionConfirmMsg.vue";
 import toastContent from "../../content/generic/toastContent";
+import { type EmitNotify } from "../../types";
 
 const emits = defineEmits(["notify"]);
 

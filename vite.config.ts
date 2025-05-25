@@ -41,7 +41,10 @@ export default defineConfig({
          entry: {
             index: path.resolve(__dirname, "src/index.ts"),
             "components/index": path.resolve(__dirname, "src/components/index.ts"),
-            "pages/index": path.resolve(__dirname, "src/pages/index.ts"),
+            "stores/index": path.resolve(__dirname, "src/stores/index.ts"),
+            "router/index": path.resolve(__dirname, "src/router/index.ts"),
+            "composables/index": path.resolve(__dirname, "src/composables/index.ts"),
+            "types/index": path.resolve(__dirname, "src/types/index.ts"),
          },
          name: "SharedVueLibrary",
          formats: ["es"],
@@ -63,7 +66,18 @@ export default defineConfig({
          // input: "src/index.ts", // Entry point
          // When we mark these as an external dependency,
          // we tell Rollup not to include them in the final output bundle because the consumer is expected to provide it externally
-         external: ["vue", "primevue", "pinia", "vue-router"],
+         external: [
+            "vue",
+            "primevue",
+            "pinia",
+            "vue-router",
+            "@primeuix/themes",
+            "primeicons",
+            "tailwindcss",
+            "tailwindcss-primeui",
+            "vee-validate",
+            "yup",
+         ],
          output: {
             // References these as global variables provided by the consuming application
             globals: {
@@ -86,7 +100,15 @@ export default defineConfig({
       tailwindcss(),
       dts({
          tsconfigPath: "./tsconfig.app.json",
-         include: ["src/index.ts", "src/components", "src/generated_types"],
+         include: [
+            "src/index.ts",
+            "src/components",
+            "src/stores",
+            "src/router",
+            "src/composables",
+            "src/types",
+            "src/generated_types",
+         ],
       }),
    ],
    // css: {

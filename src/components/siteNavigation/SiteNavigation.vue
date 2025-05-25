@@ -81,6 +81,7 @@ import ThemeToggle from "../../components/themeToggle/ThemeToggle.vue";
 import Session from "supertokens-web-js/recipe/session";
 import { useUserStore } from "../../stores/userStore";
 import toastContent from "../../content/generic/toastContent";
+import { type EmitNotify } from "../../types";
 
 interface MenuItem {
    label: string;

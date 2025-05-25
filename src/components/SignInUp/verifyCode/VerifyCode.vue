@@ -63,6 +63,7 @@ import Button from "primevue/button";
 import { resendCode, clearLoginAttemptInfo, consumeCode } from "supertokens-web-js/recipe/passwordless";
 import toastContent from "../../../content/generic/toastContent";
 import Message from "primevue/message";
+import { type EmitNotify } from "../../../types";
 
 const emits = defineEmits(["verificationCodeSuccess", "resendCodeSuccess", "notify", "restartFlow"]);
 

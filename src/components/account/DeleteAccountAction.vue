@@ -15,6 +15,7 @@ import Spinner from "primevue/progressspinner";
 import Card from "primevue/card";
 import Session from "supertokens-web-js/recipe/session";
 import accountService from "../../services/account/accountService";
+import { type EmitNotify } from "../../types";
 
 const emits = defineEmits(["notify"]);
 const props = defineProps<{

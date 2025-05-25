@@ -49,6 +49,13 @@ import Button from "primevue/button";
 import { createCode } from "supertokens-web-js/recipe/passwordless";
 import toastContent from "../../../content/generic/toastContent";
 import EmailInput from "../../../components/account/EmailInput.vue";
+import { type EmitNotify } from "../../../types";
+// import { usePrimeVue } from "primevue/config";
+
+// onMounted(() => {
+//    const primevue = usePrimeVue();
+//    console.log("Shared component theme preset", primevue?.config?.theme);
+// });
 
 const emits = defineEmits(["sendCodeSuccess", "notify"]);
 

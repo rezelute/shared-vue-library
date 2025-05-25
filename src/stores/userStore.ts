@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import Session from "supertokens-web-js/recipe/session";
+// import Session from "supertokens-web-js/recipe/session";
 
 const useUserStore = defineStore("userStore", () => {
    const isSignedIn = ref(false);
@@ -9,7 +9,7 @@ const useUserStore = defineStore("userStore", () => {
    async function updateAuth() {
       try {
          isFetchingSession.value = true;
-         isSignedIn.value = await Session.doesSessionExist();
+         // isSignedIn.value = await Session.doesSessionExist();
       } catch (error) {
          isSignedIn.value = false;
          console.error("Error checking session status", error);

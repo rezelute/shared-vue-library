@@ -1,5 +1,6 @@
-import { useToast as usePrimeToast } from "primevue/usetoast";
+// import { useToast as usePrimeToast } from "primevue/usetoast";
 import toastContent from "../content/generic/toastContent";
+import type { ToastServiceMethods } from "primevue/toastservice";
 //import { type ToastMessageOptions } from "primevue/toast";
 
 const TOAST_CONFIG = {
@@ -7,7 +8,7 @@ const TOAST_CONFIG = {
 };
 
 export interface AddToast {
-   type: unknown; // ex "unexpected", delete_account_fail ...
+   type: string; // ex "unexpected", delete_account_fail ...
    severity: "info" | "warn" | "error" | "success";
    summary: string;
    detail?: string;
@@ -15,10 +16,12 @@ export interface AddToast {
    json?: any;
 }
 
-export default function useToast() {
-   const toast = usePrimeToast();
+export default function useToasting(toast: ToastServiceMethods) {
+   // const toast = usePrimeToast();
 
-   function addToast({ severity, summary, detail, life = TOAST_CONFIG.DEFAULT_LIFE, json = null }: AddToast) {
+   function addToast(toastParam: AddToast) {
+      const { type, severity, summary, detail, life = TOAST_CONFIG.DEFAULT_LIFE, json = null } = toastParam;
+
       toast.add({
          severity,
          summary,
@@ -28,7 +31,7 @@ export default function useToast() {
 
       // log to sentry
       if (severity === "error" && json) {
-         console.error(json);
+         console.error(toastParam);
       }
    }
 

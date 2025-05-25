@@ -16,7 +16,4 @@
 
 <script setup lang="ts">
 import Card from "primevue/card";
-import Button from "primevue/button";
-import InputText from "primevue/inputtext";
-import PageLoader from "../components/pageLoader/PageLoader.vue";
 </script>

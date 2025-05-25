@@ -50,6 +50,7 @@ import EmailInput from "../../components/account/EmailInput.vue";
 import accountService from "../../services/account/accountService";
 import ActionConfirmMsg from "../../components/actionConfirmMsg/ActionConfirmMsg.vue";
 import toastContent from "../../content/generic/toastContent";
+import { type EmitNotify } from "../../types";
 
 const updateEmailFailSameEmail = "No changes have been made";
 const updateEmailFailSameEmailDetail =
