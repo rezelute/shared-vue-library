@@ -65,6 +65,7 @@ import { resendCode, clearLoginAttemptInfo, consumeCode } from "supertokens-web-
 import toastContent from "../../../content/generic/toastContent";
 import Message from "primevue/message";
 import { type EmitNotify } from "../../../types";
+import normalizeError from "../../../utils/error/normalizeError.util";
 
 const emits = defineEmits([
    "verificationCodeSuccess",
@@ -174,7 +175,10 @@ async function onCodeSubmit() {
                severity: "error",
                summary: otpErrorSummary,
                detail: otpErrorDetail,
-               json: response,
+               json: {
+                  status: response.status,
+                  responseDetails: normalizeError(response.fetchResponse),
+               },
             } satisfies EmitNotify);
          }
       }
@@ -187,7 +191,7 @@ async function onCodeSubmit() {
          severity: "error",
          summary: toastContent.error.somethingWentWrong.summary,
          detail: toastContent.error.somethingWentWrong.detail,
-         json: err,
+         json: normalizeError(err),
       } satisfies EmitNotify);
    } finally {
       isSubmittingCode.value = false;
@@ -217,7 +221,10 @@ async function onResendCode() {
             severity: "error",
             summary: resendOtpFailedSummary,
             detail: resendOtpFailedDetail,
-            json: response,
+            json: {
+               status: response.status,
+               responseDetails: normalizeError(response.fetchResponse),
+            },
          } satisfies EmitNotify);
       }
       // Magic link resent successfully, show toast to confirm
@@ -236,7 +243,7 @@ async function onResendCode() {
          severity: "error",
          summary: toastContent.error.somethingWentWrong.summary,
          detail: toastContent.error.somethingWentWrong.detail,
-         json: err,
+         json: normalizeError(err),
       } satisfies EmitNotify);
    } finally {
       isResendingCode.value = false;

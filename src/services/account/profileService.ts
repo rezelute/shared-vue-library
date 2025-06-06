@@ -24,7 +24,7 @@ type ProfileUpdatedResp = ProfileFields;
 
 // ex: [{ category: "name", fields: [{ type: "firstName", required: true }, { type: "lastName", required: true }] }]
 async function getProfileConfig(): Promise<ApiResponse<ProfileConfigResp[]>> {
-   const response = await fetch(`${import.meta.env.VITE_API_DOMAIN}/user/profile/config`, {
+   const response = await fetch(`${import.meta.env.VITE_API_DOMAIN}/profile/config`, {
       method: "GET",
       headers: {
          "Content-Type": "application/json",

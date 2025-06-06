@@ -52,6 +52,7 @@ import { createCode } from "supertokens-web-js/recipe/passwordless";
 import toastContent from "../../../content/generic/toastContent";
 import EmailInput from "../../../components/account/EmailInput.vue";
 import { type EmitNotify } from "../../../types";
+import normalizeError from "../../../utils/error/normalizeError.util";
 
 const emits = defineEmits(["sendCodeSuccess", "signupStartError", "googleSignInError"]);
 
@@ -94,7 +95,11 @@ async function onSignupStart() {
             severity: "error",
             summary: toastContent.error.somethingWentWrong.summary,
             detail: toastContent.error.somethingWentWrong.detail,
-            json: response,
+            json: {
+               status: response.status,
+               reason: response.reason,
+               responseDetails: normalizeError(response.fetchResponse),
+            },
          } satisfies EmitNotify);
       }
       // Magic link sent successfully, show the code input field
@@ -111,7 +116,7 @@ async function onSignupStart() {
          severity: "error",
          summary: toastContent.error.somethingWentWrong.summary,
          detail: toastContent.error.somethingWentWrong.detail,
-         json: err,
+         json: normalizeError(err),
       } satisfies EmitNotify);
    } finally {
       signingUpLoading.value = false;

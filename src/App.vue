@@ -23,7 +23,7 @@ import Toast from "primevue/toast";
 import SiteNavigation from "./components/siteNavigation/SiteNavigation.vue";
 import { RouterView } from "vue-router";
 import { useUserStore } from "./stores/userStore";
-import PageInfiniteLoader from "./components/pageInfiniteLoader/PageInfiniteLoader.vue";
+import PageInfiniteLoader from "./components/loading/pageInfiniteLoader/PageInfiniteLoader.vue";
 
 // data
 // -----------------------------------------

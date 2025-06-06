@@ -83,6 +83,7 @@ import Session from "supertokens-web-js/recipe/session";
 import { useUserStore } from "../../stores/userStore";
 import toastContent from "../../content/generic/toastContent";
 import { type EmitNotify } from "../../types";
+import normalizeError from "../../utils/error/normalizeError.util";
 
 defineOptions({ name: "SiteNavigation" });
 
@@ -152,7 +153,7 @@ async function onSignout() {
          severity: "error",
          summary: toastContent.error.somethingWentWrong.summary,
          detail: toastContent.error.somethingWentWrong.detail,
-         json: err,
+         json: normalizeError(err),
       } satisfies EmitNotify);
    } finally {
       signOutloading.value = false;

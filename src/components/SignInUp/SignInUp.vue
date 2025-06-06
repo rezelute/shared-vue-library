@@ -27,9 +27,10 @@ import VerifyCode from "../../components/SignInUp/verifyCode/VerifyCode.vue";
 import { getLoginAttemptInfo } from "supertokens-web-js/recipe/passwordless";
 import { useRouter } from "vue-router";
 import { signInAndUp } from "supertokens-web-js/recipe/thirdparty";
-import PageLoader from "../../components/pageLoader/PageLoader.vue";
+import PageLoader from "../../components/loading/pageLoader/PageLoader.vue";
 import toastContent from "../../content/generic/toastContent";
-import { type EmitNotify, type EmitSuccess } from "../../types";
+import { type EmitNotify } from "../../types";
+import normalizeError from "../../utils/error/normalizeError.util";
 
 const emits = defineEmits([
    "signupStartError",
@@ -84,7 +85,7 @@ async function hasInitialMagicLinkBeenSent() {
          severity: "error",
          summary: toastContent.error.somethingWentWrong.summary,
          detail: toastContent.error.somethingWentWrong.detail,
-         json: err,
+         json: normalizeError(err),
       } satisfies EmitNotify);
    } finally {
       isLoading.value = false;
@@ -118,7 +119,11 @@ async function handleGoogleCallback() {
             severity: "error",
             summary: googleFailSummary,
             detail: googleFailDetail,
-            json: response,
+            json: {
+               status: response.status,
+               reason: response.reason,
+               responseDetails: normalizeError(response),
+            },
          } satisfies EmitNotify);
       }
       // SuperTokens requires that the third party provider
@@ -130,7 +135,7 @@ async function handleGoogleCallback() {
             severity: "error",
             summary: googleFailSummary,
             detail: googleFailDetail,
-            json: response,
+            json: { status: response.status, responseDetails: normalizeError(response) },
          } satisfies EmitNotify);
       }
    } catch (err) {
@@ -141,7 +146,7 @@ async function handleGoogleCallback() {
          severity: "error",
          summary: toastContent.error.somethingWentWrong.summary,
          detail: toastContent.error.somethingWentWrong.detail,
-         json: err,
+         json: normalizeError(err),
       } satisfies EmitNotify);
    } finally {
       isLoading.value = false;

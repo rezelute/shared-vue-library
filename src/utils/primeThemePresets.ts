@@ -1,6 +1,7 @@
 import PrimeVue from "primevue/config";
 import Lara from "@primeuix/themes/lara";
 import { definePreset } from "@primeuix/themes";
+import type { Preset } from "@primeuix/themes/types";
 
 // Green theme
 const preset1 = {
@@ -69,7 +70,7 @@ const preset1 = {
          },
       },
    },
-};
+} as Preset;
 
 const customThemes = {
    preset1,

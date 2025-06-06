@@ -32,6 +32,7 @@ import accountService from "../../services/account/accountService";
 import ActionConfirmMsg from "../../components/actionConfirmMsg/ActionConfirmMsg.vue";
 import toastContent from "../../content/generic/toastContent";
 import { type EmitNotify } from "../../types";
+import normalizeError from "../../utils/error/normalizeError.util";
 
 const emits = defineEmits(["deleteAccountRequestError", "deleteAccountRequestSuccess"]);
 
@@ -60,7 +61,7 @@ async function sendDeleteEmail() {
          severity: "error",
          summary: toastContent.error.somethingWentWrong.summary,
          detail: toastContent.error.somethingWentWrong.detail,
-         json: err,
+         json: normalizeError(err),
       } satisfies EmitNotify);
    } finally {
       isLoading.value = false;

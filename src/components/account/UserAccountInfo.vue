@@ -40,6 +40,7 @@ import Session from "supertokens-web-js/recipe/session";
 import accountService from "../../services/account/accountService";
 import { type EmitNotify } from "../../types";
 import toastContent from "../../content/generic/toastContent";
+import normalizeError from "../../utils/error/normalizeError.util";
 
 const emits = defineEmits(["getUserIdError", "getUserEmailError"]);
 
@@ -78,7 +79,7 @@ async function getUserEmail() {
          severity: "error",
          summary: toastContent.error.somethingWentWrong.summary,
          detail: toastContent.error.somethingWentWrong.detail,
-         json: err,
+         json: normalizeError(err),
       } satisfies EmitNotify);
    } finally {
       isLoading.value = false;
@@ -96,7 +97,7 @@ async function getUserId() {
          severity: "error",
          summary: toastContent.error.somethingWentWrong.summary,
          detail: toastContent.error.somethingWentWrong.detail,
-         json: err,
+         json: normalizeError(err),
       } satisfies EmitNotify);
    } finally {
       isLoading.value = false;

@@ -77,7 +77,7 @@ export default defineConfig({
             "tailwindcss",
             "tailwindcss-primeui",
             "vee-validate",
-            "yup",
+            "zod",
          ],
          output: {
             // References these as global variables provided by the consuming application

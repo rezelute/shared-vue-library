@@ -1,34 +1,36 @@
 <template>
-   <div>
-      <label v-if="labelText" for="firstName">First name</label>
-      <Textbox
-         id="firstName"
-         :modelValue="firstName"
-         :invalid="showError"
-         placeholder="First name"
-         required
-         class="w-full"
-         @update:modelValue="onFirstNameInput"
-      />
-      <Message v-if="showError" severity="error" size="small" variant="simple">
-         {{ nameInvalidText }}
-      </Message>
+   <div class="spacing-form">
+      <label for="firstName">First name</label>
+      <div>
+         <Textbox
+            id="firstName"
+            :modelValue="firstName"
+            :invalid="showFirstNameError"
+            placeholder="First name"
+            required
+            class="w-full"
+            @update:modelValue="onFirstNameInput"
+         />
+         <Message v-if="showFirstNameError" severity="error" size="small" variant="simple">
+            {{ nameInvalidText }}
+         </Message>
+      </div>
 
-      <label v-if="labelText" for="lastName">
-         Last name <span v-if="!isLastNameRequired">(optional)</span>
-      </label>
-      <Textbox
-         id="lastName"
-         :modelValue="lastName"
-         :invalid="showError"
-         placeholder="Last name"
-         :required="isLastNameRequired"
-         class="w-full"
-         @update:modelValue="onLastNameInput"
-      />
-      <Message v-if="showError" severity="error" size="small" variant="simple">
-         {{ nameInvalidText }}
-      </Message>
+      <label for="lastName"> Last name <span v-if="!isLastNameRequired">(optional)</span> </label>
+      <div>
+         <Textbox
+            id="lastName"
+            :modelValue="lastName"
+            :invalid="showLastNameError"
+            placeholder="Last name"
+            :required="isLastNameRequired"
+            class="w-full"
+            @update:modelValue="onLastNameInput"
+         />
+         <Message v-if="showLastNameError" severity="error" size="small" variant="simple">
+            {{ nameInvalidText }}
+         </Message>
+      </div>
    </div>
 </template>
 
@@ -47,7 +49,6 @@ const emit = defineEmits<{
 const props = defineProps<{
    isLastNameRequired?: boolean; // false by default
    isSubmitClicked: boolean;
-   labelText?: string;
 }>();
 
 // Data
@@ -61,47 +62,38 @@ const lastName = defineModel<string>("lastName", { required: true });
 // -----------------------------------------
 onMounted(() => {
    // Emit initial validity
-   emit("validity-changed", validateName());
+   emit("validity-changed", isFirstNameValid() && isLastNameValid());
 });
 
 // computed
 // -----------------------------------------
-const showError = computed(() => props.isSubmitClicked && !validateName());
+const showFirstNameError = computed(() => props.isSubmitClicked && !isFirstNameValid());
+const showLastNameError = computed(() => props.isSubmitClicked && !isLastNameValid());
 
 // methods
 // -----------------------------------------
-const nameSchema = z.object({
-   firstName: z.string().min(2, "First name is required").max(50, "First name is too long"),
-   lastName: props.isLastNameRequired
-      ? z.string().min(2, "Last name is required").max(50, "Last name is too long")
-      : z
-           .string()
-           .max(50, "Last name is too long")
-           .optional()
-           // if last name is optional, it can be undefined or empty
-           // but if provided, it must be at least 2 characters
-           .refine((val) => val === undefined || val === "" || val.length >= 2, {
-              message: "Last name must be at least 2 characters if provided",
-           }),
-});
-function validateName() {
-   const validation = nameSchema.safeParse({
-      firstName: firstName.value,
-      lastName: lastName.value,
-   });
+function isFirstNameValid() {
+   return z.string().min(2).max(50).safeParse(firstName.value).success;
+}
 
-   return validation.success;
+function isLastNameValid() {
+   // Empty is allowed when not required
+   if (!props.isLastNameRequired && (!lastName.value || lastName.value === "")) {
+      return true;
+   }
+
+   return z.string().min(2).max(50).safeParse(lastName.value).success;
 }
 
 function onFirstNameInput(value: string | undefined) {
    const sanitizedValue = value ?? "";
    firstName.value = sanitizedValue;
-   emit("validity-changed", validateName());
+   emit("validity-changed", isFirstNameValid() && isLastNameValid());
 }
 
 function onLastNameInput(value: string | undefined) {
    const sanitizedValue = value ?? "";
    lastName.value = sanitizedValue;
-   emit("validity-changed", validateName());
+   emit("validity-changed", isFirstNameValid() && isLastNameValid());
 }
 </script>

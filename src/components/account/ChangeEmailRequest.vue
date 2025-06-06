@@ -53,6 +53,7 @@ import ActionConfirmMsg from "../../components/actionConfirmMsg/ActionConfirmMsg
 import toastContent from "../../content/generic/toastContent";
 import { type EmitNotify } from "../../types";
 import { ApiResponseError } from "../../utils/error/ApiResponseError";
+import normalizeError from "../../utils/error/normalizeError.util";
 
 const updateEmailFailSameEmail = "No changes have been made";
 const updateEmailFailSameEmailDetail =
@@ -121,7 +122,7 @@ async function sendChangeEmail() {
             severity: "error",
             summary: toastContent.error.somethingWentWrong.summary,
             detail: toastContent.error.somethingWentWrong.detail,
-            json: err,
+            json: normalizeError(err),
          } satisfies EmitNotify);
       }
    } finally {
