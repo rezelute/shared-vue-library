@@ -1,18 +1,28 @@
 <template>
    <!-- Component loader -->
    <Card>
-      <template #content>
+      <div v-if="isLoading" class="w-full">
          <div class="spacing-elements">
-            <slot name="loadingText">
-               <p class="text-2xl">Loading...</p>
-            </slot>
-            <Spinner />
+            <slot name="loadingText"></slot>
+            <ProgressSpinner aria-label="Loading" />
          </div>
-      </template>
+      </div>
+      <div v-else>
+         <slot name="default" />
+      </div>
    </Card>
 </template>
 
 <script setup lang="ts">
-import Spinner from "primevue/progressspinner";
+import ProgressSpinner from "primevue/progressspinner";
 import Card from "primevue/card";
+
+withDefaults(
+   defineProps<{
+      isLoading: boolean;
+   }>(),
+   {
+      isLoading: false,
+   }
+);
 </script>

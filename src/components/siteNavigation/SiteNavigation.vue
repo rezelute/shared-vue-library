@@ -12,58 +12,35 @@
 
             <template #end>
                <div class="flex gap-5">
-                  <!-- Links for larger screens -->
-                  <div class="hidden lg:flex items-center gap-5">
-                     <div v-for="item in items" :key="item.label">
-                        <Button v-slot="slotProps" asChild variant="outlined">
-                           <RouterLink :to="item.to" :class="(slotProps as any).class">
-                              <i :class="item.icon"></i>
-                              <span>{{ item.label }}</span>
-                           </RouterLink>
-                        </Button>
-                     </div>
+                  <!-- Menu trigger button -->
+                  <Button
+                     icon="pi pi-bars"
+                     aria-label="Navigation menu"
+                     aria-haspopup="true"
+                     aria-controls="overlay_tmenu"
+                     @click="toggleMenu"
+                  />
+                  <!-- Smaller screen menu -->
+                  <TieredMenu id="overlay_tmenu" ref="tieredMenu" :model="renderedMenuItems" popup>
+                     <template #item="{ item, props }">
+                        <!-- LINKS -->
+                        <router-link v-if="item.type === 'link'" :to="item.to" v-bind="props.action">
+                           <span :class="item.icon" />
+                           <span class="ml-2">{{ item.label }}</span>
+                        </router-link>
 
-                     <!-- <Button
-                        v-if="userSignedIn"
-                        icon="pi pi-sign-out"
-                        aria-label="Sign out"
-                        variant="outlined"
-                        :loading="signOutloading"
-                        @click="onSignout"
-                     /> -->
-                  </div>
-
-                  <!-- Burger menu for smaller screens -->
-                  <div class="lg:hidden">
-                     <!-- Menu trigger button -->
-                     <Button
-                        icon="pi pi-bars"
-                        aria-label="Navigation menu"
-                        aria-haspopup="true"
-                        aria-controls="overlay_tmenu"
-                        @click="toggleMenu"
-                     />
-                     <!-- Smaller screen menu -->
-                     <TieredMenu id="overlay_tmenu" ref="tieredMenu" :model="mobileItems" popup>
-                        <template #item="{ item, props }">
-                           <!-- LINKS -->
-                           <router-link v-if="item.to" :to="item.to" v-bind="props.action">
-                              <span :class="item.icon" />
-                              <span class="ml-2">{{ item.label }}</span>
-                           </router-link>
-
-                           <!-- BUTTONS (sign out etc.) -->
-                           <button
-                              v-else
-                              class="p-tieredmenu-item-link"
-                              @click="(e) => item.command?.({ originalEvent: e, item })"
-                           >
-                              <span :class="item.icon" />
-                              <span class="ml-2">{{ item.label }}</span>
-                           </button>
-                        </template>
-                     </TieredMenu>
-                  </div>
+                        <!-- BUTTONS (sign out etc.) -->
+                        <button
+                           v-else-if="item.type === 'button'"
+                           :aria-label="item['aria-label']"
+                           class="p-tieredmenu-item-link"
+                           @click="(e) => item.command?.({ originalEvent: e, item })"
+                        >
+                           <span :class="item.icon" />
+                           <span class="ml-2">{{ item.label }}</span>
+                        </button>
+                     </template>
+                  </TieredMenu>
 
                   <ThemeToggle class="ms-2" />
                </div>
@@ -87,16 +64,28 @@ import normalizeError from "../../utils/error/normalizeError.util";
 
 defineOptions({ name: "SiteNavigation" });
 
-interface MenuItem {
+interface InputMenuLink {
    label: string;
    icon: string;
    to: string;
 }
+interface LinkMenuItem extends InputMenuLink {
+   type: "link";
+}
+interface ButtonMenuItem {
+   type: "button";
+   label: string;
+   icon: string;
+   "aria-label"?: string;
+   command: () => void;
+}
+
+type RenderedMenuItem = LinkMenuItem | ButtonMenuItem;
 
 const emits = defineEmits(["signoutSuccess", "signoutError"]);
 const props = withDefaults(
    defineProps<{
-      items: MenuItem[];
+      items: InputMenuLink[];
       userSignedIn: boolean;
    }>(),
    {
@@ -110,34 +99,41 @@ const userStore = useUserStore();
 const signOutloading = ref(false);
 const tieredMenu = ref<InstanceType<typeof TieredMenu> | null>(null);
 
-const signUpSystemItems = ref([
-   { label: "Sign in", icon: "pi pi-sign-in", to: "/signin" },
-   { label: "Sign up", icon: "pi pi-user-plus", to: "/signup" },
+const signUpSystemItems = ref<RenderedMenuItem[]>([
+   { type: "link", label: "Sign in", icon: "pi pi-sign-in", to: "/signin" },
+   { type: "link", label: "Sign up", icon: "pi pi-user-plus", to: "/signup" },
 ]);
 
-const signedOutSystemItems = ref([
+const signedOutSystemItems = ref<RenderedMenuItem[]>([
    {
+      type: "button",
       label: "Sign Out",
       icon: "pi pi-sign-out",
       "aria-label": "Sign out",
       command: onSignout,
-   },
+   } as ButtonMenuItem,
 ]);
 // computed
 // -----------------------------------------
-const items = computed(() => {
-   // signed OUT links
-   if (!props.userSignedIn) {
-      return [...(props.items || []), ...signUpSystemItems.value] as MenuItem[];
+const userLinkItems = computed(() => {
+   if (!props.items || !props.items.length) {
+      return [] as LinkMenuItem[];
    }
-   // signed IN links (we dont show sign in/up items)
-   else {
-      return [...(props.items || []), ...signedOutSystemItems.value] as MenuItem[];
-   }
+
+   return props.items.map((item) => {
+      return {
+         ...item,
+         type: "link",
+      };
+   }) as LinkMenuItem[];
 });
 
-const mobileItems = computed(() => {
-   return [...items.value];
+const renderedMenuItems = computed(() => {
+   return (
+      props.userSignedIn
+         ? [...userLinkItems.value, ...signedOutSystemItems.value]
+         : [...userLinkItems.value, ...signUpSystemItems.value]
+   ) as RenderedMenuItem[];
 });
 
 // methods
