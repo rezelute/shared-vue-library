@@ -6,7 +6,7 @@
       "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
       "target": "ESNext",
       "module": "ESNext",
-      "moduleResolution": "Node",
+      "moduleResolution": "bundler",
       "paths": {
          "@/*": ["./src/*"],
          "*": ["./node_modules/*"] // Ensure node_modules are correctly referenced
