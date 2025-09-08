@@ -51,14 +51,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from "vue";
 import Button from "primevue/button";
 import Menubar from "primevue/menubar";
 import TieredMenu from "primevue/tieredmenu";
-import ThemeToggle from "../../components/themeToggle/ThemeToggle.vue";
 import Session from "supertokens-web-js/recipe/session";
-import { useUserStore } from "../../stores/userStore";
+import { computed,ref } from "vue";
+import ThemeToggle from "../../components/themeToggle/ThemeToggle.vue";
 import toastContent from "../../content/generic/toastContent";
+import { useUserStore } from "../../stores/userStore";
 import { type EmitNotify } from "../../types";
 import normalizeError from "../../utils/error/normalizeError.util";
 

@@ -1,7 +1,7 @@
 // composables/useUpdateEmail.ts
 import accountService from "@/services/account/accountService";
-import normalizeError from "@/utils/error/normalizeError.util";
 import { type EmitNotify } from "@/types";
+import normalizeError from "@/utils/error/normalizeError.util";
 
 export function useUpdateEmail() {
    async function updateEmail(

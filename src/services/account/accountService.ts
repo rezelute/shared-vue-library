@@ -1,4 +1,4 @@
-import { type SuccessResponse, type ApiResponse } from "../../types";
+import { type ApiResponse,type SuccessResponse } from "../../types";
 import { ApiResponseError } from "../../utils/error/ApiResponseError";
 
 interface UserEmailData {

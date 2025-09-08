@@ -1,6 +1,6 @@
 // SHARED ROUTING
-import { sharedRoutes } from "./sharedRoutes";
 import { setupAuthGuard } from "./routeGuards";
+import { sharedRoutes } from "./sharedRoutes";
 
 export { setupAuthGuard, sharedRoutes };
 

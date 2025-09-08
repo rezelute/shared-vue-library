@@ -1,7 +1,6 @@
 <template>
-   <div class="spacing-form">
-      <label for="firstName">First name</label>
-      <div>
+   <div class="vstack-form">
+      <FormField id="firstName" label="First name" :error="showFirstNameError ? nameInvalidText : ''">
          <Textbox
             id="firstName"
             :modelValue="firstName"
@@ -11,13 +10,13 @@
             class="w-full"
             @update:modelValue="onFirstNameInput"
          />
-         <Message v-if="showFirstNameError" severity="error" size="small" variant="simple">
-            {{ nameInvalidText }}
-         </Message>
-      </div>
+      </FormField>
 
-      <label for="lastName"> Last name <span v-if="!isLastNameRequired">(optional)</span> </label>
-      <div>
+      <FormField
+         id="lastName"
+         :label="`Last name ${!isLastNameRequired ? '(optional)' : ''}`"
+         :error="showLastNameError ? nameInvalidText : ''"
+      >
          <Textbox
             id="lastName"
             :modelValue="lastName"
@@ -27,18 +26,15 @@
             class="w-full"
             @update:modelValue="onLastNameInput"
          />
-         <Message v-if="showLastNameError" severity="error" size="small" variant="simple">
-            {{ nameInvalidText }}
-         </Message>
-      </div>
+      </FormField>
    </div>
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted } from "vue";
 import Textbox from "primevue/inputtext";
-import Message from "primevue/message";
+import { computed, onMounted } from "vue";
 import { z } from "zod";
+import FormField from "@/components/formField/FormField.vue";
 
 // Emit
 const emit = defineEmits<{

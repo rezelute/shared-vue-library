@@ -9,7 +9,7 @@ export type ProfileFields = Record<ProfileFieldKey, string>;
 
 export interface ProfileResp {
    fields: ProfileFields;
-   isComplete: boolean;
+   isCompleted: boolean;
 }
 
 export interface ProfileConfigResp {

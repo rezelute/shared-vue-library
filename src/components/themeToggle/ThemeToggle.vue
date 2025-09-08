@@ -9,8 +9,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from "vue";
 import Button from "primevue/button";
+import { computed,ref } from "vue";
 
 const lsTheme = localStorage.getItem("theme") || "light";
 const theme = ref(lsTheme);

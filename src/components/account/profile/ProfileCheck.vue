@@ -5,10 +5,10 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
-import PageLoader from "./../../loading/pageLoader/PageLoader.vue";
+import { useRoute, useRouter } from "vue-router";
 import profileService from "../../../services/account/profileService";
-import { useRouter, useRoute } from "vue-router";
 import { getRedirectTargetWithQueryParams } from "../../../utils/url";
+import PageLoader from "./../../loading/pageLoader/PageLoader.vue";
 
 const route = useRoute();
 const router = useRouter();
@@ -32,7 +32,7 @@ async function checkProfileCompletion() {
       const { data } = await profileService.getProfile();
 
       // profile is complete, go to home page OR to redirect query param if exists (e.g. /home?redirect=/some-page)
-      if (data.isComplete) {
+      if (data.isCompleted) {
          const redirect = getRedirectTargetWithQueryParams(route.query);
          if (redirect) {
             router.push(redirect);

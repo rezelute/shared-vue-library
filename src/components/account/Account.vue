@@ -11,7 +11,7 @@
                <h1 class="h1 text-color">Your account</h1>
             </slot>
 
-            <div class="spacing-page-sections">
+            <div class="vstack-page">
                <UserAccountInfo class="card-p-sm" :updatedEmailDate="updatedEmailDate" />
                <ChangeEmailRequest
                   class="card-p-sm"
@@ -30,14 +30,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
+import { onMounted, ref } from "vue";
+import { useDeleteAccount } from "../../composables/account/useDeleteAccount";
+import { useUpdateEmail } from "../../composables/account/useUpdateEmail";
+import { type EmitNotify } from "../../types";
+import PageLoader from "../loading/pageLoader/PageLoader.vue";
 import ChangeEmailRequest from "./ChangeEmailRequest.vue";
 import DeleteAccountRequest from "./DeleteAccountRequest.vue";
 import UserAccountInfo from "./UserAccountInfo.vue";
-import { useUpdateEmail } from "../../composables/account/useUpdateEmail";
-import { useDeleteAccount } from "../../composables/account/useDeleteAccount";
-import { type EmitNotify } from "../../types";
-import PageLoader from "../loading/pageLoader/PageLoader.vue";
 
 const emits = defineEmits([
    "deleteAccountRequestError",

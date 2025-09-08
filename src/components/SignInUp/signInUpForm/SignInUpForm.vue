@@ -16,8 +16,8 @@
                <hr class="flex-1 border-gray-300" />
             </div>
 
-            <form class="spacing-form" @submit.prevent>
-               <p>
+            <form class="vstack-form" @submit.prevent>
+               <p class="mb-2">
                   This website offers a Passwordless Sign-In option. Instead of remembering a password, you'll
                   receive a one-time code via email each time you sign in.
                </p>
@@ -44,13 +44,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, getCurrentInstance } from "vue";
-import GoogleAuthIcon from "../../../components/googleAuthIcon/GoogleAuthIcon.vue";
-import Card from "primevue/card";
 import Button from "primevue/button";
+import Card from "primevue/card";
 import { createCode } from "supertokens-web-js/recipe/passwordless";
-import toastContent from "../../../content/generic/toastContent";
+import { ref } from "vue";
 import EmailInput from "../../../components/account/EmailInput.vue";
+import GoogleAuthIcon from "../../../components/googleAuthIcon/GoogleAuthIcon.vue";
+import toastContent from "../../../content/generic/toastContent";
 import { type EmitNotify } from "../../../types";
 import normalizeError from "../../../utils/error/normalizeError.util";
 

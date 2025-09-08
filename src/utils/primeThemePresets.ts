@@ -1,7 +1,7 @@
-import PrimeVue from "primevue/config";
-import Lara from "@primeuix/themes/lara";
 import { definePreset } from "@primeuix/themes";
+import Lara from "@primeuix/themes/lara";
 import type { Preset } from "@primeuix/themes/types";
+import PrimeVue from "primevue/config";
 
 // Green theme
 const preset1 = {

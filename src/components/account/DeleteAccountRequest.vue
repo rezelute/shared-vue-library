@@ -5,7 +5,7 @@
          <h2 class="h2">Delete your account</h2>
       </template>
       <template #content>
-         <div v-if="!isDeleteEmailSent" class="spacing-elements">
+         <div v-if="!isDeleteEmailSent" class="vstack-form">
             <p>
                You will receive an email to verify your account deletion. Please click on the email link to
                delete your account.
@@ -25,12 +25,12 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import Card from "primevue/card";
 import Button from "primevue/button";
-import accountService from "../../services/account/accountService";
+import Card from "primevue/card";
+import { ref } from "vue";
 import ActionConfirmMsg from "../../components/actionConfirmMsg/ActionConfirmMsg.vue";
 import toastContent from "../../content/generic/toastContent";
+import accountService from "../../services/account/accountService";
 import { type EmitNotify } from "../../types";
 import normalizeError from "../../utils/error/normalizeError.util";
 

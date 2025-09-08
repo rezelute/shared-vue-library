@@ -1,7 +1,7 @@
 <template>
    <Transition name="fade" mode="out-in">
       <div v-if="isLoading" key="loading" class="w-full" role="status" aria-live="polite">
-         <div class="spacing-elements p-12">
+         <div class="vstack-sm p-12">
             <slot name="loadingText">
                <!-- Invisible fallback for accessibility only if no text is provided -->
                <span class="sr-only">Loading...</span>

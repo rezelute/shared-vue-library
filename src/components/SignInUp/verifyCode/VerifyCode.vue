@@ -16,16 +16,17 @@
             </div>
          </template>
          <template #content>
-            <form class="spacing-groups" @submit.prevent>
+            <form class="vstack-lg" @submit.prevent>
                <!-- Code input & Submit -->
-               <div class="spacing-form">
+               <div class="vstack-form">
                   <p>
                      To finish the signup process, enter the code that was emailed to you. Note that the code
                      is only valid for 10 minutes.
                   </p>
 
-                  <div>
+                  <FormField id="magic-code-input" :error="isCodeValid === false ? invalidCodeText : ''">
                      <InputOtp
+                        id="magic-code-input"
                         v-model="userMagicCode"
                         :length="6"
                         class="w-50"
@@ -34,17 +35,14 @@
                         required
                         :invalid="isCodeValid === false"
                      />
-                     <Message v-if="isCodeValid === false" severity="error" size="small" variant="simple">
-                        {{ invalidCodeText }}
-                     </Message>
-                  </div>
+                  </FormField>
                   <Button class="w-fit" type="submit" :loading="isSubmittingCode" @click="onCodeSubmit">
                      Submit code
                   </Button>
                </div>
 
                <!-- Code re-send -->
-               <div class="spacing-form">
+               <div class="vstack-form">
                   <p>If you didnt receive an email, please check your Junk folder or resend another code.</p>
                   <Button class="w-fit" type="button" :loading="isResendingCode" @click="onResendCode">
                      Resend code
@@ -57,13 +55,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch } from "vue";
+import Button from "primevue/button";
 import Card from "primevue/card";
 import InputOtp from "primevue/inputotp";
-import Button from "primevue/button";
-import { resendCode, clearLoginAttemptInfo, consumeCode } from "supertokens-web-js/recipe/passwordless";
+import { clearLoginAttemptInfo, consumeCode, resendCode } from "supertokens-web-js/recipe/passwordless";
+import { computed, ref, watch } from "vue";
+import FormField from "../../../components/formField/FormField.vue";
 import toastContent from "../../../content/generic/toastContent";
-import Message from "primevue/message";
 import { type EmitNotify } from "../../../types";
 import normalizeError from "../../../utils/error/normalizeError.util";
 

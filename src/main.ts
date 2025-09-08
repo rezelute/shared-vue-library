@@ -2,14 +2,13 @@
 
 import "./assets/styles/main.css";
 import "primeicons/primeicons.css";
-
-import App from "./App.vue";
-import { createRouter, createWebHistory } from "vue-router";
-import { createApp } from "vue";
+import { definePreset } from "@primeuix/themes";
+import Lara from "@primeuix/themes/lara";
 import { createPinia } from "pinia";
 import PrimeVue from "primevue/config";
-import Lara from "@primeuix/themes/lara";
-import { definePreset } from "@primeuix/themes";
+import { createApp } from "vue";
+import { createRouter, createWebHistory } from "vue-router";
+import App from "./App.vue";
 // import { initializeSuperTokens } from "./index";
 import LandingPage from "./pages/LandingPage.vue";
 

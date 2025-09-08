@@ -1,10 +1,9 @@
 // supertokens
 import SuperTokens from "supertokens-web-js";
-import Passwordless from "supertokens-web-js/recipe/passwordless";
-import ThirdParty from "supertokens-web-js/recipe/thirdparty";
-import Session from "supertokens-web-js/recipe/session";
 import { type AppInfoUserInput } from "supertokens-web-js/lib/build/types";
-
+import Passwordless from "supertokens-web-js/recipe/passwordless";
+import Session from "supertokens-web-js/recipe/session";
+import ThirdParty from "supertokens-web-js/recipe/thirdparty";
 import { customThemes, setupPrimeVue } from "./utils/primeThemePresets";
 
 const initializeSuperTokens = (config: { appInfo: AppInfoUserInput }) => {

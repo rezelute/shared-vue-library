@@ -18,12 +18,12 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, computed } from "vue";
 import Toast from "primevue/toast";
-import SiteNavigation from "./components/siteNavigation/SiteNavigation.vue";
+import { computed,onMounted, ref } from "vue";
 import { RouterView } from "vue-router";
-import { useUserStore } from "./stores/userStore";
 import PageInfiniteLoader from "./components/loading/pageInfiniteLoader/PageInfiniteLoader.vue";
+import SiteNavigation from "./components/siteNavigation/SiteNavigation.vue";
+import { useUserStore } from "./stores/userStore";
 
 // data
 // -----------------------------------------

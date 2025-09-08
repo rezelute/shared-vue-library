@@ -6,7 +6,7 @@
          </template>
          <template #content>
             <section>
-               <form class="spacing-groups" @submit.prevent>
+               <form class="vstack-form" @submit.prevent>
                   <p>
                      We need a few basic details for essential purposes—like personalizing emails with your
                      name.
@@ -39,18 +39,18 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, computed } from "vue";
+import Button from "primevue/button";
+import Card from "primevue/card";
+import { computed, onMounted, ref } from "vue";
 import PageLoader from "../../../components/loading/pageLoader/PageLoader.vue";
+import toastContent from "../../../content/generic/toastContent";
 import profileService, {
    type ProfileConfigResp,
    type ProfileFields,
 } from "../../../services/account/profileService";
-import Card from "primevue/card";
-import Button from "primevue/button";
 import { type EmitNotify } from "../../../types";
-import toastContent from "../../../content/generic/toastContent";
-import FullNameInput from "./FullNameInput.vue";
 import normalizeError from "../../../utils/error/normalizeError.util";
+import FullNameInput from "./FullNameInput.vue";
 
 const emits = defineEmits(["profileLoadError", "profileSubmitSuccess", "profileSubmitError"]);
 

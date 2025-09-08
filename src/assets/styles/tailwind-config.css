@@ -18,55 +18,31 @@
 }
 
 @layer components {
-   /* === FORMS === */
-   .spacing-form {
-      @apply flex flex-col;
-   }
-
-   /* Small margin for labels and paragraphs */
-   .spacing-form > label,
-   .spacing-form > p {
-      @apply mb-1;
-   }
-
-   /* Small margin for error messages */
-   .spacing-form .p-message {
-      @apply mt-1;
-   }
-
-   /* Larger bottom margin for everything else (default case) */
-   .spacing-form > input,
-   .spacing-form > textarea,
-   .spacing-form > select,
-   .spacing-form > div {
-      @apply mb-6;
-   }
-
-   /* BUT: remove bottom margin if the next sibling is a button */
-   .spacing-form input:has(+ button),
-   .spacing-form textarea:has(+ button),
-   .spacing-form select:has(+ button),
-   .spacing-form div:has(+ button),
-   .spacing-form p:has(+ button) {
-      @apply mb-0;
-   }
-
-   /* Add margin before the button */
-   .spacing-form button {
-      @apply mt-4;
-   }
-
-   /* === SPACING === */
-   .spacing-page-sections {
+   /* === GENERIC SPACING === */
+   /* Generic Spacing */
+   /*-------------------*/
+   .vstack-xl {
       @apply flex flex-col gap-12;
    }
-
-   .spacing-groups {
+   .vstack-lg {
       @apply flex flex-col gap-10;
    }
-
-   .spacing-elements {
+   .vstack-md {
+      @apply flex flex-col gap-6;
+   }
+   .vstack-sm {
       @apply flex flex-col gap-4;
+   }
+
+   /* Component Spacing */
+   /*-------------------*/
+   /* Spacing between page groups */
+   .vstack-page {
+      @apply flex flex-col gap-12;
+   }
+   /* Spacing between form groups */
+   .vstack-form {
+      @apply flex flex-col gap-5;
    }
 
    /* === TEXT === */

@@ -5,12 +5,13 @@
       </template>
       <template #content>
          <!-- Change email form -->
-         <div v-if="!isEmailSent" class="spacing-elements">
-            <p>
-               You will receive an email to your old email to verify your new email address. Please click on
-               the email link to update your email.
-            </p>
-            <form class="spacing-form" @submit.prevent="sendChangeEmail">
+         <div v-if="!isEmailSent">
+            <form class="vstack-form" @submit.prevent="sendChangeEmail">
+               <p>
+                  You will receive an email to your old email to verify your new email address. Please click
+                  on the email link to update your email.
+               </p>
+
                <EmailInput
                   v-model:email="email"
                   :isSubmitClicked="isSubmitClicked"
@@ -44,13 +45,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import Card from "primevue/card";
 import Button from "primevue/button";
+import Card from "primevue/card";
+import { ref } from "vue";
 import EmailInput from "../../components/account/EmailInput.vue";
-import accountService from "../../services/account/accountService";
 import ActionConfirmMsg from "../../components/actionConfirmMsg/ActionConfirmMsg.vue";
 import toastContent from "../../content/generic/toastContent";
+import accountService from "../../services/account/accountService";
 import { type EmitNotify } from "../../types";
 import { ApiResponseError } from "../../utils/error/ApiResponseError";
 import normalizeError from "../../utils/error/normalizeError.util";

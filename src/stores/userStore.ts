@@ -1,6 +1,6 @@
-import { ref } from "vue";
 import { defineStore } from "pinia";
 import Session from "supertokens-web-js/recipe/session";
+import { ref } from "vue";
 
 const useUserStore = defineStore("userStore", () => {
    const isSignedIn = ref(false);

@@ -1,15 +1,14 @@
 // import AutoImport from "unplugin-auto-import/vite";
-import { fileURLToPath, URL } from "node:url";
-
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import { configDefaults } from "vitest/config";
-import fs from "fs";
-import path from "path";
-import dotenv from "dotenv";
 import tailwindcss from "@tailwindcss/vite";
-import dts from "vite-plugin-dts";
+import vue from "@vitejs/plugin-vue";
+import dotenv from "dotenv";
+import fs from "fs";
+import { fileURLToPath, URL } from "node:url";
+import path from "path";
 import copy from "rollup-plugin-copy";
+import { defineConfig } from "vite";
+import dts from "vite-plugin-dts";
+import { configDefaults } from "vitest/config";
 
 dotenv.config(); // Load environment variables from .env
 

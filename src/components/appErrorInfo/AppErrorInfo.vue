@@ -15,8 +15,8 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from "vue";
 import Card from "primevue/card";
+import { onMounted } from "vue";
 
 const props = defineProps<{
    error: any;

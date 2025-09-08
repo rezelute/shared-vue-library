@@ -6,7 +6,7 @@
          </div>
       </template>
       <template #content>
-         <div class="spacing-page-sections border border-primary-200 p-4">
+         <div class="vstack-page border border-primary-200 p-4">
             <div class="w-full border">HERO CONTENT FULL WIDTH</div>
             <div class="bg-primary mt-6 p-2 w-fit border">landing page content (w-fit)</div>
          </div>

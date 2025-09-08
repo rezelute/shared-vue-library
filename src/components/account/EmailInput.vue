@@ -1,6 +1,5 @@
 <template>
-   <div>
-      <label v-if="labelText" for="email">{{ labelText }}</label>
+   <FormField id="email" :label="labelText" :error="showError ? emailInvalidText : undefined">
       <Textbox
          id="email"
          :modelValue="email"
@@ -10,17 +9,14 @@
          class="w-full"
          @update:modelValue="onInput"
       />
-      <Message v-if="showError" severity="error" size="small" variant="simple">
-         {{ emailInvalidText }}
-      </Message>
-   </div>
+   </FormField>
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted } from "vue";
 import Textbox from "primevue/inputtext";
-import Message from "primevue/message";
+import { computed, onMounted } from "vue";
 import { z } from "zod";
+import FormField from "../formField/FormField.vue";
 
 function isEmailValid(email: string): boolean {
    const emailSchema = z.string().email();

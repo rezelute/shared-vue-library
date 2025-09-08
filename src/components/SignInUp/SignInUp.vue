@@ -20,14 +20,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, computed } from "vue";
+import { getLoginAttemptInfo } from "supertokens-web-js/recipe/passwordless";
+import { signInAndUp } from "supertokens-web-js/recipe/thirdparty";
+import { computed, onMounted, ref } from "vue";
 import { useRoute } from "vue-router";
+import { useRouter } from "vue-router";
+import PageLoader from "../../components/loading/pageLoader/PageLoader.vue";
 import SignInUpForm from "../../components/SignInUp/signInUpForm/SignInUpForm.vue";
 import VerifyCode from "../../components/SignInUp/verifyCode/VerifyCode.vue";
-import { getLoginAttemptInfo } from "supertokens-web-js/recipe/passwordless";
-import { useRouter } from "vue-router";
-import { signInAndUp } from "supertokens-web-js/recipe/thirdparty";
-import PageLoader from "../../components/loading/pageLoader/PageLoader.vue";
 import toastContent from "../../content/generic/toastContent";
 import { type EmitNotify } from "../../types";
 import normalizeError from "../../utils/error/normalizeError.util";
