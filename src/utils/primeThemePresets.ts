@@ -78,10 +78,10 @@ const customThemes = {
 
 const MyPreset = definePreset(Lara, preset1);
 
-function setupPrimeVue(app: any) {
+function setupPrimeVue(app: any, appPreset: any) {
    app.use(PrimeVue, {
       theme: {
-         preset: MyPreset,
+         preset: appPreset, // MyPreset,
          options: {
             darkModeSelector: ".dark",
          },

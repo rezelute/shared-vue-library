@@ -1,61 +1,56 @@
 <template>
    <header class="bg-surface-0 dark:bg-surface-900">
       <div class="container">
-         <Menubar :model="[]">
-            <template #start>
-               <Button v-slot="slotProps" asChild variant="link">
-                  <RouterLink :to="!userSignedIn ? '/' : '/home'" :class="(slotProps as any).class">
-                     <slot name="logo" />
-                  </RouterLink>
-               </Button>
-            </template>
+         <nav class="flex py-4">
+            <Button v-slot="slotProps" asChild variant="link">
+               <RouterLink :to="!userSignedIn ? '/' : '/home'" :class="(slotProps as any).class" class="!p-0">
+                  <slot name="logo" />
+               </RouterLink>
+            </Button>
 
-            <template #end>
-               <div class="flex gap-5">
-                  <!-- Menu trigger button -->
-                  <Button
-                     icon="pi pi-bars"
-                     aria-label="Navigation menu"
-                     aria-haspopup="true"
-                     aria-controls="overlay_tmenu"
-                     @click="toggleMenu"
-                  />
-                  <!-- Smaller screen menu -->
-                  <TieredMenu id="overlay_tmenu" ref="tieredMenu" :model="renderedMenuItems" popup>
-                     <template #item="{ item, props }">
-                        <!-- LINKS -->
-                        <router-link v-if="item.type === 'link'" :to="item.to" v-bind="props.action">
-                           <span :class="item.icon" />
-                           <span class="ml-2">{{ item.label }}</span>
-                        </router-link>
+            <div class="flex gap-3 sm:gap-5 ml-auto h-12 items-center">
+               <!-- Menu trigger button -->
+               <Button
+                  icon="pi pi-bars"
+                  aria-label="Navigation menu"
+                  aria-haspopup="true"
+                  aria-controls="overlay_tmenu"
+                  @click="toggleMenu"
+               />
+               <!-- Smaller screen menu -->
+               <TieredMenu id="overlay_tmenu" ref="tieredMenu" :model="renderedMenuItems" popup>
+                  <template #item="{ item, props }">
+                     <!-- LINKS -->
+                     <router-link v-if="item.type === 'link'" :to="item.to" v-bind="props.action">
+                        <span :class="item.icon" />
+                        <span class="ml-2">{{ item.label }}</span>
+                     </router-link>
 
-                        <!-- BUTTONS (sign out etc.) -->
-                        <button
-                           v-else-if="item.type === 'button'"
-                           :aria-label="item['aria-label']"
-                           class="p-tieredmenu-item-link"
-                           @click="(e) => item.command?.({ originalEvent: e, item })"
-                        >
-                           <span :class="item.icon" />
-                           <span class="ml-2">{{ item.label }}</span>
-                        </button>
-                     </template>
-                  </TieredMenu>
+                     <!-- BUTTONS (sign out etc.) -->
+                     <button
+                        v-else-if="item.type === 'button'"
+                        :aria-label="item['aria-label']"
+                        class="p-tieredmenu-item-link"
+                        @click="(e) => item.command?.({ originalEvent: e, item })"
+                     >
+                        <span :class="item.icon" />
+                        <span class="ml-2">{{ item.label }}</span>
+                     </button>
+                  </template>
+               </TieredMenu>
 
-                  <ThemeToggle class="ms-2" />
-               </div>
-            </template>
-         </Menubar>
+               <ThemeToggle />
+            </div>
+         </nav>
       </div>
    </header>
 </template>
 
 <script setup lang="ts">
 import Button from "primevue/button";
-import Menubar from "primevue/menubar";
 import TieredMenu from "primevue/tieredmenu";
 import Session from "supertokens-web-js/recipe/session";
-import { computed,ref } from "vue";
+import { computed, ref } from "vue";
 import ThemeToggle from "../../components/themeToggle/ThemeToggle.vue";
 import toastContent from "../../content/generic/toastContent";
 import { useUserStore } from "../../stores/userStore";
