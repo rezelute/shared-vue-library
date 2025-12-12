@@ -5147,6 +5147,7 @@ const ii = { class: "flex flex-col gap-1" }, ai = ["for"], si = {
       ]),
       t.error ? (p(), P(O(Kt), {
         key: 2,
+        "data-test": `form-field-error-${t.id}`,
         class: "mt-1",
         severity: "error",
         size: "small",
@@ -5156,7 +5157,7 @@ const ii = { class: "flex flex-col gap-1" }, ai = ["for"], si = {
           q(R(t.error), 1)
         ]),
         _: 1
-      })) : T("", !0)
+      }, 8, ["data-test"])) : T("", !0)
     ]));
   }
 }), ui = "Please enter a valid email address", Wt = /* @__PURE__ */ N({

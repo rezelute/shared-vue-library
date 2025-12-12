@@ -7,7 +7,14 @@
          <slot />
       </div>
 
-      <Message v-if="error" class="mt-1" severity="error" size="small" variant="simple">
+      <Message
+         v-if="error"
+         :data-test="`form-field-error-${id}`"
+         class="mt-1"
+         severity="error"
+         size="small"
+         variant="simple"
+      >
          {{ error }}
       </Message>
    </div>
