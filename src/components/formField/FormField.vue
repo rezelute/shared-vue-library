@@ -9,7 +9,7 @@
 
       <Message
          v-if="error"
-         :data-test="`form-field-error-${id}`"
+         :data-test="`${id}-error-message`"
          class="mt-1"
          severity="error"
          size="small"

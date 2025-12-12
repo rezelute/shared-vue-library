@@ -5147,7 +5147,7 @@ const ii = { class: "flex flex-col gap-1" }, ai = ["for"], si = {
       ]),
       t.error ? (p(), P(O(Kt), {
         key: 2,
-        "data-test": `form-field-error-${t.id}`,
+        "data-test": `${t.id}-error-message`,
         class: "mt-1",
         severity: "error",
         size: "small",
