@@ -1,6 +1,6 @@
-# vue-project
+# shared-vue-library
 
-This template should help get you started developing with Vue 3 in Vite.
+This project should help you setup a new Frontend App with components from PrimeVue and authentication from Supertokens.
 
 ## Recommended IDE Setup
 
