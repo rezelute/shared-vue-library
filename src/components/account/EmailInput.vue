@@ -7,6 +7,7 @@
          placeholder="Email"
          required
          class="w-full"
+         data-test="auth-email-field"
          @update:modelValue="onInput"
       />
    </FormField>

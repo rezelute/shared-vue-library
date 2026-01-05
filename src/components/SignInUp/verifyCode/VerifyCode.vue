@@ -10,6 +10,7 @@
                   variant="outlined"
                   icon="pi pi-arrow-left"
                   aria-label="Start over"
+                  data-test="auth-change-email"
                   @click="onRestartFlow"
                />
                <h1 class="h1 mt-0 sm:mt-0">Input validation code</h1>
@@ -24,7 +25,11 @@
                      is only valid for 10 minutes.
                   </p>
 
-                  <FormField id="magic-code-input" :error="isCodeValid === false ? invalidCodeText : ''">
+                  <FormField
+                     id="magic-code-input"
+                     :error="isCodeValid === false ? invalidCodeText : ''"
+                     data-test="auth-error-message"
+                  >
                      <InputOtp
                         id="magic-code-input"
                         v-model="userMagicCode"
@@ -34,9 +39,16 @@
                         placeholder="Input email code"
                         required
                         :invalid="isCodeValid === false"
+                        data-test="auth-code-input"
                      />
                   </FormField>
-                  <Button class="w-fit" type="submit" :loading="isSubmittingCode" @click="onCodeSubmit">
+                  <Button
+                     class="w-fit"
+                     type="submit"
+                     :loading="isSubmittingCode"
+                     data-test="auth-verify-button"
+                     @click="onCodeSubmit"
+                  >
                      Submit code
                   </Button>
                </div>
@@ -44,7 +56,13 @@
                <!-- Code re-send -->
                <div class="vstack-form">
                   <p>If you didnt receive an email, please check your Junk folder or resend another code.</p>
-                  <Button class="w-fit" type="button" :loading="isResendingCode" @click="onResendCode">
+                  <Button
+                     class="w-fit"
+                     type="button"
+                     :loading="isResendingCode"
+                     data-test="auth-resend-code"
+                     @click="onResendCode"
+                  >
                      Resend code
                   </Button>
                </div>
@@ -83,8 +101,8 @@ const userMagicCode = ref(""); // user input code
 const isCodeValid = ref<boolean | null>(null);
 const codeInputAttemptCount = ref(0);
 const codeInputAttemptMax = ref(0);
-const isSubmittingCode = ref(false);
-const isResendingCode = ref(false);
+const isSubmittingCode = ref(false); // Used for data-test="auth-loading"
+const isResendingCode = ref(false); // Used for resend loading state
 
 // lifecycle
 // -----------------------------------------

@@ -17,7 +17,7 @@
                <hr class="flex-1 border-gray-300" />
             </div>
 
-            <form class="vstack-form" @submit.prevent>
+            <form class="vstack-form" data-test="auth-form" @submit.prevent>
                <p class="mb-2">
                   This website offers a Passwordless Sign-In option. Instead of remembering a password, you'll
                   receive a one-time code via email each time you sign in.
@@ -25,6 +25,7 @@
                <EmailInput
                   v-model:email="email"
                   :isSubmitClicked="isSubmitClicked"
+                  data-test="auth-email-input"
                   @validity-changed="
                      (val) => {
                         console.log('val is now', val);
@@ -36,6 +37,7 @@
                   :label="pageAuthType"
                   submit="submit"
                   :loading="signingUpLoading"
+                  data-test="auth-send-code-button"
                   @click="onSignupStart"
                />
             </form>
@@ -64,7 +66,7 @@ defineProps<{
 
 // data
 // -----------------------------------------
-const signingUpLoading = ref(false);
+const signingUpLoading = ref(false); // Used for data-test="auth-loading"
 const email = ref("mytestemail1235667@gmail.com"); // todo: remove this
 const isEmailValid = ref<boolean>(false);
 const isSubmitClicked = ref(false);
