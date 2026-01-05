@@ -5196,6 +5196,7 @@ const ii = { class: "flex flex-col gap-1" }, ai = ["for"], si = {
           placeholder: "Email",
           required: "",
           class: "w-full",
+          "data-test": "auth-email-field",
           "onUpdate:modelValue": u
         }, null, 8, ["modelValue", "invalid"])
       ]),
@@ -6015,6 +6016,7 @@ const Le = { getProfile: Wi, updateProfile: Ui, getProfileConfig: Ki }, qi = { c
           ], -1)),
           g("form", {
             class: "vstack-form",
+            "data-test": "auth-form",
             onSubmit: s[3] || (s[3] = Me(() => {
             }, ["prevent"]))
           }, [
@@ -6023,6 +6025,7 @@ const Le = { getProfile: Wi, updateProfile: Ui, getProfileConfig: Ki }, qi = { c
               email: i.value,
               "onUpdate:email": s[1] || (s[1] = (d) => i.value = d),
               isSubmitClicked: l.value,
+              "data-test": "auth-email-input",
               onValidityChanged: s[2] || (s[2] = (d) => {
                 console.log("val is now", d), r.value = d;
               })
@@ -6031,6 +6034,7 @@ const Le = { getProfile: Wi, updateProfile: Ui, getProfileConfig: Ki }, qi = { c
               label: t.pageAuthType,
               submit: "submit",
               loading: o.value,
+              "data-test": "auth-send-code-button",
               onClick: u
             }, null, 8, ["label", "loading"])
           ], 32)
@@ -6372,6 +6376,7 @@ const la = { class: "px-4 py-8 sm:p-8" }, ua = { class: "flex flex-col items-str
               variant: "outlined",
               icon: "pi pi-arrow-left",
               "aria-label": "Start over",
+              "data-test": "auth-change-email",
               onClick: m
             }),
             h[2] || (h[2] = g("h1", { class: "h1 mt-0 sm:mt-0" }, "Input validation code", -1))
@@ -6387,7 +6392,8 @@ const la = { class: "px-4 py-8 sm:p-8" }, ua = { class: "flex flex-col items-str
               h[4] || (h[4] = g("p", null, " To finish the signup process, enter the code that was emailed to you. Note that the code is only valid for 10 minutes. ", -1)),
               L(tt, {
                 id: "magic-code-input",
-                error: i.value === !1 ? s.value : ""
+                error: i.value === !1 ? s.value : "",
+                "data-test": "auth-error-message"
               }, {
                 default: w(() => [
                   L(O(qt), {
@@ -6399,7 +6405,8 @@ const la = { class: "px-4 py-8 sm:p-8" }, ua = { class: "flex flex-col items-str
                     type: "text",
                     placeholder: "Input email code",
                     required: "",
-                    invalid: i.value === !1
+                    invalid: i.value === !1,
+                    "data-test": "auth-code-input"
                   }, null, 8, ["modelValue", "invalid"])
                 ]),
                 _: 1
@@ -6408,6 +6415,7 @@ const la = { class: "px-4 py-8 sm:p-8" }, ua = { class: "flex flex-col items-str
                 class: "w-fit",
                 type: "submit",
                 loading: u.value,
+                "data-test": "auth-verify-button",
                 onClick: d
               }, {
                 default: w(() => [...h[3] || (h[3] = [
@@ -6422,6 +6430,7 @@ const la = { class: "px-4 py-8 sm:p-8" }, ua = { class: "flex flex-col items-str
                 class: "w-fit",
                 type: "button",
                 loading: a.value,
+                "data-test": "auth-resend-code",
                 onClick: c
               }, {
                 default: w(() => [...h[5] || (h[5] = [
