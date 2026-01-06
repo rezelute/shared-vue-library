@@ -54,7 +54,7 @@ const showError = computed(() => props.isSubmitClicked && !isEmailValid(email.va
 // methods
 // -----------------------------------------
 function onInput(value: string | undefined) {
-   const sanitizedValue = value ?? "";
+   const sanitizedValue = (value ?? "").trim();
    email.value = sanitizedValue;
    emit("validity-changed", isEmailValid(sanitizedValue));
 }

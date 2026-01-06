@@ -5180,7 +5180,7 @@ const ii = { class: "flex flex-col gap-1" }, ai = ["for"], si = {
     });
     const l = G(() => i.isSubmitClicked && !n(o.value));
     function u(a) {
-      const s = a ?? "";
+      const s = (a ?? "").trim();
       o.value = s, r("validity-changed", n(s));
     }
     return (a, s) => (p(), P(tt, {
