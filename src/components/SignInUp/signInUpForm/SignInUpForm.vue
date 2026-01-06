@@ -67,7 +67,7 @@ defineProps<{
 // data
 // -----------------------------------------
 const signingUpLoading = ref(false); // Used for data-test="auth-loading"
-const email = ref("");
+const email = defineModel<string>("email", { required: true });
 const isEmailValid = ref<boolean>(false);
 const isSubmitClicked = ref(false);
 

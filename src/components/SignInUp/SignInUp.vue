@@ -2,6 +2,7 @@
    <PageLoader :isLoading="isLoading">
       <SignInUpForm
          v-if="!showMagicInputCode"
+         v-model:email="email"
          :pageAuthType="pageAuthType"
          :apiDomain="apiDomain"
          @sendCodeSuccess="() => (showMagicInputCode = true)"
@@ -52,6 +53,7 @@ const router = useRouter();
 // -----------------------------------------
 const isLoading = ref(true);
 const showMagicInputCode = ref(false); // if a magic link has been sent, show the code input field
+const email = ref(""); // email persists when navigating between form and verify code screens
 const apiDomain = inject(API_DOMAIN_KEY) as string;
 
 // lifecycle
