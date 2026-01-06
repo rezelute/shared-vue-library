@@ -3843,7 +3843,7 @@ const sr = { class: "bg-surface-0 dark:bg-surface-900" }, lr = { class: "contain
     };
     async function m() {
       try {
-        r.value = !0, await Xe.signOut(), i.updateAuth(), console.log("emitting signoutSuccess"), n("signoutSuccess");
+        r.value = !0, await Xe.signOut(), i.updateAuth(), n("signoutSuccess");
       } catch (f) {
         n("signoutError", {
           type: "unexpected",
@@ -5963,7 +5963,7 @@ const Le = { getProfile: Wi, updateProfile: Ui, getProfileConfig: Ki }, qi = { c
   },
   emits: ["sendCodeSuccess", "signupStartError", "googleSignInError"],
   setup(t, { emit: e }) {
-    const n = e, o = x(!1), i = x("mytestemail1235667@gmail.com"), r = x(!1), l = x(!1);
+    const n = e, o = x(!1), i = x(""), r = x(!1), l = x(!1);
     async function u() {
       if (l.value = !0, !!r.value)
         try {
@@ -5975,7 +5975,7 @@ const Le = { getProfile: Wi, updateProfile: Ui, getProfileConfig: Ki }, qi = { c
             userContext: {}
             // Optionally include user context
           });
-          console.log("Create code response: ", a), a.status === "SIGN_IN_UP_NOT_ALLOWED" ? n("signupStartError", {
+          a.status === "SIGN_IN_UP_NOT_ALLOWED" ? n("signupStartError", {
             type: "sign_in_up_not_allowed",
             severity: "error",
             summary: j.error.somethingWentWrong.summary,
@@ -6027,7 +6027,7 @@ const Le = { getProfile: Wi, updateProfile: Ui, getProfileConfig: Ki }, qi = { c
               isSubmitClicked: l.value,
               "data-test": "auth-email-input",
               onValidityChanged: s[2] || (s[2] = (d) => {
-                console.log("val is now", d), r.value = d;
+                r.value = d;
               })
             }, null, 8, ["email", "isSubmitClicked"]),
             L(O(K), {
@@ -6338,7 +6338,7 @@ const la = { class: "px-4 py-8 sm:p-8" }, ua = { class: "flex flex-col items-str
       try {
         a.value = !0;
         const b = await ee.resendCode();
-        console.log("resend code response: ", b), b.status === "RESTART_FLOW_ERROR" ? (await ee.clearLoginAttemptInfo(), n("resendCodeError", {
+        b.status === "RESTART_FLOW_ERROR" ? (await ee.clearLoginAttemptInfo(), n("resendCodeError", {
           type: "restart_flow_error",
           severity: "error",
           summary: f,
@@ -6486,7 +6486,7 @@ const la = { class: "px-4 py-8 sm:p-8" }, ua = { class: "flex flex-col items-str
       try {
         r.value = !0;
         const b = await Pt.signInAndUp();
-        b.status === "OK" ? (console.log("handleGoogleCallback> ", b.user), b.createdNewRecipeUser && b.user.loginMethods.length === 1 ? console.log("New user signed up successfully") : console.log("Existing user signed in successfully"), n("googleCallbackSuccess")) : b.status === "SIGN_IN_UP_NOT_ALLOWED" ? n("googleCallbackError", {
+        b.status === "OK" ? (b.createdNewRecipeUser && b.user.loginMethods.length, n("googleCallbackSuccess")) : b.status === "SIGN_IN_UP_NOT_ALLOWED" ? n("googleCallbackError", {
           type: "sign_in_up_not_allowed",
           severity: "error",
           summary: f,

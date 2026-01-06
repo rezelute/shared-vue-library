@@ -105,14 +105,14 @@ async function handleGoogleCallback() {
       const response = await signInAndUp();
 
       if (response.status === "OK") {
-         console.log("handleGoogleCallback> ", response.user);
+         // console.log("handleGoogleCallback> ", response.user);
          // sign UP successful
          if (response.createdNewRecipeUser && response.user.loginMethods.length === 1) {
-            console.log("New user signed up successfully");
+            // console.log("New user signed up successfully");
          }
          // sign IN successful
          else {
-            console.log("Existing user signed in successfully");
+            // console.log("Existing user signed in successfully");
          }
 
          emits("googleCallbackSuccess");

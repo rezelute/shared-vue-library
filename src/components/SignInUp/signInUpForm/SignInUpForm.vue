@@ -28,7 +28,7 @@
                   data-test="auth-email-input"
                   @validity-changed="
                      (val) => {
-                        console.log('val is now', val);
+                        // console.log('val is now', val);
                         isEmailValid = val;
                      }
                   "
@@ -67,7 +67,7 @@ defineProps<{
 // data
 // -----------------------------------------
 const signingUpLoading = ref(false); // Used for data-test="auth-loading"
-const email = ref("mytestemail1235667@gmail.com"); // todo: remove this
+const email = ref("");
 const isEmailValid = ref<boolean>(false);
 const isSubmitClicked = ref(false);
 
@@ -90,7 +90,7 @@ async function onSignupStart() {
          userContext: {}, // Optionally include user context
       });
 
-      console.log("Create code response: ", response);
+      // console.log("Create code response: ", response);
 
       // Disabled Sign-Up or Sign-In or invalid configuration etc.
       if (response.status === "SIGN_IN_UP_NOT_ALLOWED") {

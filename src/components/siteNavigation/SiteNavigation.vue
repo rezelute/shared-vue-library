@@ -143,7 +143,7 @@ async function onSignout() {
       await Session.signOut();
       userStore.updateAuth();
 
-      console.log("emitting signoutSuccess");
+      // console.log("emitting signoutSuccess");
 
       emits("signoutSuccess");
    } catch (err) {

@@ -222,7 +222,7 @@ async function onResendCode() {
    try {
       isResendingCode.value = true;
       const response = await resendCode();
-      console.log("resend code response: ", response);
+      // console.log("resend code response: ", response);
 
       // this can happen if the user has already successfully logged in into
       // another device whilst also trying to login to this one.
