@@ -14,15 +14,15 @@
 </template>
 
 <script setup lang="ts">
-import Card from "primevue/card";
-import ProgressSpinner from "primevue/progressspinner";
+import Card from "primevue/card"
+import ProgressSpinner from "primevue/progressspinner"
 
 withDefaults(
    defineProps<{
-      isLoading: boolean;
+      isLoading: boolean
    }>(),
    {
       isLoading: false,
    }
-);
+)
 </script>

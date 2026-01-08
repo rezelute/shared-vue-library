@@ -1,7 +1,7 @@
 // composables/useUpdateEmail.ts
-import accountService from "@/services/account/accountService";
-import { type EmitNotify } from "@/types";
-import normalizeError from "@/utils/error/normalizeError.util";
+import accountService from "@/services/account/accountService"
+import { type EmitNotify } from "@/types"
+import normalizeError from "@/utils/error/normalizeError.util"
 
 export function useUpdateEmail(apiDomain: string) {
    async function updateEmail(
@@ -9,14 +9,14 @@ export function useUpdateEmail(apiDomain: string) {
       onSuccess: (payload: EmitNotify) => void,
       onError: (payload: EmitNotify) => void
    ) {
-      const updateEmailErrorSummary = "Failed to update your email!";
+      const updateEmailErrorSummary = "Failed to update your email!"
       const updateEmailErrorGenericDetail =
-         "Something went wrong while updating your email. Please try again or contact us to let us know about this issue.";
+         "Something went wrong while updating your email. Please try again or contact us to let us know about this issue."
       const updateEmailErrorInvalidTokenDetail =
-         "The email verification token is invalid or has expired. Please try again.";
+         "The email verification token is invalid or has expired. Please try again."
 
       try {
-         const data = await accountService.updateEmail(token, apiDomain);
+         const data = await accountService.updateEmail(token, apiDomain)
 
          if (data.status === "OK") {
             onSuccess({
@@ -24,7 +24,7 @@ export function useUpdateEmail(apiDomain: string) {
                severity: "success",
                summary: "updateEmailSuccessSummary",
                detail: "updateEmailSuccessDetail",
-            });
+            })
          } else if (data.status === "EMAIL_VERIFICATION_INVALID_TOKEN_ERROR") {
             onError({
                type: "email_verification_invalid_token",
@@ -32,11 +32,11 @@ export function useUpdateEmail(apiDomain: string) {
                summary: updateEmailErrorSummary,
                detail: updateEmailErrorInvalidTokenDetail,
                json: data,
-            });
+            })
          } else {
             throw new Error(
                `Unexpected response status: ${data.status}. Expected 'OK' or 'EMAIL_VERIFICATION_INVALID_TOKEN_ERROR'.`
-            );
+            )
          }
       } catch (err) {
          onError({
@@ -45,11 +45,11 @@ export function useUpdateEmail(apiDomain: string) {
             summary: updateEmailErrorSummary,
             detail: updateEmailErrorGenericDetail,
             json: normalizeError(err),
-         });
+         })
       }
    }
 
    return {
       updateEmail,
-   };
+   }
 }

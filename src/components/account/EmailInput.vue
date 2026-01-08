@@ -14,48 +14,48 @@
 </template>
 
 <script setup lang="ts">
-import Textbox from "primevue/inputtext";
-import { computed, onMounted } from "vue";
-import { z } from "zod";
-import FormField from "../formField/FormField.vue";
+import Textbox from "primevue/inputtext"
+import { computed, onMounted } from "vue"
+import { z } from "zod"
+import FormField from "../formField/FormField.vue"
 
 function isEmailValid(email: string): boolean {
-   const emailSchema = z.string().email();
-   return emailSchema.safeParse(email).success;
+   const emailSchema = z.string().email()
+   return emailSchema.safeParse(email).success
 }
 
 // Two-way binding
-const email = defineModel<string>("email", { required: true });
+const email = defineModel<string>("email", { required: true })
 
 // Props
 const props = defineProps<{
-   isSubmitClicked: boolean;
-   labelText?: string;
-}>();
+   isSubmitClicked: boolean
+   labelText?: string
+}>()
 
 // Emit
 const emit = defineEmits<{
-   (e: "validity-changed", value: boolean): void;
-}>();
+   (e: "validity-changed", value: boolean): void
+}>()
 
-const emailInvalidText = "Please enter a valid email address";
+const emailInvalidText = "Please enter a valid email address"
 
 // lifecycle
 // -----------------------------------------
 onMounted(() => {
    // Emit initial validity
-   emit("validity-changed", isEmailValid(email.value));
-});
+   emit("validity-changed", isEmailValid(email.value))
+})
 
 // computed
 // -----------------------------------------
-const showError = computed(() => props.isSubmitClicked && !isEmailValid(email.value));
+const showError = computed(() => props.isSubmitClicked && !isEmailValid(email.value))
 
 // methods
 // -----------------------------------------
 function onInput(value: string | undefined) {
-   const sanitizedValue = (value ?? "").trim();
-   email.value = sanitizedValue;
-   emit("validity-changed", isEmailValid(sanitizedValue));
+   const sanitizedValue = (value ?? "").trim()
+   email.value = sanitizedValue
+   emit("validity-changed", isEmailValid(sanitizedValue))
 }
 </script>

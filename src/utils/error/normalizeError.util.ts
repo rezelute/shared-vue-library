@@ -9,7 +9,7 @@ export default function normalizeError(err: unknown): Record<string, any> {
          name: err.name,
          message: err.message,
          stack: err.stack,
-      };
+      }
    }
 
    if (err instanceof Response) {
@@ -18,24 +18,24 @@ export default function normalizeError(err: unknown): Record<string, any> {
          statusText: err.statusText,
          url: err.url,
          headers: headersToObject(err.headers),
-      };
+      }
    }
 
    if (typeof err === "object" && err !== null) {
       try {
-         return JSON.parse(JSON.stringify(err));
+         return JSON.parse(JSON.stringify(err))
       } catch {
-         return { message: "Non-serializable object error", original: String(err) };
+         return { message: "Non-serializable object error", original: String(err) }
       }
    }
 
-   return { message: String(err) };
+   return { message: String(err) }
 }
 
 function headersToObject(headers: Headers): Record<string, string> {
-   const obj: Record<string, string> = {};
+   const obj: Record<string, string> = {}
    headers.forEach((value, key) => {
-      obj[key] = value;
-   });
-   return obj;
+      obj[key] = value
+   })
+   return obj
 }

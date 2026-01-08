@@ -21,12 +21,12 @@
 </template>
 
 <script setup lang="ts">
-import Message from "primevue/message";
+import Message from "primevue/message"
 
 defineProps<{
-   id: string;
-   label?: string;
-   helper?: string;
-   error?: string;
-}>();
+   id: string
+   label?: string
+   helper?: string
+   error?: string
+}>()
 </script>

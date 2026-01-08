@@ -1,5 +1,5 @@
-import { useUserStore } from "../stores/userStore";
+import { useUserStore } from "../stores/userStore"
 
-export { useUserStore };
+export { useUserStore }
 
-export default { useUserStore };
+export default { useUserStore }

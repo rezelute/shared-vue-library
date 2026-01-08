@@ -1,16 +1,16 @@
 // EVERYTHING USED IN THIS FILE IS FOR DEMO PURPOSES ONLY (NOT INCLUDED IN THE FINAL BUILD)
 
-import "./assets/styles/main.css";
-import "primeicons/primeicons.css";
-import { definePreset } from "@primeuix/themes";
-import Lara from "@primeuix/themes/lara";
-import { createPinia } from "pinia";
-import PrimeVue from "primevue/config";
-import { createApp } from "vue";
-import { createRouter, createWebHistory } from "vue-router";
-import App from "./App.vue";
+import "./assets/styles/main.css"
+import "primeicons/primeicons.css"
+import { definePreset } from "@primeuix/themes"
+import Lara from "@primeuix/themes/lara"
+import { createPinia } from "pinia"
+import PrimeVue from "primevue/config"
+import { createApp } from "vue"
+import { createRouter, createWebHistory } from "vue-router"
+import App from "./App.vue"
 // import { initializeSuperTokens } from "./index";
-import LandingPage from "./pages/LandingPage.vue";
+import LandingPage from "./pages/LandingPage.vue"
 
 // PrimeVue theme
 // -----------------------------------------
@@ -81,7 +81,7 @@ const MyPreset = definePreset(Lara, {
          },
       },
    },
-});
+})
 
 const router = createRouter({
    history: createWebHistory(import.meta.env.BASE_URL),
@@ -92,14 +92,14 @@ const router = createRouter({
          component: LandingPage,
       },
    ],
-});
+})
 
-initializeApp();
+initializeApp()
 function initializeApp() {
-   const app = createApp(App);
-   app.use(router);
-   const pinia = createPinia();
-   app.use(pinia);
+   const app = createApp(App)
+   app.use(router)
+   const pinia = createPinia()
+   app.use(pinia)
 
    // PrimeVue plugins
    app.use(PrimeVue, {
@@ -109,7 +109,7 @@ function initializeApp() {
             darkModeSelector: ".dark",
          },
       },
-   });
+   })
 
-   app.mount("#app");
+   app.mount("#app")
 }

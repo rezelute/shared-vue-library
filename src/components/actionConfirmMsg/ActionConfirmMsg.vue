@@ -14,8 +14,8 @@
 
 <script setup lang="ts">
 defineProps<{
-   iconClass: string;
-}>();
+   iconClass: string
+}>()
 </script>
 
 <style scoped></style>

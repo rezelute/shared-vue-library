@@ -8,8 +8,8 @@
             <section>
                <form class="vstack-form" @submit.prevent>
                   <p>
-                     We need a few basic details for essential purposes—like personalising emails with your
-                     name.
+                     We need a few basic details for essential purposes—like personalising emails
+                     with your name.
                   </p>
 
                   <!-- First name -->
@@ -20,7 +20,7 @@
                      :isSubmitClicked="isSubmitClicked"
                      @validity-changed="
                         (val: boolean) => {
-                           isFirstNameValid = val;
+                           isFirstNameValid = val
                         }
                      "
                   />
@@ -33,7 +33,7 @@
                      :isSubmitClicked="isSubmitClicked"
                      @validity-changed="
                         (val: boolean) => {
-                           isLastNameValid = val;
+                           isLastNameValid = val
                         }
                      "
                   />
@@ -52,84 +52,84 @@
 </template>
 
 <script setup lang="ts">
-import Button from "primevue/button";
-import Card from "primevue/card";
-import { computed, inject, onMounted, ref } from "vue";
-import PageLoader from "../../../components/loading/pageLoader/PageLoader.vue";
-import toastContent from "../../../content/generic/toastContent";
+import Button from "primevue/button"
+import Card from "primevue/card"
+import { computed, inject, onMounted, ref } from "vue"
+import PageLoader from "../../../components/loading/pageLoader/PageLoader.vue"
+import toastContent from "../../../content/generic/toastContent"
 import profileService, {
    type ProfileConfigResp,
    type ProfileFields,
-} from "../../../services/account/profileService";
-import { type EmitNotify } from "../../../types";
-import normalizeError from "../../../utils/error/normalizeError.util";
-import { API_DOMAIN_KEY } from "../../../utils/injectionKeys";
-import NameInput from "./NameInput.vue";
+} from "../../../services/account/profileService"
+import { type EmitNotify } from "../../../types"
+import normalizeError from "../../../utils/error/normalizeError.util"
+import { API_DOMAIN_KEY } from "../../../utils/injectionKeys"
+import NameInput from "./NameInput.vue"
 
-const emits = defineEmits(["profileLoadError", "profileSubmitSuccess", "profileSubmitError"]);
-const apiDomain = inject(API_DOMAIN_KEY) as string;
+const emits = defineEmits(["profileLoadError", "profileSubmitSuccess", "profileSubmitError"])
+const apiDomain = inject(API_DOMAIN_KEY) as string
 
 // data
 // -----------------------------------------
-const profileConfig = ref<ProfileConfigResp[] | null>(null);
-const isLoading = ref(false);
-const isSubmitClicked = ref(false);
-const isProfileSubmitting = ref(false);
+const profileConfig = ref<ProfileConfigResp[] | null>(null)
+const isLoading = ref(false)
+const isSubmitClicked = ref(false)
+const isProfileSubmitting = ref(false)
 // fields
-const userProfile = ref<ProfileFields | null>(null);
-const isFirstNameValid = ref(false);
-const isLastNameValid = ref(false);
+const userProfile = ref<ProfileFields | null>(null)
+const isFirstNameValid = ref(false)
+const isLastNameValid = ref(false)
 
 // lifecycle
 // -----------------------------------------
 onMounted(async () => {
-   await loadProfile();
-});
+   await loadProfile()
+})
 
 // computed
 // -----------------------------------------
 const firstNameConfig = computed(() => {
-   const result = { isActive: false, isRequired: false };
+   const result = { isActive: false, isRequired: false }
 
-   const category = profileConfig.value?.find((config) => config.category === "name");
-   if (!category) return result;
+   const category = profileConfig.value?.find((config) => config.category === "name")
+   if (!category) return result
 
-   const field = category.fields.find((field) => field.type === "first_name");
-   if (!field) return result;
+   const field = category.fields.find((field) => field.type === "first_name")
+   if (!field) return result
 
-   result.isActive = true;
-   result.isRequired = field.isRequired;
+   result.isActive = true
+   result.isRequired = field.isRequired
 
-   return result;
-});
+   return result
+})
 
 const lastNameConfig = computed(() => {
-   const result = { isActive: false, isRequired: false };
+   const result = { isActive: false, isRequired: false }
 
-   const category = profileConfig.value?.find((config) => config.category === "name");
-   if (!category) return result;
+   const category = profileConfig.value?.find((config) => config.category === "name")
+   if (!category) return result
 
-   const field = category.fields.find((field) => field.type === "last_name");
-   if (!field) return result;
+   const field = category.fields.find((field) => field.type === "last_name")
+   if (!field) return result
 
-   result.isActive = true;
-   result.isRequired = field.isRequired;
+   result.isActive = true
+   result.isRequired = field.isRequired
 
-   return result;
-});
+   return result
+})
 
 // methods
 // -----------------------------------------
 async function loadProfile() {
    try {
-      isLoading.value = true;
+      isLoading.value = true
 
       // fetch user profile data
-      const { data: profileConfigData } = await profileService.getProfileConfig(apiDomain);
-      const { data: profileData } = await profileService.getProfile(apiDomain);
+      const { data: profileConfigData } = await profileService.getProfileConfig(apiDomain)
+      const { data: profileData } = await profileService.getProfile(apiDomain)
 
-      profileConfig.value = { ...profileConfigData };
-      userProfile.value = { ...profileData.fields }; // we dont care about isComplete
+      profileConfig.value = { ...profileConfigData }
+      userProfile.value = { ...profileData.fields } // we dont care about isComplete
    } catch (err) {
       emits("profileLoadError", {
          type: "unexpected",
@@ -137,41 +137,41 @@ async function loadProfile() {
          summary: toastContent.error.somethingWentWrong.summary,
          detail: toastContent.error.somethingWentWrong.detail,
          json: normalizeError(err),
-      } satisfies EmitNotify);
+      } satisfies EmitNotify)
    } finally {
-      isLoading.value = false;
+      isLoading.value = false
    }
 }
 
 async function isProfileInputValid() {
    // if first name input is active, check its validity
    if (firstNameConfig.value.isActive && !isFirstNameValid.value) {
-      return false;
+      return false
    }
    // if last name input is active, check its validity
    if (lastNameConfig.value.isActive && !isLastNameValid.value) {
-      return false;
+      return false
    }
 
    // assume everything is valid
-   return true;
+   return true
 }
 
 async function onSubmitProfile() {
-   isProfileSubmitting.value = true;
-   isSubmitClicked.value = true;
+   isProfileSubmitting.value = true
+   isSubmitClicked.value = true
 
    try {
       if (!isProfileInputValid()) {
          // if name is not valid, we don't submit the profile
          // fields will be showing error messages after the button is clicked
-         return;
+         return
       }
 
       // submit profile data
-      await profileService.updateProfile(userProfile.value as ProfileFields, apiDomain);
+      await profileService.updateProfile(userProfile.value as ProfileFields, apiDomain)
 
-      emits("profileSubmitSuccess");
+      emits("profileSubmitSuccess")
    } catch (err) {
       emits("profileSubmitError", {
          type: "unexpected",
@@ -179,9 +179,9 @@ async function onSubmitProfile() {
          summary: toastContent.error.somethingWentWrong.summary,
          detail: toastContent.error.somethingWentWrong.detail,
          json: normalizeError(err),
-      } satisfies EmitNotify);
+      } satisfies EmitNotify)
    } finally {
-      isProfileSubmitting.value = false;
+      isProfileSubmitting.value = false
    }
 }
 </script>

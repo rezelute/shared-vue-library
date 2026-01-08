@@ -18,35 +18,35 @@
 </template>
 
 <script setup lang="ts">
-import Toast from "primevue/toast";
-import { computed,onMounted, ref } from "vue";
-import { RouterView } from "vue-router";
-import PageInfiniteLoader from "./components/loading/pageInfiniteLoader/PageInfiniteLoader.vue";
-import SiteNavigation from "./components/siteNavigation/SiteNavigation.vue";
-import { useUserStore } from "./stores/userStore";
+import Toast from "primevue/toast"
+import { computed, onMounted, ref } from "vue"
+import { RouterView } from "vue-router"
+import PageInfiniteLoader from "./components/loading/pageInfiniteLoader/PageInfiniteLoader.vue"
+import SiteNavigation from "./components/siteNavigation/SiteNavigation.vue"
+import { useUserStore } from "./stores/userStore"
 
 // data
 // -----------------------------------------
-const isLoading = ref(true);
-const userStore = useUserStore();
+const isLoading = ref(true)
+const userStore = useUserStore()
 const navSignedInItems = [
    { label: "Contact", icon: "pi pi-envelope", to: "/contact" },
    { label: "Account", icon: "pi pi-cog", to: "/account" },
-];
-const navSignedOutItems = [{ label: "Contact", icon: "pi pi-envelope", to: "/contact" }];
+]
+const navSignedOutItems = [{ label: "Contact", icon: "pi pi-envelope", to: "/contact" }]
 
 // lifecycle
 // -----------------------------------------
 onMounted(() => {
    // Simulate a server health check
    setTimeout(() => {
-      isLoading.value = false;
-   }, 3000); // Simulate a 1 second delay for the server check
-});
+      isLoading.value = false
+   }, 3000) // Simulate a 1 second delay for the server check
+})
 
 // computed
 // -----------------------------------------
-const navItems = computed(() => (userStore.isSignedIn ? navSignedInItems : navSignedOutItems));
+const navItems = computed(() => (userStore.isSignedIn ? navSignedInItems : navSignedOutItems))
 </script>
 
 <style scoped></style>

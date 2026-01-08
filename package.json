@@ -59,7 +59,8 @@
       "--PROJECT--": "",
       "tscheck": "vue-tsc --build",
       "lint": "eslint . --fix",
-      "format": "prettier --write src/",
+      "prettier": "prettier --check src/",
+      "prettier-fix": "prettier --write src/",
       "stylelint": "stylelint \"**/*.scss\" \"**/*.vue\"",
       "stylelint-fix": "stylelint \"**/*.scss\" \"**/*.vue\" --fix"
    },

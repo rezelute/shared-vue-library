@@ -22,18 +22,18 @@
 </template>
 
 <script setup lang="ts">
-import { getLoginAttemptInfo } from "supertokens-web-js/recipe/passwordless";
-import { signInAndUp } from "supertokens-web-js/recipe/thirdparty";
-import { computed, inject, onMounted, ref } from "vue";
-import { useRoute } from "vue-router";
-import { useRouter } from "vue-router";
-import PageLoader from "../../components/loading/pageLoader/PageLoader.vue";
-import SignInUpForm from "../../components/SignInUp/signInUpForm/SignInUpForm.vue";
-import VerifyCode from "../../components/SignInUp/verifyCode/VerifyCode.vue";
-import toastContent from "../../content/generic/toastContent";
-import { type EmitNotify } from "../../types";
-import normalizeError from "../../utils/error/normalizeError.util";
-import { API_DOMAIN_KEY } from "../../utils/injectionKeys";
+import { getLoginAttemptInfo } from "supertokens-web-js/recipe/passwordless"
+import { signInAndUp } from "supertokens-web-js/recipe/thirdparty"
+import { computed, inject, onMounted, ref } from "vue"
+import { useRoute } from "vue-router"
+import { useRouter } from "vue-router"
+import PageLoader from "../../components/loading/pageLoader/PageLoader.vue"
+import SignInUpForm from "../../components/SignInUp/signInUpForm/SignInUpForm.vue"
+import VerifyCode from "../../components/SignInUp/verifyCode/VerifyCode.vue"
+import toastContent from "../../content/generic/toastContent"
+import { type EmitNotify } from "../../types"
+import normalizeError from "../../utils/error/normalizeError.util"
+import { API_DOMAIN_KEY } from "../../utils/injectionKeys"
 
 const emits = defineEmits([
    "signupStartError",
@@ -45,45 +45,45 @@ const emits = defineEmits([
    "googleCallbackSuccess",
    "googleCallbackError",
    "googleSignInError",
-]);
-const route = useRoute();
-const router = useRouter();
+])
+const route = useRoute()
+const router = useRouter()
 
 // data
 // -----------------------------------------
-const isLoading = ref(true);
-const showMagicInputCode = ref(false); // if a magic link has been sent, show the code input field
-const email = ref(""); // email persists when navigating between form and verify code screens
-const apiDomain = inject(API_DOMAIN_KEY) as string;
+const isLoading = ref(true)
+const showMagicInputCode = ref(false) // if a magic link has been sent, show the code input field
+const email = ref("") // email persists when navigating between form and verify code screens
+const apiDomain = inject(API_DOMAIN_KEY) as string
 
 // lifecycle
 // -----------------------------------------
 onMounted(async () => {
-   showMagicInputCode.value = !!(await hasInitialMagicLinkBeenSent());
+   showMagicInputCode.value = !!(await hasInitialMagicLinkBeenSent())
 
    // if the url contains query param ?thirdPartyId=google, we handle the google callback
    if (router.currentRoute.value.query.thirdPartyId === "google") {
-      await handleGoogleCallback();
+      await handleGoogleCallback()
    }
-});
+})
 
 // computed
 // -----------------------------------------
 const pageAuthType = computed(() => {
-   if (route.name === "signup") return "Sign up";
-   else return "Sign in";
-});
+   if (route.name === "signup") return "Sign up"
+   else return "Sign in"
+})
 
 // methods
 // -----------------------------------------
 /** If the user refreshes the page on the consume code, we need to know if we are showing the code input field */
 async function hasInitialMagicLinkBeenSent() {
-   isLoading.value = true;
+   isLoading.value = true
 
    try {
-      const codeAlreadySent = await getLoginAttemptInfo();
-      if (codeAlreadySent) console.info("Code already sent: ", codeAlreadySent);
-      return codeAlreadySent !== undefined;
+      const codeAlreadySent = await getLoginAttemptInfo()
+      if (codeAlreadySent) console.info("Code already sent: ", codeAlreadySent)
+      return codeAlreadySent !== undefined
    } catch (err) {
       emits("checkMagicLinkSentError", {
          type: "unexpected",
@@ -91,20 +91,20 @@ async function hasInitialMagicLinkBeenSent() {
          summary: toastContent.error.somethingWentWrong.summary,
          detail: toastContent.error.somethingWentWrong.detail,
          json: normalizeError(err),
-      } satisfies EmitNotify);
+      } satisfies EmitNotify)
    } finally {
-      isLoading.value = false;
+      isLoading.value = false
    }
 }
 
 /** Once the third party provider redirects your user back to your app, you need to consume the information to sign in the user. */
 async function handleGoogleCallback() {
-   const googleFailSummary = "Failed to sign in with Google";
-   const googleFailDetail = "Please try again later or try another form of login.";
+   const googleFailSummary = "Failed to sign in with Google"
+   const googleFailDetail = "Please try again later or try another form of login."
 
    try {
-      isLoading.value = true;
-      const response = await signInAndUp();
+      isLoading.value = true
+      const response = await signInAndUp()
 
       if (response.status === "OK") {
          // console.log("handleGoogleCallback> ", response.user);
@@ -117,7 +117,7 @@ async function handleGoogleCallback() {
             // console.log("Existing user signed in successfully");
          }
 
-         emits("googleCallbackSuccess");
+         emits("googleCallbackSuccess")
       } else if (response.status === "SIGN_IN_UP_NOT_ALLOWED") {
          emits("googleCallbackError", {
             type: "sign_in_up_not_allowed",
@@ -129,7 +129,7 @@ async function handleGoogleCallback() {
                reason: response.reason,
                responseDetails: normalizeError(response),
             },
-         } satisfies EmitNotify);
+         } satisfies EmitNotify)
       }
       // SuperTokens requires that the third party provider
       // gives an email for the user. If that's not the case, sign up / in
@@ -141,7 +141,7 @@ async function handleGoogleCallback() {
             summary: googleFailSummary,
             detail: googleFailDetail,
             json: { status: response.status, responseDetails: normalizeError(response) },
-         } satisfies EmitNotify);
+         } satisfies EmitNotify)
       }
    } catch (err) {
       // if (err.isSuperTokensGeneralError === true) {} else {}
@@ -152,30 +152,30 @@ async function handleGoogleCallback() {
          summary: toastContent.error.somethingWentWrong.summary,
          detail: toastContent.error.somethingWentWrong.detail,
          json: normalizeError(err),
-      } satisfies EmitNotify);
+      } satisfies EmitNotify)
    } finally {
-      isLoading.value = false;
+      isLoading.value = false
    }
 }
 
 function onVerifyCodeSubmitError(payload: EmitNotify) {
    // reset the code input field
    if (payload.type === "input_code_invalid") {
-      showMagicInputCode.value = false;
+      showMagicInputCode.value = false
    }
 
    // emit back up to the parent component to handle toasting
-   emits("verificationCodeError", payload);
+   emits("verificationCodeError", payload)
 }
 
 function onResendCodeError(payload: EmitNotify) {
    // reset the code input field
    if (payload.type === "restart_flow_error") {
-      showMagicInputCode.value = false;
+      showMagicInputCode.value = false
    }
 
    // emit back up to the parent component to handle toasting
-   emits("resendCodeError", payload);
+   emits("resendCodeError", payload)
 }
 </script>
 

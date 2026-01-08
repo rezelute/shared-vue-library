@@ -3,7 +3,11 @@
       <div class="container">
          <nav class="flex py-4">
             <Button v-slot="slotProps" asChild variant="link">
-               <RouterLink :to="!userSignedIn ? '/' : '/home'" :class="(slotProps as any).class" class="!p-0">
+               <RouterLink
+                  :to="!userSignedIn ? '/' : '/home'"
+                  :class="(slotProps as any).class"
+                  class="!p-0"
+               >
                   <slot name="logo" />
                </RouterLink>
             </Button>
@@ -47,57 +51,57 @@
 </template>
 
 <script setup lang="ts">
-import Button from "primevue/button";
-import TieredMenu from "primevue/tieredmenu";
-import Session from "supertokens-web-js/recipe/session";
-import { computed, ref } from "vue";
-import ThemeToggle from "../../components/themeToggle/ThemeToggle.vue";
-import toastContent from "../../content/generic/toastContent";
-import { useUserStore } from "../../stores/userStore";
-import { type EmitNotify } from "../../types";
-import normalizeError from "../../utils/error/normalizeError.util";
+import Button from "primevue/button"
+import TieredMenu from "primevue/tieredmenu"
+import Session from "supertokens-web-js/recipe/session"
+import { computed, ref } from "vue"
+import ThemeToggle from "../../components/themeToggle/ThemeToggle.vue"
+import toastContent from "../../content/generic/toastContent"
+import { useUserStore } from "../../stores/userStore"
+import { type EmitNotify } from "../../types"
+import normalizeError from "../../utils/error/normalizeError.util"
 
-defineOptions({ name: "SiteNavigation" });
+defineOptions({ name: "SiteNavigation" })
 
 interface InputMenuLink {
-   label: string;
-   icon: string;
-   to: string;
+   label: string
+   icon: string
+   to: string
 }
 interface LinkMenuItem extends InputMenuLink {
-   type: "link";
+   type: "link"
 }
 interface ButtonMenuItem {
-   type: "button";
-   label: string;
-   icon: string;
-   "aria-label"?: string;
-   command: () => void;
+   type: "button"
+   label: string
+   icon: string
+   "aria-label"?: string
+   command: () => void
 }
 
-type RenderedMenuItem = LinkMenuItem | ButtonMenuItem;
+type RenderedMenuItem = LinkMenuItem | ButtonMenuItem
 
-const emits = defineEmits(["signoutSuccess", "signoutError"]);
+const emits = defineEmits(["signoutSuccess", "signoutError"])
 const props = withDefaults(
    defineProps<{
-      items: InputMenuLink[];
-      userSignedIn: boolean;
+      items: InputMenuLink[]
+      userSignedIn: boolean
    }>(),
    {
       userSignedIn: false,
    }
-);
+)
 
 // data
 // -----------------------------------------
-const userStore = useUserStore();
-const signOutloading = ref(false);
-const tieredMenu = ref<InstanceType<typeof TieredMenu> | null>(null);
+const userStore = useUserStore()
+const signOutloading = ref(false)
+const tieredMenu = ref<InstanceType<typeof TieredMenu> | null>(null)
 
 const signUpSystemItems = ref<RenderedMenuItem[]>([
    { type: "link", label: "Sign in", icon: "pi pi-sign-in", to: "/signin" },
    { type: "link", label: "Sign up", icon: "pi pi-user-plus", to: "/signup" },
-]);
+])
 
 const signedOutSystemItems = ref<RenderedMenuItem[]>([
    {
@@ -107,45 +111,45 @@ const signedOutSystemItems = ref<RenderedMenuItem[]>([
       "aria-label": "Sign out",
       command: onSignout,
    } as ButtonMenuItem,
-]);
+])
 // computed
 // -----------------------------------------
 const userLinkItems = computed(() => {
    if (!props.items || !props.items.length) {
-      return [] as LinkMenuItem[];
+      return [] as LinkMenuItem[]
    }
 
    return props.items.map((item) => {
       return {
          ...item,
          type: "link",
-      };
-   }) as LinkMenuItem[];
-});
+      }
+   }) as LinkMenuItem[]
+})
 
 const renderedMenuItems = computed(() => {
    return (
       props.userSignedIn
          ? [...userLinkItems.value, ...signedOutSystemItems.value]
          : [...userLinkItems.value, ...signUpSystemItems.value]
-   ) as RenderedMenuItem[];
-});
+   ) as RenderedMenuItem[]
+})
 
 // methods
 // -----------------------------------------
 const toggleMenu = (event: Event) => {
-   tieredMenu.value?.toggle(event);
-};
+   tieredMenu.value?.toggle(event)
+}
 
 async function onSignout() {
    try {
-      signOutloading.value = true;
-      await Session.signOut();
-      userStore.updateAuth();
+      signOutloading.value = true
+      await Session.signOut()
+      userStore.updateAuth()
 
       // console.log("emitting signoutSuccess");
 
-      emits("signoutSuccess");
+      emits("signoutSuccess")
    } catch (err) {
       emits("signoutError", {
          type: "unexpected",
@@ -153,9 +157,9 @@ async function onSignout() {
          summary: toastContent.error.somethingWentWrong.summary,
          detail: toastContent.error.somethingWentWrong.detail,
          json: normalizeError(err),
-      } satisfies EmitNotify);
+      } satisfies EmitNotify)
    } finally {
-      signOutloading.value = false;
+      signOutloading.value = false
    }
 }
 </script>

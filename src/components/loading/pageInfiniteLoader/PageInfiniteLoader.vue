@@ -6,8 +6,8 @@
 
 <script setup lang="ts">
 defineProps<{
-   isLoading: boolean;
-}>();
+   isLoading: boolean
+}>()
 </script>
 
 <style scoped>

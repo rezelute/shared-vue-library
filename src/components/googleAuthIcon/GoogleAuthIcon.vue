@@ -36,26 +36,26 @@
 </template>
 
 <script setup lang="ts">
-import { getAuthorisationURLWithQueryParamsAndSetState } from "supertokens-web-js/recipe/thirdparty";
+import { getAuthorisationURLWithQueryParamsAndSetState } from "supertokens-web-js/recipe/thirdparty"
 
-const emits = defineEmits(["googleSignInError", "googleSignInSuccess"]);
+const emits = defineEmits(["googleSignInError", "googleSignInSuccess"])
 
 const props = withDefaults(
    defineProps<{
-      authType?: "Sign up" | "Sign in";
-      apiDomain: string;
+      authType?: "Sign up" | "Sign in"
+      apiDomain: string
    }>(),
    {
       authType: "Sign in",
    }
-);
+)
 
 // methods
 // -----------------------------------------
 // -- Third party auth (google)
 async function onGoogleSignIn() {
-   const sendCodeErrorTitle = "Failed to sign in with Google";
-   const sendCodeErrorDescription = "Please try again later.";
+   const sendCodeErrorTitle = "Failed to sign in with Google"
+   const sendCodeErrorDescription = "Please try again later."
 
    try {
       const authUrl = await getAuthorisationURLWithQueryParamsAndSetState({
@@ -63,13 +63,13 @@ async function onGoogleSignIn() {
          // This is where Google should redirect the user back after login or error.
          // This URL goes on the Google's dashboard as well: https://support.google.com/cloud/answer/6158849?hl=en
          frontendRedirectURI: `${props.apiDomain}/signup?thirdPartyId=google`,
-      });
+      })
 
       // Example value of authUrl:
       // https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&access_type=offline&include_granted_scopes=true&response_type=code&client_id=1060725074195-kmeum4crr01uirfl2op9kd5acmi9jutn.apps.googleusercontent.com&state=5a489996a28cafc83ddff&redirect_uri=https%3A%2F%2Fsupertokens.io%2Fdev%2Foauth%2Fredirect-to-app&flowName=GeneralOAuthFlow
 
       // we redirect the user to google for auth.
-      window.location.assign(authUrl);
+      window.location.assign(authUrl)
    } catch (err: any) {
       emits("googleSignInError", {
          type: "unexpected",
@@ -77,7 +77,7 @@ async function onGoogleSignIn() {
          summary: sendCodeErrorTitle,
          detail: sendCodeErrorDescription,
          json: err,
-      });
+      })
    }
 }
 </script>

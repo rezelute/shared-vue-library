@@ -39,46 +39,46 @@
 </template>
 
 <script setup lang="ts">
-import Card from "primevue/card";
-import Skeleton from "primevue/skeleton";
-import Session from "supertokens-web-js/recipe/session";
-import { onMounted, ref, watch } from "vue";
-import toastContent from "../../content/generic/toastContent";
-import accountService from "../../services/account/accountService";
-import { type EmitNotify } from "../../types";
-import normalizeError from "../../utils/error/normalizeError.util";
+import Card from "primevue/card"
+import Skeleton from "primevue/skeleton"
+import Session from "supertokens-web-js/recipe/session"
+import { onMounted, ref, watch } from "vue"
+import toastContent from "../../content/generic/toastContent"
+import accountService from "../../services/account/accountService"
+import { type EmitNotify } from "../../types"
+import normalizeError from "../../utils/error/normalizeError.util"
 
-const emits = defineEmits(["getUserIdError", "getUserEmailError"]);
+const emits = defineEmits(["getUserIdError", "getUserEmailError"])
 
-const userId = ref("");
-const userEmail = ref("");
-const isLoading = ref(false);
+const userId = ref("")
+const userEmail = ref("")
+const isLoading = ref(false)
 
 // lifecycle
 // -----------------------------------------
 const props = defineProps<{
-   apiDomain: string;
-   updatedEmailDate?: Date | null; // optional prop to trigger email refresh
-}>();
+   apiDomain: string
+   updatedEmailDate?: Date | null // optional prop to trigger email refresh
+}>()
 
 onMounted(async () => {
-   await getUserId();
-   await getUserEmail();
-});
+   await getUserId()
+   await getUserEmail()
+})
 
 watch(
    () => props.updatedEmailDate,
    async () => {
-      await getUserEmail();
+      await getUserEmail()
    }
-);
+)
 // methods
 // -----------------------------------------
 async function getUserEmail() {
    try {
-      isLoading.value = true;
-      const { data } = await accountService.getEmail(props.apiDomain);
-      userEmail.value = data.email;
+      isLoading.value = true
+      const { data } = await accountService.getEmail(props.apiDomain)
+      userEmail.value = data.email
    } catch (err) {
       // emit to the parent so it can log the error
       emits("getUserEmailError", {
@@ -87,16 +87,16 @@ async function getUserEmail() {
          summary: toastContent.error.somethingWentWrong.summary,
          detail: toastContent.error.somethingWentWrong.detail,
          json: normalizeError(err),
-      } satisfies EmitNotify);
+      } satisfies EmitNotify)
    } finally {
-      isLoading.value = false;
+      isLoading.value = false
    }
 }
 
 async function getUserId() {
    try {
-      isLoading.value = true;
-      userId.value = await Session.getUserId();
+      isLoading.value = true
+      userId.value = await Session.getUserId()
    } catch (err) {
       // emit to the parent so it can log the error
       emits("getUserIdError", {
@@ -105,9 +105,9 @@ async function getUserId() {
          summary: toastContent.error.somethingWentWrong.summary,
          detail: toastContent.error.somethingWentWrong.detail,
          json: normalizeError(err),
-      } satisfies EmitNotify);
+      } satisfies EmitNotify)
    } finally {
-      isLoading.value = false;
+      isLoading.value = false
    }
 }
 </script>

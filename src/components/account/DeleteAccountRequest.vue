@@ -7,17 +7,19 @@
       <template #content>
          <div v-if="!isDeleteEmailSent" class="vstack-form">
             <p>
-               You will receive an email to verify your account deletion. Please click on the email link to
-               delete your account.
+               You will receive an email to verify your account deletion. Please click on the email
+               link to delete your account.
             </p>
 
-            <Button type="button" :isLoading="isLoading" @click="sendDeleteEmail">Send deletion email</Button>
+            <Button type="button" :isLoading="isLoading" @click="sendDeleteEmail"
+               >Send deletion email</Button
+            >
          </div>
 
          <ActionConfirmMsg v-else iconClass="pi pi-envelope">
             <p>
-               We have sent you an email to verify your account deletion. Please check your inbox and click on
-               the verification link.
+               We have sent you an email to verify your account deletion. Please check your inbox
+               and click on the verification link.
             </p>
          </ActionConfirmMsg>
       </template>
@@ -25,40 +27,40 @@
 </template>
 
 <script setup lang="ts">
-import Button from "primevue/button";
-import Card from "primevue/card";
-import { ref } from "vue";
-import ActionConfirmMsg from "../../components/actionConfirmMsg/ActionConfirmMsg.vue";
-import toastContent from "../../content/generic/toastContent";
-import accountService from "../../services/account/accountService";
-import { type EmitNotify } from "../../types";
-import normalizeError from "../../utils/error/normalizeError.util";
+import Button from "primevue/button"
+import Card from "primevue/card"
+import { ref } from "vue"
+import ActionConfirmMsg from "../../components/actionConfirmMsg/ActionConfirmMsg.vue"
+import toastContent from "../../content/generic/toastContent"
+import accountService from "../../services/account/accountService"
+import { type EmitNotify } from "../../types"
+import normalizeError from "../../utils/error/normalizeError.util"
 
 const props = defineProps<{
-   apiDomain: string;
-}>();
+   apiDomain: string
+}>()
 
-const emits = defineEmits(["deleteAccountRequestError", "deleteAccountRequestSuccess"]);
+const emits = defineEmits(["deleteAccountRequestError", "deleteAccountRequestSuccess"])
 
 // data
 // -----------------------------------------
-const isDeleteEmailSent = ref(false);
-const isLoading = ref(false);
+const isDeleteEmailSent = ref(false)
+const isLoading = ref(false)
 
 // methods
 // -----------------------------------------
 // send a request to the server to send a deletion email
 async function sendDeleteEmail() {
    try {
-      isLoading.value = true;
+      isLoading.value = true
 
-      await accountService.requestDelete(props.apiDomain);
+      await accountService.requestDelete(props.apiDomain)
 
       // request deletion email sent successfully, show confirmation message
-      isDeleteEmailSent.value = true;
-      emits("deleteAccountRequestSuccess");
+      isDeleteEmailSent.value = true
+      emits("deleteAccountRequestSuccess")
    } catch (err) {
-      isDeleteEmailSent.value = false;
+      isDeleteEmailSent.value = false
 
       emits("deleteAccountRequestError", {
          type: "unexpected",
@@ -66,9 +68,9 @@ async function sendDeleteEmail() {
          summary: toastContent.error.somethingWentWrong.summary,
          detail: toastContent.error.somethingWentWrong.detail,
          json: normalizeError(err),
-      } satisfies EmitNotify);
+      } satisfies EmitNotify)
    } finally {
-      isLoading.value = false;
+      isLoading.value = false
    }
 }
 </script>

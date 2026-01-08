@@ -21,8 +21,8 @@
                <!-- Code input & Submit -->
                <div class="vstack-form">
                   <p>
-                     To finish the signup process, enter the code that was emailed to you. Note that the code
-                     is only valid for 10 minutes.
+                     To finish the signup process, enter the code that was emailed to you. Note that
+                     the code is only valid for 10 minutes.
                   </p>
 
                   <FormField
@@ -55,7 +55,10 @@
 
                <!-- Code re-send -->
                <div class="vstack-form">
-                  <p>If you didnt receive an email, please check your Junk folder or resend another code.</p>
+                  <p>
+                     If you didnt receive an email, please check your Junk folder or resend another
+                     code.
+                  </p>
                   <Button
                      class="w-fit"
                      type="button"
@@ -73,15 +76,19 @@
 </template>
 
 <script setup lang="ts">
-import Button from "primevue/button";
-import Card from "primevue/card";
-import InputOtp from "primevue/inputotp";
-import { clearLoginAttemptInfo, consumeCode, resendCode } from "supertokens-web-js/recipe/passwordless";
-import { computed, ref, watch } from "vue";
-import FormField from "../../../components/formField/FormField.vue";
-import toastContent from "../../../content/generic/toastContent";
-import { type EmitNotify } from "../../../types";
-import normalizeError from "../../../utils/error/normalizeError.util";
+import Button from "primevue/button"
+import Card from "primevue/card"
+import InputOtp from "primevue/inputotp"
+import {
+   clearLoginAttemptInfo,
+   consumeCode,
+   resendCode,
+} from "supertokens-web-js/recipe/passwordless"
+import { computed, ref, watch } from "vue"
+import FormField from "../../../components/formField/FormField.vue"
+import toastContent from "../../../content/generic/toastContent"
+import { type EmitNotify } from "../../../types"
+import normalizeError from "../../../utils/error/normalizeError.util"
 
 const emits = defineEmits([
    "verificationCodeSuccess",
@@ -89,35 +96,35 @@ const emits = defineEmits([
    "resendCodeSuccess",
    "resendCodeError",
    "restartFlow",
-]);
+])
 
 defineProps<{
-   pageAuthType: "Sign in" | "Sign up";
-}>();
+   pageAuthType: "Sign in" | "Sign up"
+}>()
 
 // data
 // -----------------------------------------
-const userMagicCode = ref(""); // user input code
-const isCodeValid = ref<boolean | null>(null);
-const codeInputAttemptCount = ref(0);
-const codeInputAttemptMax = ref(0);
-const isSubmittingCode = ref(false); // Used for data-test="auth-loading"
-const isResendingCode = ref(false); // Used for resend loading state
+const userMagicCode = ref("") // user input code
+const isCodeValid = ref<boolean | null>(null)
+const codeInputAttemptCount = ref(0)
+const codeInputAttemptMax = ref(0)
+const isSubmittingCode = ref(false) // Used for data-test="auth-loading"
+const isResendingCode = ref(false) // Used for resend loading state
 
 // lifecycle
 // -----------------------------------------
 // reset code validity when the user starts typing
 watch(userMagicCode, () => {
    if (isCodeValid.value !== null) {
-      isCodeValid.value = null;
+      isCodeValid.value = null
    }
-});
+})
 
 // computed
 // -----------------------------------------
 const invalidCodeText = computed(() => {
    if (userMagicCode.value.length < 6) {
-      return "Please enter a valid code length";
+      return "Please enter a valid code length"
    }
    // invalid code input with attempts left
    else if (
@@ -125,66 +132,66 @@ const invalidCodeText = computed(() => {
       codeInputAttemptCount.value > 0 &&
       codeInputAttemptCount.value < codeInputAttemptMax.value
    ) {
-      return `Invalid code. You have ${codeInputAttemptMax.value - codeInputAttemptCount.value} attempts left.`;
+      return `Invalid code. You have ${codeInputAttemptMax.value - codeInputAttemptCount.value} attempts left.`
    }
    // code likely valid
    else {
-      return "";
+      return ""
    }
-});
+})
 
 // methods
 // -----------------------------------------
 /** If the code is valid, we tell the parent so it can redirect to the home page  */
 async function onCodeSubmit() {
-   const otpErrorSummary = "Unable to process your OTP code";
-   const otpErrorDetail = "Please try again later.";
-   isCodeValid.value = true;
+   const otpErrorSummary = "Unable to process your OTP code"
+   const otpErrorDetail = "Please try again later."
+   isCodeValid.value = true
 
    // validate code length
    if (userMagicCode.value.length < 6) {
-      isCodeValid.value = false;
-      return;
+      isCodeValid.value = false
+      return
    }
 
    try {
-      isSubmittingCode.value = true;
-      const response = await consumeCode({ userInputCode: userMagicCode.value });
+      isSubmittingCode.value = true
+      const response = await consumeCode({ userInputCode: userMagicCode.value })
 
       // Success: clear login attempt info
       if (response.status === "OK") {
-         await clearLoginAttemptInfo();
+         await clearLoginAttemptInfo()
 
          // New user signup success
          if (response.createdNewRecipeUser && response.user.loginMethods.length === 1) {
-            console.info("New user signed up successfully");
+            console.info("New user signed up successfully")
          }
          // Existing user sign-in success
          else {
-            console.info("Existing user signed in successfully");
+            console.info("Existing user signed in successfully")
          }
 
-         isCodeValid.value = true;
+         isCodeValid.value = true
 
          emits("verificationCodeSuccess", {
             summary: "Code verified",
             detail: "You have successfully signed in.",
-         });
+         })
       }
       // Failure: expired/invalid code, etc.
       else {
-         console.error("Submit code: ", response);
+         console.error("Submit code: ", response)
 
          // Invalid code input - show validation warning
          if (response.status === "INCORRECT_USER_INPUT_CODE_ERROR") {
-            codeInputAttemptCount.value = response.failedCodeInputAttemptCount;
-            codeInputAttemptMax.value = response.maximumCodeInputAttempts;
-            isCodeValid.value = false;
+            codeInputAttemptCount.value = response.failedCodeInputAttemptCount
+            codeInputAttemptMax.value = response.maximumCodeInputAttempts
+            isCodeValid.value = false
          }
          // Other type of error ex. max invalid count reached, invalid code etc
          // Show an error toast and hide the code input field
          else {
-            await clearLoginAttemptInfo();
+            await clearLoginAttemptInfo()
 
             emits("verificationCodeError", {
                type: "input_code_invalid",
@@ -195,7 +202,7 @@ async function onCodeSubmit() {
                   status: response.status,
                   responseDetails: normalizeError(response.fetchResponse),
                },
-            } satisfies EmitNotify);
+            } satisfies EmitNotify)
          }
       }
    } catch (err) {
@@ -208,20 +215,20 @@ async function onCodeSubmit() {
          summary: toastContent.error.somethingWentWrong.summary,
          detail: toastContent.error.somethingWentWrong.detail,
          json: normalizeError(err),
-      } satisfies EmitNotify);
+      } satisfies EmitNotify)
    } finally {
-      isSubmittingCode.value = false;
+      isSubmittingCode.value = false
    }
 }
 
 //** Resend OTP code which might have not been received by the user */
 async function onResendCode() {
-   const resendOtpFailedSummary = "Resend OTP failed";
-   const resendOtpFailedDetail = "Please try again later.";
+   const resendOtpFailedSummary = "Resend OTP failed"
+   const resendOtpFailedDetail = "Please try again later."
 
    try {
-      isResendingCode.value = true;
-      const response = await resendCode();
+      isResendingCode.value = true
+      const response = await resendCode()
       // console.log("resend code response: ", response);
 
       // this can happen if the user has already successfully logged in into
@@ -230,7 +237,7 @@ async function onResendCode() {
          // we clear the login attempt info that was added when the createCode function
          // was called - so that if the user does a page reload, they will now see the
          // enter email / phone UI again.
-         await clearLoginAttemptInfo();
+         await clearLoginAttemptInfo()
 
          emits("resendCodeError", {
             type: "restart_flow_error",
@@ -241,14 +248,14 @@ async function onResendCode() {
                status: response.status,
                responseDetails: normalizeError(response.fetchResponse),
             },
-         } satisfies EmitNotify);
+         } satisfies EmitNotify)
       }
       // Magic link resent successfully, show toast to confirm
       else {
          emits("resendCodeSuccess", {
             summary: "Code re-sent",
             detail: "Please check your email for the new code.",
-         });
+         })
       }
    } catch (err) {
       // this may be a custom error message sent from the API by you.
@@ -260,9 +267,9 @@ async function onResendCode() {
          summary: toastContent.error.somethingWentWrong.summary,
          detail: toastContent.error.somethingWentWrong.detail,
          json: normalizeError(err),
-      } satisfies EmitNotify);
+      } satisfies EmitNotify)
    } finally {
-      isResendingCode.value = false;
+      isResendingCode.value = false
    }
 }
 
@@ -270,8 +277,8 @@ function onRestartFlow() {
    // we clear the login attempt info that was added when the createCode function
    // was called - so that if the user does a page reload, they will now see the
    // enter email / phone UI again.
-   clearLoginAttemptInfo();
-   emits("restartFlow");
+   clearLoginAttemptInfo()
+   emits("restartFlow")
 }
 </script>
 

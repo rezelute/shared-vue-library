@@ -18,5 +18,5 @@
 
 <script setup lang="ts">
 // import Card from "primevue/card";
-import PageLoader from "@/components/loading/pageLoader/PageLoader.vue";
+import PageLoader from "@/components/loading/pageLoader/PageLoader.vue"
 </script>

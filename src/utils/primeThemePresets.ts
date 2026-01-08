@@ -1,7 +1,7 @@
-import { definePreset } from "@primeuix/themes";
-import Lara from "@primeuix/themes/lara";
-import type { Preset } from "@primeuix/themes/types";
-import PrimeVue from "primevue/config";
+import { definePreset } from "@primeuix/themes"
+import Lara from "@primeuix/themes/lara"
+import type { Preset } from "@primeuix/themes/types"
+import PrimeVue from "primevue/config"
 
 // Green theme
 const preset1 = {
@@ -70,13 +70,13 @@ const preset1 = {
          },
       },
    },
-} as Preset;
+} as Preset
 
 const customThemes = {
    preset1,
-};
+}
 
-const MyPreset = definePreset(Lara, preset1);
+const MyPreset = definePreset(Lara, preset1)
 
 function setupPrimeVue(app: any, appPreset: any) {
    app.use(PrimeVue, {
@@ -86,7 +86,7 @@ function setupPrimeVue(app: any, appPreset: any) {
             darkModeSelector: ".dark",
          },
       },
-   });
+   })
 }
 
-export { customThemes, setupPrimeVue };
+export { customThemes, setupPrimeVue }

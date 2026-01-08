@@ -8,10 +8,10 @@
  * If no `redirect` param is present, returns null.
  */
 export function getRedirectTargetWithQueryParams(query: Record<string, any>): string | null {
-   const { redirect, ...rest } = query;
+   const { redirect, ...rest } = query
 
-   if (!redirect) return null;
+   if (!redirect) return null
 
-   const restParams = new URLSearchParams(rest).toString();
-   return restParams ? `${redirect}?${restParams}` : redirect;
+   const restParams = new URLSearchParams(rest).toString()
+   return restParams ? `${redirect}?${restParams}` : redirect
 }

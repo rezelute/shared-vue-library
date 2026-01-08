@@ -1,9 +1,9 @@
 export type SharedRoute = {
-   path: string;
-   name: string;
-   props?: Record<string, any>;
-   meta?: Record<string, any>;
-};
+   path: string
+   name: string
+   props?: Record<string, any>
+   meta?: Record<string, any>
+}
 
 export const sharedRoutes: SharedRoute[] = [
    {
@@ -51,4 +51,4 @@ export const sharedRoutes: SharedRoute[] = [
       name: "not-found",
       // component: NotFoundPage,
    },
-];
+]

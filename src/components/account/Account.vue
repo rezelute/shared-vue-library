@@ -26,8 +26,12 @@
                <DeleteAccountRequest
                   class="card-p-sm"
                   :apiDomain="apiDomain"
-                  @deleteAccountRequestError="(...args) => $emit('deleteAccountRequestError', ...args)"
-                  @deleteAccountRequestSuccess="(...args) => $emit('deleteAccountRequestSuccess', ...args)"
+                  @deleteAccountRequestError="
+                     (...args) => $emit('deleteAccountRequestError', ...args)
+                  "
+                  @deleteAccountRequestSuccess="
+                     (...args) => $emit('deleteAccountRequestSuccess', ...args)
+                  "
                />
             </div>
          </div>
@@ -36,17 +40,17 @@
 </template>
 
 <script setup lang="ts">
-import { inject, onMounted, ref } from "vue";
-import { useDeleteAccount } from "../../composables/account/useDeleteAccount";
-import { useUpdateEmail } from "../../composables/account/useUpdateEmail";
-import { type EmitNotify } from "../../types";
-import { API_DOMAIN_KEY } from "../../utils/injectionKeys";
-import PageLoader from "../loading/pageLoader/PageLoader.vue";
-import ChangeEmailRequest from "./ChangeEmailRequest.vue";
-import DeleteAccountRequest from "./DeleteAccountRequest.vue";
-import UserAccountInfo from "./UserAccountInfo.vue";
+import { inject, onMounted, ref } from "vue"
+import { useDeleteAccount } from "../../composables/account/useDeleteAccount"
+import { useUpdateEmail } from "../../composables/account/useUpdateEmail"
+import { type EmitNotify } from "../../types"
+import { API_DOMAIN_KEY } from "../../utils/injectionKeys"
+import PageLoader from "../loading/pageLoader/PageLoader.vue"
+import ChangeEmailRequest from "./ChangeEmailRequest.vue"
+import DeleteAccountRequest from "./DeleteAccountRequest.vue"
+import UserAccountInfo from "./UserAccountInfo.vue"
 
-const apiDomain = inject(API_DOMAIN_KEY) as string;
+const apiDomain = inject(API_DOMAIN_KEY) as string
 
 const emits = defineEmits([
    "deleteAccountRequestError",
@@ -57,55 +61,55 @@ const emits = defineEmits([
    "changeEmailActionSuccess",
    "deleteAccountError",
    "deleteAccountSuccess",
-]);
+])
 
 const props = defineProps<{
-   deleteToken?: string | undefined;
-   updateEmailToken?: string | undefined;
-}>();
+   deleteToken?: string | undefined
+   updateEmailToken?: string | undefined
+}>()
 
 // data
 // -----------------------------------------
 // this is used to tell the UserAccountInfo component to refresh the email after a successful email change
 // updates to the latest date and time
-const updatedEmailDate = ref<Date | null>(null);
-const isLoading = ref(false); // page loader state
+const updatedEmailDate = ref<Date | null>(null)
+const isLoading = ref(false) // page loader state
 
 // lifecycle
 // -----------------------------------------
-const { updateEmail } = useUpdateEmail(apiDomain);
-const { deleteAccount } = useDeleteAccount(apiDomain);
+const { updateEmail } = useUpdateEmail(apiDomain)
+const { deleteAccount } = useDeleteAccount(apiDomain)
 
 onMounted(async () => {
    // update email token present, update email and emit success or error events
    if (props.updateEmailToken) {
-      isLoading.value = true; // remains true
+      isLoading.value = true // remains true
 
       await updateEmail(
          props.updateEmailToken,
          (payload: EmitNotify) => emits("changeEmailActionSuccess", payload),
          (payload: EmitNotify) => emits("changeEmailActionError", payload)
-      );
+      )
    }
    // delete token present, delete account and emit success or error events
    else if (props.deleteToken) {
-      isLoading.value = true; // remains true
+      isLoading.value = true // remains true
 
       await deleteAccount(
          props.deleteToken,
          () => emits("deleteAccountSuccess"),
          (payload: EmitNotify) => emits("deleteAccountError", payload)
-      );
+      )
    }
-});
+})
 
 // methods
 // -----------------------------------------
 function onChangeEmailActionSuccess(payload: EmitNotify) {
    // update the date to trigger a refresh in UserAccountInfo component
-   updatedEmailDate.value = new Date();
+   updatedEmailDate.value = new Date()
 
-   emits("changeEmailActionSuccess", payload);
+   emits("changeEmailActionSuccess", payload)
 }
 </script>
 

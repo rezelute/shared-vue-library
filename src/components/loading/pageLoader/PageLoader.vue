@@ -1,7 +1,13 @@
 <template>
    <Transition name="fade" mode="out-in">
       <!-- Loading State -->
-      <div v-if="showPreloadSlot && isLoading" key="loading" class="w-full" role="status" aria-live="polite">
+      <div
+         v-if="showPreloadSlot && isLoading"
+         key="loading"
+         class="w-full"
+         role="status"
+         aria-live="polite"
+      >
          <div class="vstack-sm p-12">
             <slot name="preloader">
                <!-- Fallback preloader if no slot provided -->
@@ -35,26 +41,26 @@
 </template>
 
 <script setup lang="ts">
-import Button from "primevue/button";
-import ProgressSpinner from "primevue/progressspinner";
-import PageErrorIcon from "../../icons/PageErrorIcon.vue";
+import Button from "primevue/button"
+import ProgressSpinner from "primevue/progressspinner"
+import PageErrorIcon from "../../icons/PageErrorIcon.vue"
 
 withDefaults(
    defineProps<{
-      isLoading: boolean;
-      showPreloadSlot?: boolean; // if true, intention is use the preload slot rather than the default spinner
-      isError?: boolean;
+      isLoading: boolean
+      showPreloadSlot?: boolean // if true, intention is use the preload slot rather than the default spinner
+      isError?: boolean
    }>(),
    {
       isLoading: false,
       isError: false,
       showPreloadSlot: false, // we try to use skeleton loaders instead by default
    }
-);
+)
 
 defineEmits<{
-   (e: "retry"): void;
-}>();
+   (e: "retry"): void
+}>()
 </script>
 
 <style scoped>

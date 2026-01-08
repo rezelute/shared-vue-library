@@ -4,42 +4,42 @@
 </template>
 
 <script setup lang="ts">
-import { inject, onMounted, ref } from "vue";
-import { useRoute, useRouter } from "vue-router";
-import profileService from "../../../services/account/profileService";
-import { API_DOMAIN_KEY } from "../../../utils/injectionKeys";
-import { getRedirectTargetWithQueryParams } from "../../../utils/url";
-import PageLoader from "./../../loading/pageLoader/PageLoader.vue";
+import { inject, onMounted, ref } from "vue"
+import { useRoute, useRouter } from "vue-router"
+import profileService from "../../../services/account/profileService"
+import { API_DOMAIN_KEY } from "../../../utils/injectionKeys"
+import { getRedirectTargetWithQueryParams } from "../../../utils/url"
+import PageLoader from "./../../loading/pageLoader/PageLoader.vue"
 
-const route = useRoute();
-const router = useRouter();
+const route = useRoute()
+const router = useRouter()
 
-const emits = defineEmits(["profileCheckError", "profileIsComplete", "profileNotComplete"]);
+const emits = defineEmits(["profileCheckError", "profileIsComplete", "profileNotComplete"])
 
 // data
 // -----------------------------------------
-const isLoading = ref(true); // this is always true because it will redirect after the checks
-const apiDomain = inject(API_DOMAIN_KEY) as string;
+const isLoading = ref(true) // this is always true because it will redirect after the checks
+const apiDomain = inject(API_DOMAIN_KEY) as string
 
 // lifecycle
 // -----------------------------------------
 onMounted(async () => {
-   checkProfileCompletion();
-});
+   checkProfileCompletion()
+})
 
 // methods
 // -----------------------------------------
 async function checkProfileCompletion() {
    try {
-      const { data } = await profileService.getProfile(apiDomain);
+      const { data } = await profileService.getProfile(apiDomain)
 
       // profile is complete, go to home page OR to redirect query param if exists (e.g. /home?redirect=/some-page)
       if (data.isCompleted) {
-         const redirect = getRedirectTargetWithQueryParams(route.query);
+         const redirect = getRedirectTargetWithQueryParams(route.query)
          if (redirect) {
-            router.push(redirect);
+            router.push(redirect)
          } else {
-            router.push({ name: "home" });
+            router.push({ name: "home" })
          }
       }
       // Profile NOT complete, redirect to the profile completion page (preserve query params)
@@ -49,7 +49,7 @@ async function checkProfileCompletion() {
             router.push({
                name: "profile",
                query: route.query,
-            });
+            })
          }
          // no "redirect" query param, we redirect to the profile page and add redirect query param to the homepage
          else {
@@ -59,13 +59,13 @@ async function checkProfileCompletion() {
                   ...route.query,
                   redirect: "home",
                },
-            });
+            })
          }
       }
    } catch (err) {
-      console.error("Error checking profile completion: ", err);
+      console.error("Error checking profile completion: ", err)
       // application decides how to handle the error
-      emits("profileCheckError");
+      emits("profileCheckError")
    }
 }
 </script>
