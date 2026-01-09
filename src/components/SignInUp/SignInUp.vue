@@ -4,6 +4,7 @@
          v-if="!showMagicInputCode"
          v-model:email="email"
          :pageAuthType="pageAuthType"
+         :signupInviteOnly="signupInviteOnly"
          :apiDomain="apiDomain"
          @sendCodeSuccess="() => (showMagicInputCode = true)"
          @signupStartError="(payload: EmitNotify) => $emit('signupStartError', payload)"
@@ -35,6 +36,23 @@ import { type EmitNotify } from "../../types"
 import normalizeError from "../../utils/error/normalizeError.util"
 import { API_DOMAIN_KEY } from "../../utils/injectionKeys"
 
+// COMPOSABLES & ROUTER
+// -----------------------------------------
+const route = useRoute()
+const router = useRouter()
+
+// PROPS & EMITS
+// -----------------------------------------
+// props with default
+withDefaults(
+   defineProps<{
+      signupInviteOnly?: boolean
+   }>(),
+   {
+      signupInviteOnly: true,
+   }
+)
+
 const emits = defineEmits([
    "signupStartError",
    "checkMagicLinkSentError",
@@ -46,8 +64,6 @@ const emits = defineEmits([
    "googleCallbackError",
    "googleSignInError",
 ])
-const route = useRoute()
-const router = useRouter()
 
 // data
 // -----------------------------------------

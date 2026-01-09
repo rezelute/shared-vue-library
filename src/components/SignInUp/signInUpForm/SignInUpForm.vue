@@ -4,7 +4,12 @@
          <h1 class="h1">{{ pageAuthType }}</h1>
       </template>
       <template #content>
-         <section>
+         <div v-if="signupInviteOnly && pageAuthType === 'Sign up'">
+            <Message severity="info">
+               Sign up is currently by invite only during the beta period.
+            </Message>
+         </div>
+         <section v-else>
             <GoogleAuthIcon
                :apiDomain="apiDomain"
                :authType="pageAuthType"
@@ -28,7 +33,6 @@
                   data-test="auth-email-input"
                   @validity-changed="
                      (val) => {
-                        // console.log('val is now', val);
                         isEmailValid = val
                      }
                   "
@@ -57,14 +61,16 @@ import toastContent from "../../../content/generic/toastContent"
 import { type EmitNotify } from "../../../types"
 import normalizeError from "../../../utils/error/normalizeError.util"
 
+// props/emits
+// -----------------------------------------
 const emits = defineEmits(["sendCodeSuccess", "signupStartError", "googleSignInError"])
-
 defineProps<{
    pageAuthType: "Sign in" | "Sign up"
    apiDomain: string
+   signupInviteOnly?: boolean
 }>()
 
-// data
+// state
 // -----------------------------------------
 const signingUpLoading = ref(false) // Used for data-test="auth-loading"
 const email = defineModel<string>("email", { required: true })

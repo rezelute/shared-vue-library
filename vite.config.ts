@@ -1,26 +1,16 @@
 // import AutoImport from "unplugin-auto-import/vite";
-import tailwindcss from "@tailwindcss/vite";
-import vue from "@vitejs/plugin-vue";
-import dotenv from "dotenv";
-import fs from "fs";
-import { fileURLToPath, URL } from "node:url";
-import path from "path";
-import copy from "rollup-plugin-copy";
-import { defineConfig } from "vite";
-import dts from "vite-plugin-dts";
-import { configDefaults } from "vitest/config";
+import tailwindcss from "@tailwindcss/vite"
+import vue from "@vitejs/plugin-vue"
+import { fileURLToPath, URL } from "node:url"
+import path from "path"
+import copy from "rollup-plugin-copy"
+import { defineConfig } from "vite"
+import dts from "vite-plugin-dts"
+import { configDefaults } from "vitest/config"
 
-dotenv.config(); // Load environment variables from .env
-
-// Remove "https://" or "http://" from the beginning
-const urlWithoutProtocol = process.env.VITE_CLIENT_URL!.startsWith("https://")
-   ? process.env.VITE_CLIENT_URL!.slice(8) // removes "https://"
-   : process.env.VITE_CLIENT_URL!.slice(7); // removes "http://"
-
-// Now, split by the colon to get host and port
-const [envHost, envPort] = urlWithoutProtocol.split(":");
-// If no port is provided, set default ports based on the protocol
-const port = envPort ? parseInt(envPort) : process.env.VITE_CLIENT_URL!.startsWith("https://") ? 443 : 80;
+// Use standard localhost and default port for development
+const envHost = "localhost"
+const port = 5173
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -28,10 +18,6 @@ export default defineConfig({
       host: envHost,
       port: port,
       strictPort: true, // Ensure it always uses port 5173, and not another port
-      https: {
-         key: fs.readFileSync(path.resolve(__dirname, "./ssl/key.pem")),
-         cert: fs.readFileSync(path.resolve(__dirname, "./ssl/cert.pem")),
-      },
    },
    // Build the library for use in other projects
    build: {
@@ -89,7 +75,7 @@ export default defineConfig({
             manualChunks(id, { getModuleInfo }) {
                // Consolidate supertokens-web-js and its recipes into a vendor chunk
                if (id.includes("node_modules/supertokens-web-js")) {
-                  return "supertokens-vendor";
+                  return "supertokens-vendor"
                }
             },
          },
@@ -141,4 +127,4 @@ export default defineConfig({
       include: ["**/*.test.ts"], // Only look for files with .test.js or .test.ts extensions
       root: fileURLToPath(new URL("./", import.meta.url)),
    },
-});
+})
