@@ -1,6 +1,6 @@
 // import { useToast as usePrimeToast } from "primevue/usetoast";
 import type { ToastServiceMethods } from "primevue/toastservice"
-import messages from "../content/messages"
+import { messages } from "../content"
 //import { type ToastMessageOptions } from "primevue/toast";
 
 const TOAST_CONFIG = {

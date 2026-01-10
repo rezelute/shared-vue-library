@@ -1,4 +1,4 @@
-import { default as messages } from './messages';
+import { default as messages } from './messages.json';
 export { messages };
 declare const _default: {
     messages: {
