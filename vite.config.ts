@@ -101,6 +101,7 @@ export default defineConfig({
             "src/router",
             "src/composables",
             "src/utils",
+            "src/content",
             "src/types",
             "src/generated_types",
          ],
