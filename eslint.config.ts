@@ -1,8 +1,10 @@
-import pluginVitest from "@vitest/eslint-plugin";
-import skipFormatting from "@vue/eslint-config-prettier/skip-formatting";
-import { defineConfigWithVueTs, vueTsConfigs } from "@vue/eslint-config-typescript";
-import simpleImportSort from "eslint-plugin-simple-import-sort";
-import pluginVue from "eslint-plugin-vue";
+// For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
+import pluginVitest from "@vitest/eslint-plugin"
+import skipFormatting from "@vue/eslint-config-prettier/skip-formatting"
+import { defineConfigWithVueTs, vueTsConfigs } from "@vue/eslint-config-typescript"
+import simpleImportSort from "eslint-plugin-simple-import-sort"
+import storybook from "eslint-plugin-storybook"
+import pluginVue from "eslint-plugin-vue"
 
 // To allow more languages other than `ts` in `.vue` files, uncomment the following lines:
 // import { configureVueProject } from '@vue/eslint-config-typescript'
@@ -68,7 +70,10 @@ export default defineConfigWithVueTs(
          "vue/enforce-style-attribute": ["error", { allow: ["scoped"] }],
          "no-undef": "off",
          "no-trailing-spaces": ["error", { skipBlankLines: true }],
-         camelcase: ["off", { ignoreImports: true, ignoreGlobals: true, ignoreDestructuring: true }],
+         camelcase: [
+            "off",
+            { ignoreImports: true, ignoreGlobals: true, ignoreDestructuring: true },
+         ],
          "import/no-cycle": "off",
          "arrow-body-style": "off",
          "prefer-destructuring": ["warn", { object: true, array: false }],
@@ -102,4 +107,4 @@ export default defineConfigWithVueTs(
          "@typescript-eslint/no-unused-expressions": "off",
       },
    }
-);
+)
