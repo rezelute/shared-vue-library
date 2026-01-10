@@ -1,11 +1,27 @@
 type __VLS_Props = {
-    apiDomain: string;
+    isDeleteEmailSent: boolean;
+    isLoading?: boolean;
 };
-declare const _default: import('vue').DefineComponent<__VLS_Props, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
-    deleteAccountRequestError: (...args: any[]) => void;
-    deleteAccountRequestSuccess: (...args: any[]) => void;
+declare function __VLS_template(): {
+    attrs: Partial<{}>;
+    slots: {
+        default?(_: {
+            id: string;
+        }): any;
+    };
+    refs: {};
+    rootEl: any;
+};
+type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
+declare const __VLS_component: import('vue').DefineComponent<__VLS_Props, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
+    "send-delete-email": (...args: any[]) => void;
 }, string, import('vue').PublicProps, Readonly<__VLS_Props> & Readonly<{
-    onDeleteAccountRequestError?: ((...args: any[]) => any) | undefined;
-    onDeleteAccountRequestSuccess?: ((...args: any[]) => any) | undefined;
+    "onSend-delete-email"?: ((...args: any[]) => any) | undefined;
 }>, {}, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, any>;
+declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;
 export default _default;
+type __VLS_WithTemplateSlots<T, S> = T & {
+    new (): {
+        $slots: S;
+    };
+};

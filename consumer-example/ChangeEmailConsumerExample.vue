@@ -1,7 +1,7 @@
 <template>
    <ChangeEmailRequest
-      :isEmailSent="isEmailSent"
       v-model:email="email"
+      :isEmailSent="isEmailSent"
       :isLoading="isLoading"
       @submit="handleSubmit"
    />

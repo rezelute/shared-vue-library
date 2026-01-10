@@ -5,7 +5,14 @@ const i = {
 };
 function d(o) {
   function e(t) {
-    const { type: n, severity: r, summary: s, detail: a, life: c = i.DEFAULT_LIFE, json: u = null } = t;
+    const {
+      type: n,
+      severity: r,
+      summary: s,
+      detail: a,
+      life: c = i.DEFAULT_LIFE,
+      json: u = null
+    } = t;
     o.add({
       severity: r,
       summary: s,

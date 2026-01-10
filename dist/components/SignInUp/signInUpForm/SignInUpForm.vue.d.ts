@@ -1,6 +1,7 @@
 type __VLS_Props = {
     pageAuthType: "Sign in" | "Sign up";
     apiDomain: string;
+    signupInviteOnly?: boolean;
 };
 type __VLS_PublicProps = {
     "email": string;
