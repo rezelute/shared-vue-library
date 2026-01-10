@@ -1,7 +1,9 @@
 <template>
-   <Card v-if="(!isLoading && (userId || userEmail)) || isLoading">
+   <Card>
       <template #title>
-         <h2 class="h2">Your details</h2>
+         <slot id="header">
+            <h2 class="h2 text-color">Your details</h2>
+         </slot>
       </template>
       <template #content>
          <div v-if="!isLoading" class="vstack-sm">
@@ -41,75 +43,14 @@
 <script setup lang="ts">
 import Card from "primevue/card"
 import Skeleton from "primevue/skeleton"
-import Session from "supertokens-web-js/recipe/session"
-import { onMounted, ref, watch } from "vue"
-import toastContent from "../../content/generic/toastContent"
-import accountService from "../../services/account/accountService"
-import { type EmitNotify } from "../../types"
-import normalizeError from "../../utils/error/normalizeError.util"
-
-const emits = defineEmits(["getUserIdError", "getUserEmailError"])
-
-const userId = ref("")
-const userEmail = ref("")
-const isLoading = ref(false)
 
 // lifecycle
 // -----------------------------------------
 const props = defineProps<{
-   apiDomain: string
-   updatedEmailDate?: Date | null // optional prop to trigger email refresh
+   isLoading: boolean
+   userId: string
+   userEmail: string
 }>()
-
-onMounted(async () => {
-   await getUserId()
-   await getUserEmail()
-})
-
-watch(
-   () => props.updatedEmailDate,
-   async () => {
-      await getUserEmail()
-   }
-)
-// methods
-// -----------------------------------------
-async function getUserEmail() {
-   try {
-      isLoading.value = true
-      const { data } = await accountService.getEmail(props.apiDomain)
-      userEmail.value = data.email
-   } catch (err) {
-      // emit to the parent so it can log the error
-      emits("getUserEmailError", {
-         type: "unexpected",
-         severity: "error",
-         summary: toastContent.error.somethingWentWrong.summary,
-         detail: toastContent.error.somethingWentWrong.detail,
-         json: normalizeError(err),
-      } satisfies EmitNotify)
-   } finally {
-      isLoading.value = false
-   }
-}
-
-async function getUserId() {
-   try {
-      isLoading.value = true
-      userId.value = await Session.getUserId()
-   } catch (err) {
-      // emit to the parent so it can log the error
-      emits("getUserIdError", {
-         type: "unexpected",
-         severity: "error",
-         summary: toastContent.error.somethingWentWrong.summary,
-         detail: toastContent.error.somethingWentWrong.detail,
-         json: normalizeError(err),
-      } satisfies EmitNotify)
-   } finally {
-      isLoading.value = false
-   }
-}
 </script>
 
 <style scoped></style>

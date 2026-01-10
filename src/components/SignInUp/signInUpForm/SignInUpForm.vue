@@ -53,6 +53,7 @@
 <script setup lang="ts">
 import Button from "primevue/button"
 import Card from "primevue/card"
+import Message from "primevue/message"
 import { createCode } from "supertokens-web-js/recipe/passwordless"
 import { ref } from "vue"
 import EmailInput from "../../../components/account/EmailInput.vue"

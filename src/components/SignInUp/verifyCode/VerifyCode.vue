@@ -180,7 +180,7 @@ async function onCodeSubmit() {
       }
       // Failure: expired/invalid code, etc.
       else {
-         console.error("Submit code: ", response)
+         console.error("Submit code failed: ", response)
 
          // Invalid code input - show validation warning
          if (response.status === "INCORRECT_USER_INPUT_CODE_ERROR") {

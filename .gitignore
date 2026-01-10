@@ -31,5 +31,7 @@ coverage
 
 # Environment files
 .env
+
+# Storybook files
 *storybook.log
 storybook-static

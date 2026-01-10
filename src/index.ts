@@ -4,7 +4,7 @@ import { type AppInfoUserInput } from "supertokens-web-js/lib/build/types"
 import Passwordless from "supertokens-web-js/recipe/passwordless"
 import Session from "supertokens-web-js/recipe/session"
 import ThirdParty from "supertokens-web-js/recipe/thirdparty"
-import { customThemes, setupPrimeVue } from "./utils/primeThemePresets"
+import { setupPrimeVue } from "./utils/primeThemePresets"
 
 const initializeSuperTokens = (config: { appInfo: AppInfoUserInput }) => {
    SuperTokens.init({
@@ -17,4 +17,4 @@ const initializeSuperTokens = (config: { appInfo: AppInfoUserInput }) => {
    })
 }
 
-export { initializeSuperTokens, customThemes, setupPrimeVue }
+export { initializeSuperTokens, setupPrimeVue }

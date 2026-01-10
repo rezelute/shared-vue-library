@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
    <PageLoader :isLoading="isLoading">
       <template #loadingText>
          <span v-if="deleteToken">Deleting your account...</span>
@@ -12,9 +12,11 @@
             </slot>
 
             <div class="vstack-page">
-               <UserAccountInfo
+               <UserAccountId :apiUrl="props.apiURL"/>
+               <UserAccountEmail :apiUrl="props.apiURL"/>
+
+               <UserAccountId
                   class="card-p-sm"
-                  :updatedEmailDate="updatedEmailDate"
                   :apiDomain="apiDomain"
                />
                <ChangeEmailRequest
@@ -42,7 +44,6 @@
 <script setup lang="ts">
 import { inject, onMounted, ref } from "vue"
 import { useDeleteAccount } from "../../composables/account/useDeleteAccount"
-import { useUpdateEmail } from "../../composables/account/useUpdateEmail"
 import { type EmitNotify } from "../../types"
 import { API_DOMAIN_KEY } from "../../utils/injectionKeys"
 import PageLoader from "../loading/pageLoader/PageLoader.vue"
@@ -66,51 +67,33 @@ const emits = defineEmits([
 const props = defineProps<{
    deleteToken?: string | undefined
    updateEmailToken?: string | undefined
+   apiURL: {
+      deleteAccount: string
+      updateEmail: string
+   }
 }>()
 
 // data
 // -----------------------------------------
 // this is used to tell the UserAccountInfo component to refresh the email after a successful email change
 // updates to the latest date and time
-const updatedEmailDate = ref<Date | null>(null)
 const isLoading = ref(false) // page loader state
 
 // lifecycle
 // -----------------------------------------
-const { updateEmail } = useUpdateEmail(apiDomain)
-const { deleteAccount } = useDeleteAccount(apiDomain)
 
-onMounted(async () => {
-   // update email token present, update email and emit success or error events
-   if (props.updateEmailToken) {
-      isLoading.value = true // remains true
+const { deleteAccount } = useDeleteAccount()
 
-      await updateEmail(
-         props.updateEmailToken,
-         (payload: EmitNotify) => emits("changeEmailActionSuccess", payload),
-         (payload: EmitNotify) => emits("changeEmailActionError", payload)
-      )
-   }
-   // delete token present, delete account and emit success or error events
-   else if (props.deleteToken) {
-      isLoading.value = true // remains true
 
-      await deleteAccount(
-         props.deleteToken,
-         () => emits("deleteAccountSuccess"),
-         (payload: EmitNotify) => emits("deleteAccountError", payload)
-      )
-   }
-})
 
 // methods
 // -----------------------------------------
-function onChangeEmailActionSuccess(payload: EmitNotify) {
-   // update the date to trigger a refresh in UserAccountInfo component
-   updatedEmailDate.value = new Date()
+// function onChangeEmailActionSuccess(payload: EmitNotify) {
+//    // update the date to trigger a refresh in UserAccountInfo component
+//    updatedEmailDate.value = new Date()
 
-   emits("changeEmailActionSuccess", payload)
-}
+//    emits("changeEmailActionSuccess", payload)
+// }
 </script>
 
-<style scoped></style>
+<style scoped></style> -->

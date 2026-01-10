@@ -2,18 +2,20 @@
    <!-- Delete account request -->
    <Card>
       <template #title>
-         <h2 class="h2">Delete your account</h2>
+         <slot id="header">
+            <h2 class="h2">Delete your account</h2>
+         </slot>
       </template>
       <template #content>
-         <div v-if="!isDeleteEmailSent" class="vstack-form">
+         <div v-if="!props.isDeleteEmailSent" class="vstack-form">
             <p>
                You will receive an email to verify your account deletion. Please click on the email
                link to delete your account.
             </p>
 
-            <Button type="button" :isLoading="isLoading" @click="sendDeleteEmail"
-               >Send deletion email</Button
-            >
+            <Button type="button" :loading="props.isLoading" @click="sendDeleteEmail">
+               Send deletion email
+            </Button>
          </div>
 
          <ActionConfirmMsg v-else iconClass="pi pi-envelope">
@@ -29,49 +31,20 @@
 <script setup lang="ts">
 import Button from "primevue/button"
 import Card from "primevue/card"
-import { ref } from "vue"
 import ActionConfirmMsg from "../../components/actionConfirmMsg/ActionConfirmMsg.vue"
-import toastContent from "../../content/generic/toastContent"
-import accountService from "../../services/account/accountService"
-import { type EmitNotify } from "../../types"
-import normalizeError from "../../utils/error/normalizeError.util"
 
-const props = defineProps<{
-   apiDomain: string
-}>()
-
-const emits = defineEmits(["deleteAccountRequestError", "deleteAccountRequestSuccess"])
-
-// data
+// props / emits
 // -----------------------------------------
-const isDeleteEmailSent = ref(false)
-const isLoading = ref(false)
+const props = defineProps<{
+   isDeleteEmailSent: boolean
+   isLoading?: boolean
+}>()
+const emits = defineEmits(["send-delete-email"])
 
 // methods
 // -----------------------------------------
-// send a request to the server to send a deletion email
-async function sendDeleteEmail() {
-   try {
-      isLoading.value = true
-
-      await accountService.requestDelete(props.apiDomain)
-
-      // request deletion email sent successfully, show confirmation message
-      isDeleteEmailSent.value = true
-      emits("deleteAccountRequestSuccess")
-   } catch (err) {
-      isDeleteEmailSent.value = false
-
-      emits("deleteAccountRequestError", {
-         type: "unexpected",
-         severity: "error",
-         summary: toastContent.error.somethingWentWrong.summary,
-         detail: toastContent.error.somethingWentWrong.detail,
-         json: normalizeError(err),
-      } satisfies EmitNotify)
-   } finally {
-      isLoading.value = false
-   }
+function sendDeleteEmail() {
+   emits("send-delete-email")
 }
 </script>
 
