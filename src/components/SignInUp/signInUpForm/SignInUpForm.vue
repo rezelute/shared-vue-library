@@ -58,7 +58,7 @@ import { createCode } from "supertokens-web-js/recipe/passwordless"
 import { ref } from "vue"
 import EmailInput from "../../../components/account/EmailInput.vue"
 import GoogleAuthIcon from "../../../components/googleAuthIcon/GoogleAuthIcon.vue"
-import messages from "../../../messages"
+import messages from "../../../content/messages"
 import { type EmitNotify } from "../../../types"
 import normalizeError from "../../../utils/error/normalizeError.util"
 

@@ -30,6 +30,7 @@ export default defineConfig({
             "router/index": path.resolve(__dirname, "src/router/index.ts"),
             "composables/index": path.resolve(__dirname, "src/composables/index.ts"),
             "utils/index": path.resolve(__dirname, "src/utils/index.ts"),
+            "content/index": path.resolve(__dirname, "src/content/index.ts"),
             "types/index": path.resolve(__dirname, "src/types/index.ts"),
          },
          name: "SharedVueLibrary",

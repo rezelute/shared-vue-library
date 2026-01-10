@@ -86,7 +86,7 @@ import {
 } from "supertokens-web-js/recipe/passwordless"
 import { computed, ref, watch } from "vue"
 import FormField from "../../../components/formField/FormField.vue"
-import messages from "../../../messages"
+import messages from "../../../content/messages"
 import { type EmitNotify } from "../../../types"
 import normalizeError from "../../../utils/error/normalizeError.util"
 

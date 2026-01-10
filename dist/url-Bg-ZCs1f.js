@@ -11,7 +11,7 @@ function o(t) {
       status: t.status,
       statusText: t.statusText,
       url: t.url,
-      headers: a(t.headers)
+      headers: n(t.headers)
     };
   if (typeof t == "object" && t !== null)
     try {
@@ -21,21 +21,33 @@ function o(t) {
     }
   return { message: String(t) };
 }
-function a(t) {
+function n(t) {
   const s = {};
-  return t.forEach((n, e) => {
-    s[e] = n;
+  return t.forEach((e, a) => {
+    s[a] = e;
   }), s;
 }
-const i = Symbol("API_DOMAIN");
+class i extends Error {
+  response;
+  data;
+  constructor(s, e, a) {
+    super(s), this.name = "ApiResponseError", this.response = {
+      status: e.status,
+      statusText: e.statusText,
+      url: e.url
+    }, this.data = a;
+  }
+}
+const u = Symbol("API_DOMAIN");
 function c(t) {
-  const { redirect: s, ...n } = t;
+  const { redirect: s, ...e } = t;
   if (!s) return null;
-  const e = new URLSearchParams(n).toString();
-  return e ? `${s}?${e}` : s;
+  const a = new URLSearchParams(e).toString();
+  return a ? `${s}?${a}` : s;
 }
 export {
-  i as A,
+  u as A,
+  i as a,
   c as g,
   o as n
 };

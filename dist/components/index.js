@@ -1,9 +1,9 @@
 import { useId as Ut, mergeProps as y, createElementBlock as k, openBlock as p, createElementVNode as g, renderSlot as E, createTextVNode as W, toDisplayString as F, resolveComponent as G, resolveDirective as He, withDirectives as Ge, createBlock as P, resolveDynamicComponent as ce, withCtx as w, createCommentVNode as T, normalizeClass as X, createStaticVNode as yt, defineComponent as N, Transition as Oe, createVNode as O, unref as M, ref as z, computed as q, Teleport as Wt, Fragment as Ce, renderList as kt, onMounted as le, mergeModels as oe, useModel as Ae, withModifiers as Ee, inject as qe, watch as Ht } from "vue";
 import { m as pe, B as j, a as se, C as It, s as U, g as ee, F as $t, N as J, S as K, c as St, z as _e, b as Gt, l as ae, n as qt, i as nt, P as xe, Q as Yt, d as Ve, T as ot, R as rt, v as Te, e as Zt, K as Xt, W as Jt, U as Qt, A as en, f as tn, t as nn, M as it, Y as wt, D as on, h as rn, j as ie, J as an, k as sn } from "../index-C4p6nNC_.js";
 import { S as ln, t as xt, p as Q } from "../supertokens-vendor-Dsnq9j4O.js";
-import { m as V } from "../index-Dfwvsbqk.js";
+import { messages as V } from "../content/index.js";
 import { u as un } from "../userStore-DKVnZxFM.js";
-import { n as B, A as Ye, g as dn } from "../url-CeutQt9y.js";
+import { n as B, a as Ye, A as Ze, g as dn } from "../url-Bg-ZCs1f.js";
 import { z as Pt } from "zod";
 import { useRoute as Ct, useRouter as _t } from "vue-router";
 function ne(...t) {
@@ -581,7 +581,7 @@ function Sn(t, e) {
   }
   return (e === "string" ? String : Number)(t);
 }
-var Ze = {
+var Xe = {
   name: "BaseIcon",
   extends: Y,
   props: {
@@ -617,7 +617,7 @@ var Ze = {
   }
 }, At = {
   name: "SpinnerIcon",
-  extends: Ze
+  extends: Xe
 };
 function wn(t) {
   return _n(t) || Cn(t) || Pn(t) || xn();
@@ -1241,7 +1241,7 @@ function eo(t, e) {
   }
   return (e === "string" ? String : Number)(t);
 }
-var Xe = Gn.extend("ripple", {
+var Je = Gn.extend("ripple", {
   watch: {
     "config.ripple": function(e) {
       e ? (this.createRipple(this.$host), this.bindEvents(this.$host), this.$host.setAttribute("data-pd-ripple", !0), this.$host.style.overflow = "hidden", this.$host.style.position = "relative") : (this.remove(this.$host), this.$host.removeAttribute("data-pd-ripple"));
@@ -2177,7 +2177,7 @@ var R = {
     Badge: Et
   },
   directives: {
-    ripple: Xe
+    ripple: Je
   }
 }, uo = ["data-p"], co = ["data-p"];
 function po(t, e, n, o, i, r) {
@@ -2605,7 +2605,7 @@ const $o = /* @__PURE__ */ Me(yo, [["render", Io]]), So = {
       _: 3
     }));
   }
-}), Je = /* @__PURE__ */ Me(To, [["__scopeId", "data-v-b79117dd"]]), Lo = /* @__PURE__ */ N({
+}), Qe = /* @__PURE__ */ Me(To, [["__scopeId", "data-v-b79117dd"]]), Lo = /* @__PURE__ */ N({
   __name: "ThemeToggle",
   setup(t) {
     const e = localStorage.getItem("theme") || "light", n = z(e);
@@ -2905,7 +2905,7 @@ var Do = `
   inlineStyles: Fo
 }), jt = {
   name: "AngleRightIcon",
-  extends: Ze
+  extends: Xe
 };
 function Ro(t) {
   return Go(t) || Ho(t) || Wo(t) || Uo();
@@ -3143,7 +3143,7 @@ var Yo = {
     AngleRightIcon: jt
   },
   directives: {
-    ripple: Xe
+    ripple: Je
   }
 }, Zo = ["tabindex"], Xo = ["id", "aria-label", "aria-disabled", "aria-expanded", "aria-haspopup", "aria-level", "aria-setsize", "aria-posinset", "data-p-active", "data-p-focused", "data-p-disabled"], Jo = ["onClick", "onMouseenter", "onMousemove"], Qo = ["href", "target"], er = ["id"], tr = ["id"];
 function nr(t, e, n, o, i, r) {
@@ -4590,7 +4590,7 @@ function Ur(t, e, n, o, i, r) {
 ze.render = Ur;
 var Ft = {
   name: "TimesIcon",
-  extends: Ze
+  extends: Xe
 };
 function Wr(t) {
   return Yr(t) || qr(t) || Gr(t) || Hr();
@@ -5035,7 +5035,7 @@ function ni(t, e) {
   }
   return (e === "string" ? String : Number)(t);
 }
-var Qe = {
+var et = {
   name: "Message",
   extends: ei,
   inheritAttrs: !1,
@@ -5069,7 +5069,7 @@ var Qe = {
     }
   },
   directives: {
-    ripple: Xe
+    ripple: Je
   },
   components: {
     TimesIcon: Ft
@@ -5180,11 +5180,11 @@ function ci(t, e, n, o, i, r) {
     _: 3
   }, 16);
 }
-Qe.render = ci;
+et.render = ci;
 const pi = { class: "flex flex-col gap-1" }, mi = ["for"], fi = {
   key: 1,
   class: "text-sm text-gray-500"
-}, gi = { class: "mt-1" }, et = /* @__PURE__ */ N({
+}, gi = { class: "mt-1" }, tt = /* @__PURE__ */ N({
   __name: "FormField",
   props: {
     id: {},
@@ -5203,7 +5203,7 @@ const pi = { class: "flex flex-col gap-1" }, mi = ["for"], fi = {
       g("div", gi, [
         E(e.$slots, "default")
       ]),
-      t.error ? (p(), P(M(Qe), {
+      t.error ? (p(), P(M(et), {
         key: 2,
         "data-test": `${t.id}-error-message`,
         class: "mt-1",
@@ -5241,7 +5241,7 @@ const pi = { class: "flex flex-col gap-1" }, mi = ["for"], fi = {
       const s = (a ?? "").trim();
       o.value = s, r("validity-changed", n(s));
     }
-    return (a, s) => (p(), P(et, {
+    return (a, s) => (p(), P(tt, {
       id: "email",
       label: t.labelText,
       error: l.value ? bi : void 0
@@ -5391,17 +5391,6 @@ const pi = { class: "flex flex-col gap-1" }, mi = ["for"], fi = {
     }));
   }
 });
-class tt extends Error {
-  response;
-  data;
-  constructor(e, n, o) {
-    super(e), this.name = "ApiResponseError", this.response = {
-      status: n.status,
-      statusText: n.statusText,
-      url: n.url
-    }, this.data = o;
-  }
-}
 async function $i(t) {
   const e = await fetch(`${t}/profile/config`, {
     method: "GET",
@@ -5411,7 +5400,7 @@ async function $i(t) {
     credentials: "include"
   }), n = await e.json();
   if (!e.ok)
-    throw new tt("Failed to get profile configuration", e, n);
+    throw new Ye("Failed to get profile configuration", e, n);
   return n;
 }
 async function Si(t) {
@@ -5423,7 +5412,7 @@ async function Si(t) {
     credentials: "include"
   }), n = await e.json();
   if (!e.ok)
-    throw new tt("Failed to get profile", e, n);
+    throw new Ye("Failed to get profile", e, n);
   return n;
 }
 async function wi(t, e) {
@@ -5436,7 +5425,7 @@ async function wi(t, e) {
     body: JSON.stringify({ ...t })
   }), o = await n.json();
   if (!n.ok)
-    throw new tt("Failed to update profile", n, o);
+    throw new Ye("Failed to update profile", n, o);
   return o;
 }
 const Le = { getProfile: Si, updateProfile: wi, getProfileConfig: $i }, xi = { class: "vstack-form" }, Pi = "Name can be letters only, at least 2 characters and max 50 characters", vt = /* @__PURE__ */ N({
@@ -5463,7 +5452,7 @@ const Le = { getProfile: Si, updateProfile: wi, getProfileConfig: $i }, xi = { c
       i.value = d, n("validity-changed", u());
     }
     return (s, d) => (p(), k("div", xi, [
-      O(et, {
+      O(tt, {
         id: "profile_name",
         label: l.value,
         error: r.value ? Pi : ""
@@ -5487,7 +5476,7 @@ const Le = { getProfile: Si, updateProfile: wi, getProfileConfig: $i }, xi = { c
   __name: "Profile",
   emits: ["profileLoadError", "profileSubmitSuccess", "profileSubmitError"],
   setup(t, { emit: e }) {
-    const n = e, o = qe(Ye), i = z(null), r = z(!1), l = z(!1), u = z(!1), a = z(null), s = z(!1), d = z(!1);
+    const n = e, o = qe(Ze), i = z(null), r = z(!1), l = z(!1), u = z(!1), a = z(null), s = z(!1), d = z(!1);
     le(async () => {
       await v();
     });
@@ -5540,7 +5529,7 @@ const Le = { getProfile: Si, updateProfile: wi, getProfileConfig: $i }, xi = { c
         u.value = !1;
       }
     }
-    return (b, I) => (p(), P(Je, { isLoading: r.value }, {
+    return (b, I) => (p(), P(Qe, { isLoading: r.value }, {
       default: w(() => [
         i.value && a.value ? (p(), P(M(re), {
           key: 0,
@@ -5596,7 +5585,7 @@ const Le = { getProfile: Si, updateProfile: wi, getProfileConfig: $i }, xi = { c
   __name: "ProfileCheck",
   emits: ["profileCheckError", "profileIsComplete", "profileNotComplete"],
   setup(t, { emit: e }) {
-    const n = Ct(), o = _t(), i = e, r = z(!0), l = qe(Ye);
+    const n = Ct(), o = _t(), i = e, r = z(!0), l = qe(Ze);
     le(async () => {
       u();
     });
@@ -5621,7 +5610,7 @@ const Le = { getProfile: Si, updateProfile: wi, getProfileConfig: $i }, xi = { c
         console.error("Error checking profile completion: ", a), i("profileCheckError");
       }
     }
-    return (a, s) => (p(), P(Je, {
+    return (a, s) => (p(), P(Qe, {
       isLoading: r.value,
       loadingText: "Redirecting, do not close the window."
     }, null, 8, ["isLoading"]));
@@ -5730,7 +5719,7 @@ const Le = { getProfile: Si, updateProfile: wi, getProfileConfig: $i }, xi = { c
       ]),
       content: w(() => [
         t.signupInviteOnly && t.pageAuthType === "Sign up" ? (p(), k("div", zi, [
-          O(M(Qe), { severity: "info" }, {
+          O(M(et), { severity: "info" }, {
             default: w(() => [...s[4] || (s[4] = [
               W(" Sign up is currently by invite only during the beta period. ", -1)
             ])]),
@@ -6123,7 +6112,7 @@ const Ri = { class: "px-4 py-8 sm:p-8" }, Ui = { class: "flex flex-col items-str
           }, [
             g("div", Wi, [
               m[4] || (m[4] = g("p", null, " To finish the signup process, enter the code that was emailed to you. Note that the code is only valid for 10 minutes. ", -1)),
-              O(et, {
+              O(tt, {
                 id: "magic-code-input",
                 error: i.value === !1 ? s.value : "",
                 "data-test": "auth-error-message"
@@ -6195,7 +6184,7 @@ const Ri = { class: "px-4 py-8 sm:p-8" }, Ui = { class: "flex flex-col items-str
     "googleSignInError"
   ],
   setup(t, { emit: e }) {
-    const n = Ct(), o = _t(), i = e, r = z(!0), l = z(!1), u = z(""), a = qe(Ye);
+    const n = Ct(), o = _t(), i = e, r = z(!0), l = z(!1), u = z(""), a = qe(Ze);
     le(async () => {
       l.value = !!await d(), o.currentRoute.value.query.thirdPartyId === "google" && await c();
     });
@@ -6257,7 +6246,7 @@ const Ri = { class: "px-4 py-8 sm:p-8" }, Ui = { class: "flex flex-col items-str
     function v(m) {
       m.type === "restart_flow_error" && (l.value = !1), i("resendCodeError", m);
     }
-    return (m, h) => (p(), P(Je, { isLoading: r.value }, {
+    return (m, h) => (p(), P(Qe, { isLoading: r.value }, {
       default: w(() => [
         l.value ? (p(), P(Gi, {
           key: 1,
@@ -6287,9 +6276,9 @@ export {
   oa as AppErrorInfo,
   aa as ChangeEmailRequest,
   sa as DeleteAccountRequest,
-  et as FormField,
+  tt as FormField,
   ra as PageInfiniteLoader,
-  Je as PageLoader,
+  Qe as PageLoader,
   la as Profile,
   ua as ProfileCheck,
   da as SignInUp,

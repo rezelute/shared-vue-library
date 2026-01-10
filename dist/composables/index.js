@@ -1,4 +1,4 @@
-import { m as f } from "../index-Dfwvsbqk.js";
+import { messages as f } from "../content/index.js";
 import { ref as l } from "vue";
 const i = {
   DEFAULT_LIFE: 4e3
@@ -22,7 +22,7 @@ function d(n) {
   }
   return { addToast: e, messages: f };
 }
-function m(n) {
+function v(n) {
   const e = l(!1);
   async function o(t) {
     try {
@@ -38,10 +38,10 @@ function m(n) {
 }
 const p = {
   useToasting: d,
-  useServerStatus: m
+  useServerStatus: v
 };
 export {
   p as default,
-  m as useServerStatus,
+  v as useServerStatus,
   d as useToasting
 };

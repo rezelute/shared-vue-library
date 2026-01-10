@@ -56,7 +56,7 @@ import Button from "primevue/button"
 import Card from "primevue/card"
 import { computed, inject, onMounted, ref } from "vue"
 import PageLoader from "../../../components/loading/pageLoader/PageLoader.vue"
-import messages from "../../../messages"
+import messages from "../../../content/messages"
 import profileService, {
    type ProfileConfigResp,
    type ProfileFields,

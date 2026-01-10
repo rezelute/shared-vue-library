@@ -7,6 +7,6 @@ const injectionKeys = {
    API_DOMAIN_KEY,
 }
 
-export { getRedirectTargetWithQueryParams, injectionKeys, normalizeError }
+export { getRedirectTargetWithQueryParams, injectionKeys, normalizeError, ApiResponseError }
 
-export default { getRedirectTargetWithQueryParams, injectionKeys, normalizeError }
+export default { getRedirectTargetWithQueryParams, injectionKeys, normalizeError, ApiResponseError }

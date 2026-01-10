@@ -16,5 +16,21 @@ export default function useToasting(toast: ToastServiceMethods): {
                 detail: string;
             };
         };
+        email: {
+            updateFailSameEmail: {
+                summary: string;
+                detail: string;
+            };
+            updateSuccess: {
+                summary: string;
+                detail: string;
+            };
+        };
+        account: {
+            deleteError: {
+                summary: string;
+                detail: string;
+            };
+        };
     };
 };

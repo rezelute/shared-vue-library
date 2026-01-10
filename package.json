@@ -30,6 +30,10 @@
          "import": "./dist/utils/index.js",
          "types": "./dist/utils/index.d.ts"
       },
+      "./content": {
+         "import": "./dist/content/index.js",
+         "types": "./dist/content/index.d.ts"
+      },
       "./types": {
          "import": "./dist/types/index.js",
          "types": "./dist/types/index.d.ts"
