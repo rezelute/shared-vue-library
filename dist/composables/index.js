@@ -1,4 +1,4 @@
-import { messages as f } from "../content/index.js";
+import { m as f } from "../messages-CdEwz9dc.js";
 import { ref as l } from "vue";
 const i = {
   DEFAULT_LIFE: 4e3
@@ -22,7 +22,7 @@ function d(n) {
   }
   return { addToast: e, messages: f };
 }
-function v(n) {
+function m(n) {
   const e = l(!1);
   async function o(t) {
     try {
@@ -38,10 +38,10 @@ function v(n) {
 }
 const p = {
   useToasting: d,
-  useServerStatus: v
+  useServerStatus: m
 };
 export {
   p as default,
-  v as useServerStatus,
+  m as useServerStatus,
   d as useToasting
 };
