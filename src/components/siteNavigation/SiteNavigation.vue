@@ -56,7 +56,7 @@ import TieredMenu from "primevue/tieredmenu"
 import Session from "supertokens-web-js/recipe/session"
 import { computed, ref } from "vue"
 import ThemeToggle from "../../components/themeToggle/ThemeToggle.vue"
-import toastContent from "../../content/generic/toastContent"
+import messages from "../../messages"
 import { useUserStore } from "../../stores/userStore"
 import { type EmitNotify } from "../../types"
 import normalizeError from "../../utils/error/normalizeError.util"
@@ -154,8 +154,8 @@ async function onSignout() {
       emits("signoutError", {
          type: "unexpected",
          severity: "error",
-         summary: toastContent.error.somethingWentWrong.summary,
-         detail: toastContent.error.somethingWentWrong.detail,
+         summary: messages.error.somethingWentWrong.summary,
+         detail: messages.error.somethingWentWrong.detail,
          json: normalizeError(err),
       } satisfies EmitNotify)
    } finally {

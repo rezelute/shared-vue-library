@@ -58,7 +58,7 @@ import { createCode } from "supertokens-web-js/recipe/passwordless"
 import { ref } from "vue"
 import EmailInput from "../../../components/account/EmailInput.vue"
 import GoogleAuthIcon from "../../../components/googleAuthIcon/GoogleAuthIcon.vue"
-import toastContent from "../../../content/generic/toastContent"
+import messages from "../../../messages"
 import { type EmitNotify } from "../../../types"
 import normalizeError from "../../../utils/error/normalizeError.util"
 
@@ -104,8 +104,8 @@ async function onSignupStart() {
          emits("signupStartError", {
             type: "sign_in_up_not_allowed",
             severity: "error",
-            summary: toastContent.error.somethingWentWrong.summary,
-            detail: toastContent.error.somethingWentWrong.detail,
+            summary: messages.error.somethingWentWrong.summary,
+            detail: messages.error.somethingWentWrong.detail,
             json: {
                status: response.status,
                reason: response.reason,
@@ -125,8 +125,8 @@ async function onSignupStart() {
       emits("signupStartError", {
          type: "unexpected",
          severity: "error",
-         summary: toastContent.error.somethingWentWrong.summary,
-         detail: toastContent.error.somethingWentWrong.detail,
+         summary: messages.error.somethingWentWrong.summary,
+         detail: messages.error.somethingWentWrong.detail,
          json: normalizeError(err),
       } satisfies EmitNotify)
    } finally {

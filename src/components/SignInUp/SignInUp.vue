@@ -31,7 +31,7 @@ import { useRouter } from "vue-router"
 import PageLoader from "../../components/loading/pageLoader/PageLoader.vue"
 import SignInUpForm from "../../components/SignInUp/signInUpForm/SignInUpForm.vue"
 import VerifyCode from "../../components/SignInUp/verifyCode/VerifyCode.vue"
-import toastContent from "../../content/generic/toastContent"
+import messages from "../../messages"
 import { type EmitNotify } from "../../types"
 import normalizeError from "../../utils/error/normalizeError.util"
 import { API_DOMAIN_KEY } from "../../utils/injectionKeys"
@@ -104,8 +104,8 @@ async function hasInitialMagicLinkBeenSent() {
       emits("checkMagicLinkSentError", {
          type: "unexpected",
          severity: "error",
-         summary: toastContent.error.somethingWentWrong.summary,
-         detail: toastContent.error.somethingWentWrong.detail,
+         summary: messages.error.somethingWentWrong.summary,
+         detail: messages.error.somethingWentWrong.detail,
          json: normalizeError(err),
       } satisfies EmitNotify)
    } finally {
@@ -165,8 +165,8 @@ async function handleGoogleCallback() {
       emits("googleCallbackError", {
          type: "unexpected",
          severity: "error",
-         summary: toastContent.error.somethingWentWrong.summary,
-         detail: toastContent.error.somethingWentWrong.detail,
+         summary: messages.error.somethingWentWrong.summary,
+         detail: messages.error.somethingWentWrong.detail,
          json: normalizeError(err),
       } satisfies EmitNotify)
    } finally {

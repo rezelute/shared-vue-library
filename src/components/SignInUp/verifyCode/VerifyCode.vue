@@ -86,7 +86,7 @@ import {
 } from "supertokens-web-js/recipe/passwordless"
 import { computed, ref, watch } from "vue"
 import FormField from "../../../components/formField/FormField.vue"
-import toastContent from "../../../content/generic/toastContent"
+import messages from "../../../messages"
 import { type EmitNotify } from "../../../types"
 import normalizeError from "../../../utils/error/normalizeError.util"
 
@@ -212,8 +212,8 @@ async function onCodeSubmit() {
       emits("verificationCodeError", {
          type: "unexpected",
          severity: "error",
-         summary: toastContent.error.somethingWentWrong.summary,
-         detail: toastContent.error.somethingWentWrong.detail,
+         summary: messages.error.somethingWentWrong.summary,
+         detail: messages.error.somethingWentWrong.detail,
          json: normalizeError(err),
       } satisfies EmitNotify)
    } finally {
@@ -264,8 +264,8 @@ async function onResendCode() {
       emits("resendCodeError", {
          type: "unexpected",
          severity: "error",
-         summary: toastContent.error.somethingWentWrong.summary,
-         detail: toastContent.error.somethingWentWrong.detail,
+         summary: messages.error.somethingWentWrong.summary,
+         detail: messages.error.somethingWentWrong.detail,
          json: normalizeError(err),
       } satisfies EmitNotify)
    } finally {

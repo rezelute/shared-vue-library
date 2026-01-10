@@ -9,7 +9,7 @@ export interface AddToast {
 }
 export default function useToasting(toast: ToastServiceMethods): {
     addToast: (toastParam: AddToast) => void;
-    toastContent: {
+    messages: {
         error: {
             somethingWentWrong: {
                 summary: string;

@@ -56,7 +56,7 @@ import Button from "primevue/button"
 import Card from "primevue/card"
 import { computed, inject, onMounted, ref } from "vue"
 import PageLoader from "../../../components/loading/pageLoader/PageLoader.vue"
-import toastContent from "../../../content/generic/toastContent"
+import messages from "../../../messages"
 import profileService, {
    type ProfileConfigResp,
    type ProfileFields,
@@ -134,8 +134,8 @@ async function loadProfile() {
       emits("profileLoadError", {
          type: "unexpected",
          severity: "error",
-         summary: toastContent.error.somethingWentWrong.summary,
-         detail: toastContent.error.somethingWentWrong.detail,
+         summary: messages.error.somethingWentWrong.summary,
+         detail: messages.error.somethingWentWrong.detail,
          json: normalizeError(err),
       } satisfies EmitNotify)
    } finally {
@@ -176,8 +176,8 @@ async function onSubmitProfile() {
       emits("profileSubmitError", {
          type: "unexpected",
          severity: "error",
-         summary: toastContent.error.somethingWentWrong.summary,
-         detail: toastContent.error.somethingWentWrong.detail,
+         summary: messages.error.somethingWentWrong.summary,
+         detail: messages.error.somethingWentWrong.detail,
          json: normalizeError(err),
       } satisfies EmitNotify)
    } finally {
