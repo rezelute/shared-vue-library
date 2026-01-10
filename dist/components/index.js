@@ -1,10 +1,10 @@
-import { useId as Ut, mergeProps as y, createElementBlock as k, openBlock as p, createElementVNode as g, renderSlot as E, createTextVNode as W, toDisplayString as F, resolveComponent as G, resolveDirective as He, withDirectives as Ge, createBlock as P, resolveDynamicComponent as ce, withCtx as w, createCommentVNode as T, normalizeClass as J, createStaticVNode as yt, defineComponent as N, Transition as Oe, createVNode as O, unref as M, ref as z, computed as q, Teleport as Wt, Fragment as Ce, renderList as kt, onMounted as le, mergeModels as oe, useModel as Ae, withModifiers as Ee, inject as qe, watch as Ht } from "vue";
-import { m as pe, B as j, a as se, C as It, s as U, g as ee, F as $t, N as X, S as K, c as St, z as _e, b as Gt, l as ae, n as qt, i as nt, P as xe, Q as Yt, d as Ve, T as ot, R as rt, v as Te, e as Zt, K as Jt, W as Xt, U as Qt, A as en, f as tn, t as nn, M as it, Y as wt, D as on, h as rn, j as ie, J as an, k as sn } from "../index-C4p6nNC_.js";
+import { useId as Ut, mergeProps as y, createElementBlock as k, openBlock as p, createElementVNode as g, renderSlot as E, createTextVNode as W, toDisplayString as F, resolveComponent as G, resolveDirective as He, withDirectives as Ge, createBlock as P, resolveDynamicComponent as ce, withCtx as w, createCommentVNode as T, normalizeClass as X, createStaticVNode as yt, defineComponent as N, Transition as Oe, createVNode as O, unref as M, ref as z, computed as q, Teleport as Wt, Fragment as Ce, renderList as kt, onMounted as le, mergeModels as oe, useModel as Ae, withModifiers as Ee, inject as qe, watch as Ht } from "vue";
+import { m as pe, B as j, a as se, C as It, s as U, g as ee, F as $t, N as J, S as K, c as St, z as _e, b as Gt, l as ae, n as qt, i as nt, P as xe, Q as Yt, d as Ve, T as ot, R as rt, v as Te, e as Zt, K as Xt, W as Jt, U as Qt, A as en, f as tn, t as nn, M as it, Y as wt, D as on, h as rn, j as ie, J as an, k as sn } from "../index-C4p6nNC_.js";
 import { S as ln, t as xt, p as Q } from "../supertokens-vendor-Dsnq9j4O.js";
 import { t as V } from "../toastContent-Cmim6dQm.js";
 import { u as un } from "../userStore-DKVnZxFM.js";
+import { n as B, A as Ye, g as dn } from "../url-CeutQt9y.js";
 import { z as Pt } from "zod";
-import { A as Ye, g as dn } from "../url-DdycvR3T.js";
 import { useRoute as Ct, useRouter as _t } from "vue-router";
 function ne(...t) {
   if (t) {
@@ -188,14 +188,14 @@ var Y = {
     isUnstyled: {
       immediate: !0,
       handler: function(e) {
-        X.off("theme:change", this._loadCoreStyles), e || (this._loadCoreStyles(), this._themeChangeListener(this._loadCoreStyles));
+        J.off("theme:change", this._loadCoreStyles), e || (this._loadCoreStyles(), this._themeChangeListener(this._loadCoreStyles));
       }
     },
     dt: {
       immediate: !0,
       handler: function(e, n) {
         var o = this;
-        X.off("theme:change", this._themeScopedListener), e ? (this._loadScopedThemeStyles(e), this._themeScopedListener = function() {
+        J.off("theme:change", this._themeScopedListener), e ? (this._loadScopedThemeStyles(e), this._themeScopedListener = function() {
           return o._loadScopedThemeStyles(e);
         }, this._themeChangeListener(this._themeScopedListener)) : this._unloadScopedThemeStyles();
       }
@@ -309,10 +309,10 @@ var Y = {
     _themeChangeListener: function() {
       var e = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : function() {
       };
-      te.clearLoadedStyleNames(), X.on("theme:change", e);
+      te.clearLoadedStyleNames(), J.on("theme:change", e);
     },
     _removeThemeListeners: function() {
-      X.off("theme:change", this._loadCoreStyles), X.off("theme:change", this._load), X.off("theme:change", this._themeScopedListener);
+      J.off("theme:change", this._loadCoreStyles), J.off("theme:change", this._load), J.off("theme:change", this._themeScopedListener);
     },
     _getHostInstance: function(e) {
       return e ? this.$options.hostName ? e.$.type.name === this.$options.hostName ? e : this._getHostInstance(e.$parentInstance) : e.$parentInstance : void 0;
@@ -1019,11 +1019,11 @@ var S = {
   _themeChangeListener: function() {
     var e = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : function() {
     };
-    te.clearLoadedStyleNames(), X.on("theme:change", e);
+    te.clearLoadedStyleNames(), J.on("theme:change", e);
   },
   _removeThemeListeners: function() {
     var e = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
-    X.off("theme:change", e.$loadStyles), e.$loadStyles = void 0;
+    J.off("theme:change", e.$loadStyles), e.$loadStyles = void 0;
   },
   _hook: function(e, n, o, i, r, l) {
     var u, a, s = "on".concat(qt(n)), d = S._getConfig(i, r), c = o?.$instance, f = S._usePT(c, S._getPT(i == null || (u = i.value) === null || u === void 0 ? void 0 : u.pt, e), S._getOptionValue, "hooks.".concat(s)), v = S._useDefaultPT(c, d == null || (a = d.pt) === null || a === void 0 || (a = a.directives) === null || a === void 0 ? void 0 : a[e], S._getOptionValue, "hooks.".concat(s)), m = {
@@ -1200,7 +1200,7 @@ function he(t) {
   }, he(t);
 }
 function qn(t) {
-  return Xn(t) || Jn(t) || Zn(t) || Yn();
+  return Jn(t) || Xn(t) || Zn(t) || Yn();
 }
 function Yn() {
   throw new TypeError(`Invalid attempt to spread non-iterable instance.
@@ -1213,10 +1213,10 @@ function Zn(t, e) {
     return n === "Object" && t.constructor && (n = t.constructor.name), n === "Map" || n === "Set" ? Array.from(t) : n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n) ? Ke(t, e) : void 0;
   }
 }
-function Jn(t) {
+function Xn(t) {
   if (typeof Symbol < "u" && t[Symbol.iterator] != null || t["@@iterator"] != null) return Array.from(t);
 }
-function Xn(t) {
+function Jn(t) {
   if (Array.isArray(t)) return Ke(t);
 }
 function Ke(t, e) {
@@ -1241,7 +1241,7 @@ function eo(t, e) {
   }
   return (e === "string" ? String : Number)(t);
 }
-var Je = Gn.extend("ripple", {
+var Xe = Gn.extend("ripple", {
   watch: {
     "config.ripple": function(e) {
       e ? (this.createRipple(this.$host), this.bindEvents(this.$host), this.$host.setAttribute("data-pd-ripple", !0), this.$host.style.overflow = "hidden", this.$host.style.position = "relative") : (this.remove(this.$host), this.$host.removeAttribute("data-pd-ripple"));
@@ -1280,8 +1280,8 @@ var Je = Gn.extend("ripple", {
           var r = Math.max(Te(o), Zt(o));
           i.style.height = r + "px", i.style.width = r + "px";
         }
-        var l = Jt(o), u = e.pageX - l.left + document.body.scrollTop - rt(i) / 2, a = e.pageY - l.top + document.body.scrollLeft - ot(i) / 2;
-        i.style.top = a + "px", i.style.left = u + "px", !this.isUnstyled() && Xt(i, "p-ink-active"), i.setAttribute("data-p-ink-active", "true"), this.timeout = setTimeout(function() {
+        var l = Xt(o), u = e.pageX - l.left + document.body.scrollTop - rt(i) / 2, a = e.pageY - l.top + document.body.scrollLeft - ot(i) / 2;
+        i.style.top = a + "px", i.style.left = u + "px", !this.isUnstyled() && Jt(i, "p-ink-active"), i.setAttribute("data-p-ink-active", "true"), this.timeout = setTimeout(function() {
           i && (!n.isUnstyled() && Ve(i, "p-ink-active"), i.setAttribute("data-p-ink-active", "false"));
         }, 401);
       }
@@ -2177,14 +2177,14 @@ var R = {
     Badge: Et
   },
   directives: {
-    ripple: Je
+    ripple: Xe
   }
 }, uo = ["data-p"], co = ["data-p"];
 function po(t, e, n, o, i, r) {
   var l = G("SpinnerIcon"), u = G("Badge"), a = He("ripple");
   return t.asChild ? E(t.$slots, "default", {
     key: 1,
-    class: J(t.cx("root")),
+    class: X(t.cx("root")),
     a11yAttrs: r.a11yAttrs
   }) : Ge((p(), P(ce(t.as), y({
     key: 0,
@@ -2222,7 +2222,7 @@ function po(t, e, n, o, i, r) {
         }), F(t.label), 17, co)) : T("", !0), t.badge ? (p(), P(u, {
           key: 3,
           value: t.badge,
-          class: J(t.badgeClass),
+          class: X(t.badgeClass),
           severity: t.badgeSeverity,
           unstyled: t.unstyled,
           pt: t.ptm("pcBadge")
@@ -2605,7 +2605,7 @@ const $o = /* @__PURE__ */ Me(yo, [["render", Io]]), So = {
       _: 3
     }));
   }
-}), Xe = /* @__PURE__ */ Me(To, [["__scopeId", "data-v-b79117dd"]]), Lo = /* @__PURE__ */ N({
+}), Je = /* @__PURE__ */ Me(To, [["__scopeId", "data-v-b79117dd"]]), Lo = /* @__PURE__ */ N({
   __name: "ThemeToggle",
   setup(t) {
     const e = localStorage.getItem("theme") || "light", n = z(e);
@@ -3143,9 +3143,9 @@ var Yo = {
     AngleRightIcon: jt
   },
   directives: {
-    ripple: Je
+    ripple: Xe
   }
-}, Zo = ["tabindex"], Jo = ["id", "aria-label", "aria-disabled", "aria-expanded", "aria-haspopup", "aria-level", "aria-setsize", "aria-posinset", "data-p-active", "data-p-focused", "data-p-disabled"], Xo = ["onClick", "onMouseenter", "onMousemove"], Qo = ["href", "target"], er = ["id"], tr = ["id"];
+}, Zo = ["tabindex"], Xo = ["id", "aria-label", "aria-disabled", "aria-expanded", "aria-haspopup", "aria-level", "aria-setsize", "aria-posinset", "data-p-active", "data-p-focused", "data-p-disabled"], Jo = ["onClick", "onMouseenter", "onMousemove"], Qo = ["href", "target"], er = ["id"], tr = ["id"];
 function nr(t, e, n, o, i, r) {
   var l = G("AngleRightIcon"), u = G("TieredMenuSub", !0), a = He("ripple");
   return p(), P(Oe, y({
@@ -3211,7 +3211,7 @@ function nr(t, e, n, o, i, r) {
         }, r.getPTOptions(s, d, "itemLink")), [n.templates.itemicon ? (p(), P(ce(n.templates.itemicon), {
           key: 0,
           item: s.item,
-          class: J(t.cx("itemIcon"))
+          class: X(t.cx("itemIcon"))
         }, null, 8, ["item", "class"])) : r.getItemProp(s, "icon") ? (p(), k("span", y({
           key: 1,
           class: [t.cx("itemIcon"), r.getItemProp(s, "icon")]
@@ -3235,7 +3235,7 @@ function nr(t, e, n, o, i, r) {
           class: t.cx("submenuIcon")
         }, {
           ref_for: !0
-        }, r.getPTOptions(s, d, "submenuIcon")), null, 16, ["class"]))], 64)) : T("", !0)], 16, Qo)), [[a]])], 16, Xo), r.isItemVisible(s) && r.isItemGroup(s) ? (p(), P(u, y({
+        }, r.getPTOptions(s, d, "submenuIcon")), null, 16, ["class"]))], 64)) : T("", !0)], 16, Qo)), [[a]])], 16, Jo), r.isItemVisible(s) && r.isItemGroup(s) ? (p(), P(u, y({
           key: 0,
           id: r.getItemId(s) + "_list",
           class: t.cx("submenu"),
@@ -3264,7 +3264,7 @@ function nr(t, e, n, o, i, r) {
           })
         }, {
           ref_for: !0
-        }, t.ptm("submenu")), null, 16, ["id", "class", "style", "aria-labelledby", "menuId", "focusedItemId", "items", "templates", "activeItemPath", "level", "visible", "pt", "unstyled"])) : T("", !0)], 16, Jo)) : T("", !0), r.isItemVisible(s) && r.getItemProp(s, "separator") ? (p(), k("li", y({
+        }, t.ptm("submenu")), null, 16, ["id", "class", "style", "aria-labelledby", "menuId", "focusedItemId", "items", "templates", "activeItemPath", "level", "visible", "pt", "unstyled"])) : T("", !0)], 16, Xo)) : T("", !0), r.isItemVisible(s) && r.getItemProp(s, "separator") ? (p(), k("li", y({
           key: 1,
           id: r.getItemId(s),
           style: r.getItemProp(s, "style"),
@@ -3787,35 +3787,7 @@ function rr(t, e, n, o, i, r) {
   }, 8, ["appendTo", "disabled"]);
 }
 Nt.render = rr;
-function B(t) {
-  if (t instanceof Error)
-    return {
-      name: t.name,
-      message: t.message,
-      stack: t.stack
-    };
-  if (t instanceof Response)
-    return {
-      status: t.status,
-      statusText: t.statusText,
-      url: t.url,
-      headers: ir(t.headers)
-    };
-  if (typeof t == "object" && t !== null)
-    try {
-      return JSON.parse(JSON.stringify(t));
-    } catch {
-      return { message: "Non-serializable object error", original: String(t) };
-    }
-  return { message: String(t) };
-}
-function ir(t) {
-  const e = {};
-  return t.forEach((n, o) => {
-    e[o] = n;
-  }), e;
-}
-const ar = { class: "bg-surface-0 dark:bg-surface-900" }, sr = { class: "container" }, lr = { class: "flex py-4" }, ur = { class: "flex gap-3 sm:gap-5 ml-auto h-12 items-center" }, dr = { class: "ml-2" }, cr = ["aria-label", "onClick"], pr = { class: "ml-2" }, oa = /* @__PURE__ */ N({
+const ir = { class: "bg-surface-0 dark:bg-surface-900" }, ar = { class: "container" }, sr = { class: "flex py-4" }, lr = { class: "flex gap-3 sm:gap-5 ml-auto h-12 items-center" }, ur = { class: "ml-2" }, dr = ["aria-label", "onClick"], cr = { class: "ml-2" }, na = /* @__PURE__ */ N({
   name: "SiteNavigation",
   __name: "SiteNavigation",
   props: {
@@ -3858,9 +3830,9 @@ const ar = { class: "bg-surface-0 dark:bg-surface-900" }, sr = { class: "contain
     }
     return (v, m) => {
       const h = G("RouterLink"), b = G("router-link");
-      return p(), k("header", ar, [
-        g("div", sr, [
-          g("nav", lr, [
+      return p(), k("header", ir, [
+        g("div", ar, [
+          g("nav", sr, [
             O(M(R), {
               asChild: "",
               variant: "link"
@@ -3868,7 +3840,7 @@ const ar = { class: "bg-surface-0 dark:bg-surface-900" }, sr = { class: "contain
               default: w((I) => [
                 O(h, {
                   to: t.userSignedIn ? "/home" : "/",
-                  class: J([I.class, "!p-0"])
+                  class: X([I.class, "!p-0"])
                 }, {
                   default: w(() => [
                     E(v.$slots, "logo")
@@ -3878,7 +3850,7 @@ const ar = { class: "bg-surface-0 dark:bg-surface-900" }, sr = { class: "contain
               ]),
               _: 3
             }),
-            g("div", ur, [
+            g("div", lr, [
               O(M(R), {
                 icon: "pi pi-bars",
                 "aria-label": "Navigation menu",
@@ -3900,9 +3872,9 @@ const ar = { class: "bg-surface-0 dark:bg-surface-900" }, sr = { class: "contain
                   }, _.action), {
                     default: w(() => [
                       g("span", {
-                        class: J(I.icon)
+                        class: X(I.icon)
                       }, null, 2),
-                      g("span", dr, F(I.label), 1)
+                      g("span", ur, F(I.label), 1)
                     ]),
                     _: 2
                   }, 1040, ["to"])) : I.type === "button" ? (p(), k("button", {
@@ -3912,10 +3884,10 @@ const ar = { class: "bg-surface-0 dark:bg-surface-900" }, sr = { class: "contain
                     onClick: (A) => I.command?.({ originalEvent: A, item: I })
                   }, [
                     g("span", {
-                      class: J(I.icon)
+                      class: X(I.icon)
                     }, null, 2),
-                    g("span", pr, F(I.label), 1)
-                  ], 8, cr)) : T("", !0)
+                    g("span", cr, F(I.label), 1)
+                  ], 8, dr)) : T("", !0)
                 ]),
                 _: 1
               }, 8, ["model"]),
@@ -3927,7 +3899,7 @@ const ar = { class: "bg-surface-0 dark:bg-surface-900" }, sr = { class: "contain
     };
   }
 });
-var mr = `
+var pr = `
     .p-card {
         background: dt('card.background');
         color: dt('card.color');
@@ -3958,7 +3930,7 @@ var mr = `
     .p-card-subtitle {
         color: dt('card.subtitle.color');
     }
-`, fr = {
+`, mr = {
   root: "p-card p-component",
   header: "p-card-header",
   body: "p-card-body",
@@ -3967,14 +3939,14 @@ var mr = `
   subtitle: "p-card-subtitle",
   content: "p-card-content",
   footer: "p-card-footer"
-}, gr = j.extend({
+}, fr = j.extend({
   name: "card",
-  style: mr,
-  classes: fr
-}), br = {
+  style: pr,
+  classes: mr
+}), gr = {
   name: "BaseCard",
   extends: Y,
-  style: gr,
+  style: fr,
   provide: function() {
     return {
       $pcCard: this,
@@ -3983,10 +3955,10 @@ var mr = `
   }
 }, re = {
   name: "Card",
-  extends: br,
+  extends: gr,
   inheritAttrs: !1
 };
-function hr(t, e, n, o, i, r) {
+function br(t, e, n, o, i, r) {
   return p(), k("div", y({
     class: t.cx("root")
   }, t.ptmi("root")), [t.$slots.header ? (p(), k("div", y({
@@ -4010,8 +3982,8 @@ function hr(t, e, n, o, i, r) {
     class: t.cx("footer")
   }, t.ptm("footer")), [E(t.$slots, "footer")], 16)) : T("", !0)], 16)], 16);
 }
-re.render = hr;
-const ra = /* @__PURE__ */ N({
+re.render = br;
+const oa = /* @__PURE__ */ N({
   __name: "AppErrorInfo",
   props: {
     error: {}
@@ -4040,21 +4012,21 @@ const ra = /* @__PURE__ */ N({
       _: 1
     }));
   }
-}), vr = {
+}), hr = {
   key: 0,
   class: "bar"
-}, yr = /* @__PURE__ */ N({
+}, vr = /* @__PURE__ */ N({
   __name: "PageInfiniteLoader",
   props: {
     isLoading: { type: Boolean }
   },
   setup(t) {
-    return (e, n) => t.isLoading ? (p(), k("div", vr, [...n[0] || (n[0] = [
+    return (e, n) => t.isLoading ? (p(), k("div", hr, [...n[0] || (n[0] = [
       g("div", null, null, -1)
     ])])) : T("", !0);
   }
-}), ia = /* @__PURE__ */ Me(yr, [["__scopeId", "data-v-61696455"]]);
-var kr = `
+}), ra = /* @__PURE__ */ Me(vr, [["__scopeId", "data-v-61696455"]]);
+var yr = `
     .p-skeleton {
         display: block;
         overflow: hidden;
@@ -4104,11 +4076,11 @@ var kr = `
             transform: translateX(-100%);
         }
     }
-`, Ir = {
+`, kr = {
   root: {
     position: "relative"
   }
-}, $r = {
+}, Ir = {
   root: function(e) {
     var n = e.props;
     return ["p-skeleton p-component", {
@@ -4116,12 +4088,12 @@ var kr = `
       "p-skeleton-animation-none": n.animation === "none"
     }];
   }
-}, Sr = j.extend({
+}, $r = j.extend({
   name: "skeleton",
-  style: kr,
-  classes: $r,
-  inlineStyles: Ir
-}), wr = {
+  style: yr,
+  classes: Ir,
+  inlineStyles: kr
+}), Sr = {
   name: "BaseSkeleton",
   extends: Y,
   props: {
@@ -4150,7 +4122,7 @@ var kr = `
       default: "wave"
     }
   },
-  style: Sr,
+  style: $r,
   provide: function() {
     return {
       $pcSkeleton: this,
@@ -4166,14 +4138,14 @@ function Ie(t) {
     return e && typeof Symbol == "function" && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e;
   }, Ie(t);
 }
-function xr(t, e, n) {
-  return (e = Pr(e)) in t ? Object.defineProperty(t, e, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : t[e] = n, t;
+function wr(t, e, n) {
+  return (e = xr(e)) in t ? Object.defineProperty(t, e, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : t[e] = n, t;
 }
-function Pr(t) {
-  var e = Cr(t, "string");
+function xr(t) {
+  var e = Pr(t, "string");
   return Ie(e) == "symbol" ? e : e + "";
 }
-function Cr(t, e) {
+function Pr(t, e) {
   if (Ie(t) != "object" || !t) return t;
   var n = t[Symbol.toPrimitive];
   if (n !== void 0) {
@@ -4185,7 +4157,7 @@ function Cr(t, e) {
 }
 var Ue = {
   name: "Skeleton",
-  extends: wr,
+  extends: Sr,
   inheritAttrs: !1,
   computed: {
     containerStyle: function() {
@@ -4200,33 +4172,33 @@ var Ue = {
       };
     },
     dataP: function() {
-      return ne(xr({}, this.shape, this.shape));
+      return ne(wr({}, this.shape, this.shape));
     }
   }
-}, _r = ["data-p"];
-function Tr(t, e, n, o, i, r) {
+}, Cr = ["data-p"];
+function _r(t, e, n, o, i, r) {
   return p(), k("div", y({
     class: t.cx("root"),
     style: [t.sx("root"), r.containerStyle],
     "aria-hidden": "true"
   }, t.ptmi("root"), {
     "data-p": r.dataP
-  }), null, 16, _r);
+  }), null, 16, Cr);
 }
-Ue.render = Tr;
-const Lr = {
+Ue.render = _r;
+const Tr = {
   key: 0,
   class: "vstack-sm"
-}, Or = {
+}, Lr = {
   key: 0,
   class: "flex flex-col sm:flex-row gap-0 sm:gap-2"
-}, Ar = { class: "text-primary break-all" }, Er = {
+}, Or = { class: "text-primary break-all" }, Ar = {
   key: 1,
   class: "flex flex-col sm:flex-row gap-0 sm:gap-2"
-}, Mr = { class: "text-primary break-all sm:pl-2" }, zr = {
+}, Er = { class: "text-primary break-all sm:pl-2" }, Mr = {
   key: 1,
   class: "vstack-sm"
-}, aa = /* @__PURE__ */ N({
+}, ia = /* @__PURE__ */ N({
   __name: "UserAccountInfo",
   props: {
     isLoading: { type: Boolean },
@@ -4241,26 +4213,26 @@ const Lr = {
         ])
       ]),
       content: w(() => [
-        t.isLoading ? (p(), k("div", zr, [
+        t.isLoading ? (p(), k("div", Mr, [
           O(M(Ue), { height: "2rem" }),
           O(M(Ue), { height: "2rem" })
-        ])) : (p(), k("div", Lr, [
-          t.userId ? (p(), k("div", Or, [
+        ])) : (p(), k("div", Tr, [
+          t.userId ? (p(), k("div", Lr, [
             n[1] || (n[1] = g("div", { class: "block sm:flex font-bold" }, [
               g("span", null, "ID"),
               g("span", { class: "hidden sm:block" }, ":")
             ], -1)),
             g("div", null, [
-              g("code", Ar, F(t.userId), 1)
+              g("code", Or, F(t.userId), 1)
             ])
           ])) : T("", !0),
-          t.userEmail ? (p(), k("div", Er, [
+          t.userEmail ? (p(), k("div", Ar, [
             n[2] || (n[2] = g("div", { class: "block sm:flex font-bold" }, [
               g("span", null, "Email"),
               g("span", { class: "hidden sm:block" }, ":")
             ], -1)),
             g("div", null, [
-              g("strong", Mr, F(t.userEmail), 1)
+              g("strong", Er, F(t.userEmail), 1)
             ])
           ])) : T("", !0)
         ]))
@@ -4269,7 +4241,7 @@ const Lr = {
     }));
   }
 });
-var jr = {
+var zr = {
   name: "BaseEditableHolder",
   extends: Y,
   emits: ["update:modelValue", "value-change"],
@@ -4407,7 +4379,7 @@ var jr = {
   }
 }, Dt = {
   name: "BaseInput",
-  extends: jr,
+  extends: zr,
   props: {
     size: {
       type: String,
@@ -4444,7 +4416,7 @@ var jr = {
       return this.$fluid;
     }
   }
-}, Vr = `
+}, jr = `
     .p-inputtext {
         font-family: inherit;
         font-feature-settings: inherit;
@@ -4522,7 +4494,7 @@ var jr = {
     .p-inputtext-fluid {
         width: 100%;
     }
-`, Nr = {
+`, Vr = {
   root: function(e) {
     var n = e.instance, o = e.props;
     return ["p-inputtext p-component", {
@@ -4534,14 +4506,14 @@ var jr = {
       "p-inputtext-fluid": n.$fluid
     }];
   }
-}, Dr = j.extend({
+}, Nr = j.extend({
   name: "inputtext",
-  style: Vr,
-  classes: Nr
-}), Fr = {
+  style: jr,
+  classes: Vr
+}), Dr = {
   name: "BaseInputText",
   extends: Dt,
-  style: Dr,
+  style: Nr,
   provide: function() {
     return {
       $pcInputText: this,
@@ -4557,14 +4529,14 @@ function $e(t) {
     return e && typeof Symbol == "function" && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e;
   }, $e(t);
 }
-function Br(t, e, n) {
-  return (e = Kr(e)) in t ? Object.defineProperty(t, e, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : t[e] = n, t;
+function Fr(t, e, n) {
+  return (e = Br(e)) in t ? Object.defineProperty(t, e, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : t[e] = n, t;
 }
-function Kr(t) {
-  var e = Rr(t, "string");
+function Br(t) {
+  var e = Kr(t, "string");
   return $e(e) == "symbol" ? e : e + "";
 }
-function Rr(t, e) {
+function Kr(t, e) {
   if ($e(t) != "object" || !t) return t;
   var n = t[Symbol.toPrimitive];
   if (n !== void 0) {
@@ -4576,7 +4548,7 @@ function Rr(t, e) {
 }
 var ze = {
   name: "InputText",
-  extends: Fr,
+  extends: Dr,
   inheritAttrs: !1,
   methods: {
     onInput: function(e) {
@@ -4593,15 +4565,15 @@ var ze = {
       }), this.formField);
     },
     dataP: function() {
-      return ne(Br({
+      return ne(Fr({
         invalid: this.$invalid,
         fluid: this.$fluid,
         filled: this.$variant === "filled"
       }, this.size, this.size));
     }
   }
-}, Ur = ["value", "name", "disabled", "aria-invalid", "data-p"];
-function Wr(t, e, n, o, i, r) {
+}, Rr = ["value", "name", "disabled", "aria-invalid", "data-p"];
+function Ur(t, e, n, o, i, r) {
   return p(), k("input", y({
     type: "text",
     class: t.cx("root"),
@@ -4613,31 +4585,31 @@ function Wr(t, e, n, o, i, r) {
     onInput: e[0] || (e[0] = function() {
       return r.onInput && r.onInput.apply(r, arguments);
     })
-  }, r.attrs), null, 16, Ur);
+  }, r.attrs), null, 16, Rr);
 }
-ze.render = Wr;
+ze.render = Ur;
 var Ft = {
   name: "TimesIcon",
   extends: Ze
 };
-function Hr(t) {
-  return Zr(t) || Yr(t) || qr(t) || Gr();
+function Wr(t) {
+  return Yr(t) || qr(t) || Gr(t) || Hr();
 }
-function Gr() {
+function Hr() {
   throw new TypeError(`Invalid attempt to spread non-iterable instance.
 In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`);
 }
-function qr(t, e) {
+function Gr(t, e) {
   if (t) {
     if (typeof t == "string") return We(t, e);
     var n = {}.toString.call(t).slice(8, -1);
     return n === "Object" && t.constructor && (n = t.constructor.name), n === "Map" || n === "Set" ? Array.from(t) : n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n) ? We(t, e) : void 0;
   }
 }
-function Yr(t) {
+function qr(t) {
   if (typeof Symbol < "u" && t[Symbol.iterator] != null || t["@@iterator"] != null) return Array.from(t);
 }
-function Zr(t) {
+function Yr(t) {
   if (Array.isArray(t)) return We(t);
 }
 function We(t, e) {
@@ -4645,19 +4617,19 @@ function We(t, e) {
   for (var n = 0, o = Array(e); n < e; n++) o[n] = t[n];
   return o;
 }
-function Jr(t, e, n, o, i, r) {
+function Zr(t, e, n, o, i, r) {
   return p(), k("svg", y({
     width: "14",
     height: "14",
     viewBox: "0 0 14 14",
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg"
-  }, t.pti()), Hr(e[0] || (e[0] = [g("path", {
+  }, t.pti()), Wr(e[0] || (e[0] = [g("path", {
     d: "M8.01186 7.00933L12.27 2.75116C12.341 2.68501 12.398 2.60524 12.4375 2.51661C12.4769 2.42798 12.4982 2.3323 12.4999 2.23529C12.5016 2.13827 12.4838 2.0419 12.4474 1.95194C12.4111 1.86197 12.357 1.78024 12.2884 1.71163C12.2198 1.64302 12.138 1.58893 12.0481 1.55259C11.9581 1.51625 11.8617 1.4984 11.7647 1.50011C11.6677 1.50182 11.572 1.52306 11.4834 1.56255C11.3948 1.60204 11.315 1.65898 11.2488 1.72997L6.99067 5.98814L2.7325 1.72997C2.59553 1.60234 2.41437 1.53286 2.22718 1.53616C2.03999 1.53946 1.8614 1.61529 1.72901 1.74767C1.59663 1.88006 1.5208 2.05865 1.5175 2.24584C1.5142 2.43303 1.58368 2.61419 1.71131 2.75116L5.96948 7.00933L1.71131 11.2675C1.576 11.403 1.5 11.5866 1.5 11.7781C1.5 11.9696 1.576 12.1532 1.71131 12.2887C1.84679 12.424 2.03043 12.5 2.2219 12.5C2.41338 12.5 2.59702 12.424 2.7325 12.2887L6.99067 8.03052L11.2488 12.2887C11.3843 12.424 11.568 12.5 11.7594 12.5C11.9509 12.5 12.1346 12.424 12.27 12.2887C12.4053 12.1532 12.4813 11.9696 12.4813 11.7781C12.4813 11.5866 12.4053 11.403 12.27 11.2675L8.01186 7.00933Z",
     fill: "currentColor"
   }, null, -1)])), 16);
 }
-Ft.render = Jr;
+Ft.render = Zr;
 var Xr = `
     .p-message {
         display: grid;
@@ -4973,7 +4945,7 @@ var Xr = `
             grid-template-rows: 0fr;
         }
     }
-`, Qr = {
+`, Jr = {
   root: function(e) {
     var n = e.props;
     return ["p-message p-component p-message-" + n.severity, {
@@ -4989,11 +4961,11 @@ var Xr = `
   text: "p-message-text",
   closeButton: "p-message-close-button",
   closeIcon: "p-message-close-icon"
-}, ei = j.extend({
+}, Qr = j.extend({
   name: "message",
   style: Xr,
-  classes: Qr
-}), ti = {
+  classes: Jr
+}), ei = {
   name: "BaseMessage",
   extends: Y,
   props: {
@@ -5030,7 +5002,7 @@ var Xr = `
       default: null
     }
   },
-  style: ei,
+  style: Qr,
   provide: function() {
     return {
       $pcMessage: this,
@@ -5047,13 +5019,13 @@ function Se(t) {
   }, Se(t);
 }
 function gt(t, e, n) {
-  return (e = ni(e)) in t ? Object.defineProperty(t, e, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : t[e] = n, t;
+  return (e = ti(e)) in t ? Object.defineProperty(t, e, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : t[e] = n, t;
 }
-function ni(t) {
-  var e = oi(t, "string");
+function ti(t) {
+  var e = ni(t, "string");
   return Se(e) == "symbol" ? e : e + "";
 }
-function oi(t, e) {
+function ni(t, e) {
   if (Se(t) != "object" || !t) return t;
   var n = t[Symbol.toPrimitive];
   if (n !== void 0) {
@@ -5065,7 +5037,7 @@ function oi(t, e) {
 }
 var Qe = {
   name: "Message",
-  extends: ti,
+  extends: ei,
   inheritAttrs: !1,
   emits: ["close", "life-end"],
   timeout: null,
@@ -5097,7 +5069,7 @@ var Qe = {
     }
   },
   directives: {
-    ripple: Je
+    ripple: Xe
   },
   components: {
     TimesIcon: Ft
@@ -5125,21 +5097,21 @@ function ht(t) {
   for (var e = 1; e < arguments.length; e++) {
     var n = arguments[e] != null ? arguments[e] : {};
     e % 2 ? bt(Object(n), !0).forEach(function(o) {
-      ri(t, o, n[o]);
+      oi(t, o, n[o]);
     }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n)) : bt(Object(n)).forEach(function(o) {
       Object.defineProperty(t, o, Object.getOwnPropertyDescriptor(n, o));
     });
   }
   return t;
 }
-function ri(t, e, n) {
-  return (e = ii(e)) in t ? Object.defineProperty(t, e, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : t[e] = n, t;
+function oi(t, e, n) {
+  return (e = ri(e)) in t ? Object.defineProperty(t, e, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : t[e] = n, t;
 }
-function ii(t) {
-  var e = ai(t, "string");
+function ri(t) {
+  var e = ii(t, "string");
   return we(e) == "symbol" ? e : e + "";
 }
-function ai(t, e) {
+function ii(t, e) {
   if (we(t) != "object" || !t) return t;
   var n = t[Symbol.toPrimitive];
   if (n !== void 0) {
@@ -5149,8 +5121,8 @@ function ai(t, e) {
   }
   return (e === "string" ? String : Number)(t);
 }
-var si = ["data-p"], li = ["data-p"], ui = ["data-p"], di = ["aria-label", "data-p"], ci = ["data-p"];
-function pi(t, e, n, o, i, r) {
+var ai = ["data-p"], si = ["data-p"], li = ["data-p"], ui = ["aria-label", "data-p"], di = ["data-p"];
+function ci(t, e, n, o, i, r) {
   var l = G("TimesIcon"), u = He("ripple");
   return p(), P(Oe, y({
     name: "p-message",
@@ -5174,7 +5146,7 @@ function pi(t, e, n, o, i, r) {
         class: t.cx("content"),
         "data-p": r.dataP
       }, t.ptm("content")), [E(t.$slots, "icon", {
-        class: J(t.cx("icon"))
+        class: X(t.cx("icon"))
       }, function() {
         return [(p(), P(ce(t.icon ? "span" : null), y({
           class: [t.cx("icon"), t.icon],
@@ -5184,7 +5156,7 @@ function pi(t, e, n, o, i, r) {
         key: 0,
         class: t.cx("text"),
         "data-p": r.dataP
-      }, t.ptm("text")), [E(t.$slots, "default")], 16, ui)) : T("", !0), t.closable ? Ge((p(), k("button", y({
+      }, t.ptm("text")), [E(t.$slots, "default")], 16, li)) : T("", !0), t.closable ? Ge((p(), k("button", y({
         key: 1,
         class: t.cx("closeButton"),
         "aria-label": r.closeAriaLabel,
@@ -5198,21 +5170,21 @@ function pi(t, e, n, o, i, r) {
           key: 0,
           class: [t.cx("closeIcon"), t.closeIcon],
           "data-p": r.dataP
-        }, t.ptm("closeIcon")), null, 16, ci)) : (p(), P(l, y({
+        }, t.ptm("closeIcon")), null, 16, di)) : (p(), P(l, y({
           key: 1,
           class: [t.cx("closeIcon"), t.closeIcon],
           "data-p": r.dataP
         }, t.ptm("closeIcon")), null, 16, ["class", "data-p"]))];
-      })], 16, di)), [[u]]) : T("", !0)], 16, li))], 16)], 16, si)) : T("", !0)];
+      })], 16, ui)), [[u]]) : T("", !0)], 16, si))], 16)], 16, ai)) : T("", !0)];
     }),
     _: 3
   }, 16);
 }
-Qe.render = pi;
-const mi = { class: "flex flex-col gap-1" }, fi = ["for"], gi = {
+Qe.render = ci;
+const pi = { class: "flex flex-col gap-1" }, mi = ["for"], fi = {
   key: 1,
   class: "text-sm text-gray-500"
-}, bi = { class: "mt-1" }, et = /* @__PURE__ */ N({
+}, gi = { class: "mt-1" }, et = /* @__PURE__ */ N({
   __name: "FormField",
   props: {
     id: {},
@@ -5221,14 +5193,14 @@ const mi = { class: "flex flex-col gap-1" }, fi = ["for"], gi = {
     error: {}
   },
   setup(t) {
-    return (e, n) => (p(), k("div", mi, [
+    return (e, n) => (p(), k("div", pi, [
       t.label ? (p(), k("label", {
         key: 0,
         for: t.id,
         class: "font-medium"
-      }, F(t.label), 9, fi)) : T("", !0),
-      t.helper ? (p(), k("p", gi, F(t.helper), 1)) : T("", !0),
-      g("div", bi, [
+      }, F(t.label), 9, mi)) : T("", !0),
+      t.helper ? (p(), k("p", fi, F(t.helper), 1)) : T("", !0),
+      g("div", gi, [
         E(e.$slots, "default")
       ]),
       t.error ? (p(), P(M(Qe), {
@@ -5246,7 +5218,7 @@ const mi = { class: "flex flex-col gap-1" }, fi = ["for"], gi = {
       }, 8, ["data-test"])) : T("", !0)
     ]));
   }
-}), hi = "Please enter a valid email address", Bt = /* @__PURE__ */ N({
+}), bi = "Please enter a valid email address", Bt = /* @__PURE__ */ N({
   __name: "EmailInput",
   props: /* @__PURE__ */ oe({
     isSubmitClicked: { type: Boolean },
@@ -5272,7 +5244,7 @@ const mi = { class: "flex flex-col gap-1" }, fi = ["for"], gi = {
     return (a, s) => (p(), P(et, {
       id: "email",
       label: t.labelText,
-      error: l.value ? hi : void 0
+      error: l.value ? bi : void 0
     }, {
       default: w(() => [
         O(M(ze), {
@@ -5289,23 +5261,23 @@ const mi = { class: "flex flex-col gap-1" }, fi = ["for"], gi = {
       _: 1
     }, 8, ["label", "error"]));
   }
-}), vi = { class: "flex flex-col items-center gap-4 text-center" }, yi = { class: "flex flex-col gap-2" }, Kt = /* @__PURE__ */ N({
+}), hi = { class: "flex flex-col items-center gap-4 text-center" }, vi = { class: "flex flex-col gap-2" }, Kt = /* @__PURE__ */ N({
   __name: "ActionConfirmMsg",
   props: {
     iconClass: {}
   },
   setup(t) {
-    return (e, n) => (p(), k("div", vi, [
+    return (e, n) => (p(), k("div", hi, [
       g("i", {
-        class: J([t.iconClass, "border-2 p-4 rounded-full text-primary"]),
+        class: X([t.iconClass, "border-2 p-4 rounded-full text-primary"]),
         style: { "font-size": "1.2rem !important" }
       }, null, 2),
-      g("div", yi, [
+      g("div", vi, [
         E(e.$slots, "default")
       ])
     ]));
   }
-}), ki = { key: 0 }, Ii = { class: "text-primary break-all px-2" }, sa = /* @__PURE__ */ N({
+}), yi = { key: 0 }, ki = { class: "text-primary break-all px-2" }, aa = /* @__PURE__ */ N({
   __name: "ChangeEmailRequest",
   props: /* @__PURE__ */ oe({
     isEmailSent: { type: Boolean },
@@ -5338,12 +5310,12 @@ const mi = { class: "flex flex-col gap-1" }, fi = ["for"], gi = {
           default: w(() => [
             g("p", null, [
               s[4] || (s[4] = g("span", { class: "block text-wrap" }, "We have sent a verification email to:", -1)),
-              g("strong", Ii, F(o.value), 1),
+              g("strong", ki, F(o.value), 1),
               s[5] || (s[5] = g("span", { class: "block mt-8" }, " Please check the inbox of your new email and click on the verification link to change your email. ", -1))
             ])
           ]),
           _: 1
-        })) : (p(), k("div", ki, [
+        })) : (p(), k("div", yi, [
           g("form", {
             class: "vstack-form",
             onSubmit: Ee(u, ["prevent"])
@@ -5371,10 +5343,10 @@ const mi = { class: "flex flex-col gap-1" }, fi = ["for"], gi = {
       _: 3
     }));
   }
-}), $i = {
+}), Ii = {
   key: 0,
   class: "vstack-form"
-}, la = /* @__PURE__ */ N({
+}, sa = /* @__PURE__ */ N({
   __name: "DeleteAccountRequest",
   props: {
     isDeleteEmailSent: { type: Boolean },
@@ -5401,7 +5373,7 @@ const mi = { class: "flex flex-col gap-1" }, fi = ["for"], gi = {
             g("p", null, " We have sent you an email to verify your account deletion. Please check your inbox and click on the verification link. ", -1)
           ])]),
           _: 1
-        })) : (p(), k("div", $i, [
+        })) : (p(), k("div", Ii, [
           l[2] || (l[2] = g("p", null, " You will receive an email to verify your account deletion. Please click on the email link to delete your account. ", -1)),
           O(M(R), {
             type: "button",
@@ -5430,7 +5402,7 @@ class tt extends Error {
     }, this.data = o;
   }
 }
-async function Si(t) {
+async function $i(t) {
   const e = await fetch(`${t}/profile/config`, {
     method: "GET",
     headers: {
@@ -5442,7 +5414,7 @@ async function Si(t) {
     throw new tt("Failed to get profile configuration", e, n);
   return n;
 }
-async function wi(t) {
+async function Si(t) {
   const e = await fetch(`${t}/user/profile`, {
     method: "GET",
     headers: {
@@ -5454,7 +5426,7 @@ async function wi(t) {
     throw new tt("Failed to get profile", e, n);
   return n;
 }
-async function xi(t, e) {
+async function wi(t, e) {
   const n = await fetch(`${e}/user/profile`, {
     method: "PATCH",
     headers: {
@@ -5467,7 +5439,7 @@ async function xi(t, e) {
     throw new tt("Failed to update profile", n, o);
   return o;
 }
-const Le = { getProfile: wi, updateProfile: xi, getProfileConfig: Si }, Pi = { class: "vstack-form" }, Ci = "Name can be letters only, at least 2 characters and max 50 characters", vt = /* @__PURE__ */ N({
+const Le = { getProfile: Si, updateProfile: wi, getProfileConfig: $i }, xi = { class: "vstack-form" }, Pi = "Name can be letters only, at least 2 characters and max 50 characters", vt = /* @__PURE__ */ N({
   __name: "NameInput",
   props: /* @__PURE__ */ oe({
     isSubmitClicked: { type: Boolean },
@@ -5490,11 +5462,11 @@ const Le = { getProfile: wi, updateProfile: xi, getProfileConfig: Si }, Pi = { c
       const d = s ?? "";
       i.value = d, n("validity-changed", u());
     }
-    return (s, d) => (p(), k("div", Pi, [
+    return (s, d) => (p(), k("div", xi, [
       O(et, {
         id: "profile_name",
         label: l.value,
-        error: r.value ? Ci : ""
+        error: r.value ? Pi : ""
       }, {
         default: w(() => [
           O(M(ze), {
@@ -5511,7 +5483,7 @@ const Le = { getProfile: wi, updateProfile: xi, getProfileConfig: Si }, Pi = { c
       }, 8, ["label", "error"])
     ]));
   }
-}), ua = /* @__PURE__ */ N({
+}), la = /* @__PURE__ */ N({
   __name: "Profile",
   emits: ["profileLoadError", "profileSubmitSuccess", "profileSubmitError"],
   setup(t, { emit: e }) {
@@ -5568,7 +5540,7 @@ const Le = { getProfile: wi, updateProfile: xi, getProfileConfig: Si }, Pi = { c
         u.value = !1;
       }
     }
-    return (b, I) => (p(), P(Xe, { isLoading: r.value }, {
+    return (b, I) => (p(), P(Je, { isLoading: r.value }, {
       default: w(() => [
         i.value && a.value ? (p(), P(M(re), {
           key: 0,
@@ -5620,7 +5592,7 @@ const Le = { getProfile: wi, updateProfile: xi, getProfileConfig: Si }, Pi = { c
       _: 1
     }, 8, ["isLoading"]));
   }
-}), da = /* @__PURE__ */ N({
+}), ua = /* @__PURE__ */ N({
   __name: "ProfileCheck",
   emits: ["profileCheckError", "profileIsComplete", "profileNotComplete"],
   setup(t, { emit: e }) {
@@ -5649,18 +5621,18 @@ const Le = { getProfile: wi, updateProfile: xi, getProfileConfig: Si }, Pi = { c
         console.error("Error checking profile completion: ", a), i("profileCheckError");
       }
     }
-    return (a, s) => (p(), P(Xe, {
+    return (a, s) => (p(), P(Je, {
       isLoading: r.value,
       loadingText: "Redirecting, do not close the window."
     }, null, 8, ["isLoading"]));
   }
-}), _i = { class: "gsi-material-button-content-wrapper" }, Ti = { class: "gsi-material-button-icon" }, Li = {
+}), Ci = { class: "gsi-material-button-content-wrapper" }, _i = { class: "gsi-material-button-icon" }, Ti = {
   version: "1.1",
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 48 48",
   "xmlns:xlink": "http://www.w3.org/1999/xlink",
   style: { display: "block" }
-}, Oi = { class: "gsi-material-button-contents" }, Ai = { style: { display: "none" } }, Ei = /* @__PURE__ */ N({
+}, Li = { class: "gsi-material-button-contents" }, Oi = { style: { display: "none" } }, Ai = /* @__PURE__ */ N({
   __name: "GoogleAuthIcon",
   props: {
     authType: { default: "Sign in" },
@@ -5694,18 +5666,18 @@ const Le = { getProfile: wi, updateProfile: xi, getProfileConfig: Si }, Pi = { c
       onClick: i
     }, [
       l[1] || (l[1] = g("div", { class: "gsi-material-button-state" }, null, -1)),
-      g("div", _i, [
-        g("div", Ti, [
-          (p(), k("svg", Li, [...l[0] || (l[0] = [
+      g("div", Ci, [
+        g("div", _i, [
+          (p(), k("svg", Ti, [...l[0] || (l[0] = [
             yt('<path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" data-v-b8cb838c></path><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" data-v-b8cb838c></path><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" data-v-b8cb838c></path><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" data-v-b8cb838c></path><path fill="none" d="M0 0h48v48H0z" data-v-b8cb838c></path>', 5)
           ])]))
         ]),
-        g("span", Oi, F(t.authType) + " with Google", 1),
-        g("span", Ai, F(t.authType) + " with Google", 1)
+        g("span", Li, F(t.authType) + " with Google", 1),
+        g("span", Oi, F(t.authType) + " with Google", 1)
       ])
     ]));
   }
-}), Mi = /* @__PURE__ */ Me(Ei, [["__scopeId", "data-v-b8cb838c"]]), zi = { class: "h1" }, ji = { key: 0 }, Vi = { key: 1 }, Ni = /* @__PURE__ */ N({
+}), Ei = /* @__PURE__ */ Me(Ai, [["__scopeId", "data-v-b8cb838c"]]), Mi = { class: "h1" }, zi = { key: 0 }, ji = { key: 1 }, Vi = /* @__PURE__ */ N({
   __name: "SignInUpForm",
   props: /* @__PURE__ */ oe({
     pageAuthType: {},
@@ -5754,18 +5726,18 @@ const Le = { getProfile: wi, updateProfile: xi, getProfileConfig: Si }, Pi = { c
     }
     return (a, s) => (p(), P(M(re), { class: "max-w-xl p-12 w-full" }, {
       title: w(() => [
-        g("h1", zi, F(t.pageAuthType), 1)
+        g("h1", Mi, F(t.pageAuthType), 1)
       ]),
       content: w(() => [
-        t.signupInviteOnly && t.pageAuthType === "Sign up" ? (p(), k("div", ji, [
+        t.signupInviteOnly && t.pageAuthType === "Sign up" ? (p(), k("div", zi, [
           O(M(Qe), { severity: "info" }, {
             default: w(() => [...s[4] || (s[4] = [
               W(" Sign up is currently by invite only during the beta period. ", -1)
             ])]),
             _: 1
           })
-        ])) : (p(), k("section", Vi, [
-          O(Mi, {
+        ])) : (p(), k("section", ji, [
+          O(Ei, {
             apiDomain: t.apiDomain,
             authType: t.pageAuthType,
             onGoogleSignInError: s[0] || (s[0] = (...d) => a.$emit("googleSignInError", ...d))
@@ -5805,7 +5777,7 @@ const Le = { getProfile: wi, updateProfile: xi, getProfileConfig: Si }, Pi = { c
     }));
   }
 });
-var Di = `
+var Ni = `
     .p-inputotp {
         display: flex;
         align-items: center;
@@ -5826,14 +5798,14 @@ var Di = `
         text-align: center;
         width: dt('inputotp.input.lg.width');
     }
-`, Fi = {
+`, Di = {
   root: "p-inputotp p-component",
   pcInputText: "p-inputotp-input"
-}, Bi = j.extend({
+}, Fi = j.extend({
   name: "inputotp",
-  style: Di,
-  classes: Fi
-}), Ki = {
+  style: Ni,
+  classes: Di
+}), Bi = {
   name: "BaseInputOtp",
   extends: Dt,
   props: {
@@ -5858,7 +5830,7 @@ var Di = `
       default: !1
     }
   },
-  style: Bi,
+  style: Fi,
   provide: function() {
     return {
       $pcInputOtp: this,
@@ -5867,7 +5839,7 @@ var Di = `
   }
 }, Rt = {
   name: "InputOtp",
-  extends: Ki,
+  extends: Bi,
   inheritAttrs: !1,
   emits: ["change", "focus", "blur"],
   data: function() {
@@ -5994,7 +5966,7 @@ var Di = `
     OtpInputText: ze
   }
 };
-function Ri(t, e, n, o, i, r) {
+function Ki(t, e, n, o, i, r) {
   var l = G("OtpInputText");
   return p(), k("div", y({
     class: t.cx("root")
@@ -6008,7 +5980,7 @@ function Ri(t, e, n, o, i, r) {
       return [O(l, {
         value: i.tokens[u - 1],
         type: r.inputType,
-        class: J(t.cx("pcInputText")),
+        class: X(t.cx("pcInputText")),
         name: t.$formName,
         inputmode: r.inputMode,
         variant: t.variant,
@@ -6041,8 +6013,8 @@ function Ri(t, e, n, o, i, r) {
     });
   }), 128))], 16);
 }
-Rt.render = Ri;
-const Ui = { class: "px-4 py-8 sm:p-8" }, Wi = { class: "flex flex-col items-stretch gap-4 sm:flex-row sm:items-start" }, Hi = { class: "vstack-form" }, Gi = { class: "vstack-form" }, qi = /* @__PURE__ */ N({
+Rt.render = Ki;
+const Ri = { class: "px-4 py-8 sm:p-8" }, Ui = { class: "flex flex-col items-stretch gap-4 sm:flex-row sm:items-start" }, Wi = { class: "vstack-form" }, Hi = { class: "vstack-form" }, Gi = /* @__PURE__ */ N({
   __name: "VerifyCode",
   props: {
     pageAuthType: {}
@@ -6127,10 +6099,10 @@ const Ui = { class: "px-4 py-8 sm:p-8" }, Wi = { class: "flex flex-col items-str
     function f() {
       Q.clearLoginAttemptInfo(), n("restartFlow");
     }
-    return (v, m) => (p(), k("div", Ui, [
+    return (v, m) => (p(), k("div", Ri, [
       O(M(re), { class: "max-w-xl p-0 sm:p-12 w-full mx-auto" }, {
         title: w(() => [
-          g("div", Wi, [
+          g("div", Ui, [
             O(M(R), {
               class: "me-4 sm:me-0",
               type: "button",
@@ -6149,7 +6121,7 @@ const Ui = { class: "px-4 py-8 sm:p-8" }, Wi = { class: "flex flex-col items-str
             onSubmit: m[1] || (m[1] = Ee(() => {
             }, ["prevent"]))
           }, [
-            g("div", Hi, [
+            g("div", Wi, [
               m[4] || (m[4] = g("p", null, " To finish the signup process, enter the code that was emailed to you. Note that the code is only valid for 10 minutes. ", -1)),
               O(et, {
                 id: "magic-code-input",
@@ -6185,7 +6157,7 @@ const Ui = { class: "px-4 py-8 sm:p-8" }, Wi = { class: "flex flex-col items-str
                 _: 1
               }, 8, ["loading"])
             ]),
-            g("div", Gi, [
+            g("div", Hi, [
               m[6] || (m[6] = g("p", null, " If you didnt receive an email, please check your Junk folder or resend another code. ", -1)),
               O(M(R), {
                 class: "w-fit",
@@ -6206,7 +6178,7 @@ const Ui = { class: "px-4 py-8 sm:p-8" }, Wi = { class: "flex flex-col items-str
       })
     ]));
   }
-}), ca = /* @__PURE__ */ N({
+}), da = /* @__PURE__ */ N({
   __name: "SignInUp",
   props: {
     signupInviteOnly: { type: Boolean, default: !0 }
@@ -6285,9 +6257,9 @@ const Ui = { class: "px-4 py-8 sm:p-8" }, Wi = { class: "flex flex-col items-str
     function v(m) {
       m.type === "restart_flow_error" && (l.value = !1), i("resendCodeError", m);
     }
-    return (m, h) => (p(), P(Xe, { isLoading: r.value }, {
+    return (m, h) => (p(), P(Je, { isLoading: r.value }, {
       default: w(() => [
-        l.value ? (p(), P(qi, {
+        l.value ? (p(), P(Gi, {
           key: 1,
           pageAuthType: s.value,
           onVerificationCodeSuccess: h[4] || (h[4] = (...b) => m.$emit("verificationCodeSuccess", ...b)),
@@ -6295,7 +6267,7 @@ const Ui = { class: "px-4 py-8 sm:p-8" }, Wi = { class: "flex flex-col items-str
           onResendCodeSuccess: h[5] || (h[5] = (...b) => m.$emit("resendCodeSuccess", ...b)),
           onResendCodeError: v,
           onRestartFlow: h[6] || (h[6] = () => l.value = !1)
-        }, null, 8, ["pageAuthType"])) : (p(), P(Ni, {
+        }, null, 8, ["pageAuthType"])) : (p(), P(Vi, {
           key: 0,
           email: u.value,
           "onUpdate:email": h[0] || (h[0] = (b) => u.value = b),
@@ -6312,16 +6284,16 @@ const Ui = { class: "px-4 py-8 sm:p-8" }, Wi = { class: "flex flex-col items-str
   }
 });
 export {
-  ra as AppErrorInfo,
-  sa as ChangeEmailRequest,
-  la as DeleteAccountRequest,
+  oa as AppErrorInfo,
+  aa as ChangeEmailRequest,
+  sa as DeleteAccountRequest,
   et as FormField,
-  ia as PageInfiniteLoader,
-  Xe as PageLoader,
-  ua as Profile,
-  da as ProfileCheck,
-  ca as SignInUp,
-  oa as SiteNavigation,
+  ra as PageInfiniteLoader,
+  Je as PageLoader,
+  la as Profile,
+  ua as ProfileCheck,
+  da as SignInUp,
+  na as SiteNavigation,
   Lo as ThemeToggle,
-  aa as UserAccountInfo
+  ia as UserAccountInfo
 };
