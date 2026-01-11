@@ -17,13 +17,29 @@ export default function useToasting(toast: ToastServiceMethods): {
             };
         };
         email: {
-            updateFailSameEmail: {
-                summary: string;
-                detail: string;
+            requestChange: {
+                success: {
+                    summary: string;
+                    detail: string;
+                };
+                error: {
+                    sameEmail: {
+                        summary: string;
+                        detail: string;
+                    };
+                };
             };
-            updateSuccess: {
-                summary: string;
-                detail: string;
+            updateEmail: {
+                success: {
+                    summary: string;
+                    detail: string;
+                };
+                error: {
+                    invalidToken: {
+                        summary: string;
+                        detail: string;
+                    };
+                };
             };
         };
         account: {

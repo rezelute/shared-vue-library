@@ -6,13 +6,29 @@ declare const _default: {
       }
    },
    "email": {
-      "updateFailSameEmail": {
-         "summary": "No changes have been made",
-         "detail": "The new email address you provided is the same as the current one. Please enter a different email address."
+      "requestChange": {
+         "success": {
+            "summary": "Email change requested",
+            "detail": "We have sent a confirmation email to your new email address. Please check your inbox and follow the instructions to complete the email change."
+         },
+         "error": {
+            "sameEmail": {
+               "summary": "No changes have been made",
+               "detail": "The new email address you provided is the same as the current one. Please enter a different email address."
+            }
+         }
       },
-      "updateSuccess": {
-         "summary": "Email updated successfully",
-         "detail": "We have updated your email address successfully."
+      "updateEmail": {
+         "success": {
+            "summary": "Email updated successfully",
+            "detail": "Your email address has been updated successfully."
+         },
+         "error": {
+            "invalidToken": {
+               "summary": "Invalid token",
+               "detail": "The token provided for updating your email address is invalid or has expired. Please request a new email change."
+            }
+         }
       }
    },
    "account": {
