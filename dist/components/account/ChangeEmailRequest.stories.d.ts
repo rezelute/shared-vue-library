@@ -8,10 +8,10 @@ declare const meta: {
             isEmailSent: boolean;
             isLoading?: boolean;
         }> & Readonly<{
-            onSubmit?: ((...args: any[]) => any) | undefined;
             "onUpdate:email"?: ((value: string) => any) | undefined;
+            onRequestEmailChange?: ((...args: any[]) => any) | undefined;
         }>, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
-            submit: (...args: any[]) => void;
+            requestEmailChange: (...args: any[]) => void;
             "update:email": (value: string) => void;
         }, import('vue').PublicProps, {}, false, {}, {}, import('vue').GlobalComponents, import('vue').GlobalDirectives, string, {}, any, import('vue').ComponentProvideOptions, {
             P: {};
@@ -26,8 +26,8 @@ declare const meta: {
             isEmailSent: boolean;
             isLoading?: boolean;
         }> & Readonly<{
-            onSubmit?: ((...args: any[]) => any) | undefined;
             "onUpdate:email"?: ((value: string) => any) | undefined;
+            onRequestEmailChange?: ((...args: any[]) => any) | undefined;
         }>, {}, {}, {}, {}, {}>;
         __isFragment?: never;
         __isTeleport?: never;
@@ -38,10 +38,10 @@ declare const meta: {
         isEmailSent: boolean;
         isLoading?: boolean;
     }> & Readonly<{
-        onSubmit?: ((...args: any[]) => any) | undefined;
         "onUpdate:email"?: ((value: string) => any) | undefined;
+        onRequestEmailChange?: ((...args: any[]) => any) | undefined;
     }>, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
-        submit: (...args: any[]) => void;
+        requestEmailChange: (...args: any[]) => void;
         "update:email": (value: string) => void;
     }, string, {}, {}, string, {}, import('vue').GlobalComponents, import('vue').GlobalDirectives, string, import('vue').ComponentProvideOptions> & import('vue').VNodeProps & import('vue').AllowedComponentProps & import('vue').ComponentCustomProps & (new () => {
         $slots: {

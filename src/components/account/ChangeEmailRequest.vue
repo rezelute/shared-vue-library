@@ -8,7 +8,7 @@
       <template #content>
          <!-- Change email form -->
          <div v-if="!isEmailSent">
-            <form class="vstack-form" @submit.prevent="onSubmit">
+            <form class="vstack-form" @submit.prevent="onRequestEmailChange">
                <EmailInput
                   v-model:email="email"
                   :isSubmitClicked="isSubmitClicked"
@@ -46,7 +46,7 @@ import ActionConfirmMsg from "../../components/actionConfirmMsg/ActionConfirmMsg
 
 // props / emits
 // -----------------------------------------
-const emits = defineEmits(["submit"])
+const emits = defineEmits(["requestEmailChange"])
 const props = defineProps<{
    isEmailSent: boolean
    isLoading?: boolean
@@ -67,11 +67,11 @@ function onValidityChanged(val: boolean) {
    isEmailValid.value = val
 }
 
-function onSubmit() {
+function onRequestEmailChange() {
    isSubmitClicked.value = true
    if (!isEmailValid.value) return
 
-   emits("submit", { email: email.value })
+   emits("requestEmailChange", { email: email.value })
 }
 </script>
 

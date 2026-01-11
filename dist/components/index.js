@@ -5286,14 +5286,14 @@ const pi = { class: "flex flex-col gap-1" }, mi = ["for"], fi = {
     email: { default: "" },
     emailModifiers: {}
   }),
-  emits: /* @__PURE__ */ oe(["submit"], ["update:email"]),
+  emits: /* @__PURE__ */ oe(["requestEmailChange"], ["update:email"]),
   setup(t, { emit: e }) {
     const n = e, o = Ae(t, "email"), i = z(!1), r = z(!1);
     function l(a) {
       r.value = a;
     }
     function u() {
-      i.value = !0, r.value && n("submit", { email: o.value });
+      i.value = !0, r.value && n("requestEmailChange", { email: o.value });
     }
     return (a, s) => (p(), P(M(re), null, {
       title: w(() => [
