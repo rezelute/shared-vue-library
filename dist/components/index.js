@@ -1,4 +1,4 @@
-import { useId as Ut, mergeProps as y, createElementBlock as k, openBlock as p, createElementVNode as g, renderSlot as E, createTextVNode as W, toDisplayString as F, resolveComponent as G, resolveDirective as He, withDirectives as Ge, createBlock as P, resolveDynamicComponent as ce, withCtx as w, createCommentVNode as T, normalizeClass as X, createStaticVNode as yt, defineComponent as N, Transition as Oe, createVNode as O, unref as M, ref as z, computed as q, Teleport as Wt, Fragment as Ce, renderList as kt, onMounted as le, mergeModels as oe, useModel as Ae, withModifiers as Ee, inject as qe, watch as Ht } from "vue";
+import { useId as Ut, mergeProps as y, createElementBlock as k, openBlock as p, createElementVNode as g, renderSlot as A, createTextVNode as W, toDisplayString as F, resolveComponent as G, resolveDirective as He, withDirectives as Ge, createBlock as P, resolveDynamicComponent as ce, withCtx as w, createCommentVNode as T, normalizeClass as X, createStaticVNode as yt, defineComponent as N, Transition as Oe, createVNode as O, unref as M, ref as z, computed as q, Teleport as Wt, Fragment as Ce, renderList as kt, onMounted as le, mergeModels as oe, useModel as Ee, withModifiers as Ae, inject as qe, watch as Ht } from "vue";
 import { m as pe, B as j, a as se, C as It, s as U, g as ee, F as $t, N as J, S as K, c as St, z as _e, b as Gt, l as ae, n as qt, i as nt, P as xe, Q as Yt, d as Ve, T as ot, R as rt, v as Te, e as Zt, K as Xt, W as Jt, U as Qt, A as en, f as tn, t as nn, M as it, Y as wt, D as on, h as rn, j as ie, J as an, k as sn } from "../index-C4p6nNC_.js";
 import { S as ln, t as xt, p as Q } from "../supertokens-vendor-Dsnq9j4O.js";
 import { m as V } from "../messages-Bdsuw548.js";
@@ -288,8 +288,8 @@ var Y = {
           }, this.$styleOptions), b), K.setLoadedStyleName(this.$style.name);
         }
         if (!K.isStyleNameLoaded("layer-order")) {
-          var I, _, A = (I = this.$style) === null || I === void 0 || (_ = I.getLayerOrderThemeCSS) === null || _ === void 0 ? void 0 : _.call(I);
-          j.load(A, x({
+          var I, _, E = (I = this.$style) === null || I === void 0 || (_ = I.getLayerOrderThemeCSS) === null || _ === void 0 ? void 0 : _.call(I);
+          j.load(E, x({
             name: "layer-order",
             first: !0
           }, this.$styleOptions)), K.setLoadedStyleName("layer-order");
@@ -615,7 +615,7 @@ var Xe = {
       });
     }
   }
-}, At = {
+}, Et = {
   name: "SpinnerIcon",
   extends: Xe
 };
@@ -656,7 +656,7 @@ function Tn(t, e, n, o, i, r) {
     fill: "currentColor"
   }, null, -1)])), 16);
 }
-At.render = Tn;
+Et.render = Tn;
 var Ln = `
     .p-badge {
         display: inline-flex;
@@ -749,11 +749,11 @@ var Ln = `
       "p-badge-contrast": n.severity === "contrast"
     }];
   }
-}, An = j.extend({
+}, En = j.extend({
   name: "badge",
   style: Ln,
   classes: On
-}), En = {
+}), An = {
   name: "BaseBadge",
   extends: Y,
   props: {
@@ -770,7 +770,7 @@ var Ln = `
       default: null
     }
   },
-  style: An,
+  style: En,
   provide: function() {
     return {
       $pcBadge: this,
@@ -803,9 +803,9 @@ function zn(t, e) {
   }
   return (e === "string" ? String : Number)(t);
 }
-var Et = {
+var At = {
   name: "Badge",
-  extends: En,
+  extends: An,
   inheritAttrs: !1,
   computed: {
     dataP: function() {
@@ -820,11 +820,11 @@ function Vn(t, e, n, o, i, r) {
   return p(), k("span", y({
     class: t.cx("root"),
     "data-p": r.dataP
-  }, t.ptmi("root")), [E(t.$slots, "default", {}, function() {
+  }, t.ptmi("root")), [A(t.$slots, "default", {}, function() {
     return [W(F(t.value), 1)];
   })], 16, jn);
 }
-Et.render = Vn;
+At.render = Vn;
 function be(t) {
   "@babel/helpers - typeof";
   return be = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function(e) {
@@ -991,12 +991,12 @@ var S = {
         }, r), f), K.setLoadedStyleName("common");
       }
       if (!K.isStyleNameLoaded((n = i.$style) === null || n === void 0 ? void 0 : n.name) && (o = i.$style) !== null && o !== void 0 && o.name) {
-        var v, m, h, b, I = ((v = i.$style) === null || v === void 0 || (m = v.getDirectiveTheme) === null || m === void 0 ? void 0 : m.call(v)) || {}, _ = I.css, A = I.style;
+        var v, m, h, b, I = ((v = i.$style) === null || v === void 0 || (m = v.getDirectiveTheme) === null || m === void 0 ? void 0 : m.call(v)) || {}, _ = I.css, E = I.style;
         (h = i.$style) === null || h === void 0 || h.load(_, C({
           name: "".concat(i.$style.name, "-variables")
         }, r)), (b = i.$style) === null || b === void 0 || b.loadStyle(C({
           name: "".concat(i.$style.name, "-style")
-        }, r), A), K.setLoadedStyleName(i.$style.name);
+        }, r), E), K.setLoadedStyleName(i.$style.name);
       }
       if (!K.isStyleNameLoaded("layer-order")) {
         var $, L, Z = ($ = i.$style) === null || $ === void 0 || (L = $.getLayerOrderThemeCSS) === null || L === void 0 ? void 0 : L.call($);
@@ -1107,11 +1107,11 @@ var S = {
       });
     }, i = function(u) {
       var a, s, d, c = u._$instances[e], f = c?.watch, v = function(b) {
-        var I, _ = b.newValue, A = b.oldValue;
-        return f == null || (I = f.config) === null || I === void 0 ? void 0 : I.call(c, _, A);
+        var I, _ = b.newValue, E = b.oldValue;
+        return f == null || (I = f.config) === null || I === void 0 ? void 0 : I.call(c, _, E);
       }, m = function(b) {
-        var I, _ = b.newValue, A = b.oldValue;
-        return f == null || (I = f["config.ripple"]) === null || I === void 0 ? void 0 : I.call(c, _, A);
+        var I, _ = b.newValue, E = b.oldValue;
+        return f == null || (I = f["config.ripple"]) === null || I === void 0 ? void 0 : I.call(c, _, E);
       };
       c.$watchersCallback = {
         config: v,
@@ -2173,8 +2173,8 @@ var R = {
     }
   },
   components: {
-    SpinnerIcon: At,
-    Badge: Et
+    SpinnerIcon: Et,
+    Badge: At
   },
   directives: {
     ripple: Je
@@ -2182,7 +2182,7 @@ var R = {
 }, uo = ["data-p"], co = ["data-p"];
 function po(t, e, n, o, i, r) {
   var l = G("SpinnerIcon"), u = G("Badge"), a = He("ripple");
-  return t.asChild ? E(t.$slots, "default", {
+  return t.asChild ? A(t.$slots, "default", {
     key: 1,
     class: X(t.cx("root")),
     a11yAttrs: r.a11yAttrs
@@ -2192,8 +2192,8 @@ function po(t, e, n, o, i, r) {
     "data-p": r.dataP
   }, r.attrs), {
     default: w(function() {
-      return [E(t.$slots, "default", {}, function() {
-        return [t.loading ? E(t.$slots, "loadingicon", y({
+      return [A(t.$slots, "default", {}, function() {
+        return [t.loading ? A(t.$slots, "loadingicon", y({
           key: 0,
           class: [t.cx("loadingIcon"), t.cx("icon")]
         }, t.ptm("loadingIcon")), function() {
@@ -2205,7 +2205,7 @@ function po(t, e, n, o, i, r) {
             class: [t.cx("loadingIcon"), t.cx("icon")],
             spin: ""
           }, t.ptm("loadingIcon")), null, 16, ["class"]))];
-        }) : E(t.$slots, "icon", y({
+        }) : A(t.$slots, "icon", y({
           key: 1,
           class: [t.cx("icon")]
         }, t.ptm("icon")), function() {
@@ -2574,13 +2574,13 @@ const $o = /* @__PURE__ */ Me(yo, [["render", Io]]), So = {
       default: w(() => [
         t.showPreloadSlot && t.isLoading ? (p(), k("div", So, [
           g("div", wo, [
-            E(e.$slots, "preloader", {}, () => [
+            A(e.$slots, "preloader", {}, () => [
               O(M(Mt), { "aria-label": "Loading" }),
               n[1] || (n[1] = g("span", { class: "sr-only" }, "Loading...", -1))
             ], !0)
           ])
         ])) : t.isError ? (p(), k("div", xo, [
-          E(e.$slots, "error", {}, () => [
+          A(e.$slots, "error", {}, () => [
             g("div", Po, [
               g("div", Co, [
                 O($o)
@@ -2599,7 +2599,7 @@ const $o = /* @__PURE__ */ Me(yo, [["render", Io]]), So = {
             ])
           ], !0)
         ])) : (p(), k("div", _o, [
-          E(e.$slots, "default", {}, void 0, !0)
+          A(e.$slots, "default", {}, void 0, !0)
         ]))
       ]),
       _: 3
@@ -2635,14 +2635,14 @@ function ke(t) {
 function Oo(t, e) {
   if (!(t instanceof e)) throw new TypeError("Cannot call a class as a function");
 }
-function Ao(t, e) {
+function Eo(t, e) {
   for (var n = 0; n < e.length; n++) {
     var o = e[n];
     o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(t, Mo(o.key), o);
   }
 }
-function Eo(t, e, n) {
-  return e && Ao(t.prototype, e), Object.defineProperty(t, "prototype", { writable: !1 }), t;
+function Ao(t, e, n) {
+  return e && Eo(t.prototype, e), Object.defineProperty(t, "prototype", { writable: !1 }), t;
 }
 function Mo(t) {
   var e = zo(t, "string");
@@ -2664,7 +2664,7 @@ var jo = /* @__PURE__ */ (function() {
     };
     Oo(this, t), this.element = e, this.listener = n;
   }
-  return Eo(t, [{
+  return Ao(t, [{
     key: "bindScrollListener",
     value: function() {
       this.scrollableParents = en(this.element);
@@ -2711,12 +2711,12 @@ var jo = /* @__PURE__ */ (function() {
   }
 };
 function No(t, e, n, o, i, r) {
-  return r.inline ? E(t.$slots, "default", {
+  return r.inline ? A(t.$slots, "default", {
     key: 0
   }) : i.mounted ? (p(), P(Wt, {
     key: 1,
     to: n.appendTo
-  }, [E(t.$slots, "default")], 8, ["to"])) : T("", !0);
+  }, [A(t.$slots, "default")], 8, ["to"])) : T("", !0);
 }
 zt.render = No;
 var Do = `
@@ -3749,7 +3749,7 @@ function rr(t, e, n, o, i, r) {
           }, t.ptmi("root")), [t.$slots.start ? (p(), k("div", y({
             key: 0,
             class: t.cx("start")
-          }, t.ptm("start")), [E(t.$slots, "start")], 16)) : T("", !0), O(l, y({
+          }, t.ptm("start")), [A(t.$slots, "start")], 16)) : T("", !0), O(l, y({
             ref: r.menubarRef,
             id: t.$id + "_list",
             class: t.cx("rootList"),
@@ -3778,7 +3778,7 @@ function rr(t, e, n, o, i, r) {
           }, t.ptm("rootList")), null, 16, ["id", "class", "tabindex", "aria-label", "aria-labelledby", "aria-disabled", "aria-activedescendant", "menuId", "focusedItemId", "items", "templates", "activeItemPath", "visible", "pt", "unstyled", "onFocus", "onBlur", "onKeydown", "onItemClick", "onItemMouseenter", "onItemMousemove"]), t.$slots.end ? (p(), k("div", y({
             key: 1,
             class: t.cx("end")
-          }, t.ptm("end")), [E(t.$slots, "end")], 16)) : T("", !0)], 16, or)) : T("", !0)];
+          }, t.ptm("end")), [A(t.$slots, "end")], 16)) : T("", !0)], 16, or)) : T("", !0)];
         }),
         _: 3
       }, 16, ["onEnter", "onAfterEnter", "onLeave", "onAfterLeave"])];
@@ -3843,7 +3843,7 @@ const ir = { class: "bg-surface-0 dark:bg-surface-900" }, ar = { class: "contain
                   class: X([I.class, "!p-0"])
                 }, {
                   default: w(() => [
-                    E(v.$slots, "logo")
+                    A(v.$slots, "logo")
                   ]),
                   _: 3
                 }, 8, ["to", "class"])
@@ -3881,7 +3881,7 @@ const ir = { class: "bg-surface-0 dark:bg-surface-900" }, ar = { class: "contain
                     key: 1,
                     "aria-label": I["aria-label"],
                     class: "p-tieredmenu-item-link",
-                    onClick: (A) => I.command?.({ originalEvent: A, item: I })
+                    onClick: (E) => I.command?.({ originalEvent: E, item: I })
                   }, [
                     g("span", {
                       class: X(I.icon)
@@ -3964,7 +3964,7 @@ function br(t, e, n, o, i, r) {
   }, t.ptmi("root")), [t.$slots.header ? (p(), k("div", y({
     key: 0,
     class: t.cx("header")
-  }, t.ptm("header")), [E(t.$slots, "header")], 16)) : T("", !0), g("div", y({
+  }, t.ptm("header")), [A(t.$slots, "header")], 16)) : T("", !0), g("div", y({
     class: t.cx("body")
   }, t.ptm("body")), [t.$slots.title || t.$slots.subtitle ? (p(), k("div", y({
     key: 0,
@@ -3972,15 +3972,15 @@ function br(t, e, n, o, i, r) {
   }, t.ptm("caption")), [t.$slots.title ? (p(), k("div", y({
     key: 0,
     class: t.cx("title")
-  }, t.ptm("title")), [E(t.$slots, "title")], 16)) : T("", !0), t.$slots.subtitle ? (p(), k("div", y({
+  }, t.ptm("title")), [A(t.$slots, "title")], 16)) : T("", !0), t.$slots.subtitle ? (p(), k("div", y({
     key: 1,
     class: t.cx("subtitle")
-  }, t.ptm("subtitle")), [E(t.$slots, "subtitle")], 16)) : T("", !0)], 16)) : T("", !0), g("div", y({
+  }, t.ptm("subtitle")), [A(t.$slots, "subtitle")], 16)) : T("", !0)], 16)) : T("", !0), g("div", y({
     class: t.cx("content")
-  }, t.ptm("content")), [E(t.$slots, "content")], 16), t.$slots.footer ? (p(), k("div", y({
+  }, t.ptm("content")), [A(t.$slots, "content")], 16), t.$slots.footer ? (p(), k("div", y({
     key: 1,
     class: t.cx("footer")
-  }, t.ptm("footer")), [E(t.$slots, "footer")], 16)) : T("", !0)], 16)], 16);
+  }, t.ptm("footer")), [A(t.$slots, "footer")], 16)) : T("", !0)], 16)], 16);
 }
 re.render = br;
 const oa = /* @__PURE__ */ N({
@@ -4192,10 +4192,10 @@ const Tr = {
 }, Lr = {
   key: 0,
   class: "flex flex-col sm:flex-row gap-0 sm:gap-2"
-}, Or = { class: "text-primary break-all" }, Ar = {
+}, Or = { class: "text-primary break-all" }, Er = {
   key: 1,
   class: "flex flex-col sm:flex-row gap-0 sm:gap-2"
-}, Er = { class: "text-primary break-all sm:pl-2" }, Mr = {
+}, Ar = { class: "text-primary break-all sm:pl-2" }, Mr = {
   key: 1,
   class: "vstack-sm"
 }, ia = /* @__PURE__ */ N({
@@ -4208,7 +4208,7 @@ const Tr = {
   setup(t) {
     return (e, n) => (p(), P(M(re), null, {
       title: w(() => [
-        E(e.$slots, "default", { id: "header" }, () => [
+        A(e.$slots, "default", { id: "header" }, () => [
           n[0] || (n[0] = g("h2", { class: "h2 text-color" }, "Your details", -1))
         ])
       ]),
@@ -4226,13 +4226,13 @@ const Tr = {
               g("code", Or, F(t.userId), 1)
             ])
           ])) : T("", !0),
-          t.userEmail ? (p(), k("div", Ar, [
+          t.userEmail ? (p(), k("div", Er, [
             n[2] || (n[2] = g("div", { class: "block sm:flex font-bold" }, [
               g("span", null, "Email"),
               g("span", { class: "hidden sm:block" }, ":")
             ], -1)),
             g("div", null, [
-              g("strong", Er, F(t.userEmail), 1)
+              g("strong", Ar, F(t.userEmail), 1)
             ])
           ])) : T("", !0)
         ]))
@@ -5138,14 +5138,14 @@ function ci(t, e, n, o, i, r) {
         "data-p": r.dataP
       }, t.ptm("root")), [g("div", y({
         class: t.cx("contentWrapper")
-      }, t.ptm("contentWrapper")), [t.$slots.container ? E(t.$slots, "container", {
+      }, t.ptm("contentWrapper")), [t.$slots.container ? A(t.$slots, "container", {
         key: 0,
         closeCallback: r.close
       }) : (p(), k("div", y({
         key: 1,
         class: t.cx("content"),
         "data-p": r.dataP
-      }, t.ptm("content")), [E(t.$slots, "icon", {
+      }, t.ptm("content")), [A(t.$slots, "icon", {
         class: X(t.cx("icon"))
       }, function() {
         return [(p(), P(ce(t.icon ? "span" : null), y({
@@ -5156,7 +5156,7 @@ function ci(t, e, n, o, i, r) {
         key: 0,
         class: t.cx("text"),
         "data-p": r.dataP
-      }, t.ptm("text")), [E(t.$slots, "default")], 16, li)) : T("", !0), t.closable ? Ge((p(), k("button", y({
+      }, t.ptm("text")), [A(t.$slots, "default")], 16, li)) : T("", !0), t.closable ? Ge((p(), k("button", y({
         key: 1,
         class: t.cx("closeButton"),
         "aria-label": r.closeAriaLabel,
@@ -5165,7 +5165,7 @@ function ci(t, e, n, o, i, r) {
           return r.close(a);
         }),
         "data-p": r.dataP
-      }, ht(ht({}, t.closeButtonProps), t.ptm("closeButton"))), [E(t.$slots, "closeicon", {}, function() {
+      }, ht(ht({}, t.closeButtonProps), t.ptm("closeButton"))), [A(t.$slots, "closeicon", {}, function() {
         return [t.closeIcon ? (p(), k("i", y({
           key: 0,
           class: [t.cx("closeIcon"), t.closeIcon],
@@ -5201,7 +5201,7 @@ const pi = { class: "flex flex-col gap-1" }, mi = ["for"], fi = {
       }, F(t.label), 9, mi)) : T("", !0),
       t.helper ? (p(), k("p", fi, F(t.helper), 1)) : T("", !0),
       g("div", gi, [
-        E(e.$slots, "default")
+        A(e.$slots, "default")
       ]),
       t.error ? (p(), P(M(et), {
         key: 2,
@@ -5232,7 +5232,7 @@ const pi = { class: "flex flex-col gap-1" }, mi = ["for"], fi = {
     function n(a) {
       return Pt.string().email().safeParse(a).success;
     }
-    const o = Ae(t, "email"), i = t, r = e;
+    const o = Ee(t, "email"), i = t, r = e;
     le(() => {
       r("validity-changed", n(o.value));
     });
@@ -5273,7 +5273,7 @@ const pi = { class: "flex flex-col gap-1" }, mi = ["for"], fi = {
         style: { "font-size": "1.2rem !important" }
       }, null, 2),
       g("div", vi, [
-        E(e.$slots, "default")
+        A(e.$slots, "default")
       ])
     ]));
   }
@@ -5288,7 +5288,7 @@ const pi = { class: "flex flex-col gap-1" }, mi = ["for"], fi = {
   }),
   emits: /* @__PURE__ */ oe(["requestEmailChange"], ["update:email"]),
   setup(t, { emit: e }) {
-    const n = e, o = Ae(t, "email"), i = z(!1), r = z(!1);
+    const n = e, o = Ee(t, "email"), i = z(!1), r = z(!1);
     function l(a) {
       r.value = a;
     }
@@ -5297,7 +5297,7 @@ const pi = { class: "flex flex-col gap-1" }, mi = ["for"], fi = {
     }
     return (a, s) => (p(), P(M(re), null, {
       title: w(() => [
-        E(a.$slots, "default", { id: "header" }, () => [
+        A(a.$slots, "default", { id: "header" }, () => [
           s[1] || (s[1] = g("h2", { class: "h2" }, "Change your email", -1))
         ])
       ]),
@@ -5318,7 +5318,7 @@ const pi = { class: "flex flex-col gap-1" }, mi = ["for"], fi = {
         })) : (p(), k("div", yi, [
           g("form", {
             class: "vstack-form",
-            onSubmit: Ee(u, ["prevent"])
+            onSubmit: Ae(u, ["prevent"])
           }, [
             O(Bt, {
               email: o.value,
@@ -5352,15 +5352,15 @@ const pi = { class: "flex flex-col gap-1" }, mi = ["for"], fi = {
     isDeleteEmailSent: { type: Boolean },
     isLoading: { type: Boolean }
   },
-  emits: ["send-delete-email"],
+  emits: ["sendDeleteEmail"],
   setup(t, { emit: e }) {
     const n = t, o = e;
     function i() {
-      o("send-delete-email");
+      o("sendDeleteEmail");
     }
     return (r, l) => (p(), P(M(re), null, {
       title: w(() => [
-        E(r.$slots, "default", { id: "header" }, () => [
+        A(r.$slots, "default", { id: "header" }, () => [
           l[0] || (l[0] = g("h2", { class: "h2" }, "Delete your account", -1))
         ])
       ]),
@@ -5439,7 +5439,7 @@ const Le = { getProfile: Si, updateProfile: wi, getProfileConfig: $i }, xi = { c
   }),
   emits: /* @__PURE__ */ oe(["validity-changed"], ["update:name"]),
   setup(t, { emit: e }) {
-    const n = e, o = t, i = Ae(t, "name");
+    const n = e, o = t, i = Ee(t, "name");
     le(() => {
       n("validity-changed", u());
     });
@@ -5481,14 +5481,14 @@ const Le = { getProfile: Si, updateProfile: wi, getProfileConfig: $i }, xi = { c
       await v();
     });
     const c = q(() => {
-      const b = { isActive: !1, isRequired: !1 }, I = i.value?.find((A) => A.category === "name");
+      const b = { isActive: !1, isRequired: !1 }, I = i.value?.find((E) => E.category === "name");
       if (!I) return b;
-      const _ = I.fields.find((A) => A.type === "first_name");
+      const _ = I.fields.find((E) => E.type === "first_name");
       return _ && (b.isActive = !0, b.isRequired = _.isRequired), b;
     }), f = q(() => {
-      const b = { isActive: !1, isRequired: !1 }, I = i.value?.find((A) => A.category === "name");
+      const b = { isActive: !1, isRequired: !1 }, I = i.value?.find((E) => E.category === "name");
       if (!I) return b;
-      const _ = I.fields.find((A) => A.type === "last_name");
+      const _ = I.fields.find((E) => E.type === "last_name");
       return _ && (b.isActive = !0, b.isRequired = _.isRequired), b;
     });
     async function v() {
@@ -5542,7 +5542,7 @@ const Le = { getProfile: Si, updateProfile: wi, getProfileConfig: $i }, xi = { c
             g("section", null, [
               g("form", {
                 class: "vstack-form",
-                onSubmit: I[4] || (I[4] = Ee(() => {
+                onSubmit: I[4] || (I[4] = Ae(() => {
                 }, ["prevent"]))
               }, [
                 I[6] || (I[6] = g("p", null, " We need a few basic details for essential purposes—like personalising emails with your name. ", -1)),
@@ -5621,7 +5621,7 @@ const Le = { getProfile: Si, updateProfile: wi, getProfileConfig: $i }, xi = { c
   viewBox: "0 0 48 48",
   "xmlns:xlink": "http://www.w3.org/1999/xlink",
   style: { display: "block" }
-}, Li = { class: "gsi-material-button-contents" }, Oi = { style: { display: "none" } }, Ai = /* @__PURE__ */ N({
+}, Li = { class: "gsi-material-button-contents" }, Oi = { style: { display: "none" } }, Ei = /* @__PURE__ */ N({
   __name: "GoogleAuthIcon",
   props: {
     authType: { default: "Sign in" },
@@ -5666,7 +5666,7 @@ const Le = { getProfile: Si, updateProfile: wi, getProfileConfig: $i }, xi = { c
       ])
     ]));
   }
-}), Ei = /* @__PURE__ */ Me(Ai, [["__scopeId", "data-v-b8cb838c"]]), Mi = { class: "h1" }, zi = { key: 0 }, ji = { key: 1 }, Vi = /* @__PURE__ */ N({
+}), Ai = /* @__PURE__ */ Me(Ei, [["__scopeId", "data-v-b8cb838c"]]), Mi = { class: "h1" }, zi = { key: 0 }, ji = { key: 1 }, Vi = /* @__PURE__ */ N({
   __name: "SignInUpForm",
   props: /* @__PURE__ */ oe({
     pageAuthType: {},
@@ -5678,7 +5678,7 @@ const Le = { getProfile: Si, updateProfile: wi, getProfileConfig: $i }, xi = { c
   }),
   emits: /* @__PURE__ */ oe(["sendCodeSuccess", "signupStartError", "googleSignInError"], ["update:email"]),
   setup(t, { emit: e }) {
-    const n = e, o = z(!1), i = Ae(t, "email"), r = z(!1), l = z(!1);
+    const n = e, o = z(!1), i = Ee(t, "email"), r = z(!1), l = z(!1);
     async function u() {
       if (l.value = !0, !!r.value)
         try {
@@ -5726,7 +5726,7 @@ const Le = { getProfile: Si, updateProfile: wi, getProfileConfig: $i }, xi = { c
             _: 1
           })
         ])) : (p(), k("section", ji, [
-          O(Ei, {
+          O(Ai, {
             apiDomain: t.apiDomain,
             authType: t.pageAuthType,
             onGoogleSignInError: s[0] || (s[0] = (...d) => a.$emit("googleSignInError", ...d))
@@ -5739,7 +5739,7 @@ const Le = { getProfile: Si, updateProfile: wi, getProfileConfig: $i }, xi = { c
           g("form", {
             class: "vstack-form",
             "data-test": "auth-form",
-            onSubmit: s[3] || (s[3] = Ee(() => {
+            onSubmit: s[3] || (s[3] = Ae(() => {
             }, ["prevent"]))
           }, [
             s[5] || (s[5] = g("p", { class: "mb-2" }, " This website offers a Passwordless Sign-In option. Instead of remembering a password, you'll receive a one-time code via email each time you sign in. ", -1)),
@@ -5960,7 +5960,7 @@ function Ki(t, e, n, o, i, r) {
   return p(), k("div", y({
     class: t.cx("root")
   }, t.ptmi("root")), [(p(!0), k(Ce, null, kt(t.length, function(u) {
-    return E(t.$slots, "default", {
+    return A(t.$slots, "default", {
       key: u,
       events: r.getTemplateEvents(u - 1),
       attrs: r.getTemplateAttrs(u - 1),
@@ -6107,7 +6107,7 @@ const Ri = { class: "px-4 py-8 sm:p-8" }, Ui = { class: "flex flex-col items-str
         content: w(() => [
           g("form", {
             class: "vstack-lg",
-            onSubmit: m[1] || (m[1] = Ee(() => {
+            onSubmit: m[1] || (m[1] = Ae(() => {
             }, ["prevent"]))
           }, [
             g("div", Wi, [

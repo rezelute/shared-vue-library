@@ -39,12 +39,12 @@ const props = defineProps<{
    isDeleteEmailSent: boolean
    isLoading?: boolean
 }>()
-const emits = defineEmits(["send-delete-email"])
+const emits = defineEmits(["sendDeleteEmail"])
 
 // methods
 // -----------------------------------------
 function sendDeleteEmail() {
-   emits("send-delete-email")
+   emits("sendDeleteEmail")
 }
 </script>
 
