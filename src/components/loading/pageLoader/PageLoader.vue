@@ -13,8 +13,12 @@
                <!-- Fallback preloader if no slot provided -->
                <ProgressSpinner aria-label="Loading" />
 
+               <!-- loading text (visible or accessible) -->
+               <div v-if="loadingText" class="text-center mt-4">
+                  {{ loadingText }}
+               </div>
                <!-- Invisible fallback for accessibility only if no text is provided -->
-               <span class="sr-only">Loading...</span>
+               <span v-else class="sr-only">Loading...</span>
             </slot>
          </div>
       </div>
@@ -48,6 +52,7 @@ import PageErrorIcon from "../../icons/PageErrorIcon.vue"
 withDefaults(
    defineProps<{
       isLoading: boolean
+      loadingText?: string
       showPreloadSlot?: boolean // if true, intention is use the preload slot rather than the default spinner
       isError?: boolean
    }>(),

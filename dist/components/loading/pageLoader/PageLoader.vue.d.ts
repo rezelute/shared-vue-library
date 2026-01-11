@@ -1,5 +1,6 @@
 type __VLS_Props = {
     isLoading: boolean;
+    loadingText?: string;
     showPreloadSlot?: boolean;
     isError?: boolean;
 };
