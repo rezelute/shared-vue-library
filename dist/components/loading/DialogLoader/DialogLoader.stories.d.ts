@@ -9,7 +9,7 @@ declare const meta: {
         visible: boolean;
         headerText: string;
         loadingText?: string;
-    }> & Readonly<{}>, {}, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, any>;
+    }> & Readonly<{}>, {}, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, HTMLDivElement>;
     tags: string[];
     argTypes: {
         visible: {
