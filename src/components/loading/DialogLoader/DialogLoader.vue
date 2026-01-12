@@ -9,7 +9,7 @@
          :header="headerText"
          :showFooter="false"
          :closeOnEscape="false"
-         pt:mask:style="background-color: rgba(0, 0, 0, 0.7) !important"
+         pt:mask:style="background-color: rgba(0, 0, 0, 0.9) !important"
       >
          <div class="flex flex-col justify-center">
             <ProgressSpinner />

@@ -5052,7 +5052,7 @@ const xr = { class: "dialog-loader" }, Cr = { class: "flex flex-col justify-cent
         header: t.headerText,
         showFooter: !1,
         closeOnEscape: !1,
-        "pt:mask:style": "background-color: rgba(0, 0, 0, 0.7) !important"
+        "pt:mask:style": "background-color: rgba(0, 0, 0, 0.9) !important"
       }, {
         default: S(() => [
           g("div", Cr, [
