@@ -3,7 +3,9 @@ export { default as PageLoader } from "./loading/pageLoader/PageLoader.vue"
 export { default as ThemeToggle } from "./themeToggle/ThemeToggle.vue"
 export { default as SiteNavigation } from "./siteNavigation/SiteNavigation.vue"
 export { default as AppErrorInfo } from "./appErrorInfo/AppErrorInfo.vue"
+// loaders
 export { default as PageInfiniteLoader } from "./loading/pageInfiniteLoader/PageInfiniteLoader.vue"
+export { default as DialogLoader } from "./loading/DialogLoader/DialogLoader.vue"
 // account
 export { default as UserAccountInfo } from "./account/UserAccountInfo.vue"
 export { default as ChangeEmailRequest } from "./account/ChangeEmailRequest.vue"

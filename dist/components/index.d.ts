@@ -3,6 +3,7 @@ export { default as ThemeToggle } from './themeToggle/ThemeToggle.vue';
 export { default as SiteNavigation } from './siteNavigation/SiteNavigation.vue';
 export { default as AppErrorInfo } from './appErrorInfo/AppErrorInfo.vue';
 export { default as PageInfiniteLoader } from './loading/pageInfiniteLoader/PageInfiniteLoader.vue';
+export { default as DialogLoader } from './loading/DialogLoader/DialogLoader.vue';
 export { default as UserAccountInfo } from './account/UserAccountInfo.vue';
 export { default as ChangeEmailRequest } from './account/ChangeEmailRequest.vue';
 export { default as DeleteAccountRequest } from './account/DeleteAccountRequest.vue';
