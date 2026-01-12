@@ -1,4 +1,4 @@
-import { m as f } from "../messages-Bdsuw548.js";
+import { m as f } from "../messages-uGUYYM-c.js";
 import { ref as l } from "vue";
 const i = {
   DEFAULT_LIFE: 4e3

@@ -32,9 +32,15 @@ declare const _default: {
       }
    },
    "account": {
-      "deleteError": {
-         "summary": "We failed to delete your account!",
-         "detail": "Something went wrong while deleting your account. Please try again or contact us to let us know about this issue."
+      "delete": {
+         "error": {
+            "summary": "We failed to delete your account!",
+            "detail": "Something went wrong while deleting your account. Please try again or contact us to let us know about this issue."
+         },
+         "success": {
+            "summary": "Your account has been deleted",
+            "detail": "We're sorry to see you go! Your account and all associated data have been successfully deleted. If you change your mind, feel free to create a new account anytime."
+         }
       }
    }
 }

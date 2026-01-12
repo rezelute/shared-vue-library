@@ -35,9 +35,15 @@ declare const _default: {
             };
         };
         account: {
-            deleteError: {
-                summary: string;
-                detail: string;
+            delete: {
+                error: {
+                    summary: string;
+                    detail: string;
+                };
+                success: {
+                    summary: string;
+                    detail: string;
+                };
             };
         };
     };

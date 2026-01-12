@@ -43,9 +43,15 @@ export default function useToasting(toast: ToastServiceMethods): {
             };
         };
         account: {
-            deleteError: {
-                summary: string;
-                detail: string;
+            delete: {
+                error: {
+                    summary: string;
+                    detail: string;
+                };
+                success: {
+                    summary: string;
+                    detail: string;
+                };
             };
         };
     };
