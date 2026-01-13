@@ -1,5 +1,4 @@
 import { defineStore } from "pinia"
-import Session from "supertokens-web-js/recipe/session"
 import { ref } from "vue"
 
 const useUserStore = defineStore("userStore", () => {
@@ -7,10 +6,10 @@ const useUserStore = defineStore("userStore", () => {
    const isFetchingSession = ref(false)
 
    // Function to check session status
-   async function updateAuth() {
+   async function updateAuth(doesSessionExist: boolean) {
       try {
          isFetchingSession.value = true
-         isSignedIn.value = await Session.doesSessionExist()
+         isSignedIn.value = doesSessionExist
       } catch (err) {
          isSignedIn.value = false
          console.error("Error checking session status", err)
