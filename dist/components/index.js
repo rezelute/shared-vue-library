@@ -6391,9 +6391,10 @@ const ca = { class: "flex flex-col gap-1" }, pa = ["for"], ma = {
 }), $a = { class: "vstack-form" }, Ia = "Name can be letters only, at least 2 characters and max 50 characters", is = /* @__PURE__ */ V({
   __name: "NameInput",
   props: /* @__PURE__ */ re({
-    isSubmitClicked: { type: Boolean },
     label: {},
-    placeholder: {}
+    placeholder: {},
+    isSubmitClicked: { type: Boolean, default: !1 },
+    isRequired: { type: Boolean, default: !0 }
   }, {
     name: { required: !0 },
     nameModifiers: {}
@@ -6406,7 +6407,8 @@ const ca = { class: "flex flex-col gap-1" }, pa = ["for"], ma = {
     });
     const i = Ve(t, "name");
     function r() {
-      return Nt.string().min(2).max(50).safeParse(i.value).success;
+      const u = i.value ?? "";
+      return !o.isRequired && u.trim() === "" ? !0 : u.trim().length === 0 ? !1 : Nt.string().min(2).max(50).safeParse(u).success;
     }
     Tt(i, () => {
       n("validity-changed", r());
@@ -6425,9 +6427,9 @@ const ca = { class: "flex flex-col gap-1" }, pa = ["for"], ma = {
             "onUpdate:modelValue": s[0] || (s[0] = (a) => i.value = a),
             invalid: l.value,
             placeholder: t.placeholder,
-            required: "",
+            required: t.isRequired,
             class: "w-full"
-          }, null, 8, ["modelValue", "invalid", "placeholder"])
+          }, null, 8, ["modelValue", "invalid", "placeholder", "required"])
         ]),
         _: 1
       }, 8, ["label", "error"])

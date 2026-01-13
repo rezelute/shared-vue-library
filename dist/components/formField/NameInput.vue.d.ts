@@ -1,7 +1,8 @@
 type __VLS_Props = {
-    isSubmitClicked: boolean;
-    label: string;
+    label?: string;
     placeholder?: string;
+    isSubmitClicked?: boolean;
+    isRequired?: boolean;
 };
 type __VLS_PublicProps = {
     "name": string | null;
@@ -13,5 +14,8 @@ declare const _default: import('vue').DefineComponent<__VLS_PublicProps, {}, {},
 }, string, import('vue').PublicProps, Readonly<__VLS_PublicProps> & Readonly<{
     "onValidity-changed"?: ((value: boolean) => any) | undefined;
     "onUpdate:name"?: ((value: string | null) => any) | undefined;
-}>, {}, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, HTMLDivElement>;
+}>, {
+    isSubmitClicked: boolean;
+    isRequired: boolean;
+}, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, HTMLDivElement>;
 export default _default;

@@ -6,7 +6,7 @@
             v-model="name"
             :invalid="showNameError"
             :placeholder="placeholder"
-            required
+            :required="isRequired"
             class="w-full"
          />
       </FormField>
@@ -23,11 +23,18 @@ import FormField from "@/components/formField/FormField.vue"
 const emit = defineEmits<{
    (e: "validity-changed", value: boolean): void
 }>()
-const props = defineProps<{
-   isSubmitClicked: boolean
-   label: string
-   placeholder?: string
-}>()
+const props = withDefaults(
+   defineProps<{
+      label?: string
+      placeholder?: string
+      isSubmitClicked?: boolean
+      isRequired?: boolean
+   }>(),
+   {
+      isSubmitClicked: false,
+      isRequired: true,
+   }
+)
 
 // lifecycle
 // -----------------------------------------
@@ -46,7 +53,13 @@ const name = defineModel<string | null>("name", { required: true })
 // validation
 // -----------------------------------------
 function isNameValid() {
-   return z.string().min(2).max(50).safeParse(name.value).success
+   const val = name.value ?? ""
+   // If not required and empty, it's valid
+   if (!props.isRequired && val.trim() === "") return true
+   // If required or not empty, validate
+   // Disallow only spaces
+   if (val.trim().length === 0) return false
+   return z.string().min(2).max(50).safeParse(val).success
 }
 
 // watchers
