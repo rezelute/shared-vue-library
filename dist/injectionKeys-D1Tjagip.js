@@ -1,5 +1,5 @@
 import "vue";
-function o(t) {
+function i(t) {
   if (t instanceof Error)
     return {
       name: t.name,
@@ -11,7 +11,7 @@ function o(t) {
       status: t.status,
       statusText: t.statusText,
       url: t.url,
-      headers: n(t.headers)
+      headers: e(t.headers)
     };
   if (typeof t == "object" && t !== null)
     try {
@@ -21,33 +21,14 @@ function o(t) {
     }
   return { message: String(t) };
 }
-function n(t) {
+function e(t) {
   const s = {};
-  return t.forEach((e, a) => {
-    s[a] = e;
+  return t.forEach((n, a) => {
+    s[a] = n;
   }), s;
 }
-class i extends Error {
-  response;
-  data;
-  constructor(s, e, a) {
-    super(s), this.name = "ApiResponseError", this.response = {
-      status: e.status,
-      statusText: e.statusText,
-      url: e.url
-    }, this.data = a;
-  }
-}
 const u = Symbol("API_DOMAIN");
-function c(t) {
-  const { redirect: s, ...e } = t;
-  if (!s) return null;
-  const a = new URLSearchParams(e).toString();
-  return a ? `${s}?${a}` : s;
-}
 export {
   u as A,
-  i as a,
-  c as g,
-  o as n
+  i as n
 };

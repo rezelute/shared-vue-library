@@ -10,6 +10,9 @@ const someOtherComposable = useSomeComposable()
 defineProps<{}>()
 defineEmits<{}>()
 
+// LIFECYCLE
+onMounted(() => console.info('mounted'))
+
 // MODELS
 const myModel = defineModel('myModel', { type: String, default: '' })
 
@@ -30,7 +33,4 @@ watch(counter, val => console.info(val))
 
 // METHODS
 function increment() { counter.value++ }
-
-// LIFECYCLE
-onMounted(() => console.info('mounted'))
 </script>

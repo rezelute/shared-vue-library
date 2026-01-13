@@ -1,13 +1,12 @@
-export { default as PageLoader } from './loading/pageLoader/PageLoader.vue';
 export { default as ThemeToggle } from './themeToggle/ThemeToggle.vue';
 export { default as SiteNavigation } from './siteNavigation/SiteNavigation.vue';
 export { default as AppErrorInfo } from './appErrorInfo/AppErrorInfo.vue';
+export { default as PageLoader } from './loading/pageLoader/PageLoader.vue';
 export { default as PageInfiniteLoader } from './loading/pageInfiniteLoader/PageInfiniteLoader.vue';
 export { default as DialogLoader } from './loading/DialogLoader/DialogLoader.vue';
 export { default as UserAccountInfo } from './account/UserAccountInfo.vue';
 export { default as ChangeEmailRequest } from './account/ChangeEmailRequest.vue';
 export { default as DeleteAccountRequest } from './account/DeleteAccountRequest.vue';
-export { default as Profile } from './account/profile/Profile.vue';
-export { default as ProfileCheck } from './account/profile/ProfileCheck.vue';
 export { default as FormField } from './formField/FormField.vue';
+export { default as NameInput } from './formField/NameInput.vue';
 export { default as SignInUp } from './SignInUp/SignInUp.vue';

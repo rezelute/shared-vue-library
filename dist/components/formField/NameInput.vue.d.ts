@@ -1,6 +1,6 @@
 type __VLS_Props = {
     isSubmitClicked: boolean;
-    nameType: "first" | "last";
+    nameLabel: string;
 };
 type __VLS_PublicProps = {
     "name": string;
