@@ -1,6 +1,7 @@
 type __VLS_Props = {
     isSubmitClicked: boolean;
-    nameLabel: string;
+    label: string;
+    placeholder?: string;
 };
 type __VLS_PublicProps = {
     "name": string | null;

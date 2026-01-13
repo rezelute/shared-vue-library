@@ -1,11 +1,11 @@
 <template>
    <div class="vstack-form">
-      <FormField id="profile_name" :label="nameLabel" :error="showNameError ? nameInvalidText : ''">
+      <FormField id="profile_name" :label="label" :error="showNameError ? nameInvalidText : ''">
          <Textbox
             id="profile_name"
             v-model="name"
             :invalid="showNameError"
-            :placeholder="nameLabel"
+            :placeholder="placeholder"
             required
             class="w-full"
          />
@@ -25,7 +25,8 @@ const emit = defineEmits<{
 }>()
 const props = defineProps<{
    isSubmitClicked: boolean
-   nameLabel: string
+   label: string
+   placeholder?: string
 }>()
 
 // lifecycle

@@ -6392,7 +6392,8 @@ const ca = { class: "flex flex-col gap-1" }, pa = ["for"], ma = {
   __name: "NameInput",
   props: /* @__PURE__ */ re({
     isSubmitClicked: { type: Boolean },
-    nameLabel: {}
+    label: {},
+    placeholder: {}
   }, {
     name: { required: !0 },
     nameModifiers: {}
@@ -6414,7 +6415,7 @@ const ca = { class: "flex flex-col gap-1" }, pa = ["for"], ma = {
     return (u, s) => (p(), h("div", $a, [
       _(rt, {
         id: "profile_name",
-        label: t.nameLabel,
+        label: t.label,
         error: l.value ? Ia : ""
       }, {
         default: S(() => [
@@ -6423,7 +6424,7 @@ const ca = { class: "flex flex-col gap-1" }, pa = ["for"], ma = {
             modelValue: i.value,
             "onUpdate:modelValue": s[0] || (s[0] = (a) => i.value = a),
             invalid: l.value,
-            placeholder: t.nameLabel,
+            placeholder: t.placeholder,
             required: "",
             class: "w-full"
           }, null, 8, ["modelValue", "invalid", "placeholder"])
