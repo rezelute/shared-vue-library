@@ -6,7 +6,7 @@
                <RouterLink
                   :to="!userSignedIn ? '/' : '/home'"
                   :class="(slotProps as any).class"
-                  class="!p-0"
+                  class="p-0!"
                >
                   <slot name="logo" />
                </RouterLink>
@@ -53,15 +53,8 @@
 <script setup lang="ts">
 import Button from "primevue/button"
 import TieredMenu from "primevue/tieredmenu"
-import Session from "supertokens-web-js/recipe/session"
 import { computed, ref } from "vue"
 import ThemeToggle from "../../components/themeToggle/ThemeToggle.vue"
-import { messages } from "../../content"
-import { useUserStore } from "../../stores/userStore"
-import { type EmitNotify } from "../../types"
-import normalizeError from "../../utils/error/normalizeError.util"
-
-defineOptions({ name: "SiteNavigation" })
 
 interface InputMenuLink {
    label: string
@@ -81,7 +74,9 @@ interface ButtonMenuItem {
 
 type RenderedMenuItem = LinkMenuItem | ButtonMenuItem
 
-const emits = defineEmits(["signoutSuccess", "signoutError"])
+// props & emits
+// -----------------------------------------
+const emits = defineEmits(["signOutClick"])
 const props = withDefaults(
    defineProps<{
       items: InputMenuLink[]
@@ -92,17 +87,13 @@ const props = withDefaults(
    }
 )
 
-// data
+// state
 // -----------------------------------------
-const userStore = useUserStore()
-const signOutloading = ref(false)
 const tieredMenu = ref<InstanceType<typeof TieredMenu> | null>(null)
-
 const signUpSystemItems = ref<RenderedMenuItem[]>([
    { type: "link", label: "Sign in", icon: "pi pi-sign-in", to: "/signin" },
    { type: "link", label: "Sign up", icon: "pi pi-user-plus", to: "/signup" },
 ])
-
 const signedOutSystemItems = ref<RenderedMenuItem[]>([
    {
       type: "button",
@@ -112,6 +103,7 @@ const signedOutSystemItems = ref<RenderedMenuItem[]>([
       command: onSignout,
    } as ButtonMenuItem,
 ])
+
 // computed
 // -----------------------------------------
 const userLinkItems = computed(() => {
@@ -142,24 +134,6 @@ const toggleMenu = (event: Event) => {
 }
 
 async function onSignout() {
-   try {
-      signOutloading.value = true
-      await Session.signOut()
-      userStore.updateAuth()
-
-      // console.log("emitting signoutSuccess");
-
-      emits("signoutSuccess")
-   } catch (err) {
-      emits("signoutError", {
-         type: "unexpected",
-         severity: "error",
-         summary: messages.error.somethingWentWrong.summary,
-         detail: messages.error.somethingWentWrong.detail,
-         json: normalizeError(err),
-      } satisfies EmitNotify)
-   } finally {
-      signOutloading.value = false
-   }
+   emits("signOutClick")
 }
 </script>
