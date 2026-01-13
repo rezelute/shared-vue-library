@@ -40,7 +40,7 @@ const nameInvalidText = "Name can be letters only, at least 2 characters and max
 
 // models
 // -----------------------------------------
-const name = defineModel<string>("name", { required: true })
+const name = defineModel<string | null>("name", { required: true })
 
 // validation
 // -----------------------------------------

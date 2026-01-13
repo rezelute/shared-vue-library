@@ -3,7 +3,7 @@ import pluginVitest from "@vitest/eslint-plugin"
 import skipFormatting from "@vue/eslint-config-prettier/skip-formatting"
 import { defineConfigWithVueTs, vueTsConfigs } from "@vue/eslint-config-typescript"
 import simpleImportSort from "eslint-plugin-simple-import-sort"
-import storybook from "eslint-plugin-storybook"
+// import storybook from "eslint-plugin-storybook"
 import pluginVue from "eslint-plugin-vue"
 
 // To allow more languages other than `ts` in `.vue` files, uncomment the following lines:
