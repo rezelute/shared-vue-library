@@ -1,6 +1,6 @@
 # shared-vue-library
 
-This project should help you setup a new Frontend App with components from PrimeVue and authentication from Supertokens.
+This project should help you setup a new Frontend App with components from PrimeVue.
 
 ## Recommended IDE Setup
 

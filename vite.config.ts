@@ -72,13 +72,6 @@ export default defineConfig({
                primevue: "PrimeVue",
                pinia: "Pinia",
             },
-
-            manualChunks(id, { getModuleInfo }) {
-               // Consolidate supertokens-web-js and its recipes into a vendor chunk
-               if (id.includes("node_modules/supertokens-web-js")) {
-                  return "supertokens-vendor"
-               }
-            },
          },
       },
    },
@@ -115,7 +108,7 @@ export default defineConfig({
    //    },
    // },
    resolve: {
-      dedupe: ["vue", "supertokens-web-js"], // force single copy
+      dedupe: ["vue"], // force single copy
       alias: {
          "@": fileURLToPath(new URL("./src", import.meta.url)),
       },
