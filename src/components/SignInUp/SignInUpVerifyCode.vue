@@ -90,13 +90,14 @@ const props = defineProps<{
    pageAuthType: "signIn" | "signUp"
    codeInputAttemptMax: number
    codeInputAttemptCount: number
+   // loading
+   isSubmittingCode: boolean
+   isResendingCode: boolean
 }>()
 
 // state
 // -----------------------------------------
 const userMagicCode = ref("") // user input code
-const isSubmittingCode = ref(false) // Used for data-test="auth-loading"
-const isResendingCode = ref(false) // Used for resend loading state
 
 // computed
 // -----------------------------------------

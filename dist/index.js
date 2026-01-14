@@ -1,7 +1,6 @@
-import { S as P, a as R, P as L, T as _ } from "./supertokens-vendor-BDYxMEf3.js";
-import { H as D, N as A, P as m, S as b, B as s } from "./index-DExoY821.js";
-import { reactive as I, ref as C, watch as f } from "vue";
-var n = {
+import { H as R, N, P as m, S as b, B as s } from "./index-DExoY821.js";
+import { reactive as P, ref as L, watch as f } from "vue";
+var r = {
   STARTS_WITH: "startsWith",
   CONTAINS: "contains",
   NOT_CONTAINS: "notContains",
@@ -17,53 +16,53 @@ var n = {
   DATE_BEFORE: "dateBefore",
   DATE_AFTER: "dateAfter"
 };
-function c(e) {
+function c(t) {
   "@babel/helpers - typeof";
-  return c = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function(t) {
-    return typeof t;
-  } : function(t) {
-    return t && typeof Symbol == "function" && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : typeof t;
-  }, c(e);
+  return c = typeof Symbol == "function" && typeof Symbol.iterator == "symbol" ? function(e) {
+    return typeof e;
+  } : function(e) {
+    return e && typeof Symbol == "function" && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e;
+  }, c(t);
 }
-function N(e, t) {
-  var o = Object.keys(e);
+function A(t, e) {
+  var o = Object.keys(t);
   if (Object.getOwnPropertySymbols) {
-    var a = Object.getOwnPropertySymbols(e);
-    t && (a = a.filter(function(h) {
-      return Object.getOwnPropertyDescriptor(e, h).enumerable;
+    var a = Object.getOwnPropertySymbols(t);
+    e && (a = a.filter(function(h) {
+      return Object.getOwnPropertyDescriptor(t, h).enumerable;
     })), o.push.apply(o, a);
   }
   return o;
 }
-function v(e) {
-  for (var t = 1; t < arguments.length; t++) {
-    var o = arguments[t] != null ? arguments[t] : {};
-    t % 2 ? N(Object(o), !0).forEach(function(a) {
-      F(e, a, o[a]);
-    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(o)) : N(Object(o)).forEach(function(a) {
-      Object.defineProperty(e, a, Object.getOwnPropertyDescriptor(o, a));
+function v(t) {
+  for (var e = 1; e < arguments.length; e++) {
+    var o = arguments[e] != null ? arguments[e] : {};
+    e % 2 ? A(Object(o), !0).forEach(function(a) {
+      _(t, a, o[a]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(o)) : A(Object(o)).forEach(function(a) {
+      Object.defineProperty(t, a, Object.getOwnPropertyDescriptor(o, a));
     });
   }
-  return e;
+  return t;
 }
-function F(e, t, o) {
-  return (t = x(t)) in e ? Object.defineProperty(e, t, { value: o, enumerable: !0, configurable: !0, writable: !0 }) : e[t] = o, e;
+function _(t, e, o) {
+  return (e = D(e)) in t ? Object.defineProperty(t, e, { value: o, enumerable: !0, configurable: !0, writable: !0 }) : t[e] = o, t;
 }
-function x(e) {
-  var t = H(e, "string");
-  return c(t) == "symbol" ? t : t + "";
+function D(t) {
+  var e = C(t, "string");
+  return c(e) == "symbol" ? e : e + "";
 }
-function H(e, t) {
-  if (c(e) != "object" || !e) return e;
-  var o = e[Symbol.toPrimitive];
+function C(t, e) {
+  if (c(t) != "object" || !t) return t;
+  var o = t[Symbol.toPrimitive];
   if (o !== void 0) {
-    var a = o.call(e, t);
+    var a = o.call(t, e);
     if (c(a) != "object") return a;
     throw new TypeError("@@toPrimitive must return a primitive value.");
   }
-  return (t === "string" ? String : Number)(e);
+  return (e === "string" ? String : Number)(t);
 }
-var W = {
+var F = {
   ripple: !1,
   inputStyle: null,
   inputVariant: null,
@@ -189,9 +188,9 @@ var W = {
     }
   },
   filterMatchModeOptions: {
-    text: [n.STARTS_WITH, n.CONTAINS, n.NOT_CONTAINS, n.ENDS_WITH, n.EQUALS, n.NOT_EQUALS],
-    numeric: [n.EQUALS, n.NOT_EQUALS, n.LESS_THAN, n.LESS_THAN_OR_EQUAL_TO, n.GREATER_THAN, n.GREATER_THAN_OR_EQUAL_TO],
-    date: [n.DATE_IS, n.DATE_IS_NOT, n.DATE_BEFORE, n.DATE_AFTER]
+    text: [r.STARTS_WITH, r.CONTAINS, r.NOT_CONTAINS, r.ENDS_WITH, r.EQUALS, r.NOT_EQUALS],
+    numeric: [r.EQUALS, r.NOT_EQUALS, r.LESS_THAN, r.LESS_THAN_OR_EQUAL_TO, r.GREATER_THAN, r.GREATER_THAN_OR_EQUAL_TO],
+    date: [r.DATE_IS, r.DATE_IS_NOT, r.DATE_BEFORE, r.DATE_AFTER]
   },
   zIndex: {
     modal: 1100,
@@ -209,73 +208,73 @@ var W = {
   csp: {
     nonce: void 0
   }
-}, j = Symbol();
-function B(e, t) {
+}, I = Symbol();
+function x(t, e) {
   var o = {
-    config: I(t)
+    config: P(e)
   };
-  return e.config.globalProperties.$primevue = o, e.provide(j, o), U(), k(e, o), o;
+  return t.config.globalProperties.$primevue = o, t.provide(I, o), H(), W(t, o), o;
 }
 var u = [];
-function U() {
-  A.clear(), u.forEach(function(e) {
-    return e?.();
+function H() {
+  N.clear(), u.forEach(function(t) {
+    return t?.();
   }), u = [];
 }
-function k(e, t) {
-  var o = C(!1), a = function() {
+function W(t, e) {
+  var o = L(!1), a = function() {
     var i;
-    if (((i = t.config) === null || i === void 0 ? void 0 : i.theme) !== "none" && !b.isStyleNameLoaded("common")) {
-      var g, l, p = ((g = s.getCommonTheme) === null || g === void 0 ? void 0 : g.call(s)) || {}, S = p.primitive, T = p.semantic, y = p.global, w = p.style, d = {
-        nonce: (l = t.config) === null || l === void 0 || (l = l.csp) === null || l === void 0 ? void 0 : l.nonce
+    if (((i = e.config) === null || i === void 0 ? void 0 : i.theme) !== "none" && !b.isStyleNameLoaded("common")) {
+      var g, l, d = ((g = s.getCommonTheme) === null || g === void 0 ? void 0 : g.call(s)) || {}, S = d.primitive, T = d.semantic, y = d.global, w = d.style, p = {
+        nonce: (l = e.config) === null || l === void 0 || (l = l.csp) === null || l === void 0 ? void 0 : l.nonce
       };
       s.load(S?.css, v({
         name: "primitive-variables"
-      }, d)), s.load(T?.css, v({
+      }, p)), s.load(T?.css, v({
         name: "semantic-variables"
-      }, d)), s.load(y?.css, v({
+      }, p)), s.load(y?.css, v({
         name: "global-variables"
-      }, d)), s.loadStyle(v({
+      }, p)), s.loadStyle(v({
         name: "global-style"
-      }, d), w), b.setLoadedStyleName("common");
+      }, p), w), b.setLoadedStyleName("common");
     }
   };
-  A.on("theme:change", function(r) {
-    o.value || (e.config.globalProperties.$primevue.config.theme = r, o.value = !0);
+  N.on("theme:change", function(n) {
+    o.value || (t.config.globalProperties.$primevue.config.theme = n, o.value = !0);
   });
-  var h = f(t.config, function(r, i) {
+  var h = f(e.config, function(n, i) {
     m.emit("config:change", {
-      newValue: r,
+      newValue: n,
       oldValue: i
     });
   }, {
     immediate: !0,
     deep: !0
   }), E = f(function() {
-    return t.config.ripple;
-  }, function(r, i) {
+    return e.config.ripple;
+  }, function(n, i) {
     m.emit("config:ripple:change", {
-      newValue: r,
+      newValue: n,
       oldValue: i
     });
   }, {
     immediate: !0,
     deep: !0
   }), M = f(function() {
-    return t.config.theme;
-  }, function(r, i) {
-    o.value || b.setTheme(r), t.config.unstyled || a(), o.value = !1, m.emit("config:theme:change", {
-      newValue: r,
+    return e.config.theme;
+  }, function(n, i) {
+    o.value || b.setTheme(n), e.config.unstyled || a(), o.value = !1, m.emit("config:theme:change", {
+      newValue: n,
       oldValue: i
     });
   }, {
     immediate: !0,
     deep: !1
   }), O = f(function() {
-    return t.config.unstyled;
-  }, function(r, i) {
-    !r && t.config.theme && a(), m.emit("config:unstyled:change", {
-      newValue: r,
+    return e.config.unstyled;
+  }, function(n, i) {
+    !n && e.config.theme && a(), m.emit("config:unstyled:change", {
+      newValue: n,
       oldValue: i
     });
   }, {
@@ -284,16 +283,16 @@ function k(e, t) {
   });
   u.push(h), u.push(E), u.push(M), u.push(O);
 }
-var Q = {
-  install: function(t, o) {
-    var a = D(W, o);
-    B(t, a);
+var j = {
+  install: function(e, o) {
+    var a = R(F, o);
+    x(e, a);
   }
 };
-function J(e, t) {
-  e.use(Q, {
+function Q(t, e) {
+  t.use(j, {
     theme: {
-      preset: t,
+      preset: e,
       // MyPreset,
       options: {
         darkModeSelector: ".dark"
@@ -301,17 +300,6 @@ function J(e, t) {
     }
   });
 }
-const z = (e) => {
-  P.init({
-    appInfo: {
-      appName: e.appInfo.appName,
-      apiDomain: e.appInfo.apiDomain,
-      apiBasePath: e.appInfo.apiBasePath || "/auth"
-    },
-    recipeList: [R.init(), L.init({}), _.init()]
-  });
-};
 export {
-  z as initializeSuperTokens,
-  J as setupPrimeVue
+  Q as setupPrimeVue
 };

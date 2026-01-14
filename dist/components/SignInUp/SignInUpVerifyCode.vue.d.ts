@@ -2,6 +2,8 @@ type __VLS_Props = {
     pageAuthType: "signIn" | "signUp";
     codeInputAttemptMax: number;
     codeInputAttemptCount: number;
+    isSubmittingCode: boolean;
+    isResendingCode: boolean;
 };
 declare const _default: import('vue').DefineComponent<__VLS_Props, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
     codeSubmit: (...args: any[]) => void;
