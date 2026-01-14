@@ -28,7 +28,7 @@
 
                   <FormField
                      id="magic-code-input"
-                     :error="showError ? codeValidity.message : ''"
+                     :error="showError ? codeValidationMessage : ''"
                      data-test="auth-error-message"
                   >
                      <InputOtp
@@ -88,7 +88,7 @@ import FormField from "../../components/formField/FormField.vue"
 const emits = defineEmits(["codeSubmit", "codeResendSubmit", "restartFlow"])
 const props = defineProps<{
    pageAuthType: "signIn" | "signUp"
-   codeInputErrorMessage?: string
+   codeInputErrorMessage?: string // invalid code error message from parent (e.g. server responded with invalid code)
    isSubmittingCode: boolean
    isResendingCode: boolean
 }>()
@@ -100,30 +100,23 @@ const isSubmitClicked = ref(false) // To show validation errors
 
 // computed
 // -----------------------------------------
-const codeValidity = computed(() => {
-   if (userMagicCode.value.length < 6) {
-      return {
-         isValid: false,
-         message: "Please enter a valid code length",
-      }
-   }
-   // invalid code input with error message from props (ex error from server validation like expired code)
-   else if (props.codeInputErrorMessage) {
-      return {
-         isValid: false,
-         message: props.codeInputErrorMessage,
-      }
-   }
-   // code likely valid
-   else {
-      return {
-         isValid: true,
-         message: "",
-      }
-   }
+const isCodeLengthValid = computed(() => {
+   return userMagicCode.value.length === 6
 })
 
-const showError = computed(() => isSubmitClicked.value && codeValidity.value.isValid === false)
+const codeValidationMessage = computed(() => {
+   if (!isCodeLengthValid.value) {
+      return "The code must be 6 characters long."
+   }
+   if (props.codeInputErrorMessage) {
+      return props.codeInputErrorMessage
+   }
+   return ""
+})
+
+const showError = computed(() => {
+   return isSubmitClicked.value && codeValidationMessage.value.length > 0
+})
 
 // methods
 // -----------------------------------------
@@ -131,7 +124,8 @@ const showError = computed(() => isSubmitClicked.value && codeValidity.value.isV
 async function onCodeSubmit() {
    isSubmitClicked.value = true
 
-   if (codeValidity.value.isValid === false) {
+   // if the code is not valid, do not emit
+   if (!isCodeLengthValid.value) {
       return
    }
 
