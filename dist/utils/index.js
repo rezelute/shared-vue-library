@@ -1,28 +1,57 @@
-import { A as a, n } from "../injectionKeys-D1Tjagip.js";
-class o extends Error {
+import "vue";
+class a extends Error {
   response;
   data;
-  constructor(t, r, s) {
-    super(t), this.name = "ApiResponseError", this.response = {
-      status: r.status,
-      statusText: r.statusText,
-      url: r.url
-    }, this.data = s;
+  constructor(s, e, n) {
+    super(s), this.name = "ApiResponseError", this.response = {
+      status: e.status,
+      statusText: e.statusText,
+      url: e.url
+    }, this.data = n;
   }
 }
-function i(e) {
-  const { redirect: t, ...r } = e;
-  if (!t) return null;
-  const s = new URLSearchParams(r).toString();
-  return s ? `${t}?${s}` : t;
+function r(t) {
+  if (t instanceof Error)
+    return {
+      name: t.name,
+      message: t.message,
+      stack: t.stack
+    };
+  if (t instanceof Response)
+    return {
+      status: t.status,
+      statusText: t.statusText,
+      url: t.url,
+      headers: o(t.headers)
+    };
+  if (typeof t == "object" && t !== null)
+    try {
+      return JSON.parse(JSON.stringify(t));
+    } catch {
+      return { message: "Non-serializable object error", original: String(t) };
+    }
+  return { message: String(t) };
 }
-const u = {
-  API_DOMAIN_KEY: a
-}, d = { getRedirectTargetWithQueryParams: i, injectionKeys: u, normalizeError: n, ApiResponseError: o };
+function o(t) {
+  const s = {};
+  return t.forEach((e, n) => {
+    s[n] = e;
+  }), s;
+}
+const i = Symbol("API_DOMAIN");
+function u(t) {
+  const { redirect: s, ...e } = t;
+  if (!s) return null;
+  const n = new URLSearchParams(e).toString();
+  return n ? `${s}?${n}` : s;
+}
+const c = {
+  API_DOMAIN_KEY: i
+}, f = { getRedirectTargetWithQueryParams: u, injectionKeys: c, normalizeError: r, ApiResponseError: a };
 export {
-  o as ApiResponseError,
-  d as default,
-  i as getRedirectTargetWithQueryParams,
-  u as injectionKeys,
-  n as normalizeError
+  a as ApiResponseError,
+  f as default,
+  u as getRedirectTargetWithQueryParams,
+  c as injectionKeys,
+  r as normalizeError
 };

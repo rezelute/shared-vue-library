@@ -1,4 +1,4 @@
-import { S as P, a as R, P as L, T as _ } from "./supertokens-vendor-CaoTGeYt.js";
+import { S as P, a as R, P as L, T as _ } from "./supertokens-vendor-BDYxMEf3.js";
 import { H as D, N as A, P as m, S as b, B as s } from "./index-DExoY821.js";
 import { reactive as I, ref as C, watch as f } from "vue";
 var n = {

@@ -15,4 +15,5 @@ export { default as FormField } from "./formField/FormField.vue"
 export { default as NameInput } from "./formField/NameInput.vue"
 
 // auth
-export { default as SignInUp } from "./SignInUp/SignInUp.vue"
+export { default as SignInUpForm } from "./SignInUp/SignInUpForm.vue"
+export { default as SignInUpVerifyCode } from "./SignInUp/SignInUpVerifyCode.vue"
