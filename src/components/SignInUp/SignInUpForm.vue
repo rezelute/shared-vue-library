@@ -27,11 +27,7 @@
                   v-model:email="email"
                   :isSubmitClicked="isSubmitClicked"
                   data-test="auth-email-input"
-                  @validity-changed="
-                     (val) => {
-                        isEmailValid = val
-                     }
-                  "
+                  @validity-changed="onValidityChanged"
                />
                <Button
                   :label="pageAuthType"
@@ -74,6 +70,10 @@ const isSubmitClicked = ref(false) // To show validation errors
 
 // methods
 // -----------------------------------------
+function onValidityChanged(isValid: boolean) {
+   isEmailValid.value = isValid
+}
+
 /** If the email is valid, we will send an OTP code by email */
 async function onSignupStart() {
    isSubmitClicked.value = true

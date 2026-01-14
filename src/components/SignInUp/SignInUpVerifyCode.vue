@@ -28,7 +28,7 @@
 
                   <FormField
                      id="magic-code-input"
-                     :error="codeValidity.isValid === false ? codeValidity.message : ''"
+                     :error="showError ? codeValidity.message : ''"
                      data-test="auth-error-message"
                   >
                      <InputOtp
@@ -39,14 +39,14 @@
                         type="text"
                         placeholder="Input email code"
                         required
-                        :invalid="codeValidity.isValid === false"
+                        :invalid="showError"
                         data-test="auth-code-input"
                      />
                   </FormField>
                   <Button
                      class="w-fit"
                      type="submit"
-                     :loading="isSubmittingCode"
+                     :loading="isSubmittingCode || isResendingCode"
                      data-test="auth-verify-button"
                      @click="onCodeSubmit"
                   >
@@ -63,7 +63,7 @@
                   <Button
                      class="w-fit"
                      type="button"
-                     :loading="isResendingCode"
+                     :loading="isSubmittingCode || isResendingCode"
                      data-test="auth-resend-code"
                      @click="onResendCode"
                   >
@@ -88,9 +88,7 @@ import FormField from "../../components/formField/FormField.vue"
 const emits = defineEmits(["codeSubmit", "codeResendSubmit", "restartFlow"])
 const props = defineProps<{
    pageAuthType: "signIn" | "signUp"
-   codeInputAttemptMax: number
-   codeInputAttemptCount: number
-   // loading
+   codeInputErrorMessage?: string
    isSubmittingCode: boolean
    isResendingCode: boolean
 }>()
@@ -98,6 +96,7 @@ const props = defineProps<{
 // state
 // -----------------------------------------
 const userMagicCode = ref("") // user input code
+const isSubmitClicked = ref(false) // To show validation errors
 
 // computed
 // -----------------------------------------
@@ -108,17 +107,11 @@ const codeValidity = computed(() => {
          message: "Please enter a valid code length",
       }
    }
-   // invalid code input with attempts left
-   else if (
-      props.codeInputAttemptMax > 0 &&
-      props.codeInputAttemptCount > 0 &&
-      props.codeInputAttemptCount < props.codeInputAttemptMax
-   ) {
+   // invalid code input with error message from props (ex error from server validation like expired code)
+   else if (props.codeInputErrorMessage) {
       return {
          isValid: false,
-         message: `The code you entered is incorrect. You have ${
-            props.codeInputAttemptMax - props.codeInputAttemptCount
-         } attempts left.`,
+         message: props.codeInputErrorMessage,
       }
    }
    // code likely valid
@@ -130,10 +123,14 @@ const codeValidity = computed(() => {
    }
 })
 
+const showError = computed(() => isSubmitClicked.value && codeValidity.value.isValid === false)
+
 // methods
 // -----------------------------------------
 /** If the code is valid, we tell the parent so it can redirect to the home page  */
 async function onCodeSubmit() {
+   isSubmitClicked.value = true
+
    if (codeValidity.value.isValid === false) {
       return
    }
