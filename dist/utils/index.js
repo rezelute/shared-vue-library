@@ -1,13 +1,12 @@
-import "vue";
-class a extends Error {
+class n extends Error {
   response;
   data;
-  constructor(s, e, n) {
+  constructor(s, e, a) {
     super(s), this.name = "ApiResponseError", this.response = {
       status: e.status,
       statusText: e.statusText,
       url: e.url
-    }, this.data = n;
+    }, this.data = a;
   }
 }
 function r(t) {
@@ -34,24 +33,20 @@ function r(t) {
 }
 function o(t) {
   const s = {};
-  return t.forEach((e, n) => {
-    s[n] = e;
+  return t.forEach((e, a) => {
+    s[a] = e;
   }), s;
 }
-const i = Symbol("API_DOMAIN");
 function u(t) {
   const { redirect: s, ...e } = t;
   if (!s) return null;
-  const n = new URLSearchParams(e).toString();
-  return n ? `${s}?${n}` : s;
+  const a = new URLSearchParams(e).toString();
+  return a ? `${s}?${a}` : s;
 }
-const c = {
-  API_DOMAIN_KEY: i
-}, f = { getRedirectTargetWithQueryParams: u, injectionKeys: c, normalizeError: r, ApiResponseError: a };
+const i = { getRedirectTargetWithQueryParams: u, normalizeError: r, ApiResponseError: n };
 export {
-  a as ApiResponseError,
-  f as default,
+  n as ApiResponseError,
+  i as default,
   u as getRedirectTargetWithQueryParams,
-  c as injectionKeys,
   r as normalizeError
 };
