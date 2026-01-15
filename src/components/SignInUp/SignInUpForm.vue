@@ -30,8 +30,8 @@
                   @validity-changed="onValidityChanged"
                />
                <Button
-                  :label="pageAuthType"
-                  submit="submit"
+                  :label="pageAuthType === 'signUp' ? 'Sign up' : 'Sign in'"
+                  type="button"
                   :loading="isSignUpLoading"
                   data-test="auth-send-code-button"
                   @click="onSignupStart"

@@ -13,9 +13,12 @@
                link to delete your account.
             </p>
 
-            <Button type="button" :loading="props.isLoading" @click="sendDeleteEmail">
-               Send deletion email
-            </Button>
+            <Button
+               label="Send deletion email"
+               type="button"
+               :loading="props.isLoading"
+               @click="sendDeleteEmail"
+            />
          </div>
 
          <ActionConfirmMsg v-else iconClass="pi pi-envelope">

@@ -19,7 +19,7 @@
                   You will receive an email to your old email to verify your new email address.
                   Please click on the email link to update your email.
                </p>
-               <Button type="submit" :loading="isLoading">Change email</Button>
+               <Button label="Change email" type="submit" :loading="isLoading" />
             </form>
          </div>
          <!-- Email sent -->

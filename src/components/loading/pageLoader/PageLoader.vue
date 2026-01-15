@@ -32,7 +32,7 @@
                   <PageErrorIcon />
                </div>
                <p>Something went wrong, please try again later.</p>
-               <Button type="button" class="btn mt-4 w-fit" @click="$emit('retry')">Retry</Button>
+               <Button label="Retry" type="button" class="btn mt-4 w-fit" @click="$emit('retry')" />
             </div>
          </slot>
       </div>

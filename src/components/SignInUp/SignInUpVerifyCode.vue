@@ -44,14 +44,13 @@
                      />
                   </FormField>
                   <Button
+                     label="Submit code"
                      class="w-fit"
                      type="submit"
                      :loading="isSubmittingCode || isResendingCode"
                      data-test="auth-verify-button"
                      @click="onCodeSubmit"
-                  >
-                     Submit code
-                  </Button>
+                  />
                </div>
 
                <!-- Code re-send -->
@@ -62,13 +61,12 @@
                   </p>
                   <Button
                      class="w-fit"
-                     type="button"
+                     label="Resend code"
+                     type="submit"
                      :loading="isSubmittingCode || isResendingCode"
                      data-test="auth-resend-code"
                      @click="onResendCode"
-                  >
-                     Resend code
-                  </Button>
+                  />
                </div>
             </form>
          </template>
