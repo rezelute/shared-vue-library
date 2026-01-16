@@ -10,7 +10,11 @@
             </Message>
          </div>
          <section v-else>
-            <GoogleAuthIcon :authType="pageAuthType" @signInClick="$emit('googleSignIn')" />
+            <GoogleAuthIcon
+               v-if="enableGoogleAuth"
+               :authType="pageAuthType"
+               @signInClick="$emit('googleSignIn')"
+            />
 
             <div class="flex items-center my-10">
                <hr class="flex-1 border-gray-300" />
@@ -53,11 +57,20 @@ import GoogleAuthIcon from "../../components/googleAuthIcon/GoogleAuthIcon.vue"
 // props/emits
 // -----------------------------------------
 const emits = defineEmits(["signUpStart", "googleSignIn"])
-defineProps<{
-   pageAuthType: "signIn" | "signUp"
-   isSignUpLoading: boolean
-   signupInviteOnly?: boolean
-}>()
+
+withDefaults(
+   defineProps<{
+      pageAuthType: "signIn" | "signUp"
+      isSignUpLoading: boolean
+      signupInviteOnly?: boolean
+      enableGoogleAuth?: boolean
+   }>(),
+   {
+      pageAuthType: "signIn",
+      signupInviteOnly: false,
+      enableGoogleAuth: false,
+   }
+)
 
 // models
 // -----------------------------------------

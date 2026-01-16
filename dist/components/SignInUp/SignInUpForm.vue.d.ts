@@ -2,6 +2,7 @@ type __VLS_Props = {
     pageAuthType: "signIn" | "signUp";
     isSignUpLoading: boolean;
     signupInviteOnly?: boolean;
+    enableGoogleAuth?: boolean;
 };
 type __VLS_PublicProps = {
     "email": string;
@@ -14,5 +15,9 @@ declare const _default: import('vue').DefineComponent<__VLS_PublicProps, {}, {},
     "onUpdate:email"?: ((value: string) => any) | undefined;
     onSignUpStart?: ((...args: any[]) => any) | undefined;
     onGoogleSignIn?: ((...args: any[]) => any) | undefined;
-}>, {}, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, any>;
+}>, {
+    pageAuthType: "signIn" | "signUp";
+    signupInviteOnly: boolean;
+    enableGoogleAuth: boolean;
+}, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, any>;
 export default _default;
