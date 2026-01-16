@@ -52,3 +52,11 @@ export const InviteOnly: Story = {
       email: "",
    },
 }
+
+export const WithGoogleAuth: Story = {
+   args: {
+      pageAuthType: "signIn",
+      enableThirdPartyAuth: { useGoogle: true },
+      email: "",
+   },
+}

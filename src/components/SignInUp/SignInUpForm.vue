@@ -11,12 +11,12 @@
          </div>
          <section v-else>
             <GoogleAuthIcon
-               v-if="enableGoogleAuth"
+               v-if="enableThirdPartyAuth?.useGoogle"
                :authType="pageAuthType"
                @signInClick="$emit('googleSignIn')"
             />
 
-            <div class="flex items-center my-10">
+            <div v-if="enableThirdPartyAuth" class="flex items-center my-10">
                <hr class="flex-1 border-gray-300" />
                <span class="px-4 text-gray-500 uppercase">Or</span>
                <hr class="flex-1 border-gray-300" />
@@ -63,12 +63,13 @@ withDefaults(
       pageAuthType: "signIn" | "signUp"
       isSignUpLoading: boolean
       signupInviteOnly?: boolean
-      enableGoogleAuth?: boolean
+      enableThirdPartyAuth?: {
+         useGoogle?: boolean
+      }
    }>(),
    {
       pageAuthType: "signIn",
       signupInviteOnly: false,
-      enableGoogleAuth: false,
    }
 )
 

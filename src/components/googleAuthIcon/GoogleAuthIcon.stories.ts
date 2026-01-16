@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/vue3-vite"
 import GoogleAuthIcon from "./GoogleAuthIcon.vue"
 
 const meta = {
-   title: "Auth/GoogleAuthIcon",
+   title: "Icons/GoogleAuthIcon",
    component: GoogleAuthIcon,
    tags: ["autodocs"],
    argTypes: {
