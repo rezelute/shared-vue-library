@@ -4,7 +4,7 @@
          <h1 class="h1">{{ pageAuthType === "sign-up" ? "Sign Up" : "Sign In" }}</h1>
       </template>
       <template #content>
-         <div v-if="isSignupInviteOnly && pageAuthType === 'sign-in'">
+         <div v-if="isSignupInviteOnly && pageAuthType === 'sign-up'">
             <Message severity="info">
                Sign up is currently by invite only during the beta period.
             </Message>
