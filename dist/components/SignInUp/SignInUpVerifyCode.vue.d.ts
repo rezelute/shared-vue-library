@@ -1,5 +1,5 @@
 type __VLS_Props = {
-    pageAuthType: "signIn" | "signUp";
+    pageAuthType: "sign-in" | "sign-up";
     codeInputErrorMessage?: string;
     isSubmittingCode: boolean;
     isResendingCode: boolean;

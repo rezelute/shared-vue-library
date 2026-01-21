@@ -6788,7 +6788,7 @@ const _a = { class: "px-4 py-8 sm:p-8" }, La = { class: "flex flex-col items-str
             }, ["prevent"]))
           }, [
             g("div", Ta, [
-              g("p", null, " To finish the " + M(e.pageAuthType === "signUp" ? "signup" : "signin") + " process, enter the code that was emailed to you. Note that the code is only valid for 10 minutes. ", 1),
+              g("p", null, " To finish the " + M(e.pageAuthType === "sign-up" ? "signup" : "signin") + " process, enter the code that was emailed to you. Note that the code is only valid for 10 minutes. ", 1),
               P(ee, {
                 id: "magic-code-input",
                 error: s.value ? u.value : "",

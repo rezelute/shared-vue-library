@@ -21,7 +21,7 @@
                <!-- Code input & Submit -->
                <div class="vstack-form">
                   <p>
-                     To finish the {{ pageAuthType === "signUp" ? "signup" : "signin" }} process,
+                     To finish the {{ pageAuthType === "sign-up" ? "signup" : "signin" }} process,
                      enter the code that was emailed to you. Note that the code is only valid for 10
                      minutes.
                   </p>
@@ -85,7 +85,7 @@ import FormField from "../../components/formField/FormField.vue"
 // -----------------------------------------
 const emits = defineEmits(["codeSubmit", "codeResendSubmit", "restartFlow"])
 const props = defineProps<{
-   pageAuthType: "signIn" | "signUp"
+   pageAuthType: "sign-in" | "sign-up"
    codeInputErrorMessage?: string // invalid code error message from parent (e.g. server responded with invalid code)
    isSubmittingCode: boolean
    isResendingCode: boolean
