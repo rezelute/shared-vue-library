@@ -30,10 +30,10 @@
             </svg>
          </div>
          <span class="gsi-material-button-contents">
-            {{ authType === "signUp" ? "Sign Up" : "Sign In" }} with Google
+            {{ authType === "sign-up" ? "Sign Up" : "Sign In" }} with Google
          </span>
          <span style="display: none">
-            {{ authType === "signUp" ? "Sign Up" : "Sign In" }} with Google
+            {{ authType === "sign-up" ? "Sign Up" : "Sign In" }} with Google
          </span>
       </div>
    </button>
@@ -45,10 +45,10 @@
 defineEmits(["signInClick"])
 withDefaults(
    defineProps<{
-      authType?: "signUp" | "signIn"
+      authType?: "sign-in" | "sign-up"
    }>(),
    {
-      authType: "signIn",
+      authType: "sign-in",
    }
 )
 </script>

@@ -1,10 +1,10 @@
 <template>
    <Card class="max-w-xl p-12 w-full">
       <template #title>
-         <h1 class="h1">{{ pageAuthType === "signUp" ? "Sign Up" : "Sign In" }}</h1>
+         <h1 class="h1">{{ pageAuthType === "sign-up" ? "Sign Up" : "Sign In" }}</h1>
       </template>
       <template #content>
-         <div v-if="signupInviteOnly && pageAuthType === 'signUp'">
+         <div v-if="isSignupInviteOnly && pageAuthType === 'sign-in'">
             <Message severity="info">
                Sign up is currently by invite only during the beta period.
             </Message>
@@ -34,9 +34,9 @@
                   @validity-changed="onValidityChanged"
                />
                <Button
-                  :label="pageAuthType === 'signUp' ? 'Sign up' : 'Sign in'"
+                  :label="pageAuthType === 'sign-up' ? 'Sign up' : 'Sign in'"
                   type="button"
-                  :loading="isSignUpLoading"
+                  :loading="isSignupLoading"
                   data-test="auth-send-code-button"
                   @click="onSignupStart"
                />
@@ -60,7 +60,7 @@ const emits = defineEmits(["signUpStart", "googleSignIn"])
 
 withDefaults(
    defineProps<{
-      pageAuthType: "signIn" | "signUp"
+      pageAuthType: "sign-in" | "sign-up"
       isSignupLoading: boolean
       isSignupInviteOnly?: boolean
       enableThirdPartyAuth?: {
@@ -68,8 +68,7 @@ withDefaults(
       }
    }>(),
    {
-      pageAuthType: "signIn",
-      signupInviteOnly: false,
+      pageAuthType: "sign-in",
    }
 )
 

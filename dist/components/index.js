@@ -6414,7 +6414,7 @@ const ta = { class: "flex flex-col gap-1" }, ea = ["for"], na = {
 }, ga = { class: "gsi-material-button-contents" }, ba = { style: { display: "none" } }, ha = /* @__PURE__ */ j({
   __name: "GoogleAuthIcon",
   props: {
-    authType: { default: "signIn" }
+    authType: { default: "sign-in" }
   },
   emits: ["signInClick"],
   setup(e) {
@@ -6426,23 +6426,23 @@ const ta = { class: "flex flex-col gap-1" }, ea = ["for"], na = {
       g("div", pa, [
         g("div", ma, [
           (p(), b("svg", fa, [...n[1] || (n[1] = [
-            Ce('<path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" data-v-67fbafea></path><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" data-v-67fbafea></path><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" data-v-67fbafea></path><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" data-v-67fbafea></path><path fill="none" d="M0 0h48v48H0z" data-v-67fbafea></path>', 5)
+            Ce('<path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" data-v-78faf8cc></path><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z" data-v-78faf8cc></path><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z" data-v-78faf8cc></path><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" data-v-78faf8cc></path><path fill="none" d="M0 0h48v48H0z" data-v-78faf8cc></path>', 5)
           ])]))
         ]),
-        g("span", ga, M(e.authType === "signUp" ? "Sign Up" : "Sign In") + " with Google ", 1),
-        g("span", ba, M(e.authType === "signUp" ? "Sign Up" : "Sign In") + " with Google ", 1)
+        g("span", ga, M(e.authType === "sign-up" ? "Sign Up" : "Sign In") + " with Google ", 1),
+        g("span", ba, M(e.authType === "sign-up" ? "Sign Up" : "Sign In") + " with Google ", 1)
       ])
     ]));
   }
-}), va = /* @__PURE__ */ Dt(ha, [["__scopeId", "data-v-67fbafea"]]), ya = { class: "h1" }, ka = { key: 0 }, $a = { key: 1 }, Ia = {
+}), va = /* @__PURE__ */ Dt(ha, [["__scopeId", "data-v-78faf8cc"]]), ya = { class: "h1" }, ka = { key: 0 }, $a = { key: 1 }, Ia = {
   key: 1,
   class: "flex items-center my-10"
 }, Ua = /* @__PURE__ */ j({
   __name: "SignInUpForm",
   props: /* @__PURE__ */ tt({
-    pageAuthType: { default: "signIn" },
-    isSignUpLoading: { type: Boolean },
-    signupInviteOnly: { type: Boolean, default: !1 },
+    pageAuthType: { default: "sign-in" },
+    isSignupLoading: { type: Boolean },
+    isSignupInviteOnly: { type: Boolean },
     enableThirdPartyAuth: {}
   }, {
     email: { required: !0 },
@@ -6459,10 +6459,10 @@ const ta = { class: "flex flex-col gap-1" }, ea = ["for"], na = {
     }
     return (s, a) => (p(), L(O(it), { class: "max-w-xl p-12 w-full" }, {
       title: x(() => [
-        g("h1", ya, M(e.pageAuthType === "signUp" ? "Sign Up" : "Sign In"), 1)
+        g("h1", ya, M(e.pageAuthType === "sign-up" ? "Sign Up" : "Sign In"), 1)
       ]),
       content: x(() => [
-        e.signupInviteOnly && e.pageAuthType === "signUp" ? (p(), b("div", ka, [
+        e.isSignupInviteOnly && e.pageAuthType === "sign-in" ? (p(), b("div", ka, [
           P(O(te), { severity: "info" }, {
             default: x(() => [...a[3] || (a[3] = [
               et(" Sign up is currently by invite only during the beta period. ", -1)
@@ -6495,9 +6495,9 @@ const ta = { class: "flex flex-col gap-1" }, ea = ["for"], na = {
               onValidityChanged: l
             }, null, 8, ["email", "isSubmitClicked"]),
             P(O(K), {
-              label: e.pageAuthType === "signUp" ? "Sign up" : "Sign in",
+              label: e.pageAuthType === "sign-up" ? "Sign up" : "Sign in",
               type: "button",
-              loading: e.isSignUpLoading,
+              loading: e.isSignupLoading,
               "data-test": "auth-send-code-button",
               onClick: u
             }, null, 8, ["label", "loading"])

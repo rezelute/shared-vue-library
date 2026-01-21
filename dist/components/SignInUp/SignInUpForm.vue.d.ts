@@ -1,7 +1,7 @@
 type __VLS_Props = {
-    pageAuthType: "signIn" | "signUp";
-    isSignUpLoading: boolean;
-    signupInviteOnly?: boolean;
+    pageAuthType: "sign-in" | "sign-up";
+    isSignupLoading: boolean;
+    isSignupInviteOnly?: boolean;
     enableThirdPartyAuth?: {
         useGoogle?: boolean;
     };
@@ -18,7 +18,6 @@ declare const _default: import('vue').DefineComponent<__VLS_PublicProps, {}, {},
     onSignUpStart?: ((...args: any[]) => any) | undefined;
     onGoogleSignIn?: ((...args: any[]) => any) | undefined;
 }>, {
-    pageAuthType: "signIn" | "signUp";
-    signupInviteOnly: boolean;
+    pageAuthType: "sign-in" | "sign-up";
 }, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, any>;
 export default _default;
