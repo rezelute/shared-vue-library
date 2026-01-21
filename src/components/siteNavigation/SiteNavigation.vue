@@ -1,0 +1,139 @@
+<template>
+   <header class="bg-surface-0 dark:bg-surface-900">
+      <div class="container">
+         <nav class="flex py-4">
+            <Button v-slot="slotProps" asChild variant="link">
+               <RouterLink
+                  :to="!userSignedIn ? '/' : '/home'"
+                  :class="(slotProps as any).class"
+                  class="p-0!"
+               >
+                  <slot name="logo" />
+               </RouterLink>
+            </Button>
+
+            <div class="flex gap-3 sm:gap-5 ml-auto h-12 items-center">
+               <!-- Menu trigger button -->
+               <Button
+                  icon="pi pi-bars"
+                  aria-label="Navigation menu"
+                  aria-haspopup="true"
+                  aria-controls="overlay_tmenu"
+                  @click="toggleMenu"
+               />
+               <!-- Smaller screen menu -->
+               <TieredMenu id="overlay_tmenu" ref="tieredMenu" :model="renderedMenuItems" popup>
+                  <template #item="{ item, props }">
+                     <!-- LINKS -->
+                     <router-link v-if="item.type === 'link'" :to="item.to" v-bind="props.action">
+                        <span :class="item.icon" />
+                        <span class="ml-2">{{ item.label }}</span>
+                     </router-link>
+
+                     <!-- BUTTONS (sign out etc.) -->
+                     <button
+                        v-else-if="item.type === 'button'"
+                        :aria-label="item['aria-label']"
+                        class="p-tieredmenu-item-link"
+                        @click="(e) => item.command?.({ originalEvent: e, item })"
+                     >
+                        <span :class="item.icon" />
+                        <span class="ml-2">{{ item.label }}</span>
+                     </button>
+                  </template>
+               </TieredMenu>
+
+               <ThemeToggle />
+            </div>
+         </nav>
+      </div>
+   </header>
+</template>
+
+<script setup lang="ts">
+import Button from "primevue/button"
+import TieredMenu from "primevue/tieredmenu"
+import { computed, ref } from "vue"
+import ThemeToggle from "../../components/themeToggle/ThemeToggle.vue"
+
+interface InputMenuLink {
+   label: string
+   icon: string
+   to: string
+}
+interface LinkMenuItem extends InputMenuLink {
+   type: "link"
+}
+interface ButtonMenuItem {
+   type: "button"
+   label: string
+   icon: string
+   "aria-label"?: string
+   command: () => void
+}
+
+type RenderedMenuItem = LinkMenuItem | ButtonMenuItem
+
+// props & emits
+// -----------------------------------------
+const emits = defineEmits(["signOutClick"])
+const props = withDefaults(
+   defineProps<{
+      items: InputMenuLink[]
+      userSignedIn: boolean
+   }>(),
+   {
+      userSignedIn: false,
+   }
+)
+
+// state
+// -----------------------------------------
+const tieredMenu = ref<InstanceType<typeof TieredMenu> | null>(null)
+const signUpSystemItems = ref<RenderedMenuItem[]>([
+   { type: "link", label: "Sign in", icon: "pi pi-sign-in", to: "/signin" },
+   { type: "link", label: "Sign up", icon: "pi pi-user-plus", to: "/signup" },
+])
+const signedOutSystemItems = ref<RenderedMenuItem[]>([
+   {
+      type: "button",
+      label: "Sign Out",
+      icon: "pi pi-sign-out",
+      "aria-label": "Sign out",
+      command: onSignout,
+   } as ButtonMenuItem,
+])
+
+// computed
+// -----------------------------------------
+const userLinkItems = computed(() => {
+   if (!props.items || !props.items.length) {
+      return [] as LinkMenuItem[]
+   }
+
+   return props.items.map((item) => {
+      return {
+         ...item,
+         type: "link",
+      }
+   }) as LinkMenuItem[]
+})
+
+const renderedMenuItems = computed(() => {
+   return (
+      props.userSignedIn
+         ? [...userLinkItems.value, ...signedOutSystemItems.value]
+         : [...userLinkItems.value, ...signUpSystemItems.value]
+   ) as RenderedMenuItem[]
+})
+
+// methods
+// -----------------------------------------
+const toggleMenu = (event: Event) => {
+   tieredMenu.value?.toggle(event)
+}
+
+async function onSignout() {
+   emits("signOutClick")
+}
+</script>

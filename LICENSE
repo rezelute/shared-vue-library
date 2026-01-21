@@ -1,0 +1,16 @@
+GNU LESSER GENERAL PUBLIC LICENSE
+Version 3, 29 June 2007
+
+Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+Everyone is permitted to copy and distribute verbatim copies
+of this license document, but changing it is not allowed.
+
+This project is licensed under the GNU Lesser General Public License v3.0 (LGPL-3.0).
+
+You are free to use, modify, and distribute this library, provided that:
+
+- Any modifications or derivative works must also be licensed under LGPL-3.0.
+- If you distribute this library (or a derivative), you must make the source code available.
+- You may use this library in proprietary software, but any changes to the library itself must remain open source under LGPL-3.0.
+
+For the full license text, see: https://www.gnu.org/licenses/lgpl-3.0.html

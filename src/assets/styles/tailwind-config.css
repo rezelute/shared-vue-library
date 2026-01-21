@@ -1,0 +1,80 @@
+@layer utilities {
+   .container {
+      margin-inline: auto;
+      padding-inline: 1rem; /* base (mobile) */
+   }
+
+   @media (min-width: 640px) {
+      .container {
+         padding-inline: 1.5rem; /* sm */
+      }
+   }
+
+   @media (min-width: 1024px) {
+      .container {
+         padding-inline: 2rem; /* lg */
+      }
+   }
+}
+
+@layer components {
+   /* === GENERIC SPACING === */
+   /* Generic Spacing */
+   /*-------------------*/
+   .vstack-xl {
+      @apply flex flex-col gap-12;
+   }
+   .vstack-lg {
+      @apply flex flex-col gap-10;
+   }
+   .vstack-md {
+      @apply flex flex-col gap-6;
+   }
+   .vstack-sm {
+      @apply flex flex-col gap-4;
+   }
+
+   /* Component Spacing */
+   /*-------------------*/
+   /* Spacing between page groups */
+   .vstack-page {
+      @apply flex flex-col gap-12;
+   }
+   /* Spacing between form groups */
+   .vstack-form {
+      @apply flex flex-col gap-5;
+   }
+
+   /* === TEXT === */
+   /* H1 - Mainly used for page headings */
+   .h1 {
+      @apply text-2xl sm:text-4xl font-medium mb-10;
+   }
+   .h2 {
+      @apply text-xl sm:text-2xl font-medium mb-4;
+   }
+   .h3 {
+      @apply text-lg sm:text-xl font-medium;
+   }
+   label {
+      @apply text-base;
+   }
+
+   /* === PRIME COMPONENT OVERRIDES === */
+   .card-p-sm {
+      @apply p-1 sm:p-6;
+   }
+   .card-p-md {
+      @apply p-1 sm:p-8;
+   }
+   .card-p-lg {
+      @apply p-1 sm:p-12;
+   }
+}
+
+/* manually trigger the dark mode */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+   --color-*: initial;
+}

@@ -1,0 +1,155 @@
+/** @type {import('tailwindcss').Config} */
+
+export default {
+  // prevents Tailwind from generating the utility classes: text-bold, text-semibold
+  corePlugins: {
+    fontWeight: false,
+  },
+  mode: "jit",
+  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+  theme: {
+    container: {
+      center: true,
+      padding: {
+        // ONLY APPLIED TO RIGHT AND LEFT
+        DEFAULT: "1rem", // 16px
+        md: "1.5rem", // 24px
+        lg: "2rem", // 32px
+      },
+      screens: {
+        md: "48rem", // 768px
+        lg: "62rem", // 992px
+        xl: "80rem", // 1280px
+      },
+    },
+    colors: {
+      transparent: "transparent",
+      backdrop: "rgba(0, 0, 0, 0.5)",
+      // core colours
+      black: "var(--black)",
+      white: "var(--white)",
+      // brand colours
+      "brand-dark": "var(--brand-dark)",
+      "brand-dark-hover": "var(--brand-dark-hover)",
+      "brand-dark-active": "var(--brand-dark-active)",
+      "brand-light": "var(--brand-light)",
+      // neutral colours
+      "grey-10": "var(--grey-10)",
+      "grey-20": "var(--grey-20)",
+      "grey-30": "var(--grey-30)",
+      "grey-40": "var(--grey-40)",
+      "grey-50": "var(--grey-50)",
+      "grey-60": "var(--grey-60)",
+      "grey-70": "var(--grey-70)",
+      "grey-80": "var(--grey-80)",
+      // green colours
+      "green-10": "var(--green-10)",
+      "green-20": "var(--green-20)",
+      "green-30": "var(--green-30)",
+      "green-40": "var(--green-40)",
+      "green-50": "var(--green-50)",
+      "green-60": "var(--green-60)",
+      "green-70": "var(--green-70)",
+      "green-80": "var(--green-80)",
+      "green-90": "var(--green-90)",
+      "green-100": "var(--green-100)",
+      // orange
+      "orange-10": "var(--orange-10)",
+      "orange-70": "var(--orange-70)",
+      // blue
+      "info-dark": "var(--info-dark)",
+      // focus colours
+      focus: "var(--focus)",
+      "focus-inverse": "var(--focus-inverse)",
+    },
+    // Keeping our screen size divisions the same across projects.
+    // NB: Media queries should be in em, not in rem!
+    screens: {
+      sm: "40em", // 640px
+      md: "48em",
+      lg: "62em",
+      xl: "80em", // 1280px
+      xxl: "90em", // 1440px
+    },
+    boxShadow: {
+      default: "none",
+      std: "0 0 10px 0 rgba(0,0,0,0.1)",
+      "std-darker": "0 0 10px 0 rgba(0,0,0,0.3)",
+      tight: "0 2px 4px 0 rgba(0,0,0,0.1)",
+    },
+    extend: {
+      fontSize: {
+        base: "1rem", // 16px (smallest we should go for widely read text)
+        md: "2rem",
+        lg: "3rem",
+      },
+      lineHeight: {
+        // Existing: 'none' = 1, 'tight' = 1.25, 'snug' = 1.375, 'normal' = 1.5, 'relaxed' = 1.625, 'loose' = 2,
+        "proper-none": 0, // To remove excess space which may appear in divs containing no text
+        normal: 1.55, // replace existing 'normal' = 1.5,
+        8: "3rem",
+      },
+      maxWidth: {
+        xxxs: "12rem", // 192px
+        xxs: "18rem", // 288px
+        xs: "20rem", // 320px
+        sm: "30rem", // 480px
+        md: "40rem", // 640px
+        lg: "50rem", // 800px
+        xl: "60rem", // 960px
+        "2xl": "70rem", // 1120px
+        "3xl": "80rem", // 1280px
+        "4xl": "90rem", // 1440px
+        "5xl": "105rem", // 1680px
+        full: "100%",
+        "1/4": "25%",
+        "1/2": "50%",
+        "1/3": "33.33%",
+        "1/8": "12.5%",
+        "60ch": "60ch",
+        "80ch": "80ch",
+      },
+      width: {
+        inherit: "inherit",
+        "1/4": "25%",
+        "1/2": "50%",
+        "1/3": "33.33%",
+        "1/8": "12.5%",
+      },
+      height: {
+        inherit: "inherit",
+      },
+      zIndex: {
+        1: 1,
+        100: 100,
+      },
+    },
+  },
+  // plugins: [
+  //    plugin(({ addComponents }) => {
+  //       const widthFit = {
+  //          ".w-fit": {
+  //             width: "fit-content",
+  //          },
+  //       };
+  //       addComponents(widthFit);
+
+  //       // const headings = {
+  //       //    ".heading2": {
+  //       //       fontSize: "1.5rem",
+  //       //       lineHeight: "1.15",
+  //       //       fontFamily: "Header-font",
+  //       //    },
+  //       // };
+  //       // addComponents(headings);
+  //       // const buttons = {
+  //       //    ".btn": {
+  //       //       padding: ".5rem 1rem",
+  //       //       borderRadius: ".25rem",
+  //       //       fontWeight: "600",
+  //       //    },
+  //       // };
+  //       // addComponents(buttons);
+  //    }),
+  // ],
+};

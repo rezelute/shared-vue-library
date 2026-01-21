@@ -1,0 +1,17 @@
+{
+   "extends": "@vue/tsconfig/tsconfig.dom.json",
+   "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "src/**/*.ts"],
+   "exclude": ["src/**/__tests__/*", "src/**/*.stories.ts"],
+   "compilerOptions": {
+      "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+      "target": "ESNext",
+      "module": "ESNext",
+      "moduleResolution": "bundler",
+      "paths": {
+         "@/*": ["./src/*"],
+         "*": ["./node_modules/*"] // Ensure node_modules are correctly referenced
+      },
+      "types": ["node", "vite/client"],
+      "lib": ["ESNext", "DOM"]
+   }
+}
