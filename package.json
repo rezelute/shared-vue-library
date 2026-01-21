@@ -41,8 +41,8 @@
       "./tailwind-config.css": {
          "default": "./dist/tailwind-config.css"
       },
-      "./vue-shared-lib.css": {
-         "default": "./dist/vue-shared-lib.css"
+      "./vue-library.css": {
+         "default": "./dist/vue-library.css"
       }
    },
    "files": [

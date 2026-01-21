@@ -33,7 +33,7 @@ export default defineConfig({
             "content/index": path.resolve(__dirname, "src/content/index.ts"),
             "types/index": path.resolve(__dirname, "src/types/index.ts"),
          },
-         name: "SharedVueLibrary",
+         name: "VueLibrary",
          formats: ["es"],
       },
       rollupOptions: {
