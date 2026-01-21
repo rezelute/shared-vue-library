@@ -6462,7 +6462,7 @@ const ta = { class: "flex flex-col gap-1" }, ea = ["for"], na = {
         g("h1", ya, M(e.pageAuthType === "sign-up" ? "Sign Up" : "Sign In"), 1)
       ]),
       content: x(() => [
-        e.isSignupInviteOnly && e.pageAuthType === "sign-in" ? (p(), b("div", ka, [
+        e.isSignupInviteOnly && e.pageAuthType === "sign-up" ? (p(), b("div", ka, [
           P(O(te), { severity: "info" }, {
             default: x(() => [...a[3] || (a[3] = [
               et(" Sign up is currently by invite only during the beta period. ", -1)
