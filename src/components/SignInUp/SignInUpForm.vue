@@ -4,13 +4,11 @@
          <h1 class="h1">{{ pageAuthType === "sign-up" ? "Sign Up" : "Sign In" }}</h1>
       </template>
       <template #content>
-         <div v-if="isSignupInviteOnly && pageAuthType === 'sign-up'">
-            <Message severity="info">
-               Sign up is currently by invite only during the beta period as we roll things out in
-               stages and gather early feedback.
-            </Message>
-         </div>
-         <section v-else>
+         <Message v-if="isSignupInviteOnly" class="mb-6" severity="info">
+            Sign up is currently by invite only during the beta period as we roll things out in
+            stages and gather early feedback.
+         </Message>
+         <section v-if="(isSignupInviteOnly && pageAuthType === 'sign-in') || !isSignupInviteOnly">
             <GoogleAuthIcon
                v-if="enableThirdPartyAuth?.useGoogle"
                :authType="pageAuthType"
@@ -24,10 +22,6 @@
             </div>
 
             <form class="vstack-form" data-test="auth-form" @submit.prevent>
-               <Message v-if="isSignupInviteOnly" severity="info">
-                  Sign up is currently by invite only during the beta period.
-               </Message>
-
                <p class="mb-2">
                   This website offers a Passwordless Sign-In option. Instead of remembering a
                   password, you'll receive a one-time code via email each time you sign in.
