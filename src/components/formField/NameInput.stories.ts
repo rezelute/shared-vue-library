@@ -59,23 +59,23 @@ export const ShowSkeleton = {
    render: (args) => ({
       components: { NameInput },
       setup() {
-         return { args };
+         return { args }
       },
       template: `<NameInput v-bind="args" />`,
    }),
    args: {
-      label: 'Name',
-      placeholder: 'Enter your name',
+      label: "Name",
+      placeholder: "Enter your name",
       showSkeleton: true,
       isRequired: true,
       isSubmitClicked: false,
-      name: '',
+      name: "",
    },
    parameters: {
       docs: {
          description: {
-            story: 'Displays the NameInput with the skeleton loader active.',
+            story: "Displays the NameInput with the skeleton loader active.",
          },
       },
    },
-};
+}
