@@ -3981,9 +3981,9 @@ const gi = /* @__PURE__ */ Dt(pi, [["render", fi]]), bi = {
           S(n.$slots, "error", {}, () => [
             g("div", $i, [
               g("div", Ii, [
-                P(gi)
+                P(gi, { class: "mx-auto w-70 h-70 text-primary slow-pulse" })
               ]),
-              o[0] || (o[0] = g("p", null, "Something went wrong, please try again later.", -1)),
+              o[0] || (o[0] = g("p", { class: "bg-surface-50 py-1 px-6" }, "Something went wrong, please try again later.", -1)),
               P(z(K), {
                 label: "Retry",
                 type: "button",
@@ -3999,7 +3999,7 @@ const gi = /* @__PURE__ */ Dt(pi, [["render", fi]]), bi = {
       _: 3
     }));
   }
-}), Da = /* @__PURE__ */ Dt(wi, [["__scopeId", "data-v-f9276afa"]]), xi = {
+}), Da = /* @__PURE__ */ Dt(wi, [["__scopeId", "data-v-6c650d37"]]), xi = {
   key: 0,
   class: "bar"
 }, Ci = /* @__PURE__ */ j({

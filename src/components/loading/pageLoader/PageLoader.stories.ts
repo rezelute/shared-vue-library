@@ -52,6 +52,26 @@ export const ErrorState: Story = {
    }),
 }
 
+export const ErrorStateDark: Story = {
+   args: {
+      showLoading: false,
+      showError: true,
+      loadingText: "",
+   },
+   render: (args: any) => ({
+      components: { PageLoader },
+      setup: () => ({ args, onRetry: fn() }),
+      template: `
+         <div class="dark bg-surface-800">
+            <PageLoader v-bind="args" @retry="onRetry" />
+         </div>
+      `,
+   }),
+   parameters: {
+      backgrounds: { default: "dark" },
+   },
+}
+
 export const LoadedState: Story = {
    args: {
       showLoading: false,

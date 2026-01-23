@@ -23,9 +23,9 @@
             <!-- Fallback error if no slot provided -->
             <div class="vstack-sm p-12 text-center items-center">
                <div class="w-96">
-                  <PageErrorIcon />
+                  <PageErrorIcon class="mx-auto w-70 h-70 text-primary slow-pulse" />
                </div>
-               <p>Something went wrong, please try again later.</p>
+               <p class="bg-surface-50 py-1 px-6">Something went wrong, please try again later.</p>
                <Button label="Retry" type="button" class="btn mt-4 w-fit" @click="reloadPage" />
             </div>
          </slot>
@@ -70,5 +70,18 @@ function reloadPage() {
 .fade-enter-from,
 .fade-leave-to {
    opacity: 0;
+}
+
+@keyframes slow-pulse {
+   0%,
+   100% {
+      opacity: 1;
+   }
+   50% {
+      opacity: 0.5;
+   }
+}
+.slow-pulse {
+   animation: slow-pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 </style>
