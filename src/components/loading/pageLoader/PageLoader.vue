@@ -18,6 +18,7 @@
       </div>
 
       <!-- Error State -->
+
       <div v-else-if="showError" key="error" class="w-full">
          <slot name="error">
             <!-- Fallback error if no slot provided -->
@@ -25,7 +26,7 @@
                <div class="w-96">
                   <PageErrorIcon class="mx-auto w-70 h-70 text-primary slow-pulse" />
                </div>
-               <p class="bg-surface-50 py-1 px-6">
+               <p class="py-1 px-6" :class="errorTextClass">
                   {{ errorText || "Something went wrong, please try again later." }}
                </p>
                <Button label="Retry" type="button" class="btn mt-4 w-fit" @click="reloadPage" />
@@ -51,6 +52,7 @@ withDefaults(
       loadingText?: string
       showError?: boolean
       errorText?: string // if you dont use the error slot, you can use this prop to show custom error text
+      errorTextClass?: string // custom class for error state container
    }>(),
    {
       showLoading: false,

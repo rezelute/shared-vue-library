@@ -3,6 +3,7 @@ type __VLS_Props = {
     loadingText?: string;
     showError?: boolean;
     errorText?: string;
+    errorTextClass?: string;
 };
 declare function __VLS_template(): {
     attrs: Partial<{}>;

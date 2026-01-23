@@ -1,3 +1,16 @@
+export const ErrorTextOverride: Story = {
+   args: {
+      showLoading: false,
+      showError: true,
+      errorText: "Custom error: Unable to connect to server.",
+      loadingText: "",
+   },
+   render: (args: any) => ({
+      components: { PageLoader },
+      setup: () => ({ args, onRetry: fn() }),
+      template: `<PageLoader v-bind="args" @retry="onRetry" />`,
+   }),
+}
 import type { Meta, StoryObj } from "@storybook/vue3-vite"
 import { fn } from "storybook/test"
 import PageLoader from "./PageLoader.vue"
@@ -57,12 +70,13 @@ export const ErrorStateDark: Story = {
       showLoading: false,
       showError: true,
       loadingText: "",
+      errorTextClass: "bg-surface-800 text-surface-50 border border-surface-700 rounded",
    },
    render: (args: any) => ({
       components: { PageLoader },
       setup: () => ({ args, onRetry: fn() }),
       template: `
-         <div class="dark bg-surface-800">
+         <div class="dark bg-surface-900">
             <PageLoader v-bind="args" @retry="onRetry" />
          </div>
       `,
