@@ -55,9 +55,7 @@ withDefaults(
    }
 )
 
-defineEmits<{
-   (e: "retry"): void
-}>()
+defineEmits(["retry"])
 </script>
 
 <style scoped>

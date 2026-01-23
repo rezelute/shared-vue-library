@@ -42,6 +42,12 @@ declare const _default: {
             "detail": "We're sorry to see you go! Your account and all associated data have been successfully deleted. If you change your mind, feel free to create a new account anytime."
          }
       }
+   },
+   "captcha": {
+      "error": {
+         "summary": "Captcha verification failed",
+         "detail": "We were unable to verify the captcha. Please try again."
+      }
    }
 }
 ;

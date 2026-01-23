@@ -3997,7 +3997,7 @@ const gi = /* @__PURE__ */ Dt(pi, [["render", fi]]), bi = {
       _: 3
     }));
   }
-}), Da = /* @__PURE__ */ Dt(wi, [["__scopeId", "data-v-35f2d320"]]), xi = {
+}), Da = /* @__PURE__ */ Dt(wi, [["__scopeId", "data-v-285d8afb"]]), xi = {
   key: 0,
   class: "bar"
 }, Ci = /* @__PURE__ */ j({

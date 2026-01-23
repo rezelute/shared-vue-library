@@ -14,10 +14,10 @@ declare function __VLS_template(): {
     rootEl: any;
 };
 type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
-declare const __VLS_component: import('vue').DefineComponent<__VLS_Props, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {} & {
-    retry: () => any;
+declare const __VLS_component: import('vue').DefineComponent<__VLS_Props, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
+    retry: (...args: any[]) => void;
 }, string, import('vue').PublicProps, Readonly<__VLS_Props> & Readonly<{
-    onRetry?: (() => any) | undefined;
+    onRetry?: ((...args: any[]) => any) | undefined;
 }>, {
     showLoading: boolean;
     showError: boolean;

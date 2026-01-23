@@ -46,6 +46,12 @@ declare const _default: {
                 };
             };
         };
+        captcha: {
+            error: {
+                summary: string;
+                detail: string;
+            };
+        };
     };
 };
 export default _default;
