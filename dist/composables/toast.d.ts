@@ -55,9 +55,11 @@ export default function useToasting(toast: ToastServiceMethods): {
             };
         };
         captcha: {
-            error: {
-                summary: string;
-                detail: string;
+            verification: {
+                error: {
+                    summary: string;
+                    detail: string;
+                };
             };
         };
     };

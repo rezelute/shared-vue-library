@@ -44,9 +44,11 @@ declare const _default: {
       }
    },
    "captcha": {
-      "error": {
-         "summary": "Captcha verification failed",
-         "detail": "We were unable to verify the captcha. Please try again."
+      "verification": {
+         "error": {
+            "summary": "Captcha verification failed",
+            "detail": "We were unable to verify the captcha. Please try again."
+         }
       }
    }
 }
