@@ -1,7 +1,10 @@
 import { ApiResponseError } from "./error/ApiResponseError"
+import { AppError } from "./error/AppError"
 import normalizeError from "./error/normalizeError.util"
 import { getRedirectTargetWithQueryParams } from "./url"
 
-export { getRedirectTargetWithQueryParams, normalizeError, ApiResponseError }
+// named import - import { normalizeError, AppError } from "@/utils"
+export { getRedirectTargetWithQueryParams, normalizeError, ApiResponseError, AppError }
 
-export default { getRedirectTargetWithQueryParams, normalizeError, ApiResponseError }
+// default import - import Utils from "@/utils"
+export default { getRedirectTargetWithQueryParams, normalizeError, ApiResponseError, AppError }
