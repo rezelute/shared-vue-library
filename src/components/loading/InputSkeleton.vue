@@ -13,7 +13,7 @@ withDefaults(
    }>(),
    {
       isLoading: false,
-      height: "2.4rem",
+      height: "48px",
    }
 )
 </script>
