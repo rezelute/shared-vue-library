@@ -1,5 +1,3 @@
-import { AddToast } from '../composables/toast';
-export type EmitNotify = Omit<AddToast, "life">;
 export interface ApiResponse<T> {
     data: T;
     pagination?: {

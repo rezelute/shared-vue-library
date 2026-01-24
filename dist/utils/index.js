@@ -1,14 +1,3 @@
-class o extends Error {
-  response;
-  data;
-  constructor(s, e, r) {
-    super(s), this.name = "ApiResponseError", this.response = {
-      status: e.status,
-      statusText: e.statusText,
-      url: e.url
-    }, this.data = r;
-  }
-}
 class i extends Error {
   type;
   // error type identifier
@@ -20,15 +9,15 @@ class i extends Error {
   // stack trace of the original error
   constructor({
     type: s,
-    summary: e,
-    message: r,
-    details: a,
+    summary: a,
+    message: e,
+    details: r,
     cause: n
   }) {
-    super(r), this.name = "AppError", this.type = s, this.details = a, this.cause = n, this.summary = e;
+    super(e), this.name = "AppError", this.type = s, this.details = r, this.cause = n, this.summary = a;
   }
 }
-function u(t) {
+function o(t) {
   if (t instanceof Error)
     return {
       name: t.name,
@@ -40,7 +29,7 @@ function u(t) {
       status: t.status,
       statusText: t.statusText,
       url: t.url,
-      headers: c(t.headers)
+      headers: u(t.headers)
     };
   if (typeof t == "object" && t !== null)
     try {
@@ -50,23 +39,22 @@ function u(t) {
     }
   return { message: String(t) };
 }
-function c(t) {
+function u(t) {
   const s = {};
-  return t.forEach((e, r) => {
-    s[r] = e;
+  return t.forEach((a, e) => {
+    s[e] = a;
   }), s;
 }
-function l(t) {
-  const { redirect: s, ...e } = t;
+function c(t) {
+  const { redirect: s, ...a } = t;
   if (!s) return null;
-  const r = new URLSearchParams(e).toString();
-  return r ? `${s}?${r}` : s;
+  const e = new URLSearchParams(a).toString();
+  return e ? `${s}?${e}` : s;
 }
-const m = { getRedirectTargetWithQueryParams: l, normalizeError: u, ApiResponseError: o, AppError: i };
+const m = { getRedirectTargetWithQueryParams: c, normalizeError: o, AppError: i };
 export {
-  o as ApiResponseError,
   i as AppError,
   m as default,
-  l as getRedirectTargetWithQueryParams,
-  u as normalizeError
+  c as getRedirectTargetWithQueryParams,
+  o as normalizeError
 };
