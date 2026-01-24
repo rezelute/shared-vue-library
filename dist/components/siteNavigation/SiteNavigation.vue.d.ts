@@ -14,10 +14,10 @@ declare function __VLS_template(): {
     };
     refs: {
         tieredMenu: ({
-            $props: import('primevue/tieredmenu').TieredMenuProps & import('vue').VNodeProps & import('vue').AllowedComponentProps & import('vue').ComponentCustomProps;
-            $slots: import('primevue/tieredmenu').TieredMenuSlots;
+            $props: import('primevue').TieredMenuProps & import('vue').VNodeProps & import('vue').AllowedComponentProps & import('vue').ComponentCustomProps;
+            $slots: import('primevue').TieredMenuSlots;
             $emit: ((e: "blur", event: Event) => void) & ((e: "focus", event: Event) => void) & ((e: "before-show") => void) & ((e: "before-hide") => void) & ((e: "show") => void) & ((e: "hide") => void);
-        } & import('primevue/tieredmenu').TieredMenuMethods) | null;
+        } & import('primevue').TieredMenuMethods) | null;
     };
     rootEl: HTMLElement;
 };
@@ -30,10 +30,10 @@ declare const __VLS_component: import('vue').DefineComponent<__VLS_Props, {}, {}
     userSignedIn: boolean;
 }, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {
     tieredMenu: ({
-        $props: import('primevue/tieredmenu').TieredMenuProps & import('vue').VNodeProps & import('vue').AllowedComponentProps & import('vue').ComponentCustomProps;
-        $slots: import('primevue/tieredmenu').TieredMenuSlots;
+        $props: import('primevue').TieredMenuProps & import('vue').VNodeProps & import('vue').AllowedComponentProps & import('vue').ComponentCustomProps;
+        $slots: import('primevue').TieredMenuSlots;
         $emit: ((e: "blur", event: Event) => void) & ((e: "focus", event: Event) => void) & ((e: "before-show") => void) & ((e: "before-hide") => void) & ((e: "show") => void) & ((e: "hide") => void);
-    } & import('primevue/tieredmenu').TieredMenuMethods) | null;
+    } & import('primevue').TieredMenuMethods) | null;
 }, HTMLElement>;
 declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;
 export default _default;

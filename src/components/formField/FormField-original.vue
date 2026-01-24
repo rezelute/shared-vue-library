@@ -4,8 +4,7 @@
       <p v-if="helper" class="text-sm text-gray-500">{{ helper }}</p>
 
       <div class="mt-1">
-         <slot v-if="!showSkeleton" />
-         <Skeleton v-else width="100%" :height="skeletonHeight" />
+         <slot />
       </div>
 
       <Message
@@ -22,21 +21,12 @@
 </template>
 
 <script setup lang="ts">
-import { Skeleton } from "primevue"
 import Message from "primevue/message"
 
-withDefaults(
-   defineProps<{
-      id?: string
-      label?: string
-      helper?: string
-      error?: string
-      showSkeleton?: boolean
-      skeletonHeight?: string
-   }>(),
-   {
-      showSkeleton: false,
-      skeletonHeight: "45px",
-   }
-)
+defineProps<{
+   id: string
+   label?: string
+   helper?: string
+   error?: string
+}>()
 </script>
