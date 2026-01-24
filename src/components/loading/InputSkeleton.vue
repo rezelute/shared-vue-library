@@ -1,7 +1,7 @@
 <template>
    <div>
       <slot v-if="!props.isLoading" />
-      <Skeleton v-else width="100%" :height="props.height" />
+      <Skeleton v-else :width="width" :height="height" />
    </div>
 </template>
 
@@ -12,10 +12,12 @@ const props = withDefaults(
    defineProps<{
       isLoading: boolean
       height?: string
+      width?: string
    }>(),
    {
       isLoading: false,
       height: "40px",
+      width: "100%",
    }
 )
 </script>

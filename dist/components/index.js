@@ -5214,16 +5214,17 @@ const wr = /* @__PURE__ */ D({
   __name: "InputSkeleton",
   props: {
     isLoading: { type: Boolean, default: !1 },
-    height: { default: "40px" }
+    height: { default: "40px" },
+    width: { default: "100%" }
   },
   setup(t) {
     const e = t;
     return (n, o) => (p(), b("div", null, [
       e.isLoading ? (p(), P(O(ze), {
         key: 1,
-        width: "100%",
-        height: e.height
-      }, null, 8, ["height"])) : S(n.$slots, "default", { key: 0 })
+        width: t.width,
+        height: t.height
+      }, null, 8, ["width", "height"])) : S(n.$slots, "default", { key: 0 })
     ]));
   }
 }), xr = {

@@ -1,6 +1,7 @@
 type __VLS_Props = {
     isLoading: boolean;
     height?: string;
+    width?: string;
 };
 declare function __VLS_template(): {
     attrs: Partial<{}>;
@@ -12,6 +13,7 @@ declare function __VLS_template(): {
 };
 type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
 declare const __VLS_component: import('vue').DefineComponent<__VLS_Props, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, string, import('vue').PublicProps, Readonly<__VLS_Props> & Readonly<{}>, {
+    width: string;
     height: string;
     isLoading: boolean;
 }, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, HTMLDivElement>;
