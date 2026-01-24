@@ -45,19 +45,18 @@ import Button from "primevue/button"
 import ProgressSpinner from "primevue/progressspinner"
 import PageErrorIcon from "../icons/PageErrorIcon.vue"
 
-withDefaults(
-   defineProps<{
-      showLoading?: boolean
-      loadingText?: string
-      showError?: boolean
-      errorText?: string // if you dont use the error slot, you can use this prop to show custom error text
-      errorTextClass?: string // custom class for error state container
-   }>(),
-   {
-      showLoading: false,
-      showError: false,
-   }
-)
+export interface PageLoaderProps {
+   showLoading?: boolean
+   loadingText?: string
+   showError?: boolean
+   errorText?: string // if you dont use the error slot, you can use this prop to show custom error text
+   errorTextClass?: string // custom class for error state container
+}
+
+withDefaults(defineProps<PageLoaderProps>(), {
+   showLoading: false,
+   showError: false,
+})
 
 // methods
 // -----------------------------------------

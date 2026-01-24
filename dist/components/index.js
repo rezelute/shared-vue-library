@@ -4004,7 +4004,7 @@ const bi = /* @__PURE__ */ je(mi, [["render", gi]]), hi = {
       _: 3
     }));
   }
-}), Ba = /* @__PURE__ */ je(xi, [["__scopeId", "data-v-c5e193ce"]]), Ci = {
+}), Ba = /* @__PURE__ */ je(xi, [["__scopeId", "data-v-6472a41c"]]), Ci = {
   key: 0,
   class: "bar"
 }, Pi = /* @__PURE__ */ D({

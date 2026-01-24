@@ -1,10 +1,10 @@
-type __VLS_Props = {
+export interface PageLoaderProps {
     showLoading?: boolean;
     loadingText?: string;
     showError?: boolean;
     errorText?: string;
     errorTextClass?: string;
-};
+}
 declare function __VLS_template(): {
     attrs: Partial<{}>;
     slots: {
@@ -16,7 +16,7 @@ declare function __VLS_template(): {
     rootEl: any;
 };
 type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
-declare const __VLS_component: import('vue').DefineComponent<__VLS_Props, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, string, import('vue').PublicProps, Readonly<__VLS_Props> & Readonly<{}>, {
+declare const __VLS_component: import('vue').DefineComponent<PageLoaderProps, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, string, import('vue').PublicProps, Readonly<PageLoaderProps> & Readonly<{}>, {
     showLoading: boolean;
     showError: boolean;
 }, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, any>;
