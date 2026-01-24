@@ -1,11 +1,11 @@
-type __VLS_Props = {
+interface FormFieldProps {
     id?: string;
     label?: string;
     helper?: string;
     error?: string;
     showSkeleton?: boolean;
     skeletonHeight?: string;
-};
+}
 declare function __VLS_template(): {
     attrs: Partial<{}>;
     slots: {
@@ -15,7 +15,7 @@ declare function __VLS_template(): {
     rootEl: HTMLDivElement;
 };
 type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
-declare const __VLS_component: import('vue').DefineComponent<__VLS_Props, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, string, import('vue').PublicProps, Readonly<__VLS_Props> & Readonly<{}>, {
+declare const __VLS_component: import('vue').DefineComponent<FormFieldProps, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, string, import('vue').PublicProps, Readonly<FormFieldProps> & Readonly<{}>, {
     showSkeleton: boolean;
     skeletonHeight: string;
 }, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, HTMLDivElement>;

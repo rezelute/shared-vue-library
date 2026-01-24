@@ -25,18 +25,17 @@
 import { Skeleton } from "primevue"
 import Message from "primevue/message"
 
-withDefaults(
-   defineProps<{
-      id?: string
-      label?: string
-      helper?: string
-      error?: string
-      showSkeleton?: boolean
-      skeletonHeight?: string
-   }>(),
-   {
-      showSkeleton: false,
-      skeletonHeight: "45px",
-   }
-)
+interface FormFieldProps {
+   id?: string
+   label?: string
+   helper?: string
+   error?: string
+   showSkeleton?: boolean
+   skeletonHeight?: string
+}
+
+withDefaults(defineProps<FormFieldProps>(), {
+   showSkeleton: false,
+   skeletonHeight: "45px",
+})
 </script>
