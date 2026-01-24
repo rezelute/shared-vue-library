@@ -1,11 +1,11 @@
 export declare class AppError extends Error {
     type: string;
-    messageSummary?: string;
+    summary?: string;
     details?: any;
     cause?: Error;
-    constructor({ type, messageSummary, message, details, cause, }: {
+    constructor({ type, summary, message, details, cause, }: {
         type: string;
-        messageSummary?: string;
+        summary?: string;
         message: string;
         details?: any;
         cause?: Error;

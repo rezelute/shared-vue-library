@@ -1,18 +1,18 @@
 class o extends Error {
   response;
   data;
-  constructor(s, e, a) {
+  constructor(s, e, r) {
     super(s), this.name = "ApiResponseError", this.response = {
       status: e.status,
       statusText: e.statusText,
       url: e.url
-    }, this.data = a;
+    }, this.data = r;
   }
 }
 class i extends Error {
   type;
   // error type identifier
-  messageSummary;
+  summary;
   // short summary for logging
   details;
   // additional error details (object or array)
@@ -20,12 +20,12 @@ class i extends Error {
   // stack trace of the original error
   constructor({
     type: s,
-    messageSummary: e,
-    message: a,
-    details: r,
+    summary: e,
+    message: r,
+    details: a,
     cause: n
   }) {
-    super(a), this.name = "AppError", this.type = s, this.details = r, this.cause = n, this.messageSummary = e;
+    super(r), this.name = "AppError", this.type = s, this.details = a, this.cause = n, this.summary = e;
   }
 }
 function u(t) {
@@ -52,21 +52,21 @@ function u(t) {
 }
 function c(t) {
   const s = {};
-  return t.forEach((e, a) => {
-    s[a] = e;
+  return t.forEach((e, r) => {
+    s[r] = e;
   }), s;
 }
-function m(t) {
+function l(t) {
   const { redirect: s, ...e } = t;
   if (!s) return null;
-  const a = new URLSearchParams(e).toString();
-  return a ? `${s}?${a}` : s;
+  const r = new URLSearchParams(e).toString();
+  return r ? `${s}?${r}` : s;
 }
-const l = { getRedirectTargetWithQueryParams: m, normalizeError: u, ApiResponseError: o, AppError: i };
+const m = { getRedirectTargetWithQueryParams: l, normalizeError: u, ApiResponseError: o, AppError: i };
 export {
   o as ApiResponseError,
   i as AppError,
-  l as default,
-  m as getRedirectTargetWithQueryParams,
+  m as default,
+  l as getRedirectTargetWithQueryParams,
   u as normalizeError
 };
