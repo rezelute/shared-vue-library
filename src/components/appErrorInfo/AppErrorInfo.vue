@@ -7,9 +7,8 @@
       </template>
       <template #content>
          <p class="mt-10 text-xl">
-            Something went wrong! We have been notified about this. In the meantime, please try
-            visiting the
-            <a href="/" class="underline">homepage</a> or try again later.
+            Something went wrong! We have been notified about this automatically. Try refreshing the
+            page or come back later.
          </p>
       </template>
    </Card>
@@ -17,13 +16,8 @@
 
 <script setup lang="ts">
 import Card from "primevue/card"
-import { onMounted } from "vue"
 
-const props = defineProps<{
+defineProps<{
    error: any
 }>()
-
-onMounted(() => {
-   console.error("App error: ", props.error)
-})
 </script>
