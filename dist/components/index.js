@@ -3789,25 +3789,23 @@ const di = /* @__PURE__ */ _e(si, [["render", ui]]), ci = { class: "text-center"
         b("h1", { class: "text-3xl font-semibold text-gray-800 text-center" }, "Oops!", -1)
       ])]),
       content: x(() => [
-        S(n.$slots, "error", {}, () => [
-          b("div", ci, [
-            b("div", pi, [
-              C(di, { class: "mx-auto w-70 h-70 text-primary slow-pulse" })
-            ]),
-            b("p", mi, M(t.errorText || "Something went wrong! We have been notified about this automatically. Try refreshing the page or come back later."), 1),
-            C(O(K), {
-              label: "Retry",
-              type: "button",
-              class: "btn mt-8 w-fit",
-              onClick: e
-            })
-          ])
-        ], !0)
+        b("div", ci, [
+          b("div", pi, [
+            C(di, { class: "mx-auto w-70 h-70 text-primary slow-pulse" })
+          ]),
+          b("p", mi, M(t.errorText || "Something went wrong! We have been notified about this automatically. Try refreshing the page or come back later."), 1),
+          C(O(K), {
+            label: "Retry",
+            type: "button",
+            class: "btn mt-8 w-fit",
+            onClick: e
+          })
+        ])
       ]),
-      _: 3
+      _: 1
     }));
   }
-}), gi = /* @__PURE__ */ _e(fi, [["__scopeId", "data-v-b84bee3c"]]);
+}), gi = /* @__PURE__ */ _e(fi, [["__scopeId", "data-v-bbc67212"]]);
 var bi = `
     .p-progressspinner {
         position: relative;
@@ -3957,7 +3955,7 @@ const Ii = {
   class: "sr-only"
 }, Ci = {
   key: "error",
-  class: "w-full"
+  class: "items-center justify-center"
 }, Pi = { key: "loaded" }, _i = /* @__PURE__ */ D({
   __name: "PageLoader",
   props: {
@@ -3981,7 +3979,10 @@ const Ii = {
           ])
         ])) : t.showError ? (p(), g("div", Ci, [
           S(e.$slots, "error", {}, () => [
-            C(gi, { errorText: t.errorText }, null, 8, ["errorText"])
+            C(gi, {
+              errorText: t.errorText,
+              class: "max-w-xl mx-auto"
+            }, null, 8, ["errorText"])
           ], !0)
         ])) : (p(), g("div", Pi, [
           S(e.$slots, "default", {}, void 0, !0)
@@ -3990,7 +3991,7 @@ const Ii = {
       _: 3
     }));
   }
-}), Na = /* @__PURE__ */ _e(_i, [["__scopeId", "data-v-576689ed"]]), Li = {
+}), Na = /* @__PURE__ */ _e(_i, [["__scopeId", "data-v-a71b915b"]]), Li = {
   key: 0,
   class: "bar"
 }, Ti = /* @__PURE__ */ D({

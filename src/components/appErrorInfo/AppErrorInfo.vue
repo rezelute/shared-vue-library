@@ -4,22 +4,20 @@
          <h1 class="text-3xl font-semibold text-gray-800 text-center">Oops!</h1>
       </template>
       <template #content>
-         <slot name="error">
-            <div class="text-center">
-               <div class="mx-auto">
-                  <PageErrorIcon class="mx-auto w-70 h-70 text-primary slow-pulse" />
-               </div>
-
-               <p class="mt-4 text-xl">
-                  {{
-                     errorText ||
-                     "Something went wrong! We have been notified about this automatically. Try refreshing the page or come back later."
-                  }}
-               </p>
-
-               <Button label="Retry" type="button" class="btn mt-8 w-fit" @click="reloadPage" />
+         <div class="text-center">
+            <div class="mx-auto">
+               <PageErrorIcon class="mx-auto w-70 h-70 text-primary slow-pulse" />
             </div>
-         </slot>
+
+            <p class="mt-4 text-xl">
+               {{
+                  errorText ||
+                  "Something went wrong! We have been notified about this automatically. Try refreshing the page or come back later."
+               }}
+            </p>
+
+            <Button label="Retry" type="button" class="btn mt-8 w-fit" @click="reloadPage" />
+         </div>
       </template>
    </Card>
 </template>
