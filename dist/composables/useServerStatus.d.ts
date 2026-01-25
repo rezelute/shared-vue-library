@@ -1,5 +1,6 @@
 import { Ref } from 'vue';
-export default function useServerStatus(apiDomainUrl: string): {
-    checkServer: (isLoading: Ref<boolean>) => Promise<void>;
-    connectionReady: Ref<boolean, boolean>;
+export default function useServerStatus(apiUrl: string): {
+    checkServerHealth: () => Promise<void>;
+    isHealthy: Ref<boolean, boolean>;
+    isLoading: Ref<boolean, boolean>;
 };
