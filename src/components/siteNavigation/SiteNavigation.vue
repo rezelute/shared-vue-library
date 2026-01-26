@@ -19,6 +19,7 @@
                   aria-label="Navigation menu"
                   aria-haspopup="true"
                   aria-controls="overlay_tmenu"
+                  data-test="sitenav-toggle-btn"
                   @click="toggleMenu"
                />
                <!-- Smaller screen menu -->

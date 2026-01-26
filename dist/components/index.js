@@ -3480,6 +3480,7 @@ const Zo = { class: "bg-surface-0 dark:bg-surface-900" }, Xo = { class: "contain
                 "aria-label": "Navigation menu",
                 "aria-haspopup": "true",
                 "aria-controls": "overlay_tmenu",
+                "data-test": "sitenav-toggle-btn",
                 onClick: a
               }),
               C(O(Ue), {
