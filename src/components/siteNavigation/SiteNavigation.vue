@@ -25,7 +25,12 @@
                <TieredMenu id="overlay_tmenu" ref="tieredMenu" :model="renderedMenuItems" popup>
                   <template #item="{ item, props }">
                      <!-- LINKS -->
-                     <router-link v-if="item.type === 'link'" :to="item.to" v-bind="props.action">
+                     <router-link
+                        v-if="item.type === 'link'"
+                        :to="item.to"
+                        :data-test="item.testId"
+                        v-bind="props.action"
+                     >
                         <span :class="item.icon" />
                         <span class="ml-2">{{ item.label }}</span>
                      </router-link>
@@ -33,6 +38,7 @@
                      <!-- BUTTONS (sign out etc.) -->
                      <button
                         v-else-if="item.type === 'button'"
+                        :data-test="item.testId"
                         :aria-label="item['aria-label']"
                         class="p-tieredmenu-item-link"
                         @click="(e) => item.command?.({ originalEvent: e, item })"
@@ -60,6 +66,7 @@ interface InputMenuLink {
    label: string
    icon: string
    to: string
+   testId?: string
 }
 interface LinkMenuItem extends InputMenuLink {
    type: "link"
@@ -69,6 +76,7 @@ interface ButtonMenuItem {
    label: string
    icon: string
    "aria-label"?: string
+   testId?: string
    command: () => void
 }
 
@@ -91,12 +99,25 @@ const props = withDefaults(
 // -----------------------------------------
 const tieredMenu = ref<InstanceType<typeof TieredMenu> | null>(null)
 const signUpSystemItems = ref<RenderedMenuItem[]>([
-   { type: "link", label: "Sign in", icon: "pi pi-sign-in", to: "/signin" },
-   { type: "link", label: "Sign up", icon: "pi pi-user-plus", to: "/signup" },
+   {
+      type: "link",
+      testId: "signin-link",
+      label: "Sign in",
+      icon: "pi pi-sign-in",
+      to: "/signin",
+   },
+   {
+      type: "link",
+      testId: "signup-link",
+      label: "Sign up",
+      icon: "pi pi-user-plus",
+      to: "/signup",
+   },
 ])
 const signedOutSystemItems = ref<RenderedMenuItem[]>([
    {
       type: "button",
+      testId: "signout-btn",
       label: "Sign Out",
       icon: "pi pi-sign-out",
       "aria-label": "Sign out",

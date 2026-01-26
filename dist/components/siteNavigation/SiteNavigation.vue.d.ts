@@ -2,6 +2,7 @@ interface InputMenuLink {
     label: string;
     icon: string;
     to: string;
+    testId?: string;
 }
 type __VLS_Props = {
     items: InputMenuLink[];
